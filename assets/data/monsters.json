@@ -1,0 +1,194 @@
+[
+  {
+    "no": 1,
+    "name": "Aptonoth",
+    "genus": "Herbivore",
+    "hatchable": true,
+    "habitat": "Hakolo Island",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 2,
+    "name": "Larinoth",
+    "genus": "Herbivore",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 3,
+    "name": "Kelbi",
+    "genus": "Herbivore",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 4,
+    "name": "Velociprey",
+    "genus": "Bird Wyvern",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 5,
+    "name": "Velocidrome",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Hakolo Island",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 6,
+    "name": "Kulu-Ya-Ku",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Hakolo Island",
+    "retreat": "Break the rocks with a blunt-type weapon to boost the retreat rate."
+  },
+  {
+    "no": 7,
+    "name": "Bnahabra (Blue)",
+    "genus": "Neopteron",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 8,
+    "name": "Konchu (Yellow)",
+    "genus": "Neopteron",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 9,
+    "name": "Yian Kut-Ku",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Hakolo Island",
+    "retreat": "Break the head with a pierce-type weapon to boost the retreat rate."
+  },
+  {
+    "no": 10,
+    "name": "Bullfango",
+    "genus": "Fanged Beast",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 11,
+    "name": "Bulldrome",
+    "genus": "Fanged Beast",
+    "hatchable": true,
+    "habitat": "Hakolo Island",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 12,
+    "name": "Pukei-Pukei",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Hakolo Island",
+    "retreat": "Break the tail with a slash-type weapon to boost the retreat rate."
+  },
+  {
+    "no": 13,
+    "name": "Apceros",
+    "genus": "Herbivore",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 14,
+    "name": "Slagtoth (Green)",
+    "genus": "Herbivore",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 15,
+    "name": "Gargwa",
+    "genus": "Bird Wyvern",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 16,
+    "name": "Jaggi",
+    "genus": "Bird Wyvern",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 17,
+    "name": "Jaggia",
+    "genus": "Bird Wyvern",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 18,
+    "name": "Great Jaggi",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 19,
+    "name": "Ludroth",
+    "genus": "Leviathan",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 20,
+    "name": "Royal Ludroth",
+    "genus": "Leviathan",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Break the stomach with a slash-type weapon to boost the retreat rate."
+  },
+  {
+    "no": 21,
+    "name": "Tetsucabra",
+    "genus": "Amphibian",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 22,
+    "name": "Arzuros",
+    "genus": "Fanged Beast",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Frighten it with a Sonic Bomb to boost the retreat rate."
+  },
+  {
+    "no": 23,
+    "name": "Qurupeco",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Break the head with a blunt-type weapon to boost the retreat rate."
+  },
+  {
+    "no": 24,
+    "name": "Blue Yian Kut-Ku",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Break the head with a pierce-type weapon to boost the retreat rate."
+  },
+  {
+    "no": 25,
+    "name": "Tigrex",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Break the head with a great sword after it steps on a Shock Trap to greatly boost the retreat rate."
+  },
+  {
+    "no": 26,
+    "name": "Monoblos",
+    "genus": "Flying Wyver",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Defeat using a sword & shield while it is paralyzed to greatly boost the retreat rate."
+  },
+  {
+    "no": 27,
+    "name": "Paolumu",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Use a Flash Bomb to stop it from gliding to boost the retreat rate."
+  }
+]
