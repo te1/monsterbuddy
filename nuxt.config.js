@@ -4,6 +4,12 @@ export default {
 
   modern: 'client',
 
+  vue: {
+    config: {
+      productionTip: false,
+    },
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title:
