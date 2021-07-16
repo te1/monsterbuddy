@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <img
-      :src="require(`~/assets/images/monster-icons/${monster.name}.png`)"
+      :src="require(`~/assets/monster-icons/${monster.name}.png`)"
       :alt="monster.name"
     >
 

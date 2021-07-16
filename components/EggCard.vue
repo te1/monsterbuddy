@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between items-center bg-gray-200 rounded-xl m-2">
     <img
-      :src="require(`~/assets/images/eggs/${monster.name}.svg`)"
+      :src="require(`~/assets/eggs/${monster.name}.svg`)"
       :alt="monster.name"
       class="h-24 my-1"
     >
