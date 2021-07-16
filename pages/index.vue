@@ -1,6 +1,5 @@
 <template>
   <div>
-    Monster Buddy
   </div>
 </template>
 

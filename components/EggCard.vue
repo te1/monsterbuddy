@@ -1,14 +1,19 @@
 <template>
-  <div class="flex justify-between items-center bg-gray-200 rounded-xl m-2">
+  <div class="flex items-center cursor-pointer bg-white rounded shadow border border-gray-300
+    hover:bg-blue-50 hover:border-blue-200
+    active:bg-blue-100 active:border-blue-300">
     <img
       :src="require(`~/assets/eggs/${monster.name}.svg`)"
       :alt="monster.name"
-      class="h-24 my-1"
+      class="h-[110px] my-2"
     >
 
-    <div class="flex-1 self-start1 m-2 flex flex-col">
-      <div class="text-2xl font-semibold tracking-wide">
-        <!-- {{ formattedNo }} -->
+    <div class="flex-1 self-start1 mx-4 my-2 flex flex-col text-gray-600 font-semibold tracking-wide">
+      <div class="text-gray-400 leading-none">
+        {{ formattedNo }}
+      </div>
+
+      <div class="text-black text-xl">
         {{ monster.name }}
       </div>
 
@@ -21,15 +26,9 @@
       </div>
     </div>
 
-    <img
-      width=100
-      :src="imgUrl"
-      :alt="monster.name"
-    >
-
-    <MonsterIcon
+    <MonsterImage
+      class="h-[110px] m-2"
       :monster="monster"
-      showNo
     />
   </div>
 </template>

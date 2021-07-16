@@ -1,8 +1,10 @@
 <template>
   <div>
-    <h2>Eggs</h2>
+    <h2 class="mb-2 text-lg text-gray-700 font-semibold tracking-wide">
+      Eggs
+    </h2>
 
-    <div>
+    <div class="grid gap-2">
       <EggCard
         v-for="monstie in monsties"
         :key="monstie.no"

@@ -1,6 +1,7 @@
 <template>
   <div class="relative">
     <img
+      class="h-full"
       :src="require(`~/assets/monster-icons/${monster.name}.png`)"
       :alt="monster.name"
     >
