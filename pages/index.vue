@@ -1,7 +1,9 @@
 <template>
-  <Tutorial/>
+  <div>
+    Monster Buddy
+  </div>
 </template>
 
 <script>
-export default {}
+  export default {};
 </script>
