@@ -9,7 +9,7 @@
       :key="key"
     >
       <div
-        v-if="key !== 'all'"
+        v-if="isGrouped"
         class="mb-2 flex items-center text-lg text-gray-700 font-semibold tracking-wide"
       >
         <svg
@@ -134,6 +134,10 @@
 
       isEmpty() {
         return !this.sortedMonsties.length;
+      },
+
+      isGrouped() {
+        return _.includes(['genus', 'habitate'], this.sortByKey);
       },
     },
   };
