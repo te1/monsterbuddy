@@ -5,10 +5,10 @@
     <img
       :src="require(`~/assets/eggs/${monster.name}.svg`)"
       :alt="monster.name"
-      class="h-[120px] my-2"
+      class="h-[120px] -mx-2 my-2"
     >
 
-    <div class="h-full flex-1 mx-4 py-3 flex flex-col text-gray-600 font-semibold tracking-wide">
+    <div class="h-full flex-1 min-w-[160px] ml-2 py-3 flex flex-col text-gray-600 font-semibold tracking-wide">
       <div class="text-gray-400 leading-tight">
         {{ formattedNo }}
       </div>
@@ -56,7 +56,7 @@
     </div>
 
     <MonsterImage
-      class="h-[120px] m-2"
+      class="h-[120px] my-2"
       :monster="monster"
     />
   </div>
