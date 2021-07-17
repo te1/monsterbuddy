@@ -4,7 +4,7 @@
       Eggs
     </h2>
 
-    <div class="grid gap-2">
+    <div class="grid gap-2 lg:grid-cols-2 2xl:grid-cols-3">
       <EggCard
         v-for="monstie in monsties"
         :key="monstie.no"
