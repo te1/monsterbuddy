@@ -56,7 +56,7 @@
     </div>
 
     <MonsterImage
-      class="h-[120px] my-2"
+      class="h-[120px] mr-1 my-2 overflow-hidden"
       :monster="monster"
     />
   </div>
