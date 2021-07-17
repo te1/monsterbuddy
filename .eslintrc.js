@@ -22,6 +22,7 @@ module.exports = {
         ? ['error', { allow: ['warn', 'error'] }]
         : ['warn', { allow: ['warn', 'error'] }],
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'prefer-const': 'off',
     'vue/attribute-hyphenation': 'off',
   },
 };

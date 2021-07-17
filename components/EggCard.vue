@@ -49,6 +49,7 @@
             clip-rule="evenodd"
           />
         </svg>
+
         <div class="ml-1">
           {{ monster.habitat }}
         </div>
@@ -76,14 +77,6 @@
     computed: {
       formattedNo() {
         return formatNo(this.monster.no);
-      },
-
-      imgUrl() {
-        try {
-          return require(`~/assets/monsters/${this.monster.name}.png`);
-        } catch (e) {
-          return null;
-        }
       },
     },
   };
