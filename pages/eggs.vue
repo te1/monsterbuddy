@@ -13,6 +13,12 @@
       </button>
     </div>
 
+    <MonsterFilter
+      :monsters="monsties"
+      initialSortKey="no"
+      @updated="onFilterUpdated"
+    />
+
     <div
       v-for="(group, key) in groupedMonsties"
       :key="key"
@@ -22,12 +28,12 @@
         class="mb-1 flex items-center font-semibold tracking-wide"
       >
         <IconGenus
-          v-if="sortByKey === 'genus'"
+          v-if="sortKey === 'genus'"
           class=" text-gray-500"
         />
 
         <IconHabitat
-          v-if="sortByKey === 'habitat'"
+          v-if="sortKey === 'habitat'"
           class="text-gray-500"
         />
 
@@ -52,14 +58,7 @@
 </template>
 
 <script>
-  import _ from 'lodash';
-  import {
-    monsties,
-    genera,
-    habitats,
-    getMonstiesByGenus,
-    getMonstiesByHabitat,
-  } from '~/services/data';
+  import { monsties } from '~/services/data';
 
   export default {
     name: 'PageEggs',
@@ -67,70 +66,19 @@
     data() {
       return {
         monsties,
-        genera,
-        habitats,
-
-        filterByKey: null,
-        filterByValue: null,
-        sortByKey: null,
+        groupedMonsties: { all: monsties },
+        isEmpty: false,
+        isGrouped: false,
+        sortKey: null,
       };
     },
 
-    computed: {
-      filteredMonsties() {
-        let result = this.monsties;
-
-        switch (this.filterByKey) {
-          case 'genus':
-            return getMonstiesByGenus(this.filterByValue, result);
-
-          case 'habitat':
-            return getMonstiesByHabitat(this.filterByValue, result);
-
-          default:
-            return result;
-        }
-      },
-
-      sortedMonsties() {
-        let result = this.filteredMonsties;
-
-        switch (this.sortByKey) {
-          case 'name':
-            return _.sortBy(result, 'name');
-
-          case 'genus':
-            return _.sortBy(result, 'genus');
-
-          case 'habitat':
-            return _.sortBy(result, 'habitat');
-
-          default:
-            return result;
-        }
-      },
-
-      groupedMonsties() {
-        let result = this.sortedMonsties;
-
-        switch (this.sortByKey) {
-          case 'genus':
-            return _.groupBy(result, 'genus');
-
-          case 'habitat':
-            return _.groupBy(result, 'habitat');
-
-          default:
-            return { all: result };
-        }
-      },
-
-      isEmpty() {
-        return !this.sortedMonsties.length;
-      },
-
-      isGrouped() {
-        return _.includes(['genus', 'habitat'], this.sortByKey);
+    methods: {
+      onFilterUpdated({ groupedMonsters, isEmpty, isGrouped, sortKey }) {
+        this.groupedMonsties = groupedMonsters;
+        this.isEmpty = isEmpty;
+        this.isGrouped = isGrouped;
+        this.sortKey = sortKey;
       },
     },
   };

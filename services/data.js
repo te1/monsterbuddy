@@ -3,8 +3,16 @@ import monsters from '~/assets/data/monsters';
 
 export { monsters };
 export const monsties = _.filter(monsters, { hatchable: true });
-export const genera = _.uniq(_.map(monsters, 'genus'));
-export const habitats = _.uniq(_.map(monsters, 'habitat'));
+export const genera = getGenera();
+export const habitats = getHabitats();
+
+export function getGenera(monsterList = monsters) {
+  return _.sortBy(_.uniq(_.map(monsterList, 'genus')));
+}
+
+export function getHabitats(monsterList = monsters) {
+  return _.sortBy(_.uniq(_.map(monsterList, 'habitat')));
+}
 
 export function getMonstersByGenus(genus, monsterList = monsters) {
   return _.filter(monsterList, { genus });
