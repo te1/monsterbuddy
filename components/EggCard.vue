@@ -3,7 +3,7 @@
     hover:bg-blue-50 hover:border-blue-200
     active:bg-blue-100 active:border-blue-300">
     <img
-      :src="require(`~/assets/eggs/${monster.name}.svg`)"
+      :src="eggImageUrl"
       :alt="monster.name"
       class="h-full -mx-2 py-0.5"
     >
@@ -77,6 +77,14 @@
     },
 
     computed: {
+      eggImageUrl() {
+        try {
+          return require(`~/assets/eggs/${this.monster.name}.svg`);
+        } catch (e) {
+          return require('~/assets/eggs/_Unknown.svg');
+        }
+      },
+
       formattedNo() {
         return formatNo(this.monster.no);
       },

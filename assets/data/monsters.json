@@ -190,5 +190,229 @@
     "hatchable": true,
     "habitat": "Alcala",
     "retreat": "Use a Flash Bomb to stop it from gliding to boost the retreat rate."
+  },
+  {
+    "no": 28,
+    "name": "Basarios",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Break each part to boost the retreat rate"
+  },
+  {
+    "no": 29,
+    "name": "Yian Garuga",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Break the head when it is enraged to boost the retreat rate."
+  },
+  {
+    "no": 30,
+    "name": "Duramboros",
+    "genus": "Brute Wyvern",
+    "habitat": "Alcala"
+  },
+  {
+    "no": 31,
+    "name": "Nargacuga",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Attack it after it falls into a Pitfall Trap to boost the retreat rate."
+  },
+  {
+    "no": 32,
+    "name": "Rathian",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Alcala",
+    "retreat": "Attack with a Rathalos Kinship Skill to greatly boost the retreat rate."
+  },
+  {
+    "no": 33,
+    "name": "Popo",
+    "genus": "Herbivore",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 34,
+    "name": "Konchu (Blue)",
+    "genus": "Neopteron",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 35,
+    "name": "Bnahabra (Green)",
+    "genus": "Neopteron",
+    "habitat": "Hakolo Island"
+  },
+  {
+    "no": 36,
+    "name": "Conga",
+    "genus": "Fanged Beast",
+    "habitat": "Loloska"
+  },
+  {
+    "no": 37,
+    "name": "Congalala",
+    "genus": "Fanged Beast",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the head with a hammer to boost the retreat rate."
+  },
+  {
+    "no": 38,
+    "name": "Baggi",
+    "genus": "Bird Wyvern",
+    "habitat": "Loloska"
+  },
+  {
+    "no": 39,
+    "name": "Great Baggi",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+  },
+  {
+    "no": 40,
+    "name": "Kecha Wacha",
+    "genus": "Fanged Beast",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the head with a sword & shield to boost the retreat rate."
+  },
+  {
+    "no": 41,
+    "name": "Gypceros",
+    "genus": "Bird Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Attack with a Nerscylla Kinship Skill to boost the retreat rate."
+  },
+  {
+    "no": 42,
+    "name": "Zamite",
+    "genus": "Amphibian",
+    "habitat": "Loloska"
+  },
+  {
+    "no": 43,
+    "name": "Zamtrios",
+    "genus": "Amphibian",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the stomach while it is swollen to boost the retreat rate."
+  },
+  {
+    "no": 44,
+    "name": "Nerscylla",
+    "genus": "Temnoceran",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the needles with a fire element attack to boost the retreat rate."
+  },
+  {
+    "no": 45,
+    "name": "Barroth",
+    "genus": "Brute Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Wash off its mud cover by using a water element attack to boost the retreat rate."
+  },
+  {
+    "no": 46,
+    "name": "Tobi-Kadachi",
+    "genus": "Fanged Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the tail with a hunting horn to boost the retreat rate."
+  },
+  {
+    "no": 47,
+    "name": "Khezu",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Attack with a Shrouded Nerscylla Kinship Skill to boost the retreat rate."
+  },
+  {
+    "no": 48,
+    "name": "Red Khezu",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the head with a bow to boost the retreat rate."
+  },
+  {
+    "no": 49,
+    "name": "Seltas",
+    "genus": "Neopteron",
+    "habitat": "Loloska"
+  },
+  {
+    "no": 50,
+    "name": "Seltas Queen",
+    "genus": "Neopteron",
+    "habitat": "Loloska"
+  },
+  {
+    "no": 51,
+    "name": "Lagombi",
+    "genus": "Fanged Beast",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the stomach with a great sword to boost the retreat rate."
+  },
+  {
+    "no": 52,
+    "name": "Jade Barroth",
+    "genus": "Brute Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Shake off its snow cover by using a thunder element attack to boost the retreat rate."
+  },
+  {
+    "no": 53,
+    "name": "Anjanath",
+    "genus": "Brute Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the nose with a water element attack to boost the retreat rate."
+  },
+  {
+    "no": 54,
+    "name": "Gammoth",
+    "genus": "Fanged Beast",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Defeat with a Glavenus Kinship Skill to greatly boost the retreat rate."
+  },
+  {
+    "no": 55,
+    "name": "Zinogre",
+    "genus": "Fanged Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Defeat with an ice element attack while it is afflicted with Blastblight to greatly boost the retreat rate."
+  },
+  {
+    "no": 56,
+    "name": "Barioth",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Break the spikes with a fire element attack to greatly boost the retreat rate."
+  },
+  {
+    "no": 57,
+    "name": "Legiana",
+    "genus": "Flying Wyvern",
+    "hatchable": true,
+    "habitat": "Loloska",
+    "retreat": "Stop it from gliding using a Flash Bomb, then attack with a thunder element attack to greatly boost the retreat rate."
   }
 ]

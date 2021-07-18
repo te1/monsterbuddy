@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <img
-      :src="require(`~/assets/monster-icons/${monster.name}.png`)"
+      :src="imageUrl"
       :alt="monster.name"
       width="100"
       height="100"
@@ -48,6 +48,14 @@
     },
 
     computed: {
+      imageUrl() {
+        try {
+          return require(`~/assets/monster-icons/${this.monster.name}.png`);
+        } catch (e) {
+          return require('~/assets/monster-icons/_Unknown.png');
+        }
+      },
+
       formattedNo() {
         return formatNo(this.monster.no, false);
       },
