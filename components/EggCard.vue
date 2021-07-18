@@ -1,23 +1,23 @@
 <template>
-  <div class="flex items-center cursor-pointer bg-white rounded shadow border border-gray-300
+  <div class="h-[120px] flex items-center cursor-pointer bg-white rounded shadow border border-gray-300
     hover:bg-blue-50 hover:border-blue-200
     active:bg-blue-100 active:border-blue-300">
     <img
       :src="require(`~/assets/eggs/${monster.name}.svg`)"
       :alt="monster.name"
-      class="h-[120px] -mx-2 my-2"
+      class="h-full -mx-2 py-0.5"
     >
 
-    <div class="h-full flex-1 min-w-[160px] ml-2 py-3 flex flex-col text-gray-600 font-semibold tracking-wide">
-      <div class="text-gray-400 leading-tight">
+    <div class="flex-1 min-w-[130px] ml-1 text-sm text-gray-700 font-semibold tracking-wide">
+      <div class="text-gray-500 -mb-1">
         {{ formattedNo }}
       </div>
 
-      <div class="flex-1 text-black text-xl">
+      <div class="mb-1.5 text-black text-base">
         {{ monster.name }}
       </div>
 
-      <div class="flex items-center mb-2">
+      <div class="flex items-center mb-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-5 w-5 text-gray-400"
@@ -56,10 +56,12 @@
       </div>
     </div>
 
-    <MonsterImage
-      class="h-[120px] mr-1 my-2 overflow-hidden"
-      :monster="monster"
-    />
+    <div class="mr-1 my-1 ">
+      <MonsterImage
+        class="max-h-[120px] w-auto"
+        :monster="monster"
+      />
+    </div>
   </div>
 </template>
 

@@ -3,11 +3,12 @@
     v-if="hasImage"
     :src="imageUrl"
     :alt="monster.name"
+    width="525"
+    height="465"
   >
 
   <MonsterIcon
     v-else
-    class="p-2"
     :monster="monster"
   />
 </template>

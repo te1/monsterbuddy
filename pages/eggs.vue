@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="mb-2 text-lg text-gray-700 font-semibold tracking-wide">
+    <h2 class="mb-1 font-semibold tracking-wide">
       Eggs
     </h2>
 
@@ -10,7 +10,7 @@
     >
       <div
         v-if="isGrouped"
-        class="mb-2 flex items-center text-lg text-gray-700 font-semibold tracking-wide"
+        class="mb-1 flex items-center font-semibold tracking-wide"
       >
         <svg
           v-if="sortByKey === 'genus'"
