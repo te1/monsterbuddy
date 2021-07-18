@@ -28,6 +28,8 @@
   import { formatNo } from '../services/utils';
 
   export default {
+    name: 'MonsterIcon',
+
     props: {
       monster: {
         type: Object,

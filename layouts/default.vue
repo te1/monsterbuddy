@@ -7,3 +7,9 @@
     <Nuxt class="px-2 pt-1 pb-2" />
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'LayoutDefault',
+  };
+</script>

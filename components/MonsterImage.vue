@@ -15,6 +15,8 @@
 
 <script>
   export default {
+    name: 'MonsterImage',
+
     props: {
       monster: {
         type: Object,
