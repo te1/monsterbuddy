@@ -1,11 +1,11 @@
 <template>
-  <div class="h-[120px] flex items-center cursor-pointer bg-white rounded shadow border border-gray-300
+  <div class="flex items-center py-1 cursor-pointer bg-white rounded shadow border border-gray-300
     hover:bg-blue-50 hover:border-blue-200
     active:bg-blue-100 active:border-blue-300">
     <img
       :src="eggImageUrl"
       :alt="monster.name"
-      class="h-full -mx-2 py-0.5"
+      class="w-[120px] h-[120px] -mx-2"
     >
 
     <div class="flex-1 min-w-[130px] ml-1 text-sm text-gray-700 font-semibold tracking-wide">
@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div class="mr-1 my-1 ">
+    <div class="mr-1">
       <MonsterImage
         class="max-h-[120px] w-auto"
         :monster="monster"

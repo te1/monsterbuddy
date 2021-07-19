@@ -1,11 +1,18 @@
 <template>
-  <div>
-    <div class="flex items-center">
-      <div class="flex-1">
+  <div class="flex flex-col mb-2 px-2 py-2 text-sm bg-white rounded shadow border border-gray-300">
+    <div class="flex items-center mb-1">
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_SortKey"
+      >
         Sort by
-      </div>
+      </label>
 
-      <select v-model="sortKey">
+      <select
+        id="MonsterFilter_SortKey"
+        v-model="sortKey"
+        class="w-32 text-sm px-2 py-1 rounded"
+      >
         <option value="no">Number</option>
         <option value="name">Name</option>
         <option value="genus">Genus</option>
@@ -13,14 +20,21 @@
       </select>
     </div>
 
-    <div class="flex items-center">
-      <div class="flex-1">
-        Filter by
-      </div>
+    <div class="flex items-center mb-1">
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_GenusFilter"
+      >
+        Filter by Genus
+      </label>
 
-      <select v-model="genusFilter">
+      <select
+        id="MonsterFilter_GenusFilter"
+        v-model="genusFilter"
+        class="w-32 text-sm px-2 py-1 rounded"
+      >
         <option :value="null">
-          All genera
+          All
         </option>
 
         <option
@@ -31,10 +45,23 @@
           {{ genus }}
         </option>
       </select>
+    </div>
 
-      <select v-model="habitatFilter">
+    <div class="flex items-center">
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_HabitatFilter"
+      >
+        Filter by habitat
+      </label>
+
+      <select
+        id="MonsterFilter_HabitatFilter"
+        v-model="habitatFilter"
+        class="w-32 text-sm px-2 py-1 rounded"
+      >
         <option :value="null">
-          All habitats
+          All
         </option>
 
         <option
@@ -47,7 +74,15 @@
       </select>
     </div>
 
-    <button @click="reset">Reset</button>
+    <div class="self-end mt-1">
+      <button
+        class="w-32 px-2 py-1 text-sm font-semibold tracking-wide rounded bg-gray-400 border-gray-400 text-white
+        hover:bg-gray-300 active:bg-gray-600"
+        @click="reset"
+      >
+        Reset
+      </button>
+    </div>
   </div>
 </template>
 

@@ -6,14 +6,16 @@
       </h2>
 
       <button
-        class="text-gray-600 hover:text-blue-600 active:text-blue-800"
+        class="text-gray-600 hover:text-blue-400 active:text-blue-800"
         title="Sort and filter"
+        @click="showFilter = !showFilter"
       >
         <IconFilter />
       </button>
     </div>
 
     <MonsterFilter
+      v-if="showFilter"
       :monsters="monsties"
       initialSortKey="no"
       @updated="onFilterUpdated"
@@ -70,6 +72,7 @@
         isEmpty: false,
         isGrouped: false,
         sortKey: null,
+        showFilter: false,
       };
     },
 
