@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col mb-2 px-2 py-2 text-sm bg-white rounded shadow border border-gray-300">
-    <div class="flex items-center mb-1">
+  <div class="flex flex-col mb-2 px-2 py-2 space-y-1 text-sm bg-white rounded shadow border border-gray-300">
+    <div class="flex items-center">
       <label
         class="flex-1 cursor-pointer"
         for="MonsterFilter_SortKey"
       >
-        Sort by
+        Sorting
       </label>
 
       <select
@@ -20,12 +20,12 @@
       </select>
     </div>
 
-    <div class="flex items-center mb-1">
+    <div class="flex items-center">
       <label
         class="flex-1 cursor-pointer"
         for="MonsterFilter_GenusFilter"
       >
-        Filter by genus
+        Genus
       </label>
 
       <select
@@ -33,9 +33,7 @@
         v-model="genusFilter"
         class="w-32 text-sm px-2 py-1 rounded"
       >
-        <option :value="null">
-          All
-        </option>
+        <option :value="null">All</option>
 
         <option
           v-for="genus in genera"
@@ -52,7 +50,7 @@
         class="flex-1 cursor-pointer"
         for="MonsterFilter_HabitatFilter"
       >
-        Filter by habitat
+        Habitat
       </label>
 
       <select
@@ -60,9 +58,7 @@
         v-model="habitatFilter"
         class="w-32 text-sm px-2 py-1 rounded"
       >
-        <option :value="null">
-          All
-        </option>
+        <option :value="null">All</option>
 
         <option
           v-for="habitat in habitats"
@@ -71,6 +67,28 @@
         >
           {{ habitat }}
         </option>
+      </select>
+    </div>
+
+    <div
+      v-if="showHatchableFilter"
+      class="flex items-center"
+    >
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_Hatchable"
+      >
+        Hatchable
+      </label>
+
+      <select
+        id="MonsterFilter_Hatchable"
+        v-model="hatchableFilter"
+        class="w-32 text-sm px-2 py-1 rounded"
+      >
+        <option :value="null">All</option>
+        <option :value="true">Yes</option>
+        <option :value="false">No</option>
       </select>
     </div>
 
@@ -92,8 +110,9 @@
     monsters,
     getGenera,
     getHabitats,
-    getMonstiesByGenus,
-    getMonstiesByHabitat,
+    getMonstersByGenus,
+    getMonstersByHabitat,
+    getMonstersByHatchable,
   } from '~/services/data';
 
   export default {
@@ -125,6 +144,18 @@
         required: false,
         default: null,
       },
+
+      initialHatchableFilter: {
+        type: Boolean,
+        required: false,
+        default: null,
+      },
+
+      showHatchableFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     data() {
@@ -132,6 +163,7 @@
         sortKey: this.initialSortKey,
         genusFilter: this.initialGenusFilter,
         habitatFilter: this.initialHabitatFilter,
+        hatchableFilter: this.initialHatchableFilter,
       };
     },
 
@@ -148,11 +180,15 @@
         let result = this.monsters;
 
         if (this.genusFilter != null) {
-          result = getMonstiesByGenus(this.genusFilter, result);
+          result = getMonstersByGenus(this.genusFilter, result);
         }
 
         if (this.habitatFilter != null) {
-          result = getMonstiesByHabitat(this.habitatFilter, result);
+          result = getMonstersByHabitat(this.habitatFilter, result);
+        }
+
+        if (this.hatchableFilter != null) {
+          result = getMonstersByHatchable(this.hatchableFilter, result);
         }
 
         return result;
@@ -217,6 +253,7 @@
       sortKey: 'update',
       genusFilter: 'update',
       habitatFilter: 'update',
+      hatchableFilter: 'update',
     },
 
     created() {
@@ -232,6 +269,7 @@
           sortKey: this.sortKey,
           genusFilter: this.genusFilterl,
           habitatFilter: this.habitatFilter,
+          hatchableFilter: this.hatchableFilter,
           canRest: this.canRest,
         });
       },
@@ -240,6 +278,7 @@
         this.sortKey = this.initialSortKey;
         this.genusFilter = this.initialGenusFilter;
         this.habitatFilter = this.initialHabitatFilter;
+        this.hatchableFilter = this.initialHatchableFilter;
       },
     },
   };

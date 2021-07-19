@@ -8,7 +8,7 @@
   >
 
   <MonsterIcon
-    v-else
+    v-else-if="!hideFallback"
     :monster="monster"
   />
 </template>
@@ -21,6 +21,12 @@
       monster: {
         type: Object,
         required: true,
+      },
+
+      hideFallback: {
+        type: Boolean,
+        required: false,
+        default: false,
       },
     },
 
