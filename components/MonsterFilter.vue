@@ -25,7 +25,7 @@
         class="flex-1 cursor-pointer"
         for="MonsterFilter_GenusFilter"
       >
-        Filter by Genus
+        Filter by genus
       </label>
 
       <select
@@ -203,6 +203,14 @@
       isGrouped() {
         return _.includes(['genus', 'habitat'], this.sortKey);
       },
+
+      canReset() {
+        return (
+          this.sortKey !== this.initialSortKey &&
+          this.genusFilter !== this.initialGenusFilter &&
+          this.habitatFilter !== this.initialHabitatFilter
+        );
+      },
     },
 
     watch: {
@@ -224,13 +232,14 @@
           sortKey: this.sortKey,
           genusFilter: this.genusFilterl,
           habitatFilter: this.habitatFilter,
+          canRest: this.canRest,
         });
       },
 
       reset() {
-        this.sortKey = 'no';
-        this.genusFilter = null;
-        this.habitatFilter = null;
+        this.sortKey = this.initialSortKey;
+        this.genusFilter = this.initialGenusFilter;
+        this.habitatFilter = this.initialHabitatFilter;
       },
     },
   };

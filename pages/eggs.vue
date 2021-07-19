@@ -15,7 +15,7 @@
     </div>
 
     <MonsterFilter
-      v-if="showFilter"
+      v-show="showFilter"
       :monsters="monsties"
       initialSortKey="no"
       @updated="onFilterUpdated"
