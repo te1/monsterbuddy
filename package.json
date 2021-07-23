@@ -11,8 +11,6 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/forms": "^0.3.3",
     "core-js": "^3.15.1",
     "lodash": "^4.17.21",
@@ -22,6 +20,7 @@
     "@babel/eslint-parser": "^7.14.7",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "babel-plugin-lodash": "^3.3.4",
     "eslint": "^7.31.0",

@@ -38,23 +38,15 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
-    icon: false, // TODO
-
     manifest: {
       lang: 'en',
     },
@@ -65,5 +57,10 @@ export default {
     babel: {
       plugins: ['lodash'],
     },
+  },
+
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-generate
+  generate: {
+    fallback: true,
   },
 };
