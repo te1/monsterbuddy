@@ -34,6 +34,16 @@ export default {
         content: 'Companion App For Monster Hunter Stories 2: Wings Of Ruin',
       },
       {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://monsterbuddy.app/icon.png',
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: 'Monster Buddy - Companion App For Monster Hunter Stories 2',
+      },
+      {
         hid: 'og:title',
         property: 'og:title',
         content: 'Monster Buddy',
@@ -42,6 +52,16 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content: 'Companion App For Monster Hunter Stories 2: Wings Of Ruin',
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://monsterbuddy.app/icon.png',
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Monster Buddy - Companion App For Monster Hunter Stories 2',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
