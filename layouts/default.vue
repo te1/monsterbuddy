@@ -4,6 +4,11 @@
       Monster Buddy
     </h1>
 
+    <div>
+      <NuxtLink to="/eggs">Eggs</NuxtLink>
+      <NuxtLink to="/monsters">Monsters</NuxtLink>
+    </div>
+
     <Nuxt class="px-2 pt-1 pb-2" />
   </div>
 </template>
