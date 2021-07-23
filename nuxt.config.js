@@ -23,6 +23,26 @@ export default {
           'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions',
       },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Monster Buddy',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Companion App For Monster Hunter Stories 2: Wings Of Ruin',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Monster Buddy',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Companion App For Monster Hunter Stories 2: Wings Of Ruin',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
