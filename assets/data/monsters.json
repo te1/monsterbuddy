@@ -6,7 +6,7 @@
     "habitat": "Hakolo Island",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -34,7 +34,7 @@
     "habitat": "Hakolo Island",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -44,7 +44,7 @@
     "habitat": "Hakolo Island",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the rocks with a blunt-type weapon to boost the retreat rate."
+      "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
   {
@@ -60,6 +60,10 @@
       {
         "type": "color",
         "monster": "Bnahabra (Brown)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Red)"
       }
     ]
   },
@@ -96,7 +100,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a pierce-type weapon to boost the retreat rate."
+      "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
   {
@@ -112,7 +116,7 @@
     "habitat": "Hakolo Island",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -122,7 +126,7 @@
     "habitat": "Hakolo Island",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the tail with a slash-type weapon to boost the retreat rate."
+      "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate."
     }
   },
   {
@@ -132,7 +136,7 @@
     "habitat": "Alcala",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -172,7 +176,7 @@
     "habitat": "Alcala",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -194,7 +198,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the stomach with a slash-type weapon to boost the retreat rate."
+      "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate."
     }
   },
   {
@@ -210,7 +214,7 @@
     "habitat": "Alcala",
     "hatchable": true,
     "monstie": {
-      "retreat": "Frighten it with a Sonic Bomb to boost the retreat rate."
+      "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate."
     }
   },
   {
@@ -226,7 +230,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a blunt-type weapon to boost the retreat rate."
+      "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
   {
@@ -242,7 +246,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a pierce-type weapon to boost the retreat rate."
+      "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
   {
@@ -254,11 +258,15 @@
       {
         "type": "subspecies",
         "monster": "Brute Tigrex"
+      },
+      {
+        "type": "deviant",
+        "monster": "Tigrex"
       }
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a great sword after it steps on a Shock Trap to greatly boost the retreat rate."
+      "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
   {
@@ -274,7 +282,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat using a sword & shield while it is paralyzed to greatly boost the retreat rate."
+      "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
   {
@@ -284,7 +292,7 @@
     "habitat": "Alcala",
     "hatchable": true,
     "monstie": {
-      "retreat": "Use a Flash Bomb to stop it from gliding to boost the retreat rate."
+      "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate."
     }
   },
   {
@@ -300,7 +308,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break each part to boost the retreat rate"
+      "retreat": "Break **each part** to boost the retreat rate"
     }
   },
   {
@@ -310,7 +318,7 @@
     "habitat": "Alcala",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head when it is enraged to boost the retreat rate."
+      "retreat": "Break the **head** when it is **enraged** to boost the retreat rate."
     }
   },
   {
@@ -328,11 +336,15 @@
       {
         "type": "subspecies",
         "monster": "Green Nargacuga"
+      },
+      {
+        "type": "deviant",
+        "monster": "Silverwind Nargacuga"
       }
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Attack it after it falls into a Pitfall Trap to boost the retreat rate."
+      "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate."
     }
   },
   {
@@ -340,9 +352,19 @@
     "name": "Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Pink Rathian"
+      },
+      {
+        "type": "deviant",
+        "monster": "Rathian"
+      }
+    ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Attack with a Rathalos Kinship Skill to greatly boost the retreat rate."
+      "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -352,7 +374,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -388,6 +410,10 @@
       {
         "type": "color",
         "monster": "Bnahabra (Brown)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Red)"
       }
     ]
   },
@@ -410,7 +436,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a hammer to boost the retreat rate."
+      "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
   {
@@ -426,7 +452,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -442,7 +468,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a sword & shield to boost the retreat rate."
+      "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate."
     }
   },
   {
@@ -458,7 +484,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Attack with a Nerscylla Kinship Skill to boost the retreat rate."
+      "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
   {
@@ -474,7 +500,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the stomach while it is swollen to boost the retreat rate."
+      "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate."
     }
   },
   {
@@ -490,7 +516,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the needles with a fire element attack to boost the retreat rate."
+      "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate."
     }
   },
   {
@@ -506,7 +532,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Wash off its mud cover by using a water element attack to boost the retreat rate."
+      "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate."
     }
   },
   {
@@ -516,7 +542,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the tail with a hunting horn to boost the retreat rate."
+      "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate."
     }
   },
   {
@@ -532,7 +558,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Attack with a Shrouded Nerscylla Kinship Skill to boost the retreat rate."
+      "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
   {
@@ -548,7 +574,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a bow to boost the retreat rate."
+      "retreat": "Break the **head** with a **bow** to boost the retreat rate."
     }
   },
   {
@@ -576,7 +602,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the stomach with a great sword to boost the retreat rate."
+      "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate."
     }
   },
   {
@@ -592,7 +618,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Shake off its snow cover by using a thunder element attack to boost the retreat rate."
+      "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate."
     }
   },
   {
@@ -600,9 +626,15 @@
     "name": "Anjanath",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Anjanath"
+      }
+    ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the nose with a water element attack to boost the retreat rate."
+      "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate."
     }
   },
   {
@@ -612,7 +644,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with a Glavenus Kinship Skill to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -620,9 +652,19 @@
     "name": "Zinogre",
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Stygian Zinogre"
+      },
+      {
+        "type": "deviant",
+        "monster": "Thunderlord Zinogre"
+      }
+    ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with an ice element attack while it is afflicted with Blastblight to greatly boost the retreat rate."
+      "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
   {
@@ -630,9 +672,15 @@
     "name": "Barioth",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Sand Barioth"
+      }
+    ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the spikes with a fire element attack to greatly boost the retreat rate."
+      "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate."
     }
   },
   {
@@ -642,7 +690,7 @@
     "habitat": "Loloska",
     "hatchable": true,
     "monstie": {
-      "retreat": "Stop it from gliding using a Flash Bomb, then attack with a thunder element attack to greatly boost the retreat rate."
+      "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate."
     }
   },
   {
@@ -670,6 +718,10 @@
       {
         "type": "color",
         "monster": "Bnahabra (Green)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Red)"
       }
     ]
   },
@@ -724,7 +776,7 @@
     "habitat": "Terga",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -740,7 +792,7 @@
     "habitat": "Lamure",
     "hatchable": true,
     "monstie": {
-      "retreat": "Hit it with a Paintball and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
   {
@@ -762,7 +814,7 @@
     "habitat": "Lamure",
     "hatchable": true,
     "monstie": {
-      "retreat": "Make it emerge from underground using a Sonic Bomb to boost the retreat rate."
+      "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate."
     }
   },
   {
@@ -778,7 +830,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a water element great sword to boost the retreat rate."
+      "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate."
     }
   },
   {
@@ -794,7 +846,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a gunlance to boost the retreat rate."
+      "retreat": "Break the **head** with a **gunlance** to boost the retreat rate."
     }
   },
   {
@@ -810,7 +862,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Attack it while it is in a Pitfall Trap to boost the retreat rate."
+      "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate."
     }
   },
   {
@@ -822,11 +874,15 @@
       {
         "type": "subspecies",
         "monster": "Black Diablos"
+      },
+      {
+        "type": "deviant",
+        "monster": "Bloodbath Diablos"
       }
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Make it emerge from underground using a Sonic Bomb, then destroy its horns while it is downed to greatly boost the retreat rate."
+      "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
   {
@@ -842,7 +898,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Make it emerge from underground using a Sonic Bomb, then destroy its horns while it is downed to greatly boost the retreat rate."
+      "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
   {
@@ -858,7 +914,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat using a bow while it is paralyzed to greatly boost the retreat rate."
+      "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
   {
@@ -874,7 +930,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a hammer to boost the retreat rate."
+      "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
   {
@@ -884,7 +940,7 @@
     "habitat": "Lamure",
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with an Astalos Kinship Skill to greatly boost the retreat rate."
+      "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -900,7 +956,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with a Rathalos Kinship Skill to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -910,7 +966,7 @@
     "habitat": "Terga",
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat while it is poisoned to greatly boost the retreat rate."
+      "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
   {
@@ -950,7 +1006,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a sword & shield after it steps on a Shock Trap to greatly boost the retreat rate."
+      "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
   {
@@ -966,7 +1022,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a fire element gunlance to boost the retreat rate."
+      "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate."
     }
   },
   {
@@ -982,7 +1038,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break each part to boost the retreat rate."
+      "retreat": "Break **each part** to boost the retreat rate."
     }
   },
   {
@@ -998,7 +1054,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break each part with a Big Barrel Bomb to boost the retreat rate."
+      "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
   {
@@ -1076,7 +1132,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the needles with an ice element bow to boost the retreat rate."
+      "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate."
     }
   },
   {
@@ -1092,7 +1148,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break the head with a fire element hunting horn to boost the retreat rate."
+      "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate."
     }
   },
   {
@@ -1114,7 +1170,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Break each part with a Big Barrel Bomb to boost the retreat rate."
+      "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
   {
@@ -1130,7 +1186,7 @@
     ],
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with a Rathalos Kinship Skill to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -1140,7 +1196,7 @@
     "habitat": "Terga",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break its fist with a water element hammer to greatly boost the retreat rate."
+      "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate."
     }
   },
   {
@@ -1150,7 +1206,7 @@
     "habitat": "Terga",
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster cannot be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   },
   {
@@ -1160,7 +1216,7 @@
     "habitat": "Terga",
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with a Gammoth Kinship Skill to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -1170,7 +1226,7 @@
     "habitat": "Alcala",
     "hatchable": true,
     "monstie": {
-      "retreat": "Defeat with a Mizutsune Kinship Skill to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
   {
@@ -1181,7 +1237,7 @@
     "related": [
       {
         "type": "subspeciesOf",
-        "value": "Agnaktor"
+        "monster": "Agnaktor"
       }
     ]
   },
@@ -1192,7 +1248,302 @@
     "habitat": "Hakolo Island",
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster cannot be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 103,
+    "name": "Remobra",
+    "genus": "Snake Wyvern",
+    "habitat": "?"
+  },
+  {
+    "no": 104,
+    "name": "Great Dracophage Bug",
+    "genus": "Neopteron",
+    "habitat": "?"
+  },
+  {
+    "no": 105,
+    "name": "Bnahabra (Red)",
+    "genus": "Neopteron",
+    "habitat": "?",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Bnahabra (Blue)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Green)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Brown)"
+      }
+    ]
+  },
+  {
+    "no": 106,
+    "name": "Vespoid",
+    "genus": "Neopteron",
+    "habitat": "?"
+  },
+  {
+    "no": 107,
+    "name": "Sand Barioth",
+    "genus": "Flying Wyvern",
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Barioth"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 108,
+    "name": "Deviljho",
+    "genus": "Brute Wyvern",
+    "habitat": "Hakolo Island",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 109,
+    "name": "Stygian Zinogre",
+    "genus": "Fanged Wyvern",
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Zinogre"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 110,
+    "name": "Seregios",
+    "genus": "Flying Wyvern",
+    "habitat": "Hakolo Island",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 111,
+    "name": "Barrel Felyne",
+    "genus": "Lynian",
+    "habitat": "?"
+  },
+  {
+    "no": 112,
+    "name": "Rathalos",
+    "genus": "Flying Wyvern",
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Azure Rathalos"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 113,
+    "name": "Azure Rathalos",
+    "genus": "Flying Wyvern",
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Rathalos"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 114,
+    "name": "Pink Rathian",
+    "genus": "Flying Wyvern",
+    "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Rathian"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 115,
+    "name": "Fulgur Anjanath",
+    "genus": "Brute Wyvern",
+    "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Anjanath"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 116,
+    "name": "Silverwind Nargacuga",
+    "genus": "Flying Wyvern",
+    "habitat": "Co-Op?",
+    "tags": ["deviant"],
+    "related": [
+      {
+        "type": "deviantOf",
+        "monster": "Nargacuga"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 117,
+    "name": "Thunderlord Zinogre",
+    "genus": "Fanged Wyvern",
+    "habitat": "Co-Op?",
+    "tags": ["deviant"],
+    "related": [
+      {
+        "type": "deviantOf",
+        "monster": "Zinogre"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 118,
+    "name": "Bloodbath Diablos",
+    "genus": "Flying Wyvern",
+    "habitat": "Co-Op?",
+    "tags": ["deviant"],
+    "related": [
+      {
+        "type": "deviantOf",
+        "monster": "Diablos"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 119,
+    "name": "Grimclaw Tigrex",
+    "genus": "Flying Wyvern",
+    "habitat": "Co-Op?",
+    "tags": ["deviant"],
+    "related": [
+      {
+        "type": "deviantOf",
+        "monster": "Tigrex"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 120,
+    "name": "Dreadqueen Rathian",
+    "genus": "Flying Wyvern",
+    "habitat": "Co-Op?",
+    "tags": ["deviant"],
+    "related": [
+      {
+        "type": "deviantOf",
+        "monster": "Rathian"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 121,
+    "name": "Kirin",
+    "genus": "Elder Dragon",
+    "habitat": "Co-Op?",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 122,
+    "name": "Teostra",
+    "genus": "Elder Dragon",
+    "habitat": "Co-Op?",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 123,
+    "name": "Rajang",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op?",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 124,
+    "name": "Kushala Daora",
+    "genus": "Elder Dragon",
+    "habitat": "Co-Op?",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
+    }
+  },
+  {
+    "no": 125,
+    "name": "Velkhana",
+    "genus": "Elder Dragon",
+    "habitat": "Co-Op?",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   }
 ]
