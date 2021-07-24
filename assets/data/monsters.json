@@ -1545,5 +1545,197 @@
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
     }
+  },
+  {
+    "no": 136,
+    "name": "Palamute (Normal)",
+    "genus": "Fanged Beast?",
+    "habitat": "Co-Op?",
+    "related": [
+      {
+        "type": "element",
+        "monster": "Palamute (Fire)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Water)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Thunder)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Ice)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Dragon)"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den.?"
+    }
+  },
+  {
+    "no": 137,
+    "name": "Palamute (Fire)",
+    "genus": "Fanged Beast?",
+    "habitat": "Co-Op?",
+    "related": [
+      {
+        "type": "element",
+        "monster": "Palamute (Normal)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Water)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Thunder)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Ice)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Dragon)"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den.?"
+    }
+  },
+  {
+    "no": 138,
+    "name": "Palamute (Water)",
+    "genus": "Fanged Beast?",
+    "habitat": "Co-Op?",
+    "related": [
+      {
+        "type": "element",
+        "monster": "Palamute (Normal)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Fire)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Thunder)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Ice)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Dragon)"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den.?"
+    }
+  },
+  {
+    "no": 139,
+    "name": "Palamute (Thunder)",
+    "genus": "Fanged Beast?",
+    "habitat": "Co-Op?",
+    "related": [
+      {
+        "type": "element",
+        "monster": "Palamute (Normal)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Fire)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Water)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Ice)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Dragon)"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den.?"
+    }
+  },
+  {
+    "no": 140,
+    "name": "Palamute (Ice)",
+    "genus": "Fanged Beast?",
+    "habitat": "Co-Op?",
+    "related": [
+      {
+        "type": "element",
+        "monster": "Palamute (Normal)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Fire)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Water)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Thunder)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Dragon)"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den.?"
+    }
+  },
+  {
+    "no": 142,
+    "name": "Palamute (Dragon)",
+    "genus": "Fanged Beast?",
+    "habitat": "Co-Op?",
+    "related": [
+      {
+        "type": "element",
+        "monster": "Palamute (Normal)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Fire)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Water)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Thunder)"
+      },
+      {
+        "type": "element",
+        "monster": "Palamute (Ice)"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster **cannot** be chased back to its den.?"
+    }
   }
 ]
