@@ -51,19 +51,49 @@
     "no": 7,
     "name": "Bnahabra (Blue)",
     "genus": "Neopteron",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Bnahabra (Green)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Brown)"
+      }
+    ]
   },
   {
     "no": 8,
     "name": "Konchu (Yellow)",
     "genus": "Neopteron",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Konchu (Blue)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Red)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Green)"
+      }
+    ]
   },
   {
     "no": 9,
     "name": "Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Blue Yian Kut-Ku"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a pierce-type weapon to boost the retreat rate."
@@ -109,7 +139,13 @@
     "no": 14,
     "name": "Slagtoth (Green)",
     "genus": "Herbivore",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Slagtoth (Brown)"
+      }
+    ]
   },
   {
     "no": 15,
@@ -150,6 +186,12 @@
     "name": "Royal Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Purple Ludroth"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the stomach with a slash-type weapon to boost the retreat rate."
@@ -176,6 +218,12 @@
     "name": "Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Crimson Qurupeco"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a blunt-type weapon to boost the retreat rate."
@@ -186,6 +234,12 @@
     "name": "Blue Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Yian Kut-Ku"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a pierce-type weapon to boost the retreat rate."
@@ -196,6 +250,12 @@
     "name": "Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Brute Tigrex"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a great sword after it steps on a Shock Trap to greatly boost the retreat rate."
@@ -206,6 +266,12 @@
     "name": "Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "White Monoblos"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Defeat using a sword & shield while it is paralyzed to greatly boost the retreat rate."
@@ -226,6 +292,12 @@
     "name": "Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Ruby Basarios"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break each part to boost the retreat rate"
@@ -252,6 +324,12 @@
     "name": "Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Green Nargacuga"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Attack it after it falls into a Pitfall Trap to boost the retreat rate."
@@ -281,13 +359,37 @@
     "no": 34,
     "name": "Konchu (Blue)",
     "genus": "Neopteron",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Konchu (Yellow)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Red)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Green)"
+      }
+    ]
   },
   {
     "no": 35,
     "name": "Bnahabra (Green)",
     "genus": "Neopteron",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Bnahabra (Blue)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Brown)"
+      }
+    ]
   },
   {
     "no": 36,
@@ -300,6 +402,12 @@
     "name": "Congalala",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Emerald Congalala"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a hammer to boost the retreat rate."
@@ -326,6 +434,12 @@
     "name": "Kecha Wacha",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Ash Kecha Wacha"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a sword & shield to boost the retreat rate."
@@ -336,6 +450,12 @@
     "name": "Gypceros",
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Purple Gypceros"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Attack with a Nerscylla Kinship Skill to boost the retreat rate."
@@ -362,6 +482,12 @@
     "name": "Nerscylla",
     "genus": "Temnoceran",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Shrouded Nerscylla"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the needles with a fire element attack to boost the retreat rate."
@@ -372,6 +498,12 @@
     "name": "Barroth",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Jade Barroth"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Wash off its mud cover by using a water element attack to boost the retreat rate."
@@ -392,6 +524,12 @@
     "name": "Khezu",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Red Khezu"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Attack with a Shrouded Nerscylla Kinship Skill to boost the retreat rate."
@@ -402,6 +540,12 @@
     "name": "Red Khezu",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Khezu"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a bow to boost the retreat rate."
@@ -417,7 +561,13 @@
     "no": 50,
     "name": "Seltas Queen",
     "genus": "Neopteron",
-    "habitat": "Loloska"
+    "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Desert Seltas Queen"
+      }
+    ]
   },
   {
     "no": 51,
@@ -434,6 +584,12 @@
     "name": "Jade Barroth",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Barroth"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Shake off its snow cover by using a thunder element attack to boost the retreat rate."
@@ -493,19 +649,49 @@
     "no": 58,
     "name": "Slagtoth (Brown)",
     "genus": "Herbivore",
-    "habitat": "?"
+    "habitat": "?",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Slagtoth (Green)"
+      }
+    ]
   },
   {
     "no": 59,
     "name": "Bnahabra (Brown)",
     "genus": "Neopteron",
-    "habitat": "?"
+    "habitat": "?",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Bnahabra (Blue)"
+      },
+      {
+        "type": "color",
+        "monster": "Bnahabra (Green)"
+      }
+    ]
   },
   {
     "no": 60,
     "name": "Konchu (Red)",
     "genus": "Neopteron",
-    "habitat": "?"
+    "habitat": "?",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Konchu (Yellow)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Blue)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Green)"
+      }
+    ]
   },
   {
     "no": 61,
@@ -561,7 +747,13 @@
     "no": 68,
     "name": "Plesioth",
     "genus": "Piscine Wyvern",
-    "habitat": "?"
+    "habitat": "?",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Green Plesioth"
+      }
+    ]
   },
   {
     "no": 69,
@@ -578,6 +770,12 @@
     "name": "Ash Kecha Wacha",
     "genus": "Fanged Beast",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Kecha Wacha"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a water element great sword to boost the retreat rate."
@@ -588,6 +786,12 @@
     "name": "Purple Gypceros",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Gypceros"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a gunlance to boost the retreat rate."
@@ -598,6 +802,12 @@
     "name": "Green Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Nargacuga"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Attack it while it is in a Pitfall Trap to boost the retreat rate."
@@ -608,6 +818,12 @@
     "name": "Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Black Diablos"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Make it emerge from underground using a Sonic Bomb, then destroy its horns while it is downed to greatly boost the retreat rate."
@@ -618,6 +834,12 @@
     "name": "Black Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Diablos"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Make it emerge from underground using a Sonic Bomb, then destroy its horns while it is downed to greatly boost the retreat rate."
@@ -628,6 +850,12 @@
     "name": "White Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Monoblos"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Defeat using a bow while it is paralyzed to greatly boost the retreat rate."
@@ -638,6 +866,12 @@
     "name": "Crimson Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Qurupeco"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a hammer to boost the retreat rate."
@@ -658,6 +892,12 @@
     "name": "Lagiacrus",
     "genus": "Leviathan",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Ivory Lagiacrus"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Defeat with a Rathalos Kinship Skill to greatly boost the retreat rate."
@@ -677,19 +917,37 @@
     "no": 80,
     "name": "Daimyo Hermitaur",
     "genus": "Carapaceon",
-    "habitat": "?"
+    "habitat": "?",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Plum Daimyo Hermitaur"
+      }
+    ]
   },
   {
     "no": 81,
     "name": "Plum Daimyo Hermitaur",
     "genus": "Carapaceon",
-    "habitat": "?"
+    "habitat": "?",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Daimyo Hermitaur"
+      }
+    ]
   },
   {
     "no": 82,
     "name": "Brute Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Tigrex"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a sword & shield after it steps on a Shock Trap to greatly boost the retreat rate."
@@ -700,6 +958,12 @@
     "name": "Purple Ludroth",
     "genus": "Leviathan",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Royal Ludroth"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break the head with a fire element gunlance to boost the retreat rate."
@@ -710,6 +974,12 @@
     "name": "Ruby Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Basarios"
+      }
+    ],
     "hatchable": true,
     "monstie": {
       "retreat": "Break each part to boost the retreat rate."
@@ -718,11 +988,211 @@
   {
     "no": 85,
     "name": "Gravios",
+    "genus": "Flying Wyvern",
+    "habitat": "Terga",
+    "related": [
+      {
+        "type": "subspecies",
+        "monster": "Black Gravios"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break each part with a Big Barrel Bomb to boost the retreat rate."
+    }
+  },
+  {
+    "no": 86,
+    "name": "Altaroth",
+    "genus": "Neopteron",
+    "habitat": "?"
+  },
+  {
+    "no": 87,
+    "name": "Great Thunderbug",
+    "genus": "Neopteron",
+    "habitat": "?"
+  },
+  {
+    "no": 88,
+    "name": "Konchu (Green)",
+    "genus": "Neopteron",
+    "habitat": "?",
+    "related": [
+      {
+        "type": "color",
+        "monster": "Konchu (Yellow)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Blue)"
+      },
+      {
+        "type": "color",
+        "monster": "Konchu (Red)"
+      }
+    ]
+  },
+  {
+    "no": 89,
+    "name": "Shakalaka",
+    "genus": "Lynian",
+    "habitat": "?"
+  },
+  {
+    "no": 90,
+    "name": "Desert Seltas Queen",
+    "genus": "Neopteron",
+    "habitat": "?",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Seltas Queen"
+      }
+    ]
+  },
+  {
+    "no": 91,
+    "name": "Green Plesioth",
+    "genus": "Piscine Wyvern",
+    "habitat": "?",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Plesioth"
+      }
+    ]
+  },
+  {
+    "no": 92,
+    "name": "Shrouded Nerscylla",
+    "genus": "Temnoceran",
+    "habitat": "Terga",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Nerscylla"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break the needles with an ice element bow to boost the retreat rate."
+    }
+  },
+  {
+    "no": 93,
+    "name": "Emerald Congalala",
+    "genus": "Fanged Beast",
+    "habitat": "Terga",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Congalala"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break the head with a fire element hunting horn to boost the retreat rate."
+    }
+  },
+  {
+    "no": 94,
+    "name": "Agnaktor",
+    "genus": "Leviathan",
+    "habitat": "?"
+  },
+  {
+    "no": 95,
+    "name": "Black Gravios",
+    "genus": "Flying Wyvern",
+    "habitat": "Terga",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Gravios"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Break each part with a Big Barrel Bomb to boost the retreat rate."
+    }
+  },
+  {
+    "no": 96,
+    "name": "Ivory Lagiacrus",
+    "genus": "Leviathan",
+    "habitat": "Terga",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "monster": "Lagiacrus"
+      }
+    ],
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Defeat with a Rathalos Kinship Skill to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 97,
+    "name": "Brachydios",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "hatchable": true,
     "monstie": {
-      "retreat": "Break each part with a Big Barrel Bomb to boost the retreat rate."
+      "retreat": "Break its fist with a water element hammer to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 98,
+    "name": "Nergigante",
+    "genus": "Elder Dragon",
+    "habitat": "Terga",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster cannot be chased back to its den."
+    }
+  },
+  {
+    "no": 99,
+    "name": "Astalos",
+    "genus": "Flying Wyvern",
+    "habitat": "Terga",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Defeat with a Gammoth Kinship Skill to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 100,
+    "name": "Glavenus",
+    "genus": "Brute Wyvern",
+    "habitat": "Alcala",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "Defeat with a Mizutsune Kinship Skill to greatly boost the retreat rate."
+    }
+  },
+  {
+    "no": 101,
+    "name": "Glacial Agnaktor",
+    "genus": "Leviathan",
+    "habitat": "?",
+    "related": [
+      {
+        "type": "subspeciesOf",
+        "value": "Agnaktor"
+      }
+    ]
+  },
+  {
+    "no": 102,
+    "name": "Bazelgeuse",
+    "genus": "Flying Wyvern",
+    "habitat": "Hakolo Island",
+    "hatchable": true,
+    "monstie": {
+      "retreat": "This monster cannot be chased back to its den."
     }
   }
 ]
