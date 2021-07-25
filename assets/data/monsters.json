@@ -242,7 +242,7 @@
     "habitat": "Alcala",
     "monster": {
       "parts": {
-        "DEFAULT": ["pierce", "?"]
+        "DEFAULT": ["pierce"]
       },
       "elementalWeakness": "fire"
     }
@@ -447,7 +447,8 @@
         "Horn": ["pierce"],
         "Legs": ["pierce"],
         "Tail": ["pierce"]
-      }
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -485,7 +486,7 @@
     ],
     "monster": {
       "parts": {
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -844,10 +845,10 @@
     "monster": {
       "parts": {
         "DEFAULT": ["slash"],
-        "Body": ["slash"],
-        "Head": ["blunt"],
-        "Tail": ["pierce"],
-        "Legs": ["slash", "blunt"]
+        "Body Mud?": ["slash"],
+        "Head Mud?": ["blunt"],
+        "Tail Mud?": ["pierce"],
+        "Legs Mud?": ["slash", "blunt"]
       },
       "elementalWeakness": "fire"
     },
@@ -934,7 +935,7 @@
         "Stomach": ["pierce"],
         "Head": ["blunt"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "thunder"
     }
   },
   {
@@ -956,7 +957,7 @@
         "Legs": ["blunt"],
         "Seltas": ["pierce"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "fire"
     }
   },
   {
@@ -991,10 +992,10 @@
     "monster": {
       "parts": {
         "DEFAULT": ["slash"],
-        "Body": ["slash"],
-        "Head": ["blunt"],
-        "Tail": ["pierce"],
-        "Legs": ["slash", "blunt"]
+        "Body Snow?": ["slash"],
+        "Head Snow?": ["blunt"],
+        "Tail Snow?": ["pierce"],
+        "Legs Snow?": ["slash", "blunt"]
       },
       "elementalWeakness": "thunder"
     },
@@ -1037,12 +1038,13 @@
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
         "Head": ["blunt"],
-        "Broken Head": ["slash", "blunt"],
+        "Broken Head?": ["slash", "blunt"],
         "Nose": ["slash"],
-        "Broken Nose": ["slash", "blunt"],
-        "Broken Legs": ["blunt"],
+        "Broken Nose?": ["slash", "blunt"],
+        "Broken Legs?": ["blunt"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -1095,7 +1097,8 @@
         "Stomach": ["slash", "pierce"],
         "Spikes": ["blunt"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -1114,7 +1117,7 @@
         "Head": ["slash"],
         "Wings": ["slash", "blunt"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -1212,7 +1215,7 @@
       "parts": {
         "DEFAULT": ["blunt"]
       },
-      "elementalWeakness": "fire"
+      "elementalWeakness": "thunder"
     }
   },
   {
@@ -1234,7 +1237,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "water"
     }
   },
   {
@@ -1245,7 +1249,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1260,7 +1265,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "ice"
     }
   },
   {
@@ -1271,7 +1277,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1294,9 +1301,9 @@
         "DEFAULT": ["slash", "pierce"],
         "Body": ["slash", "pierce"],
         "Back": ["pierce"],
-        "Tail": ["pierce"]
+        "Tail": ["pierce?"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "thunder"
     }
   },
   {
@@ -1311,7 +1318,7 @@
         "Back": ["pierce"],
         "Tail": ["slash"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1336,7 +1343,8 @@
         "Head": ["slash"],
         "Claws": ["blunt"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1360,7 +1368,8 @@
         "Stomach": ["slash"],
         "Head": ["pierce"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -1384,7 +1393,8 @@
         "Stomach": ["pierce"],
         "Tail": ["slash"],
         "Head": ["pierce"]
-      }
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -1412,7 +1422,8 @@
         "Horn": ["blunt"],
         "Legs": ["pierce"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1436,7 +1447,8 @@
         "Horn": ["blunt"],
         "Legs": ["slash", "blunt", "pierce"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1460,7 +1472,8 @@
         "Horn": ["pierce"],
         "Legs": ["pierce"],
         "Tail": ["pierce"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1483,7 +1496,8 @@
         "DEFAULT": ["slash"],
         "Body": ["slash"],
         "Head": ["blunt"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1501,7 +1515,8 @@
         "Body": ["slash", "blunt"],
         "Legs": ["slash", "blunt"],
         "Tail": ["pierce"]
-      }
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -1525,7 +1540,8 @@
         "Body": ["slash"],
         "Tail": ["blunt"],
         "Back": ["blunt"]
-      }
+      },
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -1543,8 +1559,9 @@
         "Stomach": ["slash"],
         "Head": ["blunt"],
         "Tail": ["slash", "blunt"],
-        "Powderstone": ["blunt"]
-      }
+        "Powderstone?": ["blunt"]
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1565,9 +1582,9 @@
     "monster": {
       "parts": {
         "Shell": ["blunt"],
-        "Broken Shell": ["slash", "blunt", "pierce"],
+        "Broken Shell?": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        "Broken Claws": ["slash", "blunt", "pierce"],
+        "Broken Claws?": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "fire"
@@ -1587,11 +1604,12 @@
     "monster": {
       "parts": {
         "Shell": ["blunt"],
-        "Broken Shell": ["slash", "blunt", "pierce"],
+        "Broken Shell?": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        "Broken Claws": ["slash", "blunt", "pierce"],
+        "Broken Claws?": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
-      }
+      },
+      "elementalWeakness": "ice"
     }
   },
   {
@@ -1610,7 +1628,8 @@
         "DEFAULT": ["slash"],
         "Head": ["slash"],
         "Legs": ["slash", "blunt", "pierce"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1654,12 +1673,13 @@
     ],
     "monster": {
       "parts": {
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1679,11 +1699,12 @@
     ],
     "monster": {
       "parts": {
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1698,7 +1719,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["blunt"]
-      }
+      },
+      "elementalWeakness": "fire"
     }
   },
   {
@@ -1709,7 +1731,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["blunt"]
-      }
+      },
+      "elementalWeakness": "water"
     }
   },
   {
@@ -1746,7 +1769,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["blunt", "pierce"]
-      }
+      },
+      "elementalWeakness": "ice"
     }
   },
   {
@@ -1766,7 +1790,8 @@
         "Body": ["pierce"],
         "Head": ["slash"],
         "Legs": ["blunt"]
-      }
+      },
+      "elementalWeakness": "ice"
     }
   },
   {
@@ -1786,7 +1811,8 @@
         "Body": ["blunt"],
         "Back": ["pierce"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "thunder"
     }
   },
   {
@@ -1808,7 +1834,8 @@
         "Head": ["blunt"],
         "Needle": ["pierce"],
         "Legs": ["slash"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1832,7 +1859,8 @@
         "Body": ["pierce"],
         "Head": ["blunt"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1849,7 +1877,8 @@
         "Body": ["slash", "pierce"],
         "Head": ["slash", "pierce"],
         "Tail": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "water"
     }
   },
   {
@@ -1865,11 +1894,12 @@
     ],
     "monster": {
       "parts": {
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1893,7 +1923,8 @@
         "Body": ["blunt"],
         "Tail": ["pierce"],
         "Back": ["slash"]
-      }
+      },
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
@@ -1912,7 +1943,8 @@
         "Head": ["slash"],
         "Tail": ["pierce"],
         "Fists": ["blunt"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1930,8 +1962,9 @@
         "Head": ["blunt"],
         "Legs": ["slash"],
         "Wings": ["slash"],
-        "White Spikes": ["slash", "blunt", "pierce"]
-      }
+        "White Spikes?": ["slash", "blunt", "pierce"]
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -1950,7 +1983,8 @@
         "Head": ["blunt"],
         "Tail": ["slash", "blunt"],
         "Wings": ["slash", "blunt"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -1967,7 +2001,8 @@
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
         "Head": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -1987,13 +2022,14 @@
     ],
     "monster": {
       "parts": {
-        "Broken Body": ["blunt"],
+        "Broken Body?": ["blunt"],
         "Body": ["slash", "pierce"],
-        "Broken Head": ["blunt"],
+        "Broken Head?": ["blunt"],
         "Head": ["slash", "pierce"],
-        "Broken Tail": ["blunt"],
+        "Broken Tail?": ["blunt"],
         "Tail": ["slash", "pierce"]
-      }
+      },
+      "elementalWeakness": "fire"
     }
   },
   {
@@ -2008,7 +2044,8 @@
         "Head": ["blunt"],
         "Tail": ["slash"],
         "Wings": ["pierce"]
-      }
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2023,7 +2060,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["blunt"]
-      }
+      },
+      "elementalWeakness": "dragon"
     }
   },
   {
@@ -2034,7 +2072,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["blunt"]
-      }
+      },
+      "elementalWeakness": "thunder"
     }
   },
   {
@@ -2071,7 +2110,8 @@
     "monster": {
       "parts": {
         "DEFAULT": ["blunt"]
-      }
+      },
+      "elementalWeakness": "fire"
     }
   },
   {
@@ -2091,7 +2131,8 @@
         "Stomach": ["slash", "pierce"],
         "Spikes": ["blunt"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -2108,8 +2149,9 @@
         "DEFAULT": ["slash", "blunt", "pierce"],
         "Body": ["slash", "blunt", "pierce"],
         "Head": ["slash", "blunt", "pierce"],
-        "Legs": ["slash"]
-      }
+        "Legs": ["slash?"]
+      },
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
@@ -2133,7 +2175,8 @@
         "Body": ["pierce"],
         "Head": ["blunt"],
         "Tail": ["slash"]
-      }
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2152,7 +2195,8 @@
         "Head": ["pierce"],
         "Legs": ["slash", "blunt"],
         "Wings": ["pierce"]
-      }
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2165,7 +2209,8 @@
     "genus": "Lynian",
     "habitat": "?",
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "none?"
     }
   },
   {
@@ -2180,7 +2225,13 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["blunt"],
+        "Body": ["slash", "blunt"],
+        "Tail": ["slash"],
+        "Wings": ["slash", "pierce"]
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2199,7 +2250,13 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["blunt"],
+        "Body": ["slash", "blunt"],
+        "Tail": ["slash"],
+        "Wings": ["slash"]
+      },
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
@@ -2218,7 +2275,11 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Body": ["slash"],
+        "Tail": ["blunt"]
+      },
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
@@ -2237,7 +2298,15 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "parts": {
+          "Body": ["pierce"],
+          "Nose": ["slash", "blunt", "pierce"],
+          "Legs": ["slash", "blunt"],
+          "Tails": ["slash", "blunt"]
+        }
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -2249,6 +2318,7 @@
     "name": "Silverwind Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op?",
+    "dens": ["Jungle"],
     "tags": ["deviant"],
     "related": [
       {
@@ -2257,7 +2327,12 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["blunt"],
+        "Stomach": ["slash"],
+        "Tail": ["pierce"]
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2269,6 +2344,7 @@
     "name": "Thunderlord Zinogre",
     "genus": "Fanged Wyvern",
     "habitat": "Co-Op?",
+    "dens": ["Snowy Mt."],
     "tags": ["deviant"],
     "related": [
       {
@@ -2277,7 +2353,12 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash"],
+        "Body": ["blunt"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -2289,6 +2370,7 @@
     "name": "Bloodbath Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op?",
+    "dens": ["Desert", "Flowery"],
     "tags": ["deviant"],
     "related": [
       {
@@ -2297,7 +2379,13 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Horn": ["slash", "pierce"],
+        "Stomach": ["blunt"],
+        "Legs": ["blunt", "pierce"],
+        "Tail": ["slash", "pierce"]
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -2309,6 +2397,7 @@
     "name": "Grimclaw Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op?",
+    "dens": ["Woodland"],
     "tags": ["deviant"],
     "related": [
       {
@@ -2317,7 +2406,12 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash"],
+        "Stomach": ["blunt"],
+        "Legs": ["slash", "blunt"]
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2329,6 +2423,7 @@
     "name": "Dreadqueen Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op?",
+    "dens": ["Volcanic"],
     "tags": ["deviant"],
     "related": [
       {
@@ -2337,7 +2432,13 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash", "blunt"],
+        "Stomach": ["slash", "blunt?"],
+        "Tail": ["slash", "blunt?"],
+        "Back": ["slash", "blunt"]
+      },
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
@@ -2349,8 +2450,13 @@
     "name": "Kirin",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "dens": ["Jungle", "Desert", "Flowery"],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash", "blunt"],
+        "Body": ["slash", "blunt"]
+      },
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -2362,8 +2468,15 @@
     "name": "Teostra",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "dens": ["Jungle", "Volcanic"],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash", "blunt"],
+        "Stomach": ["blunt", "pierce"],
+        "Tail": ["slash", "blunt"],
+        "Wings": ["slash", "pierce"]
+      },
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
@@ -2375,8 +2488,15 @@
     "name": "Rajang",
     "genus": "Fanged Beast",
     "habitat": "Co-Op?",
+    "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash", "blunt", "pierce"],
+        "Body": ["blunt"],
+        "Legs": ["slash"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -2388,8 +2508,15 @@
     "name": "Kushala Daora",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash", "blunt", "pierce"],
+        "Stomach": ["blunt"],
+        "Tail": ["pierce"],
+        "Wings": ["pierce"]
+      },
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
@@ -2401,8 +2528,16 @@
     "name": "Velkhana",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "dens": ["Snowy Mt.", "Volcanic"],
     "monster": {
-      "parts": {}
+      "parts": {
+        "Head": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Tail": ["slash"],
+        "Wings": ["pierce"],
+        "Frost Scale": ["blunt"]
+      },
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -2437,7 +2572,8 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "dragon?"
     },
     "hatchable": true,
     "monstie": {
@@ -2472,7 +2608,8 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "water?"
     },
     "hatchable": true,
     "monstie": {
@@ -2507,7 +2644,8 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "dragon?"
     },
     "hatchable": true,
     "monstie": {
@@ -2542,7 +2680,8 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
@@ -2577,7 +2716,8 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
@@ -2612,7 +2752,8 @@
       }
     ],
     "monster": {
-      "parts": {}
+      "parts": {},
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
