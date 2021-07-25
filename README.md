@@ -19,6 +19,7 @@ https://monsterbuddy.app
 - [MHStories 2 data by iSharingan](https://docs.google.com/spreadsheets/d/1QzM9X34IfACPtRa_yWq2BZUidWJqs0l2K_Gs2023bO0)
 - [ULTIMATE CHEAT SHEET! Deviant & Elder Dragon Farm Notes Monster Hunter Stories 2 by Paradise Central](https://www.youtube.com/watch?v=Ss3Mgqe9dTo)
 - [Type Usage by The_Weasel_King](https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o)
+- [Monster Attack-Type Chart by RPGwannabe](https://www.reddit.com/r/MonsterHunterStories/comments/oo8fpi/monster_attacktype_chart)
 - [MH Stories 2 : Attack Types, Weakness & Eggs by Criwok](https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o)
 - [Monster Hunter Stories 2 Full Picture Monster’s weaknesses by Kurimu](https://www.kurimucardgame.com/mhs2-monster-weakness-en)
 - [MHS2 by dorgesilas](https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4)

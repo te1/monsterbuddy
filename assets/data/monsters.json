@@ -5,6 +5,9 @@
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -21,6 +24,9 @@
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -40,6 +46,9 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -52,6 +61,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"]
       },
@@ -68,6 +81,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Holding a rock": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Rock": ["blunt"]
@@ -99,6 +116,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -125,6 +145,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -143,6 +166,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Head": ["pierce"]
@@ -160,6 +187,9 @@
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"]
       },
@@ -172,6 +202,10 @@
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"]
       },
@@ -188,6 +222,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Head": ["blunt"],
@@ -207,6 +245,9 @@
     "genus": "Herbivore",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -229,6 +270,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -241,6 +285,9 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {
         "DEFAULT": ["pierce"]
       },
@@ -253,6 +300,9 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -265,6 +315,9 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"]
       },
@@ -277,6 +330,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -293,6 +350,9 @@
     "genus": "Leviathan",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -311,6 +371,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -329,6 +393,9 @@
     "genus": "Amphibian",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Rock": ["blunt"]
@@ -342,6 +409,10 @@
     "genus": "Fanged Beast",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Stomach": ["slash", "blunt"],
@@ -366,6 +437,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body": ["slash"],
@@ -390,6 +465,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Head": ["pierce"]
@@ -417,6 +496,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Head": ["slash"],
@@ -441,6 +524,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Stomach": ["slash", "pierce"],
@@ -461,6 +548,10 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Inflated": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -485,6 +576,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
@@ -505,6 +600,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Head": ["slash"],
@@ -523,6 +622,10 @@
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
@@ -548,6 +651,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Stomach": ["pierce"],
@@ -577,6 +684,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body": ["slash"],
@@ -595,6 +706,9 @@
     "genus": "Herbivore",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -625,6 +739,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -651,6 +768,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -663,6 +783,9 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"]
       },
@@ -681,6 +804,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -700,6 +827,9 @@
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -712,6 +842,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -734,6 +868,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -760,6 +898,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -779,6 +921,9 @@
     "genus": "Amphibian",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -791,6 +936,11 @@
     "genus": "Amphibian",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Covered in ice": "speed",
+        "Inflated": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -816,6 +966,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -843,6 +997,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Covered in mud": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body Mud?": ["slash"],
@@ -863,6 +1021,11 @@
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical",
+        "Overcharged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -888,6 +1051,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -912,6 +1079,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical?",
+        "Enraged": "power?",
+        "Charged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -930,6 +1102,10 @@
     "genus": "Neopteron",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed?"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Stomach": ["pierce"],
@@ -950,6 +1126,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed",
+        "Combined": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -966,6 +1147,10 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -990,6 +1175,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed",
+        "Covered in snow": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body Snow?": ["slash"],
@@ -1016,6 +1206,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -1034,6 +1228,9 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
@@ -1067,6 +1264,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Charged?": "technical",
+        "Supercharged?": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -1092,6 +1294,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Stomach": ["slash", "pierce"],
@@ -1111,6 +1317,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power",
+        "Flying": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -1136,6 +1347,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -1162,6 +1376,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1188,6 +1405,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1200,6 +1420,9 @@
     "genus": "Piscine Wyvern",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1212,6 +1435,9 @@
     "genus": "Carapaceon",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1224,6 +1450,9 @@
     "genus": "Leviathan",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       }
@@ -1235,6 +1464,9 @@
     "genus": "Bird Wyvern",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -1247,6 +1479,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Terga",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -1263,6 +1499,9 @@
     "genus": "Bird Wyvern",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -1275,6 +1514,10 @@
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"]
       },
@@ -1297,6 +1540,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Body": ["slash", "pierce"],
@@ -1312,6 +1559,10 @@
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Stomach": ["blunt"],
@@ -1337,6 +1588,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -1363,6 +1618,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -1388,6 +1647,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Stomach": ["pierce"],
@@ -1417,6 +1680,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Horn": ["blunt"],
@@ -1442,6 +1709,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Horn": ["blunt"],
@@ -1467,6 +1738,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Horn": ["pierce"],
@@ -1492,6 +1767,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body": ["slash"],
@@ -1510,6 +1789,10 @@
     "genus": "Leviathan",
     "habitat": "Lamure",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -1535,6 +1818,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed",
+        "Electrified": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body": ["slash"],
@@ -1554,6 +1842,10 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -1580,6 +1872,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "Shell": ["blunt"],
         "Broken Shell?": ["slash", "blunt", "pierce"],
@@ -1602,6 +1898,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "Shell": ["blunt"],
         "Broken Shell?": ["slash", "blunt", "pierce"],
@@ -1624,6 +1924,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Head": ["slash"],
@@ -1648,6 +1952,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -1672,6 +1980,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power"
+      },
       "parts": {
         "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
@@ -1698,6 +2010,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
@@ -1717,6 +2033,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1729,6 +2048,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1755,6 +2077,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -1767,6 +2092,9 @@
     "genus": "Lynian",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt", "pierce"]
       },
@@ -1785,6 +2113,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -1806,6 +2138,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
@@ -1827,6 +2163,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -1854,6 +2194,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -1873,6 +2217,11 @@
     "genus": "Leviathan",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "After Molten Uppercut": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "Body": ["slash", "pierce"],
         "Head": ["slash", "pierce"],
@@ -1893,6 +2242,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical"
+      },
       "parts": {
         "Broken Stomach?": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
@@ -1918,6 +2271,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power",
+        "Electrified": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
@@ -1937,6 +2295,10 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Body": ["slash"],
@@ -1957,6 +2319,11 @@
     "genus": "Elder Dragon",
     "habitat": "Terga",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed",
+        "White spiked": "power"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Head": ["blunt"],
@@ -1977,6 +2344,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Electrified": "power",
+        "Flying": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Stomach": ["slash", "blunt"],
@@ -1997,6 +2369,11 @@
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "After Blaze": "speed",
+        "After Fire Chakram": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
@@ -2021,6 +2398,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed",
+        "No Ice Armor": "technical"
+      },
       "parts": {
         "Broken Body?": ["blunt"],
         "Body": ["slash", "pierce"],
@@ -2038,6 +2420,10 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
         "Stomach": ["slash", "blunt"],
@@ -2058,6 +2444,9 @@
     "genus": "Snake Wyvern",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -2070,6 +2459,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -2096,6 +2488,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -2108,6 +2503,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
       "parts": {
         "DEFAULT": ["blunt"]
       },
@@ -2126,6 +2524,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "DEFAULT": ["slash", "pierce"],
         "Stomach": ["slash", "pierce"],
@@ -2145,6 +2547,10 @@
     "genus": "Brute Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash", "blunt", "pierce"],
         "Body": ["slash", "blunt", "pierce"],
@@ -2170,6 +2576,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed?"
+      },
       "parts": {
         "DEFAULT": ["pierce"],
         "Body": ["pierce"],
@@ -2189,6 +2599,10 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
@@ -2209,7 +2623,6 @@
     "genus": "Lynian",
     "habitat": "?",
     "monster": {
-      "parts": {},
       "elementalWeakness": "none?"
     }
   },
@@ -2225,6 +2638,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical?",
+        "Flying": "speed"
+      },
       "parts": {
         "Head": ["blunt"],
         "Body": ["slash", "blunt"],
@@ -2250,6 +2668,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "technical?",
+        "Flying": "speed"
+      },
       "parts": {
         "Head": ["blunt"],
         "Body": ["slash", "blunt"],
@@ -2275,6 +2698,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "Body": ["slash"],
         "Tail": ["blunt"]
@@ -2298,13 +2725,15 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
-        "parts": {
-          "Body": ["pierce"],
-          "Nose": ["slash", "blunt", "pierce"],
-          "Legs": ["slash", "blunt"],
-          "Tails": ["slash", "blunt"]
-        }
+        "Body": ["pierce"],
+        "Nose": ["slash", "blunt", "pierce"],
+        "Legs": ["slash", "blunt"],
+        "Tails": ["slash", "blunt"]
       },
       "elementalWeakness": "ice"
     },
@@ -2327,6 +2756,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "Head": ["blunt"],
         "Stomach": ["slash"],
@@ -2353,6 +2786,12 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Charged": "speed",
+        "Thunderbugs?": "speed",
+        "Fully charged?": "technical"
+      },
       "parts": {
         "Head": ["slash"],
         "Body": ["blunt"],
@@ -2379,6 +2818,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
       "parts": {
         "Horn": ["slash", "pierce"],
         "Stomach": ["blunt"],
@@ -2406,6 +2849,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed"
+      },
       "parts": {
         "Head": ["slash"],
         "Stomach": ["blunt"],
@@ -2432,6 +2879,10 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "speed"
+      },
       "parts": {
         "Head": ["slash", "blunt"],
         "Stomach": ["slash", "blunt?"],
@@ -2452,6 +2903,10 @@
     "habitat": "Co-Op?",
     "dens": ["Jungle", "Desert", "Flowery"],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "technical"
+      },
       "parts": {
         "Head": ["slash", "blunt"],
         "Body": ["slash", "blunt"]
@@ -2470,6 +2925,11 @@
     "habitat": "Co-Op?",
     "dens": ["Jungle", "Volcanic"],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power",
+        "Flying": "technical"
+      },
       "parts": {
         "Head": ["slash", "blunt"],
         "Stomach": ["blunt", "pierce"],
@@ -2490,6 +2950,12 @@
     "habitat": "Co-Op?",
     "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Power aura?": "power",
+        "Speed aura?": "speed",
+        "Technical aura?": "technical"
+      },
       "parts": {
         "Head": ["slash", "blunt", "pierce"],
         "Body": ["blunt"],
@@ -2510,6 +2976,11 @@
     "habitat": "Co-Op?",
     "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power",
+        "Flying": "speed"
+      },
       "parts": {
         "Head": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
@@ -2530,6 +3001,11 @@
     "habitat": "Co-Op?",
     "dens": ["Snowy Mt.", "Volcanic"],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Ice mantle": "technical",
+        "Flying": "power"
+      },
       "parts": {
         "Head": ["slash", "blunt"],
         "Body": ["slash", "blunt"],
@@ -2572,6 +3048,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {},
       "elementalWeakness": "dragon?"
     },
@@ -2608,6 +3087,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {},
       "elementalWeakness": "water?"
     },
@@ -2644,6 +3126,9 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {},
       "elementalWeakness": "dragon?"
     },
@@ -2680,8 +3165,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {},
-      "elementalWeakness": "ice"
+      "elementalWeakness": "ice?"
     },
     "hatchable": true,
     "monstie": {
@@ -2716,8 +3204,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {},
-      "elementalWeakness": "fire"
+      "elementalWeakness": "fire?"
     },
     "hatchable": true,
     "monstie": {
@@ -2752,8 +3243,11 @@
       }
     ],
     "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed?"
+      },
       "parts": {},
-      "elementalWeakness": "thunder"
+      "elementalWeakness": "thunder?"
     },
     "hatchable": true,
     "monstie": {
