@@ -22,3 +22,8 @@ https://monsterbuddy.app
 See [assets/data/monsters.json](https://github.com/te1/monsterbuddy/blob/main/assets/data/monsters.json) for the collected data.
 
 See [monsterbuddy-assets](https://github.com/te1/monsterbuddy-assets) for more details on images.
+
+
+## Disclaimer
+
+All trademarks referenced herein are the properties of their respective owners.
