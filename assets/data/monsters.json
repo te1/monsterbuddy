@@ -4,6 +4,12 @@
     "name": "Aptonoth",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -13,25 +19,44 @@
     "no": 2,
     "name": "Larinoth",
     "genus": "Herbivore",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "water"
+    }
   },
   {
     "no": 3,
     "name": "Kelbi",
     "genus": "Herbivore",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "monster": {}
   },
   {
     "no": 4,
     "name": "Velociprey",
     "genus": "Bird Wyvern",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "ice"
+    }
   },
   {
     "no": 5,
     "name": "Velocidrome",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"]
+      },
+      "elementalWeakness": "ice"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -42,6 +67,13 @@
     "name": "Kulu-Ya-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Rock": ["blunt"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate."
@@ -65,7 +97,13 @@
         "type": "color",
         "monster": "Bnahabra (Red)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 8,
@@ -85,7 +123,13 @@
         "type": "color",
         "monster": "Konchu (Green)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 9,
@@ -98,6 +142,13 @@
         "monster": "Blue Yian Kut-Ku"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "ice"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
@@ -107,13 +158,25 @@
     "no": 10,
     "name": "Bullfango",
     "genus": "Fanged Beast",
-    "habitat": "Hakolo Island"
+    "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"]
+      },
+      "elementalWeakness": "thunder"
+    }
   },
   {
     "no": 11,
     "name": "Bulldrome",
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -124,6 +187,15 @@
     "name": "Pukei-Pukei",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Head": ["blunt"],
+        "Tail": ["slash", "blunt", "pierce"],
+        "Body": ["slash"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate."
@@ -134,6 +206,12 @@
     "name": "Apceros",
     "genus": "Herbivore",
     "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -149,31 +227,61 @@
         "type": "color",
         "monster": "Slagtoth (Brown)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "thunder"
+    }
   },
   {
     "no": 15,
     "name": "Gargwa",
     "genus": "Bird Wyvern",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce", "?"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 16,
     "name": "Jaggi",
     "genus": "Bird Wyvern",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 17,
     "name": "Jaggia",
     "genus": "Bird Wyvern",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 18,
     "name": "Great Jaggi",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -183,7 +291,13 @@
     "no": 19,
     "name": "Ludroth",
     "genus": "Leviathan",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 20,
@@ -196,6 +310,14 @@
         "monster": "Purple Ludroth"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate."
@@ -205,13 +327,28 @@
     "no": 21,
     "name": "Tetsucabra",
     "genus": "Amphibian",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Rock": ["blunt"]
+      },
+      "elementalWeakness": "water"
+    }
   },
   {
     "no": 22,
     "name": "Arzuros",
     "genus": "Fanged Beast",
     "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Stomach": ["slash", "blunt"],
+        "Legs": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate."
@@ -228,6 +365,14 @@
         "monster": "Crimson Qurupeco"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Head": ["blunt"]
+      },
+      "elementalWeakness": "ice"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate."
@@ -244,6 +389,13 @@
         "monster": "Yian Kut-Ku"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
@@ -264,6 +416,14 @@
         "monster": "Tigrex"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Head": ["slash"],
+        "Legs": ["slash", "blunt", "pierce"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate."
@@ -280,6 +440,15 @@
         "monster": "White Monoblos"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Stomach": ["slash", "pierce"],
+        "Horn": ["pierce"],
+        "Legs": ["pierce"],
+        "Tail": ["pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate."
@@ -290,6 +459,14 @@
     "name": "Paolumu",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Neck Pouch": ["pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate."
@@ -306,6 +483,16 @@
         "monster": "Ruby Basarios"
       }
     ],
+    "monster": {
+      "parts": {
+        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Stomach": ["blunt"],
+        "Head": ["blunt"],
+        "Wing": ["pierce"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break **each part** to boost the retreat rate"
@@ -316,6 +503,14 @@
     "name": "Yian Garuga",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Head": ["slash"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** when it is **enraged** to boost the retreat rate."
@@ -325,7 +520,16 @@
     "no": 30,
     "name": "Duramboros",
     "genus": "Brute Wyvern",
-    "habitat": "Alcala"
+    "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Body": ["blunt"],
+        "Legs": ["slash"],
+        "Tail": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 31,
@@ -342,6 +546,15 @@
         "monster": "Silverwind Nargacuga"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Stomach": ["pierce"],
+        "Tail": ["pierce"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate."
@@ -362,6 +575,14 @@
         "monster": "Rathian"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "dragon"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
@@ -372,6 +593,12 @@
     "name": "Popo",
     "genus": "Herbivore",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -395,7 +622,13 @@
         "type": "color",
         "monster": "Konchu (Green)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 35,
@@ -415,13 +648,25 @@
         "type": "color",
         "monster": "Bnahabra (Red)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 36,
     "name": "Conga",
     "genus": "Fanged Beast",
-    "habitat": "Loloska"
+    "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 37,
@@ -434,6 +679,15 @@
         "monster": "Emerald Congalala"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Head": ["blunt"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
@@ -443,13 +697,25 @@
     "no": 38,
     "name": "Baggi",
     "genus": "Bird Wyvern",
-    "habitat": "Loloska"
+    "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 39,
     "name": "Great Baggi",
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -466,6 +732,16 @@
         "monster": "Ash Kecha Wacha"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Head": ["slash"],
+        "Claws": ["blunt"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate."
@@ -482,6 +758,15 @@
         "monster": "Purple Gypceros"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["pierce"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate."
@@ -491,13 +776,28 @@
     "no": 42,
     "name": "Zamite",
     "genus": "Amphibian",
-    "habitat": "Loloska"
+    "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "thunder"
+    }
   },
   {
     "no": 43,
     "name": "Zamtrios",
     "genus": "Amphibian",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["blunt", "pierce"],
+        "Legs": ["slash", "blunt"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate."
@@ -514,6 +814,17 @@
         "monster": "Shrouded Nerscylla"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Chest": ["pierce"],
+        "Head": ["blunt"],
+        "Needle": ["pierce"],
+        "Legs": ["slash"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate."
@@ -530,6 +841,16 @@
         "monster": "Jade Barroth"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Head": ["blunt"],
+        "Tail": ["pierce"],
+        "Legs": ["slash", "blunt"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate."
@@ -540,6 +861,15 @@
     "name": "Tobi-Kadachi",
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Legs": ["slash"],
+        "Tail": ["slash", "blunt"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate."
@@ -556,6 +886,14 @@
         "monster": "Red Khezu"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate."
@@ -572,6 +910,14 @@
         "monster": "Khezu"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **bow** to boost the retreat rate."
@@ -581,7 +927,15 @@
     "no": 49,
     "name": "Seltas",
     "genus": "Neopteron",
-    "habitat": "Loloska"
+    "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Stomach": ["pierce"],
+        "Head": ["blunt"]
+      },
+      "elementalWeakness": "?"
+    }
   },
   {
     "no": 50,
@@ -593,13 +947,31 @@
         "type": "subspecies",
         "monster": "Desert Seltas Queen"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Head": ["pierce"],
+        "Legs": ["blunt"],
+        "Seltas": ["pierce"]
+      },
+      "elementalWeakness": "?"
+    }
   },
   {
     "no": 51,
     "name": "Lagombi",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Legs": ["slash"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate."
@@ -616,6 +988,16 @@
         "monster": "Barroth"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Head": ["blunt"],
+        "Tail": ["pierce"],
+        "Legs": ["slash", "blunt"]
+      },
+      "elementalWeakness": "thunder"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate."
@@ -632,6 +1014,14 @@
         "monster": "Anjanath"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Nose": ["slash", "blunt", "pierce"]
+      },
+      "elementalWeakness": "water"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate."
@@ -642,6 +1032,18 @@
     "name": "Gammoth",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Body": ["blunt"],
+        "Head": ["blunt"],
+        "Broken Head": ["slash", "blunt"],
+        "Nose": ["slash"],
+        "Broken Nose": ["slash", "blunt"],
+        "Broken Legs": ["blunt"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate."
@@ -662,6 +1064,15 @@
         "monster": "Thunderlord Zinogre"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Head": ["pierce"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "ice"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
@@ -678,6 +1089,14 @@
         "monster": "Sand Barioth"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Stomach": ["slash", "pierce"],
+        "Spikes": ["blunt"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate."
@@ -688,6 +1107,15 @@
     "name": "Legiana",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Head": ["slash"],
+        "Wings": ["slash", "blunt"]
+      },
+      "elementalWeakness": "?"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate."
@@ -703,7 +1131,13 @@
         "type": "color",
         "monster": "Slagtoth (Green)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      },
+      "elementalWeakness": "thunder"
+    }
   },
   {
     "no": 59,
@@ -723,7 +1157,13 @@
         "type": "color",
         "monster": "Bnahabra (Red)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 60,
@@ -743,37 +1183,70 @@
         "type": "color",
         "monster": "Konchu (Green)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 61,
     "name": "Cephalos",
     "genus": "Piscine Wyvern",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "ice"
+    }
   },
   {
     "no": 62,
     "name": "Hermitaur",
     "genus": "Carapaceon",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 63,
     "name": "Uroktor",
     "genus": "Leviathan",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      }
+    }
   },
   {
     "no": 64,
     "name": "Ioprey",
     "genus": "Bird Wyvern",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      }
+    }
   },
   {
     "no": 65,
     "name": "Iodrome",
     "genus": "Bird Wyvern",
     "habitat": "Terga",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -783,13 +1256,23 @@
     "no": 66,
     "name": "Genprey",
     "genus": "Bird Wyvern",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      }
+    }
   },
   {
     "no": 67,
     "name": "Gendrome",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
@@ -805,13 +1288,31 @@
         "type": "subspecies",
         "monster": "Green Plesioth"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Body": ["slash", "pierce"],
+        "Back": ["pierce"],
+        "Tail": ["pierce"]
+      },
+      "elementalWeakness": "?"
+    }
   },
   {
     "no": 69,
     "name": "Cephadrome",
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Stomach": ["blunt"],
+        "Back": ["pierce"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "?"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate."
@@ -828,6 +1329,15 @@
         "monster": "Kecha Wacha"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Head": ["slash"],
+        "Claws": ["blunt"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate."
@@ -844,6 +1354,14 @@
         "monster": "Gypceros"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["pierce"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **gunlance** to boost the retreat rate."
@@ -860,6 +1378,14 @@
         "monster": "Nargacuga"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Stomach": ["pierce"],
+        "Tail": ["slash"],
+        "Head": ["pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate."
@@ -880,6 +1406,14 @@
         "monster": "Bloodbath Diablos"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Horn": ["blunt"],
+        "Legs": ["pierce"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
@@ -896,6 +1430,14 @@
         "monster": "Diablos"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Horn": ["blunt"],
+        "Legs": ["slash", "blunt", "pierce"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
@@ -912,6 +1454,14 @@
         "monster": "Monoblos"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Horn": ["pierce"],
+        "Legs": ["pierce"],
+        "Tail": ["pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate."
@@ -928,6 +1478,13 @@
         "monster": "Qurupeco"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Head": ["blunt"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
@@ -938,6 +1495,14 @@
     "name": "Mizutsune",
     "genus": "Leviathan",
     "habitat": "Lamure",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Legs": ["slash", "blunt"],
+        "Tail": ["pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate."
@@ -954,6 +1519,14 @@
         "monster": "Ivory Lagiacrus"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Tail": ["blunt"],
+        "Back": ["blunt"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
@@ -964,6 +1537,15 @@
     "name": "Uragaan",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["blunt"],
+        "Tail": ["slash", "blunt"],
+        "Powderstone": ["blunt"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate."
@@ -979,7 +1561,17 @@
         "type": "subspecies",
         "monster": "Plum Daimyo Hermitaur"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "Shell": ["blunt"],
+        "Broken Shell": ["slash", "blunt", "pierce"],
+        "Claws": ["blunt"],
+        "Broken Claws": ["slash", "blunt", "pierce"],
+        "Body": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 81,
@@ -991,7 +1583,16 @@
         "type": "subspeciesOf",
         "monster": "Daimyo Hermitaur"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "Shell": ["blunt"],
+        "Broken Shell": ["slash", "blunt", "pierce"],
+        "Claws": ["blunt"],
+        "Broken Claws": ["slash", "blunt", "pierce"],
+        "Body": ["blunt"]
+      }
+    }
   },
   {
     "no": 82,
@@ -1004,6 +1605,13 @@
         "monster": "Tigrex"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Head": ["slash"],
+        "Legs": ["slash", "blunt", "pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate."
@@ -1020,6 +1628,14 @@
         "monster": "Royal Ludroth"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["pierce"]
+      },
+      "elementalWeakness": "fire"
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate."
@@ -1036,6 +1652,15 @@
         "monster": "Basarios"
       }
     ],
+    "monster": {
+      "parts": {
+        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Stomach": ["blunt"],
+        "Head": ["blunt"],
+        "Wing": ["pierce"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break **each part** to boost the retreat rate."
@@ -1052,6 +1677,14 @@
         "monster": "Black Gravios"
       }
     ],
+    "monster": {
+      "parts": {
+        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Stomach": ["blunt"],
+        "Head": ["blunt"],
+        "Legs": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
@@ -1061,13 +1694,23 @@
     "no": 86,
     "name": "Altaroth",
     "genus": "Neopteron",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      }
+    }
   },
   {
     "no": 87,
     "name": "Great Thunderbug",
     "genus": "Neopteron",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      }
+    }
   },
   {
     "no": 88,
@@ -1087,13 +1730,24 @@
         "type": "color",
         "monster": "Konchu (Red)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 89,
     "name": "Shakalaka",
     "genus": "Lynian",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt", "pierce"]
+      }
+    }
   },
   {
     "no": 90,
@@ -1105,7 +1759,15 @@
         "type": "subspeciesOf",
         "monster": "Seltas Queen"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Head": ["slash"],
+        "Legs": ["blunt"]
+      }
+    }
   },
   {
     "no": 91,
@@ -1117,7 +1779,15 @@
         "type": "subspeciesOf",
         "monster": "Plesioth"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Body": ["blunt"],
+        "Back": ["pierce"],
+        "Tail": ["slash"]
+      }
+    }
   },
   {
     "no": 92,
@@ -1130,6 +1800,16 @@
         "monster": "Nerscylla"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Chest": ["pierce"],
+        "Head": ["blunt"],
+        "Needle": ["pierce"],
+        "Legs": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate."
@@ -1146,6 +1826,14 @@
         "monster": "Congalala"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Head": ["blunt"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate."
@@ -1155,7 +1843,14 @@
     "no": 94,
     "name": "Agnaktor",
     "genus": "Leviathan",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "Body": ["slash", "pierce"],
+        "Head": ["slash", "pierce"],
+        "Tail": ["slash", "pierce"]
+      }
+    }
   },
   {
     "no": 95,
@@ -1168,6 +1863,14 @@
         "monster": "Gravios"
       }
     ],
+    "monster": {
+      "parts": {
+        "Broken Stomach": ["slash", "blunt", "pierce"],
+        "Stomach": ["blunt"],
+        "Head": ["blunt"],
+        "Legs": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
@@ -1184,6 +1887,14 @@
         "monster": "Lagiacrus"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Body": ["blunt"],
+        "Tail": ["pierce"],
+        "Back": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
@@ -1194,6 +1905,15 @@
     "name": "Brachydios",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Body": ["slash"],
+        "Head": ["slash"],
+        "Tail": ["pierce"],
+        "Fists": ["blunt"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate."
@@ -1204,6 +1924,15 @@
     "name": "Nergigante",
     "genus": "Elder Dragon",
     "habitat": "Terga",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Head": ["blunt"],
+        "Legs": ["slash"],
+        "Wings": ["slash"],
+        "White Spikes": ["slash", "blunt", "pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1214,6 +1943,15 @@
     "name": "Astalos",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Stomach": ["slash", "blunt"],
+        "Head": ["blunt"],
+        "Tail": ["slash", "blunt"],
+        "Wings": ["slash", "blunt"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate."
@@ -1224,6 +1962,13 @@
     "name": "Glavenus",
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"],
+        "Body": ["blunt"],
+        "Head": ["slash", "pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate."
@@ -1239,13 +1984,32 @@
         "type": "subspeciesOf",
         "monster": "Agnaktor"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "Broken Body": ["blunt"],
+        "Body": ["slash", "pierce"],
+        "Broken Head": ["blunt"],
+        "Head": ["slash", "pierce"],
+        "Broken Tail": ["blunt"],
+        "Tail": ["slash", "pierce"]
+      }
+    }
   },
   {
     "no": 102,
     "name": "Bazelgeuse",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Stomach": ["slash", "blunt"],
+        "Head": ["blunt"],
+        "Tail": ["slash"],
+        "Wings": ["pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1255,13 +2019,23 @@
     "no": 103,
     "name": "Remobra",
     "genus": "Snake Wyvern",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      }
+    }
   },
   {
     "no": 104,
     "name": "Great Dracophage Bug",
     "genus": "Neopteron",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      }
+    }
   },
   {
     "no": 105,
@@ -1281,13 +2055,24 @@
         "type": "color",
         "monster": "Bnahabra (Brown)"
       }
-    ]
+    ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      },
+      "elementalWeakness": "fire"
+    }
   },
   {
     "no": 106,
     "name": "Vespoid",
     "genus": "Neopteron",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["blunt"]
+      }
+    }
   },
   {
     "no": 107,
@@ -1300,6 +2085,14 @@
         "monster": "Barioth"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "pierce"],
+        "Stomach": ["slash", "pierce"],
+        "Spikes": ["blunt"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate."
@@ -1310,6 +2103,14 @@
     "name": "Deviljho",
     "genus": "Brute Wyvern",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash", "blunt", "pierce"],
+        "Body": ["slash", "blunt", "pierce"],
+        "Head": ["slash", "blunt", "pierce"],
+        "Legs": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate."
@@ -1326,6 +2127,14 @@
         "monster": "Zinogre"
       }
     ],
+    "monster": {
+      "parts": {
+        "DEFAULT": ["pierce"],
+        "Body": ["pierce"],
+        "Head": ["blunt"],
+        "Tail": ["slash"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
@@ -1336,6 +2145,15 @@
     "name": "Seregios",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "monster": {
+      "parts": {
+        "DEFAULT": ["slash"],
+        "Stomach": ["slash"],
+        "Head": ["pierce"],
+        "Legs": ["slash", "blunt"],
+        "Wings": ["pierce"]
+      }
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate."
@@ -1345,7 +2163,10 @@
     "no": 111,
     "name": "Barrel Felyne",
     "genus": "Lynian",
-    "habitat": "?"
+    "habitat": "?",
+    "monster": {
+      "parts": {}
+    }
   },
   {
     "no": 112,
@@ -1358,6 +2179,9 @@
         "monster": "Azure Rathalos"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
@@ -1374,6 +2198,9 @@
         "monster": "Rathalos"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
@@ -1390,6 +2217,9 @@
         "monster": "Rathian"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate."
@@ -1406,6 +2236,9 @@
         "monster": "Anjanath"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate."
@@ -1423,6 +2256,9 @@
         "monster": "Nargacuga"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1440,6 +2276,9 @@
         "monster": "Zinogre"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1457,6 +2296,9 @@
         "monster": "Diablos"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1474,6 +2316,9 @@
         "monster": "Tigrex"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1491,6 +2336,9 @@
         "monster": "Rathian"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1501,6 +2349,9 @@
     "name": "Kirin",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1511,6 +2362,9 @@
     "name": "Teostra",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1521,6 +2375,9 @@
     "name": "Rajang",
     "genus": "Fanged Beast",
     "habitat": "Co-Op?",
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1531,6 +2388,9 @@
     "name": "Kushala Daora",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1541,6 +2401,9 @@
     "name": "Velkhana",
     "genus": "Elder Dragon",
     "habitat": "Co-Op?",
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den."
@@ -1573,6 +2436,9 @@
         "monster": "Palamute (Dragon)"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den.?"
@@ -1605,6 +2471,9 @@
         "monster": "Palamute (Dragon)"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den.?"
@@ -1637,6 +2506,9 @@
         "monster": "Palamute (Dragon)"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den.?"
@@ -1669,6 +2541,9 @@
         "monster": "Palamute (Dragon)"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den.?"
@@ -1701,6 +2576,9 @@
         "monster": "Palamute (Dragon)"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den.?"
@@ -1733,6 +2611,9 @@
         "monster": "Palamute (Ice)"
       }
     ],
+    "monster": {
+      "parts": {}
+    },
     "hatchable": true,
     "monstie": {
       "retreat": "This monster **cannot** be chased back to its den.?"
