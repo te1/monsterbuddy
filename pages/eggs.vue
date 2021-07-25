@@ -1,60 +1,83 @@
 <template>
   <div>
-    <div class="mb-1 flex items-center">
-      <h2 class="flex-1 font-semibold tracking-wide">
-        Eggs
-      </h2>
-
-      <button
-        class="text-gray-600 hover:text-blue-400 active:text-blue-800"
-        title="Sort and filter"
-        @click="showFilter = !showFilter"
-      >
-        <IconFilter />
-      </button>
-    </div>
+    <button
+      class="mb-1 text-xl text-green-500 hover:text-green-400 active:text-gray-500"
+      title="Sort and filter"
+      @click="showFilter = !showFilter"
+    >
+      <FaIcon :icon="['fas', 'filter']" />
+    </button>
 
     <MonsterFilter
       v-show="showFilter"
+      ref="monsterFilter"
+      class="mb-2"
       :monsters="monsties"
       initialSortKey="no"
       @updated="onFilterUpdated"
     />
 
-    <div
-      v-for="(group, key) in groupedMonsties"
-      :key="key"
-    >
-      <div
-        v-if="isGrouped"
-        class="mb-1 flex items-center font-semibold tracking-wide"
+    <ul>
+      <li
+        v-for="(group, key) in groupedMonsties"
+        :key="key"
+        class="mt-2 first:mt-0 "
       >
-        <IconGenus
-          v-if="sortKey === 'genus'"
-          class=" text-gray-500"
-        />
+        <div
+          v-if="isGrouped"
+          class="flex items-center mb-1"
+        >
+          <FaIcon
+            v-if="sortKey === 'genus'"
+            class="!w-6 text-gray-600"
+            :icon="['fas', 'dna']"
+          />
 
-        <IconHabitat
-          v-if="sortKey === 'habitat'"
-          class="text-gray-500"
-        />
+          <FaIcon
+            v-if="sortKey === 'habitat'"
+            class="!w-6 text-gray-600"
+            :icon="['fas', 'map-marker-alt']"
+          />
 
-        <div class="ml-1">
-          {{ key }}
+          <div
+            class="font-semibold"
+            v-text="key"
+          />
         </div>
-      </div>
 
-      <div class="grid gap-2 mb-4 lg:grid-cols-2 2xl:grid-cols-3">
-        <EggCard
-          v-for="monstie in group"
-          :key="monstie.no"
-          :monster="monstie"
-        />
-      </div>
-    </div>
+        <div
+          class1="grid gap-2 mb-4 lg:grid-cols-2 2xl:grid-cols-3"
+          class="grid gap-2"
+        >
+          <EggCard
+            v-for="monstie in group"
+            :key="monstie.no"
+            :monster="monstie"
+            class="px-1 rounded shadow bg-white"
+          />
+        </div>
+      </li>
+    </ul>
 
-    <div v-if="isEmpty">
-      No eggs found
+    <div
+      v-if="isEmpty"
+      class="flex flex-col items-center py-4 space-y-4 rounded shadow bg-white"
+    >
+      <span class="text-2xl text-gray-500 font-semibold">
+        No eggs found
+      </span>
+
+      <FaIcon
+        class="!w-20 !h-20 text-gray-400"
+        :icon="['far', 'frown']"
+      />
+
+      <button
+        class="text-lg text-green-500 hover:text-green-400 active:text-gray-500"
+        @click="resetFilter"
+      >
+        Reset filter
+      </button>
     </div>
   </div>
 </template>
@@ -82,6 +105,12 @@
         this.isEmpty = isEmpty;
         this.isGrouped = isGrouped;
         this.sortKey = sortKey;
+      },
+
+      resetFilter() {
+        if (this.$refs.monsterFilter) {
+          this.$refs.monsterFilter.reset();
+        }
       },
     },
   };

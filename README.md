@@ -7,7 +7,7 @@ https://monsterbuddy.app
 
 ## Features
 
-- Egg list with filtering, sorting ~~and search~~
+- Egg list with sorting, filtering and searching
 - More to come
 
 

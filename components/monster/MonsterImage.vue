@@ -3,14 +3,17 @@
     v-if="hasImage"
     :src="imageUrl"
     :alt="monster.name"
+    :title="monster.name"
+    class="max-w-[525px] max-h-[465px]"
     width="525"
     height="465"
   >
 
-  <MonsterIcon
-    v-else-if="!hideFallback"
-    :monster="monster"
-  />
+  <div v-else-if="!hideFallback">
+    <div class="w-full h-full flex items-center justify-center">
+      <MonsterIcon :monster="monster" />
+    </div>
+  </div>
 </template>
 
 <script>

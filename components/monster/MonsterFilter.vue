@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col mb-2 px-2 py-2 space-y-1 text-sm bg-white rounded shadow border border-gray-300">
+  <div class="flex flex-col px-2 py-2 space-y-1 rounded shadow bg-white">
     <div class="flex items-center">
       <label
         class="flex-1 cursor-pointer"
@@ -11,13 +11,29 @@
       <select
         id="MonsterFilter_SortKey"
         v-model="sortKey"
-        class="w-32 text-sm px-2 py-1 rounded"
+        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
       >
         <option value="no">Number</option>
         <option value="name">Name</option>
         <option value="genus">Genus</option>
         <option value="habitat">Habitat</option>
       </select>
+    </div>
+
+    <div class="flex items-center">
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_NameFilter"
+      >
+        Name
+      </label>
+
+      <input
+        id="MonsterFilter_NameFilter"
+        v-model="nameFilter"
+        type="text"
+        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+      >
     </div>
 
     <div class="flex items-center">
@@ -31,7 +47,7 @@
       <select
         id="MonsterFilter_GenusFilter"
         v-model="genusFilter"
-        class="w-32 text-sm px-2 py-1 rounded"
+        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
       >
         <option :value="null">All</option>
 
@@ -56,7 +72,7 @@
       <select
         id="MonsterFilter_HabitatFilter"
         v-model="habitatFilter"
-        class="w-32 text-sm px-2 py-1 rounded"
+        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
       >
         <option :value="null">All</option>
 
@@ -67,6 +83,28 @@
         >
           {{ habitat }}
         </option>
+      </select>
+    </div>
+
+    <div
+      v-if="showDeviantsFilter"
+      class="flex items-center"
+    >
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_Deviants"
+      >
+        Deviants
+      </label>
+
+      <select
+        id="MonsterFilter_Deviants"
+        v-model="deviantsFilter"
+        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+      >
+        <option :value="null">Include</option>
+        <option :value="false">Exclude</option>
+        <option :value="true">Only Deviants</option>
       </select>
     </div>
 
@@ -84,7 +122,7 @@
       <select
         id="MonsterFilter_Hatchable"
         v-model="hatchableFilter"
-        class="w-32 text-sm px-2 py-1 rounded"
+        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
       >
         <option :value="null">All</option>
         <option :value="true">Yes</option>
@@ -92,10 +130,20 @@
       </select>
     </div>
 
-    <div class="self-end mt-1">
+    <div class="flex items-center">
+      <span class="flex-1">
+        Results
+      </span>
+
+      <span
+        class="w-[150px]"
+        v-text="resultCount"
+      />
+    </div>
+
+    <div class="self-end">
       <button
-        class="w-32 px-2 py-1 text-sm font-semibold tracking-wide rounded bg-gray-400 border-gray-400 text-white
-        hover:bg-gray-300 active:bg-gray-600"
+        class="w-[150px] px-2 py-1 font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-green-500 hover:bg-green-400 active:bg-gray-500"
         @click="reset"
       >
         Reset
@@ -110,8 +158,10 @@
     monsters,
     getGenera,
     getHabitats,
+    getMonstersByName,
     getMonstersByGenus,
     getMonstersByHabitat,
+    getMonstersByIsDeviant,
     getMonstersByHatchable,
   } from '~/services/data';
 
@@ -133,6 +183,12 @@
         default: null,
       },
 
+      initialNameFilter: {
+        type: String,
+        required: false,
+        default: null,
+      },
+
       initialGenusFilter: {
         type: String,
         required: false,
@@ -145,10 +201,22 @@
         default: null,
       },
 
+      initialDeviantsFilter: {
+        type: Boolean,
+        required: false,
+        default: null,
+      },
+
       initialHatchableFilter: {
         type: Boolean,
         required: false,
         default: null,
+      },
+
+      showDeviantsFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
       },
 
       showHatchableFilter: {
@@ -161,8 +229,10 @@
     data() {
       return {
         sortKey: this.initialSortKey,
+        nameFilter: this.initialNameFilter,
         genusFilter: this.initialGenusFilter,
         habitatFilter: this.initialHabitatFilter,
+        deviantsFilter: this.initialDeviantsFilter,
         hatchableFilter: this.initialHatchableFilter,
       };
     },
@@ -179,12 +249,20 @@
       filteredMonsters() {
         let result = this.monsters;
 
+        if (this.nameFilter != null) {
+          result = getMonstersByName(this.nameFilter, result);
+        }
+
         if (this.genusFilter != null) {
           result = getMonstersByGenus(this.genusFilter, result);
         }
 
         if (this.habitatFilter != null) {
           result = getMonstersByHabitat(this.habitatFilter, result);
+        }
+
+        if (this.deviantsFilter != null) {
+          result = getMonstersByIsDeviant(this.deviantsFilter, result);
         }
 
         if (this.hatchableFilter != null) {
@@ -232,6 +310,10 @@
         return result;
       },
 
+      resultCount() {
+        return this.sortedMonsters.length;
+      },
+
       isEmpty() {
         return !this.sortedMonsters.length;
       },
@@ -243,7 +325,9 @@
       canReset() {
         return (
           this.sortKey !== this.initialSortKey &&
+          this.nameFilter !== this.initialNameFilter &&
           this.genusFilter !== this.initialGenusFilter &&
+          this.deviantsFilter !== this.initialDeviantsFilter &&
           this.habitatFilter !== this.initialHabitatFilter
         );
       },
@@ -251,8 +335,10 @@
 
     watch: {
       sortKey: 'update',
+      nameFilter: 'update',
       genusFilter: 'update',
       habitatFilter: 'update',
+      deviantsFilter: 'update',
       hatchableFilter: 'update',
     },
 
@@ -264,20 +350,25 @@
       update() {
         this.$emit('updated', {
           groupedMonsters: this.groupedMonsters,
+          resultCount: this.resultCount,
           isEmpty: this.isEmpty,
           isGrouped: this.isGrouped,
           sortKey: this.sortKey,
-          genusFilter: this.genusFilterl,
+          nameFilter: this.genusFilter,
+          genusFilter: this.genusFilter,
           habitatFilter: this.habitatFilter,
+          deviantsFilter: this.deviantsFilter,
           hatchableFilter: this.hatchableFilter,
-          canRest: this.canRest,
+          canReset: this.canReset,
         });
       },
 
       reset() {
         this.sortKey = this.initialSortKey;
+        this.nameFilter = this.initialNameFilter;
         this.genusFilter = this.initialGenusFilter;
         this.habitatFilter = this.initialHabitatFilter;
+        this.deviantsFilter = this.initialDeviantsFilter;
         this.hatchableFilter = this.initialHatchableFilter;
       },
     },

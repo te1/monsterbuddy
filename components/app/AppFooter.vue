@@ -4,9 +4,8 @@
       All trademarks referenced herein are the properties of their respective owners.
     </div>
 
-    <div class="flex items-center gap-2 mt-4">
-      <span class="flex-1"></span>
-      <span>Monster Buddy</span>
+    <div class="text-center mt-4">
+      Monster Buddy
       <a
         class="hover:text-gray-700"
         href="https://github.com/te1/monsterbuddy"
@@ -14,9 +13,7 @@
       >
         <FaIcon :icon="['fab', 'github']" />
       </a>
-      <span class="flex-1"></span>
     </div>
-
   </footer>
 </template>
 

@@ -27,12 +27,41 @@ export function getHabitats(monsterList = monsters) {
   return deepFreeze(_.sortBy(_.uniq(_.map(monsterList, 'habitat'))));
 }
 
+export function getMonstersByName(name, monsterList = monsters) {
+  name = _.toLower(name);
+
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return _.includes(_.toLower(monster.name), name);
+    })
+  );
+}
+
 export function getMonstersByGenus(genus, monsterList = monsters) {
   return deepFreeze(_.filter(monsterList, { genus }));
 }
 
 export function getMonstersByHabitat(habitat, monsterList = monsters) {
   return deepFreeze(_.filter(monsterList, { habitat }));
+}
+
+export function getMonstersByIsSubspecies(
+  mustBeSubspecies,
+  monsterList = monsters
+) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return isSubspecies(monster) === mustBeSubspecies;
+    })
+  );
+}
+
+export function getMonstersByIsDeviant(mustBeDeviant, monsterList = monsters) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return isDeviant(monster) === mustBeDeviant;
+    })
+  );
 }
 
 export function getMonstersByHatchable(hatchable, monsterList = monsters) {
@@ -44,4 +73,29 @@ export function getMonstersByHatchable(hatchable, monsterList = monsters) {
       return !monster.hatchable;
     })
   );
+}
+
+export function isVariant(monster, variantType) {
+  return !!(
+    monster &&
+    monster.related &&
+    monster.related.length &&
+    _.some(monster.related, (relation) => relation.type === variantType)
+  );
+}
+
+export function isSubspecies(monster) {
+  return isVariant(monster, 'subspeciesOf');
+}
+
+export function isDeviant(monster) {
+  return isVariant(monster, 'deviantOf');
+}
+
+export function isColorVariant(monster) {
+  return isVariant(monster, 'color');
+}
+
+export function isElementalVariant(monster) {
+  return isVariant(monster, 'element');
 }
