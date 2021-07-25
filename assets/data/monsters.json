@@ -102,18 +102,9 @@
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
     "related": [
-      {
-        "type": "color",
-        "monster": "Bnahabra (Green)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Brown)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Red)"
-      }
+      { "type": "color", "monster": "Bnahabra (Green)" },
+      { "type": "color", "monster": "Bnahabra (Brown)" },
+      { "type": "color", "monster": "Bnahabra (Red)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -131,18 +122,9 @@
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
     "related": [
-      {
-        "type": "color",
-        "monster": "Konchu (Blue)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Red)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Green)"
-      }
+      { "type": "color", "monster": "Konchu (Blue)" },
+      { "type": "color", "monster": "Konchu (Red)" },
+      { "type": "color", "monster": "Konchu (Green)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -159,12 +141,7 @@
     "name": "Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Blue Yian Kut-Ku"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Blue Yian Kut-Ku" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -263,12 +240,7 @@
     "name": "Slagtoth (Green)",
     "genus": "Herbivore",
     "habitat": "Alcala",
-    "related": [
-      {
-        "type": "color",
-        "monster": "Slagtoth (Brown)"
-      }
-    ],
+    "related": [{ "type": "color", "monster": "Slagtoth (Brown)" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power"
@@ -364,12 +336,7 @@
     "name": "Royal Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Purple Ludroth"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Purple Ludroth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -430,12 +397,7 @@
     "name": "Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Crimson Qurupeco"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Crimson Qurupeco" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -458,12 +420,7 @@
     "name": "Blue Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Yian Kut-Ku"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Yian Kut-Ku" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -486,14 +443,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "related": [
-      {
-        "type": "subspecies",
-        "monster": "Brute Tigrex"
-      },
-      {
-        "type": "deviant",
-        "monster": "Tigrex"
-      }
+      { "type": "subspecies", "monster": "Brute Tigrex" },
+      { "type": "deviant", "monster": "Tigrex" }
     ],
     "monster": {
       "attackPatterns": {
@@ -517,12 +468,7 @@
     "name": "Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "White Monoblos"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "White Monoblos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -569,12 +515,7 @@
     "name": "Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Ruby Basarios"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Ruby Basarios" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -641,14 +582,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "related": [
-      {
-        "type": "subspecies",
-        "monster": "Green Nargacuga"
-      },
-      {
-        "type": "deviant",
-        "monster": "Silverwind Nargacuga"
-      }
+      { "type": "subspecies", "monster": "Green Nargacuga" },
+      { "type": "deviant", "monster": "Silverwind Nargacuga" }
     ],
     "monster": {
       "attackPatterns": {
@@ -674,14 +609,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "related": [
-      {
-        "type": "subspecies",
-        "monster": "Pink Rathian"
-      },
-      {
-        "type": "deviant",
-        "monster": "Rathian"
-      }
+      { "type": "subspecies", "monster": "Pink Rathian" },
+      { "type": "deviant", "monster": "Rathian" }
     ],
     "monster": {
       "attackPatterns": {
@@ -725,18 +654,9 @@
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
     "related": [
-      {
-        "type": "color",
-        "monster": "Konchu (Yellow)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Red)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Green)"
-      }
+      { "type": "color", "monster": "Konchu (Yellow)" },
+      { "type": "color", "monster": "Konchu (Red)" },
+      { "type": "color", "monster": "Konchu (Green)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -754,18 +674,9 @@
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
     "related": [
-      {
-        "type": "color",
-        "monster": "Bnahabra (Blue)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Brown)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Red)"
-      }
+      { "type": "color", "monster": "Bnahabra (Blue)" },
+      { "type": "color", "monster": "Bnahabra (Brown)" },
+      { "type": "color", "monster": "Bnahabra (Red)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -797,12 +708,7 @@
     "name": "Congalala",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Emerald Congalala"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Emerald Congalala" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -861,12 +767,7 @@
     "name": "Kecha Wacha",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Ash Kecha Wacha"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Ash Kecha Wacha" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -891,12 +792,7 @@
     "name": "Gypceros",
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Purple Gypceros"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Purple Gypceros" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -959,12 +855,7 @@
     "name": "Nerscylla",
     "genus": "Temnoceran",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Shrouded Nerscylla"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Shrouded Nerscylla" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -990,12 +881,7 @@
     "name": "Barroth",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Jade Barroth"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Jade Barroth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -1044,12 +930,7 @@
     "name": "Khezu",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Red Khezu"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Red Khezu" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1072,12 +953,7 @@
     "name": "Red Khezu",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Khezu"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Khezu" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical?",
@@ -1119,12 +995,7 @@
     "name": "Seltas Queen",
     "genus": "Neopteron",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Desert Seltas Queen"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Desert Seltas Queen" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1168,12 +1039,7 @@
     "name": "Jade Barroth",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Barroth"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Barroth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -1199,12 +1065,7 @@
     "name": "Anjanath",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Anjanath"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Anjanath" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -1254,14 +1115,8 @@
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
     "related": [
-      {
-        "type": "subspecies",
-        "monster": "Stygian Zinogre"
-      },
-      {
-        "type": "deviant",
-        "monster": "Thunderlord Zinogre"
-      }
+      { "type": "subspecies", "monster": "Stygian Zinogre" },
+      { "type": "deviant", "monster": "Thunderlord Zinogre" }
     ],
     "monster": {
       "attackPatterns": {
@@ -1287,12 +1142,7 @@
     "name": "Barioth",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Sand Barioth"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Sand Barioth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -1340,12 +1190,7 @@
     "name": "Slagtoth (Brown)",
     "genus": "Herbivore",
     "habitat": "?",
-    "related": [
-      {
-        "type": "color",
-        "monster": "Slagtoth (Green)"
-      }
-    ],
+    "related": [{ "type": "color", "monster": "Slagtoth (Green)" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power"
@@ -1362,18 +1207,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "related": [
-      {
-        "type": "color",
-        "monster": "Bnahabra (Blue)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Green)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Red)"
-      }
+      { "type": "color", "monster": "Bnahabra (Blue)" },
+      { "type": "color", "monster": "Bnahabra (Green)" },
+      { "type": "color", "monster": "Bnahabra (Red)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -1391,18 +1227,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "related": [
-      {
-        "type": "color",
-        "monster": "Konchu (Yellow)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Blue)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Green)"
-      }
+      { "type": "color", "monster": "Konchu (Yellow)" },
+      { "type": "color", "monster": "Konchu (Blue)" },
+      { "type": "color", "monster": "Konchu (Green)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -1533,12 +1360,7 @@
     "name": "Plesioth",
     "genus": "Piscine Wyvern",
     "habitat": "?",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Green Plesioth"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Green Plesioth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1581,12 +1403,7 @@
     "name": "Ash Kecha Wacha",
     "genus": "Fanged Beast",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Kecha Wacha"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Kecha Wacha" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1611,12 +1428,7 @@
     "name": "Purple Gypceros",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Gypceros"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Gypceros" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1640,12 +1452,7 @@
     "name": "Green Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Nargacuga"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Nargacuga" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -1670,14 +1477,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "related": [
-      {
-        "type": "subspecies",
-        "monster": "Black Diablos"
-      },
-      {
-        "type": "deviant",
-        "monster": "Bloodbath Diablos"
-      }
+      { "type": "subspecies", "monster": "Black Diablos" },
+      { "type": "deviant", "monster": "Bloodbath Diablos" }
     ],
     "monster": {
       "attackPatterns": {
@@ -1702,12 +1503,7 @@
     "name": "Black Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Diablos"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Diablos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -1731,12 +1527,7 @@
     "name": "White Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Monoblos"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Monoblos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -1760,12 +1551,7 @@
     "name": "Crimson Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Qurupeco"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Qurupeco" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1811,12 +1597,7 @@
     "name": "Lagiacrus",
     "genus": "Leviathan",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Ivory Lagiacrus"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Ivory Lagiacrus" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -1865,12 +1646,7 @@
     "name": "Daimyo Hermitaur",
     "genus": "Carapaceon",
     "habitat": "?",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Plum Daimyo Hermitaur"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Plum Daimyo Hermitaur" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1891,12 +1667,7 @@
     "name": "Plum Daimyo Hermitaur",
     "genus": "Carapaceon",
     "habitat": "?",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Daimyo Hermitaur"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Daimyo Hermitaur" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -1917,12 +1688,7 @@
     "name": "Brute Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Tigrex"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Tigrex" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -1945,12 +1711,7 @@
     "name": "Purple Ludroth",
     "genus": "Leviathan",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Royal Ludroth"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Royal Ludroth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -1973,12 +1734,7 @@
     "name": "Ruby Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Basarios"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Basarios" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -2003,12 +1759,7 @@
     "name": "Gravios",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Black Gravios"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Black Gravios" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2063,18 +1814,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "related": [
-      {
-        "type": "color",
-        "monster": "Konchu (Yellow)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Blue)"
-      },
-      {
-        "type": "color",
-        "monster": "Konchu (Red)"
-      }
+      { "type": "color", "monster": "Konchu (Yellow)" },
+      { "type": "color", "monster": "Konchu (Blue)" },
+      { "type": "color", "monster": "Konchu (Red)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -2106,12 +1848,7 @@
     "name": "Desert Seltas Queen",
     "genus": "Neopteron",
     "habitat": "?",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Seltas Queen"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Seltas Queen" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -2131,12 +1868,7 @@
     "name": "Green Plesioth",
     "genus": "Piscine Wyvern",
     "habitat": "?",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Plesioth"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Plesioth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -2156,12 +1888,7 @@
     "name": "Shrouded Nerscylla",
     "genus": "Temnoceran",
     "habitat": "Terga",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Nerscylla"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Nerscylla" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -2187,12 +1914,7 @@
     "name": "Emerald Congalala",
     "genus": "Fanged Beast",
     "habitat": "Terga",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Congalala"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Congalala" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2235,12 +1957,7 @@
     "name": "Black Gravios",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Gravios"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Gravios" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2264,12 +1981,7 @@
     "name": "Ivory Lagiacrus",
     "genus": "Leviathan",
     "habitat": "Terga",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Lagiacrus"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Lagiacrus" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -2391,12 +2103,7 @@
     "name": "Glacial Agnaktor",
     "genus": "Leviathan",
     "habitat": "?",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Agnaktor"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Agnaktor" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2474,18 +2181,9 @@
     "genus": "Neopteron",
     "habitat": "?",
     "related": [
-      {
-        "type": "color",
-        "monster": "Bnahabra (Blue)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Green)"
-      },
-      {
-        "type": "color",
-        "monster": "Bnahabra (Brown)"
-      }
+      { "type": "color", "monster": "Bnahabra (Blue)" },
+      { "type": "color", "monster": "Bnahabra (Green)" },
+      { "type": "color", "monster": "Bnahabra (Brown)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -2517,12 +2215,7 @@
     "name": "Sand Barioth",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Barioth"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Barioth" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -2569,12 +2262,7 @@
     "name": "Stygian Zinogre",
     "genus": "Fanged Wyvern",
     "habitat": "Hakolo Island",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Zinogre"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Zinogre" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -2631,12 +2319,7 @@
     "name": "Rathalos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
-    "related": [
-      {
-        "type": "subspecies",
-        "monster": "Azure Rathalos"
-      }
-    ],
+    "related": [{ "type": "subspecies", "monster": "Azure Rathalos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2661,12 +2344,7 @@
     "name": "Azure Rathalos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Rathalos"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Rathalos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2691,12 +2369,7 @@
     "name": "Pink Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Rathian"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Rathian" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -2718,12 +2391,7 @@
     "name": "Fulgur Anjanath",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
-    "related": [
-      {
-        "type": "subspeciesOf",
-        "monster": "Anjanath"
-      }
-    ],
+    "related": [{ "type": "subspeciesOf", "monster": "Anjanath" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -2749,12 +2417,7 @@
     "habitat": "Co-Op?",
     "dens": ["Jungle"],
     "tags": ["deviant"],
-    "related": [
-      {
-        "type": "deviantOf",
-        "monster": "Nargacuga"
-      }
-    ],
+    "related": [{ "type": "deviantOf", "monster": "Nargacuga" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -2779,12 +2442,7 @@
     "habitat": "Co-Op?",
     "dens": ["Snowy Mt."],
     "tags": ["deviant"],
-    "related": [
-      {
-        "type": "deviantOf",
-        "monster": "Zinogre"
-      }
-    ],
+    "related": [{ "type": "deviantOf", "monster": "Zinogre" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2811,12 +2469,7 @@
     "habitat": "Co-Op?",
     "dens": ["Desert", "Flowery"],
     "tags": ["deviant"],
-    "related": [
-      {
-        "type": "deviantOf",
-        "monster": "Diablos"
-      }
-    ],
+    "related": [{ "type": "deviantOf", "monster": "Diablos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -2842,12 +2495,7 @@
     "habitat": "Co-Op?",
     "dens": ["Woodland"],
     "tags": ["deviant"],
-    "related": [
-      {
-        "type": "deviantOf",
-        "monster": "Tigrex"
-      }
-    ],
+    "related": [{ "type": "deviantOf", "monster": "Tigrex" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -2872,12 +2520,7 @@
     "habitat": "Co-Op?",
     "dens": ["Volcanic"],
     "tags": ["deviant"],
-    "related": [
-      {
-        "type": "deviantOf",
-        "monster": "Rathian"
-      }
-    ],
+    "related": [{ "type": "deviantOf", "monster": "Rathian" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -3026,26 +2669,11 @@
     "genus": "Fanged Beast?",
     "habitat": "Co-Op?",
     "related": [
-      {
-        "type": "element",
-        "monster": "Palamute (Fire)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Water)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Thunder)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Ice)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Dragon)"
-      }
+      { "type": "element", "monster": "Palamute (Fire)" },
+      { "type": "element", "monster": "Palamute (Water)" },
+      { "type": "element", "monster": "Palamute (Thunder)" },
+      { "type": "element", "monster": "Palamute (Ice)" },
+      { "type": "element", "monster": "Palamute (Dragon)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3065,26 +2693,11 @@
     "genus": "Fanged Beast?",
     "habitat": "Co-Op?",
     "related": [
-      {
-        "type": "element",
-        "monster": "Palamute (Normal)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Water)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Thunder)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Ice)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Dragon)"
-      }
+      { "type": "element", "monster": "Palamute (Normal)" },
+      { "type": "element", "monster": "Palamute (Water)" },
+      { "type": "element", "monster": "Palamute (Thunder)" },
+      { "type": "element", "monster": "Palamute (Ice)" },
+      { "type": "element", "monster": "Palamute (Dragon)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3104,26 +2717,11 @@
     "genus": "Fanged Beast?",
     "habitat": "Co-Op?",
     "related": [
-      {
-        "type": "element",
-        "monster": "Palamute (Normal)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Fire)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Thunder)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Ice)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Dragon)"
-      }
+      { "type": "element", "monster": "Palamute (Normal)" },
+      { "type": "element", "monster": "Palamute (Fire)" },
+      { "type": "element", "monster": "Palamute (Thunder)" },
+      { "type": "element", "monster": "Palamute (Ice)" },
+      { "type": "element", "monster": "Palamute (Dragon)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3143,26 +2741,11 @@
     "genus": "Fanged Beast?",
     "habitat": "Co-Op?",
     "related": [
-      {
-        "type": "element",
-        "monster": "Palamute (Normal)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Fire)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Water)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Ice)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Dragon)"
-      }
+      { "type": "element", "monster": "Palamute (Normal)" },
+      { "type": "element", "monster": "Palamute (Fire)" },
+      { "type": "element", "monster": "Palamute (Water)" },
+      { "type": "element", "monster": "Palamute (Ice)" },
+      { "type": "element", "monster": "Palamute (Dragon)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3182,26 +2765,11 @@
     "genus": "Fanged Beast?",
     "habitat": "Co-Op?",
     "related": [
-      {
-        "type": "element",
-        "monster": "Palamute (Normal)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Fire)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Water)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Thunder)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Dragon)"
-      }
+      { "type": "element", "monster": "Palamute (Normal)" },
+      { "type": "element", "monster": "Palamute (Fire)" },
+      { "type": "element", "monster": "Palamute (Water)" },
+      { "type": "element", "monster": "Palamute (Thunder)" },
+      { "type": "element", "monster": "Palamute (Dragon)" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3221,26 +2789,11 @@
     "genus": "Fanged Beast?",
     "habitat": "Co-Op?",
     "related": [
-      {
-        "type": "element",
-        "monster": "Palamute (Normal)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Fire)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Water)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Thunder)"
-      },
-      {
-        "type": "element",
-        "monster": "Palamute (Ice)"
-      }
+      { "type": "element", "monster": "Palamute (Normal)" },
+      { "type": "element", "monster": "Palamute (Fire)" },
+      { "type": "element", "monster": "Palamute (Water)" },
+      { "type": "element", "monster": "Palamute (Thunder)" },
+      { "type": "element", "monster": "Palamute (Ice)" }
     ],
     "monster": {
       "attackPatterns": {
