@@ -1,15 +1,10 @@
 <template>
-  <div class="bg-gray-200 text-gray-800 min-h-screen">
-    <h1 class="bg-white p-1 shadow border-b border-gray-300 text-center text-lg font-semibold tracking-wider">
-      Monster Buddy
-    </h1>
+  <div class="min-h-screen pt-12 bg-gray-300 text-gray-700">
+    <AppHeader />
 
-    <div>
-      <NuxtLink to="/eggs">Eggs</NuxtLink>
-      <NuxtLink to="/monsters">Monsters</NuxtLink>
-    </div>
+    <Nuxt class="container mx-auto px-4 py-2" />
 
-    <Nuxt class="px-2 pt-1 pb-2" />
+    <AppFooter />
   </div>
 </template>
 

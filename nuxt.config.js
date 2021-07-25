@@ -68,10 +68,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/fontawesome.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -105,6 +105,9 @@ export default {
     babel: {
       plugins: ['lodash'],
     },
+
+    // trying to fix npm run dev hanging at 95% after file changes
+    cssSourceMap: false,
   },
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-generate
