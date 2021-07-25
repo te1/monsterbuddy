@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="w-full h-full flex items-center justify-center">
-      <div class="relative w-[75px] h-[75px]">
+      <div class="relative w-[60px] h-[60px]">
         <img
           :src="imageUrl"
           :alt="monster.name"
           :title="monster.name"
-          width="75"
-          height="75"
+          width="60"
+          height="60"
         >
 
         <div
@@ -22,8 +22,8 @@
           v-if="showHatchable && monster.hatchable"
           :src="require('~/assets/icons/hatchable.svg')"
           :alt="monster.name"
-          width="25"
-          height="25"
+          width="20"
+          height="20"
           class="absolute top-0 right-[-2px] w-1/3 h-1/3"
         >
       </div>

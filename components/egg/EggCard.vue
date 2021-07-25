@@ -1,24 +1,24 @@
 <template>
-  <div class="flex h-[124px]">
+  <div class="flex h-[122px]">
     <EggImage
       class="w-[120px] h-auto -mx-3"
       :monster="monster"
     />
 
-    <div class="flex-1 min-w-[130px] ml-2">
-      <div class="flex items-center gap-2 text-gray-500 -mb-1">
-        <span class="w-6" />
+    <div class="flex-1 min-w-[130px] ml-1">
+      <div class="flex items-center gap-2 pt-1 text-sm text-gray-500 -mb-0.5">
+        <span class="w-4" />
         <span v-text="info" />
       </div>
 
       <div class="flex items-center gap-2 font-semibold">
-        <span class="w-6" />
+        <span class="w-4" />
         <span v-text="monster.name " />
       </div>
 
       <div class="flex items-center gap-2 justify-items-start">
         <FaIcon
-          class="!w-6 text-gray-600"
+          class="!w-4 text-gray-600"
           title="Genus"
           :icon="['fas', 'dna']"
         />
@@ -27,7 +27,7 @@
 
       <div class="flex items-center gap-2 justify-items-start">
         <FaIcon
-          class="!w-6 text-gray-600"
+          class="!w-4 text-gray-600"
           title="Habitat"
           :icon="['fas', 'map-marker-alt']"
         />
@@ -39,7 +39,7 @@
         class="flex items-center gap-2 justify-items-start"
       >
         <FaIcon
-          class="!w-6 text-gray-600"
+          class="!w-4 text-gray-600"
           title="Den"
           :icon="['fas', 'mountain']"
         />
