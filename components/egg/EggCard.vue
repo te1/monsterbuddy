@@ -5,7 +5,7 @@
       :monster="monster"
     />
 
-    <div class="flex-1 min-w-[130px] ml-1">
+    <div class="flex-1 min-w-[160px] ml-1">
       <div class="flex items-center gap-2 pt-1 text-sm text-gray-500 -mb-0.5">
         <span class="w-4" />
         <span v-text="info" />
