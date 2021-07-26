@@ -108,6 +108,14 @@ export default {
 
     // trying to fix npm run dev hanging at 95% after file changes
     cssSourceMap: false,
+
+    extend(config) {
+      config.module.rules.push({
+        test: /\.json$/i,
+        loader: 'json5-loader',
+        type: 'javascript/auto',
+      });
+    },
   },
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-generate

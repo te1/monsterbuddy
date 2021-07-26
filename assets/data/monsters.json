@@ -258,7 +258,7 @@
     "habitat": "Alcala",
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {
         "DEFAULT": ["pierce"]
@@ -522,7 +522,8 @@
         "Enraged": "power"
       },
       "parts": {
-        "Broken Stomach?": ["slash", "blunt", "pierce"],
+        // TODO figure out "broken" interactions
+        "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -888,11 +889,12 @@
         "Covered in mud": "technical"
       },
       "parts": {
+        // TODO figure out covered in mud interactions
         "DEFAULT": ["slash"],
-        "Body Mud?": ["slash"],
-        "Head Mud?": ["blunt"],
-        "Tail Mud?": ["pierce"],
-        "Legs Mud?": ["slash", "blunt"]
+        "Body Mud": ["slash"],
+        "Head Mud": ["blunt"],
+        "Tail Mud": ["pierce"],
+        "Legs Mud": ["slash", "blunt"]
       },
       "elementalWeakness": "fire"
     },
@@ -956,8 +958,8 @@
     "related": [{ "type": "subspeciesOf", "monster": "Khezu" }],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "technical?",
-        "Enraged": "power?",
+        "DEFAULT": "technical",
+        "Enraged": "power",
         "Charged": "speed"
       },
       "parts": {
@@ -980,7 +982,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
-        "Enraged": "speed?"
+        "Enraged": "speed"
       },
       "parts": {
         "DEFAULT": ["pierce"],
@@ -1047,11 +1049,12 @@
         "Covered in snow": "technical"
       },
       "parts": {
+        // TODO figure out covered in snow interactions
         "DEFAULT": ["slash"],
-        "Body Snow?": ["slash"],
-        "Head Snow?": ["blunt"],
-        "Tail Snow?": ["pierce"],
-        "Legs Snow?": ["slash", "blunt"]
+        "Body Snow": ["slash"],
+        "Head Snow": ["blunt"],
+        "Tail Snow": ["pierce"],
+        "Legs Snow": ["slash", "blunt"]
       },
       "elementalWeakness": "thunder"
     },
@@ -1093,13 +1096,14 @@
         "DEFAULT": "power"
       },
       "parts": {
+        // TODO figure out "broken" interactions
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
         "Head": ["blunt"],
-        "Broken Head?": ["slash", "blunt"],
+        "Broken Head": ["slash", "blunt"],
         "Nose": ["slash"],
-        "Broken Nose?": ["slash", "blunt"],
-        "Broken Legs?": ["blunt"],
+        "Broken Nose": ["slash", "blunt"],
+        "Broken Legs": ["blunt"],
         "Tail": ["slash"]
       },
       "elementalWeakness": "fire"
@@ -1121,8 +1125,8 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
-        "Charged?": "technical",
-        "Supercharged?": "power"
+        "Charged": "technical",
+        "Supercharged": "power"
       },
       "parts": {
         "DEFAULT": ["pierce"],
@@ -1370,7 +1374,7 @@
         "DEFAULT": ["slash", "pierce"],
         "Body": ["slash", "pierce"],
         "Back": ["pierce"],
-        "Tail": ["pierce?"]
+        "Tail": ["pierce"]
       },
       "elementalWeakness": "thunder"
     }
@@ -1628,11 +1632,12 @@
         "Enraged": "technical"
       },
       "parts": {
+        // TODO figure out "powderstone" interactions
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
         "Head": ["blunt"],
         "Tail": ["slash", "blunt"],
-        "Powderstone?": ["blunt"]
+        "Powderstone": ["blunt"]
       },
       "elementalWeakness": "water"
     },
@@ -1653,10 +1658,11 @@
         "Enraged": "power"
       },
       "parts": {
+        // TODO figure out "broken" interactions
         "Shell": ["blunt"],
-        "Broken Shell?": ["slash", "blunt", "pierce"],
+        "Broken Shell": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        "Broken Claws?": ["slash", "blunt", "pierce"],
+        "Broken Claws": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "fire"
@@ -1674,10 +1680,11 @@
         "Enraged": "speed"
       },
       "parts": {
+        // TODO figure out "broken" interactions
         "Shell": ["blunt"],
-        "Broken Shell?": ["slash", "blunt", "pierce"],
+        "Broken Shell": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        "Broken Claws?": ["slash", "blunt", "pierce"],
+        "Broken Claws": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "ice"
@@ -1741,7 +1748,8 @@
         "Enraged": "power"
       },
       "parts": {
-        "Broken Stomach?": ["slash", "blunt", "pierce"],
+        // TODO figure out "broken" interactions
+        "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -1766,7 +1774,8 @@
         "Enraged": "technical"
       },
       "parts": {
-        "Broken Stomach?": ["slash", "blunt", "pierce"],
+        // TODO figure out "broken" interactions
+        "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
@@ -1964,7 +1973,8 @@
         "Enraged": "technical"
       },
       "parts": {
-        "Broken Stomach?": ["slash", "blunt", "pierce"],
+        // TODO figure out "broken" interactions
+        "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
@@ -2037,11 +2047,12 @@
         "White spiked": "power"
       },
       "parts": {
+        // TODO figure out white spikes interactions
         "DEFAULT": ["slash", "pierce"],
         "Head": ["blunt"],
         "Legs": ["slash"],
         "Wings": ["slash"],
-        "White Spikes?": ["slash", "blunt", "pierce"]
+        "White Spikes": ["slash", "blunt", "pierce"]
       },
       "elementalWeakness": "thunder"
     },
@@ -2111,11 +2122,12 @@
         "No Ice Armor": "technical"
       },
       "parts": {
-        "Broken Body?": ["blunt"],
+        // TODO figure out "broken" interactions
+        "Broken Body": ["blunt"],
         "Body": ["slash", "pierce"],
-        "Broken Head?": ["blunt"],
+        "Broken Head": ["blunt"],
         "Head": ["slash", "pierce"],
-        "Broken Tail?": ["blunt"],
+        "Broken Tail": ["blunt"],
         "Tail": ["slash", "pierce"]
       },
       "elementalWeakness": "fire"
@@ -2248,7 +2260,7 @@
         "DEFAULT": ["slash", "blunt", "pierce"],
         "Body": ["slash", "blunt", "pierce"],
         "Head": ["slash", "blunt", "pierce"],
-        "Legs": ["slash?"]
+        "Legs": ["slash"]
       },
       "elementalWeakness": "dragon"
     },
@@ -2266,7 +2278,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
-        "Enraged": "speed?"
+        "Enraged": "speed"
       },
       "parts": {
         "DEFAULT": ["pierce"],
@@ -2311,7 +2323,7 @@
     "genus": "Lynian",
     "habitat": "?",
     "monster": {
-      "elementalWeakness": "none?"
+      "elementalWeakness": "none"
     }
   },
   {
@@ -2323,7 +2335,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
-        "Enraged": "technical?",
+        "Enraged": "technical", // TODO is there enraged?
         "Flying": "speed"
       },
       "parts": {
@@ -2348,7 +2360,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
-        "Enraged": "technical?",
+        "Enraged": "technical", // TODO is there enraged?
         "Flying": "speed"
       },
       "parts": {
@@ -2414,7 +2426,7 @@
     "no": 116,
     "name": "Silverwind Nargacuga",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Jungle"],
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Nargacuga" }],
@@ -2439,7 +2451,7 @@
     "no": 117,
     "name": "Thunderlord Zinogre",
     "genus": "Fanged Wyvern",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Snowy Mt."],
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Zinogre" }],
@@ -2447,8 +2459,8 @@
       "attackPatterns": {
         "DEFAULT": "power",
         "Charged": "speed",
-        "Thunderbugs?": "speed",
-        "Fully charged?": "technical"
+        "Thunderbugs": "speed", // TODO is there a Thunderbugs phase?
+        "Fully charged": "technical" // TODO is there a fully charged phase?
       },
       "parts": {
         "Head": ["slash"],
@@ -2466,7 +2478,7 @@
     "no": 118,
     "name": "Bloodbath Diablos",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Desert", "Flowery"],
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Diablos" }],
@@ -2492,7 +2504,7 @@
     "no": 119,
     "name": "Grimclaw Tigrex",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Woodland"],
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Tigrex" }],
@@ -2517,7 +2529,7 @@
     "no": 120,
     "name": "Dreadqueen Rathian",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Volcanic"],
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Rathian" }],
@@ -2528,8 +2540,8 @@
       },
       "parts": {
         "Head": ["slash", "blunt"],
-        "Stomach": ["slash", "blunt?"],
-        "Tail": ["slash", "blunt?"],
+        "Stomach": ["slash"],
+        "Tail": ["slash"],
         "Back": ["slash", "blunt"]
       },
       "elementalWeakness": "dragon"
@@ -2543,7 +2555,7 @@
     "no": 121,
     "name": "Kirin",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Jungle", "Desert", "Flowery"],
     "monster": {
       "attackPatterns": {
@@ -2565,7 +2577,7 @@
     "no": 122,
     "name": "Teostra",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Jungle", "Volcanic"],
     "monster": {
       "attackPatterns": {
@@ -2590,14 +2602,15 @@
     "no": 123,
     "name": "Rajang",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
       "attackPatterns": {
+        // TODO figure out "aura" interactions
         "DEFAULT": "power",
-        "Power aura?": "power",
-        "Speed aura?": "speed",
-        "Technical aura?": "technical"
+        "Power aura": "power",
+        "Speed aura": "speed",
+        "Technical aura": "technical"
       },
       "parts": {
         "Head": ["slash", "blunt", "pierce"],
@@ -2616,7 +2629,7 @@
     "no": 124,
     "name": "Kushala Daora",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
       "attackPatterns": {
@@ -2641,7 +2654,7 @@
     "no": 125,
     "name": "Velkhana",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op?",
+    "habitat": "Co-Op",
     "dens": ["Snowy Mt.", "Volcanic"],
     "monster": {
       "attackPatterns": {
@@ -2663,11 +2676,12 @@
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
+  // TOOD check palmute info
   {
     "no": 136,
     "name": "Palamute (Normal)",
-    "genus": "Fanged Beast?",
-    "habitat": "Co-Op?",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op",
     "related": [
       { "type": "element", "monster": "Palamute (Fire)" },
       { "type": "element", "monster": "Palamute (Water)" },
@@ -2677,21 +2691,21 @@
     ],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {},
-      "elementalWeakness": "dragon?"
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster **cannot** be chased back to its den.?"
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   },
   {
     "no": 137,
     "name": "Palamute (Fire)",
-    "genus": "Fanged Beast?",
-    "habitat": "Co-Op?",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op",
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
       { "type": "element", "monster": "Palamute (Water)" },
@@ -2701,21 +2715,21 @@
     ],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {},
-      "elementalWeakness": "water?"
+      "elementalWeakness": "water"
     },
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster **cannot** be chased back to its den.?"
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   },
   {
     "no": 138,
     "name": "Palamute (Water)",
-    "genus": "Fanged Beast?",
-    "habitat": "Co-Op?",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op",
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -2725,21 +2739,21 @@
     ],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {},
-      "elementalWeakness": "dragon?"
+      "elementalWeakness": "dragon"
     },
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster **cannot** be chased back to its den.?"
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   },
   {
     "no": 139,
     "name": "Palamute (Thunder)",
-    "genus": "Fanged Beast?",
-    "habitat": "Co-Op?",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op",
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -2749,21 +2763,21 @@
     ],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {},
-      "elementalWeakness": "ice?"
+      "elementalWeakness": "ice"
     },
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster **cannot** be chased back to its den.?"
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   },
   {
     "no": 140,
     "name": "Palamute (Ice)",
-    "genus": "Fanged Beast?",
-    "habitat": "Co-Op?",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op",
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -2773,21 +2787,21 @@
     ],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {},
-      "elementalWeakness": "fire?"
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster **cannot** be chased back to its den.?"
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   },
   {
     "no": 142,
     "name": "Palamute (Dragon)",
-    "genus": "Fanged Beast?",
-    "habitat": "Co-Op?",
+    "genus": "Fanged Beast",
+    "habitat": "Co-Op",
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -2797,14 +2811,14 @@
     ],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed?"
+        "DEFAULT": "speed"
       },
       "parts": {},
-      "elementalWeakness": "thunder?"
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
-      "retreat": "This monster **cannot** be chased back to its den.?"
+      "retreat": "This monster **cannot** be chased back to its den."
     }
   }
 ]
