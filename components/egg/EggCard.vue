@@ -5,13 +5,13 @@
       :monster="monster"
     />
 
-    <div class="flex-1 min-w-[160px] ml-1">
-      <div class="flex items-center gap-2 pt-1 text-sm text-gray-500 -mb-0.5">
+    <div class="flex-1 min-w-[160px] ml-1 text-sm">
+      <div class="flex items-center gap-2 pt-1 text-gray-500 -mb-0.5">
         <span class="w-4" />
         <span v-text="info" />
       </div>
 
-      <div class="flex items-center gap-2 font-semibold">
+      <div class="flex items-center gap-2 text-base font-semibold">
         <span class="w-4" />
         <span v-text="monster.name " />
       </div>
@@ -48,7 +48,7 @@
     </div>
 
     <MonsterImage
-      class="w-auto h-full pr-2"
+      class="w-auto h-full object-contain overflow-hidden pr-2"
       :monster="monster"
     />
   </div>
