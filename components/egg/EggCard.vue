@@ -48,15 +48,14 @@
     </div>
 
     <MonsterImage
-      class="w-auto h-full object-contain overflow-hidden pr-2"
+      class="w-auto h-full object-contain overflow-hidden"
       :monster="monster"
     />
   </div>
 </template>
 
 <script>
-  import { formatNo } from '~/services/utils';
-  import { isSubspecies, isDeviant, isElementalVariant } from '~/services/data';
+  import { formatMonsterInfo, formatMonsterDens } from '~/services/utils';
 
   export default {
     name: 'EggCard',
@@ -78,28 +77,11 @@
       },
 
       info() {
-        let result = formatNo(this.monster.no);
-
-        if (isSubspecies(this.monster)) {
-          result += ', Subspecies';
-        }
-
-        if (isDeviant(this.monster)) {
-          result += ', Deviant';
-        }
-
-        if (isElementalVariant(this.monster)) {
-          result += ', Elemental variant';
-        }
-
-        return result;
+        return formatMonsterInfo(this.monster);
       },
 
       dens() {
-        if (this.monster.dens && this.monster.dens.length) {
-          return this.monster.dens.join(', ');
-        }
-        return null;
+        return formatMonsterDens(this.monster);
       },
     },
   };

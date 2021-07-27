@@ -10,7 +10,7 @@
   >
 
   <div v-else-if="!hideFallback">
-    <div class="w-full h-full flex items-center justify-center">
+    <div class="w-full h-full flex items-center justify-center p-2">
       <MonsterIcon :monster="monster" />
     </div>
   </div>

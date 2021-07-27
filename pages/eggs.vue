@@ -63,7 +63,7 @@
       v-if="isEmpty"
       class="flex flex-col items-center py-4 space-y-4 rounded shadow bg-white"
     >
-      <span class="text-2xl text-gray-500 font-semibold">
+      <span class="text-2xl text-gray-400 font-semibold">
         No eggs found
       </span>
 

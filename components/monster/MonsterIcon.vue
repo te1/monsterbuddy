@@ -10,29 +10,39 @@
           height="60"
         >
 
-        <div
-          v-if="showNo"
-          class="absolute bottom-[1px] w-full text-center text-lg text-white font-semibold tracking-wide"
-          style="text-shadow: 0 0 6px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"
-        >
-          {{ formattedNo }}
-        </div>
+        <div class="absolute bottom-0 flex items-center justify-between w-full pointer-events-none select-none">
+          <div
+            v-if="showNo"
+            class="pl-1 text-lg text-white font-semibold tracking-wide"
+            style="text-shadow: 0 0 6px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"
+          >
+            {{ formattedNo }}
+          </div>
 
-        <img
-          v-if="showHatchable && monster.hatchable"
-          :src="require('~/assets/icons/hatchable.svg')"
-          :alt="monster.name"
-          width="20"
-          height="20"
-          class="absolute top-0 right-[-2px] w-1/3 h-1/3"
-        >
+          <img
+            v-if="showHatchable && monster.hatchable"
+            :src="require('~/assets/icons/hatchable.svg')"
+            :alt="monster.name"
+            width="20"
+            height="20"
+            class="w-1/3 h-1/3"
+          >
+
+          <AttackTypeIcon
+            v-if="showAttackType && monster.monstie && monster.monstie.attackType"
+            :type="monster.monstie.attackType"
+            width="20"
+            height="20"
+            class="w-1/3 h-1/3"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import { formatNo } from '~/services/utils';
+  import { formatMonsterNo } from '~/services/utils';
 
   export default {
     name: 'MonsterIcon',
@@ -54,6 +64,12 @@
         required: false,
         default: false,
       },
+
+      showAttackType: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     computed: {
@@ -66,7 +82,7 @@
       },
 
       formattedNo() {
-        return formatNo(this.monster.no, false);
+        return formatMonsterNo(this.monster.no, false);
       },
     },
   };

@@ -45,7 +45,7 @@
 </template>
 
 <script>
-  import { formatNo } from '~/services/utils';
+  import { formatMonsterNo } from '~/services/utils';
 
   export default {
     name: 'MonsterCard',
@@ -67,7 +67,7 @@
       },
 
       formattedNo() {
-        return formatNo(this.monster.no);
+        return formatMonsterNo(this.monster.no);
       },
     },
   };

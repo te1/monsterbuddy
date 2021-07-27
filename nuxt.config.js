@@ -65,6 +65,11 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+
+    bodyAttrs: {
+      class:
+        'max-w-full min-h-screen overflow-x-hidden overflow-y-scroll bg-gray-300 text-gray-700',
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

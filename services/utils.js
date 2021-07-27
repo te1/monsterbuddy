@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { isSubspecies, isDeviant, isElementalVariant } from '~/services/data';
 
 export function deepFreeze(object) {
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
@@ -16,7 +17,7 @@ export function deepFreeze(object) {
   return Object.freeze(object);
 }
 
-export function formatNo(no, withHash = true) {
+export function formatMonsterNo(no, withHash = true) {
   let result = _.padStart(no, 3, '0');
 
   if (withHash) {
@@ -24,4 +25,29 @@ export function formatNo(no, withHash = true) {
   }
 
   return result;
+}
+
+export function formatMonsterInfo(monster) {
+  let result = formatMonsterNo(monster.no);
+
+  if (isSubspecies(monster)) {
+    result += ', Subspecies';
+  }
+
+  if (isDeviant(monster)) {
+    result += ', Deviant';
+  }
+
+  if (isElementalVariant(monster)) {
+    result += ', Elemental variant';
+  }
+
+  return result;
+}
+
+export function formatMonsterDens(monster) {
+  if (monster.dens && monster.dens.length) {
+    return monster.dens.join(', ');
+  }
+  return null;
 }
