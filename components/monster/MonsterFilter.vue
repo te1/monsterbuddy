@@ -11,7 +11,7 @@
       <select
         id="MonsterFilter_SortKey"
         v-model="sortKey"
-        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option value="no">Number</option>
         <option value="name">Name</option>
@@ -32,7 +32,7 @@
         id="MonsterFilter_NameFilter"
         v-model="nameFilter"
         type="text"
-        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
     </div>
 
@@ -47,7 +47,7 @@
       <select
         id="MonsterFilter_GenusFilter"
         v-model="genusFilter"
-        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
 
@@ -72,7 +72,7 @@
       <select
         id="MonsterFilter_HabitatFilter"
         v-model="habitatFilter"
-        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
 
@@ -100,7 +100,7 @@
       <select
         id="MonsterFilter_Deviants"
         v-model="deviantsFilter"
-        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">Include</option>
         <option :value="false">Exclude</option>
@@ -122,7 +122,7 @@
       <select
         id="MonsterFilter_Hatchable"
         v-model="hatchableFilter"
-        class="w-[150px] px-2 py-1 rounded focus:ring-green-500 focus:border-green-500"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
         <option :value="true">Yes</option>
@@ -143,7 +143,7 @@
 
     <div class="self-end">
       <button
-        class="w-[150px] px-2 py-1 font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-green-500 hover:bg-green-400 active:bg-gray-500"
+        class="w-[150px] px-2 py-1 font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500"
         @click="reset"
       >
         Reset

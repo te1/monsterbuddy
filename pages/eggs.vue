@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="mb-1 text-xl text-green-500 hover:text-green-400 active:text-gray-500"
+      class="mb-1 text-xl text-brand-500 hover:text-brand-400 active:text-gray-500"
       title="Sort and filter"
       @click="showFilter = !showFilter"
     >
@@ -73,7 +73,7 @@
       />
 
       <button
-        class="text-lg text-green-500 hover:text-green-400 active:text-gray-500"
+        class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
         @click="resetFilter"
       >
         Reset filter
