@@ -16,6 +16,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -77,6 +78,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -99,6 +101,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
@@ -164,6 +167,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
@@ -201,6 +205,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -225,6 +230,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate."
     }
   },
@@ -245,6 +251,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -331,6 +338,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -371,6 +379,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate."
     }
   },
@@ -411,6 +420,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate."
     }
   },
@@ -435,6 +445,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
@@ -458,6 +469,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
@@ -485,6 +497,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
@@ -511,6 +524,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
@@ -534,6 +548,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate."
     }
   },
@@ -561,6 +576,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break **each part** to boost the retreat rate"
     }
   },
@@ -584,6 +600,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** when it is **enraged** to boost the retreat rate."
     }
   },
@@ -632,6 +649,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate."
     }
   },
@@ -659,6 +677,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -679,6 +698,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -762,6 +782,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
@@ -799,6 +820,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -825,6 +847,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate."
     }
   },
@@ -850,6 +873,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
@@ -891,6 +915,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate."
     }
   },
@@ -918,6 +943,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate."
     }
   },
@@ -945,6 +971,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate."
     }
   },
@@ -970,6 +997,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate."
     }
   },
@@ -994,6 +1022,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
@@ -1019,6 +1048,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **bow** to boost the retreat rate."
     }
   },
@@ -1084,6 +1114,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate."
     }
   },
@@ -1112,6 +1143,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate."
     }
   },
@@ -1136,6 +1168,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate."
     }
   },
@@ -1164,6 +1197,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1193,6 +1227,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
@@ -1218,6 +1253,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate."
     }
   },
@@ -1243,6 +1279,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate."
     }
   },
@@ -1386,6 +1423,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -1423,6 +1461,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -1468,6 +1507,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate."
     }
   },
@@ -1494,6 +1534,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate."
     }
   },
@@ -1519,6 +1560,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break the **head** with a **gunlance** to boost the retreat rate."
     }
   },
@@ -1544,6 +1586,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate."
     }
   },
@@ -1572,6 +1615,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
@@ -1597,6 +1641,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
@@ -1622,6 +1667,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
@@ -1646,6 +1692,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
@@ -1670,6 +1717,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1696,6 +1744,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1722,6 +1771,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
@@ -1792,6 +1842,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
@@ -1816,6 +1867,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate."
     }
   },
@@ -1843,6 +1895,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break **each part** to boost the retreat rate."
     }
   },
@@ -1869,6 +1922,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
@@ -2007,6 +2061,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate."
     }
   },
@@ -2032,6 +2087,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate."
     }
   },
@@ -2078,6 +2134,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
@@ -2104,6 +2161,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2129,6 +2187,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate."
     }
   },
@@ -2156,6 +2215,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2182,6 +2242,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2206,6 +2267,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2256,6 +2318,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2350,6 +2413,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate."
     }
   },
@@ -2374,6 +2438,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
@@ -2399,6 +2464,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
@@ -2424,6 +2490,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate."
     }
   },
@@ -2460,6 +2527,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2486,6 +2554,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2509,6 +2578,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2534,6 +2604,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate."
     }
   },
@@ -2560,6 +2631,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2588,6 +2660,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2615,6 +2688,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2641,6 +2715,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2668,6 +2743,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2691,6 +2767,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2717,6 +2794,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2745,6 +2823,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "power",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2771,6 +2850,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2798,6 +2878,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "technical",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2824,6 +2905,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2849,6 +2931,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2874,6 +2957,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2899,6 +2983,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2924,6 +3009,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2949,6 +3035,7 @@
     },
     "hatchable": true,
     "monstie": {
+      "attackType": "speed",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   }
