@@ -12,8 +12,8 @@
 
         <div class="absolute bottom-0 flex items-center justify-between w-full pointer-events-none select-none">
           <div
-            v-if="showNo"
             class="pl-1 text-lg text-white font-semibold tracking-wide"
+            :class="{ 'opacity-0': !showNo }"
             style="text-shadow: 0 0 6px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"
           >
             {{ formattedNo }}

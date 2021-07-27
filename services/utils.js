@@ -1,5 +1,10 @@
 import _ from 'lodash';
-import { isSubspecies, isDeviant, isElementalVariant } from '~/services/data';
+import {
+  isSubspecies,
+  isDeviant,
+  isColorVariant,
+  isElementalVariant,
+} from '~/services/data';
 
 export function deepFreeze(object) {
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
@@ -36,6 +41,10 @@ export function formatMonsterInfo(monster) {
 
   if (isDeviant(monster)) {
     result += ', Deviant';
+  }
+
+  if (isColorVariant(monster)) {
+    result += ', Color variant';
   }
 
   if (isElementalVariant(monster)) {

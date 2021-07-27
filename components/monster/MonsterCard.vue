@@ -1,8 +1,9 @@
 <template>
   <div class="flex items-center h-[122px]">
-    <EggImage
-      class="w-[120px] h-[120px] -mx-3"
+    <MonsterIcon
+      class="w-[60px] h-[120px] ml-1"
       :monster="monster"
+      showHatchable
     />
 
     <div class="flex-1 min-w-[135px] ml-3 text-sm">
@@ -16,12 +17,16 @@
       />
       <div v-text="monster.genus" />
       <div v-text="monster.habitat" />
-      <div v-text="attackType" />
+      <div
+        :class="{ 'opacity-0': !monster.hatchable }"
+        v-text="attackType"
+      />
     </div>
 
     <MonsterImage
       class="w-auto h-full object-contain overflow-hidden"
       :monster="monster"
+      hideFallback
     />
   </div>
 </template>
@@ -30,7 +35,7 @@
   import { formatMonsterInfo, formatAttackType } from '~/services/utils';
 
   export default {
-    name: 'EggCard',
+    name: 'MonsterCard',
 
     props: {
       monster: {
@@ -45,6 +50,9 @@
       },
 
       attackType() {
+        if (!this.monster.hatchable) {
+          return '-';
+        }
         return formatAttackType(this.monster);
       },
     },
