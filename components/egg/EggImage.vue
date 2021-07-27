@@ -3,6 +3,8 @@
     :src="imageUrl"
     :alt="imageAlt"
     :title="imageAlt"
+    width="120"
+    height="120"
   >
 </template>
 

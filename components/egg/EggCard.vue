@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center h-[122px]">
     <EggImage
-      class="w-[120px] h-auto -mx-3"
+      class="w-[120px] h-[120px] -mx-3"
       :monster="monster"
     />
 
