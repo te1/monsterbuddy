@@ -1,50 +1,22 @@
 <template>
-  <div class="flex h-[122px]">
+  <div class="flex items-center h-[122px]">
     <EggImage
       class="w-[120px] h-auto -mx-3"
       :monster="monster"
     />
 
-    <div class="flex-1 min-w-[160px] ml-1 text-sm">
-      <div class="flex items-center gap-2 pt-1 text-gray-500 -mb-0.5">
-        <span class="w-4" />
-        <span v-text="info" />
-      </div>
-
-      <div class="flex items-center gap-2 text-base font-semibold">
-        <span class="w-4" />
-        <span v-text="monster.name " />
-      </div>
-
-      <div class="flex items-center gap-2 justify-items-start">
-        <FaIcon
-          class="!w-4 text-gray-600"
-          title="Genus"
-          :icon="['fas', 'dna']"
-        />
-        <span v-text="monster.genus" />
-      </div>
-
-      <div class="flex items-center gap-2 justify-items-start">
-        <FaIcon
-          class="!w-4 text-gray-600"
-          title="Habitat"
-          :icon="['fas', 'map-marker-alt']"
-        />
-        <span v-text="monster.habitat" />
-      </div>
-
+    <div class="flex-1 min-w-[145px] ml-3 text-sm">
       <div
-        v-if="dens"
-        class="flex items-center gap-2 justify-items-start"
-      >
-        <FaIcon
-          class="!w-4 text-gray-600"
-          title="Den"
-          :icon="['fas', 'mountain']"
-        />
-        <span v-text="dens" />
-      </div>
+        class="text-gray-500 -mb-0.5"
+        v-text="info"
+      />
+      <div
+        class="text-base font-semibold"
+        v-text="monster.name"
+      />
+      <div v-text="monster.genus" />
+      <div v-text="monster.habitat" />
+      <div v-text="attackType" />
     </div>
 
     <MonsterImage
@@ -55,7 +27,7 @@
 </template>
 
 <script>
-  import { formatMonsterInfo, formatMonsterDens } from '~/services/utils';
+  import { formatMonsterInfo, formatAttackType } from '~/services/utils';
 
   export default {
     name: 'EggCard',
@@ -80,8 +52,8 @@
         return formatMonsterInfo(this.monster);
       },
 
-      dens() {
-        return formatMonsterDens(this.monster);
+      attackType() {
+        return formatAttackType(this.monster);
       },
     },
   };

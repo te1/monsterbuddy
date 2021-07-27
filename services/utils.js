@@ -51,3 +51,26 @@ export function formatMonsterDens(monster) {
   }
   return null;
 }
+
+export function formatAttackType(attackTypeOrMonster) {
+  if (typeof attackTypeOrMonster !== 'string') {
+    attackTypeOrMonster =
+      attackTypeOrMonster &&
+      attackTypeOrMonster.monstie &&
+      attackTypeOrMonster.monstie.attackType;
+  }
+
+  switch (attackTypeOrMonster) {
+    case 'power':
+      return 'Power';
+
+    case 'speed':
+      return 'Speed';
+
+    case 'technical':
+      return 'Technical';
+
+    default:
+      return 'Unknown';
+  }
+}

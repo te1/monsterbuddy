@@ -29,8 +29,8 @@
           >
 
           <AttackTypeIcon
-            v-if="showAttackType && monster.monstie && monster.monstie.attackType"
-            :type="monster.monstie.attackType"
+            v-if="showAttackType"
+            :monster="monster"
             width="20"
             height="20"
             class="w-1/3 h-1/3"

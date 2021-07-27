@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import _ from 'lodash';
+  import { formatAttackType } from '~/services/utils';
 
   export default {
     name: 'AttackTypeIcon',
@@ -17,21 +17,40 @@
     props: {
       type: {
         type: String,
-        required: true,
+        required: false,
+        default: null,
+      },
+
+      monster: {
+        type: Object,
+        required: false,
+        default() {
+          return null;
+        },
       },
     },
 
     computed: {
+      resolvedType() {
+        if (this.type) {
+          return this.type;
+        }
+        if (this.monster && this.monster.monstie) {
+          return this.monster.monstie.attackType;
+        }
+        return null;
+      },
+
       imageUrl() {
         try {
-          return require(`~/assets/icons/${this.type}.svg`);
+          return require(`~/assets/icons/${this.resolvedType}.svg`);
         } catch (e) {
           return require('~/assets/icons/unknown-type.svg');
         }
       },
 
       caption() {
-        return _.upperFirst(this.type);
+        return formatAttackType(this.resolvedType);
       },
     },
   };
