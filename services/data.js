@@ -45,6 +45,18 @@ export function getMonstersByHabitat(habitat, monsterList = monsters) {
   return deepFreeze(_.filter(monsterList, { habitat }));
 }
 
+export function getMonstiesByAttackType(attackType, monsterList = monsties) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return !!(
+        monster &&
+        monster.monstie &&
+        monster.monstie.attackType === attackType
+      );
+    })
+  );
+}
+
 export function getMonstersByIsSubspecies(
   mustBeSubspecies,
   monsterList = monsters

@@ -47,7 +47,7 @@
         </div>
 
         <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <EggCard
+          <MonstieCard
             v-for="monster in group"
             :key="monster.no"
             :monster="monster"
@@ -62,7 +62,7 @@
       class="flex flex-col items-center py-4 space-y-4 rounded shadow bg-white"
     >
       <span class="text-2xl text-gray-400 font-semibold">
-        No eggs found
+        No monsties found
       </span>
 
       <FaIcon
@@ -84,7 +84,7 @@
   import { monsties } from '~/services/data';
 
   export default {
-    name: 'PageEggs',
+    name: 'PageMonsties',
 
     data() {
       return {

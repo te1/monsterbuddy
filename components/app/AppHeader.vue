@@ -7,14 +7,18 @@
         </NuxtLink>
       </h1>
 
-      <nav class="grid grid-flow-col auto-cols-fr gap-2 select-none">
-        <AppHeaderLink
-          to="/eggs"
-          text="Eggs"
-        />
+      <nav class="grid grid-flow-col gap-3 select-none">
         <AppHeaderLink
           to="/monsters"
           text="Monsters"
+        />
+        <AppHeaderLink
+          to="/monsties"
+          text="Monsties"
+        />
+        <AppHeaderLink
+          to="/eggs"
+          text="Eggs"
         />
       </nav>
     </div>

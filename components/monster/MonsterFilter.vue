@@ -87,24 +87,26 @@
     </div>
 
     <div
-      v-if="showDeviantsFilter"
+      v-if="showAttackTypeFilter"
       class="flex items-center"
     >
       <label
         class="flex-1 cursor-pointer"
-        for="MonsterFilter_Deviants"
+        for="MonsterFilter_AttackTypeFilter"
       >
-        Deviants
+        Attack type
       </label>
 
       <select
-        id="MonsterFilter_Deviants"
-        v-model="deviantsFilter"
+        id="MonsterFilter_AttackTypeFilter"
+        v-model="attackTypeFilter"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
-        <option :value="null">Include</option>
-        <option :value="false">Exclude</option>
-        <option :value="true">Only Deviants</option>
+        <option :value="null">All</option>
+
+        <option value="power">Power</option>
+        <option value="speed">Speed</option>
+        <option value="technical">Technical</option>
       </select>
     </div>
 
@@ -127,6 +129,28 @@
         <option :value="null">All</option>
         <option :value="true">Yes</option>
         <option :value="false">No</option>
+      </select>
+    </div>
+
+    <div
+      v-if="showDeviantsFilter"
+      class="flex items-center"
+    >
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_Deviants"
+      >
+        Deviants
+      </label>
+
+      <select
+        id="MonsterFilter_Deviants"
+        v-model="deviantsFilter"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
+      >
+        <option :value="null">Include</option>
+        <option :value="false">Exclude</option>
+        <option :value="true">Only Deviants</option>
       </select>
     </div>
 
@@ -161,8 +185,9 @@
     getMonstersByName,
     getMonstersByGenus,
     getMonstersByHabitat,
-    getMonstersByIsDeviant,
+    getMonstiesByAttackType,
     getMonstersByHatchable,
+    getMonstersByIsDeviant,
   } from '~/services/data';
 
   export default {
@@ -201,8 +226,8 @@
         default: null,
       },
 
-      initialDeviantsFilter: {
-        type: Boolean,
+      initialAttackTypeFilter: {
+        type: String,
         required: false,
         default: null,
       },
@@ -213,13 +238,25 @@
         default: null,
       },
 
-      showDeviantsFilter: {
+      initialDeviantsFilter: {
+        type: Boolean,
+        required: false,
+        default: null,
+      },
+
+      showAttackTypeFilter: {
         type: Boolean,
         required: false,
         default: false,
       },
 
       showHatchableFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
+      showDeviantsFilter: {
         type: Boolean,
         required: false,
         default: false,
@@ -232,8 +269,9 @@
         nameFilter: this.initialNameFilter,
         genusFilter: this.initialGenusFilter,
         habitatFilter: this.initialHabitatFilter,
-        deviantsFilter: this.initialDeviantsFilter,
+        attackTypeFilter: this.initialAttackTypeFilter,
         hatchableFilter: this.initialHatchableFilter,
+        deviantsFilter: this.initialDeviantsFilter,
       };
     },
 
@@ -261,12 +299,16 @@
           result = getMonstersByHabitat(this.habitatFilter, result);
         }
 
-        if (this.deviantsFilter != null) {
-          result = getMonstersByIsDeviant(this.deviantsFilter, result);
+        if (this.attackTypeFilter != null) {
+          result = getMonstiesByAttackType(this.attackTypeFilter, result);
         }
 
         if (this.hatchableFilter != null) {
           result = getMonstersByHatchable(this.hatchableFilter, result);
+        }
+
+        if (this.deviantsFilter != null) {
+          result = getMonstersByIsDeviant(this.deviantsFilter, result);
         }
 
         return result;
@@ -327,8 +369,10 @@
           this.sortKey !== this.initialSortKey &&
           this.nameFilter !== this.initialNameFilter &&
           this.genusFilter !== this.initialGenusFilter &&
-          this.deviantsFilter !== this.initialDeviantsFilter &&
-          this.habitatFilter !== this.initialHabitatFilter
+          this.habitatFilter !== this.initialHabitatFilter &&
+          this.attackTypeFilter !== this.initialAttackTypeFilter &&
+          this.hatchableFilter !== this.initilHatchableTypeFilter &&
+          this.deviantsFilter !== this.initialDeviantsFilter
         );
       },
     },
@@ -338,8 +382,9 @@
       nameFilter: 'update',
       genusFilter: 'update',
       habitatFilter: 'update',
-      deviantsFilter: 'update',
+      attackTypeFilter: 'update',
       hatchableFilter: 'update',
+      deviantsFilter: 'update',
     },
 
     created() {
@@ -357,8 +402,9 @@
           nameFilter: this.genusFilter,
           genusFilter: this.genusFilter,
           habitatFilter: this.habitatFilter,
-          deviantsFilter: this.deviantsFilter,
+          attackTypeFilter: this.attackTypeFilter,
           hatchableFilter: this.hatchableFilter,
+          deviantsFilter: this.deviantsFilter,
           canReset: this.canReset,
         });
       },
@@ -368,8 +414,9 @@
         this.nameFilter = this.initialNameFilter;
         this.genusFilter = this.initialGenusFilter;
         this.habitatFilter = this.initialHabitatFilter;
-        this.deviantsFilter = this.initialDeviantsFilter;
+        this.attackTypeFilter = this.initialAttackTypeFilter;
         this.hatchableFilter = this.initialHatchableFilter;
+        this.deviantsFilter = this.initialDeviantsFilter;
       },
     },
   };
