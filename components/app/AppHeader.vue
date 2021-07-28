@@ -9,15 +9,15 @@
 
       <nav class="grid grid-flow-col gap-3 select-none">
         <AppHeaderLink
-          to="/monsters"
+          to="/monsters/"
           text="Monsters"
         />
         <AppHeaderLink
-          to="/monsties"
+          to="/monsties/"
           text="Monsties"
         />
         <AppHeaderLink
-          to="/eggs"
+          to="/eggs/"
           text="Eggs"
         />
       </nav>

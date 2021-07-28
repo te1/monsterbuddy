@@ -13,10 +13,20 @@ module.exports = {
       gray: colors.blueGray,
       brand: colors.rose,
     },
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'ul > li::before': {
+              backgroundColor: theme('colors.gray.500'),
+            },
+          },
+        },
+      }),
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };

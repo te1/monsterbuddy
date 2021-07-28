@@ -1,15 +1,24 @@
 <template>
-  <footer class="container mx-auto px-4 py-8 text-sm text-center text-gray-500">
+  <footer class="container mx-auto px-4 py-6 text-sm text-center text-gray-500">
     <div>
-      All trademarks referenced herein are the properties of their respective owners.
+      <NuxtLink to="/">Monster Buddy</NuxtLink> is a companion app for
+      <a
+        class="link"
+        href="https://www.capcom.com"
+        target="_blank"
+      >Capcom</a>'s <a
+        class="link"
+        href="https://www.monsterhunter.com/stories2"
+        target="_blank"
+      >Monster Hunter Stories 2: Wings of Ruin</a>. This project is not affiliated with or endorsed by Capcom or the Monster Hunter brand. All trademarks referenced herein are the properties of their respective owners.
     </div>
 
-    <div class="text-center mt-4">
-      Monster Buddy
+    <div class="mt-3 text-xl">
       <a
-        class="hover:text-gray-700"
+        class="text-gray-600 hover:text-gray-800"
         href="https://github.com/te1/monsterbuddy"
         target="_blank"
+        title="Source code on GitHub"
       >
         <FaIcon :icon="['fab', 'github']" />
       </a>

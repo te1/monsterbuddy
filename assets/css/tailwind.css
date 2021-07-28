@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* -- link ---------------- */
+  a.link {
+    @apply text-brand-600 no-underline font-normal;
+  }
+
+  a.link:visited {
+    @apply text-brand-800;
+  }
+
+  a.link:hover,
+  a.link:visited:hover {
+    @apply underline;
+  }
+
+  a.link:active,
+  a.link:visited:active {
+    @apply text-brand-400;
+  }
+}
