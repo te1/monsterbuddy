@@ -2,8 +2,6 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  modern: 'client',
-
   vue: {
     config: {
       productionTip: false,
@@ -110,9 +108,6 @@ export default {
     babel: {
       plugins: ['lodash'],
     },
-
-    // trying to fix npm run dev hanging at 95% after file changes
-    cssSourceMap: false,
 
     extend(config) {
       config.module.rules.push({
