@@ -9,7 +9,7 @@
       />
     </div>
 
-    <div class="flex-1 min-w-[135px] ml-3 text-sm">
+    <div class="ml-3 text-sm whitespace-nowrap">
       <div
         class="text-gray-500 -mb-0.5"
         v-text="info"
@@ -24,7 +24,7 @@
     </div>
 
     <MonsterImage
-      class="w-auto h-full object-contain overflow-hidden"
+      class="w-auto h-full ml-auto object-contain overflow-hidden"
       :monster="monster"
       hideFallback
     />

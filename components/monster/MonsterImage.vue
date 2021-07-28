@@ -4,9 +4,9 @@
     :src="imageUrl"
     :alt="monster.name"
     :title="monster.name"
-    class="max-w-[525px] max-h-[465px]"
-    width="525"
-    height="465"
+    class="max-w-[282px] max-h-[250px]"
+    width="282"
+    height="250"
   >
 
   <div v-else-if="!hideFallback">

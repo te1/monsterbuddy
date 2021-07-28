@@ -51,7 +51,7 @@
             v-for="monster in group"
             :key="monster.no"
             :monster="monster"
-            class="px-1 rounded shadow bg-white"
+            class="px-1 rounded shadow bg-white overflow-hidden"
           />
         </div>
       </li>
