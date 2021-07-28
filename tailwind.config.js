@@ -17,6 +17,20 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            h1: {
+              color: theme('colors.gray.700'),
+              fontWeight: '600',
+            },
+            h2: {
+              color: theme('colors.gray.700'),
+              fontWeight: '600',
+            },
+            h3: {
+              color: theme('colors.gray.700'),
+            },
+            h4: {
+              color: theme('colors.gray.700'),
+            },
             'ul > li::before': {
               backgroundColor: theme('colors.gray.500'),
             },

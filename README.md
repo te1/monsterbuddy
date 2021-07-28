@@ -6,10 +6,12 @@ https://monsterbuddy.app
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/48aafaed-bd5a-4a84-850f-f7132164d207/deploy-status)](https://app.netlify.com/sites/monsterbuddy/deploys)
 
+
 ## Features
 
-- Egg list with sorting, filtering and searching
-- More to come
+- Monster list with ~~attack patterns, weapon and elemental weaknesses~~ *coming soon*
+- Monstie list with attack types, ~~retreat conditions~~ and habitats *coming soon*
+- Egg list with search, sorting and filtering
 
 
 ## Sources for data and images

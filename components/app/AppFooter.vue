@@ -1,7 +1,10 @@
 <template>
   <footer class="container mx-auto px-4 py-6 text-sm text-center text-gray-500">
     <div>
-      <NuxtLink to="/">Monster Buddy</NuxtLink> is a companion app for
+      <NuxtLink
+        class="link"
+        to="/"
+      >Monster Buddy</NuxtLink> is a companion app for
       <a
         class="link"
         href="https://www.capcom.com"

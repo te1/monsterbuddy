@@ -3,7 +3,7 @@
     <AppHeader />
 
     <Nuxt
-      class="container mx-auto px-4 py-2"
+      class="container mx-auto px-4 pt-2"
       keep-alive
     />
 

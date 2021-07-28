@@ -4,13 +4,34 @@
       Monster Buddy
     </h2>
 
+    <p class="text-base">
+      This companion app for Monster Hunter Stories 2: Wings of Ruin can help you in learning or remembering information useful during combat and general gameplay. It is not a complete guide, walkthrough or advanced character / gene planner (yet).
+    </p>
+
     <h3>
       Features
     </h3>
 
     <ul>
       <li>
-        ...
+        <NuxtLink
+          class="link"
+          to="/monsters/"
+        >Monster list</NuxtLink> with <span class="line-through">attack patterns, weapon and elemental weaknesses</span> <i>coming soon</i>
+      </li>
+
+      <li>
+        <NuxtLink
+          class="link"
+          to="/monsties/"
+        >Monstie list</NuxtLink> with attack types, <span class="line-through">retreat conditions</span> and habitats <i>coming soon</i>
+      </li>
+
+      <li>
+        <NuxtLink
+          class="link"
+          to="/eggs/"
+        >Egg list</NuxtLink> with search, sorting and filtering
       </li>
     </ul>
 
@@ -53,18 +74,6 @@
           href="https://docs.google.com/spreadsheets/d/1QzM9X34IfACPtRa_yWq2BZUidWJqs0l2K_Gs2023bO0"
           target="_blank"
         >MHStories 2 data</a> by iSharingan
-      </li>
-
-      <li>
-        <a
-          class="link"
-          href="https://docs.google.com/spreadsheets/d/1O1SZ_p9EFBmu7O9WbmvHISE82ZqVHWWV95vHRHZ3r1M"
-          target="_blank"
-        >(NEW) MH Stories 2 - Monster, Egg &amp; Battle Info</a> by <a
-          class="link"
-          href="https://www.reddit.com/user/aericee"
-          target="_blank"
-        >Riikapii</a>
       </li>
 
       <li>
@@ -137,6 +146,90 @@
           href="https://www.reddit.com/user/dorgesilas"
           target="_blank"
         >dorgesilas</a>
+      </li>
+    </ul>
+
+    <h3>
+      Other great resources
+    </h3>
+
+    <ul>
+      <li>
+        <a
+          class="link"
+          href="http://tactools.net/MHS2/Monstie/Builder"
+          target="_blank"
+        >Monstie Gene Builder/Planning tool</a> by <a
+          class="link"
+          href="https://www.reddit.com/user/booclarke"
+          target="_blank"
+        >booclarke</a>
+      </li>
+
+      <li>
+        <a
+          class="link"
+          href="https://docs.google.com/spreadsheets/d/1O1SZ_p9EFBmu7O9WbmvHISE82ZqVHWWV95vHRHZ3r1M"
+          target="_blank"
+        >All-in-one spreadsheet</a> by <a
+          class="link"
+          href="https://www.reddit.com/user/aericee"
+          target="_blank"
+        >Riikapii</a>
+      </li>
+
+      <li>
+        <b>YouTube</b>
+
+        <ul class="!mt-0">
+          <li>
+            <a
+              class="link"
+              href="https://www.youtube.com/channel/UCDjnmVdkM0tGprGlKo4LY3Q"
+              target="_blank"
+            >Paradise Central</a>
+          </li>
+
+          <li>
+            <a
+              class="link"
+              href="https://www.youtube.com/channel/UCmX7voYVvCB0flpoltNlnhg"
+              target="_blank"
+            >TwoSixNine</a>
+          </li>
+
+          <li>
+            <a
+              class="link"
+              href="https://www.youtube.com/c/ArekkzGaming"
+              target="_blank"
+            >Arekkz Gaming</a>
+          </li>
+
+          <li>
+            <a
+              class="link"
+              href="https://www.youtube.com/channel/UCXe5uvP9kHKRG1LTMYDiscQ"
+              target="_blank"
+            >Poogie Boogie</a>
+          </li>
+
+          <li>
+            <a
+              class="link"
+              href="https://www.youtube.com/c/RageGamingVideosReal"
+              target="_blank"
+            >RageGamingVideos</a>
+          </li>
+
+          <li>
+            <a
+              class="link"
+              href="https://www.youtube.com/channel/UCLU3HQdw9wQAtYJoOtJo3jA"
+              target="_blank"
+            >Weiss Gaming</a>
+          </li>
+        </ul>
       </li>
     </ul>
   </div>
