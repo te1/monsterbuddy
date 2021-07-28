@@ -97,6 +97,11 @@
       };
     },
 
+    head: {
+      title:
+        'Monster Buddy - Hatchable Monstie List For Monster Hunter Stories 2',
+    },
+
     methods: {
       onFilterUpdated({ groupedMonsters, isEmpty, isGrouped, sortKey }) {
         this.groupedMonsters = groupedMonsters;
