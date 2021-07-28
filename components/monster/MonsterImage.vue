@@ -36,7 +36,7 @@
     computed: {
       imageUrl() {
         try {
-          return require(`~/assets/monsters/${this.monster.name}.png`);
+          return require(`~/assets/monsters/${this.monster.name}.webp`);
         } catch (e) {
           return null;
         }

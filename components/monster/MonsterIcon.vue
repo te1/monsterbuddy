@@ -75,9 +75,9 @@
     computed: {
       imageUrl() {
         try {
-          return require(`~/assets/monster-icons/${this.monster.name}.png`);
+          return require(`~/assets/monster-icons/${this.monster.name}.webp`);
         } catch (e) {
-          return require('~/assets/monster-icons/_Unknown.png');
+          return require('~/assets/monster-icons/_Unknown.webp');
         }
       },
 
