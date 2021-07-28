@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center h-[122px]">
-    <div class="w-[60px] h-[120px] ml-1.5 flex flex-col gap-1 items-center justify-center">
+    <div class="w-[120px] h-[120px] -mx-3 flex flex-col gap-1 items-center justify-center">
       <MonsterIcon :monster="monster" />
 
       <AttackTypeIcon
@@ -9,7 +9,7 @@
       />
     </div>
 
-    <div class="flex-1 min-w-[135px] ml-4 text-sm">
+    <div class="flex-1 min-w-[135px] ml-3 text-sm">
       <div
         class="text-gray-500 -mb-0.5"
         v-text="info"

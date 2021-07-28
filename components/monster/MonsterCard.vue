@@ -1,12 +1,12 @@
 <template>
   <div class="flex items-center h-[122px]">
     <MonsterIcon
-      class="w-[60px] h-[120px] ml-1.5"
+      class="w-[120px] h-[120px] -mx-3"
       :monster="monster"
       showHatchable
     />
 
-    <div class="flex-1 min-w-[135px] ml-4 text-sm">
+    <div class="flex-1 min-w-[135px] ml-3 text-sm">
       <div
         class="text-gray-500 -mb-0.5"
         v-text="info"
