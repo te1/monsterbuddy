@@ -1,11 +1,14 @@
 <template>
   <div>
     <button
-      class="mb-1 text-xl text-brand-500 hover:text-brand-400 active:text-gray-500"
+      class="fixed bottom-14 right-2 z-10 flex items-center justify-center w-12 h-12 rounded-full drop-shadow-md text-2xl bg-brand-500 text-white"
       title="Sort and filter"
       @click="showFilter = !showFilter"
     >
-      <FaIcon :icon="['fas', 'filter']" />
+      <FaIcon
+        class="pt-px"
+        :icon="['fas', 'filter']"
+      />
     </button>
 
     <MonsterFilter
