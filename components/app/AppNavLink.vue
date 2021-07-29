@@ -1,8 +1,8 @@
 <template>
   <NuxtLink
     :to="to"
-    class="px-0.5 py-2 text-center font-semibold tracking-wide transition text-gray-600 hover:text-gray-400 border-t-4 border-b-4 border-transparent hover:border-b-gray-400"
-    active-class="text-brand-500 hover:text-brand-400 border-b-brand-500 hover:border-b-brand-400"
+    class="py-2 text-center font-semibold tracking-wide transition text-gray-500 hover:text-gray-700"
+    exact-active-class="text-brand-500 hover:text-brand-700"
   >
     {{ text }}
   </NuxtLink>
@@ -10,6 +10,8 @@
 
 <script>
   export default {
+    name: 'AppNavLink',
+
     props: {
       to: {
         type: String,
