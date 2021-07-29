@@ -98,8 +98,15 @@
     },
 
     head: {
-      title:
-        'Monster Buddy - Hatchable Monstie List For Monster Hunter Stories 2',
+      title: 'Monster Buddy - Monstie List For Monster Hunter Stories 2',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Easily find all monsties in their natural habitats and check on retreat conditions and their attack types',
+        },
+      ],
     },
 
     methods: {

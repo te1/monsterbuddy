@@ -99,6 +99,14 @@
 
     head: {
       title: 'Monster Buddy - Egg List For Monster Hunter Stories 2',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
+        },
+      ],
     },
 
     methods: {

@@ -99,6 +99,14 @@
 
     head: {
       title: 'Monster Buddy - Monster List For Monster Hunter Stories 2',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
+        },
+      ],
     },
 
     methods: {

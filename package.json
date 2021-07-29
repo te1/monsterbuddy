@@ -6,7 +6,7 @@
     "dev": "nuxt --spa",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate --modern",
+    "generate": "rm -r node_modules/.cache/pwa/icon && nuxt generate --modern",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js"
   },
