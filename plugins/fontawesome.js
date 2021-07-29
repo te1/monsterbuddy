@@ -12,6 +12,7 @@ import {
   faDna,
   faMapMarkerAlt,
   faMountain,
+  faShare,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   //   faSquare,
@@ -23,7 +24,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
 
-library.add(faFilter, faDna, faMapMarkerAlt, faMountain, faFrown);
+library.add(faFilter, faDna, faMapMarkerAlt, faMountain, faShare);
 library.add(faFrown);
 library.add(faGithub);
 

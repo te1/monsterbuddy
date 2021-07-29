@@ -12,6 +12,9 @@ module.exports = {
       white: colors.white,
       gray: colors.blueGray,
       brand: colors.rose,
+      power: '#b8342e',
+      speed: '#1b61b9',
+      technical: '#5b9326',
     },
     extend: {
       typography: (theme) => ({

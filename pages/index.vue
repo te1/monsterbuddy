@@ -5,8 +5,37 @@
     </h2>
 
     <p class="text-base">
-      This companion app for Monster Hunter Stories 2: Wings of Ruin can help you in learning or remembering information useful during combat and general gameplay. It is not a complete guide, walkthrough or advanced character / gene planner (yet).
+      This companion app for Monster Hunter Stories 2: Wings of Ruin can help you in learning or remembering information useful during combat and general gameplay. It's not a complete guide, walkthrough or advanced character / gene planner (yet).
     </p>
+
+    <div class="flex flex-col items-center pt-3">
+      <div class="relative inline-block w-[180px] h-[200px]">
+        <AttackTypeIcon
+          class="!my-0 absolute top-0 left-0 right-0 mx-auto w-[70px] h-[70px]"
+          type="power"
+        />
+        <AttackTypeIcon
+          class="!m-0 absolute bottom-[25px] left-0 w-[70px] h-[70px]"
+          type="speed"
+        />
+        <AttackTypeIcon
+          class="!m-0 absolute bottom-[25px] right-0 w-[70px] h-[75px]"
+          type="technical"
+        />
+        <FaIcon
+          class="absolute top-[45px] right-[10px] !w-12 !h-12 rotate-[85deg] text-gray-500"
+          :icon="['fas', 'share']"
+        />
+        <FaIcon
+          class="absolute top-[45px] left-[10px] !w-12 !h-12 rotate-[330deg] text-gray-500"
+          :icon="['fas', 'share']"
+        />
+        <FaIcon
+          class="absolute bottom-[0px] left-0 right-0 mx-auto !w-12 !h-12 rotate-[215deg] text-gray-500"
+          :icon="['fas', 'share']"
+        />
+      </div>
+    </div>
 
     <h3>
       Features

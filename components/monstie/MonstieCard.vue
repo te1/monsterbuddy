@@ -20,7 +20,10 @@
       />
       <div v-text="monster.genus" />
       <div v-text="monster.habitat" />
-      <div v-text="attackType" />
+      <AttackTypeLabel
+        :class="{ 'opacity-0': !monster.hatchable }"
+        :monster="monster"
+      />
     </div>
 
     <MonsterImage
@@ -32,7 +35,7 @@
 </template>
 
 <script>
-  import { formatMonsterInfo, formatAttackType } from '~/services/utils';
+  import { formatMonsterInfo } from '~/services/utils';
 
   export default {
     name: 'MonstieCard',
@@ -47,10 +50,6 @@
     computed: {
       info() {
         return formatMonsterInfo(this.monster);
-      },
-
-      attackType() {
-        return formatAttackType(this.monster);
       },
     },
   };
