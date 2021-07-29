@@ -94,6 +94,10 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: {
+      fileName: 'icon2.png',
+    },
+
     manifest: {
       name: 'Monster Buddy',
       short_name: 'Monster Buddy',
