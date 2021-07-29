@@ -1,16 +1,34 @@
 <template>
   <div>
-    <h2 class="text-2xl font-semibold tracking-wide">Error</h2>
+    <h2 class="mb-4 text-3xl text-center font-semibold tracking-wide">
+      Monster Buddy
+    </h2>
 
-    <div
-      v-if="error"
-      class="text-lg"
-    >
-      <span class="font-semibold tracking-wide">{{ error.statusCode }}</span>
-      <span>{{ error.message }}</span>
+    <h3 class="text-2xl font-semibold tracking-wide">
+      <span>
+        Error
+      </span>
+
+      <span
+        v-if="error"
+        class="text-brand-700"
+      >
+        {{ error.statusCode }}
+      </span>
+    </h3>
+
+    <p v-if="error">
+      {{ error.message }}
+    </p>
+
+    <div class="mt-4">
+      <NuxtLink
+        class="link"
+        to="/"
+      >
+        Back to Start
+      </NuxtLink>
     </div>
-
-    <NuxtLink to="/">Back</NuxtLink>
   </div>
 </template>
 
