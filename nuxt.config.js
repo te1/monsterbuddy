@@ -63,6 +63,14 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        defer: true,
+        'data-domain': 'monsterbuddy.app',
+        'data-api': '/newt/api/event',
+        src: '/newt/js/script.js',
+      },
+    ],
 
     bodyAttrs: {
       class:
