@@ -18,6 +18,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["green", "brown", "gray"],
+      "location": "North Kamuna Cape",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -81,6 +82,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["blue", "orange"],
+      "location": "North Kamuna Cape",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -105,6 +107,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["yellow", "white", "orange"],
+      "location": "North Kamuna Cape",
       "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
@@ -172,6 +175,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["pink", "blue"],
+      "location": "North Kamuna Cape",
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
@@ -211,6 +215,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["brown"],
+      "location": "North Kamuna Cape",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -237,6 +242,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "yellow", "white"],
+      "location": "North Kamuna Cape",
       "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate."
     }
   },
@@ -259,6 +265,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["orange", "yellow"],
+      "location": "Alcala Highlands",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -347,6 +354,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["purple", "red"],
+      "location": "Alcala Highlands",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -389,6 +397,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["green", "yellow"],
+      "location": "Alcala Valley",
       "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate."
     }
   },
@@ -431,6 +440,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "green"],
+      "location": "Alcala Highlands",
       "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate."
     }
   },
@@ -457,6 +467,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "purple"],
+      "location": "Etulle Lofty Trees",
       "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
@@ -482,6 +493,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "yellow"],
+      "location": "Alcala Valley",
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
@@ -511,6 +523,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["orange", "blue"],
+      "location": "Harzgai Hill - Inner",
       "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
@@ -539,6 +552,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["orange"],
+      "location": "Harzgai Hill - Inner",
       "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
@@ -564,6 +578,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["yellow", "white", "pink"],
+      "location": "Wendwood",
       "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate."
     }
   },
@@ -593,6 +608,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["yellow", "brown"],
+      "location": "Harzgai Rocky Hill",
       "retreat": "Break **each part** to boost the retreat rate"
     }
   },
@@ -618,6 +634,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["purple", "pink"],
+      "location": "Alcala Valley",
       "retreat": "Break the **head** when it is **enraged** to boost the retreat rate."
     }
   },
@@ -668,6 +685,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["pink", "purple", "blue"],
+      "location": "Alcala Highlands",
       "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate."
     }
   },
@@ -697,6 +715,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "green"],
+      "location": "Alcala Highlands",
       "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -719,6 +738,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["brown", "yellow"],
+      "location": "Base of Mt. Lavina",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -804,6 +824,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["pink", "green"],
+      "location": "Loloska Forest",
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
@@ -843,6 +864,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["blue", "yellow"],
+      "location": "Base of Mt. Lavina",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -871,6 +893,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["orange", "red"],
+      "location": "Loloska Forest",
       "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate."
     }
   },
@@ -898,6 +921,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "pink"],
+      "location": "Loloska Forest",
       "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
@@ -941,6 +965,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["blue", "green", "orange"],
+      "location": "Base of Mt. Lavina",
       "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate."
     }
   },
@@ -970,6 +995,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["purple", "red", "pink"],
+      "location": "Loloska Forest",
       "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate."
     }
   },
@@ -999,6 +1025,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["brown", "orange"],
+      "location": "Loloska Rocky Canyon",
       "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate."
     }
   },
@@ -1026,6 +1053,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["blue", "white", "black"],
+      "location": "Loloska Rocky Canyon",
       "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate."
     }
   },
@@ -1052,6 +1080,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["blue", "white", "pink"],
+      "location": "Lavina Glacial Peaks",
       "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
@@ -1079,6 +1108,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["pink", "white", "red"],
+      "location": "Lavina Glacial Peaks",
       "retreat": "Break the **head** with a **bow** to boost the retreat rate."
     }
   },
@@ -1146,6 +1176,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "gray", "purple"],
+      "location": "Base of Mt. Lavina",
       "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate."
     }
   },
@@ -1176,6 +1207,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "green"],
+      "location": "Lavina Glacial Peaks",
       "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate."
     }
   },
@@ -1202,6 +1234,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["pink", "black"],
+      "location": "Loloska Forest",
       "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate."
     }
   },
@@ -1232,6 +1265,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "red"],
+      "location": "Woodland",
       "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1263,6 +1297,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["blue", "green", "yellow"],
+      "location": "Lavina Glacial Peaks",
       "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
@@ -1290,6 +1325,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["white", "yellow", "orange"],
+      "location": "Loloska Rocky Canyon",
       "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate."
     }
   },
@@ -1317,6 +1353,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "blue", "black"],
+      "location": "Lavina Glacial Peaks",
       "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate."
     }
   },
@@ -1462,6 +1499,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["orange", "red", "purple"],
+      "location": "Terga Volcano Base",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -1501,6 +1539,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["green", "yellow"],
+      "location": "Lamure Tower - 3F",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -1548,6 +1587,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["brown", "green", "orange"],
+      "location": "Sadona Barrens",
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate."
     }
   },
@@ -1576,6 +1616,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["gray", "white", "orange"],
+      "location": "Lamure Tower Front",
       "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate."
     }
   },
@@ -1603,6 +1644,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["purple", "green"],
+      "location": "Lamure Tower Front",
       "retreat": "Break the **head** with a **gunlance** to boost the retreat rate."
     }
   },
@@ -1630,6 +1672,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["green", "yellow"],
+      "location": "Pomore Garden",
       "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate."
     }
   },
@@ -1660,6 +1703,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["yellow", "white", "brown"],
+      "location": "Lamure Tower Front",
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
@@ -1687,6 +1731,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["green", "gray", "brown"],
+      "location": "Lamure Tower - 5F",
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
@@ -1714,6 +1759,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["gray", "white", "brown"],
+      "location": "Jalma Highlands",
       "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
@@ -1740,6 +1786,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["red", "yellow"],
+      "location": "Pomore Garden",
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
@@ -1766,6 +1813,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["red", "pink", "white", "gray"],
+      "location": "Pomore Garden",
       "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1794,6 +1842,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "red"],
+      "location": "Pomore Garden",
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1822,6 +1871,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["yellow", "brown", "orange"],
+      "location": "Terga Volcano Base",
       "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
@@ -1894,6 +1944,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["orange", "brown"],
+      "location": "Sadona Barrens",
       "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
@@ -1920,6 +1971,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["pink", "white"],
+      "location": "Sadona Barrens",
       "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate."
     }
   },
@@ -1949,6 +2001,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "pink"],
+      "location": "Pomore Garden",
       "retreat": "Break **each part** to boost the retreat rate."
     }
   },
@@ -1977,6 +2030,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["yellow", "white", "gray", "orange"],
+      "location": "Terga Volcano Base",
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
@@ -2117,6 +2171,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["white", "gray", "yellow"],
+      "location": "Terga Volcano Base",
       "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate."
     }
   },
@@ -2144,6 +2199,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "yellow"],
+      "location": "Terga Volcano Base",
       "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate."
     }
   },
@@ -2192,6 +2248,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["gray", "orange"],
+      "location": "Terga Volcano Base",
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
@@ -2220,6 +2277,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["yellow", "blue"],
+      "location": "Terga Volcano Base",
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2247,6 +2305,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "green"],
+      "location": "Terga Volcano Base",
       "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate."
     }
   },
@@ -2276,6 +2335,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["orange", "black"],
+      "location": "Terga Volcano Base",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2304,6 +2364,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "black"],
+      "location": "Terga Volcano Base",
       "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2330,6 +2391,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue", "red"],
+      "location": "Alcala Valley",
       "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2382,6 +2444,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["gray", "white", "black"],
+      "location": "Forbidden Grounds",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2478,6 +2541,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["orange", "red", "pink"],
+      "location": "Forbidden Grounds",
       "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate."
     }
   },
@@ -2504,6 +2568,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["green", "orange"],
+      "location": "Forbidden Grounds",
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
@@ -2531,6 +2596,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["blue", "yellow", "white"],
+      "location": "Forbidden Grounds",
       "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
@@ -2558,6 +2624,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["yellow", "orange", "red"],
+      "location": "Forbidden Grounds",
       "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate."
     }
   },
@@ -2596,6 +2663,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["red", "blue"],
+      "location": "North Kamuna Cape",
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2624,6 +2692,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["blue"],
+      "location": "North Kamuna Cape",
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2649,6 +2718,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["pink", "red"],
+      "location": "Pomore Garden",
       "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2676,6 +2746,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["gray", "white", "orange"],
+      "location": "Base of Mt. Lavina",
       "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate."
     }
   },
@@ -2704,6 +2775,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["white", "blue"],
+      "location": "East Kamuna Heights",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2734,6 +2806,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["green", "yellow", "orange"],
+      "location": "Loloska Rocky Canyon",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2763,6 +2836,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["yellow", "white", "blue"],
+      "location": "Jalma Highlands",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2791,6 +2865,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["orange", "blue"],
+      "location": "Alcala Valley",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2820,6 +2895,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["green", "purple", "black"],
+      "location": "Terga Volcano Base",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2845,6 +2921,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["blue", "white"],
+      "location": "Pomore Garden",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2873,6 +2950,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["red", "purple"],
+      "location": "Terga Volcano Base",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2903,6 +2981,7 @@
     "monstie": {
       "attackType": "power",
       "eggColors": ["brown"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2930,7 +3009,8 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "eggColors": ["orange", "black"],
+      "eggColors": ["orange", "brown", "black"],
+      "location": "Etulle Lofty Trees",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2960,6 +3040,7 @@
     "monstie": {
       "attackType": "technical",
       "eggColors": ["blue", "white", "gray"],
+      "location": "Base of Mt. Lavina",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2988,6 +3069,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "blue"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3015,6 +3097,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "red"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3042,6 +3125,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "blue"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3069,6 +3153,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "green"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3096,6 +3181,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "blue"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3123,6 +3209,7 @@
     "monstie": {
       "attackType": "speed",
       "eggColors": ["yellow", "white", "red"],
+      "location": "?",
       "retreat": "This monster **cannot** be chased back to its den."
     }
   }
