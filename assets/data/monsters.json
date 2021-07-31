@@ -17,6 +17,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["green", "brown", "gray"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -79,6 +80,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["blue", "orange"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -102,6 +104,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["yellow", "white", "orange"],
       "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
@@ -168,6 +171,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["pink", "blue"],
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
@@ -206,6 +210,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["brown"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -231,6 +236,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "yellow", "white"],
       "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate."
     }
   },
@@ -252,6 +258,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["orange", "yellow"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -339,6 +346,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["purple", "red"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -380,6 +388,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["green", "yellow"],
       "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate."
     }
   },
@@ -421,6 +430,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "green"],
       "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate."
     }
   },
@@ -446,6 +456,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "purple"],
       "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate."
     }
   },
@@ -470,6 +481,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "yellow"],
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
     }
   },
@@ -498,6 +510,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["orange", "blue"],
       "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
@@ -525,6 +538,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["orange"],
       "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
@@ -549,6 +563,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["yellow", "white", "pink"],
       "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate."
     }
   },
@@ -577,6 +592,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["yellow", "brown"],
       "retreat": "Break **each part** to boost the retreat rate"
     }
   },
@@ -601,6 +617,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["purple", "pink"],
       "retreat": "Break the **head** when it is **enraged** to boost the retreat rate."
     }
   },
@@ -650,6 +667,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["pink", "purple", "blue"],
       "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate."
     }
   },
@@ -678,6 +696,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "green"],
       "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -699,6 +718,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["brown", "yellow"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -783,6 +803,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["pink", "green"],
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
@@ -821,6 +842,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["blue", "yellow"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -848,6 +870,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["orange", "red"],
       "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate."
     }
   },
@@ -874,6 +897,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "pink"],
       "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
@@ -916,6 +940,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["blue", "green", "orange"],
       "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate."
     }
   },
@@ -944,6 +969,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["purple", "red", "pink"],
       "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate."
     }
   },
@@ -972,6 +998,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["brown", "orange"],
       "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate."
     }
   },
@@ -998,6 +1025,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["blue", "white", "black"],
       "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate."
     }
   },
@@ -1023,6 +1051,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["blue", "white", "pink"],
       "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate."
     }
   },
@@ -1049,6 +1078,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["pink", "white", "red"],
       "retreat": "Break the **head** with a **bow** to boost the retreat rate."
     }
   },
@@ -1115,6 +1145,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "gray", "purple"],
       "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate."
     }
   },
@@ -1144,6 +1175,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "green"],
       "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate."
     }
   },
@@ -1169,6 +1201,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["pink", "black"],
       "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate."
     }
   },
@@ -1198,6 +1231,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "red"],
       "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1228,6 +1262,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["blue", "green", "yellow"],
       "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
@@ -1254,6 +1289,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["white", "yellow", "orange"],
       "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate."
     }
   },
@@ -1280,6 +1316,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "blue", "black"],
       "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate."
     }
   },
@@ -1424,6 +1461,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["orange", "red", "purple"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -1462,6 +1500,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["green", "yellow"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
     }
   },
@@ -1508,6 +1547,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["brown", "green", "orange"],
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate."
     }
   },
@@ -1535,6 +1575,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["gray", "white", "orange"],
       "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate."
     }
   },
@@ -1561,6 +1602,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["purple", "green"],
       "retreat": "Break the **head** with a **gunlance** to boost the retreat rate."
     }
   },
@@ -1587,6 +1629,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["green", "yellow"],
       "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate."
     }
   },
@@ -1616,6 +1659,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["yellow", "white", "brown"],
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
@@ -1642,6 +1686,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["green", "gray", "brown"],
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
     }
   },
@@ -1668,6 +1713,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["gray", "white", "brown"],
       "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate."
     }
   },
@@ -1693,6 +1739,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["red", "yellow"],
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
     }
   },
@@ -1718,6 +1765,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["red", "pink", "white", "gray"],
       "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1745,6 +1793,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "red"],
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -1772,6 +1821,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["yellow", "brown", "orange"],
       "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
@@ -1843,6 +1893,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["orange", "brown"],
       "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate."
     }
   },
@@ -1868,6 +1919,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["pink", "white"],
       "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate."
     }
   },
@@ -1896,6 +1948,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "pink"],
       "retreat": "Break **each part** to boost the retreat rate."
     }
   },
@@ -1923,6 +1976,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["yellow", "white", "gray", "orange"],
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
@@ -2062,6 +2116,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["white", "gray", "yellow"],
       "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate."
     }
   },
@@ -2088,6 +2143,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "yellow"],
       "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate."
     }
   },
@@ -2135,6 +2191,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["gray", "orange"],
       "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
     }
   },
@@ -2162,6 +2219,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["yellow", "blue"],
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2188,6 +2246,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "green"],
       "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate."
     }
   },
@@ -2216,6 +2275,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["orange", "black"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2243,6 +2303,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "black"],
       "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2268,6 +2329,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue", "red"],
       "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2319,6 +2381,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["gray", "white", "black"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2414,6 +2477,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["orange", "red", "pink"],
       "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate."
     }
   },
@@ -2439,6 +2503,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["green", "orange"],
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate."
     }
   },
@@ -2465,6 +2530,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["blue", "yellow", "white"],
       "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
     }
   },
@@ -2491,6 +2557,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["yellow", "orange", "red"],
       "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate."
     }
   },
@@ -2528,6 +2595,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["red", "blue"],
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2555,6 +2623,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["blue"],
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2579,6 +2648,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["pink", "red"],
       "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate."
     }
   },
@@ -2605,6 +2675,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["gray", "white", "orange"],
       "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate."
     }
   },
@@ -2632,6 +2703,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2661,6 +2733,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["green", "yellow", "orange"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2689,6 +2762,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2716,6 +2790,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["orange", "blue"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2744,6 +2819,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["green", "purple", "black"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2768,6 +2844,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["blue", "white"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2795,6 +2872,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["red", "purple"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2824,6 +2902,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "eggColors": ["brown"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2851,6 +2930,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["orange", "black"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2879,6 +2959,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "eggColors": ["blue", "white", "gray"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2906,6 +2987,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2932,6 +3014,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "red"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2958,6 +3041,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -2984,6 +3068,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "green"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3010,6 +3095,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   },
@@ -3036,6 +3122,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "eggColors": ["yellow", "white", "red"],
       "retreat": "This monster **cannot** be chased back to its den."
     }
   }
