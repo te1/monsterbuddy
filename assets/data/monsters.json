@@ -4,6 +4,7 @@
     "name": "Aptonoth",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -17,9 +18,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "brown", "gray"],
       "location": "North Kamuna Cape",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -27,6 +55,7 @@
     "name": "Larinoth",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -43,6 +72,7 @@
     "name": "Kelbi",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 2,
     "monster": {}
   },
@@ -51,6 +81,7 @@
     "name": "Velociprey",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -67,6 +98,7 @@
     "name": "Velocidrome",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -81,9 +113,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "orange"],
       "location": "North Kamuna Cape",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -91,6 +150,7 @@
     "name": "Kulu-Ya-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -106,9 +166,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "orange"],
       "location": "North Kamuna Cape",
-      "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate."
+      "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -116,6 +203,7 @@
     "name": "Bnahabra (Blue)",
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Bnahabra (Green)" },
@@ -137,6 +225,7 @@
     "name": "Konchu (Yellow)",
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Konchu (Blue)" },
@@ -158,6 +247,7 @@
     "name": "Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Blue Yian Kut-Ku" }],
     "monster": {
@@ -174,9 +264,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "blue"],
       "location": "North Kamuna Cape",
-      "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
+      "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -184,6 +301,7 @@
     "name": "Bullfango",
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -200,6 +318,7 @@
     "name": "Bulldrome",
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -214,9 +333,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["brown"],
       "location": "North Kamuna Cape",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -224,6 +370,7 @@
     "name": "Pukei-Pukei",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -241,9 +388,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow", "white"],
       "location": "North Kamuna Cape",
-      "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate."
+      "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -251,6 +425,7 @@
     "name": "Apceros",
     "genus": "Herbivore",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -264,9 +439,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "yellow"],
       "location": "Alcala Highlands",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -274,6 +476,7 @@
     "name": "Slagtoth (Green)",
     "genus": "Herbivore",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "color", "monster": "Slagtoth (Brown)" }],
     "monster": {
@@ -291,6 +494,7 @@
     "name": "Gargwa",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -307,6 +511,7 @@
     "name": "Jaggi",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -323,6 +528,7 @@
     "name": "Jaggia",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -339,6 +545,7 @@
     "name": "Great Jaggi",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -353,9 +560,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["purple", "red"],
       "location": "Alcala Highlands",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -363,6 +597,7 @@
     "name": "Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -379,6 +614,7 @@
     "name": "Royal Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Ludroth" }],
     "monster": {
@@ -396,9 +632,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow"],
       "location": "Alcala Valley",
-      "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate."
+      "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -406,6 +669,7 @@
     "name": "Tetsucabra",
     "genus": "Amphibian",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -423,6 +687,7 @@
     "name": "Arzuros",
     "genus": "Fanged Beast",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -439,9 +704,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "green"],
       "location": "Alcala Highlands",
-      "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate."
+      "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -449,6 +741,7 @@
     "name": "Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Crimson Qurupeco" }],
     "monster": {
@@ -466,9 +759,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "purple"],
       "location": "Etulle Lofty Trees",
-      "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate."
+      "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -476,6 +796,7 @@
     "name": "Blue Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Yian Kut-Ku" }],
     "monster": {
@@ -492,9 +813,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow"],
       "location": "Alcala Valley",
-      "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate."
+      "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -502,6 +850,7 @@
     "name": "Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Brute Tigrex" },
@@ -522,9 +871,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "blue"],
       "location": "Harzgai Hill - Inner",
-      "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate."
+      "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -532,6 +908,7 @@
     "name": "Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "White Monoblos" }],
     "monster": {
@@ -551,9 +928,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange"],
       "location": "Harzgai Hill - Inner",
-      "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate."
+      "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -561,6 +965,7 @@
     "name": "Paolumu",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -577,9 +982,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "pink"],
       "location": "Wendwood",
-      "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate."
+      "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -587,6 +1019,7 @@
     "name": "Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ruby Basarios" }],
     "monster": {
@@ -607,9 +1040,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "brown"],
       "location": "Harzgai Rocky Hill",
-      "retreat": "Break **each part** to boost the retreat rate"
+      "retreat": "Break **each part** to boost the retreat rate",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -617,6 +1077,7 @@
     "name": "Yian Garuga",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -633,9 +1094,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["purple", "pink"],
       "location": "Alcala Valley",
-      "retreat": "Break the **head** when it is **enraged** to boost the retreat rate."
+      "retreat": "Break the **head** when it is **enraged** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -643,6 +1131,7 @@
     "name": "Duramboros",
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -663,6 +1152,7 @@
     "name": "Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 4,
     "related": [
       { "type": "subspecies", "monster": "Green Nargacuga" },
@@ -684,9 +1174,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "purple", "blue"],
       "location": "Alcala Highlands",
-      "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate."
+      "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -694,6 +1211,7 @@
     "name": "Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 4,
     "related": [
       { "type": "subspecies", "monster": "Pink Rathian" },
@@ -714,9 +1232,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "green"],
       "location": "Alcala Highlands",
-      "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -724,6 +1269,7 @@
     "name": "Popo",
     "genus": "Herbivore",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -737,9 +1283,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["brown", "yellow"],
       "location": "Base of Mt. Lavina",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -747,6 +1320,7 @@
     "name": "Konchu (Blue)",
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Konchu (Yellow)" },
@@ -768,6 +1342,7 @@
     "name": "Bnahabra (Green)",
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Bnahabra (Blue)" },
@@ -789,6 +1364,7 @@
     "name": "Conga",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -805,6 +1381,7 @@
     "name": "Congalala",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Emerald Congalala" }],
     "monster": {
@@ -823,9 +1400,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "green"],
       "location": "Loloska Forest",
-      "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
+      "retreat": "Break the **head** with a **hammer** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -833,6 +1437,7 @@
     "name": "Baggi",
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -849,6 +1454,7 @@
     "name": "Great Baggi",
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -863,9 +1469,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "yellow"],
       "location": "Base of Mt. Lavina",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -873,6 +1506,7 @@
     "name": "Kecha Wacha",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ash Kecha Wacha" }],
     "monster": {
@@ -892,9 +1526,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "red"],
       "location": "Loloska Forest",
-      "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate."
+      "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -902,6 +1563,7 @@
     "name": "Gypceros",
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Gypceros" }],
     "monster": {
@@ -920,9 +1582,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "pink"],
       "location": "Loloska Forest",
-      "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate."
+      "retreat": "Attack with a **Nerscylla** **Kinship Skill** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -930,6 +1619,7 @@
     "name": "Zamite",
     "genus": "Amphibian",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -946,6 +1636,7 @@
     "name": "Zamtrios",
     "genus": "Amphibian",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -964,9 +1655,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "green", "orange"],
       "location": "Base of Mt. Lavina",
-      "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate."
+      "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -974,6 +1692,7 @@
     "name": "Nerscylla",
     "genus": "Temnoceran",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Shrouded Nerscylla" }],
     "monster": {
@@ -994,9 +1713,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["purple", "red", "pink"],
       "location": "Loloska Forest",
-      "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate."
+      "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1004,6 +1750,7 @@
     "name": "Barroth",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Jade Barroth" }],
     "monster": {
@@ -1024,9 +1771,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["brown", "orange"],
       "location": "Loloska Rocky Canyon",
-      "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate."
+      "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1034,6 +1808,7 @@
     "name": "Tobi-Kadachi",
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 4,
     "monster": {
       "attackPatterns": {
@@ -1052,9 +1827,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "white", "black"],
       "location": "Loloska Rocky Canyon",
-      "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate."
+      "retreat": "Break the **tail** with a **hunting horn** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1062,6 +1864,7 @@
     "name": "Khezu",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Red Khezu" }],
     "monster": {
@@ -1079,9 +1882,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "white", "pink"],
       "location": "Lavina Glacial Peaks",
-      "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate."
+      "retreat": "Attack with a **Shrouded Nerscylla** **Kinship Skill** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1089,6 +1919,7 @@
     "name": "Red Khezu",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Khezu" }],
     "monster": {
@@ -1107,9 +1938,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "white", "red"],
       "location": "Lavina Glacial Peaks",
-      "retreat": "Break the **head** with a **bow** to boost the retreat rate."
+      "retreat": "Break the **head** with a **bow** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1117,6 +1975,7 @@
     "name": "Seltas",
     "genus": "Neopteron",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -1136,6 +1995,7 @@
     "name": "Seltas Queen",
     "genus": "Neopteron",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspecies", "monster": "Desert Seltas Queen" }],
     "monster": {
@@ -1159,6 +2019,7 @@
     "name": "Lagombi",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -1175,9 +2036,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "gray", "purple"],
       "location": "Base of Mt. Lavina",
-      "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate."
+      "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1185,6 +2073,7 @@
     "name": "Jade Barroth",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Barroth" }],
     "monster": {
@@ -1206,9 +2095,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "green"],
       "location": "Lavina Glacial Peaks",
-      "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate."
+      "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1216,6 +2132,7 @@
     "name": "Anjanath",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Anjanath" }],
     "monster": {
@@ -1233,9 +2150,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "black"],
       "location": "Loloska Forest",
-      "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate."
+      "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1243,6 +2187,7 @@
     "name": "Gammoth",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 5,
     "monster": {
       "attackPatterns": {
@@ -1264,9 +2209,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "red"],
       "location": "Woodland",
-      "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Glavenus** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1274,6 +2246,7 @@
     "name": "Zinogre",
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Stygian Zinogre" },
@@ -1296,9 +2269,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "green", "yellow"],
       "location": "Lavina Glacial Peaks",
-      "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with an **ice element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1306,6 +2306,7 @@
     "name": "Barioth",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Sand Barioth" }],
     "monster": {
@@ -1324,9 +2325,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["white", "yellow", "orange"],
       "location": "Loloska Rocky Canyon",
-      "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate."
+      "retreat": "Break the **spikes** with a **fire element attack** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1334,6 +2362,7 @@
     "name": "Legiana",
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 4,
     "monster": {
       "attackPatterns": {
@@ -1352,9 +2381,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "blue", "black"],
       "location": "Lavina Glacial Peaks",
-      "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate."
+      "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1362,6 +2418,7 @@
     "name": "Slagtoth (Brown)",
     "genus": "Herbivore",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "color", "monster": "Slagtoth (Green)" }],
     "monster": {
@@ -1379,6 +2436,7 @@
     "name": "Bnahabra (Brown)",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Bnahabra (Blue)" },
@@ -1400,6 +2458,7 @@
     "name": "Konchu (Red)",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Konchu (Yellow)" },
@@ -1421,6 +2480,7 @@
     "name": "Cephalos",
     "genus": "Piscine Wyvern",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -1437,6 +2497,7 @@
     "name": "Hermitaur",
     "genus": "Carapaceon",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -1453,6 +2514,7 @@
     "name": "Uroktor",
     "genus": "Leviathan",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -1468,6 +2530,7 @@
     "name": "Ioprey",
     "genus": "Bird Wyvern",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -1484,6 +2547,7 @@
     "name": "Iodrome",
     "genus": "Bird Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -1498,9 +2562,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "red", "purple"],
       "location": "Terga Volcano Base",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1508,6 +2599,7 @@
     "name": "Genprey",
     "genus": "Bird Wyvern",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -1524,6 +2616,7 @@
     "name": "Gendrome",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -1538,9 +2631,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow"],
       "location": "Lamure Tower - 3F",
-      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate."
+      "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1548,6 +2668,7 @@
     "name": "Plesioth",
     "genus": "Piscine Wyvern",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspecies", "monster": "Green Plesioth" }],
     "monster": {
@@ -1569,6 +2690,7 @@
     "name": "Cephadrome",
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -1586,9 +2708,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["brown", "green", "orange"],
       "location": "Sadona Barrens",
-      "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate."
+      "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1596,6 +2745,7 @@
     "name": "Ash Kecha Wacha",
     "genus": "Fanged Beast",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Kecha Wacha" }],
     "monster": {
@@ -1615,9 +2765,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["gray", "white", "orange"],
       "location": "Lamure Tower Front",
-      "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate."
+      "retreat": "Break the **head** with a **water element** **great sword** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1625,6 +2802,7 @@
     "name": "Purple Gypceros",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Gypceros" }],
     "monster": {
@@ -1643,9 +2821,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["purple", "green"],
       "location": "Lamure Tower Front",
-      "retreat": "Break the **head** with a **gunlance** to boost the retreat rate."
+      "retreat": "Break the **head** with a **gunlance** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1653,6 +2858,7 @@
     "name": "Green Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Nargacuga" }],
     "monster": {
@@ -1671,9 +2877,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow"],
       "location": "Pomore Garden",
-      "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate."
+      "retreat": "Attack it while it is in a **Pitfall Trap** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1681,6 +2914,7 @@
     "name": "Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Black Diablos" },
@@ -1702,9 +2936,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "brown"],
       "location": "Lamure Tower Front",
-      "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
+      "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1712,6 +2973,7 @@
     "name": "Black Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Diablos" }],
     "monster": {
@@ -1730,9 +2992,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "gray", "brown"],
       "location": "Lamure Tower - 5F",
-      "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate."
+      "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1740,6 +3029,7 @@
     "name": "White Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Monoblos" }],
     "monster": {
@@ -1758,9 +3048,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["gray", "white", "brown"],
       "location": "Jalma Highlands",
-      "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate."
+      "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1768,6 +3085,7 @@
     "name": "Crimson Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Qurupeco" }],
     "monster": {
@@ -1785,9 +3103,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["red", "yellow"],
       "location": "Pomore Garden",
-      "retreat": "Break the **head** with a **hammer** to boost the retreat rate."
+      "retreat": "Break the **head** with a **hammer** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1795,6 +3140,7 @@
     "name": "Mizutsune",
     "genus": "Leviathan",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 5,
     "monster": {
       "attackPatterns": {
@@ -1812,9 +3158,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["red", "pink", "white", "gray"],
       "location": "Pomore Garden",
-      "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with an **Astalos** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1822,6 +3195,7 @@
     "name": "Lagiacrus",
     "genus": "Leviathan",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Ivory Lagiacrus" }],
     "monster": {
@@ -1841,9 +3215,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "red"],
       "location": "Pomore Garden",
-      "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1851,6 +3252,7 @@
     "name": "Uragaan",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 4,
     "monster": {
       "attackPatterns": {
@@ -1870,9 +3272,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "brown", "orange"],
       "location": "Terga Volcano Base",
-      "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate."
+      "retreat": "**Defeat** while it is **poisoned** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1880,6 +3309,7 @@
     "name": "Daimyo Hermitaur",
     "genus": "Carapaceon",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspecies", "monster": "Plum Daimyo Hermitaur" }],
     "monster": {
@@ -1903,6 +3333,7 @@
     "name": "Plum Daimyo Hermitaur",
     "genus": "Carapaceon",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspeciesOf", "monster": "Daimyo Hermitaur" }],
     "monster": {
@@ -1926,6 +3357,7 @@
     "name": "Brute Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Tigrex" }],
     "monster": {
@@ -1943,9 +3375,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "brown"],
       "location": "Sadona Barrens",
-      "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate."
+      "retreat": "Break the **head** with a **sword & shield** after it steps on a **Shock Trap** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1953,6 +3412,7 @@
     "name": "Purple Ludroth",
     "genus": "Leviathan",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Royal Ludroth" }],
     "monster": {
@@ -1970,9 +3430,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "white"],
       "location": "Sadona Barrens",
-      "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate."
+      "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -1980,6 +3467,7 @@
     "name": "Ruby Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Basarios" }],
     "monster": {
@@ -2000,9 +3488,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "pink"],
       "location": "Pomore Garden",
-      "retreat": "Break **each part** to boost the retreat rate."
+      "retreat": "Break **each part** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2010,6 +3525,7 @@
     "name": "Gravios",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Black Gravios" }],
     "monster": {
@@ -2029,9 +3545,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "gray", "orange"],
       "location": "Terga Volcano Base",
-      "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
+      "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2039,6 +3582,7 @@
     "name": "Altaroth",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2055,6 +3599,7 @@
     "name": "Great Thunderbug",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2071,6 +3616,7 @@
     "name": "Konchu (Green)",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Konchu (Yellow)" },
@@ -2092,6 +3638,7 @@
     "name": "Shakalaka",
     "genus": "Lynian",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2108,6 +3655,7 @@
     "name": "Desert Seltas Queen",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspeciesOf", "monster": "Seltas Queen" }],
     "monster": {
@@ -2129,6 +3677,7 @@
     "name": "Green Plesioth",
     "genus": "Piscine Wyvern",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspeciesOf", "monster": "Plesioth" }],
     "monster": {
@@ -2150,6 +3699,7 @@
     "name": "Shrouded Nerscylla",
     "genus": "Temnoceran",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Nerscylla" }],
     "monster": {
@@ -2170,9 +3720,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["white", "gray", "yellow"],
       "location": "Terga Volcano Base",
-      "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate."
+      "retreat": "Break the **needles** with an **ice element** **bow** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2180,6 +3757,7 @@
     "name": "Emerald Congalala",
     "genus": "Fanged Beast",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Congalala" }],
     "monster": {
@@ -2198,9 +3776,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow"],
       "location": "Terga Volcano Base",
-      "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate."
+      "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2208,6 +3813,7 @@
     "name": "Agnaktor",
     "genus": "Leviathan",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2228,6 +3834,7 @@
     "name": "Black Gravios",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Gravios" }],
     "monster": {
@@ -2247,9 +3854,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["gray", "orange"],
       "location": "Terga Volcano Base",
-      "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate."
+      "retreat": "Break **each part** with a **Big Barrel Bomb** to boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2257,6 +3891,7 @@
     "name": "Ivory Lagiacrus",
     "genus": "Leviathan",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Lagiacrus" }],
     "monster": {
@@ -2276,9 +3911,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "blue"],
       "location": "Terga Volcano Base",
-      "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2286,6 +3948,7 @@
     "name": "Brachydios",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 6,
     "monster": {
       "attackPatterns": {
@@ -2304,9 +3967,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "green"],
       "location": "Terga Volcano Base",
-      "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate."
+      "retreat": "Break its **fist** with a **water element** **hammer** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2314,6 +4004,7 @@
     "name": "Nergigante",
     "genus": "Elder Dragon",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 7,
     "monster": {
       "attackPatterns": {
@@ -2334,9 +4025,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "black"],
       "location": "Terga Volcano Base",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2344,6 +4062,7 @@
     "name": "Astalos",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
+    "locations": [],
     "rarity": 5,
     "monster": {
       "attackPatterns": {
@@ -2363,9 +4082,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "black"],
       "location": "Terga Volcano Base",
-      "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Gammoth** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2373,6 +4119,7 @@
     "name": "Glavenus",
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
+    "locations": [],
     "rarity": 5,
     "monster": {
       "attackPatterns": {
@@ -2390,9 +4137,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "red"],
       "location": "Alcala Valley",
-      "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2400,6 +4174,7 @@
     "name": "Glacial Agnaktor",
     "genus": "Leviathan",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [{ "type": "subspeciesOf", "monster": "Agnaktor" }],
     "monster": {
@@ -2425,6 +4200,7 @@
     "name": "Bazelgeuse",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 6,
     "monster": {
       "attackPatterns": {
@@ -2443,9 +4219,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["gray", "white", "black"],
       "location": "Forbidden Grounds",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2453,6 +4256,7 @@
     "name": "Remobra",
     "genus": "Snake Wyvern",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2469,6 +4273,7 @@
     "name": "Great Dracophage Bug",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2485,6 +4290,7 @@
     "name": "Bnahabra (Red)",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Bnahabra (Blue)" },
@@ -2506,6 +4312,7 @@
     "name": "Vespoid",
     "genus": "Neopteron",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2522,6 +4329,7 @@
     "name": "Sand Barioth",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Barioth" }],
     "monster": {
@@ -2540,9 +4348,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "red", "pink"],
       "location": "Forbidden Grounds",
-      "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate."
+      "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2550,6 +4385,7 @@
     "name": "Deviljho",
     "genus": "Brute Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 6,
     "monster": {
       "attackPatterns": {
@@ -2567,9 +4403,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "orange"],
       "location": "Forbidden Grounds",
-      "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2577,6 +4440,7 @@
     "name": "Stygian Zinogre",
     "genus": "Fanged Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Zinogre" }],
     "monster": {
@@ -2595,9 +4459,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "yellow", "white"],
       "location": "Forbidden Grounds",
-      "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2605,6 +4496,7 @@
     "name": "Seregios",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 6,
     "monster": {
       "attackPatterns": {
@@ -2623,9 +4515,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "orange", "red"],
       "location": "Forbidden Grounds",
-      "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate."
+      "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2633,6 +4552,7 @@
     "name": "Barrel Felyne",
     "genus": "Lynian",
     "habitat": "?",
+    "locations": [],
     "rarity": "?",
     "monster": {
       "elementalWeakness": "none"
@@ -2643,6 +4563,7 @@
     "name": "Rathalos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Azure Rathalos" }],
     "monster": {
@@ -2662,9 +4583,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["red", "blue"],
       "location": "North Kamuna Cape",
-      "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2672,6 +4620,7 @@
     "name": "Azure Rathalos",
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
+    "locations": [],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Rathalos" }],
     "monster": {
@@ -2691,9 +4640,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue"],
       "location": "North Kamuna Cape",
-      "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2701,6 +4677,7 @@
     "name": "Pink Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Rathian" }],
     "monster": {
@@ -2717,9 +4694,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["pink", "red"],
       "location": "Pomore Garden",
-      "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate."
+      "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2727,6 +4731,7 @@
     "name": "Fulgur Anjanath",
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
+    "locations": [],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Anjanath" }],
     "monster": {
@@ -2745,9 +4750,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["gray", "white", "orange"],
       "location": "Base of Mt. Lavina",
-      "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate."
+      "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2755,6 +4787,7 @@
     "name": "Silverwind Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Jungle"],
     "tags": ["deviant"],
@@ -2774,9 +4807,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["white", "blue"],
       "location": "East Kamuna Heights",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2784,6 +4844,7 @@
     "name": "Thunderlord Zinogre",
     "genus": "Fanged Wyvern",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Snowy Mt."],
     "tags": ["deviant"],
@@ -2805,9 +4866,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "yellow", "orange"],
       "location": "Loloska Rocky Canyon",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2815,6 +4903,7 @@
     "name": "Bloodbath Diablos",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Desert", "Flowery"],
     "tags": ["deviant"],
@@ -2835,9 +4924,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "blue"],
       "location": "Jalma Highlands",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2845,6 +4961,7 @@
     "name": "Grimclaw Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Woodland"],
     "tags": ["deviant"],
@@ -2864,9 +4981,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "blue"],
       "location": "Alcala Valley",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2874,6 +5018,7 @@
     "name": "Dreadqueen Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Volcanic"],
     "tags": ["deviant"],
@@ -2894,9 +5039,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["green", "purple", "black"],
       "location": "Terga Volcano Base",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2904,6 +5076,7 @@
     "name": "Kirin",
     "genus": "Elder Dragon",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Jungle", "Desert", "Flowery"],
     "monster": {
@@ -2920,9 +5093,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "white"],
       "location": "Pomore Garden",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2930,6 +5130,7 @@
     "name": "Teostra",
     "genus": "Elder Dragon",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Jungle", "Volcanic"],
     "monster": {
@@ -2949,9 +5150,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["red", "purple"],
       "location": "Terga Volcano Base",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2959,6 +5187,7 @@
     "name": "Rajang",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 6,
     "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
@@ -2980,9 +5209,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["brown"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -2990,6 +5246,7 @@
     "name": "Kushala Daora",
     "genus": "Elder Dragon",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Woodland", "Desert", "Flowery"],
     "monster": {
@@ -3009,9 +5266,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["orange", "brown", "black"],
       "location": "Etulle Lofty Trees",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -3019,6 +5303,7 @@
     "name": "Velkhana",
     "genus": "Elder Dragon",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 7,
     "dens": ["Snowy Mt.", "Volcanic"],
     "monster": {
@@ -3039,9 +5324,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["blue", "white", "gray"],
       "location": "Base of Mt. Lavina",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   // TOOD check palmute info
@@ -3050,6 +5362,7 @@
     "name": "Palamute (Normal)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -3068,9 +5381,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "blue"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -3078,6 +5418,7 @@
     "name": "Palamute (Fire)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -3096,9 +5437,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "red"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -3106,6 +5474,7 @@
     "name": "Palamute (Water)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -3124,9 +5493,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "blue"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -3134,6 +5530,7 @@
     "name": "Palamute (Thunder)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -3152,9 +5549,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "green"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -3162,6 +5586,7 @@
     "name": "Palamute (Ice)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -3180,9 +5605,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "blue"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   },
   {
@@ -3190,6 +5642,7 @@
     "name": "Palamute (Dragon)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
+    "locations": [],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -3208,9 +5661,36 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
+      "growth": "?",
+      "ridingActions": [],
+      "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "red"],
       "location": "?",
-      "retreat": "This monster **cannot** be chased back to its den."
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
     }
   }
 ]
