@@ -52,7 +52,7 @@
           <NuxtLink
             v-for="monster in group"
             :key="monster.no"
-            :to="`/monsters/${monster.slug}`"
+            :to="`/monsters/${monster.slug}/`"
           >
             <MonsterCard
               :monster="monster"
@@ -90,6 +90,7 @@
   import { mapStores } from 'pinia';
   import { makeMonsterFilterStore } from '~/services/stores';
   import { monsters } from '~/services/data';
+  import { makeHead } from '~/services/utils';
 
   const useMonsterFilter = makeMonsterFilterStore('monsterFilter', monsters, {
     sortKey: 'no',
@@ -108,16 +109,13 @@
       };
     },
 
-    head: {
-      title: 'Monster Buddy - Monster List For Monster Hunter Stories 2',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
-        },
-      ],
+    head() {
+      return makeHead({
+        title: 'Monster Buddy - Monster List For Monster Hunter Stories 2',
+        description:
+          'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
+        canonical: 'https://monsterbuddy.app/monsters/',
+      });
     },
 
     computed: {

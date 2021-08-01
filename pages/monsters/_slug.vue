@@ -18,7 +18,10 @@
 
       <div v-text="monster.rarity" />
 
-      <MonsterImage :monster="monster" />
+      <MonsterImage
+        :monster="monster"
+        hideFallback
+      />
       <MonsterIcon :monster="monster" />
     </div>
 
@@ -52,7 +55,11 @@
 
 <script>
   import { monstersBySlug } from '~/services/data';
-  import { formatMonsterInfo, formatMonsterLocations } from '~/services/utils';
+  import {
+    makeHead,
+    formatMonsterInfo,
+    formatMonsterLocations,
+  } from '~/services/utils';
 
   export default {
     name: 'PageMonsterDetails',
@@ -61,6 +68,16 @@
       return {
         monster: monstersBySlug[this.$route.params.slug],
       };
+    },
+
+    head() {
+      return makeHead({
+        title: `Monster Buddy - ${this.monster.name} Details In Monster Hunter Stories 2`,
+        description: `${this.monster.name} is a ${this.monster.rarity} star rarity ${this.monster.genus} found in ${this.monster.habitat}.`,
+        canonical: `https://monsterbuddy.app/monsters/${this.monster.slug}/`,
+        image: `https://monsterbuddy.app/images/monsters-small/${this.monster.name}.webp`,
+        imageAlt: this.monster.name,
+      });
     },
 
     computed: {

@@ -86,6 +86,7 @@
   import { mapStores } from 'pinia';
   import { makeMonsterFilterStore } from '~/services/stores';
   import { monsties } from '~/services/data';
+  import { makeHead } from '~/services/utils';
 
   const useEggFilter = makeMonsterFilterStore('eggFilter', monsties, {
     sortKey: 'no',
@@ -104,16 +105,13 @@
       };
     },
 
-    head: {
-      title: 'Monster Buddy - Egg List For Monster Hunter Stories 2',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
-        },
-      ],
+    head() {
+      return makeHead({
+        title: 'Monster Buddy - Egg List For Monster Hunter Stories 2',
+        description:
+          'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
+        canonical: 'https://monsterbuddy.app/eggs/',
+      });
     },
 
     computed: {

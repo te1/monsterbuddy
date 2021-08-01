@@ -128,3 +128,90 @@ export function formatElement(element) {
       return 'Unknown';
   }
 }
+
+export function makeHead(config = {}) {
+  let result = {
+    meta: [],
+    link: [],
+  };
+
+  if (config.title) {
+    result.title = config.title;
+
+    result.meta.push({
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: config.title,
+    });
+
+    result.meta.push({
+      hid: 'og:title',
+      name: 'og:title',
+      content: config.title,
+    });
+  }
+
+  if (config.description) {
+    result.meta.push({
+      hid: 'description',
+      name: 'description',
+      content: config.description,
+    });
+
+    result.meta.push({
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: config.description,
+    });
+
+    result.meta.push({
+      hid: 'og:description',
+      name: 'og:description',
+      content: config.description,
+    });
+  }
+
+  if (config.canonical) {
+    result.link.push({
+      hid: 'canonical',
+      rel: 'canonical',
+      href: config.canonical,
+    });
+  }
+
+  if (config.image) {
+    result.meta.push({
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: config.image,
+    });
+
+    result.meta.push({
+      hid: 'og:image',
+      name: 'og:image',
+      content: config.image,
+    });
+
+    result.meta.push({
+      hid: 'og:image:secure_url',
+      name: 'og:image:secure_url',
+      content: config.image,
+    });
+  }
+
+  if (config.imageAlt) {
+    result.meta.push({
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: config.imageAlt,
+    });
+
+    result.meta.push({
+      hid: 'og:image:alt',
+      name: 'og:image:alt',
+      content: config.imageAlt,
+    });
+  }
+
+  return result;
+}

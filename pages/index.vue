@@ -293,7 +293,15 @@
 </template>
 
 <script>
+  import { makeHead } from '~/services/utils';
+
   export default {
     name: 'PageIndex',
+
+    head() {
+      return makeHead({
+        canonical: 'https://monsterbuddy.app',
+      });
+    },
   };
 </script>

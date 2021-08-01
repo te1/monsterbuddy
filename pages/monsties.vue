@@ -81,6 +81,7 @@
   import { mapStores } from 'pinia';
   import { makeMonsterFilterStore } from '~/services/stores';
   import { monsties } from '~/services/data';
+  import { makeHead } from '~/services/utils';
 
   const useMonstieFilter = makeMonsterFilterStore('monstieFilter', monsties, {
     sortKey: 'no',
@@ -99,16 +100,13 @@
       };
     },
 
-    head: {
-      title: 'Monster Buddy - Monstie List For Monster Hunter Stories 2',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Easily find all monsties in their natural habitats and check on retreat conditions and their attack types',
-        },
-      ],
+    head() {
+      return makeHead({
+        title: 'Monster Buddy - Monstie List For Monster Hunter Stories 2',
+        description:
+          'Easily find all monsties in their natural habitats and check on retreat conditions and their attack types',
+        canonical: 'https://monsterbuddy.app/monsties/',
+      });
     },
 
     computed: {
