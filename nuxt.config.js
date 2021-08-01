@@ -103,7 +103,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     icon: {
-      cacheDir: '.cache/pwa/icon',
+      cacheDir: '.cache/pwa/icon2',
     },
 
     manifest: {
