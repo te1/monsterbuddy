@@ -4,6 +4,7 @@
       <AppNavLink
         to="/"
         text="Start"
+        exact
       />
 
       <AppNavLink
