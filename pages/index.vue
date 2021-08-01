@@ -79,10 +79,12 @@
             class="link"
             href="https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki"
             target="_blank"
+            rel="noopener"
           >Monster Hunter Wiki</a> (shout-out to <a
             class="link"
             href="https://monsterhunter.fandom.com/wiki/User:YukiHerz"
             target="_blank"
+            rel="noopener"
           >YukiHerz</a>)
         </li>
 
@@ -91,10 +93,12 @@
             class="link"
             href="https://mhst.kiranico.com/mhs2"
             target="_blank"
+            rel="noopener"
           >MHStories 2</a> by <a
             class="link"
             href="https://twitter.com/kiranico_db"
             target="_blank"
+            rel="noopener"
           >Kiranico</a>
         </li>
 
@@ -103,6 +107,7 @@
             class="link"
             href="https://docs.google.com/spreadsheets/d/1QzM9X34IfACPtRa_yWq2BZUidWJqs0l2K_Gs2023bO0"
             target="_blank"
+            rel="noopener"
           >MHStories 2 data</a> by iSharingan
         </li>
 
@@ -111,10 +116,12 @@
             class="link"
             href="https://www.youtube.com/watch?v=Ss3Mgqe9dTo"
             target="_blank"
+            rel="noopener"
           >ULTIMATE CHEAT SHEET! Deviant &amp; Elder Dragon Farm Notes Monster Hunter Stories 2</a> by <a
             class="link"
             href="https://www.youtube.com/channel/UCDjnmVdkM0tGprGlKo4LY3Q"
             target="_blank"
+            rel="noopener"
           >Paradise Central</a>
         </li>
 
@@ -123,10 +130,12 @@
             class="link"
             href="https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o"
             target="_blank"
+            rel="noopener"
           >Type Usage</a> by <a
             class="link"
             href="https://www.reddit.com/user/The_Weasel_King"
             target="_blank"
+            rel="noopener"
           >The_Weasel_King</a>
         </li>
 
@@ -135,10 +144,12 @@
             class="link"
             href="https://www.reddit.com/r/MonsterHunterStories/comments/oo8fpi/monster_attacktype_chart"
             target="_blank"
+            rel="noopener"
           >Monster Attack-Type Chart</a> by <a
             class="link"
             href="https://www.reddit.com/user/RPGwannabe"
             target="_blank"
+            rel="noopener"
           >RPGwannabe</a>
         </li>
 
@@ -147,10 +158,12 @@
             class="link"
             href="https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o"
             target="_blank"
+            rel="noopener"
           >MH Stories 2 : Attack Types, Weakness &amp; Eggs</a> by <a
             class="link"
             href="https://www.reddit.com/user/Criwok"
             target="_blank"
+            rel="noopener"
           >Criwok</a>
         </li>
 
@@ -159,10 +172,12 @@
             class="link"
             href="https://www.kurimucardgame.com/mhs2-monster-weakness-en"
             target="_blank"
+            rel="noopener"
           >Monster Hunter Stories 2 Full Picture Monster’s weaknesses</a> by <a
             class="link"
             href="https://www.kurimucardgame.com"
             target="_blank"
+            rel="noopener"
           >Kurimu</a>
         </li>
 
@@ -171,10 +186,12 @@
             class="link"
             href="https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4"
             target="_blank"
+            rel="noopener"
           >MHS2</a> by <a
             class="link"
             href="https://www.reddit.com/user/dorgesilas"
             target="_blank"
+            rel="noopener"
           >dorgesilas</a>
         </li>
       </ul>
@@ -189,10 +206,12 @@
             class="link"
             href="http://tactools.net/MHS2/Monstie/Builder"
             target="_blank"
+            rel="noopener"
           >Monstie Gene Builder/Planning tool</a> by <a
             class="link"
             href="https://www.reddit.com/user/booclarke"
             target="_blank"
+            rel="noopener"
           >booclarke</a>
         </li>
 
@@ -201,10 +220,12 @@
             class="link"
             href="https://docs.google.com/spreadsheets/d/1O1SZ_p9EFBmu7O9WbmvHISE82ZqVHWWV95vHRHZ3r1M"
             target="_blank"
+            rel="noopener"
           >All-in-one spreadsheet</a> by <a
             class="link"
             href="https://www.reddit.com/user/aericee"
             target="_blank"
+            rel="noopener"
           >Riikapii</a>
         </li>
 
@@ -217,6 +238,7 @@
                 class="link"
                 href="https://www.youtube.com/channel/UCDjnmVdkM0tGprGlKo4LY3Q"
                 target="_blank"
+                rel="noopener"
               >Paradise Central</a>
             </li>
 
@@ -225,6 +247,7 @@
                 class="link"
                 href="https://www.youtube.com/channel/UCmX7voYVvCB0flpoltNlnhg"
                 target="_blank"
+                rel="noopener"
               >TwoSixNine</a>
             </li>
 
@@ -233,6 +256,7 @@
                 class="link"
                 href="https://www.youtube.com/c/ArekkzGaming"
                 target="_blank"
+                rel="noopener"
               >Arekkz Gaming</a>
             </li>
 
@@ -241,6 +265,7 @@
                 class="link"
                 href="https://www.youtube.com/channel/UCXe5uvP9kHKRG1LTMYDiscQ"
                 target="_blank"
+                rel="noopener"
               >Poogie Boogie</a>
             </li>
 
@@ -249,6 +274,7 @@
                 class="link"
                 href="https://www.youtube.com/c/RageGamingVideosReal"
                 target="_blank"
+                rel="noopener"
               >RageGamingVideos</a>
             </li>
           </ul>
