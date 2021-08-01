@@ -439,11 +439,14 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 13,
     "name": "Apceros",
     "genus": "Herbivore",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -461,7 +464,6 @@
       "ridingActions": [],
       "kinshipSkill": "?",
       "eggColors": ["orange", "yellow"],
-      "location": "Alcala Highlands",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
@@ -494,8 +496,8 @@
     "name": "Slagtoth (Green)",
     "genus": "Herbivore",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "rarity": 1,
     "related": [{ "type": "color", "monster": "Slagtoth (Brown)" }],
     "monster": {
       "attackPatterns": {
@@ -512,8 +514,8 @@
     "name": "Gargwa",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed"
@@ -529,8 +531,8 @@
     "name": "Jaggi",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed"
@@ -546,8 +548,8 @@
     "name": "Jaggia",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power"
@@ -559,11 +561,14 @@
     }
   },
   {
+    // TODO hatch
     "no": 18,
     "name": "Great Jaggi",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -582,7 +587,6 @@
       "ridingActions": [],
       "kinshipSkill": "?",
       "eggColors": ["purple", "red"],
-      "location": "Alcala Highlands",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
@@ -615,8 +619,8 @@
     "name": "Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power"
@@ -632,7 +636,7 @@
     "name": "Royal Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Ludroth" }],
     "monster": {
@@ -650,34 +654,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Swim"],
+      "kinshipSkill": "Moonsault Splash",
       "eggColors": ["green", "yellow"],
-      "location": "Alcala Valley",
       "retreat": "Break the **stomach** with a **slash-type weapon** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 5,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 4,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 4,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -687,8 +690,10 @@
     "name": "Tetsucabra",
     "genus": "Amphibian",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
+    ],
+    "rarity": 2,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power"
@@ -705,7 +710,9 @@
     "name": "Arzuros",
     "genus": "Fanged Beast",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -722,34 +729,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Honey Search", "Rock Breaker"],
+      "kinshipSkill": "Hunter's Claw",
       "eggColors": ["blue", "green"],
-      "location": "Alcala Highlands",
       "retreat": "Frighten it with a **Sonic Bomb** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 4,
+          "recovery": 5,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -759,7 +765,9 @@
     "name": "Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Etulle Lofty Trees" }
+    ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Crimson Qurupeco" }],
     "monster": {
@@ -777,34 +785,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Monster Search"],
+      "kinshipSkill": "Barrel Bomb Storm",
       "eggColors": ["green", "purple"],
-      "location": "Etulle Lofty Trees",
       "retreat": "Break the **head** with a **blunt-type weapon** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 5,
+          "recovery": 8,
+          "critRate": 6
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 4,
+          "water": 3,
+          "thunder": 3,
+          "ice": 2,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 5,
+          "water": 3,
+          "thunder": 3,
+          "ice": 2,
+          "dragon": 3
         }
       }
     }
@@ -814,7 +821,7 @@
     "name": "Blue Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Yian Kut-Ku" }],
     "monster": {
@@ -831,44 +838,46 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Monster Search", "Rock Breaker"],
+      "kinshipSkill": "Fireball Expulsion",
       "eggColors": ["green", "yellow"],
-      "location": "Alcala Valley",
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 3,
+          "speed": 5,
+          "recovery": 3,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 5,
+          "water": 2,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 4,
+          "water": 2,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
   },
   {
+    // TODO defeat, hatch
     "no": 25,
     "name": "Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Harzgai Hill - Inner" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Brute Tigrex" },
@@ -893,7 +902,6 @@
       "ridingActions": [],
       "kinshipSkill": "?",
       "eggColors": ["orange", "blue"],
-      "location": "Harzgai Hill - Inner",
       "retreat": "Break the **head** with a **great sword** after it steps on a **Shock Trap** to greatly boost the retreat rate.",
       "stats": {
         "base": {
@@ -922,11 +930,14 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 26,
     "name": "Monoblos",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Harzgai Hill - Inner" }
+    ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "White Monoblos" }],
     "monster": {
@@ -950,7 +961,6 @@
       "ridingActions": [],
       "kinshipSkill": "?",
       "eggColors": ["orange"],
-      "location": "Harzgai Hill - Inner",
       "retreat": "**Defeat** using a **sword & shield** while it is **paralyzed** to greatly boost the retreat rate.",
       "stats": {
         "base": {
@@ -983,7 +993,7 @@
     "name": "Paolumu",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "Wendwood" }],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -1000,44 +1010,46 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Fly"],
+      "kinshipSkill": "Jet Balloon",
       "eggColors": ["yellow", "white", "pink"],
-      "location": "Wendwood",
       "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 8,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 3,
+          "water": 4,
+          "thunder": 4,
+          "ice": 4,
+          "dragon": 4
         }
       }
     }
   },
   {
+    // TODO hatch
     "no": 28,
     "name": "Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
+    ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ruby Basarios" }],
     "monster": {
@@ -1062,7 +1074,6 @@
       "ridingActions": [],
       "kinshipSkill": "?",
       "eggColors": ["yellow", "brown"],
-      "location": "Harzgai Rocky Hill",
       "retreat": "Break **each part** to boost the retreat rate",
       "stats": {
         "base": {
@@ -1095,7 +1106,7 @@
     "name": "Yian Garuga",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [],
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -1112,34 +1123,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Fly"],
+      "kinshipSkill": "Barrel Charge",
       "eggColors": ["purple", "pink"],
-      "location": "Alcala Valley",
       "retreat": "Break the **head** when it is **enraged** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 6,
+          "recovery": 3,
+          "critRate": 7
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 6,
+          "water": 3,
+          "thunder": 4,
+          "ice": 4,
+          "dragon": 4
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 6,
+          "water": 3,
+          "thunder": 4,
+          "ice": 4,
+          "dragon": 4
         }
       }
     }
@@ -1149,8 +1159,8 @@
     "name": "Duramboros",
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
-    "locations": [],
-    "rarity": "?",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "Wendwood" }],
+    "rarity": 3,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
