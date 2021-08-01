@@ -54,11 +54,27 @@ export function formatMonsterInfo(monster) {
   return result;
 }
 
-export function formatMonsterLocation(monster) {
+export function formatMonsterPrimaryLocation(monster) {
   if (monster.locations?.length) {
     return monster.locations[0].sub;
   }
   return '-';
+}
+
+export function formatMonsterLocation(location) {
+  let result = location.main;
+
+  if (location.sub) {
+    result += ` - ${location.sub}`;
+  }
+
+  return result;
+}
+
+export function formatMonsterLocations(monster) {
+  return _.map(monster.locations, (location) =>
+    formatMonsterLocation(location)
+  );
 }
 
 export function formatMonsterDens(monster) {

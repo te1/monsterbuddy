@@ -40,7 +40,10 @@
 </template>
 
 <script>
-  import { formatMonsterInfo, formatMonsterLocation } from '~/services/utils';
+  import {
+    formatMonsterInfo,
+    formatMonsterPrimaryLocation,
+  } from '~/services/utils';
 
   export default {
     name: 'MonsterCard',
@@ -58,7 +61,7 @@
       },
 
       location() {
-        return formatMonsterLocation(this.monster);
+        return formatMonsterPrimaryLocation(this.monster);
       },
 
       hasLocation() {
