@@ -54,7 +54,7 @@
 </template>
 
 <script>
-  import { monstersBySlug } from '~/services/data';
+  import { monstersBySlug, isDeviant } from '~/services/data';
   import {
     makeHead,
     formatMonsterInfo,
@@ -71,9 +71,21 @@
     },
 
     head() {
+      let description = `${this.monster.name} is a ${this.monster.rarity} star rarity `;
+
+      if (this.monster.hatchable) {
+        description += ' hatchable ';
+      }
+
+      if (isDeviant(this.monster)) {
+        description += ' Deviant ';
+      }
+
+      description += `${this.monster.genus} found in ${this.monster.habitat}.`;
+
       return makeHead({
         title: `Monster Buddy - ${this.monster.name} Details In Monster Hunter Stories 2`,
-        description: `${this.monster.name} is a ${this.monster.rarity} star rarity ${this.monster.genus} found in ${this.monster.habitat}.`,
+        description,
         canonical: `https://monsterbuddy.app/monsters/${this.monster.slug}/`,
         image: `https://monsterbuddy.app/images/monsters-small/${this.monster.name}.webp`,
         imageAlt: this.monster.name,
