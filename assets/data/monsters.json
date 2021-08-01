@@ -4,7 +4,9 @@
     "name": "Aptonoth",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -18,34 +20,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Plant Search"],
+      "kinshipSkill": "Slip 'n Slam",
       "eggColors": ["green", "brown", "gray"],
-      "location": "North Kamuna Cape",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 3,
+          "recovery": 5,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 1,
+          "water": 2,
+          "thunder": 2,
+          "ice": 2,
+          "dragon": 2
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -55,8 +56,10 @@
     "name": "Larinoth",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
-    "locations": [],
-    "rarity": "?",
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical"
@@ -72,8 +75,10 @@
     "name": "Kelbi",
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
-    "locations": [],
-    "rarity": 2,
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
+    "rarity": 1,
     "monster": {}
   },
   {
@@ -81,8 +86,10 @@
     "name": "Velociprey",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
-    "locations": [],
-    "rarity": "?",
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed"
@@ -98,7 +105,9 @@
     "name": "Velocidrome",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -113,34 +122,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Jump"],
+      "kinshipSkill": "Velocirush",
       "eggColors": ["blue", "orange"],
-      "location": "North Kamuna Cape",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 3,
+          "speed": 6,
+          "recovery": 1,
+          "critRate": 7
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 4,
+          "thunder": 4,
+          "ice": 3,
+          "dragon": 4
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 2,
+          "thunder": 2,
+          "ice": 1,
+          "dragon": 2
         }
       }
     }
@@ -150,7 +158,9 @@
     "name": "Kulu-Ya-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -166,34 +176,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Nest Search"],
+      "kinshipSkill": "Eggsplosion",
       "eggColors": ["yellow", "white", "orange"],
-      "location": "North Kamuna Cape",
       "retreat": "Break the **rocks** with a **blunt-type weapon** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 3,
+          "speed": 4,
+          "recovery": 3,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 3,
+          "water": 2,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 3,
+          "water": 2,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -203,8 +212,10 @@
     "name": "Bnahabra (Blue)",
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
-    "locations": [],
-    "rarity": "?",
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
+    "rarity": 1,
     "related": [
       { "type": "color", "monster": "Bnahabra (Green)" },
       { "type": "color", "monster": "Bnahabra (Brown)" },
@@ -225,8 +236,10 @@
     "name": "Konchu (Yellow)",
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
-    "locations": [],
-    "rarity": "?",
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
+    "rarity": 1,
     "related": [
       { "type": "color", "monster": "Konchu (Blue)" },
       { "type": "color", "monster": "Konchu (Red)" },
@@ -247,7 +260,9 @@
     "name": "Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Blue Yian Kut-Ku" }],
     "monster": {
@@ -264,34 +279,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Monster Search", "Rock Breaker"],
+      "kinshipSkill": "Fireball Expulsion",
       "eggColors": ["pink", "blue"],
-      "location": "North Kamuna Cape",
       "retreat": "Break the **head** with a **pierce-type weapon** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 3,
+          "speed": 5,
+          "recovery": 3,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 4,
+          "water": 3,
+          "thunder": 3,
+          "ice": 2,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 4,
+          "water": 3,
+          "thunder": 3,
+          "ice": 2,
+          "dragon": 3
         }
       }
     }
@@ -301,8 +315,10 @@
     "name": "Bullfango",
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
-    "locations": [],
-    "rarity": "?",
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power"
@@ -318,7 +334,9 @@
     "name": "Bulldrome",
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -333,34 +351,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Dash"],
+      "kinshipSkill": "Wild Ride",
       "eggColors": ["brown"],
-      "location": "North Kamuna Cape",
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 4,
+          "recovery": 1,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 7,
+          "fire": 5,
+          "water": 5,
+          "thunder": 3,
+          "ice": 5,
+          "dragon": 5
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 1,
+          "fire": 0,
+          "water": 0,
+          "thunder": 0,
+          "ice": 0,
+          "dragon": 0
         }
       }
     }
@@ -370,7 +387,9 @@
     "name": "Pukei-Pukei",
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
-    "locations": [],
+    "locations": [
+      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -388,34 +407,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Roar"],
+      "kinshipSkill": "Venom Surprise",
       "eggColors": ["green", "yellow", "white"],
-      "location": "North Kamuna Cape",
       "retreat": "Break the **tail** with a **slash-type weapon** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 1,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 4,
+          "thunder": 3,
+          "ice": 4,
+          "dragon": 4
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 3,
+          "water": 3,
+          "thunder": 2,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
