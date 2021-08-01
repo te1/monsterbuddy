@@ -49,12 +49,16 @@
         </div>
 
         <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <MonsterCard
+          <NuxtLink
             v-for="monster in group"
             :key="monster.no"
-            :monster="monster"
-            class="px-1 rounded shadow bg-white overflow-hidden"
-          />
+            :to="`/monsters/${monster.slug}`"
+          >
+            <MonsterCard
+              :monster="monster"
+              class="px-1 rounded shadow bg-white overflow-hidden"
+            />
+          </NuxtLink>
         </div>
       </li>
     </ul>
