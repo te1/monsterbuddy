@@ -15,32 +15,29 @@
 
     <MonsterFilter
       v-show="showFilter"
-      ref="monsterFilter"
       class="mb-2"
-      :monsters="monsters"
-      initialSortKey="no"
       showAttackTypeFilter
-      @updated="onFilterUpdated"
+      showAttackElementFilter
     />
 
     <ul>
       <li
-        v-for="(group, key) in groupedMonsters"
+        v-for="(group, key) in eggFilter.groupedMonsters"
         :key="key"
         class="mt-2 first:mt-0 "
       >
         <div
-          v-if="isGrouped"
+          v-if="eggFilter.isGrouped"
           class="flex items-center mb-1"
         >
           <FaIcon
-            v-if="sortKey === 'genus'"
+            v-if="eggFilter.sortKey === 'genus'"
             class="!w-6 text-gray-600"
             :icon="['fas', 'dna']"
           />
 
           <FaIcon
-            v-if="sortKey === 'habitat'"
+            v-if="eggFilter.sortKey === 'habitat'"
             class="!w-6 text-gray-600"
             :icon="['fas', 'map-marker-alt']"
           />
@@ -63,7 +60,7 @@
     </ul>
 
     <div
-      v-if="isEmpty"
+      v-if="eggFilter.isEmpty"
       class="flex flex-col items-center py-4 space-y-4 rounded shadow bg-white"
     >
       <span class="text-2xl text-gray-400 font-semibold">
@@ -77,7 +74,7 @@
 
       <button
         class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
-        @click="resetFilter"
+        @click="eggFilter.reset"
       >
         Reset filter
       </button>
@@ -86,18 +83,23 @@
 </template>
 
 <script>
+  import { mapStores } from 'pinia';
+  import { makeMonsterFilterStore } from '~/services/stores';
   import { monsties } from '~/services/data';
+
+  const useEggFilter = makeMonsterFilterStore('eggFilter', monsties, {
+    sortKey: 'no',
+  });
 
   export default {
     name: 'PageEggs',
 
+    provide: {
+      useFilterStore: useEggFilter,
+    },
+
     data() {
       return {
-        monsters: monsties,
-        groupedMonsters: { all: monsties },
-        isEmpty: false,
-        isGrouped: false,
-        sortKey: null,
         showFilter: false,
       };
     },
@@ -114,19 +116,8 @@
       ],
     },
 
-    methods: {
-      onFilterUpdated({ groupedMonsters, isEmpty, isGrouped, sortKey }) {
-        this.groupedMonsters = groupedMonsters;
-        this.isEmpty = isEmpty;
-        this.isGrouped = isGrouped;
-        this.sortKey = sortKey;
-      },
-
-      resetFilter() {
-        if (this.$refs.monsterFilter) {
-          this.$refs.monsterFilter.reset();
-        }
-      },
+    computed: {
+      ...mapStores(useEggFilter),
     },
   };
 </script>

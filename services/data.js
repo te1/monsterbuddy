@@ -7,6 +7,10 @@ _.forEach(monsters, (monster) => {
     .replace(/ /g, '-')
     .replace(/\(|\)/g, '')
     .toLowerCase();
+
+  if (monster.hatchable && monster.monstie) {
+    monster.monstie.attackElement = getMonstieAttackElement(monster);
+  }
 });
 
 deepFreeze(monsters);
@@ -49,6 +53,17 @@ export function getMonstiesByAttackType(attackType, monsterList = monsties) {
   return deepFreeze(
     _.filter(monsterList, (monster) => {
       return monster?.monstie?.attackType === attackType;
+    })
+  );
+}
+
+export function getMonstiesByAttackElement(
+  attackElement,
+  monsterList = monsties
+) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return monster?.monstie?.attackElement === attackElement;
     })
   );
 }
@@ -103,7 +118,7 @@ export function isElementalVariant(monster) {
   return isVariant(monster, 'element');
 }
 
-export function getMonstieAttackElement(monster) {
+function getMonstieAttackElement(monster) {
   let attack = monster?.monstie?.stats?.attack;
 
   attack = _.transform(

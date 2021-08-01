@@ -10,7 +10,7 @@
 
       <select
         id="MonsterFilter_SortKey"
-        v-model="sortKey"
+        v-model="store.sortKey"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option value="no">Number</option>
@@ -30,7 +30,7 @@
 
       <input
         id="MonsterFilter_NameFilter"
-        v-model="nameFilter"
+        v-model="store.nameFilter"
         type="text"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
@@ -46,13 +46,13 @@
 
       <select
         id="MonsterFilter_GenusFilter"
-        v-model="genusFilter"
+        v-model="store.genusFilter"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
 
         <option
-          v-for="genus in genera"
+          v-for="genus in store.allGenera"
           :key="genus"
           :value="genus"
         >
@@ -71,13 +71,13 @@
 
       <select
         id="MonsterFilter_HabitatFilter"
-        v-model="habitatFilter"
+        v-model="store.habitatFilter"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
 
         <option
-          v-for="habitat in habitats"
+          v-for="habitat in store.allHabitats"
           :key="habitat"
           :value="habitat"
         >
@@ -99,14 +99,44 @@
 
       <select
         id="MonsterFilter_AttackTypeFilter"
-        v-model="attackTypeFilter"
+        v-model="store.attackTypeFilter"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
 
-        <option value="power">Power</option>
-        <option value="speed">Speed</option>
-        <option value="technical">Technical</option>
+        <option
+          v-for="type in ['power', 'speed', 'technical']"
+          :key="type"
+          :value="type"
+          v-text="formatAttackType(type)"
+        />
+      </select>
+    </div>
+
+    <div
+      v-if="showAttackElementFilter"
+      class="flex items-center"
+    >
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_AttackElementFilter"
+      >
+        Attack element
+      </label>
+
+      <select
+        id="MonsterFilter_AttackElementFilter"
+        v-model="store.attackElementFilter"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
+      >
+        <option :value="null">All</option>
+
+        <option
+          v-for="element in ['none', 'fire', 'water', 'thunder', 'ice', 'dragon']"
+          :key="element"
+          :value="element"
+          v-text="formatElement(element)"
+        />
       </select>
     </div>
 
@@ -123,7 +153,7 @@
 
       <select
         id="MonsterFilter_Hatchable"
-        v-model="hatchableFilter"
+        v-model="store.hatchableFilter"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">All</option>
@@ -145,7 +175,7 @@
 
       <select
         id="MonsterFilter_Deviants"
-        v-model="deviantsFilter"
+        v-model="store.deviantsFilter"
         class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
       >
         <option :value="null">Include</option>
@@ -161,14 +191,14 @@
 
       <span
         class="w-[150px]"
-        v-text="resultCount"
+        v-text="store.resultCount"
       />
     </div>
 
     <div class="self-end">
       <button
         class="w-[150px] px-2 py-1 font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500"
-        @click="reset"
+        @click="store.reset"
       >
         Reset
       </button>
@@ -177,74 +207,21 @@
 </template>
 
 <script>
-  import _ from 'lodash';
-  import {
-    monsters,
-    getGenera,
-    getHabitats,
-    getMonstersByName,
-    getMonstersByGenus,
-    getMonstersByHabitat,
-    getMonstiesByAttackType,
-    getMonstersByHatchable,
-    getMonstersByIsDeviant,
-  } from '~/services/data';
+  import { formatAttackType, formatElement } from '~/services/utils';
 
   export default {
     name: 'MonsterFilter',
 
+    inject: ['useFilterStore'],
+
     props: {
-      monsters: {
-        type: Array,
-        required: false,
-        default() {
-          return monsters;
-        },
-      },
-
-      initialSortKey: {
-        type: String,
-        required: false,
-        default: null,
-      },
-
-      initialNameFilter: {
-        type: String,
-        required: false,
-        default: null,
-      },
-
-      initialGenusFilter: {
-        type: String,
-        required: false,
-        default: null,
-      },
-
-      initialHabitatFilter: {
-        type: String,
-        required: false,
-        default: null,
-      },
-
-      initialAttackTypeFilter: {
-        type: String,
-        required: false,
-        default: null,
-      },
-
-      initialHatchableFilter: {
-        type: Boolean,
-        required: false,
-        default: null,
-      },
-
-      initialDeviantsFilter: {
-        type: Boolean,
-        required: false,
-        default: null,
-      },
-
       showAttackTypeFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
+      showAttackElementFilter: {
         type: Boolean,
         required: false,
         default: false,
@@ -263,161 +240,15 @@
       },
     },
 
-    data() {
-      return {
-        sortKey: this.initialSortKey,
-        nameFilter: this.initialNameFilter,
-        genusFilter: this.initialGenusFilter,
-        habitatFilter: this.initialHabitatFilter,
-        attackTypeFilter: this.initialAttackTypeFilter,
-        hatchableFilter: this.initialHatchableFilter,
-        deviantsFilter: this.initialDeviantsFilter,
-      };
-    },
-
     computed: {
-      genera() {
-        return getGenera(this.monsters);
+      store() {
+        return this.useFilterStore();
       },
-
-      habitats() {
-        return getHabitats(this.monsters);
-      },
-
-      filteredMonsters() {
-        let result = this.monsters;
-
-        if (this.nameFilter != null) {
-          result = getMonstersByName(this.nameFilter, result);
-        }
-
-        if (this.genusFilter != null) {
-          result = getMonstersByGenus(this.genusFilter, result);
-        }
-
-        if (this.habitatFilter != null) {
-          result = getMonstersByHabitat(this.habitatFilter, result);
-        }
-
-        if (this.attackTypeFilter != null) {
-          result = getMonstiesByAttackType(this.attackTypeFilter, result);
-        }
-
-        if (this.hatchableFilter != null) {
-          result = getMonstersByHatchable(this.hatchableFilter, result);
-        }
-
-        if (this.deviantsFilter != null) {
-          result = getMonstersByIsDeviant(this.deviantsFilter, result);
-        }
-
-        return result;
-      },
-
-      sortedMonsters() {
-        let result = this.filteredMonsters;
-
-        switch (this.sortKey) {
-          case 'name':
-            return _.sortBy(result, 'name');
-
-          case 'genus':
-            return _.sortBy(result, 'genus');
-
-          case 'habitat':
-            return _.sortBy(result, 'habitat');
-
-          default:
-            return result;
-        }
-      },
-
-      groupedMonsters() {
-        let result = this.sortedMonsters;
-
-        switch (this.sortKey) {
-          case 'genus':
-            result = _.groupBy(result, 'genus');
-            break;
-
-          case 'habitat':
-            result = _.groupBy(result, 'habitat');
-            break;
-
-          default:
-            result = { all: result };
-            break;
-        }
-
-        return result;
-      },
-
-      resultCount() {
-        return this.sortedMonsters.length;
-      },
-
-      isEmpty() {
-        return !this.sortedMonsters.length;
-      },
-
-      isGrouped() {
-        return _.includes(['genus', 'habitat'], this.sortKey);
-      },
-
-      canReset() {
-        return (
-          this.sortKey !== this.initialSortKey &&
-          this.nameFilter !== this.initialNameFilter &&
-          this.genusFilter !== this.initialGenusFilter &&
-          this.habitatFilter !== this.initialHabitatFilter &&
-          this.attackTypeFilter !== this.initialAttackTypeFilter &&
-          this.hatchableFilter !== this.initilHatchableTypeFilter &&
-          this.deviantsFilter !== this.initialDeviantsFilter
-        );
-      },
-    },
-
-    watch: {
-      sortKey: 'update',
-      nameFilter: 'update',
-      genusFilter: 'update',
-      habitatFilter: 'update',
-      attackTypeFilter: 'update',
-      hatchableFilter: 'update',
-      deviantsFilter: 'update',
-    },
-
-    created() {
-      this.update();
     },
 
     methods: {
-      update() {
-        this.$emit('updated', {
-          groupedMonsters: this.groupedMonsters,
-          resultCount: this.resultCount,
-          isEmpty: this.isEmpty,
-          isGrouped: this.isGrouped,
-          sortKey: this.sortKey,
-          nameFilter: this.genusFilter,
-          genusFilter: this.genusFilter,
-          habitatFilter: this.habitatFilter,
-          attackTypeFilter: this.attackTypeFilter,
-          hatchableFilter: this.hatchableFilter,
-          deviantsFilter: this.deviantsFilter,
-          canReset: this.canReset,
-        });
-      },
-
-      reset() {
-        this.sortKey = this.initialSortKey;
-        this.nameFilter = this.initialNameFilter;
-        this.genusFilter = this.initialGenusFilter;
-        this.habitatFilter = this.initialHabitatFilter;
-        this.attackTypeFilter = this.initialAttackTypeFilter;
-        this.hatchableFilter = this.initialHatchableFilter;
-        this.deviantsFilter = this.initialDeviantsFilter;
-      },
+      formatAttackType,
+      formatElement,
     },
   };
 </script>

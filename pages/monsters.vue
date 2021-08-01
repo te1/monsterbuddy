@@ -1,5 +1,11 @@
 <template>
   <div>
+    <!-- <div class="fixed top-0 left-0 right-0 w-full 1h-12 z-10 shadow border-b border-gray-300 bg-white">
+      <div class="flex items-center container 1h-full px-4 py-3 text-sm">
+        <input type="text">
+      </div>
+    </div> -->
+
     <button
       class="mb-1 text-xl text-brand-500 hover:text-brand-400 active:text-gray-500"
       title="Sort and filter"
@@ -10,32 +16,28 @@
 
     <MonsterFilter
       v-show="showFilter"
-      ref="monsterFilter"
       class="mb-2"
-      :monsters="monsters"
-      initialSortKey="no"
       showHatchableFilter
-      @updated="onFilterUpdated"
     />
 
-    <ul>
+    <ul class="pt-4">
       <li
-        v-for="(group, key) in groupedMonsters"
+        v-for="(group, key) in monsterFilter.groupedMonsters"
         :key="key"
         class="mt-2 first:mt-0 "
       >
         <div
-          v-if="isGrouped"
+          v-if="monsterFilter.isGrouped"
           class="flex items-center mb-1"
         >
           <FaIcon
-            v-if="sortKey === 'genus'"
+            v-if="monsterFilter.sortKey === 'genus'"
             class="!w-6 text-gray-600"
             :icon="['fas', 'dna']"
           />
 
           <FaIcon
-            v-if="sortKey === 'habitat'"
+            v-if="monsterFilter.sortKey === 'habitat'"
             class="!w-6 text-gray-600"
             :icon="['fas', 'map-marker-alt']"
           />
@@ -58,7 +60,7 @@
     </ul>
 
     <div
-      v-if="isEmpty"
+      v-if="monsterFilter.isEmpty"
       class="flex flex-col items-center py-4 space-y-4 rounded shadow bg-white"
     >
       <span class="text-2xl text-gray-400 font-semibold">
@@ -72,7 +74,7 @@
 
       <button
         class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
-        @click="resetFilter"
+        @click="monsterFilter.reset"
       >
         Reset filter
       </button>
@@ -81,18 +83,23 @@
 </template>
 
 <script>
+  import { mapStores } from 'pinia';
+  import { makeMonsterFilterStore } from '~/services/stores';
   import { monsters } from '~/services/data';
+
+  const useMonsterFilter = makeMonsterFilterStore('monsterFilter', monsters, {
+    sortKey: 'no',
+  });
 
   export default {
     name: 'PageMonsters',
 
+    provide: {
+      useFilterStore: useMonsterFilter,
+    },
+
     data() {
       return {
-        monsters,
-        groupedMonsters: { all: monsters },
-        isEmpty: false,
-        isGrouped: false,
-        sortKey: null,
         showFilter: false,
       };
     },
@@ -109,19 +116,8 @@
       ],
     },
 
-    methods: {
-      onFilterUpdated({ groupedMonsters, isEmpty, isGrouped, sortKey }) {
-        this.groupedMonsters = groupedMonsters;
-        this.isEmpty = isEmpty;
-        this.isGrouped = isGrouped;
-        this.sortKey = sortKey;
-      },
-
-      resetFilter() {
-        if (this.$refs.monsterFilter) {
-          this.$refs.monsterFilter.reset();
-        }
-      },
+    computed: {
+      ...mapStores(useMonsterFilter),
     },
   };
 </script>

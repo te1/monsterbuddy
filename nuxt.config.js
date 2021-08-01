@@ -92,10 +92,17 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+
+    // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
+    '@nuxtjs/composition-api/module',
+
+    'pinia/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

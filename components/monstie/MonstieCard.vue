@@ -11,7 +11,7 @@
 
         <ElementIcon
           class="w-8 h-8"
-          :element="attackElement"
+          :element="monster.monstie.attackElement"
         />
       </div>
     </div>
@@ -42,7 +42,6 @@
 </template>
 
 <script>
-  import { getMonstieAttackElement } from '~/services/data';
   import { formatMonsterInfo, formatMonsterLocation } from '~/services/utils';
 
   export default {
@@ -56,10 +55,6 @@
     },
 
     computed: {
-      attackElement() {
-        return getMonstieAttackElement(this.monster);
-      },
-
       info() {
         return formatMonsterInfo(this.monster);
       },
