@@ -18,11 +18,11 @@
 
     <div class="ml-3 text-sm whitespace-nowrap">
       <div
-        class="text-gray-500 -mb-0.5"
+        class="text-gray-500 leading-tight"
         v-text="info"
       />
       <div
-        class="text-base font-semibold"
+        class="text-base font-semibold leading-snug"
         v-text="monster.name"
       />
       <div v-text="monster.genus" />
