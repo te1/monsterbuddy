@@ -66,6 +66,14 @@
       </ul>
 
       <h3>
+        Spoiler Warning
+      </h3>
+
+      <p class="text-justify">
+        This contains names and images of monsters, names of locations, information that can make combat easier, information on which monsters can become monsties, etc. If you don't want that information just yet proceed at your own discretion.
+      </p>
+
+      <h3>
         Sources for data and images
       </h3>
 
