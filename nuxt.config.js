@@ -61,7 +61,7 @@ export default {
         property: 'og:image:alt',
         content: 'Monster Buddy - Companion App For Monster Hunter Stories 2',
       },
-      { theme_color: '#f43f5e' },
+      // { theme_color: '#f43f5e' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
@@ -113,8 +113,8 @@ export default {
       description:
         'Companion App For Monster Hunter Stories 2: Wings Of Ruin. Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions.',
       lang: 'en',
-      background_color: '#cbd5eb',
-      theme_color: '#f43f5e',
+      background_color: '#CBD5E1',
+      // theme_color: '#f43f5e',
     },
   },
 
