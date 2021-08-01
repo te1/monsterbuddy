@@ -1,10 +1,18 @@
 <template>
   <div class="flex items-center h-[122px]">
-    <MonsterIcon
-      class="w-[120px] h-[120px] -mx-3"
-      :monster="monster"
-      showHatchable
-    />
+    <div class="w-[120px] h-[120px] -mx-3 flex flex-col gap-2 items-center justify-center">
+      <MonsterIcon :monster="monster" />
+
+      <img
+        v-if="monster.hatchable"
+        :src="require('~/assets/icons/hatchable.svg')"
+        alt="Hatchable"
+        title="Hatchable"
+        width="20"
+        height="20"
+        class="w-8 h-8"
+      >
+    </div>
 
     <div class="ml-3 text-sm whitespace-nowrap">
       <div
@@ -17,9 +25,9 @@
       />
       <div v-text="monster.genus" />
       <div v-text="monster.habitat" />
-      <AttackTypeLabel
-        :class="{ 'opacity-0': !monster.hatchable }"
-        :monster="monster"
+      <div
+        :class="{ 'opacity-0': !hasLocation }"
+        v-text="location"
       />
     </div>
 
@@ -32,7 +40,7 @@
 </template>
 
 <script>
-  import { formatMonsterInfo } from '~/services/utils';
+  import { formatMonsterInfo, formatMonsterLocation } from '~/services/utils';
 
   export default {
     name: 'MonsterCard',
@@ -47,6 +55,14 @@
     computed: {
       info() {
         return formatMonsterInfo(this.monster);
+      },
+
+      location() {
+        return formatMonsterLocation(this.monster);
+      },
+
+      hasLocation() {
+        return this.location !== '-';
       },
     },
   };

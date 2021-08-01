@@ -43,9 +43,9 @@
 
       imageUrl() {
         try {
-          return require(`~/assets/icons/${this.resolvedType}.svg`);
+          return require(`~/assets/icons/type-${this.resolvedType}.svg`);
         } catch (e) {
-          return require('~/assets/icons/unknown-type.svg');
+          return require('~/assets/icons/type-unknown.svg');
         }
       },
 

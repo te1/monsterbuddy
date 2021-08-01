@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <h2 class="mb-4 text-3xl text-center font-semibold tracking-wide">
       Monster Buddy
     </h2>
@@ -251,19 +251,11 @@
                 target="_blank"
               >RageGamingVideos</a>
             </li>
-
-            <li>
-              <a
-                class="link"
-                href="https://www.youtube.com/channel/UCLU3HQdw9wQAtYJoOtJo3jA"
-                target="_blank"
-              >Weiss Gaming</a>
-            </li>
           </ul>
         </li>
       </ul>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

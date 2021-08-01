@@ -54,6 +54,13 @@ export function formatMonsterInfo(monster) {
   return result;
 }
 
+export function formatMonsterLocation(monster) {
+  if (monster.locations?.length) {
+    return monster.locations[0].sub;
+  }
+  return '-';
+}
+
 export function formatMonsterDens(monster) {
   if (monster.dens && monster.dens.length) {
     return monster.dens.join(', ');
@@ -63,10 +70,7 @@ export function formatMonsterDens(monster) {
 
 export function formatAttackType(attackTypeOrMonster) {
   if (typeof attackTypeOrMonster !== 'string') {
-    attackTypeOrMonster =
-      attackTypeOrMonster &&
-      attackTypeOrMonster.monstie &&
-      attackTypeOrMonster.monstie.attackType;
+    attackTypeOrMonster = attackTypeOrMonster?.monstie?.attackType;
   }
 
   switch (attackTypeOrMonster) {
@@ -78,6 +82,31 @@ export function formatAttackType(attackTypeOrMonster) {
 
     case 'technical':
       return 'Technical';
+
+    default:
+      return 'Unknown';
+  }
+}
+
+export function formatElement(element) {
+  switch (element) {
+    case 'none':
+      return 'Non-elemental';
+
+    case 'fire':
+      return 'Fire';
+
+    case 'water':
+      return 'Water';
+
+    case 'thunder':
+      return 'Thunder';
+
+    case 'ice':
+      return 'Ice';
+
+    case 'dragon':
+      return 'Dragon';
 
     default:
       return 'Unknown';

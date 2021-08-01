@@ -1,15 +1,17 @@
 <template>
   <div>
-    <button
-      class="fixed bottom-14 right-2 z-10 flex items-center justify-center w-12 h-12 rounded-full drop-shadow-md text-2xl bg-brand-500 text-white"
-      title="Sort and filter"
-      @click="showFilter = !showFilter"
-    >
-      <FaIcon
-        class="pt-px"
-        :icon="['fas', 'filter']"
-      />
-    </button>
+    <div class="relative">
+      <button
+        class="fixed bottom-16 right-4 z-10 flex items-center justify-center w-12 h-12 rounded-full drop-shadow-md text-2xl bg-brand-500 text-white"
+        title="Sort and filter"
+        @click="showFilter = !showFilter"
+      >
+        <FaIcon
+          class="pt-px"
+          :icon="['fas', 'filter']"
+        />
+      </button>
+    </div>
 
     <MonsterFilter
       v-show="showFilter"

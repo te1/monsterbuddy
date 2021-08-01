@@ -16,9 +16,9 @@
       />
       <div v-text="monster.genus" />
       <div v-text="monster.habitat" />
-      <AttackTypeLabel
-        :class="{ 'opacity-0': !monster.hatchable }"
-        :monster="monster"
+      <div
+        :class="{ 'opacity-0': !hasLocation }"
+        v-text="location"
       />
     </div>
 
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import { formatMonsterInfo } from '~/services/utils';
+  import { formatMonsterInfo, formatMonsterLocation } from '~/services/utils';
 
   export default {
     name: 'EggCard',
@@ -45,6 +45,14 @@
     computed: {
       info() {
         return formatMonsterInfo(this.monster);
+      },
+
+      location() {
+        return formatMonsterLocation(this.monster);
+      },
+
+      hasLocation() {
+        return this.location !== '-';
       },
     },
   };

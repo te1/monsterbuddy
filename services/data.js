@@ -48,11 +48,7 @@ export function getMonstersByHabitat(habitat, monsterList = monsters) {
 export function getMonstiesByAttackType(attackType, monsterList = monsties) {
   return deepFreeze(
     _.filter(monsterList, (monster) => {
-      return !!(
-        monster &&
-        monster.monstie &&
-        monster.monstie.attackType === attackType
-      );
+      return monster?.monstie?.attackType === attackType;
     })
   );
 }
@@ -88,12 +84,7 @@ export function getMonstersByHatchable(hatchable, monsterList = monsters) {
 }
 
 export function isVariant(monster, variantType) {
-  return !!(
-    monster &&
-    monster.related &&
-    monster.related.length &&
-    _.some(monster.related, (relation) => relation.type === variantType)
-  );
+  return _.some(monster?.related, (relation) => relation.type === variantType);
 }
 
 export function isSubspecies(monster) {
@@ -110,4 +101,18 @@ export function isColorVariant(monster) {
 
 export function isElementalVariant(monster) {
   return isVariant(monster, 'element');
+}
+
+export function getMonstieAttackElement(monster) {
+  let attack = monster?.monstie?.stats?.attack;
+
+  attack = _.transform(
+    attack,
+    (result, value, key) => {
+      result.push({ element: key, value });
+    },
+    []
+  );
+
+  return _.maxBy(attack, 'value')?.element;
 }
