@@ -36,7 +36,7 @@
   } from '~/services/utils';
 
   export default {
-    name: 'EggCard',
+    name: 'EggListItem',
 
     props: {
       monster: {

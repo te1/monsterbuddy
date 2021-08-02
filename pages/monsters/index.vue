@@ -58,7 +58,7 @@
             :key="monster.no"
             :to="`/monsters/${monster.slug}/`"
           >
-            <MonsterCard
+            <MonsterListItem
               :monster="monster"
               class="box px-1 overflow-hidden"
             />

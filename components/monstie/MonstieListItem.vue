@@ -3,15 +3,17 @@
     <div class="w-[120px] h-[120px] -mx-3 flex flex-col gap-2 items-center justify-center">
       <MonsterIcon :monster="monster" />
 
-      <img
-        v-if="monster.hatchable"
-        :src="require('~/assets/icons/hatchable.svg')"
-        alt="Hatchable"
-        title="Hatchable"
-        width="20"
-        height="20"
-        class="w-8 h-8"
-      >
+      <div class="flex gap-1 items-center">
+        <AttackTypeIcon
+          class="w-8 h-8"
+          :monster="monster"
+        />
+
+        <ElementIcon
+          class="w-8 h-8"
+          :element="monster.monstie.attackElement"
+        />
+      </div>
     </div>
 
     <div class="ml-3 text-sm whitespace-nowrap">
@@ -46,7 +48,7 @@
   } from '~/services/utils';
 
   export default {
-    name: 'MonsterCard',
+    name: 'MonstieListItem',
 
     props: {
       monster: {
