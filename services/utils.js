@@ -129,6 +129,22 @@ export function formatElement(element) {
   }
 }
 
+export function formatWeaponType(weaponType) {
+  switch (weaponType) {
+    case 'slash':
+      return 'Slash';
+
+    case 'blunt':
+      return 'Blunt';
+
+    case 'pierce':
+      return 'Pierce';
+
+    default:
+      return 'Unknown';
+  }
+}
+
 export function makeHead(config = {}) {
   let result = {
     meta: [],

@@ -47,7 +47,7 @@
           <NuxtLink
             class="link"
             to="/monsters/"
-          >Monster list</NuxtLink> with <span class="line-through">attack patterns, weapon and elemental weaknesses</span> <i>coming soon</i>
+          >Monster list</NuxtLink> with attack patterns, weapon and elemental weaknesses
         </li>
 
         <li>

@@ -11,7 +11,8 @@ import {
   faFilter,
   faDna,
   faMapMarkerAlt,
-  faMountain,
+  faStar,
+  // faMountain,
   faShare,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -24,7 +25,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
 
-library.add(faFilter, faDna, faMapMarkerAlt, faMountain, faShare);
+library.add(faFilter, faDna, faMapMarkerAlt, faStar, faShare);
 library.add(faFrown);
 library.add(faGithub);
 
