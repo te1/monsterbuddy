@@ -1,21 +1,20 @@
 <template>
-  <div>
-    <div class="relative">
-      <button
-        class="fixed bottom-16 right-4 z-10 flex items-center justify-center w-12 h-12 rounded-full drop-shadow-md text-2xl bg-brand-500 text-white"
-        title="Sort and filter"
-        @click="showFilter = !showFilter"
-      >
-        <FaIcon
-          class="pt-px"
-          :icon="['fas', 'filter']"
-        />
-      </button>
-    </div>
+  <div class="mt-12">
+    <AppTopBar />
+
+    <AppFab
+      title="Sort and filter"
+      @click="showFilter = !showFilter"
+    >
+      <FaIcon
+        class="pt-px"
+        :icon="['fas', 'filter']"
+      />
+    </AppFab>
 
     <MonsterFilter
       v-show="showFilter"
-      class="mb-2"
+      class="mb-3"
       showAttackTypeFilter
       showAttackElementFilter
     />
@@ -48,7 +47,7 @@
           />
         </div>
 
-        <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <EggCard
             v-for="monster in group"
             :key="monster.no"
@@ -72,12 +71,12 @@
         :icon="['far', 'frown']"
       />
 
-      <button
+      <div
         class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
         @click="eggFilter.reset"
       >
         Reset filter
-      </button>
+      </div>
     </div>
   </div>
 </template>

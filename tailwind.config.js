@@ -17,6 +17,9 @@ module.exports = {
       technical: '#5b9326',
     },
     extend: {
+      boxShadow: {
+        top: '0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 -1px 2px 0 rgba(0, 0, 0, 0.06)',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

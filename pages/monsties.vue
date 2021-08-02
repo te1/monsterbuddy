@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <button
-      class="mb-1 text-xl text-brand-500 hover:text-brand-400 active:text-gray-500"
+  <div class="mt-12">
+    <AppTopBar />
+
+    <AppFab
       title="Sort and filter"
       @click="showFilter = !showFilter"
     >
-      <FaIcon :icon="['fas', 'filter']" />
-    </button>
+      <FaIcon
+        class="pt-px"
+        :icon="['fas', 'filter']"
+      />
+    </AppFab>
 
     <MonsterFilter
       v-show="showFilter"
-      class="mb-2"
+      class="mb-3"
       showAttackTypeFilter
       showAttackElementFilter
     />
@@ -43,7 +47,7 @@
           />
         </div>
 
-        <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <MonstieCard
             v-for="monster in group"
             :key="monster.no"
@@ -67,12 +71,12 @@
         :icon="['far', 'frown']"
       />
 
-      <button
+      <div
         class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
         @click="monstieFilter.reset"
       >
         Reset filter
-      </button>
+      </div>
     </div>
   </div>
 </template>

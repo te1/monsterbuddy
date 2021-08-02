@@ -196,12 +196,12 @@
     </div>
 
     <div class="self-end">
-      <button
+      <div
         class="w-[150px] px-2 py-1 font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500"
         @click="store.reset"
       >
         Reset
-      </button>
+      </div>
     </div>
   </div>
 </template>

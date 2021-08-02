@@ -1,26 +1,30 @@
 <template>
-  <div>
-    <!-- <div class="fixed top-0 left-0 right-0 w-full 1h-12 z-10 shadow border-b border-gray-300 bg-white">
-      <div class="flex items-center container 1h-full px-4 py-3 text-sm">
-        <input type="text">
-      </div>
-    </div> -->
+  <div class="mt-12">
+    <AppTopBar>
+      <!-- <input
+        type="text"
+        class="w-full py-1 border-0 rounded bg-gray-200"
+        placeholder="Search..."
+      > -->
+    </AppTopBar>
 
-    <button
-      class="mb-1 text-xl text-brand-500 hover:text-brand-400 active:text-gray-500"
+    <AppFab
       title="Sort and filter"
       @click="showFilter = !showFilter"
     >
-      <FaIcon :icon="['fas', 'filter']" />
-    </button>
+      <FaIcon
+        class="pt-px"
+        :icon="['fas', 'filter']"
+      />
+    </AppFab>
 
     <MonsterFilter
       v-show="showFilter"
-      class="mb-2"
+      class="mb-3"
       showHatchableFilter
     />
 
-    <ul class="pt-4">
+    <ul>
       <li
         v-for="(group, key) in monsterFilter.groupedMonsters"
         :key="key"
@@ -48,7 +52,7 @@
           />
         </div>
 
-        <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <NuxtLink
             v-for="monster in group"
             :key="monster.no"
@@ -76,12 +80,12 @@
         :icon="['far', 'frown']"
       />
 
-      <button
+      <div
         class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
         @click="monsterFilter.reset"
       >
         Reset filter
-      </button>
+      </div>
     </div>
   </div>
 </template>

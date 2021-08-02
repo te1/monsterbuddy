@@ -1,6 +1,6 @@
 <template>
-  <header class="fixed bottom-0 w-full z-10 shadow-top border-t border-gray-300 bg-white">
-    <nav class="container mx-auto px-4 grid grid-flow-col select-none">
+  <header class="fixed bottom-0 w-full h-12 z-10 shadow-top border-t border-gray-300 bg-white">
+    <nav class="container mx-auto px-4 h-full grid grid-flow-col items-center justify-items-center select-none">
       <AppNavLink
         to="/"
         text="Start"

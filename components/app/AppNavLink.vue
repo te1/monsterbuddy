@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    class="py-3 text-center font-semibold tracking-wide transition text-gray-500 hover:text-gray-700"
+    class="font-semibold tracking-wide transition text-gray-500 hover:text-gray-700"
     :active-class="activeClasses"
     :exact-active-class="exactActiveClasses"
     @mousedown.native="handleClick"

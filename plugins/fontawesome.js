@@ -3,7 +3,6 @@ import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   //   faQuestion,
-  //   faTimes,
   //   faArrowUp,
   //   faArrowDown,
   //   faBan,
@@ -14,6 +13,8 @@ import {
   faStar,
   // faMountain,
   faShare,
+  faArrowLeft,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   //   faSquare,
@@ -25,7 +26,15 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
 
-library.add(faFilter, faDna, faMapMarkerAlt, faStar, faShare);
+library.add(
+  faFilter,
+  faDna,
+  faMapMarkerAlt,
+  faStar,
+  faShare,
+  faArrowLeft,
+  faTimes
+);
 library.add(faFrown);
 library.add(faGithub);
 
