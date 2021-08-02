@@ -21,6 +21,11 @@
   a.link:visited:active {
     @apply text-brand-400;
   }
+
+  /* -- box ----------------- */
+  .box {
+    @apply rounded shadow bg-white;
+  }
 }
 
 @layer utilities {

@@ -3,7 +3,7 @@
     v-if="monster"
     class="space-y-2"
   >
-    <section class="px-4 py-2 rounded shadow bg-white">
+    <section class="box px-4 py-2">
       <div class="flex items-start justify-between">
         <div>
           <div
@@ -77,7 +77,7 @@
 
     <section
       v-if="hasCombatInfo"
-      class="px-4 py-2 space-y-2 rounded shadow bg-white"
+      class="box px-4 py-2 space-y-2"
     >
       <div v-if="hasAttackPatterns">
         <h3 class="text-lg font-semibold">
@@ -140,7 +140,7 @@
       </div>
     </section>
 
-    <section class="px-4 py-2 flex justify-around rounded shadow bg-white">
+    <section class="box px-4 py-2 flex justify-around">
       <MonsterImage :monster="monster" />
     </section>
   </main>

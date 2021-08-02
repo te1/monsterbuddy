@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col px-2 py-2 space-y-1 rounded shadow bg-white">
+  <div class="box flex flex-col px-2 py-2 space-y-1">
     <div class="flex items-center">
       <label
         class="flex-1 cursor-pointer"

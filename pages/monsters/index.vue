@@ -56,7 +56,7 @@
           >
             <MonsterCard
               :monster="monster"
-              class="px-1 rounded shadow bg-white overflow-hidden"
+              class="box px-1 overflow-hidden"
             />
           </NuxtLink>
         </div>
@@ -65,7 +65,7 @@
 
     <div
       v-if="monsterFilter.isEmpty"
-      class="flex flex-col items-center py-4 space-y-4 rounded shadow bg-white"
+      class="box flex flex-col items-center py-4 space-y-4"
     >
       <span class="text-2xl text-gray-400 font-semibold">
         No monsters found
