@@ -3,35 +3,34 @@
 @tailwind utilities;
 
 @layer components {
-  /* -- link ---------------- */
   a.link {
     @apply text-brand-600 no-underline font-normal;
   }
-
   a.link:visited {
     @apply text-brand-800;
   }
-
   a.link:hover,
   a.link:visited:hover {
     @apply underline;
   }
-
   a.link:active,
   a.link:visited:active {
     @apply text-brand-400;
   }
 
-  /* -- box ----------------- */
   .box {
     @apply rounded shadow bg-white;
   }
+}
 
-  /* -- hide-scollbars -----. */
+@layer utilities {
+  .tap-highlight-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .hide-scrollbars {
     scrollbar-width: none;
   }
-
   .hide-scrollbars::-webkit-scrollbar {
     width: 0px;
   }

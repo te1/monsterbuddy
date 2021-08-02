@@ -75,7 +75,7 @@ export default {
 
     bodyAttrs: {
       class:
-        'max-w-full min-h-screen overflow-x-hidden overflow-y-scroll hide-scrollbars bg-gray-300 text-gray-700',
+        'max-w-full min-h-screen overflow-x-hidden overflow-y-scroll hide-scrollbars tap-highlight-none bg-gray-300 text-gray-700',
     },
   },
 
