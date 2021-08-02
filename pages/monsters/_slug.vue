@@ -7,18 +7,43 @@
       <div class="flex items-start justify-between">
         <div>
           <div
-            class="text-gray-500 leading-none"
+            class="text-gray-500 -mb-1"
             v-text="info"
           />
+
           <h2
-            class="text-2xl font-semibold leading-snug"
+            class="text-2xl font-semibold mb-1"
             v-text="monster.name"
           />
-          <div v-text="monster.genus" />
-          <div v-text="monster.habitat" />
-          <div>
-            <FaIcon :icon="['fas', 'star']" />
-            {{ monster.rarity }}
+
+          <div class="flex items-center gap-1">
+            <span class="w-5 text-center">
+              <FaIcon
+                :icon="['fas', 'dna']"
+                title="Genus"
+              />
+            </span>
+            <span v-text="monster.genus" />
+          </div>
+
+          <div class="flex items-center gap-1">
+            <span class="w-5 text-center">
+              <FaIcon
+                :icon="['fas', 'map-marker-alt']"
+                title="Habitat"
+              />
+            </span>
+            <span v-text="monster.habitat" />
+          </div>
+
+          <div class="flex items-center gap-1">
+            <span class="w-5 text-center">
+              <FaIcon
+                :icon="['fas', 'star']"
+                title="Rarity"
+              />
+            </span>
+            <span v-text="monster.rarity" />
           </div>
         </div>
 
@@ -37,15 +62,17 @@
         </div>
       </div>
 
-      <h3 class="mt-2 text-lg font-semibold">
-        Locations
-      </h3>
+      <div v-if="hasLocations">
+        <h3 class="mt-2 text-lg font-semibold">
+          Locations
+        </h3>
 
-      <div
-        v-for="location in locations"
-        :key="location"
-        v-text="location"
-      />
+        <div
+          v-for="location in locations"
+          :key="location"
+          v-text="location"
+        />
+      </div>
     </section>
 
     <section
@@ -116,7 +143,6 @@
     <section class="px-4 py-2 flex justify-around rounded shadow bg-white">
       <MonsterImage :monster="monster" />
     </section>
-
   </main>
 </template>
 
@@ -168,6 +194,10 @@
 
       locations() {
         return formatMonsterLocations(this.monster);
+      },
+
+      hasLocations() {
+        return !!this.locations.length;
       },
 
       hasAttackPatterns() {
