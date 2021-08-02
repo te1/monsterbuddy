@@ -5,7 +5,7 @@
       <span class="w-6 text-xl ml-1">
         <FaIcon
           v-if="showBack"
-          class="cursor-pointer"
+          class="cursor-pointer select-none"
           :icon="['fas', 'arrow-left']"
           @click="goBack"
         />
