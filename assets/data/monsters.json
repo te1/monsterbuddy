@@ -1059,7 +1059,7 @@
       },
       "parts": {
         // TODO figure out "broken" interactions
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -1789,10 +1789,10 @@
       "parts": {
         // TODO figure out covered in mud interactions
         "DEFAULT": ["slash"],
-        "Body Mud": ["slash"],
-        "Head Mud": ["blunt"],
-        "Tail Mud": ["pierce"],
-        "Legs Mud": ["slash", "blunt"]
+        "Body": ["slash"],
+        "Head": ["blunt"],
+        "Tail": ["pierce"],
+        "Legs": ["slash", "blunt"]
       },
       "elementalWeakness": "fire"
     },
@@ -2113,10 +2113,10 @@
       "parts": {
         // TODO figure out covered in snow interactions
         "DEFAULT": ["slash"],
-        "Body Snow": ["slash"],
-        "Head Snow": ["blunt"],
-        "Tail Snow": ["pierce"],
-        "Legs Snow": ["slash", "blunt"]
+        "Body": ["slash"],
+        "Head": ["blunt"],
+        "Tail": ["pierce"],
+        "Legs": ["slash", "blunt"]
       },
       "elementalWeakness": "thunder"
     },
@@ -2225,11 +2225,12 @@
         // TODO figure out "broken" interactions
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
+        // "Broken Head": ["slash", "blunt"],
         "Head": ["blunt"],
-        "Broken Head": ["slash", "blunt"],
         "Nose": ["slash"],
-        "Broken Nose": ["slash", "blunt"],
-        "Broken Legs": ["blunt"],
+        // "Broken Nose": ["slash", "blunt"],
+        "Legs": ["blunt"],
+        // "Broken Legs": ["blunt"],
         "Tail": ["slash"]
       },
       "elementalWeakness": "fire"
@@ -3292,8 +3293,8 @@
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
         "Head": ["blunt"],
-        "Tail": ["slash", "blunt"],
-        "Powderstone": ["blunt"]
+        "Tail": ["slash", "blunt"]
+        // "Powderstone": ["blunt"]
       },
       "elementalWeakness": "water"
     },
@@ -3348,9 +3349,9 @@
       "parts": {
         // TODO figure out "broken" interactions
         "Shell": ["blunt"],
-        "Broken Shell": ["slash", "blunt", "pierce"],
+        // "Broken Shell": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        "Broken Claws": ["slash", "blunt", "pierce"],
+        // "Broken Claws": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "fire"
@@ -3372,9 +3373,9 @@
       "parts": {
         // TODO figure out "broken" interactions
         "Shell": ["blunt"],
-        "Broken Shell": ["slash", "blunt", "pierce"],
+        // "Broken Shell": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        "Broken Claws": ["slash", "blunt", "pierce"],
+        // "Broken Claws": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "ice"
@@ -3505,7 +3506,7 @@
       },
       "parts": {
         // TODO figure out "broken" interactions
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -3563,7 +3564,7 @@
       },
       "parts": {
         // TODO figure out "broken" interactions
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
@@ -3872,7 +3873,7 @@
       },
       "parts": {
         // TODO figure out "broken" interactions
-        "Broken Stomach": ["slash", "blunt", "pierce"],
+        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
@@ -4045,8 +4046,8 @@
         "DEFAULT": ["slash", "pierce"],
         "Head": ["blunt"],
         "Legs": ["slash"],
-        "Wings": ["slash"],
-        "White Spikes": ["slash", "blunt", "pierce"]
+        "Wings": ["slash"]
+        // "White Spikes": ["slash", "blunt", "pierce"]
       },
       "elementalWeakness": "thunder"
     },
@@ -4213,11 +4214,11 @@
       },
       "parts": {
         // TODO figure out "broken" interactions
-        "Broken Body": ["blunt"],
+        // "Broken Body": ["blunt"],
         "Body": ["slash", "pierce"],
-        "Broken Head": ["blunt"],
+        // "Broken Head": ["blunt"],
         "Head": ["slash", "pierce"],
-        "Broken Tail": ["blunt"],
+        // "Broken Tail": ["blunt"],
         "Tail": ["slash", "pierce"]
       },
       "elementalWeakness": "fire"
@@ -4597,7 +4598,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
-        "Enraged": "technical", // TODO is there enraged?
+        // "Enraged": "technical", // TODO is there enraged?
         "Flying": "speed"
       },
       "parts": {
@@ -4654,7 +4655,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
-        "Enraged": "technical", // TODO is there enraged?
+        // "Enraged": "technical", // TODO is there enraged?
         "Flying": "speed"
       },
       "parts": {
@@ -4880,9 +4881,9 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
-        "Charged": "speed",
-        "Thunderbugs": "speed", // TODO is there a Thunderbugs phase?
-        "Fully charged": "technical" // TODO is there a fully charged phase?
+        "Charged": "speed"
+        // "Thunderbugs": "speed", // TODO is there a Thunderbugs phase?
+        // "Fully charged": "technical" // TODO is there a fully charged phase?
       },
       "parts": {
         "Head": ["slash"],
@@ -5221,10 +5222,10 @@
     "monster": {
       "attackPatterns": {
         // TODO figure out "aura" interactions
-        "DEFAULT": "power",
-        "Power aura": "power",
-        "Speed aura": "speed",
-        "Technical aura": "technical"
+        "DEFAULT": "power"
+        // "Power aura": "power",
+        // "Speed aura": "speed",
+        // "Technical aura": "technical"
       },
       "parts": {
         "Head": ["slash", "blunt", "pierce"],
