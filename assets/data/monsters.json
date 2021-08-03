@@ -881,7 +881,7 @@
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Brute Tigrex" },
-      { "type": "deviant", "monster": "Tigrex" }
+      { "type": "deviant", "monster": "Grimclaw Tigrex" }
     ],
     "monster": {
       "attackPatterns": {
@@ -1246,7 +1246,7 @@
     "rarity": 4,
     "related": [
       { "type": "subspecies", "monster": "Pink Rathian" },
-      { "type": "deviant", "monster": "Rathian" }
+      { "type": "deviant", "monster": "Dreadqueen Rathian" }
     ],
     "monster": {
       "attackPatterns": {
@@ -2910,7 +2910,10 @@
     "habitat": "Lamure",
     "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
     "rarity": 5,
-    "related": [{ "type": "subspeciesOf", "monster": "Nargacuga" }],
+    "related": [
+      { "type": "subspeciesOf", "monster": "Nargacuga" },
+      { "type": "deviant", "monster": "Silverwind Nargacuga" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -3027,7 +3030,10 @@
       { "type": "map", "main": "Lamure", "sub": "Lamure Tower - 5F" }
     ],
     "rarity": 6,
-    "related": [{ "type": "subspeciesOf", "monster": "Diablos" }],
+    "related": [
+      { "type": "subspeciesOf", "monster": "Diablos" },
+      { "type": "deviant", "monster": "Bloodbath Diablos" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -3409,7 +3415,10 @@
     "habitat": "Terga",
     "locations": [{ "type": "map", "main": "Terga", "sub": "Sadona Barrens" }],
     "rarity": 6,
-    "related": [{ "type": "subspeciesOf", "monster": "Tigrex" }],
+    "related": [
+      { "type": "subspeciesOf", "monster": "Tigrex" },
+      { "type": "deviant", "monster": "Grimclaw Tigrex" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -4501,7 +4510,10 @@
       { "type": "map", "main": "Hakolo Island", "sub": "Forbidden Grounds" }
     ],
     "rarity": 6,
-    "related": [{ "type": "subspeciesOf", "monster": "Zinogre" }],
+    "related": [
+      { "type": "subspeciesOf", "monster": "Zinogre" },
+      { "type": "deviant", "monster": "Thunderlord Zinogre" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -4740,7 +4752,10 @@
     "habitat": "Lamure",
     "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
     "rarity": 5,
-    "related": [{ "type": "subspeciesOf", "monster": "Rathian" }],
+    "related": [
+      { "type": "subspeciesOf", "monster": "Rathian" },
+      { "type": "deviant", "monster": "Dreadqueen Rathian" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -4854,7 +4869,10 @@
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Nargacuga" }],
+    "related": [
+      { "type": "deviantOf", "monster": "Nargacuga" },
+      { "type": "subspecies", "monster": "Green Nargacuga" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -4912,7 +4930,10 @@
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Zinogre" }],
+    "related": [
+      { "type": "deviantOf", "monster": "Zinogre" },
+      { "type": "subspecies", "monster": "Stygian Zinogre" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -4973,7 +4994,10 @@
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Diablos" }],
+    "related": [
+      { "type": "deviantOf", "monster": "Diablos" },
+      { "type": "subspecies", "monster": "Black Diablos" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -5032,7 +5056,10 @@
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Tigrex" }],
+    "related": [
+      { "type": "deviantOf", "monster": "Tigrex" },
+      { "type": "subspecies", "monster": "Brute Tigrex" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -5090,7 +5117,10 @@
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Rathian" }],
+    "related": [
+      { "type": "deviantOf", "monster": "Rathian" },
+      { "type": "subspecies", "monster": "Pink Rathian" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
