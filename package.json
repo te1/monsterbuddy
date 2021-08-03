@@ -22,7 +22,7 @@
     "core-js": "^3.16.0",
     "lodash": "^4.17.21",
     "nuxt": "^2.15.7",
-    "pinia": "^0.5.2"
+    "pinia": "^0.5.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.9",
