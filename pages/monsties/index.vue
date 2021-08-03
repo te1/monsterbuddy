@@ -48,12 +48,16 @@
         </div>
 
         <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <MonstieListItem
+          <NuxtLink
             v-for="monster in group"
             :key="monster.no"
-            :monster="monster"
-            class="box px-1 overflow-hidden"
-          />
+            :to="`/monsties/${monster.slug}/`"
+          >
+            <MonstieListItem
+              :monster="monster"
+              class="box px-1 overflow-hidden"
+            />
+          </NuxtLink>
         </div>
       </li>
     </ul>

@@ -20,6 +20,9 @@ export const monstersByNo = Object.freeze(_.keyBy(monsters, 'no'));
 export const monstersByName = Object.freeze(_.keyBy(monsters, 'name'));
 export const monstersBySlug = Object.freeze(_.keyBy(monsters, 'slug'));
 export const monsties = getMonstersByHatchable(true);
+export const monstiesByNo = Object.freeze(_.keyBy(monsties, 'no'));
+export const monstiesByName = Object.freeze(_.keyBy(monsties, 'name'));
+export const monstiesBySlug = Object.freeze(_.keyBy(monsties, 'slug'));
 export const genera = getGenera();
 export const habitats = getHabitats();
 

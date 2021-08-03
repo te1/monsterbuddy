@@ -11,11 +11,6 @@
         :monster="monster"
       />
 
-      <MonsterCombatCard
-        class="box px-4 py-2"
-        :monster="monster"
-      />
-
       <MonsterImageCard
         class="box px-4 py-2"
         :monster="monster"
@@ -24,21 +19,22 @@
       <MonsterRelatedCard
         class="box px-4 py-2"
         :monster="monster"
+        monstieMode
       />
     </main>
   </div>
 </template>
 
 <script>
-  import { monstersBySlug, isDeviant } from '~/services/data';
+  import { monstiesBySlug, isDeviant } from '~/services/data';
   import { makeHead } from '~/services/utils';
 
   export default {
-    name: 'PageMonsterDetails',
+    name: 'PageMonstieDetails',
 
     data() {
       return {
-        monster: monstersBySlug[this.$route.params.slug],
+        monster: monstiesBySlug[this.$route.params.slug],
       };
     },
 
@@ -62,7 +58,7 @@
       return makeHead({
         title: `Monster Buddy - ${this.monster.name} Details In Monster Hunter Stories 2`,
         description,
-        canonical: `https://monsterbuddy.app/monsters/${this.monster.slug}/`,
+        canonical: `https://monsterbuddy.app/monsties/${this.monster.slug}/`,
         image: `https://monsterbuddy.app/images/monsters-small/${this.monster.name}.webp`,
         imageAlt: this.monster.name,
       });

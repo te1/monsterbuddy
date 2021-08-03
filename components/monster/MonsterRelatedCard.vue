@@ -7,7 +7,7 @@
     <NuxtLink
       v-for="(relation, index) in monster.related"
       :key="relation.monster"
-      :to="`/monsters/${getMonsterByName(relation.monster).slug}/`"
+      :to="getRelationLink(relation.monster)"
     >
       <div
         v-if="index > 0"
@@ -33,6 +33,12 @@
         type: Object,
         required: true,
       },
+
+      monstieMode: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     computed: {
@@ -44,6 +50,15 @@
     methods: {
       getMonsterByName(name) {
         return monstersByName[name];
+      },
+
+      getRelationLink(monsterName) {
+        let monster = this.getMonsterByName(monsterName);
+
+        if (this.monstieMode && monster.hatchable) {
+          return `/monsties/${monster.slug}/`;
+        }
+        return `/monsters/${monster.slug}/`;
       },
     },
   };

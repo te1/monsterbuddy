@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center h-[122px]">
-    <div class="w-[120px] h-[120px] -mx-3 flex flex-col gap-2 items-center justify-center">
+    <div class="w-[120px] h-[120px] -mx-3 flex-shrink-0 flex flex-col gap-2 items-center justify-center">
       <MonsterIcon :monster="monster" />
 
       <div class="flex gap-1 items-center">
