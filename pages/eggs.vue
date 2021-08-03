@@ -23,7 +23,7 @@
       <li
         v-for="(group, key) in eggFilter.groupedMonsters"
         :key="key"
-        class="mt-2 first:mt-0 "
+        class="mt-3 first:mt-0 "
       >
         <div
           v-if="eggFilter.isGrouped"
@@ -31,18 +31,18 @@
         >
           <FaIcon
             v-if="eggFilter.sortKey === 'genus'"
-            class="!w-6 text-gray-600"
+            class="!w-6 text-gray-500 dark:text-cool-400"
             :icon="['fas', 'dna']"
           />
 
           <FaIcon
             v-if="eggFilter.sortKey === 'habitat'"
-            class="!w-6 text-gray-600"
+            class="!w-6 text-gray-500 dark:text-cool-400"
             :icon="['fas', 'map-marker-alt']"
           />
 
           <div
-            class="font-semibold"
+            class="font-semibold mb-1"
             v-text="key"
           />
         </div>

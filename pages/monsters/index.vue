@@ -30,7 +30,7 @@
       <li
         v-for="(group, key) in monsterFilter.groupedMonsters"
         :key="key"
-        class="mt-2 first:mt-0 "
+        class="mt-3 first:mt-0 "
       >
         <div
           v-if="monsterFilter.isGrouped"
@@ -38,18 +38,18 @@
         >
           <FaIcon
             v-if="monsterFilter.sortKey === 'genus'"
-            class="!w-6 text-gray-600"
+            class="!w-6 text-gray-500 dark:text-cool-400"
             :icon="['fas', 'dna']"
           />
 
           <FaIcon
             v-if="monsterFilter.sortKey === 'habitat'"
-            class="!w-6 text-gray-600"
+            class="!w-6 text-gray-500 dark:text-cool-400"
             :icon="['fas', 'map-marker-alt']"
           />
 
           <div
-            class="font-semibold"
+            class="font-semibold mb-1"
             v-text="key"
           />
         </div>
