@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    class="font-semibold tracking-wide transition text-gray-500 hover:text-gray-700"
+    class="flex items-center justify-center font-semibold tracking-wide transition text-gray-500 hover:text-gray-700 dark:text-cool-300 dark:hover:text-cool-100"
     :active-class="activeClasses"
     :exact-active-class="exactActiveClasses"
     @mousedown.native="handleClick"
@@ -34,7 +34,7 @@
 
     computed: {
       baseActiveClasses() {
-        return 'text-brand-500 hover:text-brand-500 active:text-brand-500';
+        return 'text-brand-500 hover:text-brand-500 active:text-brand-500 dark:text-brand-400 dark:hover:text-brand-400 dark:active:text-brand-400';
       },
 
       activeClasses() {

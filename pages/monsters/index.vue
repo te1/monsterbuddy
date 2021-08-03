@@ -1,11 +1,13 @@
 <template>
-  <div class="mt-12">
+  <div>
     <AppTopBar>
-      <!-- <input
-        type="text"
-        class="w-full py-1 border-0 rounded bg-gray-200"
-        placeholder="Search..."
-      > -->
+      <!-- <div class="w-full h-full flex items-center py-2">
+        <input
+          type="text"
+          class="w-full h-full border-0 rounded bg-gray-200 dark:bg-cool-600 placeholder-gray-700 dark:placeholder-cool-300"
+          placeholder="Search..."
+        >
+      </div> -->
     </AppTopBar>
 
     <AppFab

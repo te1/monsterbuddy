@@ -4,10 +4,10 @@
 
 @layer components {
   a.link {
-    @apply text-brand-600 no-underline font-normal;
+    @apply no-underline font-normal text-brand-600 dark:text-brand-500;
   }
   a.link:visited {
-    @apply text-brand-800;
+    @apply text-brand-800 dark:text-brand-300;
   }
   a.link:hover,
   a.link:visited:hover {
@@ -15,11 +15,11 @@
   }
   a.link:active,
   a.link:visited:active {
-    @apply text-brand-400;
+    @apply text-brand-400 dark:text-cool-400;
   }
 
   .box {
-    @apply rounded shadow bg-white;
+    @apply rounded shadow bg-white dark:bg-cool-800;
   }
 }
 

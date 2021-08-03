@@ -64,7 +64,7 @@
         :element="monster.monster.elementalWeakness"
       />
       <span
-        class="font-semibold"
+        class="font-semibold  dark:brightness-150"
         v-text="formatElement(monster.monster.elementalWeakness)"
       />
     </div>

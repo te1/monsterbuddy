@@ -1,8 +1,10 @@
 <template>
-  <main>
-    <h2 class="mb-4 text-3xl text-center font-semibold tracking-wide">
-      Monster Buddy
-    </h2>
+  <div>
+    <AppTopBar heading="Monster Buddy" />
+
+    <p class="mb-6 text-base text-justify">
+      <b>Monster Buddy</b> is a companion app for Monster Hunter Stories 2: Wings of Ruin can help you to learn or remember information useful during combat and general gameplay. It's not a complete guide, walkthrough or advanced character / gene planner (yet).
+    </p>
 
     <div class="flex flex-col items-center">
       <div class="relative inline-block w-[180px] h-[200px]">
@@ -19,25 +21,21 @@
           type="technical"
         />
         <FaIcon
-          class="absolute top-[45px] right-[10px] !w-12 !h-12 rotate-[85deg] text-gray-500"
+          class="absolute top-[45px] right-[10px] !w-12 !h-12 rotate-[85deg] text-gray-500 dark:text-cool-400"
           :icon="['fas', 'share']"
         />
         <FaIcon
-          class="absolute top-[45px] left-[10px] !w-12 !h-12 rotate-[330deg] text-gray-500"
+          class="absolute top-[45px] left-[10px] !w-12 !h-12 rotate-[330deg] text-gray-500 dark:text-cool-400"
           :icon="['fas', 'share']"
         />
         <FaIcon
-          class="absolute bottom-[0px] left-0 right-0 mx-auto !w-12 !h-12 rotate-[215deg] text-gray-500"
+          class="absolute bottom-[0px] left-0 right-0 mx-auto !w-12 !h-12 rotate-[215deg] text-gray-500 dark:text-cool-400"
           :icon="['fas', 'share']"
         />
       </div>
-
-      <p class="mt-3 mb-6 text-base text-justify">
-        This companion app for Monster Hunter Stories 2: Wings of Ruin can help you to learn or remember information useful during combat and general gameplay. It's not a complete guide, walkthrough or advanced character / gene planner (yet).
-      </p>
     </div>
 
-    <div class="prose prose-sm">
+    <div class="prose prose-sm dark:prose-dark">
       <h3>
         Features
       </h3>
@@ -289,7 +287,7 @@
         </li>
       </ul>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>

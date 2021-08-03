@@ -3,7 +3,7 @@
     <div class="flex items-start justify-between overflow-hidden">
       <div>
         <div
-          class="text-gray-500 -mb-1"
+          class="-mb-1 text-gray-500 dark:text-cool-400"
           v-text="info"
         />
 
@@ -13,7 +13,7 @@
         />
 
         <div class="flex items-center gap-1">
-          <span class="w-5 text-center">
+          <span class="w-5 text-center text-gray-600 dark:text-cool-400">
             <FaIcon
               :icon="['fas', 'dna']"
               title="Genus"
@@ -23,7 +23,7 @@
         </div>
 
         <div class="flex items-center gap-1">
-          <span class="w-5 text-center">
+          <span class="w-5 text-center text-gray-600 dark:text-cool-400">
             <FaIcon
               :icon="['fas', 'map-marker-alt']"
               title="Habitat"
@@ -33,7 +33,7 @@
         </div>
 
         <div class="flex items-center gap-1">
-          <span class="w-5 text-center">
+          <span class="w-5 text-center text-gray-600 dark:text-cool-400">
             <FaIcon
               :icon="['fas', 'star']"
               title="Rarity"

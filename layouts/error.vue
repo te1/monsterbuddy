@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h2 class="mb-4 text-3xl text-center font-semibold tracking-wide">
-      Monster Buddy
-    </h2>
+    <AppTopBar heading="Monster Buddy" />
 
     <h3 class="text-2xl font-semibold tracking-wide">
       <span>
@@ -11,7 +9,7 @@
 
       <span
         v-if="error"
-        class="text-brand-700"
+        class="text-brand-700 dark:text-brand-500"
       >
         {{ error.statusCode }}
       </span>

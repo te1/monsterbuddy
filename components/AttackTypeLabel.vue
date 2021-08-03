@@ -45,13 +45,13 @@
       classes() {
         switch (this.resolvedType) {
           case 'power':
-            return 'text-power';
+            return 'text-power dark:brightness-150';
 
           case 'speed':
-            return 'text-speed';
+            return 'text-speed  dark:brightness-150';
 
           case 'technical':
-            return 'text-technical';
+            return 'text-technical dark:brightness-150';
 
           default:
             return null;

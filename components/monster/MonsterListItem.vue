@@ -16,7 +16,7 @@
 
     <div class="ml-3 text-sm whitespace-nowrap">
       <div
-        class="text-gray-500 leading-tight"
+        class="leading-tight text-gray-500 dark:text-cool-400"
         v-text="info"
       />
       <div

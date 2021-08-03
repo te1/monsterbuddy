@@ -5,7 +5,7 @@
     :title="caption"
     width="60"
     height="60"
-    :class="{ 'opacity-50': ineffective }"
+    :class="{ 'opacity-75': ineffective }"
   >
 </template>
 

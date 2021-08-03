@@ -1,11 +1,9 @@
 <template>
-  <div
-    v-if="monster"
-    class="mt-12"
-  >
-    <AppTopBar showBack>
-      {{ monster.name }}
-    </AppTopBar>
+  <div v-if="monster">
+    <AppTopBar
+      :heading="monster.name"
+      showBack
+    />
 
     <main class="space-y-3">
       <MonsterInfoCard

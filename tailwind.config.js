@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   mode: 'jit',
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     colors: {
       transparent: 'transparent',
@@ -11,6 +11,7 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.blueGray,
+      cool: colors.coolGray,
       brand: colors.rose,
       power: '#b8342e',
       speed: '#1b61b9',
@@ -42,11 +43,35 @@ module.exports = {
             },
           },
         },
+        dark: {
+          css: [
+            {
+              color: theme('colors.cool.300'),
+              h1: {
+                color: theme('colors.cool.300'),
+              },
+              h2: {
+                color: theme('colors.cool.300'),
+              },
+              h3: {
+                color: theme('colors.cool.300'),
+              },
+              h4: {
+                color: theme('colors.cool.300'),
+              },
+              'ul > li::before': {
+                backgroundColor: theme('colors.cool.400'),
+              },
+            },
+          ],
+        },
       }),
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      typography: ['dark'],
+    },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
