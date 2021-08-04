@@ -7,7 +7,7 @@
     @apply no-underline font-normal text-brand-600 dark:text-brand-500;
   }
   a.link:visited {
-    @apply text-brand-800 dark:text-brand-300;
+    @apply text-brand-800 dark:text-brand-400;
   }
   a.link:hover,
   a.link:visited:hover {
