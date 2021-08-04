@@ -132,7 +132,7 @@
         <option :value="null">All</option>
 
         <option
-          v-for="element in ['none', 'fire', 'water', 'thunder', 'ice', 'dragon']"
+          v-for="element in allElements"
           :key="element"
           :value="element"
           v-text="formatElement(element)"
@@ -207,7 +207,7 @@
 </template>
 
 <script>
-  import { formatAttackType, formatElement } from '~/services/utils';
+  import { formatAttackType, formatElement, allElements } from '~/services/utils';
 
   export default {
     name: 'MonsterFilter',
@@ -238,6 +238,12 @@
         required: false,
         default: false,
       },
+    },
+
+    data() {
+      return {
+        allElements,
+      };
     },
 
     computed: {

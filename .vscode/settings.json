@@ -1,5 +1,8 @@
 {
   "search.exclude": {
     "package-lock.json": true
+  },
+  "files.exclude": {
+    ".eslintcache": true
   }
 }

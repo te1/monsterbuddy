@@ -46,6 +46,7 @@
             class="w-48"
             v-text="formatPart(part)"
           />
+
           <WeaponEffectiveness :types="weaponTypes" />
         </div>
       </div>
@@ -63,9 +64,9 @@
         class="w-8 mr-1"
         :element="monster.monster.elementalWeakness"
       />
-      <span
-        class="font-semibold  dark:brightness-150"
-        v-text="formatElement(monster.monster.elementalWeakness)"
+      <ElementLabel
+        class="font-semibold"
+        :element="monster.monster.elementalWeakness"
       />
     </div>
   </section>
@@ -73,7 +74,6 @@
 
 <script>
   import _ from 'lodash';
-  import { formatElement } from '~/services/utils';
 
   export default {
     name: 'MonsterCombatCard',
@@ -118,10 +118,6 @@
           return 'Default';
         }
         return part;
-      },
-
-      formatElement(element) {
-        return formatElement(element);
       },
     },
   };

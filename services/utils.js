@@ -104,6 +104,15 @@ export function formatAttackType(attackTypeOrMonster) {
   }
 }
 
+export const allElements = [
+  'none',
+  'fire',
+  'water',
+  'thunder',
+  'ice',
+  'dragon',
+];
+
 export function formatElement(element) {
   switch (element) {
     case 'none':
@@ -143,6 +152,35 @@ export function formatWeaponType(weaponType) {
     default:
       return 'Unknown';
   }
+}
+
+export function formatGrowth(growth) {
+  switch (growth) {
+    case 'regular':
+      return 'Regular';
+
+    case 'quick':
+      return 'Quick';
+
+    default:
+      return 'Unknown';
+  }
+}
+
+export function stripTags(input) {
+  // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/47140708#47140708
+
+  let doc = new DOMParser().parseFromString(input, 'text/html');
+  return doc.body.textContent || '';
+}
+
+export function parseSomeMarkdown(input) {
+  let result = stripTags(input);
+
+  // **some text** -> <b>some text</b>
+  result = result.replace(/\*\*([^**]*)\*\*/g, '<b>$1</b>');
+
+  return result;
 }
 
 export function makeHead(config = {}) {

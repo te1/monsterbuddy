@@ -11,7 +11,17 @@
         :monster="monster"
       />
 
+      <MonstieInfoCard
+        class="box px-4 py-2"
+        :monster="monster"
+      />
+
       <MonsterImageCard
+        class="box px-4 py-2"
+        :monster="monster"
+      />
+
+      <MonstieStatsCard
         class="box px-4 py-2"
         :monster="monster"
       />
