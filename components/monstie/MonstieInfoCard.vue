@@ -4,6 +4,7 @@
       <EggImage :monster="monster" />
 
       <div class="ml-3 space-y-2">
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <div v-html="retreat" />
 
         <div class="flex gap-3">
