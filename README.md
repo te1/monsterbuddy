@@ -9,8 +9,8 @@ https://monsterbuddy.app
 
 ## Features
 
-- Monster list with ~~attack patterns, weapon and elemental weaknesses~~ *coming soon*
-- Monstie list with attack types, ~~retreat conditions~~ and habitats *coming soon*
+- Monster list with attack patterns, weapon and elemental weaknesses
+- Monstie list with attack types, retreat conditions and habitats
 - Egg list with search, sorting and filtering
 
 
