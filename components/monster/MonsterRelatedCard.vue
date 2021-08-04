@@ -11,7 +11,7 @@
     >
       <div
         v-if="index > 0"
-        class="my-1 border-t border-gray-300"
+        class="my-1 border-t border-gray-300 dark:border-cool-600"
       />
 
       <MonsterListItem

@@ -32,7 +32,7 @@
     </div>
 
     <MonsterImage
-      class="w-auto h-full ml-auto object-contain overflow-hidden"
+      class="w-auto h-full ml-auto p-2 object-contain overflow-hidden"
       :monster="monster"
       hideFallback
     />

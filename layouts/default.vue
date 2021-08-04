@@ -1,7 +1,7 @@
 <template>
   <div class="pb-10">
     <Nuxt
-      class="container mx-auto px-4 pt-3"
+      class="container mx-auto px-4"
       keep-alive
     />
 
