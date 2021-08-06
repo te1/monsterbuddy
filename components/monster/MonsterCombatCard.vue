@@ -20,7 +20,7 @@
           />
 
           <AttackTypeIcon
-            class="w-8 mr-1"
+            class="w-8 mr-1.5"
             :type="attackType"
           />
           <AttackTypeLabel

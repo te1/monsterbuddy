@@ -1,5 +1,8 @@
 <template>
-  <section class="space-y-2 overflow-hidden">
+  <section
+    v-if="hasStats"
+    class="space-y-2 overflow-hidden"
+  >
     <div class="flex gap-6">
       <div class="flex-1 space-y-1">
         <h3 class="text-lg font-semibold">
@@ -92,6 +95,12 @@
     },
 
     computed: {
+      hasStats() {
+        return (
+          this.monster?.monstie?.growth && this.monster?.monstie?.growth !== '?'
+        );
+      },
+
       growth() {
         return formatGrowth(this.monster?.monstie?.growth);
       },

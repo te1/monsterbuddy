@@ -16,6 +16,13 @@
         :monster="monster"
       />
 
+      <MonstieInfoCard
+        v-if="monster.hatchable"
+        hideDetails
+        class="box px-4 py-2"
+        :monster="monster"
+      />
+
       <MonsterImageCard
         class="box px-4 py-2"
         :monster="monster"
