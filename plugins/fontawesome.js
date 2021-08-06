@@ -16,6 +16,7 @@ import {
   faArrowLeft,
   faTimes,
   faAdjust,
+  faLink,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   //   faSquare,
@@ -35,7 +36,8 @@ library.add(
   faShare,
   faArrowLeft,
   faTimes,
-  faAdjust
+  faAdjust,
+  faLink
 );
 library.add(faFrown);
 library.add(faGithub);

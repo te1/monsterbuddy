@@ -9,6 +9,7 @@
       <MonsterInfoCard
         class="box px-4 py-2"
         :monster="monster"
+        showLinkToMonstie
       />
 
       <MonsterCombatCard
