@@ -25,6 +25,7 @@ export const monstiesByName = Object.freeze(_.keyBy(monsties, 'name'));
 export const monstiesBySlug = Object.freeze(_.keyBy(monsties, 'slug'));
 export const genera = getGenera();
 export const habitats = getHabitats();
+export const ridingActions = getRidingActions();
 
 export function getGenera(monsterList = monsters) {
   return deepFreeze(_.sortBy(_.uniq(_.map(monsterList, 'genus'))));
@@ -32,6 +33,12 @@ export function getGenera(monsterList = monsters) {
 
 export function getHabitats(monsterList = monsters) {
   return deepFreeze(_.sortBy(_.uniq(_.map(monsterList, 'habitat'))));
+}
+
+export function getRidingActions(monsterList = monsties) {
+  return deepFreeze(
+    _.sortBy(_.uniq(_.flatMap(_.map(monsterList, 'monstie.ridingActions'))))
+  );
 }
 
 export function getMonstersByName(name, monsterList = monsters) {
@@ -67,6 +74,17 @@ export function getMonstiesByAttackElement(
   return deepFreeze(
     _.filter(monsterList, (monster) => {
       return monster?.monstie?.attackElement === attackElement;
+    })
+  );
+}
+
+export function getMonstiesByRidingAction(
+  ridingAction,
+  monsterList = monsties
+) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return _.includes(monster?.monstie?.ridingActions, ridingAction);
     })
   );
 }

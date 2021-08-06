@@ -141,6 +141,34 @@
     </div>
 
     <div
+      v-if="showRidingActionFilter"
+      class="flex items-center"
+    >
+      <label
+        class="flex-1 cursor-pointer"
+        for="MonsterFilter_RidingActionFilter"
+      >
+        Riding Action
+      </label>
+
+      <select
+        id="MonsterFilter_RidingActionFilter"
+        v-model="store.ridingActionFilter"
+        class="w-[150px] px-2 py-1 rounded focus:ring-brand-500 focus:border-brand-500"
+      >
+        <option :value="null">All</option>
+
+        <option
+          v-for="ridingAction in store.allRidingActions"
+          :key="ridingAction"
+          :value="ridingAction"
+        >
+          {{ ridingAction }}
+        </option>
+      </select>
+    </div>
+
+    <div
       v-if="showHatchableFilter"
       class="flex items-center"
     >
@@ -222,6 +250,12 @@
       },
 
       showAttackElementFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
+      showRidingActionFilter: {
         type: Boolean,
         required: false,
         default: false,

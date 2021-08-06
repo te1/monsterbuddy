@@ -17,6 +17,7 @@
       class="mb-3"
       showAttackTypeFilter
       showAttackElementFilter
+      showRidingActionFilter
     />
 
     <ul>

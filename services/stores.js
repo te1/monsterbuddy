@@ -4,11 +4,13 @@ import { defineStore, setMapStoreSuffix } from 'pinia';
 import {
   getGenera,
   getHabitats,
+  getRidingActions,
   getMonstersByName,
   getMonstersByGenus,
   getMonstersByHabitat,
   getMonstiesByAttackType,
   getMonstiesByAttackElement,
+  getMonstiesByRidingAction,
   getMonstersByHatchable,
   getMonstersByIsDeviant,
 } from '~/services/data';
@@ -23,6 +25,7 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
     habitatFilter: null,
     attackTypeFilter: null,
     attackElementFilter: null,
+    ridingActionFilter: null,
     hatchableFilter: null,
     deviantsFilter: null,
   });
@@ -40,6 +43,7 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
         habitatFilter: initial.habitatFilter,
         attackTypeFilter: initial.attackTypeFilter,
         attackElementFilter: initial.attackElementFilter,
+        ridingActionFilter: initial.ridingActionFilter,
         hatchableFilter: initial.hatchableFilter,
         deviantsFilter: initial.deviantsFilter,
       };
@@ -52,6 +56,10 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
 
       allHabitats() {
         return getHabitats(this.monsters);
+      },
+
+      allRidingActions() {
+        return getRidingActions(this.monsters);
       },
 
       filteredMonsters() {
@@ -75,6 +83,10 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
 
         if (this.attackElementFilter != null) {
           result = getMonstiesByAttackElement(this.attackElementFilter, result);
+        }
+
+        if (this.ridingActionFilter != null) {
+          result = getMonstiesByRidingAction(this.ridingActionFilter, result);
         }
 
         if (this.hatchableFilter != null) {
@@ -146,6 +158,7 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
           this.habitatFilter !== initial.habitatFilter &&
           this.attackTypeFilter !== initial.attackTypeFilter &&
           this.attackElementFilter !== initial.attackElementFilter &&
+          this.ridingActionFilter !== initial.ridingActionFilter &&
           this.hatchableFilter !== initial.hatchableTypeFilter &&
           this.deviantsFilter !== initial.deviantsFilter
         );
@@ -160,6 +173,7 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
         this.habitatFilter = initial.habitatFilter;
         this.attackTypeFilter = initial.attackTypeFilter;
         this.attackElementFilter = initial.attackElementFilter;
+        this.ridingActionFilter = initial.ridingActionFilter;
         this.hatchableFilter = initial.hatchableFilter;
         this.deviantsFilter = initial.deviantsFilter;
       },
