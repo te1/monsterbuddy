@@ -4129,6 +4129,7 @@
       { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 5,
+    "related": [{ "type": "deviant", "monster": "Boltreaver Astalos" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -4185,6 +4186,7 @@
     "habitat": "Alcala",
     "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
     "rarity": 5,
+    "related": [{ "type": "deviant", "monster": "Hellblade Glavenus" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -4862,7 +4864,7 @@
     "no": 116,
     "name": "Silverwind Nargacuga",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op",
+    "habitat": "Hakolo Island",
     "locations": [
       { "type": "map", "main": "Hakolo Island", "sub": "East Kamuna Heights" },
       { "type": "den", "main": "Jungle" }
@@ -4889,7 +4891,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Stealth"],
       "kinshipSkill": "?",
       "eggColors": ["white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -4923,7 +4925,7 @@
     "no": 117,
     "name": "Thunderlord Zinogre",
     "genus": "Fanged Wyvern",
-    "habitat": "Co-Op",
+    "habitat": "Loloska",
     "locations": [
       { "type": "map", "main": "Loloska", "sub": "Loloska Rocky Canyon" },
       { "type": "den", "main": "Snowy Mt." }
@@ -4952,7 +4954,7 @@
     "monstie": {
       "attackType": "technical",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Jump"],
       "kinshipSkill": "?",
       "eggColors": ["green", "yellow", "orange"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -4986,7 +4988,7 @@
     "no": 118,
     "name": "Bloodbath Diablos",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op",
+    "habitat": "Lamure",
     "locations": [
       { "type": "map", "main": "Lamure", "sub": "Jalma Highlands" },
       { "type": "den", "main": "Desert" },
@@ -5015,7 +5017,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Roar", "Ground Dive"],
       "kinshipSkill": "?",
       "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5049,7 +5051,7 @@
     "no": 119,
     "name": "Grimclaw Tigrex",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op",
+    "habitat": "Alcala",
     "locations": [
       { "type": "map", "main": "Alcala", "sub": "Alcala Valley" },
       { "type": "den", "main": "Woodland" }
@@ -5076,7 +5078,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Dash", "Ivy Climb"],
       "kinshipSkill": "?",
       "eggColors": ["orange", "blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5110,7 +5112,7 @@
     "no": 120,
     "name": "Dreadqueen Rathian",
     "genus": "Flying Wyvern",
-    "habitat": "Co-Op",
+    "habitat": "Terga",
     "locations": [
       { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "den", "main": "Volcanic" }
@@ -5138,7 +5140,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Nest Search"],
       "kinshipSkill": "?",
       "eggColors": ["green", "purple", "black"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5172,7 +5174,7 @@
     "no": 121,
     "name": "Kirin",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op",
+    "habitat": "Lamure",
     "locations": [
       { "type": "map", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "den", "main": "Jungle" },
@@ -5195,7 +5197,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Jump"],
       "kinshipSkill": "?",
       "eggColors": ["blue", "white"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5229,7 +5231,7 @@
     "no": 122,
     "name": "Teostra",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op",
+    "habitat": "Terga",
     "locations": [
       { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "den", "main": "Jungle" },
@@ -5254,7 +5256,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Lava Dive", "Roar"],
       "kinshipSkill": "?",
       "eggColors": ["red", "purple"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5316,7 +5318,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Nest Search", "Mega Breaker"],
       "kinshipSkill": "?",
       "eggColors": ["brown"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5350,7 +5352,7 @@
     "no": 124,
     "name": "Kushala Daora",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op",
+    "habitat": "Alcala",
     "locations": [
       { "type": "map", "main": "Alcala", "sub": "Etulle Lofty Trees" },
       { "type": "den", "main": "Woodland" },
@@ -5376,7 +5378,7 @@
     "monstie": {
       "attackType": "technical",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Fly"],
       "kinshipSkill": "?",
       "eggColors": ["orange", "brown", "black"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5410,7 +5412,7 @@
     "no": 125,
     "name": "Velkhana",
     "genus": "Elder Dragon",
-    "habitat": "Co-Op",
+    "habitat": "Loloska",
     "locations": [
       { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" },
       { "type": "den", "main": "Snowy Mt." },
@@ -5436,7 +5438,7 @@
     "monstie": {
       "attackType": "technical",
       "growth": "?",
-      "ridingActions": [],
+      "ridingActions": ["Fly"],
       "kinshipSkill": "?",
       "eggColors": ["blue", "white", "gray"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -5465,6 +5467,130 @@
         }
       }
     }
+  },
+  {
+    "no": 126,
+    "name": "Boltreaver Astalos",
+    "genus": "Flying Wyvern",
+    "habitat": "Alcala",
+    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "rarity": 7,
+    "tags": ["deviant"],
+    "related": [{ "type": "deviantOf", "monster": "Astalos" }],
+    "monster": {
+      "attackPatterns": {
+        "DEFAULT": "technical"
+      },
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Head": ["blunt"],
+        "Stomach": ["slash", "blunt"],
+        "Tail": ["slash"],
+        "Wings": ["pierce"]
+      },
+      "elementalWeakness": "ice"
+    },
+    "hatchable": true,
+    "monstie": {
+      "attackType": "technical",
+      "growth": "?",
+      "ridingActions": ["Fly"],
+      "kinshipSkill": "?",
+      "eggColors": ["green", "black"],
+      "retreat": "This monster **cannot** be chased back to its den.", // ?
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
+    }
+  },
+  {
+    "no": 127,
+    "name": "Hellblade Glavenus",
+    "genus": "Brute Wyvern",
+    "habitat": "Terga",
+    "locations": [{ "type": "map", "main": "Terga", "sub": "?" }],
+    "rarity": 7,
+    "tags": ["deviant"],
+    "related": [{ "type": "deviantOf", "monster": "Glavenus" }],
+    "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power"
+      },
+      "parts": {
+        "Head": ["slash"],
+        "Body": ["blunt"],
+        "Tail": ["slash"]
+      },
+      "elementalWeakness": "water"
+    },
+    "hatchable": true,
+    "monstie": {
+      "attackType": "power",
+      "growth": "?",
+      "ridingActions": ["Monster Search", "Mega Breaker"],
+      "kinshipSkill": "?",
+      "eggColors": ["black", "purple", "red"],
+      "retreat": "This monster **cannot** be chased back to its den.", // ?
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
+    }
+  },
+  {
+    "no": 128,
+    "name": "Kulve Taroth",
+    "genus": "Elder Dragon",
+    "habitat": "?",
+    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "rarity": "?",
+    "monster": {
+      "attackPatterns": {},
+      "parts": {},
+      "elementalWeakness": "?"
+    },
+    "hatchable": false
   },
   // TOOD check palmute info
   {
