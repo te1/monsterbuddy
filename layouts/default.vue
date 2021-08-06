@@ -1,11 +1,12 @@
 <template>
   <div class="pb-10">
+    <AppNav />
+
     <Nuxt
       class="container mx-auto px-4"
       keep-alive
     />
 
-    <AppNav />
     <AppFooter />
   </div>
 </template>

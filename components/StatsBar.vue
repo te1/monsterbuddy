@@ -1,23 +1,22 @@
 <template>
-  <div class="flex items-center">
-    <span
-      class="w-48"
-      v-text="label"
-    />
+  <div class="flex items-center gap-2">
+    <slot>
+      <span class="w-5 h-5" />
+    </slot>
 
-    <span
-      class="w-8 mr-1 text-center font-semibold"
-      v-text="value"
-    />
-
-    <span class="flex gap-0.5">
+    <span class="flex-1 flex gap-0.5">
       <div
         v-for="n in 10"
         :key="n"
-        class="w-3 h-4"
+        class="flex-1 h-4"
         :class="getColor(n)"
       />
     </span>
+
+    <span
+      class="font-semibold"
+      v-text="value"
+    />
   </div>
 </template>
 
@@ -26,11 +25,6 @@
     name: 'StatsBar',
 
     props: {
-      label: {
-        type: String,
-        required: true,
-      },
-
       value: {
         type: Number,
         required: true,
