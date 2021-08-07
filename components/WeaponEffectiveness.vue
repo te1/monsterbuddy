@@ -7,14 +7,14 @@
     />
 
     <WeaponTypeIcon
-      type="blunt"
-      :ineffective="bluntIneffective"
+      type="pierce"
+      :ineffective="pierceIneffective"
       class="w-8 h-8"
     />
 
     <WeaponTypeIcon
-      type="pierce"
-      :ineffective="pierceIneffective"
+      type="blunt"
+      :ineffective="bluntIneffective"
       class="w-8 h-8"
     />
   </div>
