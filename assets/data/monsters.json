@@ -516,7 +516,9 @@
     "name": "Gargwa",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -533,7 +535,9 @@
     "name": "Jaggi",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -550,7 +554,9 @@
     "name": "Jaggia",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "locations": [
+      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -584,33 +590,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Nest Search"],
+      "kinshipSkill": "Jaggi Strike",
       "eggColors": ["purple", "red"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 5,
+          "recovery": 4,
+          "critRate": 6
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 1,
+          "water": 2,
+          "thunder": 2,
+          "ice": 2,
+          "dragon": 2
         }
       }
     }
@@ -1043,7 +1049,6 @@
     }
   },
   {
-    // TODO hatch
     "no": 28,
     "name": "Basarios",
     "genus": "Flying Wyvern",
@@ -1071,33 +1076,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Ore & Bone Search", "Ground Dive"],
+      "kinshipSkill": "Laser Ambush",
       "eggColors": ["yellow", "brown"],
       "retreat": "Break **each part** to boost the retreat rate",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 3,
+          "recovery": 8,
+          "critRate": 2
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 4,
+          "water": 2,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 8,
+          "water": 4,
+          "thunder": 6,
+          "ice": 6,
+          "dragon": 6
         }
       }
     }
@@ -1205,33 +1210,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Stealth"],
+      "kinshipSkill": "Dark Thrash",
       "eggColors": ["pink", "purple", "blue"],
       "retreat": "Attack it after it falls into a **Pitfall Trap** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 7,
+          "recovery": 1,
+          "critRate": 10
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 4,
+          "thunder": 3,
+          "ice": 4,
+          "dragon": 4
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 3,
+          "water": 3,
+          "thunder": 2,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -1264,33 +1269,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Nest Search"],
+      "kinshipSkill": "Scorching Slice",
       "eggColors": ["yellow", "white", "green"],
       "retreat": "Attack with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 5,
+          "recovery": 4,
+          "critRate": 4
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 6,
+          "water": 4,
+          "thunder": 4,
+          "ice": 4,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 6,
+          "water": 4,
+          "thunder": 4,
+          "ice": 4,
+          "dragon": 3
         }
       }
     }
@@ -1316,33 +1321,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Plant Search"],
+      "kinshipSkill": "Popo Dive",
       "eggColors": ["brown", "yellow"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 7,
+          "speed": 3,
+          "recovery": 6,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 2,
+          "fire": 1,
+          "water": 2,
+          "thunder": 2,
+          "ice": 3,
+          "dragon": 2
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 4,
+          "dragon": 3
         }
       }
     }
@@ -1440,33 +1445,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Mushroom Search", "Ivy Climb"],
+      "kinshipSkill": "Foul Burst",
       "eggColors": ["pink", "green"],
       "retreat": "Break the **head** with a **hammer** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 5,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
