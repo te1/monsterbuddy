@@ -167,6 +167,29 @@ export function formatGrowth(growth) {
   }
 }
 
+export function formatPhase(phase) {
+  if (phase === 'DEFAULT') {
+    return 'Default';
+  }
+  return phase;
+}
+
+export function getCounterAttackType(attackType) {
+  switch (attackType) {
+    case 'power':
+      return 'speed';
+
+    case 'technical':
+      return 'power';
+
+    case 'speed':
+      return 'technical';
+
+    default:
+      return '?';
+  }
+}
+
 export function stripTags(input) {
   // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/47140708#47140708
 

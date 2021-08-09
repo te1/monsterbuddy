@@ -5,7 +5,7 @@
       :monster="monster"
     />
 
-    <div class="ml-3 text-sm whitespace-nowrap">
+    <div class="mt-3 ml-3 text-sm whitespace-nowrap self-start">
       <div
         class="leading-tight text-gray-500  dark:text-cool-400"
         v-text="info"
@@ -16,10 +16,7 @@
       />
       <div v-text="monster.genus" />
       <div v-text="monster.habitat" />
-      <div
-        :class="{ 'opacity-0': !hasLocation }"
-        v-text="location"
-      />
+      <div v-text="location" />
     </div>
 
     <MonsterImage
@@ -52,10 +49,6 @@
 
       location() {
         return formatMonsterPrimaryLocation(this.monster);
-      },
-
-      hasLocation() {
-        return this.location !== '-';
       },
     },
   };

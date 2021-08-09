@@ -14,7 +14,7 @@
       >
     </div>
 
-    <div class="ml-3 text-sm whitespace-nowrap">
+    <div class="mt-3 ml-3 text-sm whitespace-nowrap self-start">
       <div
         class="leading-tight text-gray-500 dark:text-cool-400"
         v-text="info"
@@ -23,12 +23,26 @@
         class="text-base font-semibold leading-snug"
         v-text="monster.name"
       />
-      <div v-text="monster.genus" />
-      <div v-text="monster.habitat" />
-      <div
-        :class="{ 'opacity-0': !hasLocation }"
-        v-text="location"
-      />
+
+      <template v-if="showLocation">
+        <div v-text="monster.genus" />
+        <div v-text="monster.habitat" />
+        <div v-text="location" />
+      </template>
+
+      <template v-if="showCombat">
+        <div
+          v-for="(attackType, phase) in monster.monster.attackPatterns"
+          :key="phase"
+        >
+          {{ formatPhase(phase) }}:
+
+          <AttackTypeLabel
+            class="font-semibold"
+            :type="attackType"
+          />
+        </div>
+      </template>
     </div>
 
     <MonsterImage
@@ -40,9 +54,11 @@
 </template>
 
 <script>
+  import _ from 'lodash';
   import {
     formatMonsterInfo,
     formatMonsterPrimaryLocation,
+    formatPhase,
   } from '~/services/utils';
 
   export default {
@@ -52,6 +68,12 @@
       monster: {
         type: Object,
         required: true,
+      },
+
+      mode: {
+        type: String,
+        required: false,
+        default: 'location',
       },
     },
 
@@ -64,9 +86,17 @@
         return formatMonsterPrimaryLocation(this.monster);
       },
 
-      hasLocation() {
-        return this.location !== '-';
+      showLocation() {
+        return _.includes(['location'], this.mode);
       },
+
+      showCombat() {
+        return _.includes(['combat'], this.mode);
+      },
+    },
+
+    methods: {
+      formatPhase,
     },
   };
 </script>

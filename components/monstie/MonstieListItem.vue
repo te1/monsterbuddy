@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="ml-3 text-sm whitespace-nowrap">
+    <div class="mt-3 ml-3 text-sm whitespace-nowrap self-start">
       <div
         class="leading-tight text-gray-500 dark:text-cool-400"
         v-text="info"
@@ -25,12 +25,75 @@
         class="text-base font-semibold leading-snug"
         v-text="monster.name"
       />
-      <div v-text="monster.genus" />
-      <div v-text="monster.habitat" />
+
+      <template v-if="showLocation">
+        <div v-text="monster.genus" />
+        <div v-text="monster.habitat" />
+        <div v-text="location" />
+      </template>
+
+      <!-- eslint-disable vue/no-v-html -->
       <div
-        :class="{ 'opacity-0': !hasLocation }"
-        v-text="location"
+        v-if="showRetreat"
+        class="whitespace-normal"
+        v-html="retreat"
       />
+
+      <div
+        v-if="showRidingActions"
+        class="whitespace-normal"
+      >
+        <span
+          v-for="(action, index) in monster.monstie.ridingActions"
+          :key="action"
+        >
+          {{ action }}<span v-if="index+1 < monster.monstie.ridingActions.length">, </span>
+        </span>
+      </div>
+
+      <div
+        v-if="showStats"
+        class="tracking-tighter"
+      >
+        <div v-if="hasStats">
+          HP <span
+            class="font-semibold"
+            v-text="monster.monstie.stats.base.maxHp"
+          />,
+          Speed <span
+            class="font-semibold"
+            v-text="monster.monstie.stats.base.speed"
+          />,
+          Crit <span
+            class="font-semibold"
+            v-text="monster.monstie.stats.base.critRate"
+          />
+        </div>
+
+        <div v-if="monster.monstie.stats.bestAttack">
+          Atk
+          <span
+            class="font-semibold"
+            v-text="monster.monstie.stats.bestAttack.value"
+          />
+          <ElementLabel
+            :element="monster.monstie.stats.bestAttack.element"
+            justText
+          />
+        </div>
+
+        <div v-if="monster.monstie.stats.worstDefense">
+          Def
+          <span
+            class="font-semibold"
+            v-text="monster.monstie.stats.worstDefense.value"
+          />
+          <ElementLabel
+            :element="monster.monstie.stats.worstDefense.element"
+            justText
+          />
+        </div>
+      </div>
     </div>
 
     <MonsterImage
@@ -42,9 +105,11 @@
 </template>
 
 <script>
+  import _ from 'lodash';
   import {
     formatMonsterInfo,
     formatMonsterPrimaryLocation,
+    parseSomeMarkdown,
   } from '~/services/utils';
 
   export default {
@@ -54,6 +119,12 @@
       monster: {
         type: Object,
         required: true,
+      },
+
+      mode: {
+        type: String,
+        required: false,
+        default: 'location',
       },
     },
 
@@ -66,8 +137,30 @@
         return formatMonsterPrimaryLocation(this.monster);
       },
 
-      hasLocation() {
-        return this.location !== '-';
+      retreat() {
+        return parseSomeMarkdown(this.monster?.monstie?.retreat);
+      },
+
+      hasStats() {
+        return (
+          this.monster?.monstie?.growth && this.monster?.monstie?.growth !== '?'
+        );
+      },
+
+      showLocation() {
+        return _.includes(['location'], this.mode);
+      },
+
+      showRidingActions() {
+        return _.includes(['ridingActions'], this.mode);
+      },
+
+      showRetreat() {
+        return _.includes(['retreat'], this.mode);
+      },
+
+      showStats() {
+        return _.includes(['stats'], this.mode);
       },
     },
   };

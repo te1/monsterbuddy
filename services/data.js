@@ -10,6 +10,8 @@ _.forEach(monsters, (monster) => {
 
   if (monster.hatchable && monster.monstie) {
     monster.monstie.attackElement = getMonstieAttackElement(monster);
+    monster.monstie.stats.bestAttack = getMonstieBestAttack(monster);
+    monster.monstie.stats.worstDefense = getMonstieWorstDefense(monster);
   }
 });
 
@@ -140,6 +142,10 @@ export function isElementalVariant(monster) {
 }
 
 function getMonstieAttackElement(monster) {
+  return getMonstieBestAttack(monster)?.element;
+}
+
+function getMonstieBestAttack(monster) {
   let attack = monster?.monstie?.stats?.attack;
 
   attack = _.transform(
@@ -150,5 +156,19 @@ function getMonstieAttackElement(monster) {
     []
   );
 
-  return _.maxBy(attack, 'value')?.element;
+  return _.maxBy(attack, 'value');
+}
+
+function getMonstieWorstDefense(monster) {
+  let defense = monster?.monstie?.stats?.defense;
+
+  defense = _.transform(
+    defense,
+    (result, value, key) => {
+      result.push({ element: key, value });
+    },
+    []
+  );
+
+  return _.minBy(defense, 'value');
 }

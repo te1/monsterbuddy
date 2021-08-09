@@ -15,7 +15,7 @@
           class="flex items-center"
         >
           <span
-            class="w-48"
+            class="w-36"
             v-text="formatPhase(phase)"
           />
 
@@ -27,6 +27,12 @@
             class="font-semibold"
             :type="attackType"
           />
+
+          <!--
+          <AttackTypeLabel
+            class="ml-1.5 font-semibold"
+            :type="getCounterAttackType(attackType)"
+          /> -->
         </div>
       </div>
     </div>
@@ -43,7 +49,7 @@
           class="flex items-center"
         >
           <span
-            class="w-48"
+            class="w-36"
             v-text="formatPart(part)"
           />
 
@@ -56,8 +62,8 @@
       v-if="hasElementalWeakness"
       class="pt-2 flex items-center"
     >
-      <h3 class="w-48 text-lg font-semibold">
-        Elemental Weakness
+      <h3 class="w-36 text-lg font-semibold">
+        Weakness
       </h3>
 
       <ElementIcon
@@ -74,6 +80,7 @@
 
 <script>
   import _ from 'lodash';
+  import { formatPhase, getCounterAttackType } from '~/services/utils';
 
   export default {
     name: 'MonsterCombatCard',
@@ -106,12 +113,8 @@
     },
 
     methods: {
-      formatPhase(phase) {
-        if (phase === 'DEFAULT') {
-          return 'Default';
-        }
-        return phase;
-      },
+      formatPhase,
+      getCounterAttackType,
 
       formatPart(part) {
         if (part === 'DEFAULT') {

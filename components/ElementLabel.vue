@@ -1,6 +1,6 @@
 <template>
   <span
-    class="dark:brightness-150"
+    :class="classes"
     v-text="caption"
   />
 </template>
@@ -17,11 +17,24 @@
         required: false,
         default: null,
       },
+
+      justText: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     computed: {
       caption() {
         return formatElement(this.element);
+      },
+
+      classes() {
+        if (this.justText) {
+          return null;
+        }
+        return 'dark:brightness-150';
       },
     },
   };
