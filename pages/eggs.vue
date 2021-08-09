@@ -48,7 +48,26 @@
           />
         </div>
 
-        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div
+          v-if="compact"
+          class="grid gap-3 grid-cols-2"
+        >
+          <NuxtLink
+            v-for="monster in group"
+            :key="monster.no"
+            :to="`/monsties/${monster.slug}/`"
+          >
+            <EggGridItem
+              :monster="monster"
+              class="box px-1 overflow-hidden"
+            />
+          </NuxtLink>
+        </div>
+
+        <div
+          v-else
+          class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
           <NuxtLink
             v-for="monster in group"
             :key="monster.no"
@@ -105,6 +124,7 @@
 
     data() {
       return {
+        compact: false,
         showFilter: false,
       };
     },
