@@ -20,7 +20,7 @@
     </div>
 
     <MonsterImage
-      class="w-auto h-full ml-auto p-2 object-contain overflow-hidden"
+      class="w-full h-full p-2 object-contain object-right"
       :monster="monster"
     />
   </div>
