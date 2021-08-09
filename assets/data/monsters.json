@@ -1064,8 +1064,6 @@
         "Enraged": "power"
       },
       "parts": {
-        // TODO figure out "broken" interactions
-        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -1517,33 +1515,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Nest Search"],
+      "kinshipSkill": "Lullabite",
       "eggColors": ["blue", "yellow"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 5,
+          "recovery": 2,
+          "critRate": 6
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -1575,38 +1573,39 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Bug Search", "Ivy Climb"],
+      "kinshipSkill": "Torrent Glide",
       "eggColors": ["orange", "red"],
       "retreat": "Break the **head** with a **sword & shield** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 5,
+          "recovery": 6,
+          "critRate": 7
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 4,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 2,
+          "fire": 1,
+          "water": 3,
+          "thunder": 2,
+          "ice": 2,
+          "dragon": 2
         }
       }
     }
   },
   {
+    // TODO hatch
     "no": 41,
     "name": "Gypceros",
     "genus": "Bird Wyvern",
@@ -1708,33 +1707,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Swim", "Monster Search"],
+      "kinshipSkill": "Freezing Spouts",
       "eggColors": ["blue", "green", "orange"],
       "retreat": "Break the **stomach** while it is **swollen** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 4,
+          "recovery": 6,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 3,
+          "water": 3,
+          "thunder": 2,
+          "ice": 5,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 3,
+          "water": 3,
+          "thunder": 2,
+          "ice": 5,
+          "dragon": 3
         }
       }
     }
@@ -1767,33 +1766,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Monster Search", "Ivy Climb"],
+      "kinshipSkill": "Predator Needle",
       "eggColors": ["purple", "red", "pink"],
       "retreat": "Break the **needles** with a **fire element attack** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 5,
+          "recovery": 6,
+          "critRate": 7
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 2,
+          "water": 3,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -1814,7 +1813,6 @@
         "Covered in mud": "technical"
       },
       "parts": {
-        // TODO figure out covered in mud interactions
         "DEFAULT": ["slash"],
         "Body": ["slash"],
         "Head": ["blunt"],
@@ -1826,38 +1824,39 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Bug Search", "Ground Dive"],
+      "kinshipSkill": "Rushing Charge",
       "eggColors": ["brown", "orange"],
       "retreat": "Wash off its **mud cover** by using a **water element attack** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 2,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 4,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 3,
+          "water": 7,
+          "thunder": 5,
+          "ice": 5,
+          "dragon": 5
         }
       }
     }
   },
   {
+    // TODO hatch
     "no": 46,
     "name": "Tobi-Kadachi",
     "genus": "Fanged Wyvern",
@@ -1915,6 +1914,7 @@
     }
   },
   {
+    // TODO hatch
     "no": 47,
     "name": "Khezu",
     "genus": "Flying Wyvern",
@@ -1971,6 +1971,7 @@
     }
   },
   {
+    // TODO hatch
     "no": 48,
     "name": "Red Khezu",
     "genus": "Flying Wyvern",
@@ -2028,6 +2029,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 49,
     "name": "Seltas",
     "genus": "Neopteron",
@@ -2048,6 +2050,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 50,
     "name": "Seltas Queen",
     "genus": "Neopteron",
@@ -2072,6 +2075,7 @@
     }
   },
   {
+    // TODO hatch
     "no": 51,
     "name": "Lagombi",
     "genus": "Fanged Beast",
@@ -2143,7 +2147,6 @@
         "Covered in snow": "technical"
       },
       "parts": {
-        // TODO figure out covered in snow interactions
         "DEFAULT": ["slash"],
         "Body": ["slash"],
         "Head": ["blunt"],
@@ -2155,33 +2158,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Bug Search", "Ground Dive"],
+      "kinshipSkill": "Rushing Charge",
       "eggColors": ["blue", "green"],
       "retreat": "Shake off its **snow cover** by using a **thunder element attack** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 3,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 3,
+          "water": 3,
+          "thunder": 2,
+          "ice": 4,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 5,
+          "water": 5,
+          "thunder": 3,
+          "ice": 7,
+          "dragon": 5
         }
       }
     }
@@ -2211,38 +2214,39 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Roar"],
+      "kinshipSkill": "Anja Assault",
       "eggColors": ["pink", "black"],
       "retreat": "Break the **nose** with a **water element attack** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 4,
+          "recovery": 1,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 7,
+          "water": 3,
+          "thunder": 5,
+          "ice": 5,
+          "dragon": 5
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 4,
+          "water": 2,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
   },
   {
+    // TODO defeat, hatch
     "no": 54,
     "name": "Gammoth",
     "genus": "Fanged Beast",
@@ -2254,15 +2258,11 @@
         "DEFAULT": "power"
       },
       "parts": {
-        // TODO figure out "broken" interactions
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
-        // "Broken Head": ["slash", "blunt"],
         "Head": ["blunt"],
         "Nose": ["slash"],
-        // "Broken Nose": ["slash", "blunt"],
         "Legs": ["blunt"],
-        // "Broken Legs": ["blunt"],
         "Tail": ["slash"]
       },
       "elementalWeakness": "fire"
@@ -2302,6 +2302,7 @@
     }
   },
   {
+    // TODO hatch
     "no": 55,
     "name": "Zinogre",
     "genus": "Fanged Wyvern",
@@ -2363,6 +2364,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 56,
     "name": "Barioth",
     "genus": "Flying Wyvern",
@@ -2445,33 +2447,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "quick",
+      "ridingActions": ["Fly"],
+      "kinshipSkill": "Icicle Realm",
       "eggColors": ["yellow", "white", "blue", "black"],
       "retreat": "Stop it from **gliding** using a **Flash Bomb**, then attack with a **thunder element attack** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 6,
+          "recovery": 1,
+          "critRate": 8
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 5,
+          "water": 5,
+          "thunder": 3,
+          "ice": 7,
+          "dragon": 5
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 3,
+          "water": 3,
+          "thunder": 2,
+          "ice": 5,
+          "dragon": 3
         }
       }
     }
@@ -2517,6 +2519,7 @@
     }
   },
   {
+    // TODO defeat
     "no": 60,
     "name": "Konchu (Red)",
     "genus": "Neopteron",
@@ -2573,6 +2576,7 @@
     }
   },
   {
+    // TODO defeat
     "no": 63,
     "name": "Uroktor",
     "genus": "Leviathan",
@@ -2589,6 +2593,7 @@
     }
   },
   {
+    // TODO defeat
     "no": 64,
     "name": "Ioprey",
     "genus": "Bird Wyvern",
@@ -2606,6 +2611,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 65,
     "name": "Iodrome",
     "genus": "Bird Wyvern",
@@ -2659,6 +2665,7 @@
     }
   },
   {
+    // TODO defeat
     "no": 66,
     "name": "Genprey",
     "genus": "Bird Wyvern",
@@ -2676,6 +2683,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 67,
     "name": "Gendrome",
     "genus": "Bird Wyvern",
@@ -2773,38 +2781,39 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Monster Search", "Ground Dive"],
+      "kinshipSkill": "Sand Spray",
       "eggColors": ["brown", "green", "orange"],
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 4,
+          "speed": 5,
+          "recovery": 5,
+          "critRate": 5
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 3,
+          "water": 3,
+          "thunder": 3,
+          "ice": 2,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 3,
+          "water": 3,
+          "thunder": 3,
+          "ice": 2,
+          "dragon": 3
         }
       }
     }
   },
   {
+    // TODO defeat, hatch
     "no": 70,
     "name": "Ash Kecha Wacha",
     "genus": "Fanged Beast",
@@ -2863,6 +2872,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 71,
     "name": "Purple Gypceros",
     "genus": "Bird Wyvern",
@@ -2920,6 +2930,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 72,
     "name": "Green Nargacuga",
     "genus": "Flying Wyvern",
@@ -2978,6 +2989,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 73,
     "name": "Diablos",
     "genus": "Flying Wyvern",
@@ -3038,6 +3050,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 74,
     "name": "Black Diablos",
     "genus": "Flying Wyvern",
@@ -3098,6 +3111,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 75,
     "name": "White Monoblos",
     "genus": "Flying Wyvern",
@@ -3155,6 +3169,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 76,
     "name": "Crimson Qurupeco",
     "genus": "Bird Wyvern",
@@ -3209,6 +3224,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 77,
     "name": "Mizutsune",
     "genus": "Leviathan",
@@ -3263,6 +3279,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 78,
     "name": "Lagiacrus",
     "genus": "Leviathan",
@@ -3319,6 +3336,7 @@
     }
   },
   {
+    // TODO defeat, hatch
     "no": 79,
     "name": "Uragaan",
     "genus": "Brute Wyvern",
@@ -3333,12 +3351,10 @@
         "Enraged": "technical"
       },
       "parts": {
-        // TODO figure out "powderstone" interactions
         "DEFAULT": ["slash"],
         "Stomach": ["slash"],
         "Head": ["blunt"],
         "Tail": ["slash", "blunt"]
-        // "Powderstone": ["blunt"]
       },
       "elementalWeakness": "water"
     },
@@ -3377,6 +3393,7 @@
     }
   },
   {
+    // TODO defeat
     "no": 80,
     "name": "Daimyo Hermitaur",
     "genus": "Carapaceon",
@@ -3390,17 +3407,15 @@
         "Enraged": "power"
       },
       "parts": {
-        // TODO figure out "broken" interactions
         "Shell": ["blunt"],
-        // "Broken Shell": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        // "Broken Claws": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "fire"
     }
   },
   {
+    // TODO defeat
     "no": 81,
     "name": "Plum Daimyo Hermitaur",
     "genus": "Carapaceon",
@@ -3414,17 +3429,15 @@
         "Enraged": "speed"
       },
       "parts": {
-        // TODO figure out "broken" interactions
         "Shell": ["blunt"],
-        // "Broken Shell": ["slash", "blunt", "pierce"],
         "Claws": ["blunt"],
-        // "Broken Claws": ["slash", "blunt", "pierce"],
         "Body": ["blunt"]
       },
       "elementalWeakness": "ice"
     }
   },
   {
+    // TODO defeat, hatch
     "no": 82,
     "name": "Brute Tigrex",
     "genus": "Flying Wyvern",
@@ -3504,33 +3517,33 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "?",
+      "growth": "regular",
+      "ridingActions": ["Swim"],
+      "kinshipSkill": "Moonsault Splash",
       "eggColors": ["pink", "white"],
       "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 5,
+          "speed": 4,
+          "recovery": 6,
+          "critRate": 4
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 5,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 3,
+          "fire": 2,
+          "water": 5,
+          "thunder": 3,
+          "ice": 3,
+          "dragon": 3
         }
       }
     }
@@ -3549,8 +3562,6 @@
         "Enraged": "power"
       },
       "parts": {
-        // TODO figure out "broken" interactions
-        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Wing": ["pierce"],
@@ -3608,8 +3619,6 @@
         "Enraged": "technical"
       },
       "parts": {
-        // TODO figure out "broken" interactions
-        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
@@ -3920,8 +3929,6 @@
         "Enraged": "technical"
       },
       "parts": {
-        // TODO figure out "broken" interactions
-        // "Broken Stomach": ["slash", "blunt", "pierce"],
         "Stomach": ["blunt"],
         "Head": ["blunt"],
         "Legs": ["slash"]
@@ -4093,12 +4100,10 @@
         "White spiked": "power"
       },
       "parts": {
-        // TODO figure out white spikes interactions
         "DEFAULT": ["slash", "pierce"],
         "Head": ["blunt"],
         "Legs": ["slash"],
         "Wings": ["slash"]
-        // "White Spikes": ["slash", "blunt", "pierce"]
       },
       "elementalWeakness": "thunder"
     },
@@ -4265,12 +4270,8 @@
         "No Ice Armor": "technical"
       },
       "parts": {
-        // TODO figure out "broken" interactions
-        // "Broken Body": ["blunt"],
         "Body": ["slash", "pierce"],
-        // "Broken Head": ["blunt"],
         "Head": ["slash", "pierce"],
-        // "Broken Tail": ["blunt"],
         "Tail": ["slash", "pierce"]
       },
       "elementalWeakness": "fire"
