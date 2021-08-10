@@ -52,7 +52,7 @@
           <NuxtLink
             class="link"
             to="/monsties/"
-          >Monstie list</NuxtLink> with attack types, <span class="line-through">retreat conditions</span> and habitats <i>coming soon</i>
+          >Monstie list</NuxtLink> with attack types, retreat conditions and habitats
         </li>
 
         <li>
