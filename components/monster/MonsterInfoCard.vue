@@ -75,10 +75,7 @@
       class="mt-4 flex items-center gap-1"
     >
       <span class="w-5 text-center text-gray-600 dark:text-cool-400">
-        <FaIcon
-          :icon="['fas', 'link']"
-          title="Genus"
-        />
+        <FaIcon :icon="['fas', 'link']" />
       </span>
 
       <NuxtLink

@@ -5,9 +5,9 @@
     <div class="fixed top-0 inset-x-0 h-12 z-10 shadow border-b border-gray-300 bg-white dark:border-cool-600 dark:bg-cool-800">
       <div class="container mx-auto px-4 h-full flex items-center justify-between">
         <span class="w-10 mr-4 text-xl">
-          <FaIcon
+          <AppIconButton
             v-if="showBack"
-            class="ml-1 cursor-pointer"
+            class="ml-1"
             title="Back"
             :icon="['fas', 'arrow-left']"
             @click="goBack"
@@ -23,16 +23,17 @@
         <slot />
 
         <span class="w-10 ml-4 text-xl text-right">
-          <FaIcon
+          <AppIconButton
             v-if="showClose"
-            class="mr-2 cursor-pointer"
+            class="mr-2"
             title="Close"
             :icon="['fas', 'times']"
             @click="$emit('close')"
           />
-          <FaIcon
+          <AppIconButton
             v-else
-            class="mr-2 cursor-pointer"
+            class="mr-2"
+            title="Toggle dark mode"
             :icon="['fas', 'adjust']"
             @click="toggleDarkMode"
           />

@@ -15,7 +15,7 @@
       />
 
       <MonsterListItem
-        class="overflow-hidden"
+        class="-mx-3 box-link-inline overflow-hidden"
         :monster="getMonsterByName(relation.monster)"
       />
     </NuxtLink>

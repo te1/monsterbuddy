@@ -2,7 +2,7 @@
   <div>
     <AppTopBar />
 
-    <AppFab
+    <AppFloatingButton
       title="Sort and filter"
       @click="showFilter = !showFilter"
     >
@@ -10,7 +10,7 @@
         class="pt-px"
         :icon="['fas', 'filter']"
       />
-    </AppFab>
+    </AppFloatingButton>
 
     <MonsterFilter
       v-show="showFilter"
@@ -59,7 +59,7 @@
           >
             <EggGridItem
               :monster="monster"
-              class="box px-1 overflow-hidden"
+              class="box box-link px-1 overflow-hidden"
             />
           </NuxtLink>
         </div>
@@ -75,7 +75,7 @@
           >
             <EggListItem
               :monster="monster"
-              class="box px-1 overflow-hidden"
+              class="box box-link px-1 overflow-hidden"
             />
           </NuxtLink>
         </div>

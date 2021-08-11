@@ -4,7 +4,7 @@
 
 @layer components {
   a.link {
-    @apply no-underline font-normal text-brand-600 dark:text-brand-500;
+    @apply no-underline font-normal transition-colors text-brand-600 dark:text-brand-500;
   }
   a.link:visited {
     @apply text-brand-800 dark:text-brand-400;
@@ -20,6 +20,14 @@
 
   .box {
     @apply rounded shadow bg-white dark:bg-cool-800;
+  }
+
+  .box-link {
+    @apply hover:transition-colors active:transition-colors focus:transition-colors hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-cool-900/50 dark:active:bg-cool-900/75;
+  }
+
+  .box-link-inline {
+    @apply hover:transition-opacity active:transition-opacity focus:transition-opacity hover:opacity-75 active:opacity-50;
   }
 }
 
