@@ -191,10 +191,16 @@ export function getCounterAttackType(attackType) {
 }
 
 export function stripTags(input) {
-  // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/47140708#47140708
+  if (typeof window !== 'undefined') {
+    // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/47140708#47140708
 
-  let doc = new DOMParser().parseFromString(input, 'text/html');
-  return doc.body.textContent || '';
+    let doc = new DOMParser().parseFromString(input, 'text/html');
+    return doc.body.textContent || '';
+  }
+
+  // DOMParser is not available in SSR, so use a workaround
+  // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/822464#822464
+  return input.replace(/<[^>]*>?/gm, '');
 }
 
 export function parseSomeMarkdown(input) {
