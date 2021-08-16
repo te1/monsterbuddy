@@ -58,17 +58,17 @@
       let description = `${this.monster.name} is a ${this.monster.rarity} star rarity `;
 
       if (this.monster.hatchable) {
-        description += ' hatchable ';
+        description += 'hatchable ';
       }
 
       if (isDeviant(this.monster)) {
-        description += ' Deviant ';
+        description += 'Deviant ';
       }
 
       description += `${this.monster.genus} found in ${this.monster.habitat}.`;
 
       return makeHead({
-        title: `Monster Buddy - ${this.monster.name} Details In Monster Hunter Stories 2`,
+        title: `Monster Buddy - ${this.monster.name} In Monster Hunter Stories 2`,
         description,
         canonical: `https://monsterbuddy.app/monsters/${this.monster.slug}/`,
         image: `https://monsterbuddy.app/images/monsters-small/${this.monster.name}.webp`,
