@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center h-[150px]">
     <EggImage
       class="w-[120px] h-[120px] -mx-3"
       :monster="monster"

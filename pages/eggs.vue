@@ -124,7 +124,7 @@
 
     data() {
       return {
-        compact: false,
+        compact: true,
         showFilter: false,
       };
     },
