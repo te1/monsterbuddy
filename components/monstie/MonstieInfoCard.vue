@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div v-if="!hideDetails && hasRidingActions">
+    <div v-if="hasRidingActions">
       <h3 class="text-lg font-semibold">
         Riding Actions
       </h3>

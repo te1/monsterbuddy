@@ -1,6 +1,6 @@
 <template>
   <section class="flex overflow-hidden">
-    <div class="flex-1">
+    <div class="flex-1 mr-1">
       <h3 class="text-lg font-semibold">
         Retreat
       </h3>
