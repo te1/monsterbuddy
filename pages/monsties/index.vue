@@ -1,6 +1,8 @@
 <template>
   <div>
-    <AppTopBar />
+    <AppTopBar>
+      <AppSearchBox v-model="monstieFilter.nameFilter" />
+    </AppTopBar>
 
     <AppFloatingButton
       title="Sort and filter"

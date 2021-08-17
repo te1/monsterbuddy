@@ -6,7 +6,7 @@ import {
   //   faArrowUp,
   //   faArrowDown,
   //   faBan,
-  //   faSearch,
+  faSearch,
   faFilter,
   faDna,
   faMapMarkerAlt,
@@ -16,7 +16,7 @@ import {
   faArrowLeft,
   faTimes,
   faAdjust,
-  faLink,
+  // faLink,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   //   faSquare,
@@ -29,6 +29,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 config.autoAddCss = false;
 
 library.add(
+  faSearch,
   faFilter,
   faDna,
   faMapMarkerAlt,
@@ -36,8 +37,7 @@ library.add(
   faShare,
   faArrowLeft,
   faTimes,
-  faAdjust,
-  faLink
+  faAdjust
 );
 library.add(faFrown);
 library.add(faGithub);

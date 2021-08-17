@@ -20,7 +20,10 @@
       </select>
     </div>
 
-    <div class="flex items-center">
+    <div
+      v-if="false"
+      class="flex items-center"
+    >
       <label
         class="flex-1 cursor-pointer"
         for="MonsterFilter_NameFilter"
