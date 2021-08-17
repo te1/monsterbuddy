@@ -69,31 +69,6 @@
         v-text="location"
       />
     </div>
-
-    <div
-      v-if="showLinkToMonster || (showLinkToMonstie && monster.hatchable)"
-      class="mt-4 flex items-center gap-1"
-    >
-      <span class="w-5 text-center text-gray-600 dark:text-cool-400">
-        <FaIcon :icon="['fas', 'link']" />
-      </span>
-
-      <NuxtLink
-        v-if="showLinkToMonster"
-        class="link"
-        :to="`/monsters/${monster.slug}`"
-      >
-        Go To Monster Details
-      </NuxtLink>
-
-      <NuxtLink
-        v-if="showLinkToMonstie && monster.hatchable"
-        class="link"
-        :to="`/monsties/${monster.slug}`"
-      >
-        Go To Monstie Details
-      </NuxtLink>
-    </div>
   </section>
 </template>
 
@@ -107,18 +82,6 @@
       monster: {
         type: Object,
         required: true,
-      },
-
-      showLinkToMonster: {
-        type: Boolean,
-        required: false,
-        default: false,
-      },
-
-      showLinkToMonstie: {
-        type: Boolean,
-        required: false,
-        default: false,
       },
     },
 

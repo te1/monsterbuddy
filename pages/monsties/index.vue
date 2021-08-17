@@ -52,7 +52,7 @@
           <NuxtLink
             v-for="monster in group"
             :key="monster.no"
-            :to="`/monsties/${monster.slug}/`"
+            :to="`/monsters/${monster.slug}/`"
           >
             <MonstieListItem
               :monster="monster"

@@ -33,12 +33,6 @@
         type: Object,
         required: true,
       },
-
-      monstieMode: {
-        type: Boolean,
-        required: false,
-        default: false,
-      },
     },
 
     computed: {
@@ -55,9 +49,6 @@
       getRelationLink(monsterName) {
         let monster = this.getMonsterByName(monsterName);
 
-        if (this.monstieMode && monster.hatchable) {
-          return `/monsties/${monster.slug}/`;
-        }
         return `/monsters/${monster.slug}/`;
       },
     },

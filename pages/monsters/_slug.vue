@@ -9,7 +9,6 @@
       <MonsterInfoCard
         class="box px-4 py-2"
         :monster="monster"
-        showLinkToMonstie
       />
 
       <MonsterCombatCard
@@ -17,14 +16,25 @@
         :monster="monster"
       />
 
-      <MonstieInfoCard
+      <MonstieEggCard
         v-if="monster.hatchable"
-        hideDetails
         class="box px-4 py-2"
         :monster="monster"
       />
 
       <MonsterImageCard
+        class="box px-4 py-2"
+        :monster="monster"
+      />
+
+      <MonstieInfoCard
+        v-if="monster.hatchable"
+        class="box px-4 py-2"
+        :monster="monster"
+      />
+
+      <MonstieStatsCard
+        v-if="monster.hatchable"
         class="box px-4 py-2"
         :monster="monster"
       />

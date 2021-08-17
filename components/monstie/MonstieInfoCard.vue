@@ -1,9 +1,6 @@
 <template>
   <section class="space-y-3 overflow-hidden">
-    <div
-      v-if="!hideDetails"
-      class="space-y-1"
-    >
+    <div class="space-y-1">
       <h3 class="text-lg font-semibold">
         Monstie Info
       </h3>
@@ -64,28 +61,10 @@
         </span>
       </div>
     </div>
-
-    <div class="flex">
-      <div class="flex-1">
-        <h3 class="text-lg font-semibold">
-          Retreat
-        </h3>
-
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <div v-html="retreat" />
-      </div>
-
-      <EggImage
-        class="-mx-3"
-        :monster="monster"
-      />
-    </div>
   </section>
 </template>
 
 <script>
-  import { parseSomeMarkdown } from '~/services/utils';
-
   export default {
     name: 'MonstieInfoCard',
 
@@ -94,21 +73,11 @@
         type: Object,
         required: true,
       },
-
-      hideDetails: {
-        type: Boolean,
-        required: false,
-        default: false,
-      },
     },
 
     computed: {
       hasRidingActions() {
         return !!this.monster.monstie.ridingActions.length;
-      },
-
-      retreat() {
-        return parseSomeMarkdown(this.monster?.monstie?.retreat);
       },
     },
   };

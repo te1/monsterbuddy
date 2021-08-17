@@ -55,7 +55,7 @@
           <NuxtLink
             v-for="monster in group"
             :key="monster.no"
-            :to="`/monsties/${monster.slug}/`"
+            :to="`/monsters/${monster.slug}/`"
           >
             <EggGridItem
               :monster="monster"
@@ -71,7 +71,7 @@
           <NuxtLink
             v-for="monster in group"
             :key="monster.no"
-            :to="`/monsties/${monster.slug}/`"
+            :to="`/monsters/${monster.slug}/`"
           >
             <EggListItem
               :monster="monster"

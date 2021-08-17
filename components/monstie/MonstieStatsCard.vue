@@ -3,11 +3,15 @@
     v-if="hasStats"
     class="space-y-2 overflow-hidden"
   >
+    <h3 class="text-lg font-semibold">
+      Monstie Stats
+    </h3>
+
     <div class="flex gap-6">
       <div class="flex-1 space-y-1">
-        <h3 class="text-lg font-semibold">
+        <div>
           Growth: {{ growth }}
-        </h3>
+        </div>
 
         <div class="-mr-10 space-y-1 text-right">
           <div>Max HP</div>
@@ -18,9 +22,9 @@
       </div>
 
       <div class="flex-1 space-y-1">
-        <h3 class="text-lg text-right pr-4 font-semibold">
+        <h4 class="text-right pr-4 font-semibold">
           Basic Stats
-        </h3>
+        </h4>
 
         <div class="space-y-1">
           <StatsBar :value="monster.monstie.stats.base.maxHp" />
@@ -33,9 +37,9 @@
 
     <div class="flex gap-6">
       <div class="flex-1 space-y-1">
-        <h3 class="text-lg text-right pr-4 font-semibold">
+        <h4 class="text-right pr-4 font-semibold">
           Attack
-        </h3>
+        </h4>
 
         <div class="space-y-1">
           <StatsBar
@@ -53,9 +57,9 @@
       </div>
 
       <div class="flex-1 space-y-1">
-        <h3 class="text-lg text-right pr-4 font-semibold">
+        <h4 class="text-right pr-4 font-semibold">
           Defense
-        </h3>
+        </h4>
 
         <div class="space-y-1">
           <StatsBar
