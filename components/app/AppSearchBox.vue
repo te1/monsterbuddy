@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex-1 -mt-0.5">
+  <div class="relative flex-1">
     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
       <FaIcon
         :icon="['fas', 'search']"

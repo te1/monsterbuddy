@@ -51,46 +51,35 @@
         </span>
       </div>
 
-      <div
-        v-if="showStats"
-        class="tracking-tighter"
-      >
+      <div v-if="showStats">
         <div v-if="hasStats">
           HP <span
-            class="font-semibold"
+            class="font-bold"
             v-text="monster.monstie.stats.base.maxHp"
           />,
           Speed <span
-            class="font-semibold"
+            class="font-bold"
             v-text="monster.monstie.stats.base.speed"
           />,
           Crit <span
-            class="font-semibold"
+            class="font-bold"
             v-text="monster.monstie.stats.base.critRate"
           />
         </div>
 
         <div v-if="monster.monstie.stats.bestAttack">
-          Atk
+          Attack
           <span
-            class="font-semibold"
+            class="font-bold"
             v-text="monster.monstie.stats.bestAttack.value"
-          />
-          <ElementLabel
-            :element="monster.monstie.stats.bestAttack.element"
-            justText
           />
         </div>
 
-        <div v-if="monster.monstie.stats.worstDefense">
-          Def
+        <div v-if="defense">
+          Defense
           <span
-            class="font-semibold"
-            v-text="monster.monstie.stats.worstDefense.value"
-          />
-          <ElementLabel
-            :element="monster.monstie.stats.worstDefense.element"
-            justText
+            class="font-bold"
+            v-text="defense"
           />
         </div>
       </div>
@@ -145,6 +134,24 @@
         return (
           this.monster?.monstie?.growth && this.monster?.monstie?.growth !== '?'
         );
+      },
+
+      defense() {
+        let result = [];
+
+        if (this.monster?.monstie?.stats?.bestDefense) {
+          result.push(this.monster?.monstie?.stats?.bestDefense.value);
+        }
+
+        if (this.monster?.monstie?.stats?.otherDefense) {
+          result.push(this.monster?.monstie?.stats?.otherDefense.value);
+        }
+
+        if (this.monster?.monstie?.stats?.worstDefense) {
+          result.push(this.monster?.monstie?.stats?.worstDefense.value);
+        }
+
+        return result.join(', ');
       },
 
       showLocation() {
