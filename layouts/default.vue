@@ -5,6 +5,7 @@
     <Nuxt
       class="container mx-auto px-4"
       keep-alive
+      :keep-alive-props="{ include: ['PageMonsters', 'PageMonsties', 'PageEggs'] }"
     />
 
     <AppFooter />
