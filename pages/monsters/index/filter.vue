@@ -1,5 +1,8 @@
 <template>
-  <MonsterFilter showHatchableFilter />
+  <MonsterFilter
+    parentPath="/monsters/"
+    showHatchableFilter
+  />
 </template>
 
 <script>

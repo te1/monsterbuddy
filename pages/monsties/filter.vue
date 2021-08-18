@@ -1,5 +1,6 @@
 <template>
   <MonsterFilter
+    parentPath="/monsties/"
     showAttackTypeFilter
     showAttackElementFilter
     showRidingActionFilter

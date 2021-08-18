@@ -31,10 +31,7 @@
         Filter
       </h3>
 
-      <div
-        v-if="false"
-        class="flex items-center"
-      >
+      <div class="flex items-center">
         <label
           class="flex-1 cursor-pointer"
           for="MonsterFilter_NameFilter"
@@ -47,6 +44,7 @@
           v-model="store.nameFilter"
           type="text"
           class="input w-[180px] px-2 py-1"
+          placeholder="Search"
         >
       </div>
 
@@ -232,9 +230,11 @@
       </div>
 
       <div class="flex gap-2 justify-center">
-        <div class="w-[100px] px-2 py-1 text-center font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500">
-          Apply
-        </div>
+        <NuxtLink :to="parentPath">
+          <div class="w-[100px] px-2 py-1 text-center font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500">
+            Apply
+          </div>
+        </NuxtLink>
 
         <div
           class="w-[100px] px-2 py-1 text-center font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500"
@@ -256,6 +256,11 @@
     inject: ['useFilterStore'],
 
     props: {
+      parentPath: {
+        type: String,
+        required: true,
+      },
+
       showAttackTypeFilter: {
         type: Boolean,
         required: false,
