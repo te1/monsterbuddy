@@ -52,14 +52,14 @@
           <NuxtLink
             class="link"
             to="/monsties/"
-          >Monstie list</NuxtLink> with attack types, retreat conditions and habitats
+          >Monstie list</NuxtLink> with attack types, retreat conditions, locations and stats
         </li>
 
         <li>
           <NuxtLink
             class="link"
             to="/eggs/"
-          >Egg list</NuxtLink> with search, sorting and filtering
+          >Visual egg list</NuxtLink> with search, sorting and filtering
         </li>
       </ul>
 
