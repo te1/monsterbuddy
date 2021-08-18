@@ -1,12 +1,12 @@
 <template>
   <div>
     <AppTopBar>
-      <AppSearchBox v-model="monsterFilter.nameFilter" />
+      <AppSearchBox v-model="monstieFilter.nameFilter" />
     </AppTopBar>
 
     <NuxtLink
       v-if="!showFilter"
-      to="/monsters/filter/"
+      to="/monsties/filter/"
     >
       <AppFloatingButton title="Sort and filter">
         <FaIcon
@@ -21,22 +21,22 @@
     <main v-if="!showFilter">
       <ul>
         <li
-          v-for="(group, key) in monsterFilter.groupedMonsters"
+          v-for="(group, key) in monstieFilter.groupedMonsters"
           :key="key"
           class="mt-3 first:mt-0 "
         >
           <div
-            v-if="monsterFilter.isGrouped"
+            v-if="monstieFilter.isGrouped"
             class="flex items-center mb-1"
           >
             <FaIcon
-              v-if="monsterFilter.sortKey === 'genus'"
+              v-if="monstieFilter.sortKey === 'genus'"
               class="!w-6 text-gray-500 dark:text-cool-400"
               :icon="['fas', 'dna']"
             />
 
             <FaIcon
-              v-if="monsterFilter.sortKey === 'habitat'"
+              v-if="monstieFilter.sortKey === 'habitat'"
               class="!w-6 text-gray-500 dark:text-cool-400"
               :icon="['fas', 'map-marker-alt']"
             />
@@ -53,7 +53,7 @@
               :key="monster.no"
               :to="`/monsters/${monster.slug}/`"
             >
-              <MonsterListItem
+              <MonstieListItem
                 :monster="monster"
                 class="box box-link px-1 overflow-hidden"
               />
@@ -63,11 +63,11 @@
       </ul>
 
       <div
-        v-if="monsterFilter.isEmpty"
+        v-if="monstieFilter.isEmpty"
         class="box flex flex-col items-center py-4 space-y-4"
       >
         <span class="text-2xl text-gray-400 font-semibold">
-          No monsters found
+          No monsties found
         </span>
 
         <FaIcon
@@ -77,7 +77,7 @@
 
         <div
           class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
-          @click="monsterFilter.reset"
+          @click="monstieFilter.reset"
         >
           Reset filter
         </div>
@@ -89,35 +89,35 @@
 <script>
   import { mapStores } from 'pinia';
   import { makeMonsterFilterStore } from '~/services/stores';
-  import { monsters } from '~/services/data';
+  import { monsties } from '~/services/data';
   import { makeHead } from '~/services/utils';
 
-  const useMonsterFilter = makeMonsterFilterStore('monsterFilter', monsters, {
+  const useMonstieFilter = makeMonsterFilterStore('monstieFilter', monsties, {
     sortKey: 'no',
   });
 
   export default {
-    name: 'PageMonsters',
+    name: 'PageMonsties',
 
     provide: {
-      useFilterStore: useMonsterFilter,
+      useFilterStore: useMonstieFilter,
     },
 
     head() {
       return makeHead({
-        title: 'Monster Buddy - Monster List For Monster Hunter Stories 2',
+        title: 'Monster Buddy - Monstie List For Monster Hunter Stories 2',
         description:
-          'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
-        canonical: 'https://monsterbuddy.app/monsters/',
+          'Easily find all monsties in their natural habitats and check on retreat conditions and their attack types',
+        canonical: 'https://monsterbuddy.app/monsties/',
       });
     },
 
     computed: {
-      ...mapStores(useMonsterFilter),
+      ...mapStores(useMonstieFilter),
 
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
-        return this.$route?.path === '/monsters/filter/';
+        return this.$route?.path === '/monsties/filter/';
       },
     },
   };

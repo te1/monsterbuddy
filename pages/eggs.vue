@@ -4,106 +4,104 @@
       <AppSearchBox v-model="eggFilter.nameFilter" />
     </AppTopBar>
 
-    <AppFloatingButton
-      title="Sort and filter"
-      @click="showFilter = !showFilter"
+    <NuxtLink
+      v-if="!showFilter"
+      to="/eggs/filter/"
     >
-      <FaIcon
-        class="pt-px"
-        :icon="['fas', 'filter']"
-      />
-    </AppFloatingButton>
+      <AppFloatingButton title="Sort and filter">
+        <FaIcon
+          class="pt-px"
+          :icon="['fas', 'filter']"
+        />
+      </AppFloatingButton>
+    </NuxtLink>
 
-    <MonsterFilter
-      v-show="showFilter"
-      class="mb-3"
-      showAttackTypeFilter
-      showAttackElementFilter
-      showRidingActionFilter
-    />
+    <NuxtChild v-if="showFilter" />
 
-    <ul>
-      <li
-        v-for="(group, key) in eggFilter.groupedMonsters"
-        :key="key"
-        class="mt-3 first:mt-0 "
-      >
-        <div
-          v-if="eggFilter.isGrouped"
-          class="flex items-center mb-1"
+    <main v-if="!showFilter">
+      <ul>
+        <li
+          v-for="(group, key) in eggFilter.groupedMonsters"
+          :key="key"
+          class="mt-3 first:mt-0 "
         >
-          <FaIcon
-            v-if="eggFilter.sortKey === 'genus'"
-            class="!w-6 text-gray-500 dark:text-cool-400"
-            :icon="['fas', 'dna']"
-          />
+          <div
+            v-if="eggFilter.isGrouped"
+            class="flex items-center mb-1"
+          >
+            <FaIcon
+              v-if="eggFilter.sortKey === 'genus'"
+              class="!w-6 text-gray-500 dark:text-cool-400"
+              :icon="['fas', 'dna']"
+            />
 
-          <FaIcon
-            v-if="eggFilter.sortKey === 'habitat'"
-            class="!w-6 text-gray-500 dark:text-cool-400"
-            :icon="['fas', 'map-marker-alt']"
-          />
+            <FaIcon
+              v-if="eggFilter.sortKey === 'habitat'"
+              class="!w-6 text-gray-500 dark:text-cool-400"
+              :icon="['fas', 'map-marker-alt']"
+            />
+
+            <div
+              class="font-semibold mb-1"
+              v-text="key"
+            />
+          </div>
 
           <div
-            class="font-semibold mb-1"
-            v-text="key"
-          />
-        </div>
-
-        <div
-          v-if="compact"
-          class="grid gap-3 grid-cols-2"
-        >
-          <NuxtLink
-            v-for="monster in group"
-            :key="monster.no"
-            :to="`/monsters/${monster.slug}/`"
+            v-if="compact"
+            class="grid gap-3 grid-cols-2"
           >
-            <EggGridItem
-              :monster="monster"
-              class="box box-link px-1 overflow-hidden"
-            />
-          </NuxtLink>
-        </div>
+            <NuxtLink
+              v-for="monster in group"
+              :key="monster.no"
+              :to="`/monsters/${monster.slug}/`"
+            >
+              <EggGridItem
+                :monster="monster"
+                class="box box-link px-1 overflow-hidden"
+              />
+            </NuxtLink>
+          </div>
 
-        <div
-          v-else
-          class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-        >
-          <NuxtLink
-            v-for="monster in group"
-            :key="monster.no"
-            :to="`/monsters/${monster.slug}/`"
+          <div
+            v-else
+            class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
-            <EggListItem
-              :monster="monster"
-              class="box box-link px-1 overflow-hidden"
-            />
-          </NuxtLink>
-        </div>
-      </li>
-    </ul>
-
-    <div
-      v-if="eggFilter.isEmpty"
-      class="box flex flex-col items-center py-4 space-y-4"
-    >
-      <span class="text-2xl text-gray-400 font-semibold">
-        No eggs found
-      </span>
-
-      <FaIcon
-        class="!w-20 !h-20 text-gray-400"
-        :icon="['far', 'frown']"
-      />
+            <NuxtLink
+              v-for="monster in group"
+              :key="monster.no"
+              :to="`/monsters/${monster.slug}/`"
+            >
+              <EggListItem
+                :monster="monster"
+                class="box box-link px-1 overflow-hidden"
+              />
+            </NuxtLink>
+          </div>
+        </li>
+      </ul>
 
       <div
-        class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
-        @click="eggFilter.reset"
+        v-if="eggFilter.isEmpty"
+        class="box flex flex-col items-center py-4 space-y-4"
       >
-        Reset filter
+        <span class="text-2xl text-gray-400 font-semibold">
+          No eggs found
+        </span>
+
+        <FaIcon
+          class="!w-20 !h-20 text-gray-400"
+          :icon="['far', 'frown']"
+        />
+
+        <div
+          class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
+          @click="eggFilter.reset"
+        >
+          Reset filter
+        </div>
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
@@ -127,7 +125,6 @@
     data() {
       return {
         compact: true,
-        showFilter: false,
       };
     },
 
@@ -142,6 +139,11 @@
 
     computed: {
       ...mapStores(useEggFilter),
+
+      showFilter() {
+        // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
+        return this.$route?.path === '/eggs/filter/';
+      },
     },
   };
 </script>
