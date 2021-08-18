@@ -2,27 +2,28 @@ import Vue from 'vue';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
-  //   faQuestion,
-  //   faArrowUp,
-  //   faArrowDown,
-  //   faBan,
+  // faQuestion,
+  // faArrowUp,
+  // faArrowDown,
+  // faBan,
+  // faMountain,
+  // faLink,
   faSearch,
   faFilter,
   faDna,
   faMapMarkerAlt,
   faStar,
-  // faMountain,
   faShare,
   faArrowLeft,
   faTimes,
   faAdjust,
-  // faLink,
+  faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import {
-  //   faSquare,
   faFrown,
-  //   faCircle,
-  //   faCheckSquare,
+  // faSquare,
+  // faCircle,
+  // faCheckSquare,
 } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -37,7 +38,8 @@ library.add(
   faShare,
   faArrowLeft,
   faTimes,
-  faAdjust
+  faAdjust,
+  faCheck
 );
 library.add(faFrown);
 library.add(faGithub);

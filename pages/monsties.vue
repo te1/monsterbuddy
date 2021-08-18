@@ -1,24 +1,28 @@
 <template>
   <div>
-    <AppTopBar>
-      <AppSearchBox v-model="monstieFilter.nameFilter" />
+    <AppTopBar
+      :showBack="showFilter"
+      backFallback="/monsties/"
+      :heading="heading"
+    >
+      <AppSearchBox
+        v-if="!showFilter"
+        v-model="monstieFilter.nameFilter"
+      />
     </AppTopBar>
 
-    <NuxtLink
-      v-if="!showFilter"
-      to="/monsties/filter/"
-    >
-      <AppFloatingButton title="Sort and filter">
+    <NuxtLink :to="fabTarget">
+      <AppFloatingButton :title="fabTitle">
         <FaIcon
           class="pt-px"
-          :icon="['fas', 'filter']"
+          :icon="fabIcon"
         />
       </AppFloatingButton>
     </NuxtLink>
 
-    <NuxtChild v-if="showFilter" />
+    <NuxtChild v-show="showFilter" />
 
-    <main v-if="!showFilter">
+    <main v-show="!showFilter">
       <ul>
         <li
           v-for="(group, key) in monstieFilter.groupedMonsters"
@@ -118,6 +122,34 @@
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
         return this.$route?.path === '/monsties/filter/';
+      },
+
+      heading() {
+        if (this.showFilter) {
+          return 'Sort And Filter';
+        }
+        return null;
+      },
+
+      fabTarget() {
+        if (this.showFilter) {
+          return '/monsties/';
+        }
+        return '/monsties/filter/';
+      },
+
+      fabTitle() {
+        if (this.showFilter) {
+          return 'Apply filter';
+        }
+        return 'Sort and filter';
+      },
+
+      fabIcon() {
+        if (this.showFilter) {
+          return ['fas', 'check'];
+        }
+        return ['fas', 'filter'];
       },
     },
   };

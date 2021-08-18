@@ -60,6 +60,12 @@
         default: false,
       },
 
+      backFallback: {
+        type: String,
+        required: false,
+        default: null,
+      },
+
       showClose: {
         type: Boolean,
         required: false,
@@ -69,7 +75,9 @@
 
     methods: {
       goBack() {
-        window.history.length > 2 ? this.$router.go(-1) : this.$router.push('/');
+        window.history.length > 2
+          ? this.$router.go(-1)
+          : this.$router.push(this.backFallback ?? '/');
       },
 
       toggleDarkMode() {

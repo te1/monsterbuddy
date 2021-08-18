@@ -3,6 +3,7 @@
     <AppTopBar
       :heading="monster.name"
       showBack
+      backFallback="/monsters/"
     />
 
     <main class="space-y-3">
