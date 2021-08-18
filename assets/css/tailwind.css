@@ -29,6 +29,10 @@
   .box-link-inline {
     @apply hover:transition-opacity active:transition-opacity focus:transition-opacity hover:opacity-75 active:opacity-50;
   }
+
+  .input {
+    @apply rounded border-0 text-gray-700 placeholder-gray-500 bg-gray-200 dark:text-cool-200 dark:placeholder-cool-400 dark:bg-cool-600 focus:outline-none focus:ring-0;
+  }
 }
 
 @layer utilities {

@@ -1,11 +1,9 @@
 <template>
-  <div class="box px-4 py-2">
-    <MonsterFilter
-      showAttackTypeFilter
-      showAttackElementFilter
-      showRidingActionFilter
-    />
-  </div>
+  <MonsterFilter
+    showAttackTypeFilter
+    showAttackElementFilter
+    showRidingActionFilter
+  />
 </template>
 
 <script>

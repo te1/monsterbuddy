@@ -13,10 +13,7 @@
 
     <NuxtLink :to="fabTarget">
       <AppFloatingButton :title="fabTitle">
-        <FaIcon
-          class="pt-px"
-          :icon="fabIcon"
-        />
+        <FaIcon :icon="fabIcon" />
       </AppFloatingButton>
     </NuxtLink>
 
@@ -149,7 +146,7 @@
         if (this.showFilter) {
           return ['fas', 'check'];
         }
-        return ['fas', 'filter'];
+        return ['fas', 'sliders-h'];
       },
     },
   };
