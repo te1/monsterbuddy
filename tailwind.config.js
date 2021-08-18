@@ -21,6 +21,18 @@ module.exports = {
       boxShadow: {
         top: '0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 -1px 2px 0 rgba(0, 0, 0, 0.06)',
       },
+      backgroundImage: (theme) => ({
+        select: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23${theme(
+          'colors.gray.700'
+        ).substring(
+          1
+        )}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+        'select-dark': `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23${theme(
+          'colors.cool.300'
+        ).substring(
+          1
+        )}' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+      }),
       typography: (theme) => ({
         DEFAULT: {
           css: {
