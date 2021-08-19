@@ -283,6 +283,15 @@
                 rel="noopener"
               >RageGamingVideos</a>
             </li>
+
+            <li>
+              <a
+                class="link"
+                href="https://www.youtube.com/channel/UCj5rxzvXpiPASGNw4-z_BbA"
+                target="_blank"
+                rel="noopener"
+              >Tidus69</a>
+            </li>
           </ul>
         </li>
       </ul>
