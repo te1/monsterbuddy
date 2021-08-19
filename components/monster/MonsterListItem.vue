@@ -14,7 +14,7 @@
       >
     </div>
 
-    <div class="mt-3 ml-3 text-sm whitespace-nowrap self-start">
+    <div class="w-full mt-3 ml-3 text-sm whitespace-nowrap self-start">
       <div
         class="leading-tight text-gray-500 dark:text-cool-400"
         v-text="info"
@@ -47,6 +47,7 @@
 
     <MonsterImage
       class="w-full h-full p-2 object-contain object-right overflow-hidden"
+      style="flex-basis: 250px;"
       :monster="monster"
       hideFallback
     />

@@ -1,5 +1,5 @@
 <template>
-  <main class="space-y-3">
+  <div class="space-y-3">
     <section class="box px-4 py-3 flex flex-col space-y-3">
       <h3 class="text-lg font-semibold -mb-2">
         Sort
@@ -223,19 +223,7 @@
         v-text="store.resultCount"
       />
     </section>
-
-    <section class="flex gap-2 justify-center">
-      <NuxtLink :to="parentPath">
-        <AppTextButton>
-          Apply
-        </AppTextButton>
-      </NuxtLink>
-
-      <AppTextButton @click.native="store.reset">
-        Reset
-      </AppTextButton>
-    </section>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -247,11 +235,6 @@
     inject: ['useFilterStore'],
 
     props: {
-      parentPath: {
-        type: String,
-        required: true,
-      },
-
       showAttackTypeFilter: {
         type: Boolean,
         required: false,

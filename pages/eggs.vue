@@ -49,7 +49,7 @@
           </div>
 
           <div
-            v-if="eggFilter.compact"
+            v-if="eggFilter.mode === 'compact'"
             class="grid gap-3 grid-cols-2"
           >
             <NuxtLink
@@ -75,6 +75,7 @@
             >
               <EggListItem
                 :monster="monster"
+                :mode="eggFilter.mode"
                 class="box box-link px-1 overflow-hidden"
               />
             </NuxtLink>
@@ -120,7 +121,7 @@
     },
     {
       state: {
-        compact: true,
+        mode: 'compact',
       },
     }
   );
