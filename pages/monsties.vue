@@ -17,9 +17,9 @@
       </AppFloatingButton>
     </NuxtLink>
 
-    <NuxtChild v-show="showFilter" />
+    <NuxtChild v-show="!leaving && showFilter" />
 
-    <main v-show="!showFilter">
+    <main v-show="leaving || !showFilter">
       <ul>
         <li
           v-for="(group, key) in monstieFilter.groupedMonsters"
@@ -112,6 +112,23 @@
 
     provide: {
       useFilterStore: useMonstieFilter,
+    },
+
+    beforeRouteEnter(to, from, next) {
+      next((vm) => {
+        vm.leaving = false;
+      });
+    },
+
+    beforeRouteLeave(to, from, next) {
+      this.leaving = true;
+      next();
+    },
+
+    data() {
+      return {
+        leaving: false,
+      };
     },
 
     head() {
