@@ -49,7 +49,7 @@
           </div>
 
           <div
-            v-if="compact"
+            v-if="eggFilter.compact"
             class="grid gap-3 grid-cols-2"
           >
             <NuxtLink
@@ -112,21 +112,24 @@
   import { monsties } from '~/services/data';
   import { makeHead } from '~/services/utils';
 
-  const useEggFilter = makeMonsterFilterStore('eggFilter', monsties, {
-    sortKey: 'no',
-  });
+  const useEggFilter = makeMonsterFilterStore(
+    'eggFilter',
+    monsties,
+    {
+      sortKey: 'no',
+    },
+    {
+      state: {
+        compact: true,
+      },
+    }
+  );
 
   export default {
     name: 'PageEggs',
 
     provide: {
       useFilterStore: useEggFilter,
-    },
-
-    data() {
-      return {
-        compact: true,
-      };
     },
 
     head() {

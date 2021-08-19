@@ -56,6 +56,7 @@
             >
               <MonsterListItem
                 :monster="monster"
+                :mode="monsterFilter.mode"
                 class="box box-link px-1 overflow-hidden"
               />
             </NuxtLink>
@@ -93,9 +94,18 @@
   import { monsters } from '~/services/data';
   import { makeHead } from '~/services/utils';
 
-  const useMonsterFilter = makeMonsterFilterStore('monsterFilter', monsters, {
-    sortKey: 'no',
-  });
+  const useMonsterFilter = makeMonsterFilterStore(
+    'monsterFilter',
+    monsters,
+    {
+      sortKey: 'no',
+    },
+    {
+      state: {
+        mode: 'location',
+      },
+    }
+  );
 
   export default {
     name: 'PageMonsters',

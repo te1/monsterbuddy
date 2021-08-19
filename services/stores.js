@@ -17,7 +17,12 @@ import {
 
 setMapStoreSuffix('');
 
-export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
+export function makeMonsterFilterStore(
+  storeId,
+  monsters,
+  initial = {},
+  extend = {}
+) {
   _.defaults(initial, {
     sortKey: null,
     nameFilter: null,
@@ -46,6 +51,8 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
         ridingActionFilter: initial.ridingActionFilter,
         hatchableFilter: initial.hatchableFilter,
         deviantsFilter: initial.deviantsFilter,
+
+        ...extend?.state,
       };
     },
 
@@ -163,6 +170,8 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
           this.deviantsFilter !== initial.deviantsFilter
         );
       },
+
+      ...extend?.getters,
     },
 
     actions: {
@@ -177,6 +186,8 @@ export function makeMonsterFilterStore(storeId, monsters, initial = {}) {
         this.hatchableFilter = initial.hatchableFilter;
         this.deviantsFilter = initial.deviantsFilter;
       },
+
+      ...extend?.actions,
     },
   });
 }
