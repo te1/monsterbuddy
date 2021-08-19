@@ -3,7 +3,7 @@
     type="button"
     class="cursor-pointer transition-colors hover:text-black dark:hover:text-white active:text-gray-500 dark:active:text-cool-400"
     :title="title"
-    @click="$emit('click')"
+    @click="onClick"
   >
     <slot>
       <FaIcon :icon="icon" />
@@ -26,6 +26,17 @@
         type: String,
         required: false,
         default: null,
+      },
+    },
+
+    methods: {
+      onClick() {
+        this.$emit('click');
+
+        if (document.activeElement) {
+          // blur to disable active/focus styles
+          document.activeElement.blur();
+        }
       },
     },
   };

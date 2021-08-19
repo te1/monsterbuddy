@@ -34,7 +34,7 @@
         </AppTextButton>
       </NuxtLink>
 
-      <AppTextButton @click.native="store.reset">
+      <AppTextButton @click="store.reset">
         Reset
       </AppTextButton>
     </section>
