@@ -213,36 +213,27 @@
       </div>
     </section>
 
-    <section class="box px-4 py-3 flex flex-col space-y-3">
-      <h3 class="text-lg font-semibold -mb-2">
+    <section class="box px-4 py-2 flex items-center">
+      <h3 class="flex-1 text-lg font-semibold">
         Results
       </h3>
 
-      <div class="flex items-center">
-        <span class="flex-1">
-          Results
-        </span>
+      <span
+        class="w-[180px]"
+        v-text="store.resultCount"
+      />
+    </section>
 
-        <span
-          class="w-[180px]"
-          v-text="store.resultCount"
-        />
-      </div>
+    <section class="flex gap-2 justify-center">
+      <NuxtLink :to="parentPath">
+        <AppTextButton>
+          Apply
+        </AppTextButton>
+      </NuxtLink>
 
-      <div class="flex gap-2 justify-center">
-        <NuxtLink :to="parentPath">
-          <div class="w-[100px] px-2 py-1 text-center font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500">
-            Apply
-          </div>
-        </NuxtLink>
-
-        <div
-          class="w-[100px] px-2 py-1 text-center font-semibold rounded border-transparent text-gray-800 active:text-gray-300 bg-brand-500 hover:bg-brand-400 active:bg-gray-500"
-          @click="store.reset"
-        >
-          Reset
-        </div>
-      </div>
+      <AppTextButton @click.native="store.reset">
+        Reset
+      </AppTextButton>
     </section>
   </main>
 </template>
