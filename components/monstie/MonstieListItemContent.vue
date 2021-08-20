@@ -127,7 +127,7 @@
           result.push(this.monster?.monstie?.stats?.worstDefense.value);
         }
 
-        return result.join(', ');
+        return result.join(' / ');
       },
 
       showLocation() {
