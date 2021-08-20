@@ -4,21 +4,17 @@
       Related
     </h3>
 
-    <NuxtLink
+    <div
       v-for="(relation, index) in monster.related"
       :key="relation.monster"
-      :to="getRelationLink(relation.monster)"
     >
       <div
         v-if="index > 0"
-        class="my-1 border-t border-gray-300 dark:border-cool-600"
+        class="my-2 border-t border-gray-300 dark:border-cool-600"
       />
 
-      <MonsterListItem
-        class="-mx-3 box-link-inline overflow-hidden"
-        :monster="getMonsterByName(relation.monster)"
-      />
-    </NuxtLink>
+      <MonsterRelatedItem :monster="getMonsterByName(relation.monster)" />
+    </div>
   </section>
 </template>
 
@@ -44,12 +40,6 @@
     methods: {
       getMonsterByName(name) {
         return monstersByName[name];
-      },
-
-      getRelationLink(monsterName) {
-        let monster = this.getMonsterByName(monsterName);
-
-        return `/monsters/${monster.slug}/`;
       },
     },
   };

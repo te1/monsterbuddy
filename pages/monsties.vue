@@ -103,6 +103,7 @@
     beforeRouteEnter(to, from, next) {
       next((vm) => {
         vm.leaving = false;
+        vm.$useHistoryStore().lastList = 'monsties';
       });
     },
 
