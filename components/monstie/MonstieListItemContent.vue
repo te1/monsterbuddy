@@ -116,15 +116,15 @@
         let result = [];
 
         if (this.monster?.monstie?.stats?.bestDefense) {
-          result.push(this.monster?.monstie?.stats?.bestDefense.value);
+          result.push(this.monster.monstie.stats.bestDefense.value);
         }
 
         if (this.monster?.monstie?.stats?.otherDefense) {
-          result.push(this.monster?.monstie?.stats?.otherDefense.value);
+          result.push(this.monster.monstie.stats.otherDefense.value);
         }
 
         if (this.monster?.monstie?.stats?.worstDefense) {
-          result.push(this.monster?.monstie?.stats?.worstDefense.value);
+          result.push(this.monster.monstie.stats.worstDefense.value);
         }
 
         return result.join(' / ');
