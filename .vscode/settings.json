@@ -3,6 +3,19 @@
     "package-lock.json": true
   },
   "files.exclude": {
-    ".eslintcache": true
-  }
+    ".eslintcache": true,
+    ".VSCodeCounter": true
+  },
+  "VSCodeCounter.exclude": [
+    "**/.gitignore",
+    "**/.vscode/**",
+    "**/node_modules/**",
+    "**/*.svg",
+    "**/package.json",
+    "**/package-lock.json",
+    "**/jsconfig.json",
+    "**/.prettierrc",
+    "**/.eslintrc.js",
+    "**/.github/**"
+  ]
 }
