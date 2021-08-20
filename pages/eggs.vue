@@ -109,22 +109,8 @@
 
 <script>
   import { mapStores } from 'pinia';
-  import { makeMonsterFilterStore } from '~/services/stores';
-  import { monsties } from '~/services/data';
+  import useEggFilter from '~/stores/eggFilter';
   import { makeHead } from '~/services/utils';
-
-  const useEggFilter = makeMonsterFilterStore(
-    'eggFilter',
-    monsties,
-    {
-      sortKey: 'no',
-    },
-    {
-      state: {
-        mode: 'compact',
-      },
-    }
-  );
 
   export default {
     name: 'PageEggs',

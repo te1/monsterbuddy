@@ -1,0 +1,21 @@
+import { makeMonsterFilterStore } from './base';
+import { monsters } from '~/services/data';
+
+const initial = {
+  sortKey: 'no',
+};
+
+const extend = {
+  state: {
+    mode: 'location',
+  },
+};
+
+const useMonsterFilter = makeMonsterFilterStore(
+  'monsterFilter',
+  monsters,
+  initial,
+  extend
+);
+
+export default useMonsterFilter;

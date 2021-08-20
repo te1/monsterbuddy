@@ -90,22 +90,8 @@
 
 <script>
   import { mapStores } from 'pinia';
-  import { makeMonsterFilterStore } from '~/services/stores';
-  import { monsties } from '~/services/data';
+  import useMonstieFilter from '~/stores/monstieFilter';
   import { makeHead } from '~/services/utils';
-
-  const useMonstieFilter = makeMonsterFilterStore(
-    'monstieFilter',
-    monsties,
-    {
-      sortKey: 'no',
-    },
-    {
-      state: {
-        mode: 'location',
-      },
-    }
-  );
 
   export default {
     name: 'PageMonsties',
