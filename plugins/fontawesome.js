@@ -22,7 +22,7 @@ import {
   faShare, // used in attack type "image"
 } from '@fortawesome/free-solid-svg-icons';
 import {
-  faFrown, // :(
+  faSadCry, // filter: no results
   // faSquare,
   // faCircle,
   // faCheckSquare,
@@ -44,7 +44,7 @@ library.add(
   faStar,
   faShare
 );
-library.add(faFrown);
+library.add(faSadCry);
 library.add(faGithub);
 
 FontAwesomeIcon.props.fixedWidth.default = true;

@@ -34,7 +34,7 @@
         </AppTextButton>
       </NuxtLink>
 
-      <AppTextButton @click="store.reset">
+      <AppTextButton @click="store.resetFilterAndSort">
         Reset
       </AppTextButton>
     </section>

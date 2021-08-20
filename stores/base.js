@@ -157,26 +157,11 @@ export function makeMonsterFilterStore(
         return _.includes(['genus', 'habitat'], this.sortKey);
       },
 
-      canReset() {
-        return (
-          this.sortKey !== initial.sortKey &&
-          this.nameFilter !== initial.nameFilter &&
-          this.genusFilter !== initial.genusFilter &&
-          this.habitatFilter !== initial.habitatFilter &&
-          this.attackTypeFilter !== initial.attackTypeFilter &&
-          this.attackElementFilter !== initial.attackElementFilter &&
-          this.ridingActionFilter !== initial.ridingActionFilter &&
-          this.hatchableFilter !== initial.hatchableTypeFilter &&
-          this.deviantsFilter !== initial.deviantsFilter
-        );
-      },
-
       ...extend?.getters,
     },
 
     actions: {
-      reset() {
-        this.sortKey = initial.sortKey;
+      resetFilter() {
         this.nameFilter = initial.nameFilter;
         this.genusFilter = initial.genusFilter;
         this.habitatFilter = initial.habitatFilter;
@@ -185,6 +170,12 @@ export function makeMonsterFilterStore(
         this.ridingActionFilter = initial.ridingActionFilter;
         this.hatchableFilter = initial.hatchableFilter;
         this.deviantsFilter = initial.deviantsFilter;
+      },
+
+      resetFilterAndSort() {
+        this.resetFilter();
+
+        this.sortKey = initial.sortKey;
       },
 
       ...extend?.actions,

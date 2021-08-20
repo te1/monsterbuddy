@@ -87,21 +87,21 @@
         v-if="eggFilter.isEmpty"
         class="box flex flex-col items-center py-4 space-y-4"
       >
-        <span class="text-2xl text-gray-400 font-semibold">
+        <span class="text-2xl font-semibold text-gray-500 dark:text-cool-300">
           No eggs found
         </span>
 
         <FaIcon
-          class="!w-20 !h-20 text-gray-400"
-          :icon="['far', 'frown']"
+          class="!w-16 !h-16 text-gray-400 dark:text-cool-400"
+          :icon="['far', 'sad-cry']"
         />
 
-        <div
-          class="text-lg text-brand-500 hover:text-brand-400 active:text-gray-500"
-          @click="eggFilter.reset"
+        <AppTextButton
+          class="w-[160px]"
+          @click="eggFilter.resetFilter"
         >
           Reset filter
-        </div>
+        </AppTextButton>
       </div>
     </main>
   </div>
@@ -156,7 +156,7 @@
 
       heading() {
         if (this.showFilter) {
-          return 'Sort And Filter';
+          return 'View Options';
         }
         return null;
       },
@@ -170,9 +170,9 @@
 
       fabTitle() {
         if (this.showFilter) {
-          return 'Apply filter';
+          return 'Apply';
         }
-        return 'Sort and filter';
+        return 'View options';
       },
 
       fabIcon() {
