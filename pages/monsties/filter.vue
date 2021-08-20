@@ -1,11 +1,5 @@
 <template>
   <div class="space-y-3">
-    <MonsterFilter
-      showAttackTypeFilter
-      showAttackElementFilter
-      showRidingActionFilter
-    />
-
     <section class="box px-4 py-3 flex flex-col space-y-3">
       <h3 class="text-lg font-semibold">
         Quick Info
@@ -30,6 +24,12 @@
         </div>
       </div>
     </section>
+
+    <MonsterFilter
+      showAttackTypeFilter
+      showAttackElementFilter
+      showRidingActionFilter
+    />
 
     <section class="flex gap-2 justify-center">
       <NuxtLink to="/monsties/">
