@@ -25,6 +25,7 @@ export function makeMonsterFilterStore(
 ) {
   _.defaults(initial, {
     sortKey: null,
+    sortOrder: null,
     nameFilter: null,
     genusFilter: null,
     habitatFilter: null,
@@ -43,6 +44,7 @@ export function makeMonsterFilterStore(
         monsters,
 
         sortKey: initial.sortKey,
+        sortOrder: initial.sortOrder,
         nameFilter: initial.nameFilter,
         genusFilter: initial.genusFilter,
         habitatFilter: initial.habitatFilter,
@@ -110,19 +112,11 @@ export function makeMonsterFilterStore(
       sortedMonsters() {
         let result = this.filteredMonsters;
 
-        switch (this.sortKey) {
-          case 'name':
-            return _.sortBy(result, 'name');
-
-          case 'genus':
-            return _.sortBy(result, 'genus');
-
-          case 'habitat':
-            return _.sortBy(result, 'habitat');
-
-          default:
-            return result;
+        if (!_.includes(['no', 'name', 'genus', 'habitat'], this.sortKey)) {
+          return result;
         }
+
+        return _.orderBy(result, [this.sortKey], [this.sortOrder]);
       },
 
       groupedMonsters() {
@@ -176,6 +170,7 @@ export function makeMonsterFilterStore(
         this.resetFilter();
 
         this.sortKey = initial.sortKey;
+        this.sortOrder = initial.sortOrder;
       },
 
       ...extend?.actions,

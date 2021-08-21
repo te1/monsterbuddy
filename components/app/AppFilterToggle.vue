@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'AppFilterSwitch',
+    name: 'AppFilterToggle',
 
     props: {
       value: {

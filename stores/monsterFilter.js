@@ -3,6 +3,7 @@ import { monsters } from '~/services/data';
 
 const initial = {
   sortKey: 'no',
+  sortOrder: 'asc',
 };
 
 const extend = {

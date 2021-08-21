@@ -5,24 +5,23 @@
         Sort
       </h3>
 
-      <div class="flex items-center">
+      <div
+        v-for="item in sortConfig"
+        :key="item.sortKey"
+        class="flex items-center select-none"
+      >
         <label
           class="flex-1 cursor-pointer"
-          for="MonsterFilter_SortKey"
-        >
-          Sorting
-        </label>
+          v-text="item.caption"
+        />
 
-        <select
-          id="MonsterFilter_SortKey"
-          v-model="store.sortKey"
-          class="input w-[180px] px-2 py-1"
-        >
-          <option value="no">Number</option>
-          <option value="name">Name</option>
-          <option value="genus">Genus</option>
-          <option value="habitat">Habitat</option>
-        </select>
+        <AppSortToggle
+          class="w-[180px]"
+          :value="item.value"
+          :sortKey.sync="store.sortKey"
+          :sortOrder.sync="store.sortOrder"
+          :defaultSortOrder="item.default"
+        />
       </div>
     </section>
 
@@ -189,7 +188,7 @@
           Hatchable
         </label>
 
-        <AppFilterSwitch
+        <AppFilterToggle
           v-model="store.hatchableFilter"
           class="w-[180px]"
           :texts="['Include', 'Only Hatchable', 'Exclude']"
@@ -205,7 +204,7 @@
           Deviants
         </label>
 
-        <AppFilterSwitch
+        <AppFilterToggle
           v-model="store.deviantsFilter"
           class="w-[180px]"
           :texts="['Include', 'Only Deviants', 'Exclude']"
@@ -275,6 +274,15 @@
     computed: {
       store() {
         return this.useFilterStore();
+      },
+
+      sortConfig() {
+        return [
+          { value: 'no', caption: 'Number' },
+          { value: 'name', caption: 'Name' },
+          { value: 'genus', caption: 'Genus' },
+          { value: 'habitat', caption: 'Habitat' },
+        ];
       },
     },
 
