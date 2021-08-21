@@ -14,7 +14,7 @@
     </span>
 
     <span
-      class="font-semibold"
+      class="w-4 text-right font-semibold"
       v-text="value"
     />
   </div>
