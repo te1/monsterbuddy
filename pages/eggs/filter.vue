@@ -62,7 +62,6 @@
           { value: 'location', caption: 'Location' },
           { value: 'ridingActions', caption: 'Riding Actions' },
           { value: 'retreat', caption: 'Retreat' },
-          { value: 'stats', caption: 'Stats' },
         ];
       },
     },

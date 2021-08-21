@@ -225,6 +225,12 @@
     inject: ['useFilterStore'],
 
     props: {
+      showSortByStats: {
+        type: Boolean,
+        require: false,
+        default: false,
+      },
+
       showAttackTypeFilter: {
         type: Boolean,
         required: false,
@@ -268,12 +274,49 @@
       },
 
       sortConfig() {
-        return [
+        let result = [
           { value: 'no', caption: 'Number' },
           { value: 'name', caption: 'Name' },
           { value: 'genus', caption: 'Genus' },
           { value: 'habitat', caption: 'Habitat' },
         ];
+
+        if (this.showSortByStats) {
+          result.push(
+            {
+              value: 'monstie.stats.base.maxHp',
+              caption: 'Max HP',
+              default: 'desc',
+            },
+            {
+              value: 'monstie.stats.base.speed',
+              caption: 'Speed',
+              default: 'desc',
+            },
+            {
+              value: 'monstie.stats.base.critRate',
+              caption: 'Crit Rate',
+              default: 'desc',
+            },
+            {
+              value: 'monstie.stats.bestAttack.value',
+              caption: 'Best Attack',
+              default: 'desc',
+            },
+            {
+              value: 'monstie.stats.bestDefense.value',
+              caption: 'Best Defense',
+              default: 'desc',
+            },
+            {
+              value: 'monstie.stats.worstDefense.value',
+              caption: 'Worst Defense',
+              default: 'desc',
+            }
+          );
+        }
+
+        return result;
       },
     },
 

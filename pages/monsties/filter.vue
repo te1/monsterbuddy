@@ -26,6 +26,7 @@
     </section>
 
     <MonsterFilter
+      showSortByStats
       showAttackTypeFilter
       showAttackElementFilter
       showRidingActionFilter

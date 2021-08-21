@@ -112,11 +112,40 @@ export function makeMonsterFilterStore(
       sortedMonsters() {
         let result = this.filteredMonsters;
 
-        if (!_.includes(['no', 'name', 'genus', 'habitat'], this.sortKey)) {
+        if (
+          !_.includes(
+            [
+              'no',
+              'name',
+              'genus',
+              'habitat',
+              'monstie.stats.base.maxHp',
+              'monstie.stats.base.speed',
+              'monstie.stats.base.critRate',
+              'monstie.stats.bestAttack.value',
+              'monstie.stats.bestDefense.value',
+              'monstie.stats.worstDefense.value',
+            ],
+            this.sortKey
+          )
+        ) {
           return result;
         }
 
-        return _.orderBy(result, [this.sortKey], [this.sortOrder]);
+        let value;
+
+        return _.orderBy(
+          result,
+          (item) => {
+            value = _.get(item, this.sortKey);
+
+            if (value == null) {
+              return -Infinity;
+            }
+            return value;
+          },
+          this.sortOrder
+        );
       },
 
       groupedMonsters() {
