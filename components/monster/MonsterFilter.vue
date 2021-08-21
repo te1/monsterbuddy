@@ -5,24 +5,15 @@
         Sort
       </h3>
 
-      <div
+      <AppSortToggle
         v-for="item in sortConfig"
         :key="item.sortKey"
-        class="flex items-center select-none"
-      >
-        <label
-          class="flex-1 cursor-pointer"
-          v-text="item.caption"
-        />
-
-        <AppSortToggle
-          class="w-[180px]"
-          :value="item.value"
-          :sortKey.sync="store.sortKey"
-          :sortOrder.sync="store.sortOrder"
-          :defaultSortOrder="item.default"
-        />
-      </div>
+        :value="item.value"
+        :caption="item.caption"
+        :sortKey.sync="store.sortKey"
+        :sortOrder.sync="store.sortOrder"
+        :defaultSortOrder="item.default"
+      />
     </section>
 
     <section class="box px-4 py-3 flex flex-col space-y-3">
@@ -181,7 +172,7 @@
 
       <div
         v-if="showHatchableFilter"
-        class="flex items-center select-none"
+        class="py-1 flex items-center select-none"
         @click="updateFilter('hatchableFilter')"
       >
         <label class="flex-1 cursor-pointer">
@@ -197,7 +188,7 @@
 
       <div
         v-if="showDeviantsFilter"
-        class="flex items-center select-none"
+        class="py-1 flex items-center select-none"
         @click="updateFilter('deviantsFilter')"
       >
         <label class="flex-1 cursor-pointer">

@@ -1,15 +1,22 @@
 <template>
   <div
-    class="flex items-center gap-1 cursor-pointer"
+    class="flex items-center select-none"
     @click="toggle"
   >
-    <span>
-      <FaIcon
-        :class="{ 'opacity-0': !hasIcon }"
-        :icon="icon"
-      />
-    </span>
-    <span v-text="caption" />
+    <label
+      class="flex-1 cursor-pointer"
+      v-text="caption"
+    />
+
+    <div class="w-[180px] flex items-center gap-1 cursor-pointer">
+      <span>
+        <FaIcon
+          :class="{ 'opacity-0': !hasIcon }"
+          :icon="icon"
+        />
+      </span>
+      <span v-text="sortOrderCaption" />
+    </div>
   </div>
 </template>
 
@@ -19,6 +26,11 @@
 
     props: {
       value: {
+        type: String,
+        required: true,
+      },
+
+      caption: {
         type: String,
         required: true,
       },
@@ -66,7 +78,7 @@
         }
       },
 
-      caption() {
+      sortOrderCaption() {
         if (!this.active) {
           return null;
         }
