@@ -96,7 +96,7 @@
           class="flex-1 cursor-pointer"
           for="MonsterFilter_AttackTypeFilter"
         >
-          Attack type
+          Attack Type
         </label>
 
         <select
@@ -123,7 +123,7 @@
           class="flex-1 cursor-pointer"
           for="MonsterFilter_AttackElementFilter"
         >
-          Attack element
+          Attack Element
         </label>
 
         <select
