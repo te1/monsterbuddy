@@ -1,5 +1,31 @@
 <template>
   <div class="space-y-3">
+    <section class="box px-4 py-3 flex flex-col space-y-3">
+      <div class="flex items-center">
+        <h3 class="flex-1 text-lg font-semibold">
+          <label
+            class="block w-full cursor-pointer"
+            for="MonsterFilter_Mode"
+          >
+            Quick Info
+          </label>
+        </h3>
+
+        <select
+          id="MonsterFilter_QuickInfo"
+          v-model="store.mode"
+          class="input w-[180px] px-2 py-1"
+        >
+          <option
+            v-for="mode in modes"
+            :key="mode.value"
+            :value="mode.value"
+          >
+            {{ mode.caption }}
+          </option>
+        </select>
+      </div>
+    </section>
 
     <section class="box px-4 py-3 flex flex-col space-y-3">
       <div class="flex items-center">
@@ -269,6 +295,21 @@
         v-text="store.resultCount"
       />
     </section>
+
+    <section class="flex gap-2 justify-center">
+      <NuxtLink
+        v-if="backTarget"
+        :to="backTarget"
+      >
+        <AppTextButton>
+          Apply
+        </AppTextButton>
+      </NuxtLink>
+
+      <AppTextButton @click="store.resetFilterAndSort">
+        Reset
+      </AppTextButton>
+    </section>
   </div>
 </template>
 
@@ -282,6 +323,20 @@
     inject: ['useFilterStore'],
 
     props: {
+      backTarget: {
+        type: String,
+        required: false,
+        default: null,
+      },
+
+      modes: {
+        type: Array,
+        required: false,
+        default() {
+          return [];
+        },
+      },
+
       showSortByStats: {
         type: Boolean,
         require: false,
