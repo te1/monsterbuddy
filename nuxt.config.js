@@ -106,10 +106,15 @@ export default {
     '@nuxtjs/composition-api/module',
 
     'pinia/nuxt',
+
+    '~/modules/sitemapRouteGenerator',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    // https://sitemap.nuxtjs.org/guide/setup
+    '@nuxtjs/sitemap',
+  ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -149,6 +154,19 @@ export default {
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-generate
   generate: {
+    exclude: ['/test'],
     fallback: true,
+  },
+
+  sitemap: {
+    hostname: 'https://monsterbuddy.app',
+    trailingSlash: true,
+    exclude: ['/monsters/filter', '/monsties/filter', '/eggs/filter', '/test'],
+    routes: [
+      { url: '/', priority: 1 },
+      { url: '/monsters', priority: 1 },
+      { url: '/monsties', priority: 1 },
+      { url: '/eggs', priority: 1 },
+    ],
   },
 };
