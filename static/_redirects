@@ -1,2 +1,3 @@
-/newt/js/script.js https://plausible.io/js/plausible.js 200
-/newt/api/event https://plausible.io/api/event 202
+/newt/js/script.js  https://plausible.io/js/plausible.js  200
+/newt/api/event     https://plausible.io/api/event        202
+/monsties/*         /monsters/:splat                      301
