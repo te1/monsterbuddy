@@ -1017,7 +1017,7 @@
       "growth": "quick",
       "ridingActions": ["Fly"],
       "kinshipSkill": "Jet Balloon",
-      "eggColors": ["yellow", "white", "pink"],
+      "eggColors": ["white", "pink"],
       "retreat": "Use a **Flash Bomb** to stop it from **gliding** to boost the retreat rate.",
       "stats": {
         "base": {
@@ -1074,7 +1074,7 @@
       "growth": "quick",
       "ridingActions": ["Ore & Bone Search", "Ground Dive"],
       "kinshipSkill": "Laser Ambush",
-      "eggColors": ["yellow", "brown"],
+      "eggColors": ["brown"],
       "retreat": "Break **each part** to boost the retreat rate",
       "stats": {
         "base": {
@@ -1319,7 +1319,7 @@
       "growth": "regular",
       "ridingActions": ["Plant Search"],
       "kinshipSkill": "Popo Dive",
-      "eggColors": ["brown", "yellow"],
+      "eggColors": ["brown", "orange"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
@@ -1993,7 +1993,7 @@
       "growth": "regular",
       "ridingActions": ["Roar"],
       "kinshipSkill": "Spark Surprise",
-      "eggColors": ["pink", "white", "red"],
+      "eggColors": ["pink", "red"],
       "retreat": "Break the **head** with a **bow** to boost the retreat rate.",
       "stats": {
         "base": {
@@ -2094,7 +2094,7 @@
       "growth": "regular",
       "ridingActions": ["Dash", "Rock Breaker"],
       "kinshipSkill": "Slide Spinner",
-      "eggColors": ["yellow", "white", "gray", "purple"],
+      "eggColors": ["white", "gray", "purple"],
       "retreat": "Break the **stomach** with a **great sword** to boost the retreat rate.",
       "stats": {
         "base": {
@@ -2627,7 +2627,7 @@
       "growth": "regular",
       "ridingActions": ["Jump"],
       "kinshipSkill": "Poison Slash",
-      "eggColors": ["orange", "red", "purple"],
+      "eggColors": ["red", "purple"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
@@ -2700,7 +2700,7 @@
       "growth": "?",
       "ridingActions": [],
       "kinshipSkill": "?",
-      "eggColors": ["green", "yellow"],
+      "eggColors": ["green", "orange"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
       "stats": {
         "base": {
@@ -3009,7 +3009,7 @@
       "growth": "quick",
       "ridingActions": ["Roar", "Ground Dive"],
       "kinshipSkill": "Fiendish Cyclone",
-      "eggColors": ["yellow", "white", "brown"],
+      "eggColors": ["brown"],
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate.",
       "stats": {
         "base": {
@@ -3069,7 +3069,7 @@
       "growth": "quick",
       "ridingActions": ["Roar", "Ground Dive"],
       "kinshipSkill": "Fiendish Cyclone",
-      "eggColors": ["green", "gray", "brown"],
+      "eggColors": ["green", "brown"],
       "retreat": "Make it emerge from **underground** using a **Sonic Bomb**, then destroy its **horns** while it is **downed** to greatly boost the retreat rate.",
       "stats": {
         "base": {
@@ -3503,7 +3503,7 @@
       "growth": "regular",
       "ridingActions": ["Swim"],
       "kinshipSkill": "Moonsault Splash",
-      "eggColors": ["pink", "white"],
+      "eggColors": ["pink"],
       "retreat": "Break the **head** with a **fire element** **gunlance** to boost the retreat rate.",
       "stats": {
         "base": {
@@ -3859,7 +3859,7 @@
       "growth": "regular",
       "ridingActions": ["Mushroom Search", "Ivy Climb"],
       "kinshipSkill": "Foul Burst",
-      "eggColors": ["green", "yellow"],
+      "eggColors": ["green", "orange"],
       "retreat": "Break the **head** with a **fire element** **hunting horn** to boost the retreat rate.",
       "stats": {
         "base": {
@@ -4499,7 +4499,7 @@
       "growth": "?",
       "ridingActions": [],
       "kinshipSkill": "?",
-      "eggColors": ["green", "orange"],
+      "eggColors": ["green", "orange", "red"],
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate.",
       "stats": {
         "base": {
@@ -4863,7 +4863,7 @@
       "growth": "?",
       "ridingActions": [],
       "kinshipSkill": "?",
-      "eggColors": ["gray", "white", "orange"],
+      "eggColors": ["gray", "white", "orange", "red"],
       "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate.",
       "stats": {
         "base": {
@@ -4989,7 +4989,7 @@
       "growth": "?",
       "ridingActions": ["Jump"],
       "kinshipSkill": "?",
-      "eggColors": ["green", "yellow", "orange"],
+      "eggColors": ["green", "orange"],
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
