@@ -122,7 +122,7 @@
       return makeHead({
         title: 'Monster Buddy - Monstie List For Monster Hunter Stories 2',
         description:
-          'Easily find all monsties in their natural habitats and check on retreat conditions and their attack types',
+          'Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats',
         canonical: 'https://monsterbuddy.app/monsties/',
       });
     },
