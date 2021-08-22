@@ -132,7 +132,7 @@
 
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
-        return this.$route?.path === '/monsties/filter/';
+        return this.$route?.path?.startsWith('/monsties/filter/');
       },
 
       heading() {
