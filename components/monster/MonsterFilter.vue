@@ -306,8 +306,8 @@
         let result = [
           { value: 'no', caption: 'Number' },
           { value: 'name', caption: 'Name' },
-          { value: 'genus', caption: 'Genus' },
-          { value: 'habitat', caption: 'Habitat' },
+          { value: 'genus', caption: 'Genus', mode: 'location' },
+          { value: 'habitat', caption: 'Habitat', mode: 'location' },
         ];
 
         if (this.showSortByStats) {
@@ -316,31 +316,37 @@
               value: 'monstie.stats.base.maxHp',
               caption: 'Max HP',
               default: 'desc',
+              mode: 'stats',
             },
             {
               value: 'monstie.stats.base.speed',
               caption: 'Speed',
               default: 'desc',
+              mode: 'stats',
             },
             {
               value: 'monstie.stats.base.critRate',
               caption: 'Crit Rate',
               default: 'desc',
+              mode: 'stats',
             },
             {
               value: 'monstie.stats.bestAttack.value',
               caption: 'Best Attack',
               default: 'desc',
+              mode: 'stats',
             },
             {
               value: 'monstie.stats.bestDefense.value',
               caption: 'Best Defense',
               default: 'desc',
+              mode: 'stats',
             },
             {
               value: 'monstie.stats.worstDefense.value',
               caption: 'Worst Defense',
               default: 'desc',
+              mode: 'stats',
             }
           );
         }
@@ -365,10 +371,15 @@
           this.store.sortKey = newValue;
 
           let config = this.getSortConfigItem(newValue);
+
           if (config && config.default) {
             this.store.sortOrder = config.default;
           } else {
             this.store.sortOrder = 'asc';
+          }
+
+          if (config && config.mode) {
+            this.store.mode = config.mode;
           }
         }
       },
