@@ -5,12 +5,14 @@ import {
   getGenera,
   getHabitats,
   getRidingActions,
+  getEggColors,
   getMonstersByName,
   getMonstersByGenus,
   getMonstersByHabitat,
   getMonstiesByAttackType,
   getMonstiesByAttackElement,
   getMonstiesByRidingAction,
+  getMonstiesByEggColors,
   getMonstersByHatchable,
   getMonstersByIsDeviant,
 } from '~/services/data';
@@ -32,6 +34,7 @@ export function makeMonsterFilterStore(
     attackTypeFilter: null,
     attackElementFilter: null,
     ridingActionFilter: null,
+    eggColorsFilter: null,
     hatchableFilter: null,
     deviantsFilter: null,
   });
@@ -51,6 +54,7 @@ export function makeMonsterFilterStore(
         attackTypeFilter: initial.attackTypeFilter,
         attackElementFilter: initial.attackElementFilter,
         ridingActionFilter: initial.ridingActionFilter,
+        eggColorsFilter: initial.eggColorsFilter,
         hatchableFilter: initial.hatchableFilter,
         deviantsFilter: initial.deviantsFilter,
 
@@ -69,6 +73,10 @@ export function makeMonsterFilterStore(
 
       allRidingActions() {
         return getRidingActions(this.monsters);
+      },
+
+      allEggColors() {
+        return getEggColors(this.monsters);
       },
 
       filteredMonsters() {
@@ -96,6 +104,10 @@ export function makeMonsterFilterStore(
 
         if (this.ridingActionFilter != null) {
           result = getMonstiesByRidingAction(this.ridingActionFilter, result);
+        }
+
+        if (this.eggColorsFilter != null) {
+          result = getMonstiesByEggColors(this.eggColorsFilter, result);
         }
 
         if (this.hatchableFilter != null) {
@@ -191,6 +203,7 @@ export function makeMonsterFilterStore(
         this.attackTypeFilter = initial.attackTypeFilter;
         this.attackElementFilter = initial.attackElementFilter;
         this.ridingActionFilter = initial.ridingActionFilter;
+        this.eggColorsFilter = initial.eggsColorFilter;
         this.hatchableFilter = initial.hatchableFilter;
         this.deviantsFilter = initial.deviantsFilter;
       },

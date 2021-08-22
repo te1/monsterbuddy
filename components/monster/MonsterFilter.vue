@@ -66,6 +66,34 @@
         >
       </div>
 
+      <div
+        v-if="showEggColorFilter"
+        class="flex items-center"
+      >
+        <label
+          class="flex-1 cursor-pointer"
+          for="MonsterFilter_EggColorFilter"
+        >
+          Egg Color
+        </label>
+
+        <select
+          id="MonsterFilter_EggColorFilter"
+          v-model="store.eggColorsFilter"
+          class="input w-[180px] px-2 py-1"
+        >
+          <option :value="null">All</option>
+
+          <option
+            v-for="color in eggColors"
+            :key="color.caption"
+            :value="color.colors"
+          >
+            {{ color.caption }}
+          </option>
+        </select>
+      </div>
+
       <div class="flex items-center">
         <label
           class="flex-1 cursor-pointer"
@@ -263,6 +291,12 @@
         default: false,
       },
 
+      showEggColorFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
       showAttackTypeFilter: {
         type: Boolean,
         required: false,
@@ -355,6 +389,19 @@
         }
 
         return result;
+      },
+
+      eggColors() {
+        return [
+          { caption: 'Black', colors: ['black'] },
+          { caption: 'White / Gray', colors: ['white', 'gray'] },
+          { caption: 'Red', colors: ['red'] },
+          { caption: 'Orange / Brown', colors: ['orange', 'brown'] },
+          { caption: 'Yellow', colors: ['yellow'] },
+          { caption: 'Green', colors: ['green'] },
+          { caption: 'Blue', colors: ['blue'] },
+          { caption: 'Purple / Pink', colors: ['purple', 'pink'] },
+        ];
       },
     },
 

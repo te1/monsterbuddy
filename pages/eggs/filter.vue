@@ -26,6 +26,7 @@
     </section>
 
     <MonsterFilter
+      showEggColorFilter
       showAttackTypeFilter
       showAttackElementFilter
       showRidingActionFilter

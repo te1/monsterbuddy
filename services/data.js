@@ -30,6 +30,7 @@ export const monstiesBySlug = Object.freeze(_.keyBy(monsties, 'slug'));
 export const genera = getGenera();
 export const habitats = getHabitats();
 export const ridingActions = getRidingActions();
+export const eggColors = getEggColors();
 
 export function getGenera(monsterList = monsters) {
   return deepFreeze(_.sortBy(_.uniq(_.map(monsterList, 'genus'))));
@@ -45,6 +46,11 @@ export function getRidingActions(monsterList = monsties) {
   );
 }
 
+export function getEggColors(monsterList = monsties) {
+  return deepFreeze(
+    _.sortBy(_.uniq(_.flatMap(_.map(monsterList, 'monstie.eggColors'))))
+  );
+}
 export function getMonstersByName(name, monsterList = monsters) {
   name = _.toLower(name);
 
@@ -89,6 +95,26 @@ export function getMonstiesByRidingAction(
   return deepFreeze(
     _.filter(monsterList, (monster) => {
       return _.includes(monster?.monstie?.ridingActions, ridingAction);
+    })
+  );
+}
+
+export function getMonstiesByEggColor(eggColor, monsterList = monsties) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return _.includes(monster?.monstie?.eggColors, eggColor);
+    })
+  );
+}
+
+export function getMonstiesByEggColors(eggColors, monsterList = monsties) {
+  if (!_.isArray(eggColors)) {
+    eggColors = [eggColors];
+  }
+
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return !!_.intersection(monster?.monstie?.eggColors, eggColors).length;
     })
   );
 }
