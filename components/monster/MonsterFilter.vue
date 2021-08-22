@@ -76,8 +76,9 @@
 
         <select
           id="MonsterFilter_GenusFilter"
-          v-model="store.genusFilter"
+          :value="store.genusFilter"
           class="input w-[180px] px-2 py-1"
+          @input="onGenusFilterChanged"
         >
           <option :value="null">All</option>
 
@@ -101,8 +102,9 @@
 
         <select
           id="MonsterFilter_HabitatFilter"
-          v-model="store.habitatFilter"
+          :value="store.habitatFilter"
           class="input w-[180px] px-2 py-1"
+          @input="onHabitatFilterChanged"
         >
           <option :value="null">All</option>
 
@@ -183,8 +185,9 @@
 
         <select
           id="MonsterFilter_RidingActionFilter"
-          v-model="store.ridingActionFilter"
+          :value="store.ridingActionFilter"
           class="input w-[180px] px-2 py-1"
+          @input="onRidingActionFilterChanged"
         >
           <option :value="null">All</option>
 
@@ -201,7 +204,7 @@
       <div
         v-if="showHatchableFilter"
         class="py-1 flex items-center select-none"
-        @click="updateFilter('hatchableFilter')"
+        @click="toggleFilterValue('hatchableFilter')"
       >
         <label class="flex-1 cursor-pointer">
           Hatchable
@@ -217,7 +220,7 @@
       <div
         v-if="showDeviantsFilter"
         class="py-1 flex items-center select-none"
-        @click="updateFilter('deviantsFilter')"
+        @click="toggleFilterValue('deviantsFilter')"
       >
         <label class="flex-1 cursor-pointer">
           Deviants
@@ -378,7 +381,7 @@
             this.store.sortOrder = 'asc';
           }
 
-          if (config && config.mode) {
+          if (config && config.mode && this.store.mode !== 'compact') {
             this.store.mode = config.mode;
           }
         }
@@ -388,7 +391,36 @@
         this.store.sortOrder = this.store.sortOrder === 'asc' ? 'desc' : 'asc';
       },
 
-      updateFilter(key) {
+      onFilterChanged(filterKey, e, mode = null) {
+        let oldValue = this.store[filterKey];
+        let newValue = e?.target?.value;
+
+        if (newValue === '') {
+          newValue = null;
+        }
+
+        if (newValue !== oldValue) {
+          this.store[filterKey] = newValue;
+
+          if (newValue != null && mode != null && this.store.mode !== 'compact') {
+            this.store.mode = mode;
+          }
+        }
+      },
+
+      onGenusFilterChanged(e) {
+        this.onFilterChanged('genusFilter', e, 'location');
+      },
+
+      onHabitatFilterChanged(e) {
+        this.onFilterChanged('habitatFilter', e, 'location');
+      },
+
+      onRidingActionFilterChanged(e) {
+        this.onFilterChanged('ridingActionFilter', e, 'ridingActions');
+      },
+
+      toggleFilterValue(key) {
         let value = this.store[key];
 
         switch (value) {
