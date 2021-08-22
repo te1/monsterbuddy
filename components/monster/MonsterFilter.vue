@@ -5,15 +5,43 @@
         Sort
       </h3>
 
-      <AppSortToggle
-        v-for="item in sortConfig"
-        :key="item.sortKey"
-        :value="item.value"
-        :caption="item.caption"
-        :sortKey.sync="store.sortKey"
-        :sortOrder.sync="store.sortOrder"
-        :defaultSortOrder="item.default"
-      />
+      <div class="flex items-center">
+        <label
+          class="flex-1 cursor-pointer"
+          for="MonsterFilter_SortBy"
+        >
+          By
+        </label>
+
+        <select
+          id="MonsterFilter_SortBy"
+          :value="store.sortKey"
+          class="input w-[180px] px-2 py-1"
+          @input="onSortKeyChanged"
+        >
+          <option
+            v-for="item in sortConfig"
+            :key="item.value"
+            :value="item.value"
+          >
+            {{ item.caption }}
+          </option>
+        </select>
+      </div>
+
+      <div
+        class="flex items-center cursor-pointer select-none"
+        @click="toggleSortOrder"
+      >
+        <label class="flex-1 cursor-pointer">
+          Order
+        </label>
+
+        <AppSortOrderToggle
+          v-model="store.sortOrder"
+          class="w-[180px]"
+        />
+      </div>
     </section>
 
     <section class="box px-4 py-3 flex flex-col space-y-3">
@@ -217,6 +245,7 @@
 </template>
 
 <script>
+  import _ from 'lodash';
   import { formatAttackType, formatElement, allElements } from '~/services/utils';
 
   export default {
@@ -323,6 +352,30 @@
     methods: {
       formatAttackType,
       formatElement,
+
+      getSortConfigItem(value) {
+        return _.find(this.sortConfig, { value });
+      },
+
+      onSortKeyChanged(e) {
+        let oldValue = this.store.sortKey;
+        let newValue = e?.target?.value;
+
+        if (newValue != null && newValue !== oldValue) {
+          this.store.sortKey = newValue;
+
+          let config = this.getSortConfigItem(newValue);
+          if (config && config.default) {
+            this.store.sortOrder = config.default;
+          } else {
+            this.store.sortOrder = 'asc';
+          }
+        }
+      },
+
+      toggleSortOrder() {
+        this.store.sortOrder = this.store.sortOrder === 'asc' ? 'desc' : 'asc';
+      },
 
       updateFilter(key) {
         let value = this.store[key];
