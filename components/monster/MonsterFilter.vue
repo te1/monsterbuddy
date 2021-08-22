@@ -1,17 +1,16 @@
 <template>
   <div class="space-y-3">
-    <section class="box px-4 py-3 flex flex-col space-y-3">
-      <h3 class="text-lg font-semibold -mb-2">
-        Sort
-      </h3>
 
+    <section class="box px-4 py-3 flex flex-col space-y-3">
       <div class="flex items-center">
-        <label
-          class="flex-1 cursor-pointer"
-          for="MonsterFilter_SortBy"
-        >
-          By
-        </label>
+        <h3 class="flex-1 text-lg font-semibold">
+          <label
+            class="block w-full cursor-pointer"
+            for="MonsterFilter_SortBy"
+          >
+            Sort By
+          </label>
+        </h3>
 
         <select
           id="MonsterFilter_SortBy"
@@ -45,17 +44,15 @@
     </section>
 
     <section class="box px-4 py-3 flex flex-col space-y-3">
-      <h3 class="text-lg font-semibold -mb-2">
-        Filter
-      </h3>
-
       <div class="flex items-center">
-        <label
-          class="flex-1 cursor-pointer"
-          for="MonsterFilter_NameFilter"
-        >
-          Name
-        </label>
+        <h3 class="flex-1 text-lg font-semibold">
+          <label
+            class="block w-full cursor-pointer"
+            for="MonsterFilter_NameFilter"
+          >
+            Filter
+          </label>
+        </h3>
 
         <input
           id="MonsterFilter_NameFilter"
