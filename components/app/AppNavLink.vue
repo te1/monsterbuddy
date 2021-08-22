@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    class="flex items-center justify-center font-semibold tracking-wide transition-colors text-gray-500 hover:text-gray-700 active:bg-gray-200 dark:text-cool-300 dark:hover:text-cool-100 dark:active:bg-cool-700"
+    class="flex items-center justify-center font-semibold tracking-wide transition-colors duration-300 text-gray-500 hover:text-gray-700 active:bg-gray-200 dark:text-cool-300 dark:hover:text-cool-100 dark:active:bg-cool-700"
     :active-class="activeClasses"
     :exact-active-class="exactActiveClasses"
     @mousedown.native="handleClick"

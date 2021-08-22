@@ -4,7 +4,7 @@
 
 @layer components {
   a.link {
-    @apply no-underline font-normal transition-colors text-brand-600 dark:text-brand-500;
+    @apply no-underline font-normal transition-colors duration-300 text-brand-600 dark:text-brand-500;
   }
   a.link:visited {
     @apply text-brand-800 dark:text-brand-400;
@@ -23,11 +23,11 @@
   }
 
   .box-link {
-    @apply hover:transition-colors active:transition-colors focus:transition-colors hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-cool-900/50 dark:active:bg-cool-900/75;
+    @apply hover:transition-colors hover:duration-300 active:transition-colors active:duration-300 focus:transition-colors focus:duration-300 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-cool-900/50 dark:active:bg-cool-900/75;
   }
 
   .box-link-inline {
-    @apply hover:transition-opacity active:transition-opacity focus:transition-opacity hover:opacity-75 active:opacity-50;
+    @apply hover:transition-opacity hover:duration-300 active:transition-opacity active:duration-300 focus:transition-opacity focus:duration-300 hover:opacity-75 active:opacity-50;
   }
 
   .input {

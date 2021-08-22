@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="cursor-pointer transition-colors hover:text-black dark:hover:text-white active:text-gray-500 dark:active:text-cool-400"
+    class="cursor-pointer transition-colors duration-300 hover:text-black dark:hover:text-white active:text-gray-500 dark:active:text-cool-400"
     :title="title"
     @click="onClick"
   >

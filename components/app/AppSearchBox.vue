@@ -8,7 +8,7 @@
     </div>
 
     <div
-      class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer transition-opacity"
+      class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer transition-opacity duration-300"
       :class="{ 'opacity-0': !value }"
     >
       <AppIconButton
