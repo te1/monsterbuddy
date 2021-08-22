@@ -64,26 +64,9 @@
         </li>
       </ul>
 
-      <div
-        v-if="monsterFilter.isEmpty"
-        class="box flex flex-col items-center py-4 space-y-4"
-      >
-        <span class="text-2xl font-semibold text-gray-500 dark:text-cool-300">
-          No monsters found
-        </span>
-
-        <FaIcon
-          class="!w-16 !h-16 text-gray-400 dark:text-cool-400"
-          :icon="['far', 'sad-cry']"
-        />
-
-        <AppTextButton
-          class="w-[160px]"
-          @click="monsterFilter.resetFilter"
-        >
-          Reset filter
-        </AppTextButton>
-      </div>
+      <MonsterNoResults v-if="monsterFilter.isEmpty">
+        No monsters found
+      </MonsterNoResults>
     </main>
   </div>
 </template>

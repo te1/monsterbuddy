@@ -83,26 +83,9 @@
         </li>
       </ul>
 
-      <div
-        v-if="eggFilter.isEmpty"
-        class="box flex flex-col items-center py-4 space-y-4"
-      >
-        <span class="text-2xl font-semibold text-gray-500 dark:text-cool-300">
-          No eggs found
-        </span>
-
-        <FaIcon
-          class="!w-16 !h-16 text-gray-400 dark:text-cool-400"
-          :icon="['far', 'sad-cry']"
-        />
-
-        <AppTextButton
-          class="w-[160px]"
-          @click="eggFilter.resetFilter"
-        >
-          Reset filter
-        </AppTextButton>
-      </div>
+      <MonsterNoResults v-if="eggFilter.isEmpty">
+        No eggs found
+      </MonsterNoResults>
     </main>
   </div>
 </template>
