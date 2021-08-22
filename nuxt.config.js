@@ -154,7 +154,7 @@ export default {
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-generate
   generate: {
-    exclude: ['/test'],
+    exclude: ['/monsters/filter', '/monsties/filter', '/eggs/filter', '/test'],
     fallback: true,
   },
 
