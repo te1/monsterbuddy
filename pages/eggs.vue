@@ -151,7 +151,7 @@
 
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
-        return this.$route?.path === '/eggs/filter/';
+        return this.$route?.path?.startsWith('/eggs/filter');
       },
 
       heading() {
