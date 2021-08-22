@@ -203,7 +203,7 @@ export function makeMonsterFilterStore(
         this.attackTypeFilter = initial.attackTypeFilter;
         this.attackElementFilter = initial.attackElementFilter;
         this.ridingActionFilter = initial.ridingActionFilter;
-        this.eggColorsFilter = initial.eggsColorFilter;
+        this.eggColorsFilter = initial.eggColorsFilter;
         this.hatchableFilter = initial.hatchableFilter;
         this.deviantsFilter = initial.deviantsFilter;
       },
