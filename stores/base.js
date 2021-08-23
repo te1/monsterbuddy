@@ -193,6 +193,59 @@ export function makeMonsterFilterStore(
         return _.includes(['genus', 'habitat'], this.sortKey);
       },
 
+      activeSort() {
+        switch (this.sortKey) {
+          case 'monstie.stats.base.maxHp':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Max HP',
+            };
+
+          case 'monstie.stats.base.speed':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Speed',
+            };
+
+          case 'monstie.stats.base.critRate':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Crit Rate',
+            };
+
+          case 'monstie.stats.bestAttack.value':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Best Attack',
+            };
+
+          case 'monstie.stats.bestDefense.value':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Best Defense',
+            };
+
+          case 'monstie.stats.worstDefense.value':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Worst Defense',
+            };
+
+          default:
+            return null;
+        }
+      },
+
+      hasActiveSort() {
+        return this.activeSort != null;
+      },
+
       activeFilters() {
         let result = [];
 

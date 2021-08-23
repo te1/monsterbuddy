@@ -24,12 +24,13 @@
         v-if="monsterFilter.hasActiveFilters"
         class="fixed z-10 w-full inset-x-0 top-12 mt-1"
       >
-        <div class="container px-4 flex flex-wrap gap-1 items-center justify-center">
+        <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
           <AppFilterPill
             v-for="filter in monsterFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
             filterTarget="/monsters/filter/"
+            showRemove
             @remove="monsterFilter[filter.name] = null"
           />
         </div>
