@@ -5,7 +5,11 @@
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "monster": {
@@ -57,7 +61,11 @@
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "monster": {
@@ -76,7 +84,11 @@
     "genus": "Herbivore",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "monster": {}
@@ -87,7 +99,11 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "monster": {
@@ -106,7 +122,11 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 2,
     "monster": {
@@ -159,7 +179,11 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 2,
     "monster": {
@@ -213,7 +237,11 @@
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "related": [
@@ -237,7 +265,11 @@
     "genus": "Neopteron",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "related": [
@@ -261,7 +293,11 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Blue Yian Kut-Ku" }],
@@ -316,7 +352,11 @@
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 1,
     "monster": {
@@ -335,7 +375,11 @@
     "genus": "Fanged Beast",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 2,
     "monster": {
@@ -388,7 +432,11 @@
     "genus": "Bird Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 2,
     "monster": {
@@ -444,7 +492,7 @@
     "genus": "Herbivore",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 1,
     "monster": {
@@ -496,7 +544,7 @@
     "genus": "Herbivore",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 1,
     "related": [{ "type": "color", "monster": "Slagtoth (Brown)" }],
@@ -516,7 +564,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 1,
     "monster": {
@@ -535,7 +583,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 1,
     "monster": {
@@ -554,7 +602,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 1,
     "monster": {
@@ -573,7 +621,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 2,
     "monster": {
@@ -625,7 +673,9 @@
     "name": "Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -642,7 +692,9 @@
     "name": "Royal Ludroth",
     "genus": "Leviathan",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+    ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Ludroth" }],
     "monster": {
@@ -697,7 +749,7 @@
     "genus": "Amphibian",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
     ],
     "rarity": 2,
     "monster": {
@@ -717,7 +769,7 @@
     "genus": "Fanged Beast",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 2,
     "monster": {
@@ -772,7 +824,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Etulle Lofty Trees" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Crimson Qurupeco" }],
@@ -827,7 +879,9 @@
     "name": "Blue Yian Kut-Ku",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+    ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Yian Kut-Ku" }],
     "monster": {
@@ -881,7 +935,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Harzgai Hill - Inner" }
+      {
+        "type": "catavanStand",
+        "main": "Alcala",
+        "sub": "Harzgai Hill - Inner"
+      }
     ],
     "rarity": 5,
     "related": [
@@ -940,7 +998,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Harzgai Hill - Inner" }
+      {
+        "type": "catavanStand",
+        "main": "Alcala",
+        "sub": "Harzgai Hill - Inner"
+      }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "White Monoblos" }],
@@ -997,7 +1059,9 @@
     "name": "Paolumu",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Wendwood" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Wendwood" }
+    ],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -1051,7 +1115,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ruby Basarios" }],
@@ -1107,7 +1171,9 @@
     "name": "Yian Garuga",
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+    ],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -1160,7 +1226,9 @@
     "name": "Duramboros",
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Wendwood" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Wendwood" }
+    ],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -1182,7 +1250,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 4,
     "related": [
@@ -1242,7 +1310,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
     ],
     "rarity": 4,
     "related": [
@@ -1301,7 +1369,7 @@
     "genus": "Herbivore",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 1,
     "monster": {
@@ -1353,7 +1421,7 @@
     "genus": "Neopteron",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 1,
     "related": [
@@ -1377,7 +1445,7 @@
     "genus": "Neopteron",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 1,
     "related": [
@@ -1401,7 +1469,7 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
     ],
     "rarity": 1,
     "monster": {
@@ -1420,7 +1488,7 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Emerald Congalala" }],
@@ -1477,7 +1545,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 1,
     "monster": {
@@ -1496,7 +1564,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 2,
     "monster": {
@@ -1549,7 +1617,7 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ash Kecha Wacha" }],
@@ -1607,7 +1675,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Gypceros" }],
@@ -1664,7 +1732,7 @@
     "genus": "Amphibian",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 1,
     "monster": {
@@ -1683,7 +1751,7 @@
     "genus": "Amphibian",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 3,
     "monster": {
@@ -1740,7 +1808,7 @@
     "genus": "Temnoceran",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Shrouded Nerscylla" }],
@@ -1799,7 +1867,11 @@
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Rocky Canyon" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Loloska Rocky Canyon"
+      }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Jade Barroth" }],
@@ -1857,7 +1929,11 @@
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Rocky Canyon" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Loloska Rocky Canyon"
+      }
     ],
     "rarity": 3,
     "monster": {
@@ -1914,7 +1990,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Lavina Glacial Peaks" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks"
+      }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Red Khezu" }],
@@ -1970,7 +2050,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Lavina Glacial Peaks" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks"
+      }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Khezu" }],
@@ -2027,7 +2111,7 @@
     "name": "Seltas",
     "genus": "Neopteron",
     "habitat": "Loloska",
-    "locations": [{ "type": "map", "main": "Loloska", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "Loloska", "sub": "?" }],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -2048,7 +2132,7 @@
     "name": "Seltas Queen",
     "genus": "Neopteron",
     "habitat": "Loloska",
-    "locations": [{ "type": "map", "main": "Loloska", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "Loloska", "sub": "?" }],
     "rarity": "?",
     "related": [{ "type": "subspecies", "monster": "Desert Seltas Queen" }],
     "monster": {
@@ -2073,7 +2157,7 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 2,
     "monster": {
@@ -2128,7 +2212,11 @@
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Lavina Glacial Peaks" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks"
+      }
     ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Barroth" }],
@@ -2187,7 +2275,7 @@
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Fulgur Anjanath" }],
@@ -2242,7 +2330,9 @@
     "name": "Gammoth",
     "genus": "Fanged Beast",
     "habitat": "Loloska",
-    "locations": [{ "type": "map", "main": "Loloska", "sub": "Woodland" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Loloska", "sub": "Woodland" }
+    ],
     "rarity": 5,
     "monster": {
       "attackPatterns": {
@@ -2298,7 +2388,11 @@
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Lavina Glacial Peaks" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks"
+      }
     ],
     "rarity": 5,
     "related": [
@@ -2359,7 +2453,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Rocky Canyon" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Loloska Rocky Canyon"
+      }
     ],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Sand Barioth" }],
@@ -2416,7 +2514,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Lavina Glacial Peaks" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks"
+      }
     ],
     "rarity": 4,
     "monster": {
@@ -2472,7 +2574,9 @@
     "name": "Slagtoth (Brown)",
     "genus": "Herbivore",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 1,
     "related": [{ "type": "color", "monster": "Slagtoth (Green)" }],
     "monster": {
@@ -2490,7 +2594,9 @@
     "name": "Bnahabra (Brown)",
     "genus": "Neopteron",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 1,
     "related": [
       { "type": "color", "monster": "Bnahabra (Blue)" },
@@ -2513,7 +2619,7 @@
     "genus": "Neopteron",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "related": [
@@ -2536,7 +2642,9 @@
     "name": "Cephalos",
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -2553,7 +2661,9 @@
     "name": "Hermitaur",
     "genus": "Carapaceon",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 1,
     "monster": {
       "attackPatterns": {
@@ -2571,7 +2681,7 @@
     "genus": "Leviathan",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "monster": {
@@ -2590,7 +2700,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "monster": {
@@ -2609,7 +2719,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 2,
     "monster": {
@@ -2662,7 +2772,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Lamure Tower - 3F" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 3F" }
     ],
     "rarity": 1,
     "monster": {
@@ -2682,7 +2792,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Lamure Tower - 3F" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 3F" }
     ],
     "rarity": 2,
     "monster": {
@@ -2734,7 +2844,9 @@
     "name": "Plesioth",
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Green Plesioth" }],
     "monster": {
@@ -2756,7 +2868,9 @@
     "name": "Cephadrome",
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 2,
     "monster": {
       "attackPatterns": {
@@ -2811,7 +2925,7 @@
     "genus": "Fanged Beast",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Lamure Tower Front" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Kecha Wacha" }],
@@ -2869,7 +2983,7 @@
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Lamure Tower Front" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Gypceros" }],
@@ -2925,7 +3039,9 @@
     "name": "Green Nargacuga",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "subspeciesOf", "monster": "Nargacuga" },
@@ -2984,7 +3100,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Lamure Tower Front" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" }
     ],
     "rarity": 5,
     "related": [
@@ -3044,7 +3160,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Lamure Tower - 5F" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 5F" }
     ],
     "rarity": 6,
     "related": [
@@ -3105,7 +3221,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "Jalma Highlands" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Jalma Highlands"
+      }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Monoblos" }],
@@ -3161,7 +3281,9 @@
     "name": "Crimson Qurupeco",
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+    ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Qurupeco" }],
     "monster": {
@@ -3215,7 +3337,9 @@
     "name": "Mizutsune",
     "genus": "Leviathan",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+    ],
     "rarity": 5,
     "monster": {
       "attackPatterns": {
@@ -3270,7 +3394,9 @@
     "name": "Lagiacrus",
     "genus": "Leviathan",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+    ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Ivory Lagiacrus" }],
     "monster": {
@@ -3327,7 +3453,7 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 4,
     "monster": {
@@ -3382,7 +3508,9 @@
     "name": "Daimyo Hermitaur",
     "genus": "Carapaceon",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Plum Daimyo Hermitaur" }],
     "monster": {
@@ -3404,7 +3532,11 @@
     "genus": "Carapaceon",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Monster Research Lab" }
+      {
+        "type": "catavanStand",
+        "main": "Lamure",
+        "sub": "Monster Research Lab"
+      }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Daimyo Hermitaur" }],
@@ -3426,7 +3558,9 @@
     "name": "Brute Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Terga",
-    "locations": [{ "type": "map", "main": "Terga", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Terga", "sub": "Sadona Barrens" }
+    ],
     "rarity": 6,
     "related": [
       { "type": "subspeciesOf", "monster": "Tigrex" },
@@ -3483,7 +3617,9 @@
     "name": "Purple Ludroth",
     "genus": "Leviathan",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Sadona Barrens" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+    ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Royal Ludroth" }],
     "monster": {
@@ -3537,7 +3673,9 @@
     "name": "Ruby Basarios",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+    ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Basarios" }],
     "monster": {
@@ -3593,7 +3731,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Black Gravios" }],
@@ -3649,7 +3787,7 @@
     "genus": "Neopteron",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "monster": {
@@ -3668,7 +3806,7 @@
     "genus": "Neopteron",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "monster": {
@@ -3687,7 +3825,7 @@
     "genus": "Neopteron",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "related": [
@@ -3711,7 +3849,7 @@
     "genus": "Lynian",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 1,
     "monster": {
@@ -3730,7 +3868,7 @@
     "genus": "Neopteron",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Seltas Queen" }],
@@ -3754,7 +3892,7 @@
     "genus": "Piscine Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Plesioth" }],
@@ -3778,7 +3916,7 @@
     "genus": "Temnoceran",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Nerscylla" }],
@@ -3837,7 +3975,7 @@
     "genus": "Fanged Beast",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Congalala" }],
@@ -3894,7 +4032,7 @@
     "genus": "Leviathan",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 4,
     "monster": {
@@ -3917,7 +4055,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Gravios" }],
@@ -3973,7 +4111,7 @@
     "genus": "Leviathan",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Lagiacrus" }],
@@ -4031,7 +4169,7 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 6,
     "monster": {
@@ -4089,7 +4227,7 @@
     "genus": "Elder Dragon",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 7,
     "monster": {
@@ -4146,7 +4284,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 5,
     "related": [{ "type": "deviant", "monster": "Boltreaver Astalos" }],
@@ -4205,7 +4343,9 @@
     "name": "Glavenus",
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "Alcala Valley" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+    ],
     "rarity": 5,
     "related": [{ "type": "deviant", "monster": "Hellblade Glavenus" }],
     "monster": {
@@ -4262,7 +4402,7 @@
     "name": "Glacial Agnaktor",
     "genus": "Leviathan",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "related": [{ "type": "subspeciesOf", "monster": "Agnaktor" }],
     "monster": {
@@ -4286,7 +4426,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "Forbidden Grounds" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      }
     ],
     "rarity": 6,
     "monster": {
@@ -4343,7 +4487,7 @@
     "name": "Remobra",
     "genus": "Snake Wyvern",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -4361,7 +4505,7 @@
     "name": "Great Dracophage Bug",
     "genus": "Neopteron",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -4379,7 +4523,7 @@
     "name": "Bnahabra (Red)",
     "genus": "Neopteron",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "related": [
       { "type": "color", "monster": "Bnahabra (Blue)" },
@@ -4402,7 +4546,7 @@
     "name": "Vespoid",
     "genus": "Neopteron",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -4421,7 +4565,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "Forbidden Grounds" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      }
     ],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Barioth" }],
@@ -4479,7 +4627,11 @@
     "genus": "Brute Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "Forbidden Grounds" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      }
     ],
     "rarity": 6,
     "monster": {
@@ -4537,7 +4689,11 @@
     "genus": "Fanged Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "Forbidden Grounds" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      }
     ],
     "rarity": 6,
     "related": [
@@ -4599,7 +4755,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "Forbidden Grounds" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      }
     ],
     "rarity": 6,
     "monster": {
@@ -4656,7 +4816,7 @@
     "name": "Barrel Felyne",
     "genus": "Lynian",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "monster": {
       "elementalWeakness": "none"
@@ -4669,7 +4829,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Azure Rathalos" }],
@@ -4728,7 +4892,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "North Kamuna Cape" }
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Rathalos" }],
@@ -4786,7 +4954,9 @@
     "name": "Pink Rathian",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
-    "locations": [{ "type": "map", "main": "Lamure", "sub": "Pomore Garden" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "subspeciesOf", "monster": "Rathian" },
@@ -4844,7 +5014,7 @@
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Anjanath" }],
@@ -4902,7 +5072,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Hakolo Island",
     "locations": [
-      { "type": "map", "main": "Hakolo Island", "sub": "East Kamuna Heights" },
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "East Kamuna Heights"
+      },
       { "type": "den", "main": "Jungle" }
     ],
     "rarity": 7,
@@ -4964,7 +5138,11 @@
     "genus": "Fanged Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Loloska Rocky Canyon" },
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Loloska Rocky Canyon"
+      },
       { "type": "den", "main": "Snowy Mt." }
     ],
     "rarity": 7,
@@ -5028,7 +5206,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Jalma Highlands" },
+      { "type": "catavanStand", "main": "Lamure", "sub": "Jalma Highlands" },
       { "type": "den", "main": "Desert" },
       { "type": "den", "main": "Flowery" }
     ],
@@ -5092,7 +5270,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Alcala Valley" },
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
       { "type": "den", "main": "Woodland" }
     ],
     "rarity": 7,
@@ -5154,7 +5332,7 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "den", "main": "Volcanic" }
     ],
     "rarity": 7,
@@ -5217,7 +5395,7 @@
     "genus": "Elder Dragon",
     "habitat": "Lamure",
     "locations": [
-      { "type": "map", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "den", "main": "Jungle" },
       { "type": "den", "main": "Desert" },
       { "type": "den", "main": "Flowery" }
@@ -5275,7 +5453,7 @@
     "genus": "Elder Dragon",
     "habitat": "Terga",
     "locations": [
-      { "type": "map", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "den", "main": "Jungle" },
       { "type": "den", "main": "Volcanic" }
     ],
@@ -5335,7 +5513,7 @@
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
     "locations": [
-      { "type": "map", "main": "?", "sub": "?" },
+      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "den", "main": "Woodland" },
       { "type": "den", "main": "Desert" },
       { "type": "den", "main": "Flowery" }
@@ -5398,7 +5576,7 @@
     "genus": "Elder Dragon",
     "habitat": "Alcala",
     "locations": [
-      { "type": "map", "main": "Alcala", "sub": "Etulle Lofty Trees" },
+      { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" },
       { "type": "den", "main": "Woodland" },
       { "type": "den", "main": "Desert" },
       { "type": "den", "main": "Flowery" }
@@ -5459,7 +5637,11 @@
     "genus": "Elder Dragon",
     "habitat": "Loloska",
     "locations": [
-      { "type": "map", "main": "Loloska", "sub": "Base of Mt. Lavina" },
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Base of Mt. Lavina"
+      },
       { "type": "den", "main": "Snowy Mt." },
       { "type": "den", "main": "Volcanic" }
     ],
@@ -5519,7 +5701,7 @@
     "name": "Boltreaver Astalos",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "map", "main": "Alcala", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "Alcala", "sub": "?" }],
     "rarity": 7,
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Astalos" }],
@@ -5578,7 +5760,7 @@
     "name": "Hellblade Glavenus",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
-    "locations": [{ "type": "map", "main": "Terga", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "Terga", "sub": "?" }],
     "rarity": 7,
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Glavenus" }],
@@ -5634,7 +5816,7 @@
     "name": "Kulve Taroth",
     "genus": "Elder Dragon",
     "habitat": "?",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": "?",
     "monster": {
       "attackPatterns": {
@@ -5661,7 +5843,7 @@
     "name": "Palamute (Normal)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -5716,7 +5898,7 @@
     "name": "Palamute (Fire)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -5771,7 +5953,7 @@
     "name": "Palamute (Water)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -5826,7 +6008,7 @@
     "name": "Palamute (Thunder)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -5881,7 +6063,7 @@
     "name": "Palamute (Ice)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -5936,7 +6118,7 @@
     "name": "Palamute (Dragon)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "map", "main": "?", "sub": "?" }],
+    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
