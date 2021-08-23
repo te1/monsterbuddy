@@ -22,7 +22,7 @@
     <main v-show="leaving || !showFilter">
       <div
         v-if="monsterFilter.hasActiveFilters"
-        class="fixed z-10 w-full inset-x-0 -mt-2"
+        class="fixed z-10 w-full inset-x-0 top-12 mt-1"
       >
         <div class="container px-4 flex flex-wrap gap-1 items-center justify-center">
           <AppFilterPill
@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <ul :class="{ 'pt-6': monsterFilter.hasActiveFilters }">
+      <ul :class="{ 'mt-8': monsterFilter.hasActiveFilters }">
         <li
           v-for="(group, key) in monsterFilter.groupedMonsters"
           :key="key"
