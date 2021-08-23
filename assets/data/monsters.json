@@ -1689,7 +1689,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
-        "Covered in ice": "speed",
+        "Covered In Ice": "speed",
         "Inflated": "power"
       },
       "parts": {
@@ -1806,7 +1806,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
-        "Covered in mud": "technical"
+        "Covered In Mud": "technical"
       },
       "parts": {
         "DEFAULT": ["slash"],
@@ -2136,7 +2136,7 @@
       "attackPatterns": {
         "DEFAULT": "power",
         "Enraged": "speed",
-        "Covered in snow": "technical"
+        "Covered In Snow": "technical"
       },
       "parts": {
         "DEFAULT": ["slash"],
@@ -2580,7 +2580,8 @@
       },
       "parts": {
         "DEFAULT": ["blunt"]
-      }
+      },
+      "elementalWeakness": "water"
     }
   },
   {
@@ -4216,7 +4217,8 @@
       "parts": {
         "DEFAULT": ["blunt"],
         "Body": ["blunt"],
-        "Head": ["slash", "pierce"]
+        "Head": ["slash", "pierce"],
+        "Tail": []
       },
       "elementalWeakness": "water"
     },
@@ -4270,9 +4272,9 @@
         "No Ice Armor": "technical"
       },
       "parts": {
-        "Body": ["slash", "pierce"],
-        "Head": ["slash", "pierce"],
-        "Tail": ["slash", "pierce"]
+        "Head": ["blunt"],
+        "Body": ["blunt"],
+        "Tail": ["blunt"]
       },
       "elementalWeakness": "fire"
     }
@@ -4485,6 +4487,7 @@
         "DEFAULT": "power",
         "Enraged": "speed"
       },
+      // TODO confirm parts weaknesses
       "parts": {
         "DEFAULT": ["slash", "blunt", "pierce"],
         "Body": ["slash", "blunt", "pierce"],
@@ -4545,6 +4548,7 @@
       "attackPatterns": {
         "DEFAULT": "technical",
         "Enraged": "speed"
+        // "Charged": "power" // TODO is there a charged phase?
       },
       "parts": {
         "DEFAULT": ["pierce"],
@@ -4846,8 +4850,8 @@
     "related": [{ "type": "subspeciesOf", "monster": "Anjanath" }],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "speed",
-        "Enraged": "power"
+        "DEFAULT": "power",
+        "Enraged": "speed"
       },
       "parts": {
         "Body": ["pierce"],
@@ -5166,8 +5170,8 @@
       },
       "parts": {
         "Head": ["slash", "blunt"],
-        "Stomach": ["slash"],
-        "Tail": ["slash"],
+        "Stomach": ["slash"], // TODO blunt?
+        "Tail": ["slash"], // TODO blunt?
         "Back": ["slash", "blunt"]
       },
       "elementalWeakness": "dragon"
@@ -5463,7 +5467,7 @@
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
-        "Ice mantle": "technical",
+        "Ice Mantle": "technical",
         "Flying": "power"
       },
       "parts": {
@@ -5521,7 +5525,9 @@
     "related": [{ "type": "deviantOf", "monster": "Astalos" }],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "technical"
+        "DEFAULT": "technical",
+        "1st Landing": "power",
+        "2nd Landing": "speed"
       },
       "parts": {
         "DEFAULT": ["slash", "blunt"],
@@ -5578,7 +5584,8 @@
     "related": [{ "type": "deviantOf", "monster": "Glavenus" }],
     "monster": {
       "attackPatterns": {
-        "DEFAULT": "power"
+        "DEFAULT": "power",
+        "Enraged": "speed"
       },
       "parts": {
         "Head": ["slash"],
@@ -5630,9 +5637,21 @@
     "locations": [{ "type": "map", "main": "?", "sub": "?" }],
     "rarity": "?",
     "monster": {
-      "attackPatterns": {},
-      "parts": {},
-      "elementalWeakness": "?"
+      "attackPatterns": {
+        "DEFAULT": "technical",
+        "Enraged": "power",
+        "No Mantle": "speed"
+      },
+      "parts": {
+        "Horn": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Legs": ["slash", "blunt"],
+        "Tail": ["slash", "pierce", "blunt"]
+      },
+      "elementalWeakness": {
+        "DEFAULT": "thunder",
+        "No Mantle": "ice"
+      }
     },
     "hatchable": false
   },
