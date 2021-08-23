@@ -38,14 +38,17 @@
       <div v-if="hasStats">
         HP <span
           class="font-bold"
+          :class="getStatClass('base.maxHp')"
           v-text="monster.monstie.stats.base.maxHp"
         />,
         Speed <span
           class="font-bold"
+          :class="getStatClass('base.speed')"
           v-text="monster.monstie.stats.base.speed"
         />,
         Crit <span
           class="font-bold"
+          :class="getStatClass('base.critRate')"
           v-text="monster.monstie.stats.base.critRate"
         />
       </div>
@@ -54,6 +57,7 @@
         Attack
         <span
           class="font-bold"
+          :class="getStatClass('bestAttack.value')"
           v-text="monster.monstie.stats.bestAttack.value"
         />
       </div>
@@ -62,6 +66,7 @@
         Defense
         <span
           class="font-bold"
+          :class="getStatClass('bestDefense.value', 'otherDefense.value', 'worstDefense.value')"
           v-text="defense"
         />
       </div>
@@ -71,6 +76,8 @@
 
 <script>
   import _ from 'lodash';
+  import { mapStores } from 'pinia';
+  import useMonstieFilter from '~/stores/monstieFilter';
   import {
     formatMonsterInfo,
     formatMonsterPrimaryLocation,
@@ -94,6 +101,8 @@
     },
 
     computed: {
+      ...mapStores(useMonstieFilter),
+
       info() {
         return formatMonsterInfo(this.monster);
       },
@@ -144,6 +153,20 @@
 
       showStats() {
         return _.includes(['stats'], this.mode);
+      },
+    },
+
+    methods: {
+      getStatClass(...statKeys) {
+        if (!_.isArray(statKeys)) {
+          statKeys = [statKeys];
+        }
+        statKeys = _.map(statKeys, (statKey) => 'monstie.stats.' + statKey);
+
+        if (_.includes(statKeys, this.monstieFilter.sortKey)) {
+          return ['text-brand-600', 'dark:text-brand-400'];
+        }
+        return null;
       },
     },
   };
