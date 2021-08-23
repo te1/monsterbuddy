@@ -190,6 +190,20 @@
         <li>
           <a
             class="link"
+            href="https://www.kurimucardgame.com/mhs2-egg-pattern-en"
+            target="_blank"
+            rel="noopener"
+          >Monster Hunter Stories 2 Best Egg Pattern Ever</a> by <a
+            class="link"
+            href="https://www.kurimucardgame.com"
+            target="_blank"
+            rel="noopener"
+          >Kurimu</a>
+        </li>
+
+        <li>
+          <a
+            class="link"
             href="https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4"
             target="_blank"
             rel="noopener"
