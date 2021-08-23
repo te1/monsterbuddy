@@ -21,10 +21,17 @@
 
     <main v-show="leaving || !showFilter">
       <div
-        v-if="eggFilter.hasActiveFilters"
+        v-if="eggFilter.hasActiveSort || eggFilter.hasActiveFilters"
         class="fixed z-10 w-full inset-x-0 top-12 mt-1"
       >
         <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
+          <AppFilterPill
+            v-if="eggFilter.hasActiveSort"
+            :caption="eggFilter.activeSort.caption"
+            filterTarget="/monsties/filter/"
+            :sortOrder="eggFilter.activeSort.order"
+          />
+
           <AppFilterPill
             v-for="filter in eggFilter.activeFilters"
             :key="filter.name"
@@ -36,7 +43,7 @@
         </div>
       </div>
 
-      <ul :class="{ 'mt-8': eggFilter.hasActiveFilters }">
+      <ul :class="{ 'mt-8': eggFilter.hasActiveSort || eggFilter.hasActiveFilters }">
         <li
           v-for="(group, key) in eggFilter.groupedMonsters"
           :key="key"

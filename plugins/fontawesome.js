@@ -8,6 +8,8 @@ import {
   faStarOfLife, // *
   faSortAmountUpAlt, // asc
   faSortAmountDown, // desc
+  faLongArrowAltUp, // asc in pill
+  faLongArrowAltDown, // desc in pill
   faSearch,
   faAdjust, // dark mode
   faSlidersH, // adjust view / sorting / filtering
@@ -30,6 +32,8 @@ library.add(
   faStarOfLife,
   faSortAmountUpAlt,
   faSortAmountDown,
+  faLongArrowAltUp,
+  faLongArrowAltDown,
   faSearch,
   faAdjust,
   faSlidersH,
