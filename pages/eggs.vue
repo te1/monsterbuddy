@@ -20,7 +20,22 @@
     <NuxtChild v-show="!leaving && showFilter" />
 
     <main v-show="leaving || !showFilter">
-      <ul>
+      <div
+        v-if="eggFilter.hasActiveFilters"
+        class="fixed z-10 w-full inset-x-0 -mt-2"
+      >
+        <div class="container px-4 flex flex-wrap gap-1 items-center justify-center">
+          <AppFilterPill
+            v-for="filter in eggFilter.activeFilters"
+            :key="filter.name"
+            :caption="filter.value"
+            filterTarget="/eggs/filter/"
+            @remove="eggFilter[filter.name] = null"
+          />
+        </div>
+      </div>
+
+      <ul :class="{ 'pt-6': eggFilter.hasActiveFilters }">
         <li
           v-for="(group, key) in eggFilter.groupedMonsters"
           :key="key"

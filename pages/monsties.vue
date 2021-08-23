@@ -20,7 +20,22 @@
     <NuxtChild v-show="!leaving && showFilter" />
 
     <main v-show="leaving || !showFilter">
-      <ul>
+      <div
+        v-if="monstieFilter.hasActiveFilters"
+        class="fixed z-10 w-full inset-x-0 -mt-2"
+      >
+        <div class="container px-4 flex flex-wrap gap-1 items-center justify-center">
+          <AppFilterPill
+            v-for="filter in monstieFilter.activeFilters"
+            :key="filter.name"
+            :caption="filter.value"
+            filterTarget="/monsties/filter/"
+            @remove="monstieFilter[filter.name] = null"
+          />
+        </div>
+      </div>
+
+      <ul :class="{ 'pt-6': monstieFilter.hasActiveFilters }">
         <li
           v-for="(group, key) in monstieFilter.groupedMonsters"
           :key="key"

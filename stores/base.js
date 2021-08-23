@@ -16,6 +16,7 @@ import {
   getMonstersByHatchable,
   getMonstersByIsDeviant,
 } from '~/services/data';
+import { formatAttackType, formatElement } from '~/services/utils';
 
 setMapStoreSuffix('');
 
@@ -190,6 +191,66 @@ export function makeMonsterFilterStore(
 
       isGrouped() {
         return _.includes(['genus', 'habitat'], this.sortKey);
+      },
+
+      activeFilters() {
+        let result = [];
+
+        if (this.genusFilter != null) {
+          result.push({ name: 'genusFilter', value: this.genusFilter });
+        }
+
+        if (this.habitatFilter != null) {
+          result.push({ name: 'habitatFilter', value: this.habitatFilter });
+        }
+
+        if (this.attackTypeFilter != null) {
+          result.push({
+            name: 'attackTypeFilter',
+            value: formatAttackType(this.attackTypeFilter),
+          });
+        }
+
+        if (this.attackElementFilter != null) {
+          result.push({
+            name: 'attackElementFilter',
+            value: formatElement(this.attackElementFilter),
+          });
+        }
+
+        if (this.ridingActionFilter != null) {
+          result.push({
+            name: 'ridingActionFilter',
+            value: this.ridingActionFilter,
+          });
+        }
+
+        if (this.eggColorsFilter != null) {
+          result.push({
+            name: 'eggColorsFilter',
+            value: _.map(this.eggColorsFilter, _.upperFirst).join(' / '),
+          });
+        }
+
+        if (this.hatchableFilter != null) {
+          result.push({
+            name: 'hatchableFilter',
+            value: this.hatchableFilter ? 'Hatchable' : 'Not Hatchable',
+          });
+        }
+
+        if (this.deviantsFilter != null) {
+          result.push({
+            name: 'deviantsFilter',
+            value: this.deviantsFilter ? 'Deviant' : 'No Deviants',
+          });
+        }
+
+        return result;
+      },
+
+      hasActiveFilters() {
+        return !!this.activeFilters?.length;
       },
 
       ...extend?.getters,
