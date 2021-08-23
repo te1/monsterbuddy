@@ -60,20 +60,34 @@
 
     <div
       v-if="hasElementalWeakness"
-      class="pt-2 flex items-center"
+      class="pt-2 flex"
     >
-      <h3 class="w-36 text-lg font-semibold">
+      <h3 class="w-36 pt-0.5 text-lg font-semibold">
         Weakness
       </h3>
 
-      <ElementIcon
-        class="w-8 mr-1"
-        :element="monster.monster.elementalWeakness"
-      />
-      <ElementLabel
-        class="font-semibold"
-        :element="monster.monster.elementalWeakness"
-      />
+      <div class="space-y-2">
+        <div
+          v-for="(weakness, label) in elementalWeaknesses"
+          :key="weakness"
+          class="flex items-center mr-4"
+        >
+          <ElementIcon
+            class="w-8 mr-1"
+            :element="weakness"
+          />
+          <ElementLabel
+            class="font-semibold"
+            :element="weakness"
+          />
+          <span
+            v-if="label !== 'DEFAULT'"
+            class="ml-1"
+          >
+            ({{ label}})
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -103,6 +117,16 @@
 
       hasElementalWeakness() {
         return this.monster?.monster?.elementalWeakness != null;
+      },
+
+      elementalWeaknesses() {
+        let result = this.monster?.monster?.elementalWeakness;
+
+        if (!_.isObject(result)) {
+          result = { DEFAULT: result };
+        }
+
+        return result;
       },
 
       hasCombatInfo() {
