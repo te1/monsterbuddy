@@ -5160,11 +5160,12 @@
         "main": "Hakolo Island",
         "sub": "East Kamuna Heights"
       },
+      { "type": "superRareDen", "main": "Hakolo Island" },
       {
         "type": "coopQuest",
         "main": "Jungle Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5231,11 +5232,12 @@
         "main": "Loloska",
         "sub": "Loloska Rocky Canyon"
       },
+      { "type": "superRareDen", "main": "Loloska" },
       {
         "type": "coopQuest",
         "main": "Snowy Mt. Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5300,17 +5302,18 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Jalma Highlands" },
+      { "type": "superRareDen", "main": "Lamure" },
       {
         "type": "coopQuest",
         "main": "Desert Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Flowery Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5374,11 +5377,12 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
+      { "type": "superRareDen", "main": "Alcala" },
       {
         "type": "coopQuest",
         "main": "Woodland Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5441,17 +5445,18 @@
     "habitat": "Terga",
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "superRareDen", "main": "Terga" },
       {
         "type": "coopQuest",
         "main": "Volcanic Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Fire Eggs",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5515,29 +5520,31 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "superRareDen", "main": "Lamure" },
       {
         "type": "coopQuest",
         "main": "Jungle Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
+      { "type": "superRareDen", "main": "Hakolo Island" },
       {
         "type": "coopQuest",
         "main": "Desert Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Flowery Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Thunder Eggs",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5594,23 +5601,25 @@
     "habitat": "Terga",
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "superRareDen", "main": "Hakolo Island" },
+      { "type": "superRareDen", "main": "Terga" },
       {
         "type": "coopQuest",
         "main": "Jungle Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Volcanic Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Fire Eggs",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5670,23 +5679,25 @@
     "habitat": "Co-Op",
     "locations": [
       { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "superRareDen", "main": "Alcala" },
+      { "type": "superRareDen", "main": "Loloska" },
       {
         "type": "coopQuest",
         "main": "Woodland Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Snowy Mt. Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Thunder Eggs",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 6,
@@ -5748,23 +5759,25 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" },
+      { "type": "superRareDen", "main": "Alcala" },
+      { "type": "superRareDen", "main": "Lamure" },
       {
         "type": "coopQuest",
         "main": "Woodland Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Desert Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Flowery Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
@@ -5828,17 +5841,19 @@
         "main": "Loloska",
         "sub": "Base of Mt. Lavina"
       },
+      { "type": "superRareDen", "main": "Loloska" },
+      { "type": "superRareDen", "main": "Terga" },
       {
         "type": "coopQuest",
         "main": "Snowy Mt. Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       },
       {
         "type": "coopQuest",
         "main": "Volcanic Den",
         "finalNest": true,
-        "sr": true
+        "srTicket": true
       }
     ],
     "rarity": 7,
