@@ -68,6 +68,20 @@ export function formatMonsterLocation(location) {
     result += ` - ${location.sub}`;
   }
 
+  switch (location.type) {
+    case 'superRareDen':
+      result = 'Super Rare Dens in ' + result;
+      break;
+
+    case 'coopQuest':
+      result = 'Co-Op Quest: ' + result;
+      break;
+
+    case 'eldersLair':
+      result = "Elder's Lair - " + result;
+      break;
+  }
+
   return result;
 }
 
