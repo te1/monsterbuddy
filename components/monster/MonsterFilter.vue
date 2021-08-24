@@ -80,13 +80,28 @@
           </label>
         </h3>
 
-        <input
-          id="MonsterFilter_NameFilter"
-          v-model="store.nameFilter"
-          type="text"
-          class="input w-[180px] px-2 py-1"
-          placeholder="Search"
-        >
+        <div class="w-[180px] relative">
+          <div
+            class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer transition-opacity duration-300"
+            :class="{ 'opacity-0': !store.nameFilter }"
+          >
+            <AppIconButton
+              :icon="['fas', 'times']"
+              class="text-gray-500 dark:text-cool-400"
+              title="Clear"
+              @click="clearNameFilter"
+            />
+          </div>
+
+          <input
+            id="MonsterFilter_NameFilter"
+            ref="inputName"
+            v-model="store.nameFilter"
+            type="text"
+            class="input w-full px-2 py-1"
+            placeholder="Search"
+          >
+        </div>
       </div>
 
       <div
@@ -488,6 +503,17 @@
 
       toggleSortOrder() {
         this.store.sortOrder = this.store.sortOrder === 'asc' ? 'desc' : 'asc';
+      },
+
+      clearNameFilter() {
+        this.store.nameFilter = null;
+
+        let input = this.$refs.inputName;
+        if (input) {
+          this.$nextTick(() => {
+            input.focus();
+          });
+        }
       },
 
       onFilterChanged(filterKey, e, mode = null) {

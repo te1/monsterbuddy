@@ -48,7 +48,9 @@
 
         let input = this.$refs.input;
         if (input) {
-          input.focus();
+          this.$nextTick(() => {
+            input.focus();
+          });
         }
       },
     },
