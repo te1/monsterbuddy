@@ -104,7 +104,7 @@
         "main": "Hakolo Island",
         "sub": "North Kamuna Cape"
       },
-      { "type": "eldersLair", "main": "Z1" }
+      { "type": "eldersLair", "main": "Z1" } // TODO is this true?
     ],
     "rarity": 1,
     "monster": {
@@ -363,7 +363,7 @@
         "main": "Hakolo Island",
         "sub": "North Kamuna Cape"
       },
-      { "type": "eldersLair", "main": "Z1" }
+      { "type": "eldersLair", "main": "Z1" } // TODO is this true?
     ],
     "rarity": 1,
     "monster": {
@@ -593,7 +593,7 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" } // TODO is this true?
     ],
     "rarity": 1,
     "monster": {
@@ -685,7 +685,7 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" } // TODO is this true?
     ],
     "rarity": 1,
     "monster": {
@@ -706,7 +706,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
       { "type": "coopQuest", "main": "Woodland Den" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Ludroth" }],
@@ -783,7 +783,7 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" }
     ],
     "rarity": 2,
     "monster": {
@@ -838,7 +838,8 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" },
+      { "type": "eldersLair", "main": "Z2" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Crimson Qurupeco" }],
@@ -896,7 +897,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
       { "type": "coopQuest", "main": "Woodland Den" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Yian Kut-Ku" }],
@@ -1200,7 +1201,7 @@
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
       { "type": "coopQuest", "main": "Woodland Den" },
       { "type": "coopQuest", "main": "Fire Eggs" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" }
     ],
     "rarity": 3,
     "monster": {
@@ -1877,7 +1878,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" },
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
-      { "type": "eldersLair", "main": "Z3" }
+      { "type": "eldersLair", "main": "Z4" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Shrouded Nerscylla" }],
@@ -3390,7 +3391,6 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "coopQuest", "main": "Thunder Eggs" },
-      { "type": "eldersLair", "main": "Z2" },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 3,
