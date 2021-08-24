@@ -26,6 +26,7 @@ https://monsterbuddy.app
 - [Monster Attack-Type Chart](https://www.reddit.com/r/MonsterHunterStories/comments/oo8fpi/monster_attacktype_chart) by [RPGwannabe](https://www.reddit.com/user/RPGwannabe)
 - [MH Stories 2 : Attack Types, Weakness & Eggs](https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o) by [Criwok](https://www.reddit.com/user/Criwok)
 - [Monster Hunter Stories 2 Full Picture Monster’s weaknesses](https://www.kurimucardgame.com/mhs2-monster-weakness-en) by [Kurimu](https://www.kurimucardgame.com)
+- [All High Rank Monsters in each Zone of the Elder Lair](https://www.reddit.com/r/MonsterHunterStories/comments/p8h25d/all_high_rank_monsters_in_each_zone_of_the_elder) by [PetePeterson53](https://www.reddit.com/user/PetePeterson53)
 - [MHS2](https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4) by [dorgesilas](https://www.reddit.com/user/dorgesilas)
 
 See [assets/data/monsters.json](https://github.com/te1/monsterbuddy/blob/main/assets/data/monsters.json) for the collected data.

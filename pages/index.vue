@@ -204,6 +204,20 @@
         <li>
           <a
             class="link"
+            href="https://www.reddit.com/r/MonsterHunterStories/comments/p8h25d/all_high_rank_monsters_in_each_zone_of_the_elder"
+            target="_blank"
+            rel="noopener"
+          >All High Rank Monsters in each Zone of the Elder Lair</a> by <a
+            class="link"
+            href="https://www.reddit.com/user/PetePeterson53"
+            target="_blank"
+            rel="noopener"
+          >PetePeterson53</a>
+        </li>
+
+        <li>
+          <a
+            class="link"
             href="https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4"
             target="_blank"
             rel="noopener"
