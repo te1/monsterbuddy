@@ -693,7 +693,8 @@
     "genus": "Leviathan",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Ludroth" }],
@@ -880,7 +881,8 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Yian Kut-Ku" }],
@@ -939,7 +941,8 @@
         "type": "catavanStand",
         "main": "Alcala",
         "sub": "Harzgai Hill - Inner"
-      }
+      },
+      { "type": "coopQuest", "main": "Desert Den" }
     ],
     "rarity": 5,
     "related": [
@@ -1002,7 +1005,11 @@
         "type": "catavanStand",
         "main": "Alcala",
         "sub": "Harzgai Hill - Inner"
-      }
+      },
+      { "type": "coopQuest", "main": "Woodland Den" },
+      { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "White Monoblos" }],
@@ -1060,7 +1067,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Wendwood" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Wendwood" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 3,
     "monster": {
@@ -1115,7 +1123,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Harzgai Rocky Hill" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Harzgai Rocky Hill" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ruby Basarios" }],
@@ -1172,7 +1181,9 @@
     "genus": "Bird Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
+      { "type": "coopQuest", "main": "Woodland Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 3,
     "monster": {
@@ -1250,7 +1261,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 4,
     "related": [
@@ -1310,7 +1322,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Highlands" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 4,
     "related": [
@@ -1617,7 +1630,8 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Ash Kecha Wacha" }],
@@ -1675,7 +1689,8 @@
     "genus": "Bird Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" }
     ],
     "rarity": 2,
     "related": [{ "type": "subspecies", "monster": "Purple Gypceros" }],
@@ -1808,7 +1823,8 @@
     "genus": "Temnoceran",
     "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Shrouded Nerscylla" }],
@@ -1933,7 +1949,9 @@
         "type": "catavanStand",
         "main": "Loloska",
         "sub": "Loloska Rocky Canyon"
-      }
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 3,
     "monster": {
@@ -1994,7 +2012,9 @@
         "type": "catavanStand",
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks"
-      }
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspecies", "monster": "Red Khezu" }],
@@ -2054,7 +2074,9 @@
         "type": "catavanStand",
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks"
-      }
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Khezu" }],
@@ -2275,7 +2297,8 @@
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Fulgur Anjanath" }],
@@ -2331,7 +2354,8 @@
     "genus": "Fanged Beast",
     "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "Loloska", "sub": "Woodland" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Woodland" },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" }
     ],
     "rarity": 5,
     "monster": {
@@ -2392,7 +2416,9 @@
         "type": "catavanStand",
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks"
-      }
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Volcanic Den" }
     ],
     "rarity": 5,
     "related": [
@@ -2457,7 +2483,10 @@
         "type": "catavanStand",
         "main": "Loloska",
         "sub": "Loloska Rocky Canyon"
-      }
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Sand Barioth" }],
@@ -2518,7 +2547,8 @@
         "type": "catavanStand",
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks"
-      }
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" }
     ],
     "rarity": 4,
     "monster": {
@@ -2925,7 +2955,8 @@
     "genus": "Fanged Beast",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" },
+      { "type": "coopQuest", "main": "Flowery Den" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Kecha Wacha" }],
@@ -3040,7 +3071,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "coopQuest", "main": "Flowery Den" }
     ],
     "rarity": 5,
     "related": [
@@ -3100,7 +3132,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" },
+      { "type": "coopQuest", "main": "Desert Den" }
     ],
     "rarity": 5,
     "related": [
@@ -3160,7 +3193,8 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 5F" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 5F" },
+      { "type": "coopQuest", "main": "Desert Den" }
     ],
     "rarity": 6,
     "related": [
@@ -3225,7 +3259,9 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "Jalma Highlands"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Desert Den" }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Monoblos" }],
@@ -3282,7 +3318,8 @@
     "genus": "Bird Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 3,
     "related": [{ "type": "subspeciesOf", "monster": "Qurupeco" }],
@@ -3338,7 +3375,8 @@
     "genus": "Leviathan",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "coopQuest", "main": "Flowery Den" }
     ],
     "rarity": 5,
     "monster": {
@@ -3395,7 +3433,9 @@
     "genus": "Leviathan",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Ivory Lagiacrus" }],
@@ -3453,7 +3493,9 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 4,
     "monster": {
@@ -3559,7 +3601,9 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Sadona Barrens" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Sadona Barrens" },
+      { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "coopQuest", "main": "Volcanic Den" }
     ],
     "rarity": 6,
     "related": [
@@ -3731,7 +3775,9 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Black Gravios" }],
@@ -4055,7 +4101,9 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Gravios" }],
@@ -4111,7 +4159,11 @@
     "genus": "Leviathan",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Lagiacrus" }],
@@ -4169,7 +4221,9 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 6,
     "monster": {
@@ -4227,7 +4281,8 @@
     "genus": "Elder Dragon",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" }
     ],
     "rarity": 7,
     "monster": {
@@ -4284,7 +4339,9 @@
     "genus": "Flying Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 5,
     "related": [{ "type": "deviant", "monster": "Boltreaver Astalos" }],
@@ -4344,7 +4401,10 @@
     "genus": "Brute Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" }
+      { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
+      { "type": "coopQuest", "main": "Woodland Den" },
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 5,
     "related": [{ "type": "deviant", "monster": "Hellblade Glavenus" }],
@@ -4430,7 +4490,10 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "Forbidden Grounds"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Woodland Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 6,
     "monster": {
@@ -4569,7 +4632,10 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "Forbidden Grounds"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Barioth" }],
@@ -4631,7 +4697,9 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "Forbidden Grounds"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Woodland Den" }
     ],
     "rarity": 6,
     "monster": {
@@ -4693,7 +4761,8 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "Forbidden Grounds"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" }
     ],
     "rarity": 6,
     "related": [
@@ -4759,7 +4828,8 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "Forbidden Grounds"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" }
     ],
     "rarity": 6,
     "monster": {
@@ -4833,7 +4903,8 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "North Kamuna Cape"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Azure Rathalos" }],
@@ -4896,7 +4967,9 @@
         "type": "catavanStand",
         "main": "Hakolo Island",
         "sub": "North Kamuna Cape"
-      }
+      },
+      { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 6,
     "related": [{ "type": "subspeciesOf", "monster": "Rathalos" }],
@@ -4955,7 +5028,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
+      { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" },
+      { "type": "coopQuest", "main": "Fire Eggs" }
     ],
     "rarity": 5,
     "related": [
@@ -5014,7 +5091,13 @@
     "genus": "Brute Wyvern",
     "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "Loloska", "sub": "Base of Mt. Lavina" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Base of Mt. Lavina"
+      },
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Thunder Eggs" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Anjanath" }],
@@ -5077,7 +5160,12 @@
         "main": "Hakolo Island",
         "sub": "East Kamuna Heights"
       },
-      { "type": "den", "main": "Jungle" }
+      {
+        "type": "coopQuest",
+        "main": "Jungle Den",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -5143,7 +5231,12 @@
         "main": "Loloska",
         "sub": "Loloska Rocky Canyon"
       },
-      { "type": "den", "main": "Snowy Mt." }
+      {
+        "type": "coopQuest",
+        "main": "Snowy Mt. Den",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -5207,8 +5300,18 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Jalma Highlands" },
-      { "type": "den", "main": "Desert" },
-      { "type": "den", "main": "Flowery" }
+      {
+        "type": "coopQuest",
+        "main": "Desert Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Flowery Den",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -5271,7 +5374,12 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Alcala Valley" },
-      { "type": "den", "main": "Woodland" }
+      {
+        "type": "coopQuest",
+        "main": "Woodland Den",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -5333,7 +5441,18 @@
     "habitat": "Terga",
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
-      { "type": "den", "main": "Volcanic" }
+      {
+        "type": "coopQuest",
+        "main": "Volcanic Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Fire Eggs",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -5396,9 +5515,30 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
-      { "type": "den", "main": "Jungle" },
-      { "type": "den", "main": "Desert" },
-      { "type": "den", "main": "Flowery" }
+      {
+        "type": "coopQuest",
+        "main": "Jungle Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Desert Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Flowery Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Thunder Eggs",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "monster": {
@@ -5454,8 +5594,24 @@
     "habitat": "Terga",
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
-      { "type": "den", "main": "Jungle" },
-      { "type": "den", "main": "Volcanic" }
+      {
+        "type": "coopQuest",
+        "main": "Jungle Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Volcanic Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Fire Eggs",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "monster": {
@@ -5514,9 +5670,24 @@
     "habitat": "Co-Op",
     "locations": [
       { "type": "catavanStand", "main": "?", "sub": "?" },
-      { "type": "den", "main": "Woodland" },
-      { "type": "den", "main": "Desert" },
-      { "type": "den", "main": "Flowery" }
+      {
+        "type": "coopQuest",
+        "main": "Woodland Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Snowy Mt. Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Thunder Eggs",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 6,
     "monster": {
@@ -5577,9 +5748,24 @@
     "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" },
-      { "type": "den", "main": "Woodland" },
-      { "type": "den", "main": "Desert" },
-      { "type": "den", "main": "Flowery" }
+      {
+        "type": "coopQuest",
+        "main": "Woodland Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Desert Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Flowery Den",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "monster": {
@@ -5642,8 +5828,18 @@
         "main": "Loloska",
         "sub": "Base of Mt. Lavina"
       },
-      { "type": "den", "main": "Snowy Mt." },
-      { "type": "den", "main": "Volcanic" }
+      {
+        "type": "coopQuest",
+        "main": "Snowy Mt. Den",
+        "finalNest": true,
+        "sr": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Volcanic Den",
+        "finalNest": true,
+        "sr": true
+      }
     ],
     "rarity": 7,
     "monster": {
@@ -5701,7 +5897,10 @@
     "name": "Boltreaver Astalos",
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
-    "locations": [{ "type": "catavanStand", "main": "Alcala", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "?" },
+      { "type": "coopQuest", "main": "Thunder Eggs", "finalNest": true }
+    ],
     "rarity": 7,
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Astalos" }],
@@ -5760,7 +5959,10 @@
     "name": "Hellblade Glavenus",
     "genus": "Brute Wyvern",
     "habitat": "Terga",
-    "locations": [{ "type": "catavanStand", "main": "Terga", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Terga", "sub": "?" },
+      { "type": "coopQuest", "main": "Fire Eggs", "finalNest": true }
+    ],
     "rarity": 7,
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Glavenus" }],
@@ -5843,7 +6045,11 @@
     "name": "Palamute (Normal)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Fire)" },
@@ -5898,7 +6104,11 @@
     "name": "Palamute (Fire)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -5953,7 +6163,11 @@
     "name": "Palamute (Water)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -6008,7 +6222,11 @@
     "name": "Palamute (Thunder)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -6063,7 +6281,11 @@
     "name": "Palamute (Ice)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -6118,7 +6340,11 @@
     "name": "Palamute (Dragon)",
     "genus": "Fanged Beast",
     "habitat": "Co-Op",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "?", "sub": "?" },
+      { "type": "coopQuest", "main": "Palamute Den" },
+      { "type": "coopQuest", "main": "Palamute Home" }
+    ],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },

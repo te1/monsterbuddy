@@ -1,0 +1,57 @@
+[
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Jungle Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Woodland Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Snowy Mt. Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Desert Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Flowery Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Volcanic Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 5,
+    "name": "Palamute Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Palamute Home"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Fire Eggs"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Thunder Eggs"
+  },
+  {
+    "type": "time",
+    "rarity": 8,
+    "name": "The Goddess of Gold"
+  }
+]
