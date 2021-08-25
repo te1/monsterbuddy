@@ -23,6 +23,7 @@
         return [
           { value: 'location', caption: 'Location' },
           { value: 'combat', caption: 'Attack Pattern' },
+          { value: 'rarity', caption: 'Rarity' },
         ];
       },
     },

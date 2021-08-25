@@ -125,23 +125,21 @@ export function makeMonsterFilterStore(
       sortedMonsters() {
         let result = this.filteredMonsters;
 
-        if (
-          !_.includes(
-            [
-              'no',
-              'name',
-              'genus',
-              'habitat',
-              'monstie.stats.base.maxHp',
-              'monstie.stats.base.speed',
-              'monstie.stats.base.critRate',
-              'monstie.stats.bestAttack.value',
-              'monstie.stats.bestDefense.value',
-              'monstie.stats.worstDefense.value',
-            ],
-            this.sortKey
-          )
-        ) {
+        let allowedSortKeys = [
+          'no',
+          'name',
+          'genus',
+          'habitat',
+          'rarity',
+          'monstie.stats.base.maxHp',
+          'monstie.stats.base.speed',
+          'monstie.stats.base.critRate',
+          'monstie.stats.bestAttack.value',
+          'monstie.stats.bestDefense.value',
+          'monstie.stats.worstDefense.value',
+        ];
+
+        if (!_.includes(allowedSortKeys, this.sortKey)) {
           return result;
         }
 
@@ -152,7 +150,7 @@ export function makeMonsterFilterStore(
           (item) => {
             value = _.get(item, this.sortKey);
 
-            if (value == null) {
+            if (value == null || value === '?') {
               return -Infinity;
             }
             return value;
@@ -195,6 +193,20 @@ export function makeMonsterFilterStore(
 
       activeSort() {
         switch (this.sortKey) {
+          case 'name':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Name',
+            };
+
+          case 'rarity':
+            return {
+              name: this.sortKey,
+              order: this.sortOrder,
+              caption: 'Rarity',
+            };
+
           case 'monstie.stats.base.maxHp':
             return {
               name: this.sortKey,

@@ -410,6 +410,7 @@
         let result = [
           { value: 'no', caption: 'Number' },
           { value: 'name', caption: 'Name' },
+          { value: 'rarity', caption: 'Rarity', default: 'desc', mode: 'rarity' },
           { value: 'genus', caption: 'Genus', mode: 'location' },
           { value: 'habitat', caption: 'Habitat', mode: 'location' },
         ];

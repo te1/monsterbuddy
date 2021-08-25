@@ -24,10 +24,21 @@
         v-text="monster.name"
       />
 
-      <template v-if="showLocation">
+      <template v-if="showLocation || showRarity">
         <div v-text="monster.genus" />
         <div v-text="monster.habitat" />
-        <div v-text="location" />
+
+        <div
+          v-if="showLocation"
+          v-text="location"
+        />
+
+        <div v-if="showRarity">
+          Rarity <span
+            class="font-bold"
+            v-text="monster.rarity"
+          />
+        </div>
       </template>
 
       <template v-if="showCombat">
@@ -93,6 +104,10 @@
 
       showCombat() {
         return _.includes(['combat'], this.mode);
+      },
+
+      showRarity() {
+        return _.includes(['rarity'], this.mode);
       },
     },
 
