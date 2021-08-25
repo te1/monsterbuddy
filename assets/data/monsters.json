@@ -2189,7 +2189,13 @@
     "name": "Seltas",
     "genus": "Neopteron",
     "habitat": "Loloska",
-    "locations": [{ "type": "catavanStand", "main": "Loloska", "sub": "?" }],
+    "locations": [
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks"
+      }
+    ],
     "rarity": 3,
     "monster": {
       "attackPatterns": {
@@ -2210,7 +2216,9 @@
     "name": "Seltas Queen",
     "genus": "Neopteron",
     "habitat": "Loloska",
-    "locations": [{ "type": "catavanStand", "main": "Loloska", "sub": "?" }],
+    "locations": [
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }
+    ],
     "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Desert Seltas Queen" }],
     "monster": {
@@ -4547,9 +4555,13 @@
     "no": 101,
     "name": "Glacial Agnaktor",
     "genus": "Leviathan",
-    "habitat": "?",
+    "habitat": "Loloska",
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Loloska Rocky Canyon"
+      },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 5,
@@ -4638,9 +4650,13 @@
     "no": 103,
     "name": "Remobra",
     "genus": "Snake Wyvern",
-    "habitat": "?",
+    "habitat": "Hakolo Island",
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 1,
@@ -4659,9 +4675,13 @@
     "no": 104,
     "name": "Great Dracophage Bug",
     "genus": "Neopteron",
-    "habitat": "?",
+    "habitat": "Hakolo Island",
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 2,
@@ -4680,9 +4700,13 @@
     "no": 105,
     "name": "Bnahabra (Red)",
     "genus": "Neopteron",
-    "habitat": "?",
+    "habitat": "Hakolo Island",
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "North Kamuna Cape"
+      },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 1,
@@ -4706,9 +4730,13 @@
     "no": 106,
     "name": "Vespoid",
     "genus": "Neopteron",
-    "habitat": "?",
+    "habitat": "Hakolo Island",
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "Forbidden Grounds"
+      },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 1,
@@ -4989,7 +5017,7 @@
     "no": 111,
     "name": "Barrel Felyne",
     "genus": "Lynian",
-    "habitat": "?",
+    "habitat": "Alcala",
     "locations": [
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z1" }
@@ -6033,7 +6061,11 @@
     "genus": "Flying Wyvern",
     "habitat": "Alcala",
     "locations": [
-      { "type": "catavanStand", "main": "Alcala", "sub": "?" },
+      {
+        "type": "catavanStand",
+        "main": "Alcala",
+        "sub": "Harzgai Hill - Inner"
+      },
       { "type": "coopQuest", "main": "Thunder Eggs", "finalNest": true }
     ],
     "rarity": 7,
@@ -6095,7 +6127,7 @@
     "genus": "Brute Wyvern",
     "habitat": "Terga",
     "locations": [
-      { "type": "catavanStand", "main": "Terga", "sub": "?" },
+      { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "coopQuest", "main": "Fire Eggs", "finalNest": true }
     ],
     "rarity": 7,
