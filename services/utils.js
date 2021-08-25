@@ -170,6 +170,9 @@ export function formatWeaponType(weaponType) {
 
 export function formatGrowth(growth) {
   switch (growth) {
+    case 'slow':
+      return 'Slow';
+
     case 'regular':
       return 'Regular';
 
