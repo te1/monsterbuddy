@@ -2190,7 +2190,7 @@
     "genus": "Neopteron",
     "habitat": "Loloska",
     "locations": [{ "type": "catavanStand", "main": "Loloska", "sub": "?" }],
-    "rarity": "?",
+    "rarity": 3,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
@@ -2211,7 +2211,7 @@
     "genus": "Neopteron",
     "habitat": "Loloska",
     "locations": [{ "type": "catavanStand", "main": "Loloska", "sub": "?" }],
-    "rarity": "?",
+    "rarity": 4,
     "related": [{ "type": "subspecies", "monster": "Desert Seltas Queen" }],
     "monster": {
       "attackPatterns": {
@@ -4552,7 +4552,7 @@
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z5" }
     ],
-    "rarity": "?",
+    "rarity": 5,
     "related": [{ "type": "subspeciesOf", "monster": "Agnaktor" }],
     "monster": {
       "attackPatterns": {
@@ -4643,7 +4643,7 @@
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z9" }
     ],
-    "rarity": "?",
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical"
@@ -4664,7 +4664,7 @@
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z9" }
     ],
-    "rarity": "?",
+    "rarity": 2,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed"
@@ -4685,7 +4685,7 @@
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z9" }
     ],
-    "rarity": "?",
+    "rarity": 1,
     "related": [
       { "type": "color", "monster": "Bnahabra (Blue)" },
       { "type": "color", "monster": "Bnahabra (Green)" },
@@ -4711,7 +4711,7 @@
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z9" }
     ],
-    "rarity": "?",
+    "rarity": 1,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical"
@@ -4994,7 +4994,7 @@
       { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "eldersLair", "main": "Z1" }
     ],
-    "rarity": "?",
+    "rarity": 1,
     "monster": {
       "elementalWeakness": "none"
     }
@@ -6154,7 +6154,7 @@
     "genus": "Elder Dragon",
     "habitat": "?",
     "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
-    "rarity": "?",
+    "rarity": 7,
     "monster": {
       "attackPatterns": {
         "DEFAULT": "technical",
