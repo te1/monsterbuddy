@@ -2915,7 +2915,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Paralyslash",
       "eggColors": ["green", "orange"],
@@ -3360,7 +3360,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Demolition Dash",
       "eggColors": ["gray", "white", "brown"],
@@ -3537,7 +3537,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Thunderous Blast",
       "eggColors": ["blue", "red"],
@@ -4394,7 +4394,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Decimating Fist",
       "eggColors": ["orange", "black"],
@@ -4519,7 +4519,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "X Blaze",
       "eggColors": ["blue", "red"],
@@ -4614,7 +4614,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Nova Strike",
       "eggColors": ["gray", "white", "black"],
@@ -4785,7 +4785,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Ground Cyclone",
       "eggColors": ["orange", "red", "pink"],
@@ -4849,7 +4849,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": [],
       "kinshipSkill": "Hunger Rage",
       "eggColors": ["green", "orange", "red"],
@@ -4917,7 +4917,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Voltage Crash",
       "eggColors": ["blue", "yellow", "white"],
@@ -4981,7 +4981,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Piercing Stars",
       "eggColors": ["yellow", "orange", "red"],
@@ -5061,7 +5061,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Sky-High Dive",
       "eggColors": ["red", "blue"],
@@ -5127,7 +5127,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Sky-High Dive",
       "eggColors": ["blue"],
@@ -5191,7 +5191,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Scorching Slice",
       "eggColors": ["pink", "red"],
@@ -5256,7 +5256,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "quick",
       "ridingActions": [],
       "kinshipSkill": "Anja Assault",
       "eggColors": ["gray", "white", "orange", "red"],
@@ -5329,7 +5329,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Stealth"],
       "kinshipSkill": "Nightmare Blade",
       "eggColors": ["white", "blue"],
@@ -5404,7 +5404,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Jump"],
       "kinshipSkill": "Gigavolt Crash",
       "eggColors": ["green", "orange"],
@@ -5480,7 +5480,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Roar", "Ground Dive"],
       "kinshipSkill": "Longhorn Upheaval",
       "eggColors": ["yellow", "white", "blue"],
@@ -5549,7 +5549,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Dash", "Ivy Climb"],
       "kinshipSkill": "Tigrexplosion",
       "eggColors": ["orange", "blue"],
@@ -5625,7 +5625,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Nest Search"],
       "kinshipSkill": "Dual Razor",
       "eggColors": ["green", "purple", "black"],
@@ -5707,7 +5707,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Jump"],
       "kinshipSkill": "Phantasmal Horn",
       "eggColors": ["blue", "white"],
@@ -5786,7 +5786,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Lava Dive", "Roar"],
       "kinshipSkill": "Teostrophe Zero",
       "eggColors": ["red", "purple"],
@@ -5867,7 +5867,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Nest Search", "Mega Breaker"],
       "kinshipSkill": "Gigantic Meteor",
       "eggColors": ["brown"],
@@ -5946,7 +5946,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Fly"],
       "kinshipSkill": "Ancient Storm",
       "eggColors": ["orange", "brown", "black"],
@@ -6023,7 +6023,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Fly"],
       "kinshipSkill": "Calamity Glacier",
       "eggColors": ["blue", "white", "gray"],
@@ -6089,7 +6089,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "technical",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Fly"],
       "kinshipSkill": "Astalos Saber",
       "eggColors": ["green", "black"],
@@ -6148,7 +6148,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "power",
-      "growth": "?",
+      "growth": "slow",
       "ridingActions": ["Monster Search", "Mega Breaker"],
       "kinshipSkill": "XX Blaze",
       "eggColors": ["black", "purple", "red"],
@@ -6235,7 +6235,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "blue"],
@@ -6294,7 +6294,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "red"],
@@ -6353,7 +6353,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "blue"],
@@ -6412,7 +6412,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "green"],
@@ -6471,7 +6471,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "blue"],
@@ -6530,7 +6530,7 @@
     "hatchable": true,
     "monstie": {
       "attackType": "speed",
-      "growth": "?",
+      "growth": "regular",
       "ridingActions": [],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "red"],
