@@ -29,7 +29,7 @@
         <div v-text="monster.habitat" />
 
         <div
-          v-if="showLocation"
+          v-if="showLocation && location"
           v-text="location"
         />
 
