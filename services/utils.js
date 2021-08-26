@@ -22,6 +22,10 @@ export function deepFreeze(object) {
   return Object.freeze(object);
 }
 
+export function makeSlug(text) {
+  return text.replace(/ /g, '-').replace(/\(|\)/g, '').toLowerCase();
+}
+
 export function formatMonsterNo(no, withHash = true) {
   let result = _.padStart(no, 3, '0');
 
@@ -58,7 +62,7 @@ export function formatMonsterPrimaryLocation(monster) {
   if (monster.locations?.length) {
     return monster.locations[0].sub;
   }
-  return '-';
+  return null;
 }
 
 export function formatMonsterLocation(location) {

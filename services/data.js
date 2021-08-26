@@ -1,12 +1,13 @@
 import _ from 'lodash';
-import { deepFreeze } from './utils';
+import { deepFreeze, makeSlug } from './utils';
 import monsters from '~/assets/data/monsters';
 
 _.forEach(monsters, (monster) => {
-  monster.slug = monster.name
-    .replace(/ /g, '-')
-    .replace(/\(|\)/g, '')
-    .toLowerCase();
+  monster.slug = makeSlug(monster.name);
+
+  if (monster.habitat == null) {
+    monster.habitat = 'Unknown Habitat';
+  }
 
   if (monster.hatchable && monster.monstie) {
     monster.monstie.attackElement = getMonstieAttackElement(monster);
