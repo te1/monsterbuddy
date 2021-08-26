@@ -5662,13 +5662,13 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "superRareDen", "main": "Lamure" },
+      { "type": "superRareDen", "main": "Hakolo Island" },
       {
         "type": "coopQuest",
         "main": "Jungle Den",
         "finalNest": true,
         "srTicket": true
       },
-      { "type": "superRareDen", "main": "Hakolo Island" },
       {
         "type": "coopQuest",
         "main": "Desert Den",
@@ -6181,7 +6181,7 @@
     "name": "Kulve Taroth",
     "genus": "Elder Dragon",
     "habitat": null,
-    "locations": [],
+    "locations": [{ "type": "coopQuest", "main": "The Goddess of Gold" }],
     "rarity": 7,
     "monster": {
       "attackPatterns": {
