@@ -4,6 +4,7 @@
       backTarget="/eggs/"
       :modes="modes"
       showEggColorFilter
+      showCoopQuestFilter
       showAttackTypeFilter
       showAttackElementFilter
       showRidingActionFilter
@@ -26,6 +27,7 @@
         return [
           { value: 'compact', caption: 'Compact' },
           { value: 'location', caption: 'Location' },
+          { value: 'location-coop', caption: 'Co-Op Quest' },
           { value: 'ridingActions', caption: 'Riding Actions' },
           { value: 'retreat', caption: 'Retreat' },
           { value: 'rarity', caption: 'Rarity' },

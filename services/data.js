@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { deepFreeze, makeSlug } from './utils';
 import monsters from '~/assets/data/monsters';
+import coopQuests from '~/assets/data/coopQuests';
 
 _.forEach(monsters, (monster) => {
   monster.slug = makeSlug(monster.name);
@@ -17,10 +18,11 @@ _.forEach(monsters, (monster) => {
     monster.monstie.stats.otherDefense = getMonstieOtherDefense(monster);
   }
 });
-
 deepFreeze(monsters);
 
-export { monsters };
+deepFreeze(coopQuests);
+
+export { monsters, coopQuests };
 export const monstersByNo = Object.freeze(_.keyBy(monsters, 'no'));
 export const monstersByName = Object.freeze(_.keyBy(monsters, 'name'));
 export const monstersBySlug = Object.freeze(_.keyBy(monsters, 'slug'));
@@ -39,6 +41,19 @@ export function getGenera(monsterList = monsters) {
 
 export function getHabitats(monsterList = monsters) {
   return deepFreeze(_.sortBy(_.uniq(_.map(monsterList, 'habitat'))));
+}
+
+export function getCoopQuests(monsterList = monsters) {
+  return deepFreeze(
+    _.filter(coopQuests, (coopQuest) => {
+      return _.some(monsterList, (monster) => {
+        return _.some(monster.locations, {
+          type: 'coopQuest',
+          main: coopQuest.name,
+        });
+      });
+    })
+  );
 }
 
 export function getRidingActions(monsterList = monsties) {
@@ -68,6 +83,14 @@ export function getMonstersByGenus(genus, monsterList = monsters) {
 
 export function getMonstersByHabitat(habitat, monsterList = monsters) {
   return deepFreeze(_.filter(monsterList, { habitat }));
+}
+
+export function getMonstersByCoopQuest(coopQuest, monsterList = monsters) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return _.some(monster.locations, { type: 'coopQuest', main: coopQuest });
+    })
+  );
 }
 
 export function getMonstiesByAttackType(attackType, monsterList = monsties) {
@@ -172,6 +195,10 @@ export function isElementalVariant(monster) {
 
 export function getMonsterLocation(monster, locationType) {
   return _.find(monster.locations, { type: locationType });
+}
+
+export function getMonsterLocations(monster, locationType) {
+  return _.filter(monster.locations, { type: locationType });
 }
 
 function getMonstieAttackElement(monster) {

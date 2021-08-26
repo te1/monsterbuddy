@@ -4,6 +4,7 @@
       backTarget="/monsties/"
       :modes="modes"
       showSortByStats
+      showCoopQuestFilter
       showAttackTypeFilter
       showAttackElementFilter
       showRidingActionFilter
@@ -25,6 +26,7 @@
       modes() {
         return [
           { value: 'location', caption: 'Location' },
+          { value: 'location-coop', caption: 'Co-Op Quest' },
           { value: 'ridingActions', caption: 'Riding Actions' },
           { value: 'retreat', caption: 'Retreat' },
           { value: 'rarity', caption: 'Rarity' },

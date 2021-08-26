@@ -4,11 +4,13 @@ import { defineStore, setMapStoreSuffix } from 'pinia';
 import {
   getGenera,
   getHabitats,
+  getCoopQuests,
   getRidingActions,
   getEggColors,
   getMonstersByName,
   getMonstersByGenus,
   getMonstersByHabitat,
+  getMonstersByCoopQuest,
   getMonstiesByAttackType,
   getMonstiesByAttackElement,
   getMonstiesByRidingAction,
@@ -32,6 +34,7 @@ export function makeMonsterFilterStore(
     nameFilter: null,
     genusFilter: null,
     habitatFilter: null,
+    coopQuestFilter: null,
     attackTypeFilter: null,
     attackElementFilter: null,
     ridingActionFilter: null,
@@ -52,6 +55,7 @@ export function makeMonsterFilterStore(
         nameFilter: initial.nameFilter,
         genusFilter: initial.genusFilter,
         habitatFilter: initial.habitatFilter,
+        coopQuestFilter: initial.coopQuestFilter,
         attackTypeFilter: initial.attackTypeFilter,
         attackElementFilter: initial.attackElementFilter,
         ridingActionFilter: initial.ridingActionFilter,
@@ -70,6 +74,10 @@ export function makeMonsterFilterStore(
 
       allHabitats() {
         return getHabitats(this.monsters);
+      },
+
+      allCoopQuests() {
+        return getCoopQuests(this.monsters);
       },
 
       allRidingActions() {
@@ -93,6 +101,10 @@ export function makeMonsterFilterStore(
 
         if (this.habitatFilter != null) {
           result = getMonstersByHabitat(this.habitatFilter, result);
+        }
+
+        if (this.coopQuestFilter != null) {
+          result = getMonstersByCoopQuest(this.coopQuestFilter, result);
         }
 
         if (this.attackTypeFilter != null) {
@@ -269,6 +281,10 @@ export function makeMonsterFilterStore(
           result.push({ name: 'habitatFilter', value: this.habitatFilter });
         }
 
+        if (this.coopQuestFilter != null) {
+          result.push({ name: 'coopQuestFilter', value: this.coopQuestFilter });
+        }
+
         if (this.attackTypeFilter != null) {
           result.push({
             name: 'attackTypeFilter',
@@ -326,6 +342,7 @@ export function makeMonsterFilterStore(
         this.nameFilter = initial.nameFilter;
         this.genusFilter = initial.genusFilter;
         this.habitatFilter = initial.habitatFilter;
+        this.coopQuestFilter = initial.coopQuestFilter;
         this.attackTypeFilter = initial.attackTypeFilter;
         this.attackElementFilter = initial.attackElementFilter;
         this.ridingActionFilter = initial.ridingActionFilter;

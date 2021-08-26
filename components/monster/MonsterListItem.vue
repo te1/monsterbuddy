@@ -41,6 +41,15 @@
         </div>
       </template>
 
+      <template v-if="showCoopQuests">
+        <div
+          v-for="coopQuest in coopQuests"
+          :key="coopQuest"
+        >
+          {{ coopQuest }}
+        </div>
+      </template>
+
       <template v-if="showCombat">
         <div
           v-for="(attackType, phase) in monster.monster.attackPatterns"
@@ -68,10 +77,12 @@
 <script>
   import _ from 'lodash';
   import {
+    formatCoopQuest,
     formatMonsterInfo,
     formatMonsterPrimaryLocation,
     formatPhase,
   } from '~/services/utils';
+  import { coopQuests, getMonsterLocations } from '~/services/data';
 
   export default {
     name: 'MonsterListItem',
@@ -98,8 +109,22 @@
         return formatMonsterPrimaryLocation(this.monster);
       },
 
+      coopQuests() {
+        let locations = _.take(getMonsterLocations(this.monster, 'coopQuest'), 3);
+
+        let quests = _.map(locations, (location) => {
+          return _.find(coopQuests, { name: location.main });
+        });
+
+        return _.map(quests, formatCoopQuest);
+      },
+
       showLocation() {
         return _.includes(['location'], this.mode);
+      },
+
+      showCoopQuests() {
+        return _.includes(['location-coop'], this.mode);
       },
 
       showCombat() {

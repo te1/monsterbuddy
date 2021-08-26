@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {
+  coopQuests,
   isSubspecies,
   isDeviant,
   isColorVariant,
@@ -68,6 +69,28 @@ export function formatMonsterPrimaryLocation(monster) {
   return null;
 }
 
+export function formatCoopQuest(coopQuest) {
+  let result = '';
+
+  switch (coopQuest?.type) {
+    case 'explore':
+      result = '(Explore) ';
+      break;
+
+    case 'time':
+      result = '(Time) ';
+      break;
+  }
+
+  if (coopQuest?.rarity != null) {
+    result = '★' + coopQuest.rarity + ' ' + result;
+  }
+
+  result += coopQuest?.name;
+
+  return result;
+}
+
 export function formatMonsterLocation(location) {
   let result = location.main;
 
@@ -75,12 +98,18 @@ export function formatMonsterLocation(location) {
     result += ` - ${location.sub}`;
   }
 
+  let coopQuest;
+
   switch (location.type) {
     case 'superRareDen':
       result = 'Super Rare Dens in ' + result;
       break;
 
     case 'coopQuest':
+      coopQuest = _.find(coopQuests, { name: location.main });
+      if (coopQuest) {
+        result = formatCoopQuest(coopQuest);
+      }
       result = 'Co-Op Quest: ' + result;
       break;
 
