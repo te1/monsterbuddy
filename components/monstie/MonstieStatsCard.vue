@@ -171,9 +171,7 @@
 
     computed: {
       hasStats() {
-        return (
-          this.monster?.monstie?.growth && this.monster?.monstie?.growth !== '?'
-        );
+        return this.monster?.monstie?.stats?.base?.maxHp != null;
       },
 
       growth() {
