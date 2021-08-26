@@ -77,9 +77,9 @@
 <script>
   import _ from 'lodash';
   import {
-    formatCoopQuest,
     formatMonsterInfo,
     formatMonsterPrimaryLocation,
+    formatCoopQuest,
     formatPhase,
   } from '~/services/utils';
   import { coopQuests, getMonsterLocations } from '~/services/data';
