@@ -5017,11 +5017,8 @@
     "no": 111,
     "name": "Barrel Felyne",
     "genus": "Lynian",
-    "habitat": "Alcala",
-    "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
-      { "type": "eldersLair", "main": "Z1" }
-    ],
+    "habitat": null,
+    "locations": [{ "type": "eldersLair", "main": "Z1" }],
     "rarity": 1,
     "monster": {
       "elementalWeakness": "none"
@@ -5822,9 +5819,8 @@
     "no": 123,
     "name": "Rajang",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "superRareDen", "main": "Alcala" },
       { "type": "superRareDen", "main": "Loloska" },
       {
@@ -6093,7 +6089,7 @@
       "ridingActions": ["Fly"],
       "kinshipSkill": "Astalos Saber",
       "eggColors": ["green", "black"],
-      "retreat": "This monster **cannot** be chased back to its den.", // ?
+      "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
           "maxHp": null,
@@ -6152,7 +6148,7 @@
       "ridingActions": ["Monster Search", "Mega Breaker"],
       "kinshipSkill": "XX Blaze",
       "eggColors": ["black", "purple", "red"],
-      "retreat": "This monster **cannot** be chased back to its den.", // ?
+      "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
           "maxHp": null,
@@ -6184,8 +6180,8 @@
     "no": 128,
     "name": "Kulve Taroth",
     "genus": "Elder Dragon",
-    "habitat": "?",
-    "locations": [{ "type": "catavanStand", "main": "?", "sub": "?" }],
+    "habitat": null,
+    "locations": [],
     "rarity": 7,
     "monster": {
       "attackPatterns": {
@@ -6211,9 +6207,8 @@
     "no": 136,
     "name": "Palamute (Normal)",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
@@ -6270,9 +6265,8 @@
     "no": 137,
     "name": "Palamute (Fire)",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
@@ -6329,9 +6323,8 @@
     "no": 138,
     "name": "Palamute (Water)",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
@@ -6388,9 +6381,8 @@
     "no": 139,
     "name": "Palamute (Thunder)",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
@@ -6447,9 +6439,8 @@
     "no": 140,
     "name": "Palamute (Ice)",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
@@ -6506,9 +6497,8 @@
     "no": 142,
     "name": "Palamute (Dragon)",
     "genus": "Fanged Beast",
-    "habitat": "Co-Op",
+    "habitat": null,
     "locations": [
-      { "type": "catavanStand", "main": "?", "sub": "?" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
