@@ -51,7 +51,7 @@
         >
           <div
             v-if="eggFilter.isGrouped"
-            class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 bg-gray-300 dark:bg-cool-700"
+            class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
           >
             <FaIcon
               v-if="eggFilter.sortKey === 'genus'"
