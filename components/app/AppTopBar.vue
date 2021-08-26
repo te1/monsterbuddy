@@ -2,7 +2,7 @@
   <div>
     <div class="h-12 mb-3" />
 
-    <div class="fixed top-0 inset-x-0 h-12 z-10 shadow border-b border-gray-300 bg-white dark:border-cool-600 dark:bg-cool-800">
+    <div class="fixed top-0 inset-x-0 h-12 z-20 shadow border-b border-gray-300 bg-white dark:border-cool-600 dark:bg-cool-800">
       <div class="container mx-auto px-4 h-full flex items-center justify-between">
         <span class="w-10 mr-4 text-xl">
           <AppIconButton

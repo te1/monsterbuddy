@@ -22,7 +22,7 @@
     <main v-show="leaving || !showFilter">
       <div
         v-if="monstieFilter.hasActiveSort || monstieFilter.hasActiveFilters"
-        class="fixed z-10 w-full inset-x-0 top-12 mt-1"
+        class="fixed z-20 w-full inset-x-0 top-12 mt-1"
       >
         <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
           <AppFilterPill
@@ -51,7 +51,7 @@
         >
           <div
             v-if="monstieFilter.isGrouped"
-            class="flex items-center mb-1"
+            class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 bg-gray-300 dark:bg-cool-700"
           >
             <FaIcon
               v-if="monstieFilter.sortKey === 'genus'"
