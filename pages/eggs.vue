@@ -47,7 +47,7 @@
         <li
           v-for="(group, key) in eggFilter.groupedMonsters"
           :key="key"
-          class="mt-3 first:mt-0 "
+          class="mt-5 first:mt-0 "
         >
           <div
             v-if="eggFilter.isGrouped"
