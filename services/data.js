@@ -170,6 +170,10 @@ export function isElementalVariant(monster) {
   return isVariant(monster, 'element');
 }
 
+export function getMonsterLocation(monster, locationType) {
+  return _.find(monster.locations, { type: locationType });
+}
+
 function getMonstieAttackElement(monster) {
   return getMonstieBestAttack(monster)?.element;
 }

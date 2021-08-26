@@ -4,6 +4,7 @@ import {
   isDeviant,
   isColorVariant,
   isElementalVariant,
+  getMonsterLocation,
 } from '~/services/data';
 
 export function deepFreeze(object) {
@@ -59,8 +60,10 @@ export function formatMonsterInfo(monster) {
 }
 
 export function formatMonsterPrimaryLocation(monster) {
-  if (monster.locations?.length) {
-    return monster.locations[0].sub;
+  let location = getMonsterLocation(monster, 'catavanStand');
+
+  if (location && location.sub) {
+    return location.sub;
   }
   return null;
 }
