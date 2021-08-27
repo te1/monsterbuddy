@@ -5,6 +5,7 @@
       :modes="modes"
       showSortByStats
       showCoopQuestFilter
+      showEldersLairFilter
       showAttackTypeFilter
       showAttackElementFilter
       showRidingActionFilter
@@ -27,6 +28,7 @@
         return [
           { value: 'location', caption: 'Location' },
           { value: 'location-coop', caption: 'Co-Op Quest' },
+          { value: 'location-eldersLair', caption: "Elder's Lair" },
           { value: 'ridingActions', caption: 'Riding Actions' },
           { value: 'retreat', caption: 'Retreat' },
           { value: 'rarity', caption: 'Rarity' },

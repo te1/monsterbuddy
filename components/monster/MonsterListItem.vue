@@ -50,6 +50,15 @@
         </div>
       </template>
 
+      <template v-if="showEldersLairFloors">
+        <div
+          v-for="floor in eldersLairFloors"
+          :key="floor"
+        >
+          Elder's Lair - {{ floor }}
+        </div>
+      </template>
+
       <template v-if="showCombat">
         <div
           v-for="(attackType, phase) in monster.monster.attackPatterns"
@@ -119,12 +128,25 @@
         return _.map(quests, formatCoopQuest);
       },
 
+      eldersLairFloors() {
+        let locations = _.take(
+          getMonsterLocations(this.monster, 'eldersLair'),
+          3
+        );
+
+        return _.map(locations, 'main');
+      },
+
       showLocation() {
         return _.includes(['location'], this.mode);
       },
 
       showCoopQuests() {
         return _.includes(['location-coop'], this.mode);
+      },
+
+      showEldersLairFloors() {
+        return _.includes(['location-eldersLair'], this.mode);
       },
 
       showCombat() {

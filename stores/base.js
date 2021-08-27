@@ -5,12 +5,14 @@ import {
   getGenera,
   getHabitats,
   getCoopQuests,
+  getEldersLairFloors,
   getRidingActions,
   getEggColors,
   getMonstersByName,
   getMonstersByGenus,
   getMonstersByHabitat,
   getMonstersByCoopQuest,
+  getMonstersByEldersLairFloor,
   getMonstiesByAttackType,
   getMonstiesByAttackElement,
   getMonstiesByRidingAction,
@@ -35,6 +37,7 @@ export function makeMonsterFilterStore(
     genusFilter: null,
     habitatFilter: null,
     coopQuestFilter: null,
+    eldersLairFilter: null,
     attackTypeFilter: null,
     attackElementFilter: null,
     ridingActionFilter: null,
@@ -56,6 +59,7 @@ export function makeMonsterFilterStore(
         genusFilter: initial.genusFilter,
         habitatFilter: initial.habitatFilter,
         coopQuestFilter: initial.coopQuestFilter,
+        eldersLairFilter: initial.eldersLairFilter,
         attackTypeFilter: initial.attackTypeFilter,
         attackElementFilter: initial.attackElementFilter,
         ridingActionFilter: initial.ridingActionFilter,
@@ -78,6 +82,10 @@ export function makeMonsterFilterStore(
 
       allCoopQuests() {
         return getCoopQuests(this.monsters);
+      },
+
+      allEldersLairFloors() {
+        return getEldersLairFloors(this.monsters);
       },
 
       allRidingActions() {
@@ -105,6 +113,10 @@ export function makeMonsterFilterStore(
 
         if (this.coopQuestFilter != null) {
           result = getMonstersByCoopQuest(this.coopQuestFilter, result);
+        }
+
+        if (this.eldersLairFilter != null) {
+          result = getMonstersByEldersLairFloor(this.eldersLairFilter, result);
         }
 
         if (this.attackTypeFilter != null) {
@@ -285,6 +297,13 @@ export function makeMonsterFilterStore(
           result.push({ name: 'coopQuestFilter', value: this.coopQuestFilter });
         }
 
+        if (this.eldersLairFilter != null) {
+          result.push({
+            name: 'eldersLairFilter',
+            value: "Elder's Lair - " + this.eldersLairFilter,
+          });
+        }
+
         if (this.attackTypeFilter != null) {
           result.push({
             name: 'attackTypeFilter',
@@ -343,6 +362,7 @@ export function makeMonsterFilterStore(
         this.genusFilter = initial.genusFilter;
         this.habitatFilter = initial.habitatFilter;
         this.coopQuestFilter = initial.coopQuestFilter;
+        this.eldersLairFilter = initial.eldersLairFilter;
         this.attackTypeFilter = initial.attackTypeFilter;
         this.attackElementFilter = initial.attackElementFilter;
         this.ridingActionFilter = initial.ridingActionFilter;

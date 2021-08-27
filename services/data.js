@@ -56,6 +56,21 @@ export function getCoopQuests(monsterList = monsters) {
   );
 }
 
+export function getEldersLairFloors(monsterList = monsters) {
+  return deepFreeze(
+    _.sortBy(
+      _.uniq(
+        _.flatMap(monsterList, (monster) => {
+          return _.map(
+            _.filter(monster.locations, { type: 'eldersLair' }),
+            'main'
+          );
+        })
+      )
+    )
+  );
+}
+
 export function getRidingActions(monsterList = monsties) {
   return deepFreeze(
     _.sortBy(_.uniq(_.flatMap(_.map(monsterList, 'monstie.ridingActions'))))
@@ -89,6 +104,20 @@ export function getMonstersByCoopQuest(coopQuest, monsterList = monsters) {
   return deepFreeze(
     _.filter(monsterList, (monster) => {
       return _.some(monster.locations, { type: 'coopQuest', main: coopQuest });
+    })
+  );
+}
+
+export function getMonstersByEldersLairFloor(
+  eldersLairFloor,
+  monsterList = monsters
+) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return _.some(monster.locations, {
+        type: 'eldersLair',
+        main: eldersLairFloor,
+      });
     })
   );
 }

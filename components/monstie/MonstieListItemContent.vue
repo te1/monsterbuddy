@@ -35,6 +35,15 @@
       </div>
     </template>
 
+    <template v-if="showEldersLairFloors">
+      <div
+        v-for="floor in eldersLairFloors"
+        :key="floor"
+      >
+        Elder's Lair - {{ floor }}
+      </div>
+    </template>
+
     <!-- eslint-disable vue/no-v-html -->
     <div
       v-if="showRetreat"
@@ -143,6 +152,15 @@
         return _.map(quests, formatCoopQuest);
       },
 
+      eldersLairFloors() {
+        let locations = _.take(
+          getMonsterLocations(this.monster, 'eldersLair'),
+          3
+        );
+
+        return _.map(locations, 'main');
+      },
+
       retreat() {
         return parseSomeMarkdown(this.monster?.monstie?.retreat);
       },
@@ -177,6 +195,10 @@
 
       showCoopQuests() {
         return _.includes(['location-coop'], this.mode);
+      },
+
+      showEldersLairFloors() {
+        return _.includes(['location-eldersLair'], this.mode);
       },
 
       showRidingActions() {

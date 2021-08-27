@@ -3,6 +3,7 @@
     <MonsterFilter
       backTarget="/monsters/"
       :modes="modes"
+      showEldersLairFilter
       showHatchableFilter
     />
   </div>
@@ -22,6 +23,7 @@
       modes() {
         return [
           { value: 'location', caption: 'Location' },
+          { value: 'location-eldersLair', caption: "Elder's Lair" },
           { value: 'combat', caption: 'Attack Pattern' },
           { value: 'rarity', caption: 'Rarity' },
         ];

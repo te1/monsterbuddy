@@ -214,6 +214,35 @@
       </div>
 
       <div
+        v-if="showEldersLairFilter"
+        class="flex items-center"
+      >
+        <label
+          class="flex-1 cursor-pointer"
+          for="MonsterFilter_EldersLairFilter"
+        >
+          Elder's Lair
+        </label>
+
+        <select
+          id="MonsterFilter_EldersLairFilter"
+          :value="store.eldersLairFilter"
+          class="input w-[180px] px-2 py-1"
+          @input="onEldersLairFilterChanged"
+        >
+          <option :value="null">All</option>
+
+          <option
+            v-for="floor in store.allEldersLairFloors"
+            :key="floor"
+            :value="floor"
+          >
+            {{ floor }}
+          </option>
+        </select>
+      </div>
+
+      <div
         v-if="showAttackTypeFilter"
         class="flex items-center"
       >
@@ -399,6 +428,12 @@
         default: false,
       },
 
+      showEldersLairFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
       showAttackTypeFilter: {
         type: Boolean,
         required: false,
@@ -579,6 +614,10 @@
 
       onCoopQuestFilterChanged(e) {
         this.onFilterChanged('coopQuestFilter', e, 'location-coop');
+      },
+
+      onEldersLairFilterChanged(e) {
+        this.onFilterChanged('eldersLairFilter', e, 'location-eldersLair');
       },
 
       onRidingActionFilterChanged(e) {
