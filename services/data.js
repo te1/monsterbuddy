@@ -56,6 +56,17 @@ export function getCoopQuests(monsterList = monsters) {
   );
 }
 
+export function getCatavanStands(monsterList = monsters) {
+  let locations = _.sortBy(
+    _.flatMap(monsterList, (monster) => {
+      return _.filter(monster.locations, { type: 'catavanStand' });
+    }),
+    ['main', 'sub']
+  );
+
+  return deepFreeze(_.uniq(_.map(locations, 'sub')));
+}
+
 export function getEldersLairFloors(monsterList = monsters) {
   return deepFreeze(
     _.sortBy(
@@ -104,6 +115,20 @@ export function getMonstersByCoopQuest(coopQuest, monsterList = monsters) {
   return deepFreeze(
     _.filter(monsterList, (monster) => {
       return _.some(monster.locations, { type: 'coopQuest', main: coopQuest });
+    })
+  );
+}
+
+export function getMonstersByCatavanStand(
+  catavanStand,
+  monsterList = monsters
+) {
+  return deepFreeze(
+    _.filter(monsterList, (monster) => {
+      return _.some(monster.locations, {
+        type: 'catavanStand',
+        sub: catavanStand,
+      });
     })
   );
 }

@@ -5,6 +5,7 @@
       :modes="modes"
       showEggColorFilter
       showCoopQuestFilter
+      showCatavanFilter
       showAttackTypeFilter
       showAttackElementFilter
       showRidingActionFilter

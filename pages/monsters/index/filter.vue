@@ -3,6 +3,7 @@
     <MonsterFilter
       backTarget="/monsters/"
       :modes="modes"
+      showCatavanFilter
       showEldersLairFilter
       showHatchableFilter
     />

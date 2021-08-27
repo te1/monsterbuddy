@@ -5,6 +5,7 @@
       :modes="modes"
       showSortByStats
       showCoopQuestFilter
+      showCatavanFilter
       showEldersLairFilter
       showAttackTypeFilter
       showAttackElementFilter

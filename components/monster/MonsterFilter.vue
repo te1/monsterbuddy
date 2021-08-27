@@ -214,6 +214,35 @@
       </div>
 
       <div
+        v-if="showCatavanFilter"
+        class="flex items-center"
+      >
+        <label
+          class="flex-1 cursor-pointer"
+          for="MonsterFilter_CatavanFilter"
+        >
+          Catavan Stand
+        </label>
+
+        <select
+          id="MonsterFilter_CatavanFilter"
+          :value="store.catavanFilter"
+          class="input w-[180px] px-2 py-1"
+          @input="onCatavanFilterChanged"
+        >
+          <option :value="null">All</option>
+
+          <option
+            v-for="catavanStand in store.allCatavanStands"
+            :key="catavanStand"
+            :value="catavanStand"
+          >
+            {{ catavanStand }}
+          </option>
+        </select>
+      </div>
+
+      <div
         v-if="showEldersLairFilter"
         class="flex items-center"
       >
@@ -428,6 +457,12 @@
         default: false,
       },
 
+      showCatavanFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
       showEldersLairFilter: {
         type: Boolean,
         required: false,
@@ -614,6 +649,10 @@
 
       onCoopQuestFilterChanged(e) {
         this.onFilterChanged('coopQuestFilter', e, 'location-coop');
+      },
+
+      onCatavanFilterChanged(e) {
+        this.onFilterChanged('catavanFilter', e, 'location');
       },
 
       onEldersLairFilterChanged(e) {
