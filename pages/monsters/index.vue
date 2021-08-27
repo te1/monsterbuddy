@@ -51,24 +51,26 @@
         >
           <div
             v-if="monsterFilter.isGrouped"
-            class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
+            class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
           >
-            <FaIcon
-              v-if="monsterFilter.sortKey === 'genus'"
-              class="!w-6 text-gray-500 dark:text-cool-400"
-              :icon="['fas', 'dna']"
-            />
+            <div class="flex items-center mx-1 my-1">
+              <FaIcon
+                v-if="monsterFilter.sortKey === 'genus'"
+                class="!w-6 text-gray-500 dark:text-cool-400"
+                :icon="['fas', 'dna']"
+              />
 
-            <FaIcon
-              v-if="monsterFilter.sortKey === 'habitat'"
-              class="!w-6 text-gray-500 dark:text-cool-400"
-              :icon="['fas', 'map-marker-alt']"
-            />
+              <FaIcon
+                v-if="monsterFilter.sortKey === 'habitat'"
+                class="!w-6 text-gray-500 dark:text-cool-400"
+                :icon="['fas', 'map-marker-alt']"
+              />
 
-            <div
-              class="font-semibold mb-1"
-              v-text="key"
-            />
+              <div
+                class="font-semibold mb-1"
+                v-text="key"
+              />
+            </div>
           </div>
 
           <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
