@@ -43,11 +43,13 @@
         </div>
       </div>
 
-      <ul :class="{ 'mt-8': monsterFilter.hasActiveSort || monsterFilter.hasActiveFilters }">
+      <ul
+        class="space-y-5"
+        :class="{ 'mt-8': monsterFilter.hasActiveSort || monsterFilter.hasActiveFilters }"
+      >
         <li
           v-for="(group, key) in monsterFilter.groupedMonsters"
           :key="key"
-          class="mt-5 first:mt-0 "
         >
           <div
             v-if="monsterFilter.isGrouped"
