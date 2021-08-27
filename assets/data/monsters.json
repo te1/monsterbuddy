@@ -3331,11 +3331,11 @@
     "no": 75,
     "name": "White Monoblos",
     "genus": "Flying Wyvern",
-    "habitat": "Hakolo Island",
+    "habitat": "Lamure",
     "locations": [
       {
         "type": "catavanStand",
-        "main": "Hakolo Island",
+        "main": "Lamure",
         "sub": "Jalma Highlands"
       },
       { "type": "coopQuest", "main": "Jungle Den" },
