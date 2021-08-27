@@ -320,11 +320,11 @@ export function makeMonsterFilterStore(
       activeFilters() {
         let result = [];
 
-        if (this.genusFilter != null) {
+        if (this.genusFilter != null && this.sortKey !== 'genus') {
           result.push({ name: 'genusFilter', value: this.genusFilter });
         }
 
-        if (this.habitatFilter != null) {
+        if (this.habitatFilter != null && this.sortKey !== 'habitat') {
           result.push({ name: 'habitatFilter', value: this.habitatFilter });
         }
 
@@ -336,7 +336,7 @@ export function makeMonsterFilterStore(
           result.push({ name: 'catavanFilter', value: this.catavanFilter });
         }
 
-        if (this.eldersLairFilter != null) {
+        if (this.eldersLairFilter != null && this.sortKey !== 'eldersLair') {
           result.push({
             name: 'eldersLairFilter',
             value: "Elder's Lair - " + this.eldersLairFilter,
