@@ -9,6 +9,14 @@ const initial = {
 const extend = {
   state: {
     mode: 'compact',
+    allowedModes: [
+      'compact',
+      'location',
+      'location-coop',
+      'ridingActions',
+      'retreat',
+      'rarity',
+    ],
   },
 };
 

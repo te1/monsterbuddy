@@ -61,6 +61,13 @@
             to="/eggs/"
           >Visual egg list</NuxtLink> with search, sorting and filtering
         </li>
+
+        <li>
+          <NuxtLink
+            class="link"
+            to="/elders-lair/"
+          >Elder's Lair overview</NuxtLink> to quickly find high rank monsters on each floor
+        </li>
       </ul>
 
       <h3>

@@ -4,6 +4,7 @@
       backTarget="/monsties/"
       :modes="modes"
       showSortByStats
+      showHabitatFilter
       showCoopQuestFilter
       showCatavanFilter
       showEldersLairFilter

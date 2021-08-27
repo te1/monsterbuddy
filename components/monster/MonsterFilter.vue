@@ -27,7 +27,10 @@
       </div>
     </section>
 
-    <section class="box px-4 py-3 flex flex-col space-y-3">
+    <section
+      v-if="!hideSort"
+      class="box px-4 py-3 flex flex-col space-y-3"
+    >
       <div class="flex items-center">
         <h3 class="flex-1 text-lg font-semibold">
           <label
@@ -158,7 +161,10 @@
         </select>
       </div>
 
-      <div class="flex items-center">
+      <div
+        v-if="showHabitatFilter"
+        class="flex items-center"
+      >
         <label
           class="flex-1 cursor-pointer"
           for="MonsterFilter_HabitatFilter"
@@ -439,6 +445,12 @@
         },
       },
 
+      hideSort: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
       showSortByStats: {
         type: Boolean,
         require: false,
@@ -446,6 +458,12 @@
       },
 
       showEggColorFilter: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+
+      showHabitatFilter: {
         type: Boolean,
         required: false,
         default: false,
@@ -601,7 +619,13 @@
             this.store.sortOrder = 'asc';
           }
 
-          if (config && config.mode && this.store.mode !== 'compact') {
+          if (
+            config &&
+            config.mode &&
+            this.store.mode !== 'compact' &&
+            (this.store.allowedModes == null ||
+              _.includes(this.store.allowedModes, config.mode))
+          ) {
             this.store.mode = config.mode;
           }
         }
@@ -633,7 +657,13 @@
         if (newValue !== oldValue) {
           this.store[filterKey] = newValue;
 
-          if (newValue != null && mode != null && this.store.mode !== 'compact') {
+          if (
+            newValue != null &&
+            mode != null &&
+            this.store.mode !== 'compact' &&
+            (this.store.allowedModes == null ||
+              _.includes(this.store.allowedModes, mode))
+          ) {
             this.store.mode = mode;
           }
         }

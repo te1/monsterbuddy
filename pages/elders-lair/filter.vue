@@ -1,10 +1,9 @@
 <template>
   <div class="space-y-3">
     <MonsterFilter
-      backTarget="/monsters/"
+      backTarget="/elders-lair/"
       :modes="modes"
-      showHabitatFilter
-      showCatavanFilter
+      hideSort
       showEldersLairFilter
       showHatchableFilter
     />
@@ -13,7 +12,7 @@
 
 <script>
   export default {
-    name: 'PageMonstersFilter',
+    name: 'PageEldersLairFilter',
 
     inject: ['useFilterStore'],
 
@@ -25,9 +24,7 @@
       modes() {
         return [
           { value: 'location', caption: 'Location' },
-          { value: 'location-eldersLair', caption: "Elder's Lair" },
           { value: 'combat', caption: 'Attack Pattern' },
-          { value: 'rarity', caption: 'Rarity' },
         ];
       },
     },

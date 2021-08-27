@@ -207,12 +207,35 @@ export function makeMonsterFilterStore(
             result = _.groupBy(result, 'habitat');
             break;
 
+          case 'eldersLair':
+            result = this.groupedMonstersByEldersLairFloors(result);
+            break;
+
           default:
             result = { all: result };
             break;
         }
 
         return result;
+      },
+
+      groupedMonstersByEldersLairFloors: (state) => (monsters) => {
+        let floors;
+        if (state.eldersLairFilter) {
+          floors = [state.eldersLairFilter];
+        } else {
+          floors = getEldersLairFloors(monsters);
+        }
+
+        return _.reduce(
+          floors,
+          (result, floor) => {
+            result[floor] = getMonstersByEldersLairFloor(floor, monsters);
+
+            return result;
+          },
+          {}
+        );
       },
 
       resultCount() {
@@ -224,7 +247,7 @@ export function makeMonsterFilterStore(
       },
 
       isGrouped() {
-        return _.includes(['genus', 'habitat'], this.sortKey);
+        return _.includes(['genus', 'habitat', 'eldersLair'], this.sortKey);
       },
 
       activeSort() {

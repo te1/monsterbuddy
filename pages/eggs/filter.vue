@@ -4,6 +4,7 @@
       backTarget="/eggs/"
       :modes="modes"
       showEggColorFilter
+      showHabitatFilter
       showCoopQuestFilter
       showCatavanFilter
       showAttackTypeFilter

@@ -9,6 +9,15 @@ const initial = {
 const extend = {
   state: {
     mode: 'location',
+    allowedModes: [
+      'location',
+      'location-coop',
+      'location-eldersLair',
+      'ridingActions',
+      'retreat',
+      'rarity',
+      'stats',
+    ],
   },
 };
 

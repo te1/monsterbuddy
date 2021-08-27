@@ -54,7 +54,18 @@
 
         if (this.showMonstie || this.showEgg) {
           if (
-            _.includes(['location', 'ridingActions', 'retreat', 'stats'], mode)
+            _.includes(
+              [
+                'location',
+                'location-coop',
+                'location-eldersLair',
+                'ridingActions',
+                'retreat',
+                'rarity',
+                'stats',
+              ],
+              mode
+            )
           ) {
             return mode;
           }
@@ -62,7 +73,18 @@
         }
 
         // monster
-        if (_.includes(['location', 'combat'], mode)) {
+        if (
+          _.includes(
+            [
+              'location',
+              'location-coop',
+              'location-eldersLair',
+              'combat',
+              'rarity',
+            ],
+            mode
+          )
+        ) {
           return mode;
         }
         return undefined;

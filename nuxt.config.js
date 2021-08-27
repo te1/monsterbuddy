@@ -154,19 +154,32 @@ export default {
 
   // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-generate
   generate: {
-    exclude: ['/monsters/filter', '/monsties/filter', '/eggs/filter', '/test'],
+    exclude: [
+      '/monsters/filter',
+      '/monsties/filter',
+      '/eggs/filter',
+      '/elders-lair/filter',
+      '/test',
+    ],
     fallback: true,
   },
 
   sitemap: {
     hostname: 'https://monsterbuddy.app',
     trailingSlash: true,
-    exclude: ['/monsters/filter', '/monsties/filter', '/eggs/filter', '/test'],
+    exclude: [
+      '/monsters/filter',
+      '/monsties/filter',
+      '/eggs/filter',
+      '/elders-lair/filter',
+      '/test',
+    ],
     routes: [
       { url: '/', priority: 1 },
       { url: '/monsters', priority: 1 },
       { url: '/monsties', priority: 1 },
       { url: '/eggs', priority: 1 },
+      { url: '/elders-lair', priority: 1 },
     ],
   },
 };
