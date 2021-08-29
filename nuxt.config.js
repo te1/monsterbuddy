@@ -179,6 +179,7 @@ export default {
       { url: '/monsters', priority: 1 },
       { url: '/monsties', priority: 1 },
       { url: '/eggs', priority: 1 },
+      { url: '/catavan-stands', priority: 1 },
       { url: '/elders-lair', priority: 1 },
     ],
   },

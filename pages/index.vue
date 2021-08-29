@@ -65,6 +65,13 @@
         <li>
           <NuxtLink
             class="link"
+            to="/catavan-stands/"
+          >Catavan stands</NuxtLink> with list of monsters you will find there
+        </li>
+
+        <li>
+          <NuxtLink
+            class="link"
             to="/elders-lair/"
           >Elder's Lair overview</NuxtLink> to quickly find high rank monsters on each floor
         </li>
