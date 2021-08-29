@@ -8,7 +8,7 @@
 
     <main>
       <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <MonsterCatavanItem
+        <MonsterSmartListItem
           v-for="monster in monsters"
           :key="monster.no"
           :monster="monster"
@@ -61,10 +61,6 @@
     computed: {
       monsters() {
         return getMonstersByCatavanStand(this.catavanStand.name);
-      },
-
-      history() {
-        return this.$useHistoryStore();
       },
     },
 
