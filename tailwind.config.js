@@ -2,7 +2,9 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
-  purge: [],
+  purge: {
+    safelist: ['nuxt-progress'],
+  },
   darkMode: 'class',
   theme: {
     colors: {

@@ -137,6 +137,12 @@ export default {
     classSuffix: '',
   },
 
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-loading
+  loading: {
+    continuous: true,
+    height: '4px',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
