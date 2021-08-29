@@ -16,6 +16,9 @@ import {
   faDna, // genus
   faMapMarkerAlt, // habitat
   faStar, // rarity
+  faExclamation, // coop quest type
+  faDragon, // monster / monstie
+  faEgg, // egg
   faShare, // used in attack type "image"
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -40,6 +43,9 @@ library.add(
   faDna,
   faMapMarkerAlt,
   faStar,
+  faExclamation,
+  faDragon,
+  faEgg,
   faShare
 );
 library.add(faSadCry);

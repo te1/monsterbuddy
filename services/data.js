@@ -22,6 +22,9 @@ _.forEach(monsters, (monster) => {
 });
 deepFreeze(monsters);
 
+_.forEach(coopQuests, (coopQuest) => {
+  coopQuest.slug = makeSlug(coopQuest.name);
+});
 deepFreeze(coopQuests);
 
 export { monsters, coopQuests };
@@ -38,6 +41,7 @@ export const catavanStands = getCatavanStandsWithDetails();
 export const catavanStandsBySlug = Object.freeze(
   _.keyBy(catavanStands, 'slug')
 );
+export const coopQuestsBySlug = Object.freeze(_.keyBy(coopQuests, 'slug'));
 export const ridingActions = getRidingActions();
 export const eggColors = getEggColors();
 

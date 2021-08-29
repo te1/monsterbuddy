@@ -16,7 +16,7 @@
 
         <h1
           v-if="heading"
-          class="flex-1 text-lg text-center font-semibold"
+          class="flex-1 text-lg text-center font-semibold whitespace-nowrap overflow-ellipsis overflow-hidden"
           v-text="heading"
         />
 

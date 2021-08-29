@@ -44,21 +44,29 @@ const useHistoryStore = defineStore({
       let showMonstie = state.shouldShowMonstie(monster);
       let showEgg = state.shouldShowEgg(monster);
 
-      let store;
-
-      if (showMonstie) {
-        store = useMonstieFilter();
-      } else if (showEgg) {
-        store = useEggFilter();
-      } else {
-        store = useMonsterFilter();
-      }
-
-      if (_.includes(store.autoSwitchModes, store.mode)) {
-        return store.mode;
-      }
-      return undefined;
+      return state.listModeSmart(showMonstie, showEgg);
     },
+
+    listModeSmart:
+      (state) =>
+      (showMonstie, showEgg, mode = null) => {
+        let store;
+
+        if (showMonstie) {
+          store = useMonstieFilter();
+        } else if (showEgg) {
+          store = useEggFilter();
+        } else {
+          store = useMonsterFilter();
+        }
+
+        mode = mode ?? store.mode;
+
+        if (_.includes(store.autoSwitchModes, mode)) {
+          return mode;
+        }
+        return undefined;
+      },
   },
 });
 

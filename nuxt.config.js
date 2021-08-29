@@ -181,6 +181,7 @@ export default {
       { url: '/eggs', priority: 1 },
       { url: '/catavan-stands', priority: 1 },
       { url: '/elders-lair', priority: 1 },
+      { url: '/coop', priority: 1 },
     ],
   },
 };

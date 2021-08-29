@@ -4,21 +4,21 @@
       v-if="showEgg"
       class="box box-link px-1 overflow-hidden"
       :monster="monster"
-      :mode="mode"
+      :mode="smartMode"
     />
 
     <MonstieListItem
       v-else-if="showMonstie"
       class="box box-link px-1 overflow-hidden"
       :monster="monster"
-      :mode="mode"
+      :mode="smartMode"
     />
 
     <MonsterListItem
       v-else
       class="box box-link px-1 overflow-hidden"
       :monster="monster"
-      :mode="mode"
+      :mode="smartMode"
     />
   </NuxtLink>
 </template>
@@ -32,6 +32,18 @@
         type: Object,
         required: true,
       },
+
+      display: {
+        type: String,
+        required: false,
+        default: null,
+      },
+
+      mode: {
+        type: String,
+        required: false,
+        default: undefined,
+      },
     },
 
     computed: {
@@ -40,15 +52,25 @@
       },
 
       showMonstie() {
+        if (this.display) {
+          return this.display === 'monstie' && this.monster.hatchable;
+        }
         return this.history.shouldShowMonstie(this.monster);
       },
 
       showEgg() {
+        if (this.display) {
+          return this.display === 'egg' && this.monster.hatchable;
+        }
         return this.history.shouldShowEgg(this.monster);
       },
 
-      mode() {
-        return 'rarity';
+      smartMode() {
+        return this.history.listModeSmart(
+          this.showMonstie,
+          this.showEgg,
+          this.mode
+        );
       },
     },
   };
