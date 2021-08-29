@@ -1,12 +1,12 @@
 <template>
   <header class="fixed bottom-0 w-full h-12 z-20 shadow-top border-t border-gray-300 bg-white dark:border-cool-600 dark:bg-cool-800">
-    <nav class="container px-4 h-full grid grid-flow-col gap-4 select-none">
       <AppNavLink
         to="/"
         text="Start"
         exact
       />
 
+    <nav class="container mx-auto px-4 h-full grid grid-flow-col gap-4 select-none">
       <AppNavLink
         to="/monsters/"
         text="Monsters"
