@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Hakolo Island",
+    "sortOrder": 10
+  },
+  {
+    "name": "Alcala",
+    "sortOrder": 20
+  },
+  {
+    "name": "Loloska",
+    "sortOrder": 30
+  },
+  {
+    "name": "Lamure",
+    "sortOrder": 40
+  },
+  {
+    "name": "Terga",
+    "sortOrder": 50
+  },
+  {
+    "name": "Unknown Habitat",
+    "sortOrder": 100
+  }
+]

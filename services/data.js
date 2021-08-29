@@ -2,6 +2,8 @@ import _ from 'lodash';
 import { deepFreeze, makeSlug } from './utils';
 import monsters from '~/assets/data/monsters';
 import coopQuests from '~/assets/data/coopQuests';
+import sortedHabitats from '~/assets/data/habitats';
+import sortedCatavanStands from '~/assets/data/catavanStands';
 
 _.forEach(monsters, (monster) => {
   monster.slug = makeSlug(monster.name);
@@ -32,6 +34,10 @@ export const monstiesByName = Object.freeze(_.keyBy(monsties, 'name'));
 export const monstiesBySlug = Object.freeze(_.keyBy(monsties, 'slug'));
 export const genera = getGenera();
 export const habitats = getHabitats();
+export const catavanStands = getCatavanStandsWithDetails();
+export const catavanStandsBySlug = Object.freeze(
+  _.keyBy(catavanStands, 'slug')
+);
 export const ridingActions = getRidingActions();
 export const eggColors = getEggColors();
 
@@ -40,7 +46,13 @@ export function getGenera(monsterList = monsters) {
 }
 
 export function getHabitats(monsterList = monsters) {
-  return deepFreeze(_.sortBy(_.uniq(_.map(monsterList, 'habitat'))));
+  let habitats = _.uniq(_.map(monsterList, 'habitat'));
+
+  return deepFreeze(
+    _.sortBy(habitats, (habitat) => {
+      return _.find(sortedHabitats, { name: habitat })?.sortOrder ?? habitat;
+    })
+  );
 }
 
 export function getCoopQuests(monsterList = monsters) {
@@ -57,14 +69,36 @@ export function getCoopQuests(monsterList = monsters) {
 }
 
 export function getCatavanStands(monsterList = monsters) {
-  let locations = _.sortBy(
-    _.flatMap(monsterList, (monster) => {
-      return _.filter(monster.locations, { type: 'catavanStand' });
-    }),
-    ['main', 'sub']
+  return deepFreeze(_.map(getCatavanStandsWithDetails(monsterList), 'name'));
+}
+
+export function getCatavanStandsWithDetails(monsterList = monsters) {
+  let locations = _.uniq(
+    _.map(
+      _.flatMap(monsterList, (monster) => {
+        return _.filter(monster.locations, { type: 'catavanStand' });
+      }),
+      'sub'
+    )
   );
 
-  return deepFreeze(_.uniq(_.map(locations, 'sub')));
+  let details;
+
+  return deepFreeze(
+    _.sortBy(
+      _.map(locations, (location) => {
+        details = _.find(sortedCatavanStands, { name: location });
+
+        return {
+          name: location,
+          slug: makeSlug(location),
+          zone: details?.zone,
+          sortOrder: details?.sortOrder ?? Infinity,
+        };
+      }),
+      'sortOrder'
+    )
+  );
 }
 
 export function getEldersLairFloors(monsterList = monsters) {

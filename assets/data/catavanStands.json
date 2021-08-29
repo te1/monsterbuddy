@@ -1,0 +1,112 @@
+[
+  {
+    "name": "North Kamuna Cape",
+    "zone": "Hakolo Island",
+    "sortOrder": 1010
+  },
+  {
+    "name": "East Kamuna Heights",
+    "zone": "Hakolo Island",
+    "sortOrder": 1020
+  },
+  {
+    "name": "Alcala Valley",
+    "zone": "Alcala",
+    "sortOrder": 2010
+  },
+  {
+    "name": "Alcala Highlands",
+    "zone": "Alcala",
+    "sortOrder": 2020
+  },
+  {
+    "name": "Etulle Lofty Trees",
+    "zone": "Alcala",
+    "sortOrder": 2030
+  },
+  {
+    "name": "Harzgai Rocky Hill",
+    "zone": "Alcala",
+    "sortOrder": 2040
+  },
+  {
+    "name": "Harzgai Hill - Inner",
+    "zone": "Alcala",
+    "sortOrder": 2050
+  },
+  {
+    "name": "Wendwood",
+    "zone": "Alcala",
+    "sortOrder": 2060
+  },
+  {
+    "name": "Base of Mt. Lavina",
+    "zone": "Loloska",
+    "sortOrder": 3010
+  },
+  {
+    "name": "Woodland",
+    "zone": "Loloska",
+    "sortOrder": 3020
+  },
+  {
+    "name": "Loloska Forest",
+    "zone": "Loloska",
+    "sortOrder": 3030
+  },
+  {
+    "name": "Loloska Rocky Canyon",
+    "zone": "Loloska",
+    "sortOrder": 3040
+  },
+  {
+    "name": "Lavina Glacial Peaks",
+    "zone": "Loloska",
+    "sortOrder": 3050
+  },
+  {
+    "name": "Sadona Barrens",
+    "zone": "Lamure",
+    "sortOrder": 4010
+  },
+  {
+    "name": "Monster Research Lab",
+    "zone": "Lamure",
+    "sortOrder": 4020
+  },
+  {
+    "name": "Jalma Highlands",
+    "zone": "Lamure",
+    "sortOrder": 4030
+  },
+  {
+    "name": "Lamure Tower Front",
+    "zone": "Lamure",
+    "sortOrder": 4040
+  },
+  {
+    "name": "Lamure Tower - 3F",
+    "zone": "Lamure",
+    "sortOrder": 4050
+  },
+  {
+    "name": "Lamure Tower - 5F",
+    "zone": "Lamure",
+    "sortOrder": 4060
+  },
+  {
+    "name": "Pomore Garden",
+    "zone": "Lamure",
+    "sortOrder": 4070
+  },
+  {
+    "name": "Terga Volcano Base",
+    "zone": "Terga",
+    "sortOrder": 5010
+  },
+  {
+    "name": "Forbidden Grounds",
+    "zone": "Hakolo Island",
+    "sortOrder": 6010
+  }
+]
