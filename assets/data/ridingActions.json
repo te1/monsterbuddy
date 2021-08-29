@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Fly",
+    "description": "Lets you take to the air. Use to fly higher or lower. Land by pressing again.",
+    "type": "utility"
+  },
+  {
+    "name": "Dash",
+    "description": "Press to dash. You will go faster but turning becomes harder. Pressing again or crashing into an obstacle stops your dash.",
+    "type": "utility"
+  },
+  {
+    "name": "Stealth",
+    "description": "Press to conceal your presence and sneak past monsters. This will not work on monsters that have already seen you.",
+    "type": "utility"
+  },
+  {
+    "name": "Roar",
+    "description": "Press to roar ferociously, intimidating creatures within earshot.",
+    "type": "utility"
+  },
+  {
+    "name": "Jump",
+    "description": "Press on a stone platform to jump across gaps you cannot cross normally. Press while moving to hop.",
+    "type": "explore"
+  },
+  {
+    "name": "Ivy Climb",
+    "description": "Press to climb walls covered in vines. This will let you scale cliffs and explore new areas!",
+    "type": "explore"
+  },
+  {
+    "name": "Swim",
+    "description": "Enter water from a shoreline or bank to swim. To get out, swim over to the shallows.",
+    "type": "explore"
+  },
+  {
+    "name": "Ground Dive",
+    "description": "Press in front of a hole in the ground to tunnel. Dig under obstacles to access new areas!",
+    "type": "explore"
+  },
+  {
+    "name": "Lava Dive",
+    "description": "This Ride Skill lets you walk on magma without the risk of suffering any nasty burns.",
+    "type": "explore"
+  },
+  {
+    "name": "Rock Breaker",
+    "description": "Press to break cracked rocks. Some rocks are too hard to break with this action.",
+    "type": "explore"
+  },
+  {
+    "name": "Mega Breaker",
+    "description": "Press to break cracked rocks. No matter how hard the rock is, it will be smashed to smithereens!",
+    "type": "explore"
+  },
+  {
+    "name": "Monster Search",
+    "description": "Press to detect monster locations and mark them on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  },
+  {
+    "name": "Nest Search",
+    "description": "Press to detect Monster Dens and eggs and mark them on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  },
+  {
+    "name": "Ore & Bone Search",
+    "description": "Press to detect ore and bones and mark them on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  },
+  {
+    "name": "Plant Search",
+    "description": "Press to detect plants and mark them on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  },
+  {
+    "name": "Mushroom Search",
+    "description": "Press to detect mushrooms and mark them on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  },
+  {
+    "name": "Bug Search",
+    "description": "Press to detect bugs and mark them on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  },
+  {
+    "name": "Honey Search",
+    "description": "Press to detect honey and mark it on the map. Anything else your Monstie finds will also show up!",
+    "type": "search"
+  }
+]

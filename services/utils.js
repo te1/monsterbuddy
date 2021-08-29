@@ -98,6 +98,22 @@ export function formatCoopQuest(coopQuest) {
   return result;
 }
 
+export function formatRidingActionType(type) {
+  switch (type) {
+    case 'utility':
+      return 'Utility';
+
+    case 'explore':
+      return 'Exploration';
+
+    case 'search':
+      return 'Search';
+
+    default:
+      return '';
+  }
+}
+
 export function formatMonsterLocation(location) {
   let result = location.main;
 

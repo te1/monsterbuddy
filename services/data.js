@@ -4,6 +4,7 @@ import monsters from '~/assets/data/monsters';
 import coopQuests from '~/assets/data/coopQuests';
 import sortedHabitats from '~/assets/data/habitats';
 import sortedCatavanStands from '~/assets/data/catavanStands';
+import sortedRidingActions from '~/assets/data/ridingActions';
 
 _.forEach(monsters, (monster) => {
   monster.slug = makeSlug(monster.name);
@@ -27,7 +28,12 @@ _.forEach(coopQuests, (coopQuest) => {
 });
 deepFreeze(coopQuests);
 
-export { monsters, coopQuests };
+_.forEach(sortedRidingActions, (ridingAction) => {
+  ridingAction.slug = makeSlug(ridingAction.name);
+});
+deepFreeze(sortedRidingActions);
+
+export { monsters, coopQuests, sortedRidingActions };
 export const monstersByNo = Object.freeze(_.keyBy(monsters, 'no'));
 export const monstersByName = Object.freeze(_.keyBy(monsters, 'name'));
 export const monstersBySlug = Object.freeze(_.keyBy(monsters, 'slug'));
@@ -43,6 +49,9 @@ export const catavanStandsBySlug = Object.freeze(
 );
 export const coopQuestsBySlug = Object.freeze(_.keyBy(coopQuests, 'slug'));
 export const ridingActions = getRidingActions();
+export const ridingActionsBySlug = Object.freeze(
+  _.keyBy(sortedRidingActions, 'slug')
+);
 export const eggColors = getEggColors();
 
 export function getGenera(monsterList = monsters) {

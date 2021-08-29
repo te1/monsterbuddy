@@ -16,7 +16,7 @@ import {
   faDna, // genus
   faMapMarkerAlt, // habitat
   faStar, // rarity
-  faExclamation, // coop quest type
+  faExclamation, // coop quest type, riding action ype
   faDragon, // monster / monstie
   faEgg, // egg
   faShare, // used in attack type "image"

@@ -66,7 +66,7 @@
           <NuxtLink
             class="link"
             to="/catavan-stands/"
-          >Catavan stands</NuxtLink> with list of monsters you will find there
+          >Catavan stands</NuxtLink> with list of monsters you will find nearby
         </li>
 
         <li>
@@ -81,6 +81,13 @@
             class="link"
             to="/coop/"
           >Co-Op quest list</NuxtLink> to see which eggs will be available in the different dens
+        </li>
+
+        <li>
+          <NuxtLink
+            class="link"
+            to="/riding-actions/"
+          >Riding action list</NuxtLink> and which monsties will learn them
         </li>
       </ul>
 

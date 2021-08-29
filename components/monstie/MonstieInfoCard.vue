@@ -54,10 +54,17 @@
 
       <div>
         <span
-          v-for="(action, index) in monster.monstie.ridingActions"
-          :key="action"
+          v-for="(action, index) in ridingActions"
+          :key="action.name"
+          class="inline-flex"
         >
-          {{ action }}<span v-if="index+1 < monster.monstie.ridingActions.length">, </span>
+          <NuxtLink
+            :to='`/riding-actions/${action.slug}/`'
+            class="link"
+          >
+            {{ action.name }}
+          </NuxtLink>
+          <span v-if="index+1 < ridingActions.length">,&nbsp;</span>
         </span>
       </div>
     </div>
@@ -65,6 +72,9 @@
 </template>
 
 <script>
+  import _ from 'lodash';
+  import { sortedRidingActions } from '~/services/data';
+
   export default {
     name: 'MonstieInfoCard',
 
@@ -78,6 +88,15 @@
     computed: {
       hasRidingActions() {
         return !!this.monster.monstie.ridingActions.length;
+      },
+
+      ridingActions() {
+        return _.map(this.monster.monstie.ridingActions, (ridingAction) => {
+          return {
+            name: ridingAction,
+            ..._.find(sortedRidingActions, { name: ridingAction }),
+          };
+        });
       },
     },
   };

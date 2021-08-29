@@ -182,6 +182,7 @@ export default {
       { url: '/catavan-stands', priority: 1 },
       { url: '/elders-lair', priority: 1 },
       { url: '/coop', priority: 1 },
+      { url: '/riding-actions', priority: 0.9 },
     ],
   },
 };
