@@ -129,7 +129,7 @@
       displays() {
         switch (this.coopQuest.type) {
           case 'explore':
-            return ['monstie', 'egg'];
+            return ['egg', 'monstie'];
 
           case 'time':
             return ['monster'];
