@@ -42,6 +42,7 @@
               :monster="item.monster"
               :display="display"
               :mode="mode"
+              :ticket="getTicket(item.quest)"
             />
           </div>
         </li>
@@ -208,6 +209,13 @@
 
     methods: {
       formatCoopQuest,
+
+      getTicket(quest) {
+        if (quest.srTicket) {
+          return 'sr';
+        }
+        return null;
+      },
 
       toggleDisplay() {
         this.display = this.nextDisplay;

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center h-[122px]">
+  <div class="relative flex items-center h-[122px]">
     <div class="w-[120px] h-[120px] -mx-3 flex-shrink-0 flex flex-col gap-2 items-center justify-center">
       <MonsterIcon :monster="monster" />
 
@@ -28,6 +28,13 @@
       :monster="monster"
       hideFallback
     />
+
+    <div
+      v-if="ticket"
+      class="absolute top-0 right-0 px-2 py-0.5 rounded-bl text-xs font-semibold tracking-widest bg-gold/75 dark:bg-gold/25 text-gray-700 dark:text-gold"
+    >
+      SR
+    </div>
   </div>
 </template>
 
@@ -45,6 +52,12 @@
         type: String,
         required: false,
         default: 'location',
+      },
+
+      ticket: {
+        type: String,
+        required: false,
+        default: null,
       },
     },
   };

@@ -10,7 +10,10 @@
   >
 
   <div v-else-if="!hideFallback">
-    <div class="w-full h-full flex items-center justify-center p-2">
+    <div
+      class="w-full h-full flex items-center p-2"
+      :class="justifyClass"
+    >
       <MonsterIcon :monster="monster" />
     </div>
   </div>
@@ -31,6 +34,12 @@
         required: false,
         default: false,
       },
+
+      right: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     computed: {
@@ -44,6 +53,13 @@
 
       hasImage() {
         return !!this.imageUrl;
+      },
+
+      justifyClass() {
+        if (this.right) {
+          return 'justify-end';
+        }
+        return 'justify-center';
       },
     },
   };

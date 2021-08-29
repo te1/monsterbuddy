@@ -5,6 +5,7 @@
       class="box box-link px-1 overflow-hidden"
       :monster="monster"
       :mode="smartMode"
+      :ticket="ticket"
     />
 
     <MonstieListItem
@@ -12,6 +13,7 @@
       class="box box-link px-1 overflow-hidden"
       :monster="monster"
       :mode="smartMode"
+      :ticket="ticket"
     />
 
     <MonsterListItem
@@ -19,6 +21,7 @@
       class="box box-link px-1 overflow-hidden"
       :monster="monster"
       :mode="smartMode"
+      :ticket="ticket"
     />
   </NuxtLink>
 </template>
@@ -43,6 +46,12 @@
         type: String,
         required: false,
         default: undefined,
+      },
+
+      ticket: {
+        type: String,
+        required: false,
+        default: null,
       },
     },
 
