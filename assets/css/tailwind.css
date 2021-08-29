@@ -4,7 +4,7 @@
 
 @layer components {
   a.link {
-    @apply no-underline font-normal transition-colors duration-300 text-brand-600 dark:text-brand-500;
+    @apply no-underline font-normal transition-colors-slow-interactive text-brand-600 dark:text-brand-500;
   }
   a.link:visited {
     @apply text-brand-800 dark:text-brand-400;
@@ -23,11 +23,11 @@
   }
 
   .box-link {
-    @apply hover:transition-colors hover:duration-300 active:transition-colors active:duration-300 focus:transition-colors focus:duration-300 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-cool-900/50 dark:active:bg-cool-900/75;
+    @apply transition-colors-slow-interactive hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-cool-900/50 dark:active:bg-cool-900/75;
   }
 
   .box-link-inline {
-    @apply hover:transition-opacity hover:duration-300 active:transition-opacity active:duration-300 focus:transition-opacity focus:duration-300 hover:opacity-75 active:opacity-50;
+    @apply transition-opacity-slow-interactive hover:opacity-75 active:opacity-50;
   }
 
   .input {
@@ -40,6 +40,22 @@
 }
 
 @layer utilities {
+  .transition-colors-slow {
+    @apply transition-colors duration-300;
+  }
+
+  .transition-colors-slow-interactive {
+    @apply hover:transition-colors-slow active:transition-colors-slow focus:transition-colors-slow;
+  }
+
+  .transition-opacity-slow {
+    @apply transition-opacity duration-300;
+  }
+
+  .transition-opacity-slow-interactive {
+    @apply hover:transition-opacity-slow active:transition-opacity-slow focus:transition-opacity-slow;
+  }
+
   .tap-highlight-none {
     -webkit-tap-highlight-color: transparent;
   }

@@ -85,7 +85,7 @@
 
         <div class="w-[180px] relative">
           <div
-            class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer transition-opacity duration-300"
+            class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer transition-opacity-slow"
             :class="{ 'opacity-0': !store.nameFilter }"
           >
             <AppIconButton
