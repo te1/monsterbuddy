@@ -9,8 +9,7 @@ const initial = {
 const extend = {
   state: {
     mode: 'compact',
-    allowedModes: [
-      'compact',
+    autoSwitchModes: [
       'location',
       'location-coop',
       'ridingActions',

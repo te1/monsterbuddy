@@ -9,7 +9,7 @@ const initial = {
 const extend = {
   state: {
     mode: 'location',
-    allowedModes: [
+    autoSwitchModes: [
       'location',
       'location-coop',
       'location-eldersLair',

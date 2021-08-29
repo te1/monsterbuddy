@@ -10,7 +10,7 @@ const initial = {
 const extend = {
   state: {
     mode: 'combat',
-    allowedModes: ['location', 'combat'],
+    autoSwitchModes: ['location', 'combat'],
   },
 };
 

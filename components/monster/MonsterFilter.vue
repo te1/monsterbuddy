@@ -623,8 +623,8 @@
             config &&
             config.mode &&
             this.store.mode !== 'compact' &&
-            (this.store.allowedModes == null ||
-              _.includes(this.store.allowedModes, config.mode))
+            (this.store.autoSwitchModes == null ||
+              _.includes(this.store.autoSwitchModes, config.mode))
           ) {
             this.store.mode = config.mode;
           }
@@ -661,8 +661,8 @@
             newValue != null &&
             mode != null &&
             this.store.mode !== 'compact' &&
-            (this.store.allowedModes == null ||
-              _.includes(this.store.allowedModes, mode))
+            (this.store.autoSwitchModes == null ||
+              _.includes(this.store.autoSwitchModes, mode))
           ) {
             this.store.mode = mode;
           }

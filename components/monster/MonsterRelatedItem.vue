@@ -24,8 +24,6 @@
 </template>
 
 <script>
-  import _ from 'lodash';
-
   export default {
     name: 'MonsterRelatedItem',
 
@@ -42,52 +40,15 @@
       },
 
       showMonstie() {
-        return this.history.lastList === 'monsties' && this.monster.hatchable;
+        return this.history.shouldShowMonstie(this.monster);
       },
 
       showEgg() {
-        return this.history.lastList === 'eggs' && this.monster.hatchable;
+        return this.history.shouldShowEgg(this.monster);
       },
 
       mode() {
-        let mode = this.history.lastListMode;
-
-        if (this.showMonstie || this.showEgg) {
-          if (
-            _.includes(
-              [
-                'location',
-                'location-coop',
-                'location-eldersLair',
-                'ridingActions',
-                'retreat',
-                'rarity',
-                'stats',
-              ],
-              mode
-            )
-          ) {
-            return mode;
-          }
-          return undefined;
-        }
-
-        // monster
-        if (
-          _.includes(
-            [
-              'location',
-              'location-coop',
-              'location-eldersLair',
-              'combat',
-              'rarity',
-            ],
-            mode
-          )
-        ) {
-          return mode;
-        }
-        return undefined;
+        return this.history.lastListModeSmart(this.monster);
       },
     },
   };
