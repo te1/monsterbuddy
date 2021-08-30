@@ -67,7 +67,7 @@
         title:
           'Monster Buddy - Co-Op Quest List (Dens) For Monster Hunter Stories 2',
         description:
-          'Overview of co-op missions and list of eggs you will find in the different dens',
+          'Overview of co-op missions and list of eggs you can find in the different dens',
         canonical: 'https://monsterbuddy.app/coop/',
       });
     },
