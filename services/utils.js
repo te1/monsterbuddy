@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import {
-  coopQuests,
   isSubspecies,
   isDeviant,
   isColorVariant,
@@ -112,49 +111,6 @@ export function formatRidingActionType(type) {
     default:
       return '';
   }
-}
-
-export function formatMonsterLocation(location) {
-  let result = location.main;
-
-  if (location.sub) {
-    result += ` - ${location.sub}`;
-  }
-
-  let coopQuest;
-
-  switch (location.type) {
-    case 'superRareDen':
-      result = 'Super Rare Dens in ' + result;
-      break;
-
-    case 'coopQuest':
-      coopQuest = _.find(coopQuests, { name: location.main });
-      if (coopQuest) {
-        result = formatCoopQuest(coopQuest);
-      }
-      result = 'Co-Op Quest: ' + result;
-      break;
-
-    case 'eldersLair':
-      result = "Elder's Lair - " + result;
-      break;
-  }
-
-  return result;
-}
-
-export function formatMonsterLocations(monster) {
-  return _.map(monster.locations, (location) =>
-    formatMonsterLocation(location)
-  );
-}
-
-export function formatMonsterDens(monster) {
-  if (monster.dens && monster.dens.length) {
-    return monster.dens.join(', ');
-  }
-  return null;
 }
 
 export function formatAttackType(attackTypeOrMonster) {

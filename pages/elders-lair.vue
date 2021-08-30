@@ -103,6 +103,13 @@
     beforeRouteEnter(to, from, next) {
       next((vm) => {
         vm.leaving = false;
+
+        if (to?.query?.floor) {
+          vm.eldersLairFilter.eldersLairFilter = to.query.floor;
+
+          // remove query parametrs from URL
+          vm.$router.replace(to.path);
+        }
       });
     },
 

@@ -63,17 +63,17 @@
         Locations
       </h3>
 
-      <div
-        v-for="location in locations"
-        :key="location"
-        v-text="location"
+      <MonsterLocation
+        v-for="location in monster.locations"
+        :key="location.main"
+        :location="location"
       />
     </div>
   </section>
 </template>
 
 <script>
-  import { formatMonsterInfo, formatMonsterLocations } from '~/services/utils';
+  import { formatMonsterInfo } from '~/services/utils';
 
   export default {
     name: 'MonsterInfoCard',
@@ -90,12 +90,8 @@
         return formatMonsterInfo(this.monster);
       },
 
-      locations() {
-        return formatMonsterLocations(this.monster);
-      },
-
       hasLocations() {
-        return !!this.locations.length;
+        return !!this.monster.locations.length;
       },
     },
   };
