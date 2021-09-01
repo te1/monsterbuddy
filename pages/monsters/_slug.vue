@@ -87,12 +87,20 @@
       });
     },
 
+    computed: {
+      history() {
+        return this.$useHistoryStore();
+      },
+    },
+
     created() {
       if (this.monster == null) {
         this.$nuxt.error({
           statusCode: 404,
           message: 'This page could not be found',
         });
+      } else {
+        this.history.addRecentMonster(this.monster.slug);
       }
     },
   };

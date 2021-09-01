@@ -19,6 +19,7 @@ import {
   faExclamation, // coop quest type, riding action ype
   faDragon, // monster / monstie
   faEgg, // egg
+  faHistory, // recent monsters
   faShare, // used in attack type "image"
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -46,6 +47,7 @@ library.add(
   faExclamation,
   faDragon,
   faEgg,
+  faHistory,
   faShare
 );
 library.add(faSadCry);

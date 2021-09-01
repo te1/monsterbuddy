@@ -8,6 +8,7 @@ const useHistoryStore = defineStore({
   state() {
     return {
       lastList: null,
+      recentMonsters: [],
     };
   },
 
@@ -67,6 +68,24 @@ const useHistoryStore = defineStore({
         }
         return undefined;
       },
+
+    hasRecentMonsters() {
+      return !!this.recentMonsters.length;
+    },
+  },
+
+  actions: {
+    addRecentMonster(slug) {
+      const maxRecentItems = 25;
+
+      _.pull(this.recentMonsters, slug);
+
+      while (this.recentMonsters.length >= maxRecentItems) {
+        this.recentMonsters.pop();
+      }
+
+      this.recentMonsters.unshift(slug);
+    },
   },
 });
 

@@ -9,9 +9,33 @@
         v-if="!showFilter"
         v-model="monsterFilter.nameFilter"
       />
+
+      <template
+        v-if="history.hasRecentMonsters && !showFilter"
+        #right
+      >
+        <AppIconButton
+          v-if="showRecent"
+          class="mr-2"
+          title="Show all monsters"
+          :icon="['fas', 'times']"
+          @click="showRecent = false"
+        />
+
+        <AppIconButton
+          v-else
+          class="mr-2"
+          title="Show recent monsters"
+          :icon="['fas', 'history']"
+          @click="showRecent = true"
+        />
+      </template>
     </AppTopBar>
 
-    <NuxtLink :to="fabTarget">
+    <NuxtLink
+      v-if="!showRecent"
+      :to="fabTarget"
+    >
       <AppFloatingButton :title="fabTitle">
         <FaIcon :icon="fabIcon" />
       </AppFloatingButton>
@@ -21,38 +45,48 @@
 
     <main v-show="leaving || !showFilter">
       <div
-        v-if="monsterFilter.hasActiveSort || monsterFilter.hasActiveFilters"
+        v-if="showActiveFilters"
         class="fixed z-20 w-full inset-x-0 top-12 mt-1"
       >
         <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
           <AppFilterPill
-            v-if="monsterFilter.hasActiveSort"
+            v-if="monsterFilter.hasActiveSort && !showRecent"
             :caption="monsterFilter.activeSort.caption"
             filterTarget="/monsties/filter/"
             :sortOrder="monsterFilter.activeSort.order"
           />
 
+          <template v-if="!showRecent">
+            <AppFilterPill
+              v-for="filter in monsterFilter.activeFilters"
+              :key="filter.name"
+              :caption="filter.value"
+              filterTarget="/monsters/filter/"
+              showRemove
+              @remove="monsterFilter[filter.name] = null"
+            />
+          </template>
+
           <AppFilterPill
-            v-for="filter in monsterFilter.activeFilters"
-            :key="filter.name"
-            :caption="filter.value"
-            filterTarget="/monsters/filter/"
+            v-if="showRecent"
+            caption="Recent"
+            filterTarget=""
             showRemove
-            @remove="monsterFilter[filter.name] = null"
+            @remove="showRecent = false"
           />
         </div>
       </div>
 
       <ul
         class="space-y-5"
-        :class="{ 'mt-8': monsterFilter.hasActiveSort || monsterFilter.hasActiveFilters }"
+        :class="{ 'mt-8': showActiveFilters }"
       >
         <li
-          v-for="(group, key) in monsterFilter.groupedMonsters"
+          v-for="(group, key) in groupedMonsters"
           :key="key"
         >
           <div
-            v-if="monsterFilter.isGrouped"
+            v-if="monsterFilter.isGrouped && !showRecent"
             class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
           >
             <FaIcon
@@ -89,7 +123,7 @@
         </li>
       </ul>
 
-      <MonsterNoResults v-if="monsterFilter.isEmpty">
+      <MonsterNoResults v-if="monsterFilter.isEmpty && !showRecent">
         No monsters found
       </MonsterNoResults>
     </main>
@@ -97,9 +131,11 @@
 </template>
 
 <script>
+  import _ from 'lodash';
   import { mapStores } from 'pinia';
   import useMonsterFilter from '~/stores/monsterFilter';
   import { makeHead } from '~/services/utils';
+  import { monstersBySlug } from '~/services/data';
 
   export default {
     name: 'PageMonsters',
@@ -123,6 +159,7 @@
     data() {
       return {
         leaving: false,
+        showRecent: false,
       };
     },
 
@@ -138,9 +175,32 @@
     computed: {
       ...mapStores(useMonsterFilter),
 
+      history() {
+        return this.$useHistoryStore();
+      },
+
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
         return this.$route?.path === '/monsters/filter/';
+      },
+
+      showActiveFilters() {
+        return (
+          this.monsterFilter.hasActiveSort ||
+          this.monsterFilter.hasActiveFilters ||
+          this.showRecent
+        );
+      },
+
+      groupedMonsters() {
+        if (this.showRecent) {
+          return {
+            all: _.map(this.history.recentMonsters, (slug) => {
+              return monstersBySlug[slug];
+            }),
+          };
+        }
+        return this.monsterFilter.groupedMonsters;
       },
 
       heading() {

@@ -23,20 +23,14 @@
         <slot />
 
         <span class="w-10 ml-4 text-xl text-right">
-          <AppIconButton
-            v-if="showClose"
-            class="mr-2"
-            title="Close"
-            :icon="['fas', 'times']"
-            @click="$emit('close')"
-          />
-          <AppIconButton
-            v-else
-            class="mr-2"
-            title="Toggle dark mode"
-            :icon="['fas', 'adjust']"
-            @click="toggleDarkMode"
-          />
+          <slot name="right">
+            <AppIconButton
+              class="mr-2"
+              title="Toggle dark mode"
+              :icon="['fas', 'adjust']"
+              @click="toggleDarkMode"
+            />
+          </slot>
         </span>
       </div>
     </div>
@@ -64,12 +58,6 @@
         type: String,
         required: false,
         default: null,
-      },
-
-      showClose: {
-        type: Boolean,
-        required: false,
-        default: false,
       },
     },
 
