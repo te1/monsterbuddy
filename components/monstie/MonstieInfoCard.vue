@@ -87,7 +87,7 @@
 
     computed: {
       hasRidingActions() {
-        return !!this.monster.monstie.ridingActions.length;
+        return !!this.monster?.monstie?.ridingActions?.length;
       },
 
       ridingActions() {
