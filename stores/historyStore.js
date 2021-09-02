@@ -4,12 +4,15 @@ import useMonsterFilter from './monsterFilter';
 import useMonstieFilter from './monstieFilter';
 import useEggFilter from './eggFilter';
 import { monstersBySlug, getMonstersByHatchable } from '~/services/data';
+import storage from '~/services/storage';
+
+const storageKeyRecentMonsterSlugs = 'history.recentMonsterSlugs';
 
 const useHistoryStore = defineStore({
   state() {
     return {
       lastList: null,
-      recentMonsterSlugs: [],
+      recentMonsterSlugs: storage.get(storageKeyRecentMonsterSlugs) ?? [],
     };
   },
 
@@ -100,6 +103,8 @@ const useHistoryStore = defineStore({
       }
 
       this.recentMonsterSlugs.unshift(slug);
+
+      storage.set(storageKeyRecentMonsterSlugs, this.recentMonsterSlugs);
     },
   },
 });
