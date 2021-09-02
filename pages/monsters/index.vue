@@ -121,11 +121,9 @@
 </template>
 
 <script>
-  import _ from 'lodash';
   import { mapStores } from 'pinia';
   import useMonsterFilter from '~/stores/monsterFilter';
   import { makeHead } from '~/services/utils';
-  import { monstersBySlug } from '~/services/data';
 
   export default {
     name: 'PageMonsters',
@@ -185,9 +183,7 @@
       groupedMonsters() {
         if (this.showRecent) {
           return {
-            all: _.map(this.history.recentMonsters, (slug) => {
-              return monstersBySlug[slug];
-            }),
+            all: this.history.recentMonsters,
           };
         }
         return this.monsterFilter.groupedMonsters;

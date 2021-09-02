@@ -3,12 +3,13 @@ import { defineStore } from 'pinia';
 import useMonsterFilter from './monsterFilter';
 import useMonstieFilter from './monstieFilter';
 import useEggFilter from './eggFilter';
+import { monstersBySlug, getMonstersByHatchable } from '~/services/data';
 
 const useHistoryStore = defineStore({
   state() {
     return {
       lastList: null,
-      recentMonsters: [],
+      recentMonsterSlugs: [],
     };
   },
 
@@ -69,8 +70,22 @@ const useHistoryStore = defineStore({
         return undefined;
       },
 
+    recentMonsters() {
+      return _.map(this.recentMonsterSlugs, (slug) => {
+        return monstersBySlug[slug];
+      });
+    },
+
     hasRecentMonsters() {
       return !!this.recentMonsters.length;
+    },
+
+    recentMonsties() {
+      return getMonstersByHatchable(true, this.recentMonsters);
+    },
+
+    hasRecentMonsties() {
+      return !!this.recentMonsties.length;
     },
   },
 
@@ -78,13 +93,13 @@ const useHistoryStore = defineStore({
     addRecentMonster(slug) {
       const maxRecentItems = 25;
 
-      _.pull(this.recentMonsters, slug);
+      _.pull(this.recentMonsterSlugs, slug);
 
-      while (this.recentMonsters.length >= maxRecentItems) {
-        this.recentMonsters.pop();
+      while (this.recentMonsterSlugs.length >= maxRecentItems) {
+        this.recentMonsterSlugs.pop();
       }
 
-      this.recentMonsters.unshift(slug);
+      this.recentMonsterSlugs.unshift(slug);
     },
   },
 });

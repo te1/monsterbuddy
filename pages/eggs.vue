@@ -6,12 +6,36 @@
       :heading="heading"
     >
       <AppSearchBox
-        v-if="!showFilter"
+        v-if="!showFilter && !showRecent"
         v-model="eggFilter.nameFilter"
       />
+
+      <template
+        v-if="history.hasRecentMonsties && !showFilter"
+        #right
+      >
+        <AppIconButton
+          v-if="showRecent"
+          class="mr-2"
+          title="Show all monsters"
+          :icon="['fas', 'times']"
+          @click="showRecent = false"
+        />
+
+        <AppIconButton
+          v-else
+          class="mr-2"
+          title="Show recent monsters"
+          :icon="['fas', 'history']"
+          @click="showRecent = true"
+        />
+      </template>
     </AppTopBar>
 
-    <NuxtLink :to="fabTarget">
+    <NuxtLink
+      v-if="!showRecent"
+      :to="fabTarget"
+    >
       <AppFloatingButton :title="fabTitle">
         <FaIcon :icon="fabIcon" />
       </AppFloatingButton>
@@ -21,7 +45,7 @@
 
     <main v-show="leaving || !showFilter">
       <div
-        v-if="eggFilter.hasActiveSort || eggFilter.hasActiveFilters"
+        v-if="showActiveFilters"
         class="fixed z-20 w-full inset-x-0 top-12 mt-1"
       >
         <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
@@ -45,14 +69,14 @@
 
       <ul
         class="space-y-5"
-        :class="{ 'mt-8': eggFilter.hasActiveSort || eggFilter.hasActiveFilters }"
+        :class="{ 'mt-8': showActiveFilters }"
       >
         <li
-          v-for="(group, key) in eggFilter.groupedMonsters"
+          v-for="(group, key) in groupedMonsters"
           :key="key"
         >
           <div
-            v-if="eggFilter.isGrouped"
+            v-if="eggFilter.isGrouped  && !showRecent"
             class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
           >
             <FaIcon
@@ -108,7 +132,7 @@
         </li>
       </ul>
 
-      <MonsterNoResults v-if="eggFilter.isEmpty">
+      <MonsterNoResults v-if="eggFilter.isEmpty && !showRecent">
         No eggs found
       </MonsterNoResults>
     </main>
@@ -142,6 +166,7 @@
     data() {
       return {
         leaving: false,
+        showRecent: false,
       };
     },
 
@@ -157,14 +182,37 @@
     computed: {
       ...mapStores(useEggFilter),
 
+      history() {
+        return this.$useHistoryStore();
+      },
+
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
         return this.$route?.path === '/eggs/filter/';
       },
 
+      showActiveFilters() {
+        return (
+          (this.eggFilter.hasActiveSort || this.eggFilter.hasActiveFilters) &&
+          !this.showRecent
+        );
+      },
+
+      groupedMonsters() {
+        if (this.showRecent) {
+          return {
+            all: this.history.recentMonsties,
+          };
+        }
+        return this.eggFilter.groupedMonsters;
+      },
+
       heading() {
         if (this.showFilter) {
           return 'View Options';
+        }
+        if (this.showRecent) {
+          return 'Recent Eggs';
         }
         return null;
       },
