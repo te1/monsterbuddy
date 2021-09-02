@@ -53,5 +53,15 @@
     "type": "time",
     "rarity": 8,
     "name": "The Goddess of Gold"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Water Eggs"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Ice Eggs"
   }
 ]
