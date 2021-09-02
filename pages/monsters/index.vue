@@ -6,7 +6,7 @@
       :heading="heading"
     >
       <AppSearchBox
-        v-if="!showFilter"
+        v-if="!showFilter && !showRecent"
         v-model="monsterFilter.nameFilter"
       />
 
@@ -50,29 +50,19 @@
       >
         <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
           <AppFilterPill
-            v-if="monsterFilter.hasActiveSort && !showRecent"
+            v-if="monsterFilter.hasActiveSort"
             :caption="monsterFilter.activeSort.caption"
             filterTarget="/monsties/filter/"
             :sortOrder="monsterFilter.activeSort.order"
           />
 
-          <template v-if="!showRecent">
-            <AppFilterPill
-              v-for="filter in monsterFilter.activeFilters"
-              :key="filter.name"
-              :caption="filter.value"
-              filterTarget="/monsters/filter/"
-              showRemove
-              @remove="monsterFilter[filter.name] = null"
-            />
-          </template>
-
           <AppFilterPill
-            v-if="showRecent"
-            caption="Recent"
-            filterTarget=""
+            v-for="filter in monsterFilter.activeFilters"
+            :key="filter.name"
+            :caption="filter.value"
+            filterTarget="/monsters/filter/"
             showRemove
-            @remove="showRecent = false"
+            @remove="monsterFilter[filter.name] = null"
           />
         </div>
       </div>
@@ -186,9 +176,9 @@
 
       showActiveFilters() {
         return (
-          this.monsterFilter.hasActiveSort ||
-          this.monsterFilter.hasActiveFilters ||
-          this.showRecent
+          (this.monsterFilter.hasActiveSort ||
+            this.monsterFilter.hasActiveFilters) &&
+          !this.showRecent
         );
       },
 
@@ -206,6 +196,9 @@
       heading() {
         if (this.showFilter) {
           return 'View Options';
+        }
+        if (this.showRecent) {
+          return 'Recent Monsters';
         }
         return null;
       },
