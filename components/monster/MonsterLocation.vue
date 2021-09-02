@@ -44,6 +44,9 @@
           case 'coopQuest':
             return 'Co-Op Quest:';
 
+          case 'subQuest':
+            return 'Subquest: ';
+
           default:
             return null;
         }
