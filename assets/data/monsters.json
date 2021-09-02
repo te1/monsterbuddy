@@ -1819,6 +1819,7 @@
         "main": "Loloska",
         "sub": "Base of Mt. Lavina"
       },
+      { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 3,
@@ -2248,6 +2249,7 @@
         "main": "Loloska",
         "sub": "Base of Mt. Lavina"
       },
+      { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 2,
@@ -2308,6 +2310,7 @@
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks"
       },
+      { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 3,
@@ -2426,6 +2429,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Loloska", "sub": "Woodland" },
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 5,
@@ -2490,7 +2494,8 @@
         "sub": "Lavina Glacial Peaks"
       },
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
-      { "type": "coopQuest", "main": "Volcanic Den" }
+      { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Ice Eggs" }
     ],
     "rarity": 5,
     "related": [
@@ -2559,6 +2564,7 @@
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
+      { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 4,
@@ -2621,7 +2627,8 @@
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks"
       },
-      { "type": "coopQuest", "main": "Snowy Mt. Den" }
+      { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Ice Eggs" }
     ],
     "rarity": 4,
     "monster": {
@@ -3035,7 +3042,8 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" },
-      { "type": "coopQuest", "main": "Flowery Den" }
+      { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Water Eggs" }
     ],
     "rarity": 4,
     "related": [{ "type": "subspeciesOf", "monster": "Kecha Wacha" }],
@@ -3151,7 +3159,8 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
-      { "type": "coopQuest", "main": "Flowery Den" }
+      { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Water Eggs" }
     ],
     "rarity": 5,
     "related": [
@@ -3458,6 +3467,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Water Eggs" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 5,
@@ -3518,7 +3528,8 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "coopQuest", "main": "Flowery Den" },
-      { "type": "coopQuest", "main": "Thunder Eggs" }
+      { "type": "coopQuest", "main": "Thunder Eggs" },
+      { "type": "coopQuest", "main": "Water Eggs" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "Ivory Lagiacrus" }],
@@ -5169,6 +5180,7 @@
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "coopQuest", "main": "Fire Eggs" },
+      { "type": "coopQuest", "main": "Water Eggs" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 5,
@@ -5235,6 +5247,7 @@
       },
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
       { "type": "coopQuest", "main": "Thunder Eggs" },
+      { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 5,
@@ -5689,6 +5702,12 @@
         "finalNest": true,
         "srTicket": true
       },
+      {
+        "type": "coopQuest",
+        "main": "Water Eggs",
+        "finalNest": true,
+        "srTicket": true
+      },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 7,
@@ -5925,6 +5944,18 @@
         "finalNest": true,
         "srTicket": true
       },
+      {
+        "type": "coopQuest",
+        "main": "Water Eggs",
+        "finalNest": true,
+        "srTicket": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Ice Eggs",
+        "finalNest": true,
+        "srTicket": true
+      },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 7,
@@ -5999,6 +6030,12 @@
       {
         "type": "coopQuest",
         "main": "Volcanic Den",
+        "finalNest": true,
+        "srTicket": true
+      },
+      {
+        "type": "coopQuest",
+        "main": "Ice Eggs",
         "finalNest": true,
         "srTicket": true
       }
@@ -6095,26 +6132,26 @@
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 8,
+          "speed": 6,
+          "recovery": 1,
+          "critRate": 10
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 6,
+          "thunder": 8,
+          "ice": 4,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 6,
+          "thunder": 8,
+          "ice": 4,
+          "dragon": 6
         }
       }
     }
@@ -6154,26 +6191,26 @@
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 7,
+          "speed": 5,
+          "recovery": 1,
+          "critRate": 9
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 9,
+          "water": 4,
+          "thunder": 6,
+          "ice": 6,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 8,
+          "water": 4,
+          "thunder": 6,
+          "ice": 6,
+          "dragon": 6
         }
       }
     }
@@ -6208,60 +6245,68 @@
   {
     // TODO defeat, hatch
     "no": 129,
-    "name": "Soulseer Mizutsune",
-    "genus": "Leviathan",
-    "habitat": null,
+    "name": "Elderfrost Gammoth",
+    "genus": "Fanged Beast",
+    "habitat": "Loloska",
     "locations": [
-      // { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
-      // { "type": "coopQuest", "main": "Flowery Den" },
-      // { "type": "eldersLair", "main": "Z1" }
+      {
+        "type": "catavanStand",
+        "main": "Loloska",
+        "sub": "Lavina Glacial Peaks" // is that true?
+      },
+      {
+        "type": "coopQuest",
+        "main": "Ice Eggs",
+        "finalNest": true
+      }
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Mizutsune" }],
+    "related": [{ "type": "deviantOf", "monster": "Gammoth" }],
     "monster": {
       "attackPatterns": {
-        //   "DEFAULT": "technical",
-        //   "Enraged": "speed"
+        "DEFAULT": "power"
       },
       "parts": {
-        //   "DEFAULT": ["slash", "blunt"],
-        //   "Body": ["slash", "blunt"],
-        //   "Legs": ["slash", "blunt"],
-        //   "Tail": ["pierce"]
+        "DEFAULT": ["blunt"],
+        "Head": ["blunt"],
+        "Nose": ["slash"],
+        "Tail": ["slash"],
+        "Legs": ["blunt"],
+        "Body": ["blunt"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
-      "attackType": "?",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "Sublime Transience",
-      "eggColors": [],
+      "attackType": "power",
+      "growth": "slow",
+      "ridingActions": ["Roar", "Mega Breaker"],
+      "kinshipSkill": "Glacial Crater",
+      "eggColors": ["blue", "white"],
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 10,
+          "speed": 3,
+          "recovery": 5,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 6,
+          "thunder": 6,
+          "ice": 8,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 7,
+          "fire": 5,
+          "water": 7,
+          "thunder": 7,
+          "ice": 10,
+          "dragon": 7
         }
       }
     }
@@ -6269,61 +6314,59 @@
   {
     // TODO defeat, hatch
     "no": 130,
-    "name": "Elderfrost Gammoth",
-    "genus": "Fanged Beast",
-    "habitat": null,
+    "name": "Soulseer Mizutsune",
+    "genus": "Leviathan",
+    "habitat": "Lamure",
     "locations": [
-      // { "type": "catavanStand", "main": "Loloska", "sub": "Woodland" },
-      // { "type": "coopQuest", "main": "Snowy Mt. Den" },
-      // { "type": "eldersLair", "main": "Z5" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }, // is that true?
+      { "type": "coopQuest", "main": "Water Eggs", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
-    "related": [{ "type": "deviantOf", "monster": "Gammoth" }],
+    "related": [{ "type": "deviantOf", "monster": "Mizutsune" }],
     "monster": {
       "attackPatterns": {
-        //   "DEFAULT": "power"
+        "DEFAULT": "speed",
+        "Enraged": "power"
       },
       "parts": {
-        //   "DEFAULT": ["blunt"],
-        //   "Body": ["blunt"],
-        //   "Head": ["blunt"],
-        //   "Nose": ["slash"],
-        //   "Legs": ["blunt"],
-        //   "Tail": ["slash"]
+        "DEFAULT": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Legs": ["slash", "blunt"],
+        "Tail": ["slash", "blunt"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "thunder"
     },
     "hatchable": true,
     "monstie": {
-      "attackType": "?`",
-      "growth": "?",
-      "ridingActions": [],
-      "kinshipSkill": "Glacial Crater",
-      "eggColors": [],
+      "attackType": "speed",
+      "growth": "slow",
+      "ridingActions": ["Dash"],
+      "kinshipSkill": "Sublime Transience",
+      "eggColors": ["white", "red", "purple", "pink"],
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 8,
+          "speed": 5,
+          "recovery": 10,
+          "critRate": 9
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 9,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 8,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
         }
       }
     }
@@ -6333,81 +6376,58 @@
     "no": 131,
     "name": "Oroshi Kirin",
     "genus": "Elder Dragon",
-    "habitat": null,
+    "habitat": "Loloska",
     "locations": [
-      // { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
-      // { "type": "superRareDen", "main": "Lamure" },
-      // { "type": "superRareDen", "main": "Hakolo Island" },
-      // {
-      //   "type": "coopQuest",
-      //   "main": "Jungle Den",
-      //   "finalNest": true,
-      //   "srTicket": true
-      // },
-      // {
-      //   "type": "coopQuest",
-      //   "main": "Desert Den",
-      //   "finalNest": true,
-      //   "srTicket": true
-      // },
-      // {
-      //   "type": "coopQuest",
-      //   "main": "Flowery Den",
-      //   "finalNest": true,
-      //   "srTicket": true
-      // },
-      // {
-      //   "type": "coopQuest",
-      //   "main": "Thunder Eggs",
-      //   "finalNest": true,
-      //   "srTicket": true
-      // },
-      // { "type": "eldersLair", "main": "Z9" }
+      { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }, // is that true?
+      { "type": "subQuest", "main": "Ice Phantom" }
     ],
     "rarity": 7,
     "tags": ["deviant"],
     "related": [{ "type": "deviantOf", "monster": "Kirin" }],
     "monster": {
       "attackPatterns": {
-        //   "DEFAULT": "speed",
-        //   "Enraged": "technical"
+        "DEFAULT": "speed",
+        "Enraged": "power",
+        "Ice Aura": "technical"
       },
       "parts": {
-        //   "Head": ["slash", "blunt"],
-        //   "Body": ["slash", "blunt"]
+        "DEFAULT": ["slash", "blunt"],
+        "Head": ["slash", "blunt"],
+        "Body": ["slash", "blunt"],
+        "Legs": ["pierce"]
       },
-      "elementalWeakness": "?"
+      "elementalWeakness": "fire"
     },
     "hatchable": true,
     "monstie": {
-      "attackType": "?",
-      "growth": "?",
-      "ridingActions": [],
+      "attackType": "speed",
+      "growth": "slow",
+      "ridingActions": ["Jump"],
       "kinshipSkill": "Phantasmal Horn",
-      "eggColors": [],
+      "eggColors": ["blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 7,
+          "recovery": 8,
+          "critRate": 10
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 6,
+          "thunder": 6,
+          "ice": 9,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 3,
+          "water": 5,
+          "thunder": 5,
+          "ice": 7,
+          "dragon": 5
         }
       }
     }
