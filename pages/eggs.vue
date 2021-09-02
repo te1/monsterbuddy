@@ -19,7 +19,7 @@
           class="mr-2"
           title="Show all monsters"
           :icon="['fas', 'times']"
-          @click="showRecent = false"
+          @click="toggleShowRecent"
         />
 
         <AppIconButton
@@ -27,7 +27,7 @@
           class="mr-2"
           title="Show recent monsters"
           :icon="['fas', 'history']"
-          @click="showRecent = true"
+          @click="toggleShowRecent"
         />
       </template>
     </AppTopBar>
@@ -236,6 +236,14 @@
           return ['fas', 'check'];
         }
         return ['fas', 'sliders-h'];
+      },
+    },
+
+    methods: {
+      toggleShowRecent() {
+        this.showRecent = !this.showRecent;
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       },
     },
   };
