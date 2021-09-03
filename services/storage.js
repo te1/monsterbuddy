@@ -4,7 +4,7 @@ export class Storage {
   }
 
   get(key, fallbackValue = undefined) {
-    if (!process.browser) {
+    if (typeof window === 'undefined') {
       return fallbackValue;
     }
 
@@ -24,7 +24,7 @@ export class Storage {
   }
 
   set(key, value) {
-    if (!process.browser) {
+    if (typeof window === 'undefined') {
       return;
     }
 
