@@ -12,7 +12,7 @@ const useHistoryStore = defineStore({
   state() {
     return {
       lastList: null,
-      recentMonsterSlugs: storage.get(storageKeyRecentMonsterSlugs) ?? [],
+      recentMonsterSlugs: [],
     };
   },
 
@@ -93,6 +93,10 @@ const useHistoryStore = defineStore({
   },
 
   actions: {
+    loadFromStorage() {
+      this.recentMonsterSlugs = storage.get(storageKeyRecentMonsterSlugs) ?? [];
+    },
+
     addRecentMonster(slug) {
       const maxRecentItems = 25;
 
