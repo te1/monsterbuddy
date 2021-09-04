@@ -148,20 +148,6 @@
         <li>
           <a
             class="link"
-            href="https://www.youtube.com/watch?v=Ss3Mgqe9dTo"
-            target="_blank"
-            rel="noopener"
-          >ULTIMATE CHEAT SHEET! Deviant &amp; Elder Dragon Farm Notes Monster Hunter Stories 2</a> by <a
-            class="link"
-            href="https://www.youtube.com/channel/UCDjnmVdkM0tGprGlKo4LY3Q"
-            target="_blank"
-            rel="noopener"
-          >Paradise Central</a>
-        </li>
-
-        <li>
-          <a
-            class="link"
             href="https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o"
             target="_blank"
             rel="noopener"
@@ -325,15 +311,6 @@
             <li>
               <a
                 class="link"
-                href="https://www.youtube.com/channel/UCXe5uvP9kHKRG1LTMYDiscQ"
-                target="_blank"
-                rel="noopener"
-              >Poogie Boogie</a>
-            </li>
-
-            <li>
-              <a
-                class="link"
                 href="https://www.youtube.com/c/RageGamingVideosReal"
                 target="_blank"
                 rel="noopener"
@@ -347,6 +324,15 @@
                 target="_blank"
                 rel="noopener"
               >Tidus69</a>
+            </li>
+
+            <li>
+              <a
+                class="link"
+                href="https://www.youtube.com/channel/UCXe5uvP9kHKRG1LTMYDiscQ"
+                target="_blank"
+                rel="noopener"
+              >Poogie Boogie</a>
             </li>
           </ul>
         </li>
