@@ -19,11 +19,13 @@ import {
   faExclamation, // coop quest type, riding action ype
   faDragon, // monster / monstie
   faEgg, // egg
-  faHistory, // recent monsters
+  faBookmark, // pinned = true
   faShare, // used in attack type "image"
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faSadCry, // filter: no results
+  faClock, // recent monsters
+  faBookmark as faBookmarkRegular, // pinned = false
 } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -47,10 +49,10 @@ library.add(
   faExclamation,
   faDragon,
   faEgg,
-  faHistory,
+  faBookmark,
   faShare
 );
-library.add(faSadCry);
+library.add(faSadCry, faClock, faBookmarkRegular);
 library.add(faGithub);
 
 FontAwesomeIcon.props.fixedWidth.default = true;
