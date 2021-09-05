@@ -1,7 +1,7 @@
 <template>
   <section
     v-if="hasCombatInfo"
-    class="space-y-2 overflow-hidden"
+    class="relative space-y-2 overflow-hidden"
   >
     <div v-if="hasAttackPatterns">
       <h3 class="text-lg font-semibold">
@@ -89,6 +89,14 @@
         </div>
       </div>
     </div>
+
+    <div class="absolute top-0 right-0 pt-1 pr-3">
+      <AppPinToggle
+        :pinned="isPinned"
+        subject="monster attack pattern"
+        @toggle="togglePin"
+      />
+    </div>
   </section>
 </template>
 
@@ -107,6 +115,10 @@
     },
 
     computed: {
+      history() {
+        return this.$useHistoryStore();
+      },
+
       hasAttackPatterns() {
         return !!_.size(this.monster?.monster?.attackPatterns);
       },
@@ -134,6 +146,10 @@
           this.hasAttackPatterns || this.hasParts || this.hasElementalWeakness
         );
       },
+
+      isPinned() {
+        return this.history.isMonsterPinned(this.monster?.slug);
+      },
     },
 
     methods: {
@@ -145,6 +161,10 @@
           return 'Default';
         }
         return part;
+      },
+
+      togglePin() {
+        this.history.togglePinnedMonster(this.monster?.slug);
       },
     },
   };
