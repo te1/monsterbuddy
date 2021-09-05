@@ -19,7 +19,7 @@
 
       <MonstieEggCard
         v-if="monster.hatchable"
-        class="box px-4 py-2"
+        class="box px-1 py-2"
         :monster="monster"
       />
 
