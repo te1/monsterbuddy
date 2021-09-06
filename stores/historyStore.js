@@ -3,7 +3,12 @@ import { defineStore } from 'pinia';
 import useMonsterFilter from './monsterFilter';
 import useMonstieFilter from './monstieFilter';
 import useEggFilter from './eggFilter';
-import { monstersBySlug, getMonstersByHatchable } from '~/services/data';
+import {
+  monsters,
+  monstersBySlug,
+  monsties,
+  getMonstersByHatchable,
+} from '~/services/data';
 import storage from '~/services/storage';
 
 const storageKeyRecentMonsterSlugs = 'history.recentMonsterSlugs';
@@ -103,8 +108,8 @@ const useHistoryStore = defineStore({
     },
 
     pinnedMonsters() {
-      return _.map(this.pinnedMonsterSlugs, (slug) => {
-        return monstersBySlug[slug];
+      return _.filter(monsters, (monster) => {
+        return _.includes(this.pinnedMonsterSlugs, monster.slug);
       });
     },
 
@@ -117,8 +122,8 @@ const useHistoryStore = defineStore({
     },
 
     pinnedEggs() {
-      return _.map(this.pinnedEggSlugs, (slug) => {
-        return monstersBySlug[slug];
+      return _.filter(monsties, (monster) => {
+        return _.includes(this.pinnedEggSlugs, monster.slug);
       });
     },
 

@@ -6,40 +6,28 @@
       :heading="heading"
     >
       <AppSearchBox
-        v-if="!showFilter && !showRecent"
+        v-if="!showFilter && !showRecentOrPinned"
         v-model="eggFilter.nameFilter"
       />
-
-      <template
-        v-if="history.hasRecentMonsties && !showFilter"
-        #right
-      >
-        <AppIconButton
-          v-if="showRecent"
-          class="mr-2"
-          title="Show all monsters"
-          :icon="['fas', 'times']"
-          @click="toggleShowRecent"
-        />
-
-        <AppIconButton
-          v-else
-          class="mr-2"
-          title="Show recent monsters"
-          :icon="['fas', 'history']"
-          @click="toggleShowRecent"
-        />
-      </template>
     </AppTopBar>
 
     <NuxtLink
-      v-if="!showRecent"
-      :to="fabTarget"
+      :to="fabFilterTarget"
+      @click.native="display = 'default'"
     >
-      <AppFloatingButton :title="fabTitle">
-        <FaIcon :icon="fabIcon" />
+      <AppFloatingButton :title="fabFilterTitle">
+        <FaIcon :icon="fabFilterIcon" />
       </AppFloatingButton>
     </NuxtLink>
+
+    <AppFloatingButton
+      v-if="fabDisplayVisible"
+      :title="fabDisplayTitle"
+      secondary
+      @click="toggleDisplay"
+    >
+      <FaIcon :icon="fabDisplayIcon" />
+    </AppFloatingButton>
 
     <NuxtChild v-show="!leaving && showFilter" />
 
@@ -76,7 +64,7 @@
           :key="key"
         >
           <div
-            v-if="eggFilter.isGrouped  && !showRecent"
+            v-if="eggFilter.isGrouped  && !showRecentOrPinned"
             class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
           >
             <FaIcon
@@ -98,7 +86,7 @@
           </div>
 
           <div
-            v-if="eggFilter.mode === 'compact'"
+            v-if="mode === 'compact'"
             class="mt-1 grid gap-3 grid-cols-2"
           >
             <NuxtLink
@@ -124,7 +112,7 @@
             >
               <EggListItem
                 :monster="monster"
-                :mode="eggFilter.mode"
+                :mode="mode"
                 class="box box-link px-1 overflow-hidden"
               />
             </NuxtLink>
@@ -132,7 +120,7 @@
         </li>
       </ul>
 
-      <MonsterNoResults v-if="eggFilter.isEmpty && !showRecent">
+      <MonsterNoResults v-if="eggFilter.isEmpty && !showRecentOrPinned">
         No eggs found
       </MonsterNoResults>
     </main>
@@ -140,6 +128,7 @@
 </template>
 
 <script>
+  import _ from 'lodash';
   import { mapStores } from 'pinia';
   import useEggFilter from '~/stores/eggFilter';
   import { makeHead } from '~/services/utils';
@@ -166,7 +155,7 @@
     data() {
       return {
         leaving: false,
-        showRecent: false,
+        display: null,
       };
     },
 
@@ -186,6 +175,13 @@
         return this.$useHistoryStore();
       },
 
+      mode() {
+        if (this.display === 'pinned') {
+          return 'compact';
+        }
+        return this.eggFilter.mode;
+      },
+
       showFilter() {
         // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
         return this.$route?.path === '/eggs/filter/';
@@ -194,14 +190,23 @@
       showActiveFilters() {
         return (
           (this.eggFilter.hasActiveSort || this.eggFilter.hasActiveFilters) &&
-          !this.showRecent
+          !this.showRecentOrPinned
         );
       },
 
+      showRecentOrPinned() {
+        return this.display === 'recent' || this.display === 'pinned';
+      },
+
       groupedMonsters() {
-        if (this.showRecent) {
+        if (this.display === 'recent') {
           return {
             all: this.history.recentMonsties,
+          };
+        }
+        if (this.display === 'pinned') {
+          return {
+            all: this.history.pinnedEggs,
           };
         }
         return this.eggFilter.groupedMonsters;
@@ -211,37 +216,101 @@
         if (this.showFilter) {
           return 'View Options';
         }
-        if (this.showRecent) {
+        if (this.display === 'recent') {
           return 'Recent Eggs';
+        }
+        if (this.display === 'pinned') {
+          return 'Bookmarked Eggs';
         }
         return null;
       },
 
-      fabTarget() {
+      fabFilterTarget() {
         if (this.showFilter) {
           return '/eggs/';
         }
         return '/eggs/filter/';
       },
 
-      fabTitle() {
+      fabFilterTitle() {
         if (this.showFilter) {
           return 'Apply';
         }
         return 'View options';
       },
 
-      fabIcon() {
+      fabFilterIcon() {
         if (this.showFilter) {
           return ['fas', 'check'];
         }
         return ['fas', 'sliders-h'];
       },
+
+      displays() {
+        let results = ['default'];
+
+        if (this.history.hasRecentMonsties) {
+          results.push('recent');
+        }
+
+        if (this.history.hasPinnedMonsters) {
+          results.push('pinned');
+        }
+
+        return results;
+      },
+
+      nextDisplay() {
+        let currentIndex = _.indexOf(this.displays, this.display);
+        let nextIndex = (currentIndex + 1) % this.displays.length;
+
+        return this.displays[nextIndex];
+      },
+
+      fabDisplayVisible() {
+        return !this.showFilter && this.displays.length > 1;
+      },
+
+      fabDisplayTitle() {
+        switch (this.nextDisplay) {
+          case 'default':
+            return 'Show all eggs';
+
+          case 'recent':
+            return 'Show recent eggs ';
+
+          case 'pinned':
+            return 'Show pinned eggs';
+
+          default:
+            return null;
+        }
+      },
+
+      fabDisplayIcon() {
+        switch (this.nextDisplay) {
+          case 'default':
+            return ['fas', 'times'];
+
+          case 'recent':
+            return ['far', 'clock'];
+
+          case 'pinned':
+            return ['fas', 'bookmark'];
+
+          default:
+            return null;
+        }
+      },
+    },
+
+    created() {
+      this.toggleDisplay();
     },
 
     methods: {
-      toggleShowRecent() {
-        this.showRecent = !this.showRecent;
+      toggleDisplay() {
+        this.display = this.nextDisplay;
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
       },
