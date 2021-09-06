@@ -22,7 +22,6 @@
 
         <div
           class="flex items-center justify-center font-semibold tracking-wide cursor-pointer transition-colors-slow text-gray-500 hover:text-gray-700 active:bg-gray-200 dark:text-cool-300 dark:hover:text-cool-100 dark:active:bg-cool-700"
-          :class="moreClasses"
           @click="toggleMore"
         >
           More
@@ -108,15 +107,6 @@
         showMore: false,
         showMoreContent: false,
       };
-    },
-
-    computed: {
-      moreClasses() {
-        if (this.showMore) {
-          return 'text-brand-500 hover:text-brand-500 active:text-brand-500 dark:text-brand-400 dark:hover:text-brand-400 dark:active:text-brand-400';
-        }
-        return null;
-      },
     },
 
     methods: {
