@@ -14,7 +14,7 @@
       <div v-html="retreat" />
     </div>
 
-    <div class="absolute top-0 right-0 pt-1 pr-3">
+    <div class="absolute top-0 right-0 pt-3 pr-3">
       <AppPinToggle
         :pinned="isPinned"
         subject="egg"
