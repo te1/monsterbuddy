@@ -275,7 +275,7 @@
             return ['fas', 'times'];
 
           case 'recent':
-            return ['far', 'clock'];
+            return ['fas', 'history'];
 
           case 'pinned':
             return ['fas', 'bookmark'];
