@@ -60,6 +60,10 @@
     @apply hover:transition-opacity-slow active:transition-opacity-slow focus:transition-opacity-slow;
   }
 
+  .transition-transform-slow {
+    @apply transition-transform duration-300;
+  }
+
   .tap-highlight-none {
     -webkit-tap-highlight-color: transparent;
   }
