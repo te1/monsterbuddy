@@ -112,13 +112,13 @@
     methods: {
       hideMore() {
         this.showMoreContent = false;
+
+        document.body.style.overflow = 'auto';
       },
 
       toggleMore() {
         if (this.showMore) {
-          this.showMoreContent = false;
-
-          document.body.style.overflow = 'auto';
+          this.hideMore();
         } else {
           this.showMore = true;
 
