@@ -2924,7 +2924,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump"],
       "kinshipSkill": "Paralyslash",
       "eggColors": ["green", "orange"],
       "retreat": "Hit it with a **Paintball** and defeat it quickly to boost the retreat rate.",
@@ -3371,7 +3371,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Roar", "Ground Dive"],
       "kinshipSkill": "Demolition Dash",
       "eggColors": ["gray", "white", "brown"],
       "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate.",
@@ -3551,7 +3551,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Swim", "Roar"],
       "kinshipSkill": "Thunderous Blast",
       "eggColors": ["blue", "red"],
       "retreat": "**Defeat** with a **Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
@@ -4408,7 +4408,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Roar", "Mega Breaker"],
       "kinshipSkill": "Decimating Fist",
       "eggColors": ["orange", "black"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -4533,7 +4533,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Monster Search", "Mega Breaker"],
       "kinshipSkill": "X Blaze",
       "eggColors": ["blue", "red"],
       "retreat": "**Defeat** with a **Mizutsune** **Kinship Skill** to greatly boost the retreat rate.",
@@ -4628,7 +4628,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Fly"],
       "kinshipSkill": "Nova Strike",
       "eggColors": ["gray", "white", "black"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -4799,7 +4799,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Fly", "Rock Breaker"],
       "kinshipSkill": "Ground Cyclone",
       "eggColors": ["orange", "red", "pink"],
       "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate.",
@@ -4863,7 +4863,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "slow",
-      "ridingActions": [],
+      "ridingActions": ["Monster Search", "Mega Breaker"],
       "kinshipSkill": "Hunger Rage",
       "eggColors": ["green", "orange", "red"],
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate.",
@@ -4931,7 +4931,7 @@
     "monstie": {
       "attackType": "technical",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Jump"],
       "kinshipSkill": "Voltage Crash",
       "eggColors": ["blue", "yellow", "white"],
       "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate.",
@@ -4995,7 +4995,7 @@
     "monstie": {
       "attackType": "technical",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Fly"],
       "kinshipSkill": "Piercing Stars",
       "eggColors": ["yellow", "orange", "red"],
       "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate.",
@@ -5072,7 +5072,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Fly"],
       "kinshipSkill": "Sky-High Dive",
       "eggColors": ["red", "blue"],
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate.",
@@ -5138,7 +5138,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Fly"],
       "kinshipSkill": "Sky-High Dive",
       "eggColors": ["blue"],
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate.",
@@ -5203,7 +5203,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Nest Search"],
       "kinshipSkill": "Scorching Slice",
       "eggColors": ["pink", "red"],
       "retreat": "Attack with an **Azure Rathalos** **Kinship Skill** to greatly boost the retreat rate.",
@@ -5269,7 +5269,7 @@
     "monstie": {
       "attackType": "power",
       "growth": "quick",
-      "ridingActions": [],
+      "ridingActions": ["Roar"],
       "kinshipSkill": "Anja Assault",
       "eggColors": ["gray", "white", "orange", "red"],
       "retreat": "Break the **nose** with an **ice element attack** to greatly boost the retreat rate.",
@@ -6461,7 +6461,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump", "Ivy Climb"],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -6519,7 +6519,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump", "Ivy Climb"],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "red"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -6577,7 +6577,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump", "Ivy Climb"],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -6635,7 +6635,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump", "Ivy Climb"],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "green"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -6693,7 +6693,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump", "Ivy Climb"],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "blue"],
       "retreat": "This monster **cannot** be chased back to its den.",
@@ -6751,7 +6751,7 @@
     "monstie": {
       "attackType": "speed",
       "growth": "regular",
-      "ridingActions": [],
+      "ridingActions": ["Jump", "Ivy Climb"],
       "kinshipSkill": "Rising Axel",
       "eggColors": ["yellow", "white", "red"],
       "retreat": "This monster **cannot** be chased back to its den.",
