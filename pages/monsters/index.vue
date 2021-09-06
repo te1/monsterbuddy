@@ -262,7 +262,7 @@
             return 'Show recent monsters ';
 
           case 'pinned':
-            return 'Show pinned monsters';
+            return 'Show bookmarked monsters';
 
           default:
             return null;

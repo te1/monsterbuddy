@@ -1,5 +1,5 @@
 <template>
-  <section class="space-y-3 overflow-hidden">
+  <section class="relative space-y-3 overflow-hidden">
     <div class="space-y-1">
       <h3 class="text-lg font-semibold">
         Monstie Info
@@ -68,6 +68,14 @@
         </span>
       </div>
     </div>
+
+    <div class="absolute top-0 right-0 pr-3">
+      <AppPinToggle
+        :pinned="isPinned"
+        subject="monstie"
+        @toggle="togglePin"
+      />
+    </div>
   </section>
 </template>
 
@@ -86,6 +94,10 @@
     },
 
     computed: {
+      history() {
+        return this.$useHistoryStore();
+      },
+
       hasRidingActions() {
         return !!this.monster?.monstie?.ridingActions?.length;
       },
@@ -97,6 +109,16 @@
             ..._.find(sortedRidingActions, { name: ridingAction }),
           };
         });
+      },
+
+      isPinned() {
+        return this.history.isMonstiePinned(this.monster?.slug);
+      },
+    },
+
+    methods: {
+      togglePin() {
+        this.history.togglePinnedMonstie(this.monster?.slug);
       },
     },
   };

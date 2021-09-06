@@ -13,9 +13,12 @@ import storage from '~/services/storage';
 
 const storageKeyRecentMonsterSlugs = 'history.recentMonsterSlugs';
 const storageKeyPinnedMonsterSlugs = 'history.pinnedMonsterSlugs';
+const storageKeyPinnedMonstieSlugs = 'history.pinnedMonstieSlugs';
 const storageKeyPinnedEggSlugs = 'history.pinnedEggSlugs';
 
 function pull(array, item) {
+  // _.pull doesn't work with vue 2.x reactivity
+
   let index = array.indexOf(item);
   if (index >= 0) {
     array.splice(index, 1);
@@ -28,6 +31,7 @@ const useHistoryStore = defineStore({
       lastList: null,
       recentMonsterSlugs: [],
       pinnedMonsterSlugs: [],
+      pinnedMonstieSlugs: [],
       pinnedEggSlugs: [],
     };
   },
@@ -121,6 +125,20 @@ const useHistoryStore = defineStore({
       return _.includes(state.pinnedMonsterSlugs, slug);
     },
 
+    pinnedMonsties() {
+      return _.filter(monsties, (monster) => {
+        return _.includes(this.pinnedMonstieSlugs, monster.slug);
+      });
+    },
+
+    hasPinnedMonsties() {
+      return !!this.pinnedMonsties.length;
+    },
+
+    isMonstiePinned: (state) => (slug) => {
+      return _.includes(state.pinnedMonstieSlugs, slug);
+    },
+
     pinnedEggs() {
       return _.filter(monsties, (monster) => {
         return _.includes(this.pinnedEggSlugs, monster.slug);
@@ -145,6 +163,10 @@ const useHistoryStore = defineStore({
       this.pinnedMonsterSlugs = storage.get(
         storageKeyPinnedMonsterSlugs,
         this.pinnedMonsterSlugs
+      );
+      this.pinnedMonstieSlugs = storage.get(
+        storageKeyPinnedMonstieSlugs,
+        this.pinnedMonstieSlugs
       );
       this.pinnedEggSlugs = storage.get(
         storageKeyPinnedEggSlugs,
@@ -174,6 +196,16 @@ const useHistoryStore = defineStore({
       }
 
       storage.set(storageKeyPinnedMonsterSlugs, this.pinnedMonsterSlugs);
+    },
+
+    togglePinnedMonstie(slug) {
+      if (this.isMonstiePinned(slug)) {
+        pull(this.pinnedMonstieSlugs, slug);
+      } else {
+        this.pinnedMonstieSlugs.unshift(slug);
+      }
+
+      storage.set(storageKeyPinnedMonstieSlugs, this.pinnedMonstieSlugs);
     },
 
     togglePinnedEgg(slug) {

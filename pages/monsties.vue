@@ -232,9 +232,9 @@
           results.push('recent');
         }
 
-        // if (this.history.hasPinnedMonsters) {
-        //   results.push('pinned');
-        // }
+        if (this.history.hasPinnedMonsties) {
+          results.push('pinned');
+        }
 
         return results;
       },
@@ -259,7 +259,7 @@
             return 'Show recent monsties ';
 
           case 'pinned':
-            return 'Show pinned monsties';
+            return 'Show bookmarked monsties';
 
           default:
             return null;

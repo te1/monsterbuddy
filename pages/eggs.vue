@@ -280,7 +280,7 @@
             return 'Show recent eggs ';
 
           case 'pinned':
-            return 'Show pinned eggs';
+            return 'Show bookmarked eggs';
 
           default:
             return null;
