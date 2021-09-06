@@ -4830,7 +4830,6 @@
     }
   },
   {
-    // TODO defeat, hatch
     "no": 108,
     "name": "Deviljho",
     "genus": "Brute Wyvern",
@@ -4869,26 +4868,26 @@
       "retreat": "**Defeat** with a **dragon element attack** while it is **poisoned** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 9,
+          "speed": 4,
+          "recovery": 1,
+          "critRate": 2
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 9
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 7,
+          "fire": 5,
+          "water": 5,
+          "thunder": 5,
+          "ice": 5,
+          "dragon": 3
         }
       }
     }
@@ -4962,7 +4961,6 @@
     }
   },
   {
-    // TODO defeat, hatch
     "no": 110,
     "name": "Seregios",
     "genus": "Flying Wyvern",
@@ -5001,26 +4999,26 @@
       "retreat": "Break the **head** with a **thunder element** **gunlance** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 6,
+          "recovery": 1,
+          "critRate": 9
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 8,
+          "fire": 6,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 4,
+          "thunder": 3,
+          "ice": 4,
+          "dragon": 4
         }
       }
     }
@@ -5038,7 +5036,6 @@
     }
   },
   {
-    // TODO defeat, hatch
     "no": 112,
     "name": "Rathalos",
     "genus": "Flying Wyvern",
@@ -5078,26 +5075,26 @@
       "retreat": "**Defeat** with a **Lagiacrus** **Kinship Skill** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 7,
+          "speed": 5,
+          "recovery": 3,
+          "critRate": 4
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 7,
+          "water": 5,
+          "thunder": 5,
+          "ice": 5,
+          "dragon": 3
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 7,
+          "water": 5,
+          "thunder": 5,
+          "ice": 5,
+          "dragon": 3
         }
       }
     }
