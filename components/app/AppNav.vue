@@ -5,19 +5,16 @@
         <AppNavLink
           to="/monsters/"
           text="Monsters"
-          @click.native="hideMore"
         />
 
         <AppNavLink
           to="/monsties/"
           text="Monsties"
-          @click.native="hideMore"
         />
 
         <AppNavLink
           to="/eggs/"
           text="Eggs"
-          @click.native="hideMore"
         />
 
         <div
@@ -61,35 +58,30 @@
               text="Monster Buddy"
               exact
               more
-              @click.native="hideMore"
             />
 
             <AppNavLink
               to="/catavan-stands/"
               text="Catavan Stands"
               more
-              @click.native="hideMore"
             />
 
             <AppNavLink
               to="/elders-lair/"
               text="Elder's Lair"
               more
-              @click.native="hideMore"
             />
 
             <AppNavLink
               to="/coop/"
               text="Co-Op Quests"
               more
-              @click.native="hideMore"
             />
 
             <AppNavLink
               to="/riding-actions/"
               text="Riding Actions"
               more
-              @click.native="hideMore"
             />
           </nav>
         </transition>
@@ -107,6 +99,15 @@
         showMore: false,
         showMoreContent: false,
       };
+    },
+
+    mounted() {
+      this.$router.beforeEach((to, from, next) => {
+        if (this.showMore) {
+          this.hideMore();
+        }
+        next();
+      });
     },
 
     methods: {
