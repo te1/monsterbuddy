@@ -312,7 +312,9 @@
       toggleDisplay() {
         this.display = this.nextDisplay;
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       },
     },
   };
