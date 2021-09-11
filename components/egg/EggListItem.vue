@@ -21,6 +21,7 @@
     <div
       v-if="ticket"
       class="absolute top-0 right-0 px-2 py-0.5 rounded-bl text-xs font-semibold tracking-widest bg-gold/75 dark:bg-gold/25 text-gray-700 dark:text-gold"
+      title="Golden SR ticket required"
     >
       SR
     </div>
