@@ -73,6 +73,9 @@ export function formatCoopQuestType(type) {
     case 'explore':
       return 'Explore';
 
+    case 'slay':
+      return 'Slay';
+
     case 'time':
       return 'Time';
 

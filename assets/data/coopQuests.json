@@ -50,11 +50,6 @@
     "name": "Thunder Eggs"
   },
   {
-    "type": "time",
-    "rarity": 8,
-    "name": "The Goddess of Gold"
-  },
-  {
     "type": "explore",
     "rarity": 8,
     "name": "Water Eggs"
@@ -63,5 +58,85 @@
     "type": "explore",
     "rarity": 8,
     "name": "Ice Eggs"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Fated Four Den"
+  },
+  {
+    "type": "explore",
+    "rarity": 8,
+    "name": "Dragon Eggs"
+  },
+  {
+    "type": "explore",
+    "rarity": 9,
+    "name": "Elder Dragon Den"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Nergigante"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Phantom Beast Kirin"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Flame King Teostra"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Kushala Daora"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Velkhana"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Hellblade Glavenus"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Boltreaver Astalos"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Soulseer Mizutsune"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Elderfrost Gammoth"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Oroshi Kirin"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Molten Tigrex"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Dreadking Rathalos"
+  },
+  {
+    "type": "time",
+    "rarity": 8,
+    "name": "The Goddess of Gold"
   }
 ]
