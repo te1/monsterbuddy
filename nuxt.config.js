@@ -61,7 +61,18 @@ export default {
         property: 'og:image:alt',
         content: 'Monster Buddy - Companion App For Monster Hunter Stories 2',
       },
-      // { theme_color: '#f43f5e' },
+      {
+        name: 'theme_color',
+        content: 'red',
+        media: '(prefers-color-scheme: light)',
+        hid: 'theme_color_light',
+      },
+      {
+        name: 'theme_color',
+        content: 'blue',
+        media: '(prefers-color-scheme: dark)',
+        hid: 'theme_color_dark',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
