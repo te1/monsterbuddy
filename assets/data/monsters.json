@@ -958,12 +958,14 @@
         "sub": "Harzgai Hill - Inner"
       },
       { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "coopQuest", "main": "Dragon Eggs" },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Brute Tigrex" },
-      { "type": "deviant", "monster": "Grimclaw Tigrex" }
+      { "type": "deviant", "monster": "Grimclaw Tigrex" },
+      { "type": "deviant", "monster": "Molten Tigrex" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3221,7 +3223,8 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower Front" },
-      { "type": "coopQuest", "main": "Desert Den" }
+      { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "coopQuest", "main": "Dragon Eggs" }
     ],
     "rarity": 5,
     "related": [
@@ -3350,6 +3353,8 @@
       },
       { "type": "coopQuest", "main": "Jungle Den" },
       { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "coopQuest", "main": "Fated Four Den" },
+      { "type": "coopQuest", "main": "Elder Dragon Den" },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 6,
@@ -3705,7 +3710,8 @@
     "rarity": 6,
     "related": [
       { "type": "subspeciesOf", "monster": "Tigrex" },
-      { "type": "deviant", "monster": "Grimclaw Tigrex" }
+      { "type": "deviant", "monster": "Grimclaw Tigrex" },
+      { "type": "deviant", "monster": "Molten Tigrex" }
     ],
     "monster": {
       "attackPatterns": {
@@ -4386,7 +4392,9 @@
     "habitat": "Terga",
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
+      { "type": "coopQuest", "main": "Nergigante" },
       { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 7,
@@ -4607,7 +4615,9 @@
       },
       { "type": "coopQuest", "main": "Jungle Den" },
       { "type": "coopQuest", "main": "Woodland Den" },
-      { "type": "coopQuest", "main": "Fire Eggs" }
+      { "type": "coopQuest", "main": "Fire Eggs" },
+      { "type": "coopQuest", "main": "Fated Four Den" },
+      { "type": "coopQuest", "main": "Elder Dragon Den" }
     ],
     "rarity": 6,
     "monster": {
@@ -4841,7 +4851,10 @@
         "sub": "Forbidden Grounds"
       },
       { "type": "coopQuest", "main": "Jungle Den" },
-      { "type": "coopQuest", "main": "Woodland Den" }
+      { "type": "coopQuest", "main": "Woodland Den" },
+      { "type": "coopQuest", "main": "Fated Four Den" },
+      { "type": "coopQuest", "main": "Elder Dragon Den" },
+      { "type": "coopQuest", "main": "Dragon Eggs" }
     ],
     "rarity": 6,
     "monster": {
@@ -4905,6 +4918,9 @@
         "sub": "Forbidden Grounds"
       },
       { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Fated Four Den" },
+      { "type": "coopQuest", "main": "Dragon Eggs" },
+      { "type": "coopQuest", "main": "Elder Dragon Den" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 6,
@@ -4972,6 +4988,8 @@
         "sub": "Forbidden Grounds"
       },
       { "type": "coopQuest", "main": "Jungle Den" },
+      { "type": "coopQuest", "main": "Fated Four Den" },
+      { "type": "coopQuest", "main": "Elder Dragon Den" },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 6,
@@ -5050,7 +5068,10 @@
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 5,
-    "related": [{ "type": "subspecies", "monster": "Azure Rathalos" }],
+    "related": [
+      { "type": "subspecies", "monster": "Azure Rathalos" },
+      { "type": "deviant", "monster": "Dreadking Rathalos" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -5113,10 +5134,15 @@
       },
       { "type": "coopQuest", "main": "Jungle Den" },
       { "type": "coopQuest", "main": "Fire Eggs" },
+      { "type": "coopQuest", "main": "Fated Four Den" },
+      { "type": "coopQuest", "main": "Elder Dragon Den" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 6,
-    "related": [{ "type": "subspeciesOf", "monster": "Rathalos" }],
+    "related": [
+      { "type": "subspeciesOf", "monster": "Rathalos" },
+      { "type": "deviant", "monster": "Dreadking Rathalos" }
+    ],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "power",
@@ -5465,6 +5491,12 @@
         "finalNest": true,
         "srTicket": true
       },
+      {
+        "type": "coopQuest",
+        "main": "Dragon Eggs",
+        "finalNest": true,
+        "srTicket": true
+      },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 7,
@@ -5541,7 +5573,8 @@
     "tags": ["deviant"],
     "related": [
       { "type": "deviantOf", "monster": "Tigrex" },
-      { "type": "subspecies", "monster": "Brute Tigrex" }
+      { "type": "subspecies", "monster": "Brute Tigrex" },
+      { "type": "deviant", "monster": "Molten Tigrex" }
     ],
     "monster": {
       "attackPatterns": {
@@ -5675,6 +5708,7 @@
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "superRareDen", "main": "Lamure" },
       { "type": "superRareDen", "main": "Hakolo Island" },
+      { "type": "coopQuest", "main": "Phantom Beast Kirin" },
       {
         "type": "coopQuest",
         "main": "Jungle Den",
@@ -5705,6 +5739,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 7,
@@ -5764,6 +5799,7 @@
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "superRareDen", "main": "Hakolo Island" },
       { "type": "superRareDen", "main": "Terga" },
+      { "type": "coopQuest", "main": "Flame King Teostra" },
       {
         "type": "coopQuest",
         "main": "Jungle Den",
@@ -5782,6 +5818,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 7,
@@ -5923,6 +5960,7 @@
       { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" },
       { "type": "superRareDen", "main": "Alcala" },
       { "type": "superRareDen", "main": "Lamure" },
+      { "type": "coopQuest", "main": "Kushala Daora" },
       {
         "type": "coopQuest",
         "main": "Woodland Den",
@@ -5953,6 +5991,13 @@
         "finalNest": true,
         "srTicket": true
       },
+      {
+        "type": "coopQuest",
+        "main": "Dragon Eggs",
+        "finalNest": true,
+        "srTicket": true
+      },
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 7,
@@ -6018,6 +6063,7 @@
       },
       { "type": "superRareDen", "main": "Loloska" },
       { "type": "superRareDen", "main": "Terga" },
+      { "type": "coopQuest", "main": "Velkhana" },
       {
         "type": "coopQuest",
         "main": "Snowy Mt. Den",
@@ -6035,7 +6081,8 @@
         "main": "Ice Eggs",
         "finalNest": true,
         "srTicket": true
-      }
+      },
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true }
     ],
     "rarity": 7,
     "monster": {
@@ -6099,7 +6146,10 @@
         "main": "Alcala",
         "sub": "Harzgai Hill - Inner"
       },
-      { "type": "coopQuest", "main": "Thunder Eggs", "finalNest": true }
+      { "type": "subQuest", "main": "Lightning Revolt" },
+      { "type": "coopQuest", "main": "Boltreaver Astalos" },
+      { "type": "coopQuest", "main": "Thunder Eggs", "finalNest": true },
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6161,7 +6211,10 @@
     "habitat": "Terga",
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
-      { "type": "coopQuest", "main": "Fire Eggs", "finalNest": true }
+      { "type": "subQuest", "main": "Psychoblaze Black Knight" },
+      { "type": "coopQuest", "main": "Hellblade Glavenus" },
+      { "type": "coopQuest", "main": "Fire Eggs", "finalNest": true },
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6251,11 +6304,10 @@
         "main": "Loloska",
         "sub": "Lavina Glacial Peaks" // is that true?
       },
-      {
-        "type": "coopQuest",
-        "main": "Ice Eggs",
-        "finalNest": true
-      }
+      { "type": "subQuest", "main": "Unconquerable Mountain" },
+      { "type": "coopQuest", "main": "Elderfrost Gammoth" },
+      { "type": "coopQuest", "main": "Ice Eggs", "finalNest": true },
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6316,7 +6368,10 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" }, // is that true?
-      { "type": "coopQuest", "main": "Water Eggs", "finalNest": true }
+      { "type": "subQuest", "main": "Heavenly Eye" },
+      { "type": "coopQuest", "main": "Soulseer Mizutsune" },
+      { "type": "coopQuest", "main": "Water Eggs", "finalNest": true },
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6376,7 +6431,9 @@
     "habitat": "Loloska",
     "locations": [
       { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }, // is that true?
-      { "type": "subQuest", "main": "Ice Phantom" }
+      { "type": "subQuest", "main": "Ice Phantom" },
+      { "type": "coopQuest", "main": "Oroshi Kirin" },
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6425,6 +6482,148 @@
           "thunder": 5,
           "ice": 7,
           "dragon": 5
+        }
+      }
+    }
+  },
+  {
+    // TODO defeat, hatch
+    "no": 132,
+    "name": "Molten Tigrex",
+    "genus": "Flying Wyvern",
+    "habitat": "Lamure",
+    "locations": [
+      {
+        "type": "catavanStand",
+        "main": "Lamure",
+        "sub": "Jalma Highlands" // is that true?
+      },
+      { "type": "subQuest", "main": "Sky-Rending Roar" },
+      { "type": "coopQuest", "main": "Molten Tigrex" },
+      { "type": "coopQuest", "main": "Dragon Eggs", "finalNest": true }
+    ],
+    "rarity": 7,
+    "tags": ["deviant"],
+    "related": [
+      { "type": "deviantOf", "monster": "Tigrex" },
+      { "type": "subspecies", "monster": "Brute Tigrex" },
+      { "type": "deviant", "monster": "Grimclaw Tigrex" }
+    ],
+    "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "speed",
+        "Detonation": "technical"
+      },
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Head": ["pierce"],
+        "Stomach": ["slash", "blunt"],
+        "Legs": ["slash", "blunt", "pierce"]
+      },
+      "elementalWeakness": "water"
+    },
+    "hatchable": true,
+    "monstie": {
+      "attackType": "power",
+      "growth": "slow",
+      "ridingActions": ["Dash", "Ivy Climb"],
+      "kinshipSkill": "Rock Smash",
+      "eggColors": ["red", "black"],
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        }
+      }
+    }
+  },
+  {
+    // TODO defeat, hatch
+    "no": 133,
+    "name": "Dreadking Rathalos",
+    "genus": "Flying Wyvern",
+    "habitat": "Hakolo Island",
+    "locations": [
+      {
+        "type": "catavanStand",
+        "main": "Hakolo Island",
+        "sub": "East Kamuna Heights" // is that true?
+      },
+      { "type": "subQuest", "main": "King Among Kings" },
+      { "type": "coopQuest", "main": "Dreadking Rathalos" }
+    ],
+    "rarity": 7,
+    "tags": ["deviant"],
+    "related": [
+      { "type": "deviantOf", "monster": "Rathalos" },
+      { "type": "subspecies", "monster": "Azure Rathalos" }
+    ],
+    "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "power",
+        "Flying": "speed",
+        "Flying Enraged": "technical"
+      },
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Head": ["slash"],
+        "Stomach": ["slash", "blunt"],
+        "Tail": ["slash", "blunt"],
+        "Wings": ["slash", "pierce"]
+      },
+      "elementalWeakness": "dragon"
+    },
+    "hatchable": true,
+    "monstie": {
+      "attackType": "power",
+      "growth": "slow",
+      "ridingActions": ["Fly"],
+      "kinshipSkill": "Meteor Strike",
+      "eggColors": ["red", "black"],
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": null,
+          "speed": null,
+          "recovery": null,
+          "critRate": null
+        },
+        "attack": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
+        },
+        "defense": {
+          "none": null,
+          "fire": null,
+          "water": null,
+          "thunder": null,
+          "ice": null,
+          "dragon": null
         }
       }
     }
