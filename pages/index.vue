@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="prose prose-sm dark:prose-dark">
+    <div class="prose prose-sm dark:prose-dark max-w-none">
       <h3>
         Features
       </h3>
