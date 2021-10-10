@@ -1,5 +1,5 @@
 <template>
-  <footer class="container mx-auto px-4 py-6 text-sm text-center text-gray-500 dark:text-cool-400">
+  <footer class="max-w-screen-lg mx-auto px-4 py-6 text-sm text-center text-gray-500 dark:text-cool-400">
     <div>
       <NuxtLink
         class="link"
