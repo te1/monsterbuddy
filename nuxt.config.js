@@ -63,13 +63,13 @@ export default {
       },
       {
         name: 'theme-color',
-        content: '#ffdddd',
+        content: '#ffffff',
         media: '(prefers-color-scheme: light)',
         hid: 'theme-color-light',
       },
       {
         name: 'theme-color',
-        content: '#442222',
+        content: '#1f2937',
         media: '(prefers-color-scheme: dark)',
         hid: 'theme-color-dark',
       },
@@ -140,7 +140,7 @@ export default {
         'Companion App For Monster Hunter Stories 2: Wings Of Ruin. Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions.',
       lang: 'en',
       background_color: '#cbd5e1',
-      theme_color: '#f43f5e',
+      // theme_color: '#ffffff',
     },
   },
 
