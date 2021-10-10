@@ -1,5 +1,9 @@
 <template>
   <div>
+    <h1 class="sr-only">
+      Monsters
+    </h1>
+
     <AppTopBar
       :showBack="showFilter"
       backFallback="/monsters/"

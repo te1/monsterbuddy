@@ -1,5 +1,9 @@
 <template>
   <div>
+    <h1 class="sr-only">
+      Elder's Lair
+    </h1>
+
     <AppTopBar
       :showBack="showFilter"
       backFallback="/elders-lair/"
