@@ -89,6 +89,22 @@
             to="/riding-actions/"
           >Riding action list</NuxtLink> and which monsties will learn them
         </li>
+
+        <li>
+          Keeps track of your recently viewed monsters, monsties and eggs for fast and easy navigation
+        </li>
+
+        <li>
+          Bookmark monsters to quickly check their attack patterns
+        </li>
+
+        <li>
+          Bookmark your favorite monsties to find them quickly
+        </li>
+
+        <li>
+          Bookmark eggs to quickly find what your are currently looking for
+        </li>
       </ul>
 
       <h3>
@@ -302,15 +318,6 @@
             <li>
               <a
                 class="link"
-                href="https://www.youtube.com/c/ArekkzGaming"
-                target="_blank"
-                rel="noopener"
-              >Arekkz Gaming</a>
-            </li>
-
-            <li>
-              <a
-                class="link"
                 href="https://www.youtube.com/c/RageGamingVideosReal"
                 target="_blank"
                 rel="noopener"
@@ -324,15 +331,6 @@
                 target="_blank"
                 rel="noopener"
               >Tidus69</a>
-            </li>
-
-            <li>
-              <a
-                class="link"
-                href="https://www.youtube.com/channel/UCXe5uvP9kHKRG1LTMYDiscQ"
-                target="_blank"
-                rel="noopener"
-              >Poogie Boogie</a>
             </li>
           </ul>
         </li>
