@@ -1,19 +1,23 @@
 <template>
   <div>
+    <h1 class="sr-only">
+      Eggs
+    </h1>
+
     <AppTopBar
       :showBack="showFilter"
       backFallback="/eggs/"
       :heading="heading"
     >
       <AppSearchBox
-        v-if="!showFilter && !showRecentOrPinned"
+        v-if="!showFilter && !showRecentOrPinned && !showEggFinder"
         v-model="eggFilter.nameFilter"
       />
     </AppTopBar>
 
     <NuxtLink
       :to="fabFilterTarget"
-      @click.native="display = 'default'"
+      @click.native="toggleFilter"
     >
       <AppFloatingButton :title="fabFilterTitle">
         <FaIcon :icon="fabFilterIcon" />
@@ -27,6 +31,15 @@
       @click="toggleDisplay"
     >
       <FaIcon :icon="fabDisplayIcon" />
+    </AppFloatingButton>
+
+    <AppFloatingButton
+      v-if="fabEggFinderVisible"
+      :title="fabEggFinderTitle"
+      tertiary
+      @click="toggleEggFinder"
+    >
+      <FaIcon :icon="fabEggFinderIcon" />
     </AppFloatingButton>
 
     <NuxtChild v-show="!leaving && showFilter" />
@@ -56,6 +69,23 @@
       </div>
 
       <ul
+        v-if="showEggFinder"
+        class="mt-1 grid gap-3 grid-cols-2"
+      >
+        <li
+          v-for="genus in genera"
+          :key="genus"
+        >
+          <EggGridItem
+            :genus="genus"
+            class="box box-link px-1 overflow-hidden cursor-pointer"
+            @click.native="setGenusFilter(genus)"
+          />
+        </li>
+      </ul>
+
+      <ul
+        v-if="!showEggFinder"
         class="space-y-5"
         :class="{ 'mt-8': showActiveFilters }"
       >
@@ -132,6 +162,7 @@
   import { mapStores } from 'pinia';
   import useEggFilter from '~/stores/eggFilter';
   import { makeHead } from '~/services/utils';
+  import { getGenera, monsties } from '~/services/data';
 
   export default {
     name: 'PageEggs',
@@ -154,8 +185,10 @@
 
     data() {
       return {
+        genera: getGenera(monsties),
         leaving: false,
         display: null,
+        showEggFinder: false,
       };
     },
 
@@ -190,7 +223,8 @@
       showActiveFilters() {
         return (
           (this.eggFilter.hasActiveSort || this.eggFilter.hasActiveFilters) &&
-          !this.showRecentOrPinned
+          !this.showRecentOrPinned &&
+          !this.showEggFinder
         );
       },
 
@@ -215,6 +249,9 @@
       heading() {
         if (this.showFilter) {
           return 'View Options';
+        }
+        if (this.showEggFinder) {
+          return 'Egg Finder';
         }
         if (this.display === 'recent') {
           return 'Recent Eggs';
@@ -302,6 +339,24 @@
             return null;
         }
       },
+
+      fabEggFinderVisible() {
+        return !this.showFilter;
+      },
+
+      fabEggFinderTitle() {
+        if (this.showEggFinder) {
+          return 'Show all eggs';
+        }
+        return 'Show egg finder';
+      },
+
+      fabEggFinderIcon() {
+        if (this.showEggFinder) {
+          return ['fas', 'times'];
+        }
+        return ['fas', 'egg'];
+      },
     },
 
     created() {
@@ -309,12 +364,32 @@
     },
 
     methods: {
+      toggleFilter() {
+        this.display = 'default';
+        this.showEggFinder = false;
+      },
+
       toggleDisplay() {
         this.display = this.nextDisplay;
+        this.showEggFinder = false;
 
         if (typeof window !== 'undefined') {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+      },
+
+      toggleEggFinder() {
+        this.showEggFinder = !this.showEggFinder;
+        this.display = 'default';
+
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      },
+
+      setGenusFilter(genus) {
+        this.toggleEggFinder();
+        this.eggFilter.genusFilter = genus;
       },
     },
   };

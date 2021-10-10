@@ -33,12 +33,20 @@
         required: false,
         default: false,
       },
+
+      tertiary: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
 
     computed: {
       classes() {
         if (this.secondary) {
           return ['mb-16'];
+        } else if (this.tertiary) {
+          return ['mb-32'];
         }
         return null;
       },
