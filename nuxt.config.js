@@ -68,10 +68,10 @@ export default {
         hid: 'theme-color-light',
       },
       {
-        name: 'theme_color',
+        name: 'theme-color',
         content: 'blue',
         media: '(prefers-color-scheme: dark)',
-        hid: 'theme-_color-dark',
+        hid: 'theme-color-dark',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
