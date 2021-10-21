@@ -75,6 +75,11 @@
     "name": "Elder Dragon Den"
   },
   {
+    "type": "explore",
+    "rarity": 9,
+    "name": "Deviant Den"
+  },
+  {
     "type": "slay",
     "rarity": 9,
     "name": "Nergigante"

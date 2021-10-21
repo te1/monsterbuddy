@@ -3355,6 +3355,7 @@
       { "type": "coopQuest", "main": "Desert Den" },
       { "type": "coopQuest", "main": "Fated Four Den" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
+      { "type": "coopQuest", "main": "Deviant Den" },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 6,
@@ -4617,7 +4618,8 @@
       { "type": "coopQuest", "main": "Woodland Den" },
       { "type": "coopQuest", "main": "Fire Eggs" },
       { "type": "coopQuest", "main": "Fated Four Den" },
-      { "type": "coopQuest", "main": "Elder Dragon Den" }
+      { "type": "coopQuest", "main": "Elder Dragon Den" },
+      { "type": "coopQuest", "main": "Deviant Den" }
     ],
     "rarity": 6,
     "monster": {
@@ -4854,7 +4856,8 @@
       { "type": "coopQuest", "main": "Woodland Den" },
       { "type": "coopQuest", "main": "Fated Four Den" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
-      { "type": "coopQuest", "main": "Dragon Eggs" }
+      { "type": "coopQuest", "main": "Dragon Eggs" },
+      { "type": "coopQuest", "main": "Deviant Den" }
     ],
     "rarity": 6,
     "monster": {
@@ -4921,6 +4924,7 @@
       { "type": "coopQuest", "main": "Fated Four Den" },
       { "type": "coopQuest", "main": "Dragon Eggs" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
+      { "type": "coopQuest", "main": "Deviant Den" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 6,
@@ -4990,6 +4994,7 @@
       { "type": "coopQuest", "main": "Jungle Den" },
       { "type": "coopQuest", "main": "Fated Four Den" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
+      { "type": "coopQuest", "main": "Deviant Den" },
       { "type": "eldersLair", "main": "Z9" }
     ],
     "rarity": 6,
@@ -5136,6 +5141,7 @@
       { "type": "coopQuest", "main": "Fire Eggs" },
       { "type": "coopQuest", "main": "Fated Four Den" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
+      { "type": "coopQuest", "main": "Deviant Den" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 6,
@@ -5341,6 +5347,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 7,
@@ -5414,6 +5421,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 7,
@@ -5497,6 +5505,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 7,
@@ -5567,6 +5576,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 7,
@@ -5643,6 +5653,7 @@
         "finalNest": true,
         "srTicket": true
       },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 7,
@@ -6149,7 +6160,8 @@
       { "type": "subQuest", "main": "Lightning Revolt" },
       { "type": "coopQuest", "main": "Boltreaver Astalos" },
       { "type": "coopQuest", "main": "Thunder Eggs", "finalNest": true },
-      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6214,7 +6226,8 @@
       { "type": "subQuest", "main": "Psychoblaze Black Knight" },
       { "type": "coopQuest", "main": "Hellblade Glavenus" },
       { "type": "coopQuest", "main": "Fire Eggs", "finalNest": true },
-      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6307,7 +6320,8 @@
       { "type": "subQuest", "main": "Unconquerable Mountain" },
       { "type": "coopQuest", "main": "Elderfrost Gammoth" },
       { "type": "coopQuest", "main": "Ice Eggs", "finalNest": true },
-      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6371,7 +6385,8 @@
       { "type": "subQuest", "main": "Heavenly Eye" },
       { "type": "coopQuest", "main": "Soulseer Mizutsune" },
       { "type": "coopQuest", "main": "Water Eggs", "finalNest": true },
-      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true }
+      { "type": "coopQuest", "main": "Fated Four Den", "finalNest": true },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6570,7 +6585,8 @@
         "sub": "East Kamuna Heights" // is that true?
       },
       { "type": "subQuest", "main": "King Among Kings" },
-      { "type": "coopQuest", "main": "Dreadking Rathalos" }
+      { "type": "coopQuest", "main": "Dreadking Rathalos" },
+      { "type": "coopQuest", "main": "Deviant Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
