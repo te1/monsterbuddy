@@ -15,12 +15,12 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
-    "@nuxtjs/composition-api": "^0.29.2",
+    "@fortawesome/vue-fontawesome": "^2.0.6",
+    "@nuxtjs/composition-api": "^0.29.3",
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
-    "core-js": "^3.18.2",
+    "core-js": "^3.18.3",
     "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
     "pinia": "^0.5.4"
@@ -36,9 +36,9 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.19.1",
+    "eslint-plugin-vue": "^7.20.0",
     "json5-loader": "^4.0.1",
-    "postcss": "^8.3.9",
+    "postcss": "^8.3.10",
     "prettier": "^2.4.1"
   }
 }
