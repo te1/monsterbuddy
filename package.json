@@ -35,7 +35,7 @@
     "babel-plugin-lodash": "^3.3.4",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-nuxt": "^3.0.0",
     "eslint-plugin-vue": "^7.20.0",
     "json5-loader": "^4.0.1",
     "postcss": "^8.3.11",
