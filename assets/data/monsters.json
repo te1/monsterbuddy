@@ -104,7 +104,7 @@
         "main": "Hakolo Island",
         "sub": "North Kamuna Cape"
       },
-      { "type": "eldersLair", "main": "Z1" } // TODO is this true?
+      { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 1,
     "monster": {
@@ -1027,7 +1027,8 @@
       { "type": "coopQuest", "main": "Woodland Den" },
       { "type": "coopQuest", "main": "Desert Den" },
       { "type": "coopQuest", "main": "Palamute Den" },
-      { "type": "coopQuest", "main": "Palamute Home" }
+      { "type": "coopQuest", "main": "Palamute Home" },
+      { "type": "eldersLair", "main": "Z3" }
     ],
     "rarity": 5,
     "related": [{ "type": "subspecies", "monster": "White Monoblos" }],
@@ -2987,7 +2988,8 @@
     "genus": "Piscine Wyvern",
     "habitat": "Lamure",
     "locations": [
-      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" }
+      { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" },
+      { "type": "eldersLair", "main": "Z3" }
     ],
     "rarity": 2,
     "monster": {
@@ -3285,7 +3287,8 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 5F" },
-      { "type": "coopQuest", "main": "Desert Den" }
+      { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "eldersLair", "main": "Z3" }
     ],
     "rarity": 6,
     "related": [
@@ -3340,7 +3343,6 @@
     }
   },
   {
-    // TODO hatch
     "no": 75,
     "name": "White Monoblos",
     "genus": "Flying Wyvern",
@@ -3383,26 +3385,26 @@
       "retreat": "**Defeat** using a **bow** while it is **paralyzed** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 7,
+          "speed": 5,
+          "recovery": 1,
+          "critRate": 8
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 8,
+          "fire": 6,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 4,
+          "water": 4,
+          "thunder": 3,
+          "ice": 4,
+          "dragon": 4
         }
       }
     }
@@ -4510,7 +4512,7 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO hatch
     "no": 100,
     "name": "Glavenus",
     "genus": "Brute Wyvern",
@@ -4603,7 +4605,6 @@
     }
   },
   {
-    // TODO defeat, hatch
     "no": 102,
     "name": "Bazelgeuse",
     "genus": "Flying Wyvern",
@@ -4646,26 +4647,26 @@
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 7,
+          "speed": 4,
+          "recovery": 3,
+          "critRate": 3
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 8,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 5,
+          "fire": 7,
+          "water": 5,
+          "thunder": 3,
+          "ice": 5,
+          "dragon": 5
         }
       }
     }
@@ -4776,7 +4777,6 @@
     }
   },
   {
-    // TODO defeat, hatch
     "no": 107,
     "name": "Sand Barioth",
     "genus": "Flying Wyvern",
@@ -4817,26 +4817,26 @@
       "retreat": "Break the **spikes** with an **ice element** **hunting horn** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 6,
+          "speed": 5,
+          "recovery": 4,
+          "critRate": 8
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 7,
+          "fire": 5,
+          "water": 5,
+          "thunder": 5,
+          "ice": 3,
+          "dragon": 5
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 7,
+          "fire": 5,
+          "water": 5,
+          "thunder": 5,
+          "ice": 3,
+          "dragon": 5
         }
       }
     }
@@ -4909,7 +4909,6 @@
     }
   },
   {
-    // TODO defeat, hatch
     "no": 109,
     "name": "Stygian Zinogre",
     "genus": "Fanged Wyvern",
@@ -4956,26 +4955,26 @@
       "retreat": "**Defeat** with a **thunder element attack** while it is afflicted with **Blastblight** to greatly boost the retreat rate.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 7,
+          "speed": 6,
+          "recovery": 5,
+          "critRate": 9
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 9
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 4,
+          "fire": 4,
+          "water": 4,
+          "thunder": 3,
+          "ice": 4,
+          "dragon": 6
         }
       }
     }
@@ -5126,7 +5125,7 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO hatch
     "no": 113,
     "name": "Azure Rathalos",
     "genus": "Flying Wyvern",
@@ -5198,7 +5197,7 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO hatch
     "no": 114,
     "name": "Pink Rathian",
     "genus": "Flying Wyvern",
@@ -5329,7 +5328,7 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO hatch
     "no": 116,
     "name": "Silverwind Nargacuga",
     "genus": "Flying Wyvern",
@@ -5562,7 +5561,7 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO hatch
     "no": 119,
     "name": "Grimclaw Tigrex",
     "genus": "Flying Wyvern",
@@ -6502,17 +6501,13 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO defeat
     "no": 132,
     "name": "Molten Tigrex",
     "genus": "Flying Wyvern",
     "habitat": "Lamure",
     "locations": [
-      {
-        "type": "catavanStand",
-        "main": "Lamure",
-        "sub": "Jalma Highlands" // is that true?
-      },
+      { "type": "catavanStand", "main": "Lamure", "sub": "Jalma Highlands" },
       { "type": "subQuest", "main": "Sky-Rending Roar" },
       { "type": "coopQuest", "main": "Molten Tigrex" },
       { "type": "coopQuest", "main": "Dragon Eggs", "finalNest": true }
@@ -6548,26 +6543,26 @@
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 8,
+          "speed": 5,
+          "recovery": 1,
+          "critRate": 6
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 10,
+          "fire": 7,
+          "water": 5,
+          "thunder": 7,
+          "ice": 7,
+          "dragon": 7
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 7,
+          "fire": 5,
+          "water": 3,
+          "thunder": 5,
+          "ice": 5,
+          "dragon": 5
         }
       }
     }
