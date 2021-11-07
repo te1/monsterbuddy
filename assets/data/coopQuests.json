@@ -80,6 +80,11 @@
     "name": "Deviant Den"
   },
   {
+    "type": "explore",
+    "rarity": 9,
+    "name": "Rare/Subspecies Den"
+  },
+  {
     "type": "slay",
     "rarity": 9,
     "name": "Nergigante"
@@ -138,6 +143,16 @@
     "type": "slay",
     "rarity": 9,
     "name": "Dreadking Rathalos"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Gold Rathian"
+  },
+  {
+    "type": "slay",
+    "rarity": 9,
+    "name": "Silver Rathalos"
   },
   {
     "type": "time",

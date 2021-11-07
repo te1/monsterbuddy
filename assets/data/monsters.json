@@ -1351,7 +1351,8 @@
     "rarity": 4,
     "related": [
       { "type": "subspecies", "monster": "Pink Rathian" },
-      { "type": "deviant", "monster": "Dreadqueen Rathian" }
+      { "type": "deviant", "monster": "Dreadqueen Rathian" },
+      { "type": "deviant", "monster": "Gold Rathian" }
     ],
     "monster": {
       "attackPatterns": {
@@ -3288,6 +3289,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Lamure Tower - 5F" },
       { "type": "coopQuest", "main": "Desert Den" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den" },
       { "type": "eldersLair", "main": "Z3" }
     ],
     "rarity": 6,
@@ -4275,6 +4277,7 @@
       { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "coopQuest", "main": "Thunder Eggs" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 6,
@@ -4924,6 +4927,7 @@
       { "type": "coopQuest", "main": "Dragon Eggs" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
       { "type": "coopQuest", "main": "Deviant Den" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 6,
@@ -5074,7 +5078,8 @@
     "rarity": 5,
     "related": [
       { "type": "subspecies", "monster": "Azure Rathalos" },
-      { "type": "deviant", "monster": "Dreadking Rathalos" }
+      { "type": "deviant", "monster": "Dreadking Rathalos" },
+      { "type": "deviant", "monster": "Silver Rathalos" }
     ],
     "monster": {
       "attackPatterns": {
@@ -5141,12 +5146,14 @@
       { "type": "coopQuest", "main": "Fated Four Den" },
       { "type": "coopQuest", "main": "Elder Dragon Den" },
       { "type": "coopQuest", "main": "Deviant Den" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 6,
     "related": [
       { "type": "subspeciesOf", "monster": "Rathalos" },
-      { "type": "deviant", "monster": "Dreadking Rathalos" }
+      { "type": "deviant", "monster": "Dreadking Rathalos" },
+      { "type": "deviant", "monster": "Silver Rathalos" }
     ],
     "monster": {
       "attackPatterns": {
@@ -5209,12 +5216,14 @@
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "coopQuest", "main": "Fire Eggs" },
       { "type": "coopQuest", "main": "Water Eggs" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den" },
       { "type": "eldersLair", "main": "Z1" }
     ],
     "rarity": 5,
     "related": [
       { "type": "subspeciesOf", "monster": "Rathian" },
-      { "type": "deviant", "monster": "Dreadqueen Rathian" }
+      { "type": "deviant", "monster": "Dreadqueen Rathian" },
+      { "type": "deviant", "monster": "Gold Rathian" }
     ],
     "monster": {
       "attackPatterns": {
@@ -5276,6 +5285,7 @@
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
       { "type": "coopQuest", "main": "Thunder Eggs" },
       { "type": "coopQuest", "main": "Ice Eggs" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den" },
       { "type": "eldersLair", "main": "Z5" }
     ],
     "rarity": 5,
@@ -5659,7 +5669,8 @@
     "tags": ["deviant"],
     "related": [
       { "type": "deviantOf", "monster": "Rathian" },
-      { "type": "subspecies", "monster": "Pink Rathian" }
+      { "type": "subspecies", "monster": "Pink Rathian" },
+      { "type": "deviant", "monster": "Gold Rathian" }
     ],
     "monster": {
       "attackPatterns": {
@@ -6447,7 +6458,8 @@
       { "type": "catavanStand", "main": "Loloska", "sub": "Loloska Forest" }, // is that true?
       { "type": "subQuest", "main": "Ice Phantom" },
       { "type": "coopQuest", "main": "Oroshi Kirin" },
-      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true }
+      { "type": "coopQuest", "main": "Elder Dragon Den", "finalNest": true },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6510,7 +6522,8 @@
       { "type": "catavanStand", "main": "Lamure", "sub": "Jalma Highlands" },
       { "type": "subQuest", "main": "Sky-Rending Roar" },
       { "type": "coopQuest", "main": "Molten Tigrex" },
-      { "type": "coopQuest", "main": "Dragon Eggs", "finalNest": true }
+      { "type": "coopQuest", "main": "Dragon Eggs", "finalNest": true },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den", "finalNest": true }
     ],
     "rarity": 7,
     "tags": ["deviant"],
@@ -6587,7 +6600,8 @@
     "tags": ["deviant"],
     "related": [
       { "type": "deviantOf", "monster": "Rathalos" },
-      { "type": "subspecies", "monster": "Azure Rathalos" }
+      { "type": "subspecies", "monster": "Azure Rathalos" },
+      { "type": "deviant", "monster": "Silver Rathalos" }
     ],
     "monster": {
       "attackPatterns": {
@@ -6635,6 +6649,141 @@
           "thunder": null,
           "ice": null,
           "dragon": null
+        }
+      }
+    }
+  },
+  {
+    // TODO defeat, hatch
+    "no": 134,
+    "name": "Gold Rathian",
+    "genus": "Flying Wyvern",
+    "habitat": "Alcala",
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Wendwood" },
+      { "type": "subQuest", "main": "Full Golden Moon" },
+      { "type": "coopQuest", "main": "Gold Rathian" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den", "finalNest": true }
+    ],
+    "rarity": 7,
+    "tags": ["deviant"],
+    "related": [
+      { "type": "deviantOf", "monster": "Rathian" },
+      { "type": "subspecies", "monster": "Pink Rathian" },
+      { "type": "deviant", "monster": "Dreadqueen Rathian" }
+    ],
+    "monster": {
+      "attackPatterns": {
+        "DEFAULT": "speed",
+        "Enraged": "power"
+      },
+      "parts": {
+        "DEFAULT": ["pierce", "blunt"],
+        "Head": ["slash", "blunt"],
+        "Stomach": ["pierce", "blunt"],
+        "Tail": ["slash", "blunt"]
+      },
+      "elementalWeakness": "thunder"
+    },
+    "hatchable": true,
+    "monstie": {
+      "attackType": "speed",
+      "growth": "slow",
+      "ridingActions": ["Nest Search"],
+      "kinshipSkill": "Scorching Slice",
+      "eggColors": ["yellow"],
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": 8,
+          "speed": 5,
+          "recovery": 10,
+          "critRate": 8
+        },
+        "attack": {
+          "none": 6,
+          "fire": 8,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
+        },
+        "defense": {
+          "none": 6,
+          "fire": 9,
+          "water": 6,
+          "thunder": 4,
+          "ice": 6,
+          "dragon": 6
+        }
+      }
+    }
+  },
+  {
+    // TODO defeat, hatch
+    "no": 135,
+    "name": "Silver Rathalos",
+    "genus": "Flying Wyvern",
+    "habitat": "Alcala",
+    "locations": [
+      { "type": "catavanStand", "main": "Alcala", "sub": "Etulle Lofty Trees" },
+      { "type": "subQuest", "main": "Shining Silver Sun" },
+      { "type": "coopQuest", "main": "Silver Rathalos" },
+      { "type": "coopQuest", "main": "Rare/Subspecies Den", "finalNest": true }
+    ],
+    "rarity": 7,
+    "tags": ["deviant"],
+    "related": [
+      { "type": "deviantOf", "monster": "Rathalos" },
+      { "type": "subspecies", "monster": "Azure Rathalos" },
+      { "type": "deviant", "monster": "Dreadking Rathalos" }
+    ],
+    "monster": {
+      "attackPatterns": {
+        "DEFAULT": "power",
+        "Enraged": "power",
+        "Flying": "speed",
+        "Flying Enraged": "technical"
+      },
+      "parts": {
+        "DEFAULT": ["slash", "blunt"],
+        "Head": ["slash"],
+        "Stomach": ["slash", "blunt"],
+        "Tail": ["slash", "blunt"],
+        "Wings": ["slash", "pierce"]
+      },
+      "elementalWeakness": "water"
+    },
+    "hatchable": true,
+    "monstie": {
+      "attackType": "power",
+      "growth": "slow",
+      "ridingActions": ["Fly"],
+      "kinshipSkill": "Sky-High Dive",
+      "eggColors": ["gray", "blue", "purple"],
+      "retreat": "This monster **cannot** be chased back to its den.",
+      "stats": {
+        "base": {
+          "maxHp": 8,
+          "speed": 5,
+          "recovery": 5,
+          "critRate": 8
+        },
+        "attack": {
+          "none": 7,
+          "fire": 10,
+          "water": 5,
+          "thunder": 7,
+          "ice": 7,
+          "dragon": 7
+        },
+        "defense": {
+          "none": 6,
+          "fire": 8,
+          "water": 4,
+          "thunder": 6,
+          "ice": 6,
+          "dragon": 6
         }
       }
     }

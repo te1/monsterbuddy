@@ -24,7 +24,10 @@ export function deepFreeze(object) {
 }
 
 export function makeSlug(text) {
-  return text.replace(/ /g, '-').replace(/\(|\)/g, '').toLowerCase();
+  return text
+    .replace(/( |\/)/g, '-')
+    .replace(/\(|\)/g, '')
+    .toLowerCase();
 }
 
 export function formatMonsterNo(no, withHash = true) {
