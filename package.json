@@ -31,7 +31,7 @@
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/tailwindcss": "^4.2.0",
+    "@nuxtjs/tailwindcss": "^5.0.2",
     "babel-plugin-lodash": "^3.3.4",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
