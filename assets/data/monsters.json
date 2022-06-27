@@ -2588,7 +2588,7 @@
     },
     "hatchable": true,
     "monstie": {
-      "attackType": "technical",
+      "attackType": "speed",
       "growth": "quick",
       "ridingActions": ["Fly", "Rock Breaker"],
       "kinshipSkill": "Ground Cyclone",
