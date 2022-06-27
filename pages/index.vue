@@ -5,7 +5,7 @@
     <main class="max-w-screen-lg mx-auto">
       <div class="flex flex-col gap-6 lg:flex-col-reverse">
         <p class="text-base text-justify">
-          <b>Monster Buddy</b> is a companion app for Monster Hunter Stories 2: Wings of Ruin can help you to learn or remember information useful during combat and general gameplay. It's not a complete guide, walkthrough or advanced character / gene planner (yet).
+          <b>Monster Buddy</b> is a companion app for Monster Hunter Stories 2: Wings of Ruin that can help you learn or remember information useful during combat and general gameplay. It's not a complete guide, walkthrough or advanced character / gene planner (yet).
         </p>
 
         <div class="flex flex-col items-center">
