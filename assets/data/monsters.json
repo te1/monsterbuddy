@@ -1026,7 +1026,6 @@
       },
       { "type": "coopQuest", "main": "Woodland Den" },
       { "type": "coopQuest", "main": "Desert Den" },
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "eldersLair", "main": "Z3" }
     ],
@@ -2566,7 +2565,6 @@
         "sub": "Loloska Rocky Canyon"
       },
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "coopQuest", "main": "Ice Eggs" },
       { "type": "eldersLair", "main": "Z5" }
@@ -2632,6 +2630,7 @@
         "sub": "Lavina Glacial Peaks"
       },
       { "type": "coopQuest", "main": "Snowy Mt. Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Ice Eggs" }
     ],
     "rarity": 4,
@@ -3165,6 +3164,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Water Eggs" }
     ],
     "rarity": 5,
@@ -3477,6 +3477,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "coopQuest", "main": "Flowery Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Water Eggs" },
       { "type": "eldersLair", "main": "Z1" }
     ],
@@ -3771,6 +3772,7 @@
     "habitat": "Lamure",
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Sadona Barrens" },
+      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "eldersLair", "main": "Z8" }
     ],
     "rarity": 3,
@@ -4215,6 +4217,7 @@
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "coopQuest", "main": "Volcanic Den" },
+      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Fire Eggs" },
       { "type": "eldersLair", "main": "Z6" }
     ],
@@ -4274,7 +4277,6 @@
     "locations": [
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" },
       { "type": "coopQuest", "main": "Volcanic Den" },
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "coopQuest", "main": "Thunder Eggs" },
       { "type": "coopQuest", "main": "Rare/Subspecies Den" },
@@ -4791,7 +4793,6 @@
         "sub": "Forbidden Grounds"
       },
       { "type": "coopQuest", "main": "Jungle Den" },
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "eldersLair", "main": "Z9" }
     ],
@@ -5212,7 +5213,6 @@
     "locations": [
       { "type": "catavanStand", "main": "Lamure", "sub": "Pomore Garden" },
       { "type": "coopQuest", "main": "Flowery Den" },
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" },
       { "type": "coopQuest", "main": "Fire Eggs" },
       { "type": "coopQuest", "main": "Water Eggs" },
@@ -6853,7 +6853,6 @@
     "genus": "Fanged Beast",
     "habitat": null,
     "locations": [
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
@@ -6911,7 +6910,6 @@
     "genus": "Fanged Beast",
     "habitat": null,
     "locations": [
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
@@ -6969,7 +6967,6 @@
     "genus": "Fanged Beast",
     "habitat": null,
     "locations": [
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
@@ -7027,7 +7024,6 @@
     "genus": "Fanged Beast",
     "habitat": null,
     "locations": [
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
@@ -7085,7 +7081,6 @@
     "genus": "Fanged Beast",
     "habitat": null,
     "locations": [
-      { "type": "coopQuest", "main": "Palamute Den" },
       { "type": "coopQuest", "main": "Palamute Home" }
     ],
     "rarity": 5,
