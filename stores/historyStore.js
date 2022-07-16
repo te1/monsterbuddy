@@ -26,6 +26,8 @@ function pull(array, item) {
 }
 
 const useHistoryStore = defineStore({
+  id: 'history',
+
   state() {
     return {
       lastList: null,

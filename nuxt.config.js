@@ -99,6 +99,14 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  /**
+   * Temporary workaround for @nuxt-community/tailwindcss-module.
+   *
+   * Reported: 2022-05-23
+   * See: [Issue tracker](https://github.com/nuxt-community/tailwindcss-module/issues/480)
+   */
+  devServerHandlers: [],
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -116,7 +124,7 @@ export default {
     // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
     '@nuxtjs/composition-api/module',
 
-    'pinia/nuxt',
+    '@pinia/nuxt',
 
     '~/modules/sitemapRouteGenerator',
   ],
@@ -161,11 +169,18 @@ export default {
     },
 
     extend(config) {
-      config.module.rules.push({
-        test: /\.json$/i,
-        loader: 'json5-loader',
-        type: 'javascript/auto',
-      });
+      config.module.rules.push(
+        {
+          test: /\.json$/i,
+          loader: 'json5-loader',
+          type: 'javascript/auto',
+        },
+        {
+          include: /node_modules/u,
+          test: /\.mjs$/u,
+          type: 'javascript/auto',
+        }
+      );
     },
   },
 
