@@ -1,9 +1,17 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: {
-    safelist: ['nuxt-progress'],
-  },
+  mode: 'jit',
+  content: [
+    'components/**/*.{vue,js}',
+    'layouts/**/*.vue',
+    'pages/**/*.vue',
+    'composables/**/*.{js,ts}',
+    'plugins/**/*.{js,ts}',
+    'App.{js,ts,vue}',
+    'app.{js,ts,vue}',
+  ],
+  safelist: ['nuxt-progress'],
   darkMode: 'class',
   theme: {
     colors: {
