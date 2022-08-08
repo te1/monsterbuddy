@@ -40,7 +40,7 @@
     "eslint-plugin-nuxt": "^3.2.0",
     "eslint-plugin-vue": "^9.3.0",
     "json5-loader": "^4.0.1",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "prettier": "^2.7.1"
   }
 }
