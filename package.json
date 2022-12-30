@@ -22,7 +22,7 @@
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "10.4.13",
-    "core-js": "^3.27.0",
+    "core-js": "^3.27.1",
     "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
     "pinia": "^2.0.16"
