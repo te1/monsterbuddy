@@ -20,7 +20,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@pinia/nuxt": "^0.2.1",
     "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.8",
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "10.4.13",
     "core-js": "^3.27.1",
     "lodash": "^4.17.21",
