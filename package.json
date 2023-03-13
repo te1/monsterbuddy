@@ -31,7 +31,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/eslint-config": "^12.0.0",
-    "@nuxtjs/eslint-module": "^4.0.1",
+    "@nuxtjs/eslint-module": "^4.0.2",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "babel-plugin-lodash": "^3.3.4",
