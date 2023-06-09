@@ -28,7 +28,7 @@
     "pinia": "^2.0.16"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.21.8",
+    "@babel/eslint-parser": "^7.22.5",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.1.0",
