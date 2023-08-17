@@ -41,6 +41,6 @@
     "eslint-plugin-vue": "^9.17.0",
     "json5-loader": "^4.0.1",
     "postcss": "^8.4.28",
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.2"
   }
 }
