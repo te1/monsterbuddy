@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.15",
-    "@nuxtjs/color-mode": "^2.1.1",
+    "@nuxtjs/color-mode": "^3.0.0",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/pwa": "^3.3.5",
