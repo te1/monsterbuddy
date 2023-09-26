@@ -2,6 +2,9 @@
   "name": "monsterbuddy",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": ">=14 <=16"
+  },
   "scripts": {
     "dev": "nuxt --spa",
     "build": "nuxt build",
