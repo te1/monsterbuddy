@@ -43,7 +43,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.17.0",
     "json5-loader": "^4.0.1",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "prettier": "^2.8.8"
   }
 }
