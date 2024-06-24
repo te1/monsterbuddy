@@ -33,7 +33,7 @@ _.forEach(sortedRidingActions, (ridingAction) => {
 });
 deepFreeze(sortedRidingActions);
 
-export { monsters, coopQuests, sortedRidingActions };
+export { monsters, coopQuests, sortedHabitats, sortedRidingActions };
 export const monstersByNo = Object.freeze(_.keyBy(monsters, 'no'));
 export const monstersByName = Object.freeze(_.keyBy(monsters, 'name'));
 export const monstersBySlug = Object.freeze(_.keyBy(monsters, 'slug'));

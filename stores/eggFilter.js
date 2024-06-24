@@ -2,7 +2,7 @@ import { makeMonsterFilterStore } from './base';
 import { monsties } from '~/services/data';
 
 const initial = {
-  sortKey: 'no',
+  sortKey: 'habitat',
   sortOrder: 'asc',
 };
 

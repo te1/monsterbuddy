@@ -21,6 +21,7 @@ import {
   getMonstiesByEggColors,
   getMonstersByHatchable,
   getMonstersByIsDeviant,
+  sortedHabitats,
 } from '~/services/data';
 import { formatAttackType, formatElement } from '~/services/utils';
 
@@ -179,12 +180,29 @@ export function makeMonsterFilterStore(
           return result;
         }
 
+        let getSortValue;
+
+        switch (this.sortKey) {
+          case 'habitat':
+            getSortValue = (item) => {
+              const habitat = _.get(item, this.sortKey);
+              return (
+                _.find(sortedHabitats, { name: habitat })?.sortOrder ?? habitat
+              );
+            };
+            break;
+
+          default:
+            getSortValue = (item) => _.get(item, this.sortKey);
+            break;
+        }
+
         let value;
 
         return _.orderBy(
           result,
           (item) => {
-            value = _.get(item, this.sortKey);
+            value = getSortValue(item);
 
             if (value == null || value === '?') {
               return -Infinity;
