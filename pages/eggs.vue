@@ -270,7 +270,7 @@ export default {
         results.push('recent');
       }
 
-      if (this.history.hasPinnedMonsters) {
+      if (this.history.hasPinnedEggs) {
         results.push('pinned');
       }
 
