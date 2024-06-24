@@ -1,24 +1,15 @@
 <template>
   <div>
-    <h1 class="sr-only">
-      Eggs
-    </h1>
+    <h1 class="sr-only">Eggs</h1>
 
-    <AppTopBar
-      :showBack="showFilter"
-      backFallback="/eggs/"
-      :heading="heading"
-    >
+    <AppTopBar :showBack="showFilter" backFallback="/eggs/" :heading="heading">
       <AppSearchBox
         v-if="!showFilter && !showRecentOrPinned && !showEggFinder"
         v-model="eggFilter.nameFilter"
       />
     </AppTopBar>
 
-    <NuxtLink
-      :to="fabFilterTarget"
-      @click.native="toggleFilter"
-    >
+    <NuxtLink :to="fabFilterTarget" @click.native="toggleFilter">
       <AppFloatingButton :title="fabFilterTitle">
         <FaIcon :icon="fabFilterIcon" />
       </AppFloatingButton>
@@ -44,12 +35,16 @@
 
     <NuxtChild v-show="!leaving && showFilter" />
 
+    <Mhst1Banner v-show="leaving || !showFilter" class="mb-3" />
+
     <main v-show="leaving || !showFilter">
       <div
         v-if="showActiveFilters"
         class="fixed z-20 w-full inset-x-0 top-12 mt-1"
       >
-        <div class="container px-4 flex flex-wrap gap-2 items-center justify-center">
+        <div
+          class="container px-4 flex flex-wrap gap-2 items-center justify-center"
+        >
           <AppFilterPill
             v-if="eggFilter.hasActiveSort"
             :caption="eggFilter.activeSort.caption"
@@ -68,14 +63,8 @@
         </div>
       </div>
 
-      <ul
-        v-if="showEggFinder"
-        class="mt-1 grid gap-3 grid-cols-2"
-      >
-        <li
-          v-for="genus in genera"
-          :key="genus"
-        >
+      <ul v-if="showEggFinder" class="mt-1 grid gap-3 grid-cols-2">
+        <li v-for="genus in genera" :key="genus">
           <EggGridItem
             :genus="genus"
             class="box box-link px-1 overflow-hidden cursor-pointer"
@@ -89,12 +78,9 @@
         class="space-y-5"
         :class="{ 'mt-8': showActiveFilters }"
       >
-        <li
-          v-for="(group, key) in groupedMonsters"
-          :key="key"
-        >
+        <li v-for="(group, key) in groupedMonsters" :key="key">
           <div
-            v-if="eggFilter.isGrouped  && !showRecentOrPinned"
+            v-if="eggFilter.isGrouped && !showRecentOrPinned"
             class="sticky top-12 z-10 flex items-center -mx-1 px-1 -mt-3 -mb-1 py-1 border-t bg-gray-300 border-gray-300 dark:bg-cool-700 dark:border-cool-700"
           >
             <FaIcon
@@ -109,16 +95,10 @@
               :icon="['fas', 'map-marker-alt']"
             />
 
-            <div
-              class="font-semibold mb-1"
-              v-text="key"
-            />
+            <div class="font-semibold mb-1" v-text="key" />
           </div>
 
-          <div
-            v-if="mode === 'compact'"
-            class="mt-1 grid gap-3 grid-cols-2"
-          >
+          <div v-if="mode === 'compact'" class="mt-1 grid gap-3 grid-cols-2">
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"
@@ -158,239 +138,239 @@
 </template>
 
 <script>
-  import _ from 'lodash';
-  import { mapStores } from 'pinia';
-  import useEggFilter from '~/stores/eggFilter';
-  import { makeHead } from '~/services/utils';
-  import { getGenera, monsties } from '~/services/data';
+import _ from 'lodash';
+import { mapStores } from 'pinia';
+import useEggFilter from '~/stores/eggFilter';
+import { makeHead } from '~/services/utils';
+import { getGenera, monsties } from '~/services/data';
 
-  export default {
-    name: 'PageEggs',
+export default {
+  name: 'PageEggs',
 
-    provide: {
-      useFilterStore: useEggFilter,
+  provide: {
+    useFilterStore: useEggFilter,
+  },
+
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.leaving = false;
+      vm.$useHistoryStore().lastList = 'eggs';
+    });
+  },
+
+  beforeRouteLeave(to, from, next) {
+    this.leaving = true;
+    next();
+  },
+
+  data() {
+    return {
+      genera: getGenera(monsties),
+      leaving: false,
+      display: null,
+      showEggFinder: false,
+    };
+  },
+
+  head() {
+    return makeHead({
+      title: 'Monster Buddy - Egg List For Monster Hunter Stories 2',
+      description:
+        'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
+      canonical: 'https://monsterbuddy.app/eggs/',
+    });
+  },
+
+  computed: {
+    ...mapStores(useEggFilter),
+
+    history() {
+      return this.$useHistoryStore();
     },
 
-    beforeRouteEnter(to, from, next) {
-      next((vm) => {
-        vm.leaving = false;
-        vm.$useHistoryStore().lastList = 'eggs';
-      });
+    mode() {
+      if (this.display === 'pinned') {
+        return 'compact';
+      }
+      return this.eggFilter.mode;
     },
 
-    beforeRouteLeave(to, from, next) {
-      this.leaving = true;
-      next();
+    showFilter() {
+      // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
+      return this.$route?.path === '/eggs/filter/';
     },
 
-    data() {
-      return {
-        genera: getGenera(monsties),
-        leaving: false,
-        display: null,
-        showEggFinder: false,
-      };
+    showActiveFilters() {
+      return (
+        (this.eggFilter.hasActiveSort || this.eggFilter.hasActiveFilters) &&
+        !this.showRecentOrPinned &&
+        !this.showEggFinder
+      );
     },
 
-    head() {
-      return makeHead({
-        title: 'Monster Buddy - Egg List For Monster Hunter Stories 2',
-        description:
-          'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
-        canonical: 'https://monsterbuddy.app/eggs/',
-      });
+    showRecentOrPinned() {
+      return this.display === 'recent' || this.display === 'pinned';
     },
 
-    computed: {
-      ...mapStores(useEggFilter),
+    groupedMonsters() {
+      if (this.display === 'recent') {
+        return {
+          all: this.history.recentMonsties,
+        };
+      }
+      if (this.display === 'pinned') {
+        return {
+          all: this.history.pinnedEggs,
+        };
+      }
+      return this.eggFilter.groupedMonsters;
+    },
 
-      history() {
-        return this.$useHistoryStore();
-      },
+    heading() {
+      if (this.showFilter) {
+        return 'View Options';
+      }
+      if (this.showEggFinder) {
+        return 'Egg Finder';
+      }
+      if (this.display === 'recent') {
+        return 'Recent Eggs';
+      }
+      if (this.display === 'pinned') {
+        return 'Bookmarked Eggs';
+      }
+      return null;
+    },
 
-      mode() {
-        if (this.display === 'pinned') {
-          return 'compact';
-        }
-        return this.eggFilter.mode;
-      },
+    fabFilterTarget() {
+      if (this.showFilter) {
+        return '/eggs/';
+      }
+      return '/eggs/filter/';
+    },
 
-      showFilter() {
-        // workaround for <NuxtChild> not playing nice with <Nuxt keep-alive>
-        return this.$route?.path === '/eggs/filter/';
-      },
+    fabFilterTitle() {
+      if (this.showFilter) {
+        return 'Apply';
+      }
+      return 'View options';
+    },
 
-      showActiveFilters() {
-        return (
-          (this.eggFilter.hasActiveSort || this.eggFilter.hasActiveFilters) &&
-          !this.showRecentOrPinned &&
-          !this.showEggFinder
-        );
-      },
+    fabFilterIcon() {
+      if (this.showFilter) {
+        return ['fas', 'check'];
+      }
+      return ['fas', 'sliders-h'];
+    },
 
-      showRecentOrPinned() {
-        return this.display === 'recent' || this.display === 'pinned';
-      },
+    displays() {
+      let results = ['default'];
 
-      groupedMonsters() {
-        if (this.display === 'recent') {
-          return {
-            all: this.history.recentMonsties,
-          };
-        }
-        if (this.display === 'pinned') {
-          return {
-            all: this.history.pinnedEggs,
-          };
-        }
-        return this.eggFilter.groupedMonsters;
-      },
+      if (this.history.hasRecentMonsties) {
+        results.push('recent');
+      }
 
-      heading() {
-        if (this.showFilter) {
-          return 'View Options';
-        }
-        if (this.showEggFinder) {
-          return 'Egg Finder';
-        }
-        if (this.display === 'recent') {
-          return 'Recent Eggs';
-        }
-        if (this.display === 'pinned') {
-          return 'Bookmarked Eggs';
-        }
-        return null;
-      },
+      if (this.history.hasPinnedMonsters) {
+        results.push('pinned');
+      }
 
-      fabFilterTarget() {
-        if (this.showFilter) {
-          return '/eggs/';
-        }
-        return '/eggs/filter/';
-      },
+      return results;
+    },
 
-      fabFilterTitle() {
-        if (this.showFilter) {
-          return 'Apply';
-        }
-        return 'View options';
-      },
+    nextDisplay() {
+      let currentIndex = _.indexOf(this.displays, this.display);
+      let nextIndex = (currentIndex + 1) % this.displays.length;
 
-      fabFilterIcon() {
-        if (this.showFilter) {
-          return ['fas', 'check'];
-        }
-        return ['fas', 'sliders-h'];
-      },
+      return this.displays[nextIndex];
+    },
 
-      displays() {
-        let results = ['default'];
+    fabDisplayVisible() {
+      return !this.showFilter && this.displays.length > 1;
+    },
 
-        if (this.history.hasRecentMonsties) {
-          results.push('recent');
-        }
-
-        if (this.history.hasPinnedMonsters) {
-          results.push('pinned');
-        }
-
-        return results;
-      },
-
-      nextDisplay() {
-        let currentIndex = _.indexOf(this.displays, this.display);
-        let nextIndex = (currentIndex + 1) % this.displays.length;
-
-        return this.displays[nextIndex];
-      },
-
-      fabDisplayVisible() {
-        return !this.showFilter && this.displays.length > 1;
-      },
-
-      fabDisplayTitle() {
-        switch (this.nextDisplay) {
-          case 'default':
-            return 'Show all eggs';
-
-          case 'recent':
-            return 'Show recent eggs ';
-
-          case 'pinned':
-            return 'Show bookmarked eggs';
-
-          default:
-            return null;
-        }
-      },
-
-      fabDisplayIcon() {
-        switch (this.nextDisplay) {
-          case 'default':
-            return ['fas', 'times'];
-
-          case 'recent':
-            return ['fas', 'history'];
-
-          case 'pinned':
-            return ['fas', 'bookmark'];
-
-          default:
-            return null;
-        }
-      },
-
-      fabEggFinderVisible() {
-        return !this.showFilter;
-      },
-
-      fabEggFinderTitle() {
-        if (this.showEggFinder) {
+    fabDisplayTitle() {
+      switch (this.nextDisplay) {
+        case 'default':
           return 'Show all eggs';
-        }
-        return 'Show egg finder';
-      },
 
-      fabEggFinderIcon() {
-        if (this.showEggFinder) {
+        case 'recent':
+          return 'Show recent eggs ';
+
+        case 'pinned':
+          return 'Show bookmarked eggs';
+
+        default:
+          return null;
+      }
+    },
+
+    fabDisplayIcon() {
+      switch (this.nextDisplay) {
+        case 'default':
           return ['fas', 'times'];
-        }
-        return ['fas', 'egg'];
-      },
+
+        case 'recent':
+          return ['fas', 'history'];
+
+        case 'pinned':
+          return ['fas', 'bookmark'];
+
+        default:
+          return null;
+      }
     },
 
-    created() {
-      this.toggleDisplay();
+    fabEggFinderVisible() {
+      return !this.showFilter;
     },
 
-    methods: {
-      toggleFilter() {
-        this.display = 'default';
-        this.showEggFinder = false;
-      },
-
-      toggleDisplay() {
-        this.display = this.nextDisplay;
-        this.showEggFinder = false;
-
-        if (typeof window !== 'undefined') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      },
-
-      toggleEggFinder() {
-        this.showEggFinder = !this.showEggFinder;
-        this.display = 'default';
-
-        if (typeof window !== 'undefined') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      },
-
-      setGenusFilter(genus) {
-        this.toggleEggFinder();
-        this.eggFilter.genusFilter = genus;
-      },
+    fabEggFinderTitle() {
+      if (this.showEggFinder) {
+        return 'Show all eggs';
+      }
+      return 'Show egg finder';
     },
-  };
+
+    fabEggFinderIcon() {
+      if (this.showEggFinder) {
+        return ['fas', 'times'];
+      }
+      return ['fas', 'egg'];
+    },
+  },
+
+  created() {
+    this.toggleDisplay();
+  },
+
+  methods: {
+    toggleFilter() {
+      this.display = 'default';
+      this.showEggFinder = false;
+    },
+
+    toggleDisplay() {
+      this.display = this.nextDisplay;
+      this.showEggFinder = false;
+
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    },
+
+    toggleEggFinder() {
+      this.showEggFinder = !this.showEggFinder;
+      this.display = 'default';
+
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    },
+
+    setGenusFilter(genus) {
+      this.toggleEggFinder();
+      this.eggFilter.genusFilter = genus;
+    },
+  },
+};
 </script>

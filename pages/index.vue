@@ -41,13 +41,7 @@
         </div>
       </div>
 
-      <div class="note mt-6 lg:mt-4 px-4 py-3">
-        Looking for info on
-        <strong>Monster Hunter Stories 1 / Remake</strong> instead? Check out
-        <a class="link" href="https://mhst1.monsterbuddy.app" target="_blank">
-          Monster Buddy for MHST1</a
-        >.
-      </div>
+      <Mhst1Banner class="mt-6 lg:mt-4" force />
 
       <div class="prose prose-sm dark:prose-dark max-w-none">
         <div class="grid lg:grid-cols-2 lg:gap-8">

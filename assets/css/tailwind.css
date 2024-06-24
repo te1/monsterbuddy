@@ -31,7 +31,7 @@
   }
 
   .note {
-    @apply rounded shadow bg-white dark:bg-cool-800;
+    @apply rounded shadow;
   }
 
   .input {

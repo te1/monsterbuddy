@@ -15,6 +15,7 @@ const storageKeyRecentMonsterSlugs = 'history.recentMonsterSlugs';
 const storageKeyPinnedMonsterSlugs = 'history.pinnedMonsterSlugs';
 const storageKeyPinnedMonstieSlugs = 'history.pinnedMonstieSlugs';
 const storageKeyPinnedEggSlugs = 'history.pinnedEggSlugs';
+const storageKeyMhst1Banner = 'history.mhst1Banner';
 
 function pull(array, item) {
   // _.pull doesn't work with vue 2.x reactivity
@@ -35,6 +36,7 @@ const useHistoryStore = defineStore({
       pinnedMonsterSlugs: [],
       pinnedMonstieSlugs: [],
       pinnedEggSlugs: [],
+      showMhst1Banner: true,
     };
   },
 
@@ -174,6 +176,10 @@ const useHistoryStore = defineStore({
         storageKeyPinnedEggSlugs,
         this.pinnedEggSlugs
       );
+      this.showMhst1Banner = storage.get(
+        storageKeyMhst1Banner,
+        this.showMhst1Banner
+      );
     },
 
     addRecentMonster(slug) {
@@ -219,6 +225,12 @@ const useHistoryStore = defineStore({
 
       storage.set(storageKeyPinnedEggSlugs, this.pinnedEggSlugs);
     },
+  },
+
+  hideMhst1Banner() {
+    this.showMhst1Banner = false;
+
+    storage.set(storageKeyMhst1Banner, this.showMhst1Banner);
   },
 });
 
