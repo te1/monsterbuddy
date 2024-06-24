@@ -4195,6 +4195,7 @@
       { "type": "catavanStand", "main": "Terga", "sub": "Terga Volcano Base" }
     ],
     "rarity": 4,
+    "related": [{ "type": "subspecies", "monster": "Glacial Agnaktor" }],
     "monster": {
       "attackPatterns": {
         "DEFAULT": "speed",
@@ -6852,9 +6853,7 @@
     "name": "Palamute (Fire)",
     "genus": "Fanged Beast",
     "habitat": null,
-    "locations": [
-      { "type": "coopQuest", "main": "Palamute Home" }
-    ],
+    "locations": [{ "type": "coopQuest", "main": "Palamute Home" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -6909,9 +6908,7 @@
     "name": "Palamute (Water)",
     "genus": "Fanged Beast",
     "habitat": null,
-    "locations": [
-      { "type": "coopQuest", "main": "Palamute Home" }
-    ],
+    "locations": [{ "type": "coopQuest", "main": "Palamute Home" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -6966,9 +6963,7 @@
     "name": "Palamute (Thunder)",
     "genus": "Fanged Beast",
     "habitat": null,
-    "locations": [
-      { "type": "coopQuest", "main": "Palamute Home" }
-    ],
+    "locations": [{ "type": "coopQuest", "main": "Palamute Home" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -7023,9 +7018,7 @@
     "name": "Palamute (Ice)",
     "genus": "Fanged Beast",
     "habitat": null,
-    "locations": [
-      { "type": "coopQuest", "main": "Palamute Home" }
-    ],
+    "locations": [{ "type": "coopQuest", "main": "Palamute Home" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
@@ -7080,9 +7073,7 @@
     "name": "Palamute (Dragon)",
     "genus": "Fanged Beast",
     "habitat": null,
-    "locations": [
-      { "type": "coopQuest", "main": "Palamute Home" }
-    ],
+    "locations": [{ "type": "coopQuest", "main": "Palamute Home" }],
     "rarity": 5,
     "related": [
       { "type": "element", "monster": "Palamute (Normal)" },
