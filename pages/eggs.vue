@@ -4,7 +4,7 @@
 
     <AppTopBar :showBack="showFilter" backFallback="/eggs/" :heading="heading">
       <AppSearchBox
-        v-if="!showFilter && !showRecentOrPinned && !showEggFinder"
+        v-show="!showFilter && !showRecentOrPinned && !showEggFinder"
         v-model="eggFilter.nameFilter"
       />
     </AppTopBar>
@@ -16,7 +16,7 @@
     </NuxtLink>
 
     <AppFloatingButton
-      v-if="fabDisplayVisible"
+      v-show="fabDisplayVisible"
       :title="fabDisplayTitle"
       secondary
       @click="toggleDisplay"

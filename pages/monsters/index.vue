@@ -8,7 +8,7 @@
       :heading="heading"
     >
       <AppSearchBox
-        v-if="!showFilter && !showRecentOrPinned"
+        v-show="!showFilter && !showRecentOrPinned"
         v-model="monsterFilter.nameFilter"
       />
     </AppTopBar>
@@ -20,7 +20,7 @@
     </NuxtLink>
 
     <AppFloatingButton
-      v-if="fabDisplayVisible"
+      v-show="fabDisplayVisible"
       :title="fabDisplayTitle"
       secondary
       @click="toggleDisplay"
