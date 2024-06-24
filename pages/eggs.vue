@@ -63,7 +63,10 @@
         </div>
       </div>
 
-      <ul v-if="showEggFinder" class="mt-1 grid gap-3 grid-cols-2">
+      <ul
+        v-if="showEggFinder"
+        class="mt-1 grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+      >
         <li v-for="genus in genera" :key="genus">
           <EggGridItem
             :genus="genus"
@@ -98,7 +101,10 @@
             <div class="font-semibold mb-1" v-text="key" />
           </div>
 
-          <div v-if="mode === 'compact'" class="mt-1 grid gap-3 grid-cols-2">
+          <div
+            v-if="mode === 'compact'"
+            class="mt-1 grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+          >
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"
