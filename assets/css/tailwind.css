@@ -30,6 +30,10 @@
     @apply transition-opacity-slow-interactive hover:opacity-75 active:opacity-50;
   }
 
+  .note {
+    @apply rounded shadow bg-white dark:bg-cool-800;
+  }
+
   .input {
     @apply rounded border-0 text-gray-700 placeholder-gray-500 bg-gray-200 dark:text-cool-200 dark:placeholder-cool-400 dark:bg-cool-600 focus:outline-none focus:ring-0;
   }
