@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="show"
+    v-show="show || force"
     class="note flex gap-3 bg-[#fef9c3] dark:bg-[#eab308]/25 px-4 py-3"
   >
     <div class="flex-1">

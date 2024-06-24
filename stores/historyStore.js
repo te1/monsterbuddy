@@ -225,12 +225,12 @@ const useHistoryStore = defineStore({
 
       storage.set(storageKeyPinnedEggSlugs, this.pinnedEggSlugs);
     },
-  },
 
-  hideMhst1Banner() {
-    this.showMhst1Banner = false;
+    hideMhst1Banner() {
+      this.showMhst1Banner = false;
 
-    storage.set(storageKeyMhst1Banner, this.showMhst1Banner);
+      storage.set(storageKeyMhst1Banner, this.showMhst1Banner);
+    },
   },
 });
 
