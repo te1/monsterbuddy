@@ -6,6 +6,7 @@ https://monsterbuddy.app
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/48aafaed-bd5a-4a84-850f-f7132164d207/deploy-status)](https://app.netlify.com/sites/monsterbuddy/deploys)
 
+Looking for info on Monster Hunter Stories 1 / Remaster instead? Check https://mhst1.monsterbuddy.app
 
 ## Features
 
@@ -16,7 +17,6 @@ https://monsterbuddy.app
 - Elder's Lair with list of monsters by floor
 - Co-Op quests with list of eggs by den
 - Riding action list and related monsties
-
 
 ## Sources for data and images
 
@@ -36,7 +36,6 @@ https://monsterbuddy.app
 See [assets/data/monsters.json](https://github.com/te1/monsterbuddy/blob/main/assets/data/monsters.json) for the collected data.
 
 See [monsterbuddy-assets](https://github.com/te1/monsterbuddy-assets) for more details on images.
-
 
 ## Disclaimer
 
