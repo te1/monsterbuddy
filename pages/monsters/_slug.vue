@@ -4,32 +4,35 @@
 
     <Mhst1Banner class="mb-3" />
 
-    <main class="space-y-3">
-      <MonsterInfoCard class="box px-4 py-2" :monster="monster" />
+    <main class="grid gap-3 grid-cols-1 lg:grid-cols-2">
+      <MonsterInfoCard class="box px-4 py-2 order-1" :monster="monster" />
 
-      <MonsterCombatCard class="box px-4 py-2" :monster="monster" />
+      <MonsterCombatCard class="box px-4 py-2 order-2" :monster="monster" />
 
       <MonstieEggCard
         v-if="monster.hatchable"
-        class="box px-1 py-2"
+        class="box px-1 py-2 order-3"
         :monster="monster"
       />
 
-      <MonsterImageCard class="box px-4 py-2" :monster="monster" />
+      <MonsterImageCard
+        class="box px-4 py-2 order-4 lg:order-5"
+        :monster="monster"
+      />
 
       <MonstieInfoCard
         v-if="monster.hatchable"
-        class="box px-4 py-2"
+        class="box px-4 py-2 order-5 lg:order-4"
         :monster="monster"
       />
 
       <MonstieStatsCard
         v-if="monster.hatchable"
-        class="box px-4 py-2"
+        class="box px-4 py-2 order-6"
         :monster="monster"
       />
 
-      <MonsterRelatedCard class="box px-4 py-2" :monster="monster" />
+      <MonsterRelatedCard class="box px-4 py-2 order-7" :monster="monster" />
     </main>
   </div>
 </template>
