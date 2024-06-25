@@ -100,7 +100,7 @@
               :icon="['fas', 'map-marker-alt']"
             />
 
-            <div class="font-semibold mb-1" v-text="key" />
+            <div class="font-semibold" v-text="key" />
           </div>
 
           <div
