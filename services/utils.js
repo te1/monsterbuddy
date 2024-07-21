@@ -27,6 +27,7 @@ export function makeSlug(text) {
   return text
     .replace(/( |\/)/g, '-')
     .replace(/\(|\)/g, '')
+    .replace(/-&/, '')
     .toLowerCase();
 }
 
