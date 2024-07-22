@@ -15,7 +15,7 @@ export function deepFreeze(object) {
   for (const name of propNames) {
     const value = object[name];
 
-    if (value && typeof value === 'object') {
+    if (value && typeof value === 'object' && !Object.isFrozen(value)) {
       deepFreeze(value);
     }
   }
