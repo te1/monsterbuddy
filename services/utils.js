@@ -13,6 +13,10 @@ export function deepFreeze(object) {
   const propNames = Object.getOwnPropertyNames(object);
 
   for (const name of propNames) {
+    if (name === '__ob__') {
+      continue;
+    }
+
     const value = object[name];
 
     if (value && typeof value === 'object' && !Object.isFrozen(value)) {
