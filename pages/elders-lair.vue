@@ -10,7 +10,7 @@
       :heading="heading"
     >
       <AppSearchBox
-        v-if="!showFilter"
+        v-show="!showFilter"
         v-model="eldersLairFilter.nameFilter"
       />
     </AppTopBar>
