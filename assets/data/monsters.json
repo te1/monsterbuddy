@@ -5413,7 +5413,7 @@
     }
   },
   {
-    // TODO defeat, hatch
+    // TODO defeat
     "no": 117,
     "name": "Thunderlord Zinogre",
     "genus": "Fanged Wyvern",
@@ -5456,7 +5456,7 @@
     },
     "hatchable": true,
     "monstie": {
-      "attackType": "technical",
+      "attackType": "power",
       "growth": "slow",
       "ridingActions": ["Jump"],
       "kinshipSkill": "Gigavolt Crash",
@@ -5464,26 +5464,26 @@
       "retreat": "This monster **cannot** be chased back to its den.",
       "stats": {
         "base": {
-          "maxHp": null,
-          "speed": null,
-          "recovery": null,
-          "critRate": null
+          "maxHp": 8,
+          "speed": 6,
+          "recovery": 5,
+          "critRate": 9
         },
         "attack": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 6,
+          "thunder": 8,
+          "ice": 4,
+          "dragon": 6
         },
         "defense": {
-          "none": null,
-          "fire": null,
-          "water": null,
-          "thunder": null,
-          "ice": null,
-          "dragon": null
+          "none": 6,
+          "fire": 6,
+          "water": 6,
+          "thunder": 8,
+          "ice": 4,
+          "dragon": 6
         }
       }
     }
