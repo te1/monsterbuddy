@@ -6,7 +6,9 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "node_modules": true,
-    ".nuxt": true
+    ".nuxt": true,
+    ".wrangler": true,
+    "dist": true
   },
   "search.exclude": {
     "**/node_modules": true,
