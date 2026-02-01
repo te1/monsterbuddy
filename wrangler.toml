@@ -1,0 +1,8 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+
+send_metrics = false
+compatibility_date = "2026-02-01"
+name = "monsterbuddy"
+
+[assets]
+directory = "./.output/public"
