@@ -7,10 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     'nuxt-og-image',
     'nuxt-llms',
-    '@nuxtjs/mcp-toolkit',
     '@nuxt/a11y',
     '@nuxt/hints',
   ],
+
+  telemetry: false,
 
   devtools: {
     enabled: true,
@@ -43,12 +44,7 @@ export default defineNuxtConfig({
   },
 
   eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs',
-      },
-    },
+    config: {},
   },
 
   icon: {
@@ -75,9 +71,5 @@ export default defineNuxtConfig({
         contentFilters: [{ field: 'path', operator: 'LIKE', value: '/essentials%' }],
       },
     ],
-  },
-
-  mcp: {
-    name: 'Docs template',
   },
 });
