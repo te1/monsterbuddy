@@ -41,6 +41,8 @@ export default defineNuxtConfig({
       crawlLinks: true,
       autoSubfolderIndex: false,
     },
+
+    preset: 'cloudflare_module',
   },
 
   eslint: {
