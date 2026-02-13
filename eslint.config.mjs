@@ -8,6 +8,5 @@ export default withNuxt(
       'vue/attribute-hyphenation': ['error', 'never'],
     },
   },
-  // Your custom configs here
   eslintConfigPrettier
 );
