@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxt/content',
     'nuxt-og-image',
     'nuxt-llms',
     '@nuxt/a11y',
