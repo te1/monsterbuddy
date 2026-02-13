@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui';
+  import type { ButtonProps } from '@nuxt/ui';
 
   const title = 'Nuxt Docs Template';
   const description = 'Create stunning, fast and SEO-optimized documentation sites with Nuxt UI.';
@@ -18,24 +18,21 @@ import type { ButtonProps } from '@nuxt/ui';
     {
       label: 'Start building',
       to: '/getting-started',
-      trailingIcon: 'i-lucide-arrow-right'
+      trailingIcon: 'i-lucide-arrow-right',
     },
     {
       label: 'View on GitHub',
       to: 'https://github.com/nuxt-ui-templates/docs',
       target: '_blank',
       variant: 'subtle',
-      icon: 'i-simple-icons-github'
-    }
+      icon: 'i-simple-icons-github',
+    },
   ]);
 </script>
 
 <template>
   <div>
-    <UPageHero
-      class="from-neutral-900 to-neutral-950 dark:bg-linear-to-b"
-      orientation="horizontal"
-    >
+    <UPageHero class="from-neutral-900 to-neutral-950 dark:bg-linear-to-b" orientation="horizontal">
       <template #top>
         <HeroBackground />
       </template>
@@ -49,7 +46,7 @@ import type { ButtonProps } from '@nuxt/ui';
       </template>
 
       <template #links>
-        <UButton to="/getting-started" size="xl" trailing-icon="i-lucide-arrow-right">
+        <UButton to="/getting-started" size="xl" trailingIcon="i-lucide-arrow-right">
           Get started
         </UButton>
 
@@ -177,10 +174,10 @@ import type { ButtonProps } from '@nuxt/ui';
       </template>
     </UPageSection>
 
-    <UPageSection class="dark:bg-linear-to-b from-neutral-950 to-neutral-900">
+    <UPageSection class="from-neutral-950 to-neutral-900 dark:bg-linear-to-b">
       <UPageCTA
         :links="links"
-        title="Ready to build an amazing documentation?""
+        title="Ready to build an amazing documentation?"
         description="Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today."
         class="dark:bg-neutral-950"
       >

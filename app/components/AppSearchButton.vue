@@ -6,7 +6,7 @@
      */
     collapsed?: boolean;
 
-    class?: any;
+    class?: string;
   }
 </script>
 
@@ -15,6 +15,7 @@
 
   const props = withDefaults(defineProps<AppSearchButtonProps>(), {
     collapsed: true,
+    class: undefined,
   });
 
   const kbds = ['meta', 'k'];

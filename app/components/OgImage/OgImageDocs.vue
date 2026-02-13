@@ -4,6 +4,7 @@
     {
       title: 'title',
       description: 'description',
+      headline: undefined,
     }
   );
 
