@@ -37,8 +37,6 @@
     <UPageHeader :title="title" :description="description" :headline="headline">
       <template #links>
         <UButton v-for="(link, index) in links" :key="index" v-bind="link" />
-
-        <PageHeaderLinks />
       </template>
     </UPageHeader>
 
@@ -47,15 +45,11 @@
     </UPageBody>
 
     <template v-if="links?.length" #right>
-      <UContentToc :title="title" :links="links">
-        <template #bottom>
-          <div class="hidden space-y-6 lg:block" :class="{ 'mt-6!': links?.length }">
-            <USeparator v-if="links?.length" type="dashed" />
+      <div class="hidden space-y-6 lg:block">
+        <USeparator v-if="links?.length" type="dashed" />
 
-            <UPageLinks :title="title" :links="links" />
-          </div>
-        </template>
-      </UContentToc>
+        <UPageLinks :title="title" :links="links" />
+      </div>
     </template>
   </UPage>
 </template>

@@ -57,13 +57,9 @@ export default defineNuxtConfig({
     sections: [
       {
         title: 'Getting Started',
-        contentCollection: 'docs',
-        contentFilters: [{ field: 'path', operator: 'LIKE', value: '/getting-started%' }],
       },
       {
         title: 'Essentials',
-        contentCollection: 'docs',
-        contentFilters: [{ field: 'path', operator: 'LIKE', value: '/essentials%' }],
       },
     ],
   },
