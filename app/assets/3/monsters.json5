@@ -1,0 +1,544 @@
+// https://monsterhunterwiki.org/wiki/MHST3/Monsters
+// https://monsterhunterwiki.org/wiki/MHST3/Monsties
+// https://monsterhunterwiki.org/wiki/Feral_Monsters
+// https://monsterhunterwiki.org/wiki/Invasive_Monsters
+
+[
+  // https://monsterhunterwiki.org/wiki/Ajarakan_(MHST3)
+  {
+    name: 'Ajarakan',
+    genus: 'Fanged Beast',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Aknosom_(MHST3)
+  {
+    name: 'Aknosom',
+    genus: 'Bird Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Almudron_(MHST3)
+  {
+    name: 'Almudron',
+    genus: 'Leviathan',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Anjanath_(MHST3)
+  {
+    name: 'Anjanath',
+    genus: 'Brute Wyvern',
+    rank: 4,
+    flavor: {
+      DEFAULT: 'A belligerent Brute Wyvern that tries to sink its fangs into anything that moves. It is recognizable by the large membranes on its hips and the downy fur that runs along its back.',
+      'Condensing Heat': 'This monster condenses heat when enraged, causing a combustible substance to collect in a throat gland. The resulting mucus can then be expelled its nose to react explosively with the air.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 6,
+        attack: 7,
+        speed: 5,
+        defense: 4,
+        crit: 1,
+        recovery: 4,
+        stamina: 10,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: -2,
+        thunder: 0,
+        ice: -1,
+        dragon: +1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['pierce'],
+            Legs: ['blunt'],
+            Tail: ['slash'],
+          },
+        },
+        'Condense Heat': {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Nose: ['pierce'],
+            Legs: ['blunt'],
+            Tail: ['slash'],
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'power',
+      ridingActions: ['jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Anja Assault',
+      eggColors: ['pink', 'black'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Arkveld_(MHST3)
+  {
+    name: 'Arkveld',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Arzuros_(MHST3)
+  {
+    name: 'Arzuros',
+    genus: 'Fanged Beast',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Astalos_(MHST3)
+  {
+    name: 'Astalos',
+    genus: 'Flying Wyvern',
+    element: 'thunder',
+    monster: {},
+    hatchable: true,
+    monstie: {
+      eggColors: ['green', 'black'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Boltreaver_Astalos_(MHST3)
+  {
+    name: 'Boltreaver Astalos',
+    genus: 'Flying Wyvern',
+    element: 'thunder',
+    monster: {},
+    hatchable: true,
+    monstie: {
+      eggColors: ['green', 'black'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Barioth_(MHST3)
+  {
+    name: 'Barioth',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Barroth_(MHST3)
+  {
+    name: 'Barroth',
+    genus: 'Brute Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Bishaten_(MHST3)
+  {
+    name: 'Bishaten',
+    genus: 'Fanged Beast',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Blood_Orange_Bishaten_(MHST3)
+  {
+    name: 'Blood Orange Bishaten',
+    genus: 'Fanged Beast',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Blangonga_(MHST3)
+  {
+    name: 'Blangonga',
+    genus: 'Fanged Beast',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Brachydios_(MHST3)
+  {
+    name: 'Brachydios',
+    genus: 'Brute Wyvern',
+    monster: {},
+    hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'green'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Chatacabra_(MHST3)
+  {
+    name: 'Chatacabra',
+    genus: 'Amphibian',
+    flavor: {
+      DEFAULT: 'Using its long tongue, this Amphibian can grab objects and food from a distance. Its adhesive saliva can also be used to attach rocks and debris to its forelegs, enhancing its combat abilities.',
+      'It Eats Anything?': 'A species with an insatiable hunger that uses its long, soft tongue to catch and feed on Neopterons. Some reports indicate its endless appetite even causes it to eat barrels when charging foes.',
+    },
+    element: 'none',
+    stats: {
+      base: {
+        hp: 5,
+        attack: 4,
+        speed: 4,
+        defense: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: 0,
+        water: +1,
+        thunder: -2,
+        ice: -1,
+        dragon: +2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['slash'],
+            Torso: ['pierce'],
+          },
+        },
+        'Rock Mantle': {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['slash'],
+            'Right Arm': ['blunt'],
+            Torso: ['pierce'],
+            'Left Arm': ['blunt'],
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {},
+  },
+
+  // https://monsterhunterwiki.org/wiki/Deviljho_(MHST3)
+  {
+    name: 'Deviljho',
+    genus: 'Brute Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Diablos_(MHST3)
+  {
+    name: 'Diablos',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Black_Diablos_(MHST3)
+  {
+    name: 'Black Diablos',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
+  {
+    name: 'Espinas',
+    genus: 'Flying Wyvern',
+    flavor: {
+      DEFAULT: 'This fierce Flying Wyvern is distinguished by the red-violet thorns dotting its green carapace. Its blood contains properties that poison and paralyze, so most monsters steer clear of it.',
+    },
+    element: 'fire',
+    stats: {
+      elementalResistance: {
+        none: -2,
+        fire: -2,
+        water: -2,
+        thunder: -2,
+        ice: null,
+        dragon: null,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -1,
+        sleep: null,
+        blastblight: null,
+        bleeding: null,
+        blind: null,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'power',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Garangolm_(MHST3)
+  {
+    name: 'Garangolm',
+    genus: 'Fanged Beast',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Glavenus_(MHST3)
+  {
+    name: 'Glavenus',
+    genus: 'Brute Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Gravios_(MHST3)
+  {
+    name: 'Gravios',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Great_Izuchi_(MHST3)
+  {
+    name: 'Great Izuchi',
+    genus: 'Bird Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Gypceros_(MHST3)
+  {
+    name: 'Gypceros',
+    genus: 'Bird Wyvern',
+    flavor: {
+      DEFAULT: 'A Bird Wyvern with an oddly-shaped crest and poisonous saliva. It often runs about due to its skittish nature, seldom remaining in one place for long.',
+      'Stamina Source': 'This monster\'s seemingly limitless stamina is derived from a fluid coursing through its body known as "dash extract," a potent tonic that sees great demand for its medicinal uses.',
+    },
+    element: 'none',
+    stats: {
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +1,
+        thunder: +2,
+        ice: -1,
+        dragon: 0,
+      },
+      ailmentResistance: {
+        poison: +2,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        blind: +1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Stomach: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Stomach: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'power',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Purple_Gypceros_(MHST3)
+  {
+    name: 'Purple Gypceros',
+    genus: 'Bird Wyvern',
+    flavor: {
+      DEFAULT: 'A purple-skinned subspecies of Gypceros. It boasts higher immunity to poison than its standard cousin, which allows it to hold more potent venom and in greater amounts.',
+      'Powerful Poison': 'This subspecies eliminates intruders by poisoning them with a venom more potent than normal and then blinding them with a bright flash. Powerful blows can also be delivered at range with its tail.',
+    },
+    element: 'none',
+    stats: {
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +1,
+        thunder: +2,
+        ice: -1,
+        dragon: 0,
+      },
+      ailmentResistance: {
+        poison: +2,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        blind: +1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Stomach: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Stomach: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'power',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Khezu_(MHST3)
+  {
+    name: 'Khezu',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Red_Khezu_(MHST3)
+  {
+    name: 'Red Khezu',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Lagiacrus_(MHST3)
+  {
+    name: 'Lagiacrus',
+    genus: 'Leviathan',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Ivory_Lagiacrus_(MHST3)
+  {
+    name: 'Ivory Lagiacrus',
+    genus: 'Leviathan',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Legiana_(MHST3)
+  {
+    name: 'Legiana',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Magnamalo_(MHST3)
+  {
+    name: 'Magnamalo',
+    genus: 'Fanged Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Malzeno_(MHST3)
+  {
+    name: 'Malzeno',
+    genus: 'Elder Dragon',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Mizutsune_(MHST3)
+  {
+    name: 'Mizutsune',
+    genus: 'Leviathan',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Soulseer_Mizutsune_(MHST3)
+  {
+    name: 'Soulseer Mizutsune',
+    genus: 'Leviathan',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Namielle_(MHST3)
+  {
+    name: 'Namielle',
+    genus: 'Elder Dragon',
+    flavor: {
+      DEFAULT: 'This Elder Dragon is completely enveloped in liquid and can command vast quantities of water. Unique electric organs allow it to charge water attacks with electricity, creating massive explosions.',
+    },
+    stats: {
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +2,
+        thunder: null,
+        ice: null,
+        dragon: null,
+      },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: null,
+        sleep: +1,
+        blastblight: null,
+        bleeding: null,
+        blind: null,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        'Abyssal Charge': {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+      },
+    },
+  },
+]
