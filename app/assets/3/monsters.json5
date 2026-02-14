@@ -292,12 +292,6 @@
         },
         Enraged: {
           attack: 'speed',
-          parts: {
-            'Main Body': ['slash', 'pierce', 'blunt'],
-            Head: ['blunt'],
-            Wings: ['pierce'],
-            Tail: ['slash'],
-          },
         },
       },
     },
@@ -374,12 +368,6 @@
         },
         Enraged: {
           attack: 'technical',
-          parts: {
-            'Main Body': ['slash', 'pierce', 'blunt'],
-            Head: ['blunt'],
-            Stomach: ['pierce'],
-            Tail: ['slash'],
-          },
         },
       },
     },
@@ -432,12 +420,6 @@
         },
         Enraged: {
           attack: 'technical',
-          parts: {
-            'Main Body': ['slash', 'pierce', 'blunt'],
-            Head: ['blunt'],
-            Stomach: ['pierce'],
-            Tail: ['slash'],
-          },
         },
       },
     },
@@ -635,12 +617,6 @@
         },
         Enraged: {
           attack: 'speed',
-          parts: {
-            'Main Body': ['slash', 'pierce', 'blunt'],
-            Head: ['blunt'],
-            Legs: ['slash'],
-            Needle: ['pierce'],
-          },
         },
       },
     },
@@ -726,5 +702,483 @@
       kinshipSkill: 'Jet Balloon',
       eggColors: ['white', 'pink'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Plesioth_(MHST3)
+  {
+    name: 'Plesioth',
+    genus: 'Piscine Wyvern',
+    related: [{ type: 'subspecies', monster: 'Green Plesioth' }],
+    flavor: {
+      DEFAULT: 'This massive Piscine Wyvern is mainly seen around bodies of water. Though once capable of flight, its wings have adapted to aquatic locomotion, for which it relies on sound rather tha sight.',
+      'Varied Diet': 'While it normally preys upon aquatic creatures while swimming, it is also known to attack Rhenoplos and other monsters on land with jets of compressed water. It apparently loves to eat frogs.',
+      'Not a Land Fan': 'Although aquatic in appearance, this monster breathes with lungs and is active on land. However, disdain for dryness and difficulty walking on two legs mean it will not stay on land for long.',
+    },
+    element: 'water',
+    stats: {
+      base: {
+        hp: 6,
+        attack: 6,
+        speed: 7,
+        defense: 5,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -1,
+        water: +2,
+        thunder: -2,
+        ice: 0,
+        dragon: +1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -2,
+        sleep: +1,
+        blastblight: +1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Back: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Green_Plesioth_(MHST3)
+  {
+    name: 'Green Plesioth',
+    genus: 'Piscine Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Plesioth' }],
+    flavor: {
+      DEFAULT: 'Named after its jade-green scales, this subspecies is more agile than the common Plesioth, boasting incredible mobility both on land and in water. It is also more hostile than the regular species.',
+      Amphibious: 'While it is typically in aquatic environments, this agile amphibious monster is also quite adept at moving on the ground. In fact, it often seeks out dry land when angered.',
+    },
+    element: 'water',
+    stats: {
+      base: {
+        hp: 7,
+        attack: 7,
+        speed: 7,
+        defense: 3,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -1,
+        water: +2,
+        thunder: -2,
+        ice: +1,
+        dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -2,
+        sleep: +1,
+        blastblight: +1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Back: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Pukei-Pukei_(MHST3)
+  {
+    name: 'Pukei-Pukei',
+    genus: 'Bird Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Rakna-Kadaki_(MHST3)
+  {
+    name: 'Rakna-Kadaki',
+    genus: 'Temnoceran',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Rathalos_(MHST3)
+  {
+    name: 'Rathalos',
+    genus: 'Flying Wyvern',
+    related: [{ type: 'story', monster: 'Ratha' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Ratha_(MHST3)
+  {
+    name: 'Ratha',
+    genus: 'Flying Wyvern',
+    rank: 4,
+    related: [{ type: 'storyOf', monster: 'Rathalos' }],
+    flavor: {
+      DEFAULT: "Ten years ago, this Skyscale Rathalos was born from an egg quartz that Amara discovered in Blightstone Woods. One of a pair of twins, it serves as the prince/princess's Monstie.",
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 7,
+        attack: 7,
+        speed: 6,
+        defense: 5,
+        crit: 1,
+        recovery: 7,
+        stamina: 7,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: 0,
+        thunder: -1,
+        ice: +1,
+        dragon: -2,
+      },
+    },
+    monstie: {
+      attack: 'power',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Sky-High Dive',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Rathian_(MHST3)
+  {
+    name: 'Rathian',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspecies', monster: 'Pink Rathian' },
+      { type: 'deviant', monster: 'Dreadqueen Rathian' },
+    ],
+    rank: 4,
+    flavor: {
+      DEFAULT: 'This Flying Wyvern earns its title of "Queen of the Land" by using its powerful legs to unt primarily on the ground. Any challenges to her reign will be swiftly put down by the poison-laden tail.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 5,
+        attack: 6,
+        speed: 7,
+        defense: 6,
+        crit: 1,
+        recovery: 10,
+        stamina: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: 0,
+        thunder: -1,
+        ice: +1,
+        dragon: -2,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Scorching Slice',
+      eggColors: ['yellow', 'white', 'green'],
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: 0,
+        thunder: -1,
+        ice: +1,
+        dragon: -1,
+      },
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Pink_Rathian_(MHST2)
+  {
+    name: 'Pink Rathian',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspeciesOf', monster: 'Rathian' },
+      { type: 'deviant', monster: 'Dreadqueen Rathian' },
+    ],
+    rank: 5,
+    flavor: {
+      DEFAULT: 'The vibrant pink scales of this Rathian subspecies belie a terrible ferocity. It deftly utilizes its toxic tail to corner prey, then closes in for the kill.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 6,
+        attack: 7,
+        speed: 7,
+        defense: 5,
+        crit: 1,
+        recovery: 7,
+        stamina: 7,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: +1,
+        thunder: -1,
+        ice: 0,
+        dragon: -2,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Scorching Slice',
+      eggColors: ['pink', 'red'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Dreadqueen_Rathian_(MHST3)
+  {
+    name: 'Dreadqueen Rathian',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'deviantOf', monster: 'Rathian' },
+      { type: 'subspecies', monster: 'Pink Rathian' },
+    ],
+    rank: 7,
+    flavor: {
+      DEFAULT: 'The tail of this Rathian Deviant bears venom of the deadliest kind. When expelled, the venom forms a majestic purple cloud of iasma that suffocates any unfortunate prey.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 8,
+        attack: 8,
+        speed: 7,
+        defense: 3,
+        crit: 1,
+        recovery: 4,
+        stamina: 10,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: -1,
+        thunder: -2,
+        ice: -1,
+        dragon: +1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Dual Razor',
+      eggColors: ['green', 'purple', 'black'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Rey_Dau_(MHST3)
+  {
+    name: 'Rey Dau',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Royal_Ludroth_(MHST3)
+  {
+    name: 'Royal Ludroth',
+    genus: 'Leviathan',
+    related: [{ type: 'subspecies', monster: 'Purple Ludroth' }],
+    rank: 2,
+    flavor: {
+      DEFAULT: 'A male Ludroth that has grown larger and taken control of the pack. This aquatic creature is found in both freshwater and saltwater, and its absorbent mane retains moisture, enabling movement on land.',
+      'Spongy Mane': 'This monster boasts a spongy, yellow mane running from its neck down its back. The mane can absorb and store water for use while on land, but the Royal Ludroth quickly tires if its mane dries up.',
+    },
+    element: 'water',
+    stats: {
+      base: {
+        hp: 4,
+        attack: 5,
+        speed: 6,
+        defense: 4,
+        crit: 1,
+        recovery: 10,
+        stamina: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +2,
+        thunder: -1,
+        ice: 0,
+        dragon: +1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Stomach: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'power',
+      ridingActions: ['swim', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Moonsault Splash',
+      eggColors: ['green', 'yellow'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Purple_Ludroth_(MHST3)
+  {
+    name: 'Purple Ludroth',
+    genus: 'Leviathan',
+    related: [{ type: 'subspeciesOf', monster: 'Royal Ludroth' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Seregios_(MHST3)
+  {
+    name: 'Seregios',
+    genus: 'Flying Wyvern',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Shogun_Ceanataur_(MHST3)
+  {
+    name: 'Shogun Ceanataur',
+    genus: 'Carapaceon',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Somnacanth_(MHST3)
+  {
+    name: 'Somnacanth',
+    genus: 'Leviathan',
+    related: [{ type: 'subspecies', monster: 'Aurora Somnacanth' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Aurora_Somnacanth_(MHST3)
+  {
+    name: 'Aurora Somnacanth',
+    genus: 'Leviathan',
+    related: [{ type: 'subspeciesOf', monster: 'Somnacanth' }],
+    flavor: {
+      DEFAULT: 'A bellicose Leviathan that lives in the water and spreads soporific dust via its neck gills and tail to ensnare its prey. When seen under the moonlight, it is said to resemble a maiden or mermaid.',
+      'Mermaid Hair': "Although the appendage on this monster's head looks like little more than a purple fin, it is actually lined with countless spikes that can be released like arrows in a ranged attack.",
+      'Lulled to Sleep': "A sleep-inducing substance contained in this monster's bivalve prey accumulates in the body and reacts with microbes to form a glowing powder visible in the countless gills of its mouth, neck, and tail.",
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Tetranadon_(MHST3)
+  {
+    name: 'Tetranadon',
+    genus: 'Amphibian',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Tigrex_(MHST3)
+  {
+    name: 'Tigrex',
+    genus: 'Flying Wyvern',
   },
 ]
