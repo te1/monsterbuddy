@@ -107,6 +107,7 @@
   {
     name: 'Astalos',
     genus: 'Flying Wyvern',
+    related: [{ type: 'deviant', monster: 'Boltreaver Astalos' }],
     element: 'thunder',
     monster: {},
     hatchable: true,
@@ -119,6 +120,7 @@
   {
     name: 'Boltreaver Astalos',
     genus: 'Flying Wyvern',
+    related: [{ type: 'deviantOf', monster: 'Astalos' }],
     element: 'thunder',
     monster: {},
     hatchable: true,
@@ -143,12 +145,14 @@
   {
     name: 'Bishaten',
     genus: 'Fanged Beast',
+    related: [{ type: 'subspecies', monster: 'Blood Orange Bishaten' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Blood_Orange_Bishaten_(MHST3)
   {
     name: 'Blood Orange Bishaten',
     genus: 'Fanged Beast',
+    related: [{ type: 'subspeciesOf', monster: 'Bishaten' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Blangonga_(MHST3)
@@ -238,12 +242,14 @@
   {
     name: 'Diablos',
     genus: 'Flying Wyvern',
+    related: [{ type: 'subspecies', monster: 'Black Diablos' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Black_Diablos_(MHST3)
   {
     name: 'Black Diablos',
     genus: 'Flying Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Diablos' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
@@ -330,6 +336,7 @@
   {
     name: 'Gypceros',
     genus: 'Bird Wyvern',
+    related: [{ type: 'subspecies', monster: 'Purple Gypceros' }],
     flavor: {
       DEFAULT: 'A Bird Wyvern with an oddly-shaped crest and poisonous saliva. It often runs about due to its skittish nature, seldom remaining in one place for long.',
       'Stamina Source': 'This monster\'s seemingly limitless stamina is derived from a fluid coursing through its body known as "dash extract," a potent tonic that sees great demand for its medicinal uses.',
@@ -379,6 +386,7 @@
     hatchable: true,
     monstie: {
       attack: 'power',
+      eggColors: ['blue', 'pink'],
     },
   },
 
@@ -386,6 +394,7 @@
   {
     name: 'Purple Gypceros',
     genus: 'Bird Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Gypceros' }],
     flavor: {
       DEFAULT: 'A purple-skinned subspecies of Gypceros. It boasts higher immunity to poison than its standard cousin, which allows it to hold more potent venom and in greater amounts.',
       'Powerful Poison': 'This subspecies eliminates intruders by poisoning them with a venom more potent than normal and then blinding them with a bright flash. Powerful blows can also be delivered at range with its tail.',
@@ -435,6 +444,7 @@
     hatchable: true,
     monstie: {
       attack: 'power',
+      eggColors: ['purple', 'green'],
     },
   },
 
@@ -442,24 +452,28 @@
   {
     name: 'Khezu',
     genus: 'Flying Wyvern',
+    related: [{ type: 'subspecies', monster: 'Red Khezu' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Red_Khezu_(MHST3)
   {
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Khezu' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Lagiacrus_(MHST3)
   {
     name: 'Lagiacrus',
     genus: 'Leviathan',
+    related: [{ type: 'subspecies', monster: 'Ivory Lagiacrus' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Ivory_Lagiacrus_(MHST3)
   {
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
+    related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Legiana_(MHST3)
@@ -484,12 +498,14 @@
   {
     name: 'Mizutsune',
     genus: 'Leviathan',
+    related: [{ type: 'deviant', monster: 'Soulseer Mizutsune' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Soulseer_Mizutsune_(MHST3)
   {
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
+    related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Namielle_(MHST3)
@@ -539,6 +555,176 @@
           },
         },
       },
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Nargacuga_(MHST3)
+  {
+    name: 'Nargacuga',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspecies', monster: 'Green Nargacuga' },
+      { type: 'deviant', monster: 'Silverwind Nargacuga' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Green_Nargacuga_(MHST3)
+  {
+    name: 'Green Nargacuga',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspeciesOf', monster: 'Nargacuga' },
+      { type: 'deviant', monster: 'Silverwind Nargacuga' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Silverwind_Nargacuga_(MHST3)
+  {
+    name: 'Silverwind Nargacuga',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'deviantOf', monster: 'Nargacuga' },
+      { type: 'subspecies', monster: 'Green Nargacuga' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Nerscylla_(MHST3)
+  {
+    name: 'Nerscylla',
+    genus: 'Temnoceran',
+    flavor: {
+      DEFAULT: 'A Temnoceran that weaves nests to defend its territory and hunt. It ensnares prey, weakening them with abnormal statuses, then feasts using its razor-sharp mandibles.',
+      'Gypceros, My Favorite': 'Its preferred prey are Gypceros, whose hides it peels off and wears after feeding. The purple hides protect it from its weakness to lightning and conceal its true white coloring.',
+    },
+    element: 'none',
+    stats: {
+      base: {
+        hp: 4,
+        attack: 4,
+        speed: 5,
+        defense: 5,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +1,
+        thunder: -1,
+        ice: 0,
+        dragon: +2,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: -1,
+        paralysis: +1,
+        sleep: +2,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Legs: ['slash'],
+            Needle: ['pierce'],
+          },
+        },
+        Enraged: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Legs: ['slash'],
+            Needle: ['pierce'],
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'technical',
+      eggColors: ['purple', 'red', 'pink'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Paolumu_(MHST3)
+  {
+    name: 'Paolumu',
+    genus: 'Flying Wyvern',
+    rank: 3,
+    flavor: {
+      DEFAULT: 'After sucking in a large volume of air, this Flying Wyvern takes on its unique, rotund appearance. That air can then be expelled to propel itself. It is just as mild-mannered as it looks.',
+      'On Wafts of Air': 'Paolumu are the only species known to have a neck pouch, a flexible organ that expands when it inhales. The buoyancy lets it conserve energy by reducing the number of times it has to flap its wings.',
+      'Softness Can Be Deceiving': 'The calm disposition, adorable face, and soft, white down make some think this is a benign monster. However, it is extremely hostile to threats and can be quite intimidating.',
+    },
+    element: 'none',
+    stats: {
+      base: {
+        hp: 5,
+        attack: 3,
+        speed: 5,
+        defense: 6,
+        crit: 1,
+        recovery: 4,
+        stamina: 10,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +2,
+        thunder: -1,
+        ice: +1,
+        dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Torso: ['slash'],
+          },
+        },
+        Airborne: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            'Neck Pouch': ['pierce'],
+          },
+          ailmentResistance: {
+            poison: -1,
+            burn: -2,
+            paralysis: +2,
+            sleep: +2,
+            blastblight: -1,
+            bleeding: -1,
+            blind: -2,
+          },
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'technical',
+      ridingActions: ['fly', 'jump', 'roar', 'melee'],
+      kinshipSkill: 'Jet Balloon',
+      eggColors: ['white', 'pink'],
     },
   },
 ]
