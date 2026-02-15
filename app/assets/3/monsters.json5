@@ -175,9 +175,17 @@
   {
     name: 'Barroth',
     genus: 'Brute Wyvern',
+    related: [{ type: 'honed', monster: 'Honed Barroth' }],
     monstie: {
       eggColors: ['brown', 'orange'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Honed_Barroth_(MHST3)
+  {
+    name: 'Honed Barroth',
+    genus: 'Brute Wyvern',
+    related: [{ type: 'honedOf', monster: 'Barroth' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Bishaten_(MHST3)
@@ -495,8 +503,73 @@
   {
     name: 'Glavenus',
     genus: 'Brute Wyvern',
+    related: [{ type: 'honed', monster: 'Honed Glavenus' }],
     monstie: {
       eggColors: ['blue', 'red'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Honed_Glavenus_(MHST3)
+  {
+    name: 'Honed Glavenus',
+    genus: 'Brute Wyvern',
+    related: [{ type: 'honedOf', monster: 'Glavenus' }],
+    flavor: {
+      DEFAULT: "A Glavenus spotted near Azuria's border. It is stronger than the regular species, and its whole body is covered in armor. While some think it has been artificially enhanced, details are unknown.",
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 7,
+        attack: 8,
+        speed: 8,
+        defense: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: -2,
+        thunder: +1,
+        ice: -1,
+        dragon: -2,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -2,
+        blastblight: +1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Tail: ['slash'],
+          },
+        },
+        'Overheated (Throat)': {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            'Throat (Heated)': ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        'Overheated (Tail)': {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            'Tail (Heated)': ['slash'],
+          },
+        },
+      },
     },
   },
 
@@ -1609,7 +1682,10 @@
   {
     name: 'Tobi-Kadachi',
     genus: 'Fanged Wyvern',
-    related: [{ type: 'feral', monster: 'Feral Tobi-Kadachi' }],
+    related: [
+      { type: 'feral', monster: 'Feral Tobi-Kadachi' },
+      { type: 'honed', monster: 'Honed Tobi-Kadachi' },
+    ],
     rank: 3,
     flavor: {
       DEFAULT: 'This Fanged Wyvern flits from tree to tree in its forest canopy home. Its fur brushes against tree bark and the ground as it moves, building up static electricity.',
@@ -1673,10 +1749,23 @@
   {
     name: 'Feral Tobi-Kadachi',
     genus: 'Fanged Wyvern',
-    related: [{ type: 'feralOf', monster: 'Tobi-Kadachi' }],
+    related: [
+      { type: 'feralOf', monster: 'Tobi-Kadachi' },
+      { type: 'honed', monster: 'Honed Tobi-Kadachi' },
+    ],
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Honed_Tobi-Kadachi
+  {
+    name: 'Honed Tobi-Kadachi',
+    genus: 'Fanged Wyvern',
+    related: [
+      { type: 'honedOf', monster: 'Tobi-Kadachi' },
+      { type: 'feral', monster: 'Feral Tobi-Kadachi' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Velocidrome_(MHST3)
