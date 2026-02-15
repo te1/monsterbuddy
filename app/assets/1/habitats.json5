@@ -1,0 +1,46 @@
+[
+  {
+    name: 'Pondry Hills',
+    sortOrder: 10,
+  },
+  {
+    name: 'Darj Snowfields',
+    sortOrder: 20,
+  },
+  {
+    name: 'Perennial Pass',
+    sortOrder: 30,
+  },
+  {
+    name: 'Monsonne Plains',
+    sortOrder: 40,
+  },
+  {
+    name: 'Babada Rainforest',
+    sortOrder: 50,
+  },
+  {
+    name: 'Trese Desert',
+    sortOrder: 60,
+  },
+  {
+    name: 'Dovan Volcano',
+    sortOrder: 70,
+  },
+  {
+    name: 'Paupau Beach',
+    sortOrder: 80,
+  },
+  {
+    name: 'Mt. Celion',
+    sortOrder: 90,
+  },
+  {
+    name: 'Tower of Illusion',
+    sortOrder: 100,
+  },
+  {
+    name: 'Unknown Habitat',
+    sortOrder: 1000,
+  },
+]
