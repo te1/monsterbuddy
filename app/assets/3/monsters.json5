@@ -9,6 +9,7 @@
     name: 'Ajarakan',
     genus: 'Fanged Beast',
     related: [{ type: 'feral', monster: 'Feral Ajarakan' }],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Ajarakan_(MHST3)
@@ -26,6 +27,7 @@
     name: 'Aknosom',
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Aknosom' }],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Aknosom_(MHST3)
@@ -42,6 +44,7 @@
   {
     name: 'Almudron',
     genus: 'Leviathan',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Anjanath_(MHST3)
@@ -164,6 +167,7 @@
   {
     name: 'Arkveld',
     genus: 'Flying Wyvern',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Arzuros_(MHST3)
@@ -171,6 +175,7 @@
     name: 'Arzuros',
     genus: 'Fanged Beast',
     related: [{ type: 'invasive', monster: 'Invasive Arzuros' }],
+    hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
     },
@@ -223,6 +228,7 @@
     name: 'Barroth',
     genus: 'Brute Wyvern',
     related: [{ type: 'honed', monster: 'Honed Barroth' }],
+    hatchable: true,
     monstie: {
       eggColors: ['brown', 'orange'],
     },
@@ -243,6 +249,7 @@
       { type: 'subspecies', monster: 'Blood Orange Bishaten' },
       { type: 'feral', monster: 'Feral Bishaten' },
     ],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Blood_Orange_Bishaten_(MHST3)
@@ -336,6 +343,7 @@
     genus: 'Brute Wyvern',
     related: [{ type: 'feral', monster: 'Feral Brachydios' }],
     monster: {},
+    hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
     },
@@ -391,6 +399,7 @@
   {
     name: 'Canyne',
     genus: 'Fanged Beast',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Chatacabra_(MHST3)
@@ -516,6 +525,7 @@
   {
     name: 'Deviljho',
     genus: 'Brute Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['green', 'orange', 'red'],
     },
@@ -526,6 +536,7 @@
     name: 'Diablos',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Black Diablos' }],
+    hatchable: true,
     monstie: {
       eggColors: ['brown'],
     },
@@ -536,6 +547,7 @@
     name: 'Black Diablos',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Diablos' }],
+    hatchable: true,
     monstie: {
       eggColors: ['green', 'brown'],
     },
@@ -606,6 +618,7 @@
   {
     name: 'Garangolm',
     genus: 'Fanged Beast',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Gargwa_(MHST3)
@@ -619,6 +632,7 @@
     name: 'Glavenus',
     genus: 'Brute Wyvern',
     related: [{ type: 'honed', monster: 'Honed Glavenus' }],
+    hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
     },
@@ -692,6 +706,7 @@
   {
     name: 'Gravios',
     genus: 'Flying Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['yellow', 'white', 'gray', 'orange'],
     },
@@ -708,6 +723,7 @@
     name: 'Great Izuchi',
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Great Izuchi' }],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Great_Izuchi_(MHST3)
@@ -859,6 +875,7 @@
     name: 'Khezu',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Red Khezu' }],
+    hatchable: true,
     monstie: {
       eggColors: ['blue', 'white', 'pink'],
     },
@@ -869,6 +886,7 @@
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Khezu' }],
+    hatchable: true,
     monstie: {
       eggColors: ['pink', 'red'],
     },
@@ -879,6 +897,7 @@
     name: 'Lagiacrus',
     genus: 'Leviathan',
     related: [{ type: 'subspecies', monster: 'Ivory Lagiacrus' }],
+    hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
     },
@@ -889,6 +908,7 @@
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
     related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
+    hatchable: true,
     monstie: {
       eggColors: ['yellow', 'blue'],
     },
@@ -898,6 +918,7 @@
   {
     name: 'Legiana',
     genus: 'Flying Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['yellow', 'white', 'blue', 'black'],
     },
@@ -907,12 +928,14 @@
   {
     name: 'Magnamalo',
     genus: 'Fanged Wyvern',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Malzeno_(MHST3)
   {
     name: 'Malzeno',
     genus: 'Elder Dragon',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Mizutsune_(MHST3)
@@ -920,6 +943,7 @@
     name: 'Mizutsune',
     genus: 'Leviathan',
     related: [{ type: 'deviant', monster: 'Soulseer Mizutsune' }],
+    hatchable: true,
     monstie: {
       eggColors: ['red', 'pink', 'white', 'gray'],
     },
@@ -930,6 +954,7 @@
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
     related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
+    hatchable: true,
     monstie: {
       eggColors: ['white', 'red', 'purple', 'pink'],
     },
@@ -1001,6 +1026,7 @@
         },
       },
     },
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Nargacuga_(MHST3)
@@ -1011,6 +1037,7 @@
       { type: 'subspecies', monster: 'Green Nargacuga' },
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
+    hatchable: true,
     monstie: {
       eggColors: ['pink', 'purple', 'blue'],
     },
@@ -1024,6 +1051,7 @@
       { type: 'subspeciesOf', monster: 'Nargacuga' },
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
+    hatchable: true,
     monstie: {
       eggColors: ['green', 'yellow'],
     },
@@ -1037,6 +1065,7 @@
       { type: 'deviantOf', monster: 'Nargacuga' },
       { type: 'subspecies', monster: 'Green Nargacuga' },
     ],
+    hatchable: true,
     monstie: {
       eggColors: ['white', 'blue'],
     },
@@ -1424,6 +1453,7 @@
   {
     name: 'Pukei-Pukei',
     genus: 'Bird Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['green', 'yellow', 'white'],
     },
@@ -1433,6 +1463,7 @@
   {
     name: 'Rakna-Kadaki',
     genus: 'Temnoceran',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Rathalos_(MHST3)
@@ -1440,6 +1471,7 @@
     name: 'Rathalos',
     genus: 'Flying Wyvern',
     related: [{ type: 'story', monster: 'Ratha' }],
+    hatchable: true,
     monstie: {
       eggColors: ['red', 'blue'],
     },
@@ -1673,6 +1705,7 @@
   {
     name: 'Rey Dau',
     genus: 'Flying Wyvern',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Ludroth_(MHST3)
@@ -1791,6 +1824,7 @@
     name: 'Purple Ludroth',
     genus: 'Leviathan',
     related: [{ type: 'subspeciesOf', monster: 'Royal Ludroth' }],
+    hatchable: true,
     monstie: {
       eggColors: ['pink'],
     },
@@ -1800,6 +1834,7 @@
   {
     name: 'Seregios',
     genus: 'Flying Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['yellow', 'orange', 'red'],
     },
@@ -1815,6 +1850,7 @@
   {
     name: 'Shogun Ceanataur',
     genus: 'Carapaceon',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Slagtoth_(MHST3)
@@ -1831,6 +1867,7 @@
       { type: 'subspecies', monster: 'Aurora Somnacanth' },
       { type: 'feral', monster: 'Feral Somnacanth' },
     ],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Aurora_Somnacanth_(MHST3)
@@ -1846,6 +1883,7 @@
       'Mermaid Hair': "Although the appendage on this monster's head looks like little more than a purple fin, it is actually lined with countless spikes that can be released like arrows in a ranged attack.",
       'Lulled to Sleep': "A sleep-inducing substance contained in this monster's bivalve prey accumulates in the body and reacts with microbes to form a glowing powder visible in the countless gills of its mouth, neck, and tail.",
     },
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Somnacanth_(MHST3)
@@ -1866,6 +1904,7 @@
     name: 'Tetranadon',
     genus: 'Amphibian',
     related: [{ type: 'feral', monster: 'Feral Tetranadon' }],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Tetranadon_(MHST3)
@@ -1882,6 +1921,7 @@
   {
     name: 'Tigrex',
     genus: 'Flying Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['orange', 'blue'],
     },
@@ -2109,6 +2149,7 @@
       { type: 'deviant', monster: 'Deadeye Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
+    hatchable: true,
     monstie: {
       eggColors: ['purple', 'pink'],
     },
@@ -2122,6 +2163,7 @@
       { type: 'deviantOf', monster: 'Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Invasive_Yian_Garuga_(MHST3)
@@ -2376,6 +2418,7 @@
   {
     name: 'Zinogre',
     genus: 'Fanged Wyvern',
+    hatchable: true,
     monstie: {
       eggColors: ['blue', 'green', 'yellow'],
     },
