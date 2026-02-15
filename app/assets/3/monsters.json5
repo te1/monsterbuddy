@@ -1181,4 +1181,274 @@
     name: 'Tigrex',
     genus: 'Flying Wyvern',
   },
+
+  // https://monsterhunterwiki.org/wiki/Tobi-Kadachi_(MHST3)
+  {
+    name: 'Tobi-Kadachi',
+    genus: 'Fanged Wyvern',
+    rank: 3,
+    flavor: {
+      DEFAULT: 'This Fanged Wyvern flits from tree to tree in its forest canopy home. Its fur brushes against tree bark and the ground as it moves, building up static electricity.',
+      'Electrically Charged': 'The fur stores static electricity and stands up when this monster becomes excited. In this state, attacks become electric and more lethal. The static electricity may enhance its agility.',
+    },
+    element: 'thunder',
+    stats: {
+      base: {
+        hp: 4,
+        attack: 6,
+        speed: 7,
+        defense: 4,
+        crit: 6,
+        recovery: 10,
+        stamina: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -1,
+        water: -2,
+        thunder: +2,
+        ice: 0,
+        dragon: +1,
+      },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['pierce'],
+            Legs: ['slash'],
+            Tail: ['blunt'],
+          },
+        },
+        'Electric Charge': {
+          attack: 'technical',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+      ridingActions: ['fly', 'wallclimb', 'jump', 'roar', 'melee'],
+      kinshipSkill: 'Kadachi Fury',
+      eggColors: ['blue', 'white', 'black'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Velocidrome_(MHST3)
+  {
+    name: 'Velocidrome',
+    genus: 'Bird Wyvern',
+    flavor: {
+      DEFAULT: 'The alpha monster of a Velociprey pack, it is distinguishable by its larger size and bright orange crest. It patrols its expansive territory for prey and intruders alike.',
+      'Sparing Nothing': 'Its scales are used to make durable armor, while its fangs are used in ammo and decorations. Even the flexible blue hide can be made into clothing or used to connect pieces of metal armour.',
+      'Careful Cunning': 'Observations indicate this monster is highly intelligent. Not only does it lead groups and hunt in packs, it will also flee combat after sustaining serious wounds to find a safe place to recover.',
+    },
+    element: 'none',
+    stats: {
+      base: {
+        hp: 3,
+        attack: 6,
+        speed: 9,
+        defense: 3,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -1,
+        water: 0,
+        thunder: 0,
+        ice: -2,
+        dragon: +2,
+      },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -2,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Torso: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'speed',
+      eggColors: ['blue', 'orange'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Yian_Garuga_(MHST3)
+  {
+    name: 'Yian Garuga',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'deviant', monster: 'Deadeye Yian Garuga' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Deadeye_Yian_Garuga_(MHST3)
+  {
+    name: 'Deadeye Yian Garuga',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'deviantOf', monster: 'Yian Garuga' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Yian_Kut-Ku_(MHST3)
+  {
+    name: 'Yian Kut-Ku',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'subspecies', monster: 'Blue Yian Kut-Ku' }],
+    rank: 2,
+    flavor: {
+      DEFAULT: 'A Bird Wyvern commonly found in warm regions, it has a distinctive large beak and wide ears that splay out to intimidate potential threats. It is docile and flees more than it fights.',
+      'Versatile Ears': 'This monster uses its wide ears to amplify its cries and intimidate foes with extreme noise. Its excellent hearing can detect threats from a distance, but loud sounds can also daze it.',
+      'Giant Beak': 'This monster uses the giant beak covering its face to dig up the ground in search of its favorite food: insects and earthworms. Its territory is therefore pockmarked with telltale holes.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 3,
+        attack: 4,
+        speed: 6,
+        defense: 5,
+        crit: 1,
+        recovery: 10,
+        stamina: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +1,
+        water: 0,
+        thunder: -1,
+        ice: -2,
+        dragon: +2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'technical',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Fireball Expulsion',
+      eggColors: ['pink', 'blue'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Blue_Yian_Kut-Ku_(MHST3)
+  {
+    name: 'Blue Yian Kut-Ku',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Yian Kut-Ku' }],
+    rank: 3,
+    flavor: {
+      DEFAULT: 'A Yian Kut-Ku subspecies with a blue coloration. It shares similar behavioral patterns with its pink counterpart, but boasts higher physical capabilities.',
+      'Rare Materials': 'This subspecies is distinguished by a complex green-blue coloring. Materials like its scales and shell are not only rare but also prized for their use in a variety of products and decorations.',
+      'Similar Monsters': 'While Yian Garuga were once considered a subspecies of Yian Kut-Ku, they have since been reclassified as a distinct yet closely related species.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 4,
+        attack: 5,
+        speed: 6,
+        defense: 3,
+        crit: 1,
+        recovery: 7,
+        stamina: 7,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +1,
+        water: -2,
+        thunder: -1,
+        ice: 0,
+        dragon: +2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      attack: 'technical',
+      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      kinshipSkill: 'Fireball Expulsion',
+      eggColors: ['green', 'yellow'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Zinogre_(MHST3)
+  {
+    name: 'Zinogre',
+    genus: 'Fanged Wyvern',
+  },
 ]
