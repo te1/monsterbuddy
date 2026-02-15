@@ -46,7 +46,7 @@
     <UButton
       label="Docs"
       variant="subtle"
-      trailing-icon="i-lucide-chevron-down"
+      trailingIcon="i-lucide-chevron-down"
       size="xs"
       class="-mb-1.5 truncate rounded-full font-semibold"
       :class="[open && 'bg-primary/15']"
