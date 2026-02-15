@@ -123,9 +123,17 @@
   {
     name: 'Arzuros',
     genus: 'Fanged Beast',
+    related: [{ type: 'invasive', monster: 'Invasive Arzuros' }],
     monstie: {
       eggColors: ['blue', 'green'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Arzuros_(MHST3)
+  {
+    name: 'Invasive Arzuros',
+    genus: 'Fanged Beast',
+    related: [{ type: 'invasiveOf', monster: 'Arzuros' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Astalos_(MHST3)
@@ -1062,7 +1070,10 @@
   {
     name: 'Plesioth',
     genus: 'Piscine Wyvern',
-    related: [{ type: 'subspecies', monster: 'Green Plesioth' }],
+    related: [
+      { type: 'subspecies', monster: 'Green Plesioth' },
+      { type: 'invasive', monster: 'Invasive Plesioth' },
+    ],
     flavor: {
       DEFAULT: 'This massive Piscine Wyvern is mainly seen around bodies of water. Though once capable of flight, its wings have adapted to aquatic locomotion, for which it relies on sound rather tha sight.',
       'Varied Diet': 'While it normally preys upon aquatic creatures while swimming, it is also known to attack Rhenoplos and other monsters on land with jets of compressed water. It apparently loves to eat frogs.',
@@ -1120,7 +1131,10 @@
   {
     name: 'Green Plesioth',
     genus: 'Piscine Wyvern',
-    related: [{ type: 'subspeciesOf', monster: 'Plesioth' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Plesioth' },
+      { type: 'invasive', monster: 'Invasive Plesioth' },
+    ],
     flavor: {
       DEFAULT: 'Named after its jade-green scales, this subspecies is more agile than the common Plesioth, boasting incredible mobility both on land and in water. It is also more hostile than the regular species.',
       Amphibious: 'While it is typically in aquatic environments, this agile amphibious monster is also quite adept at moving on the ground. In fact, it often seeks out dry land when angered.',
@@ -1171,6 +1185,16 @@
     monstie: {
       attack: 'speed',
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Plesioth_(MHST3)
+  {
+    name: 'Invasive Plesioth',
+    genus: 'Piscine Wyvern',
+    related: [
+      { type: 'invasiveOf', monster: 'Plesioth' },
+      { type: 'subspecies', monster: 'Green Plesioth' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Pukei-Pukei_(MHST3)
@@ -1736,7 +1760,10 @@
   {
     name: 'Yian Garuga',
     genus: 'Bird Wyvern',
-    related: [{ type: 'deviant', monster: 'Deadeye Yian Garuga' }],
+    related: [
+      { type: 'deviant', monster: 'Deadeye Yian Garuga' },
+      { type: 'invasive', monster: 'Invasive Yian Garuga' },
+    ],
     monstie: {
       eggColors: ['purple', 'pink'],
     },
@@ -1746,7 +1773,67 @@
   {
     name: 'Deadeye Yian Garuga',
     genus: 'Bird Wyvern',
-    related: [{ type: 'deviantOf', monster: 'Yian Garuga' }],
+    related: [
+      { type: 'deviantOf', monster: 'Yian Garuga' },
+      { type: 'invasive', monster: 'Invasive Yian Garuga' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Yian_Garuga_(MHST3)
+  {
+    name: 'Invasive Yian Garuga',
+    genus: 'Bird Wyvern',
+    related: [
+      { type: 'invasiveOf', monster: 'Yian Garuga' },
+      { type: 'deviant', monster: 'Deadeye Yian Garuga' },
+    ],
+    flavor: {
+      DEFAULT: 'This invasive subspecies of Yian Garuga is far deadlier than the regular species in terms of combat and toxicity. The body markings are caused by venom seeping out from its numerous venom glands.',
+      'Venom Production Process': 'The venom prodouction process within this monster increases energy utilization, meaning neurotransmission speed and muscular strength can be enhanced by secreting greater quantities of venom.',
+    },
+    element: 'fire',
+    stats: {
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: -2,
+        thunder: +1,
+        ice: null,
+        dragon: null,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: null,
+        bleeding: null,
+        blind: null,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['pierce'],
+          },
+        },
+        Invading: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Legs: ['slash'],
+            Tail: ['pierce'],
+          },
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Yian_Kut-Ku_(MHST3)
