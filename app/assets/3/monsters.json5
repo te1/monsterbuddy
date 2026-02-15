@@ -8,12 +8,34 @@
   {
     name: 'Ajarakan',
     genus: 'Fanged Beast',
+    related: [{ type: 'feral', monster: 'Feral Ajarakan' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Ajarakan_(MHST3)
+  {
+    name: 'Feral Ajarakan',
+    genus: 'Fanged Beast',
+    related: [{ type: 'feralOf', monster: 'Ajarakan' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Aknosom_(MHST3)
   {
     name: 'Aknosom',
     genus: 'Bird Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Aknosom' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Aknosom_(MHST3)
+  {
+    name: 'Feral Aknosom',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'feralOf', monster: 'Aknosom' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Almudron_(MHST3)
@@ -101,6 +123,9 @@
   {
     name: 'Arzuros',
     genus: 'Fanged Beast',
+    monstie: {
+      eggColors: ['blue', 'green'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Astalos_(MHST3)
@@ -133,26 +158,51 @@
   {
     name: 'Barioth',
     genus: 'Flying Wyvern',
+    monstie: {
+      eggColors: ['white', 'yellow', 'orange'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Barroth_(MHST3)
   {
     name: 'Barroth',
     genus: 'Brute Wyvern',
+    monstie: {
+      eggColors: ['brown', 'orange'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Bishaten_(MHST3)
   {
     name: 'Bishaten',
     genus: 'Fanged Beast',
-    related: [{ type: 'subspecies', monster: 'Blood Orange Bishaten' }],
+    related: [
+      { type: 'subspecies', monster: 'Blood Orange Bishaten' },
+      { type: 'feral', monster: 'Feral Bishaten' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Blood_Orange_Bishaten_(MHST3)
   {
     name: 'Blood Orange Bishaten',
     genus: 'Fanged Beast',
-    related: [{ type: 'subspeciesOf', monster: 'Bishaten' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Bishaten' },
+      { type: 'feral', monster: 'Feral Bishaten' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Bishaten_(MHST3)
+  {
+    name: 'Feral Bishaten',
+    genus: 'Fanged Beast',
+    related: [
+      { type: 'feralOf', monster: 'Bishaten' },
+      { type: 'subspecies', monster: 'Blood Orange Bishaten' },
+    ],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Blangonga_(MHST3)
@@ -165,10 +215,56 @@
   {
     name: 'Brachydios',
     genus: 'Brute Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Brachydios' }],
     monster: {},
-    hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Brachydios_(MHST3)
+  {
+    name: 'Feral Brachydios',
+    genus: 'Brute Wyvern',
+    related: [{ type: 'feralOf', monster: 'Brachydios' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    element: 'dragon',
+    stats: {
+      elementalResistance: {
+        none: 0,
+        fire: +1,
+        water: null,
+        thunder: -2,
+        ice: null,
+        dragon: null,
+      },
+      ailmentResistance: {
+        poison: null,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: null,
+        bleeding: null,
+        blind: null,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            'Head (Slime)': ['blunt'],
+            'Forelegs (Slime)': ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        'Slime Active': {
+          attack: 'speed',
+        },
+      },
     },
   },
 
@@ -176,6 +272,7 @@
   {
     name: 'Chatacabra',
     genus: 'Amphibian',
+    related: [{ type: 'feral', monster: 'Feral Chatacabra' }],
     flavor: {
       DEFAULT: 'Using its long tongue, this Amphibian can grab objects and food from a distance. Its adhesive saliva can also be used to attach rocks and debris to its forelegs, enhancing its combat abilities.',
       'It Eats Anything?': 'A species with an insatiable hunger that uses its long, soft tongue to catch and feed on Neopterons. Some reports indicate its endless appetite even causes it to eat barrels when charging foes.',
@@ -232,10 +329,71 @@
     monstie: {},
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Chatacabra_(MHST3)
+  {
+    name: 'Feral Chatacabra',
+    genus: 'Amphibian',
+    related: [{ type: 'feralOf', monster: 'Chatacabra' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    element: 'thunder',
+    stats: {
+      base: {
+        hp: 6,
+        attack: 6,
+        speed: 4,
+        defense: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: 0,
+        water: -1,
+        thunder: +1,
+        ice: -2,
+        dragon: +2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['slash'],
+            Torso: ['pierce'],
+          },
+        },
+        'Rock Mantle': {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['slash'],
+            'Right Arm': ['blunt'],
+            Torso: ['pierce'],
+            'Left Arm': ['blunt'],
+          },
+        },
+      },
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Deviljho_(MHST3)
   {
     name: 'Deviljho',
     genus: 'Brute Wyvern',
+    monstie: {
+      eggColors: ['green', 'orange', 'red'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Diablos_(MHST3)
@@ -243,6 +401,9 @@
     name: 'Diablos',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Black Diablos' }],
+    monstie: {
+      eggColors: ['brown'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Black_Diablos_(MHST3)
@@ -250,12 +411,16 @@
     name: 'Black Diablos',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Diablos' }],
+    monstie: {
+      eggColors: ['green', 'brown'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
   {
     name: 'Espinas',
     genus: 'Flying Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Espinas' }],
     flavor: {
       DEFAULT: 'This fierce Flying Wyvern is distinguished by the red-violet thorns dotting its green carapace. Its blood contains properties that poison and paralyze, so most monsters steer clear of it.',
     },
@@ -302,6 +467,16 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Espinas_(MHST3)
+  {
+    name: 'Feral Espinas',
+    genus: 'Flying Wyvern',
+    related: [{ type: 'feralOf', monster: 'Espinas' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Garangolm_(MHST3)
   {
     name: 'Garangolm',
@@ -312,25 +487,45 @@
   {
     name: 'Glavenus',
     genus: 'Brute Wyvern',
+    monstie: {
+      eggColors: ['blue', 'red'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Gravios_(MHST3)
   {
     name: 'Gravios',
     genus: 'Flying Wyvern',
+    monstie: {
+      eggColors: ['yellow', 'white', 'gray', 'orange'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Izuchi_(MHST3)
   {
     name: 'Great Izuchi',
     genus: 'Bird Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Great Izuchi' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Great_Izuchi_(MHST3)
+  {
+    name: 'Feral Great Izuchi',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'feralOf', monster: 'Great Izuchi' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Gypceros_(MHST3)
   {
     name: 'Gypceros',
     genus: 'Bird Wyvern',
-    related: [{ type: 'subspecies', monster: 'Purple Gypceros' }],
+    related: [
+      { type: 'feral', monster: 'Feral Gypceros' },
+      { type: 'subspecies', monster: 'Purple Gypceros' },
+    ],
     flavor: {
       DEFAULT: 'A Bird Wyvern with an oddly-shaped crest and poisonous saliva. It often runs about due to its skittish nature, seldom remaining in one place for long.',
       'Stamina Source': 'This monster\'s seemingly limitless stamina is derived from a fluid coursing through its body known as "dash extract," a potent tonic that sees great demand for its medicinal uses.',
@@ -382,7 +577,10 @@
   {
     name: 'Purple Gypceros',
     genus: 'Bird Wyvern',
-    related: [{ type: 'subspeciesOf', monster: 'Gypceros' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Gypceros' },
+      { type: 'feral', monster: 'Feral Gypceros' },
+    ],
     flavor: {
       DEFAULT: 'A purple-skinned subspecies of Gypceros. It boasts higher immunity to poison than its standard cousin, which allows it to hold more potent venom and in greater amounts.',
       'Powerful Poison': 'This subspecies eliminates intruders by poisoning them with a venom more potent than normal and then blinding them with a bright flash. Powerful blows can also be delivered at range with its tail.',
@@ -430,11 +628,27 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Gypceros_(MHST3)
+  {
+    name: 'Feral Gypceros',
+    genus: 'Bird Wyvern',
+    related: [
+      { type: 'feralOf', monster: 'Gypceros' },
+      { type: 'subspecies', monster: 'Purple Gypceros' },
+    ],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Khezu_(MHST3)
   {
     name: 'Khezu',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Red Khezu' }],
+    monstie: {
+      eggColors: ['blue', 'white', 'pink'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Red_Khezu_(MHST3)
@@ -442,6 +656,9 @@
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Khezu' }],
+    monstie: {
+      eggColors: ['pink', 'red'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Lagiacrus_(MHST3)
@@ -449,6 +666,9 @@
     name: 'Lagiacrus',
     genus: 'Leviathan',
     related: [{ type: 'subspecies', monster: 'Ivory Lagiacrus' }],
+    monstie: {
+      eggColors: ['blue', 'red'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Ivory_Lagiacrus_(MHST3)
@@ -456,12 +676,18 @@
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
     related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
+    monstie: {
+      eggColors: ['yellow', 'blue'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Legiana_(MHST3)
   {
     name: 'Legiana',
     genus: 'Flying Wyvern',
+    monstie: {
+      eggColors: ['yellow', 'white', 'blue', 'black'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Magnamalo_(MHST3)
@@ -481,6 +707,9 @@
     name: 'Mizutsune',
     genus: 'Leviathan',
     related: [{ type: 'deviant', monster: 'Soulseer Mizutsune' }],
+    monstie: {
+      eggColors: ['red', 'pink', 'white', 'gray'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Soulseer_Mizutsune_(MHST3)
@@ -488,6 +717,9 @@
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
     related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
+    monstie: {
+      eggColors: ['white', 'red', 'purple', 'pink'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Namielle_(MHST3)
@@ -548,6 +780,9 @@
       { type: 'subspecies', monster: 'Green Nargacuga' },
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
+    monstie: {
+      eggColors: ['pink', 'purple', 'blue'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Green_Nargacuga_(MHST3)
@@ -558,6 +793,9 @@
       { type: 'subspeciesOf', monster: 'Nargacuga' },
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
+    monstie: {
+      eggColors: ['green', 'yellow'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Silverwind_Nargacuga_(MHST3)
@@ -568,12 +806,16 @@
       { type: 'deviantOf', monster: 'Nargacuga' },
       { type: 'subspecies', monster: 'Green Nargacuga' },
     ],
+    monstie: {
+      eggColors: ['white', 'blue'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Nerscylla_(MHST3)
   {
     name: 'Nerscylla',
     genus: 'Temnoceran',
+    related: [{ type: 'feral', monster: 'Feral Nerscylla' }],
     flavor: {
       DEFAULT: 'A Temnoceran that weaves nests to defend its territory and hunt. It ensnares prey, weakening them with abnormal statuses, then feasts using its razor-sharp mandibles.',
       'Gypceros, My Favorite': 'Its preferred prey are Gypceros, whose hides it peels off and wears after feeding. The purple hides protect it from its weakness to lightning and conceal its true white coloring.',
@@ -627,10 +869,57 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Nerscylla_(MHST3)
+  {
+    name: 'Feral Nerscylla',
+    genus: 'Temnoceran',
+    related: [{ type: 'feralOf', monster: 'Nerscylla' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    element: 'fire',
+    stats: {
+      elementalResistance: {
+        none: +1,
+        fire: +2,
+        water: null,
+        thunder: null,
+        ice: null,
+        dragon: null,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: null,
+        sleep: +2,
+        blastblight: null,
+        bleeding: null,
+        blind: null,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Needle: ['pierce'],
+            Legs: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+      },
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Paolumu_(MHST3)
   {
     name: 'Paolumu',
     genus: 'Flying Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Paolumu' }],
     rank: 3,
     flavor: {
       DEFAULT: 'After sucking in a large volume of air, this Flying Wyvern takes on its unique, rotund appearance. That air can then be expelled to propel itself. It is just as mild-mannered as it looks.',
@@ -701,6 +990,71 @@
       ridingActions: ['fly', 'jump', 'roar', 'melee'],
       kinshipSkill: 'Jet Balloon',
       eggColors: ['white', 'pink'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Paolumu_(MHST3)
+  {
+    name: 'Feral Paolumu',
+    genus: 'Flying Wyvern',
+    related: [{ type: 'feralOf', monster: 'Paolumu' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    element: 'thunder',
+    stats: {
+      base: {
+        hp: 6,
+        attack: 5,
+        speed: 5,
+        defense: 3,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: -2,
+        water: +1,
+        thunder: +2,
+        ice: 0,
+        dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Torso: ['slash'],
+          },
+        },
+        Airborne: {
+          attack: 'speed',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            'Neck Pouch': ['pierce'],
+          },
+          ailmentResistance: {
+            poison: -1,
+            burn: -2,
+            paralysis: +2,
+            sleep: +2,
+            blastblight: -1,
+            bleeding: -1,
+            blind: -2,
+          },
+        },
+      },
     },
   },
 
@@ -823,6 +1177,9 @@
   {
     name: 'Pukei-Pukei',
     genus: 'Bird Wyvern',
+    monstie: {
+      eggColors: ['green', 'yellow', 'white'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rakna-Kadaki_(MHST3)
@@ -836,6 +1193,9 @@
     name: 'Rathalos',
     genus: 'Flying Wyvern',
     related: [{ type: 'story', monster: 'Ratha' }],
+    monstie: {
+      eggColors: ['red', 'blue'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Ratha_(MHST3)
@@ -1137,12 +1497,18 @@
     name: 'Purple Ludroth',
     genus: 'Leviathan',
     related: [{ type: 'subspeciesOf', monster: 'Royal Ludroth' }],
+    monstie: {
+      eggColors: ['pink'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Seregios_(MHST3)
   {
     name: 'Seregios',
     genus: 'Flying Wyvern',
+    monstie: {
+      eggColors: ['yellow', 'orange', 'red'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Shogun_Ceanataur_(MHST3)
@@ -1155,14 +1521,20 @@
   {
     name: 'Somnacanth',
     genus: 'Leviathan',
-    related: [{ type: 'subspecies', monster: 'Aurora Somnacanth' }],
+    related: [
+      { type: 'subspecies', monster: 'Aurora Somnacanth' },
+      { type: 'feral', monster: 'Feral Somnacanth' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Aurora_Somnacanth_(MHST3)
   {
     name: 'Aurora Somnacanth',
     genus: 'Leviathan',
-    related: [{ type: 'subspeciesOf', monster: 'Somnacanth' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Somnacanth' },
+      { type: 'feral', monster: 'Feral Somnacanth' },
+    ],
     flavor: {
       DEFAULT: 'A bellicose Leviathan that lives in the water and spreads soporific dust via its neck gills and tail to ensnare its prey. When seen under the moonlight, it is said to resemble a maiden or mermaid.',
       'Mermaid Hair': "Although the appendage on this monster's head looks like little more than a purple fin, it is actually lined with countless spikes that can be released like arrows in a ranged attack.",
@@ -1170,22 +1542,50 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Somnacanth_(MHST3)
+  {
+    name: 'Feral Somnacanth',
+    genus: 'Leviathan',
+    related: [
+      { type: 'feralOf', monster: 'Somnacanth' },
+      { type: 'subspecies', monster: 'Aurora Somnacanth' },
+    ],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Tetranadon_(MHST3)
   {
     name: 'Tetranadon',
     genus: 'Amphibian',
+    related: [{ type: 'feral', monster: 'Feral Tetranadon' }],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Tetranadon_(MHST3)
+  {
+    name: 'Feral Tetranadon',
+    genus: 'Amphibian',
+    related: [{ type: 'feralOf', monster: 'Tetranadon' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Tigrex_(MHST3)
   {
     name: 'Tigrex',
     genus: 'Flying Wyvern',
+    monstie: {
+      eggColors: ['orange', 'blue'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Tobi-Kadachi_(MHST3)
   {
     name: 'Tobi-Kadachi',
     genus: 'Fanged Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Tobi-Kadachi' }],
     rank: 3,
     flavor: {
       DEFAULT: 'This Fanged Wyvern flits from tree to tree in its forest canopy home. Its fur brushes against tree bark and the ground as it moves, building up static electricity.',
@@ -1245,10 +1645,21 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Tobi-Kadachi_(MHST3)
+  {
+    name: 'Feral Tobi-Kadachi',
+    genus: 'Fanged Wyvern',
+    related: [{ type: 'feralOf', monster: 'Tobi-Kadachi' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Velocidrome_(MHST3)
   {
     name: 'Velocidrome',
     genus: 'Bird Wyvern',
+    related: [{ type: 'feral', monster: 'Feral Velocidrome' }],
     flavor: {
       DEFAULT: 'The alpha monster of a Velociprey pack, it is distinguishable by its larger size and bright orange crest. It patrols its expansive territory for prey and intruders alike.',
       'Sparing Nothing': 'Its scales are used to make durable armor, while its fangs are used in ammo and decorations. Even the flexible blue hide can be made into clothing or used to connect pieces of metal armour.',
@@ -1302,11 +1713,33 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Velocidrome_(MHST3)
+  {
+    name: 'Feral Velocidrome',
+    genus: 'Bird Wyvern',
+    related: [{ type: 'feralOf', monster: 'Velocidrome' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
+  {
+    name: 'Feral Yama Tsukami',
+    genus: 'Elder Dragon',
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Yian_Garuga_(MHST3)
   {
     name: 'Yian Garuga',
     genus: 'Bird Wyvern',
     related: [{ type: 'deviant', monster: 'Deadeye Yian Garuga' }],
+    monstie: {
+      eggColors: ['purple', 'pink'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Deadeye_Yian_Garuga_(MHST3)
@@ -1320,7 +1753,10 @@
   {
     name: 'Yian Kut-Ku',
     genus: 'Bird Wyvern',
-    related: [{ type: 'subspecies', monster: 'Blue Yian Kut-Ku' }],
+    related: [
+      { type: 'subspecies', monster: 'Blue Yian Kut-Ku' },
+      { type: 'feral', monster: 'Feral Yian Kut-Ku' },
+    ],
     rank: 2,
     flavor: {
       DEFAULT: 'A Bird Wyvern commonly found in warm regions, it has a distinctive large beak and wide ears that splay out to intimidate potential threats. It is docile and flees more than it fights.',
@@ -1385,7 +1821,10 @@
   {
     name: 'Blue Yian Kut-Ku',
     genus: 'Bird Wyvern',
-    related: [{ type: 'subspeciesOf', monster: 'Yian Kut-Ku' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Yian Kut-Ku' },
+      { type: 'feral', monster: 'Feral Yian Kut-Ku' },
+    ],
     rank: 3,
     flavor: {
       DEFAULT: 'A Yian Kut-Ku subspecies with a blue coloration. It shares similar behavioral patterns with its pink counterpart, but boasts higher physical capabilities.',
@@ -1446,9 +1885,67 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Feral_Yian_Kut-Ku_(MHST3)
+  {
+    name: 'Feral Yian Kut-Ku',
+    genus: 'Bird Wyvern',
+    related: [
+      { type: 'feralOf', monster: 'Yian Kut-Ku' },
+      { type: 'subspecies', monster: 'Blue Yian Kut-Ku' },
+    ],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    element: 'fire',
+    stats: {
+      base: {
+        hp: 5,
+        attack: 6,
+        speed: 5,
+        defense: 4,
+      },
+      elementalResistance: {
+        none: 0,
+        fire: +2,
+        water: +1,
+        thunder: -1,
+        ice: -2,
+        dragon: -1,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        blind: -1,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+          parts: {
+            'Main Body': ['slash', 'pierce', 'blunt'],
+            Head: ['blunt'],
+            Wings: ['pierce'],
+            Tail: ['slash'],
+          },
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+      },
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Zinogre_(MHST3)
   {
     name: 'Zinogre',
     genus: 'Fanged Wyvern',
+    monstie: {
+      eggColors: ['blue', 'green', 'yellow'],
+    },
   },
 ]
