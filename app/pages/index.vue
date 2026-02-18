@@ -33,16 +33,17 @@
 <template>
   <div>
     <UPageHero class="from-neutral-900 to-neutral-950 dark:bg-linear-to-b" orientation="horizontal">
-      <template #top>
-        <HeroBackground />
+      <template #title>
+        Ship Beautiful
+        <span class="text-primary">Documentation</span>
+        .
       </template>
-
-      <template #title> Ship Beautiful <span class="text-primary">Documentation</span>. </template>
 
       <template #description>
         Build professional documentation with Nuxt UI's powerful components, enhanced typography,
         and seamless Nuxt Content integration. The same system trusted by the entire
-        <a href="https://nuxt.com">Nuxt ecosystem</a>.
+        <a href="https://nuxt.com">Nuxt ecosystem</a>
+        .
       </template>
 
       <template #links>
@@ -64,7 +65,7 @@
     </UPageHero>
 
     <UPageSection class="dark:bg-neutral-950">
-      <template #title> Powered by Nuxt UI components </template>
+      <template #title>Powered by Nuxt UI components</template>
 
       <template #links>
         <UButton
@@ -120,7 +121,7 @@
     </UPageSection>
 
     <UPageSection class="dark:bg-neutral-950">
-      <template #title> Enhanced with Nuxt Content </template>
+      <template #title>Enhanced with Nuxt Content</template>
 
       <template #links>
         <UButton
@@ -180,9 +181,7 @@
         title="Ready to build an amazing documentation?"
         description="Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today."
         class="dark:bg-neutral-950"
-      >
-        <StarsBg />
-      </UPageCTA>
+      />
     </UPageSection>
   </div>
 </template>
