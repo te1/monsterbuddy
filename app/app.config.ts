@@ -1,8 +1,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'rose',
-      neutral: 'zinc',
+      primary: 'sky',
+      neutral: 'mist',
     },
 
     footer: {
@@ -10,9 +10,5 @@ export default defineAppConfig({
         root: 'border-t border-default',
       },
     },
-  },
-
-  seo: {
-    siteName: 'Nuxt Docs Template',
   },
 });

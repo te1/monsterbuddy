@@ -8,4 +8,10 @@
 :root {
   --ui-container: var(--container-8xl);
   --ui-radius: 0.125rem;
+  /* --ui-bg: var(--ui-color-neutral-100); */
+}
+
+.dark {
+  /* --ui-primary: var(--ui-color-primary-500); */
+  /* --ui-bg: var(--ui-color-neutral-900); */
 }
