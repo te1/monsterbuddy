@@ -1,42 +1,21 @@
 <script setup lang="ts">
-  import type { ButtonProps } from '@nuxt/ui';
-
-  const title = 'Nuxt Docs Template';
-  const description = 'Create stunning, fast and SEO-optimized documentation sites with Nuxt UI.';
+  const title = 'Monster Buddy';
 
   useSeoMeta({
     titleTemplate: '',
     title,
     ogTitle: title,
-    description,
-    ogDescription: description,
     ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
     twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
   });
-
-  const links = ref<ButtonProps[]>([
-    {
-      label: 'Start building',
-      to: '/getting-started',
-      trailingIcon: 'i-lucide-arrow-right',
-    },
-    {
-      label: 'View on GitHub',
-      to: 'https://github.com/nuxt-ui-templates/docs',
-      target: '_blank',
-      variant: 'subtle',
-      icon: 'i-simple-icons-github',
-    },
-  ]);
 </script>
 
 <template>
   <div>
-    <UPageHero class="from-neutral-900 to-neutral-950 dark:bg-linear-to-b" orientation="horizontal">
+    <UPageHero orientation="horizontal">
       <template #title>
         Ship Beautiful
         <span class="text-primary">Documentation</span>
-        .
       </template>
 
       <template #description>
@@ -64,7 +43,7 @@
       </template>
     </UPageHero>
 
-    <UPageSection class="dark:bg-neutral-950">
+    <UPageSection>
       <template #title>Powered by Nuxt UI components</template>
 
       <template #links>
@@ -118,70 +97,6 @@
           description="Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice."
         />
       </template>
-    </UPageSection>
-
-    <UPageSection class="dark:bg-neutral-950">
-      <template #title>Enhanced with Nuxt Content</template>
-
-      <template #links>
-        <UButton
-          color="neutral"
-          size="lg"
-          target="_blank"
-          to="https://content.nuxt.com/docs/getting-started/installation"
-          trailingIcon="i-lucide-arrow-right"
-          variant="subtle"
-        >
-          Explore Nuxt Content
-        </UButton>
-      </template>
-
-      <template #features>
-        <UPageFeature
-          icon="i-simple-icons-markdown"
-          title="MDC Enhanced Markdown"
-          description="Write in Markdown while embedding Vue components. Seamlessly integrate interactive elements in your content."
-        />
-
-        <UPageFeature
-          icon="i-lucide-file-text"
-          title="File-based Routing"
-          description="Organize content in folders and files. Your documentation structure automatically becomes your navigation."
-        />
-
-        <UPageFeature
-          icon="i-lucide-code"
-          title="Syntax Highlighting"
-          description="Beautiful code blocks with language detection, line numbers, and copy buttons. Support for 100+ languages."
-        />
-
-        <UPageFeature
-          icon="i-lucide-database"
-          title="Content Database"
-          description="Query your content with a MongoDB-like API. Filter, sort, and search through your documentation programmatically."
-        />
-
-        <UPageFeature
-          icon="i-lucide-file-code"
-          title="Frontmatter Support"
-          description="Add metadata to your content files. Define SEO tags, navigation properties, and custom fields."
-        />
-
-        <UPageFeature
-          icon="i-lucide-git-branch"
-          title="Version Control"
-          description="Content lives in your repository. Branch, review, and deploy documentation alongside your code."
-        />
-      </template>
-    </UPageSection>
-
-    <UPageSection class="from-neutral-950 to-neutral-900 dark:bg-linear-to-b">
-      <UPageCTA
-        :links="links"
-        title="Ready to build an amazing documentation?"
-        description="Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today."
-        class="dark:bg-neutral-950"
-      />
     </UPageSection>
   </div>
 </template>
