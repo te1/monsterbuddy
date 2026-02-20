@@ -11,8 +11,11 @@
 </script>
 
 <template>
-  <div>
-    <UPageHero orientation="horizontal">
+  <div class="bg-neutral-200">
+    <UPageHero
+      orientation="horizontal"
+      class="bg-linear-to-b from-white to-neutral-100 dark:from-neutral-900 dark:to-neutral-950"
+    >
       <template #title>
         Ship Beautiful
         <span class="text-primary">Documentation</span>
@@ -43,7 +46,9 @@
       </template>
     </UPageHero>
 
-    <UPageSection>
+    <UPageSection
+      class="bg-linear-to-b from-neutral-100 to-white dark:from-neutral-950 dark:to-neutral-900"
+    >
       <template #title>Powered by Nuxt UI components</template>
 
       <template #links>

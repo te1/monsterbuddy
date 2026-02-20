@@ -6,14 +6,12 @@
       <NuxtLink to="/">
         <AppLogo />
       </NuxtLink>
-
-      <GameMenu />
     </template>
 
     <template #right>
       <AppSearchButton class="lg:hidden" />
-
       <UColorModeButton />
+      <GameMenu />
     </template>
   </UHeader>
 </template>

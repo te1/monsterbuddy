@@ -20,7 +20,7 @@
 
 <template>
   <UApp>
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="var(--ui-primary)" />
 
     <AppHeader />
 
