@@ -8,7 +8,10 @@
     "node_modules": true,
     ".nuxt": true,
     ".wrangler": true,
-    "dist": true
+    "dist": true,
+    "**/*.svg": true,
+    "**/*.webp": true,
+    "**/*.png": true
   },
   "search.exclude": {
     "**/node_modules": true,
