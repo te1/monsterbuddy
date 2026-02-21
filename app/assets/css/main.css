@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
+@theme {
+  --default-transition-duration: 200ms;
+}
+
 @theme static {
   --container-8xl: 90rem;
 }

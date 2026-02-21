@@ -14,7 +14,7 @@
   <NuxtLink
     v-bind="$attrs"
     :class="[
-      'transition-all duration-300',
+      'transition-all',
       'border-b border-transparent hover:border-[currentColor]',
       'focus-visible:outline-primary',
       { ['text-primary active:opacity-80']: !plain },
