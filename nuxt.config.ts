@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     'nuxt-og-image',
     'nuxt-llms',
+    '@nuxtjs/mdc',
     '@nuxt/a11y',
     '@nuxt/hints',
   ],
