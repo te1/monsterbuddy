@@ -1,36 +1,38 @@
+<script lang="ts" setup>
+  import type { DropdownMenuItem } from '@nuxt/ui';
+
+  const gameType = computed(() => routePathToGameType(useRoute().path));
+  const label = computed(() => gameTypeToShortLabel(gameType.value));
+  const title = computed(() => gameTypeToFullName(gameType.value));
+
+  const items = ref<DropdownMenuItem[]>([
+    {
+      label: gameTypeToFullLabel('mhst1'),
+      description: gameTypeToDescription('mhst1'),
+      to: '/1',
+    },
+    {
+      label: gameTypeToFullLabel('mhst2'),
+      description: gameTypeToDescription('mhst2'),
+      to: '/2',
+    },
+    {
+      label: gameTypeToFullLabel('mhst3'),
+      description: gameTypeToDescription('mhst3'),
+      to: '/3',
+    },
+  ]);
+</script>
+
 <template>
-  <UDropdownMenu
-    v-slot="{ open }"
-    :modal="false"
-    :items="[
-      {
-        label: 'Stories 1',
-        to: '/1',
-      },
-      {
-        label: 'Stories 2',
-        to: '/2',
-      },
-      {
-        label: 'Stories 3',
-        to: '/3',
-        color: 'primary',
-      },
-    ]"
-    :ui="{ content: 'min-w-fit' }"
-  >
+  <UDropdownMenu v-slot="{ open }" :items="items" :modal="false" :content="{ align: 'end' }">
     <UButton
-      label="Game"
+      :label="label"
+      :title="title"
       color="neutral"
-      variant="subtle"
-      trailingIcon="i-lucide-chevron-down"
-      class="truncate font-semibold"
-      :class="[open && 'bg-primary/15']"
-      :ui="{
-        trailingIcon: ['transition-transform duration-200', open ? 'rotate-180' : undefined]
-          .filter(Boolean)
-          .join(' '),
-      }"
+      variant="ghost"
+      class="w-18 justify-center"
+      :class="[open && 'bg-elevated']"
     />
   </UDropdownMenu>
 </template>

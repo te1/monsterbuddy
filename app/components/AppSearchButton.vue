@@ -13,18 +13,20 @@
 <script setup lang="ts">
   defineOptions({ inheritAttrs: false });
 
-  const props = withDefaults(defineProps<AppSearchButtonProps>(), {
-    collapsed: true,
-    class: undefined,
-  });
+  // const props = withDefaults(defineProps<AppSearchButtonProps>(), {
+  //   collapsed: true,
+  //   class: undefined,
+  // });
 
-  const kbds = ['meta', 'k'];
+  // const kbds = ['meta', 'k'];
 
-  const open = ref(false);
+  // const open = ref(false);
   const appConfig = useAppConfig();
 </script>
 
 <template>
+  <UButton :icon="appConfig.ui.icons.search" color="neutral" variant="ghost" />
+  <!--
   <UButton
     :icon="appConfig.ui.icons.search"
     :label="collapsed ? undefined : 'Search...'"
@@ -58,4 +60,5 @@
       </div>
     </template>
   </UButton>
+  -->
 </template>
