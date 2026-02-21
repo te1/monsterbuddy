@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  const canHover = false;
+
   const path = computed(() => useRoute().path);
   const gameType = computed(() => routePathToGameType(path.value));
   const navItems = computed(() => getNavItems(path.value));
@@ -17,6 +19,8 @@
       :items="navItems"
       variant="link"
       contentOrientation="vertical"
+      :disableHoverTrigger="!canHover"
+      :disablePointerLeaveClose="!canHover"
       :ui="{
         viewportWrapper: 'absolute top-auto! right-0 bottom-full! left-0 flex justify-end',
         viewport:

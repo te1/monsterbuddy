@@ -1,10 +1,18 @@
 <script lang="ts" setup>
+  const canHover = useCanHover();
+
   const navItems = computed(() => getNavItems(useRoute().path));
 </script>
 
 <template>
   <UHeader to="/" :toggle="false" :ui="{ center: 'flex-1' }">
-    <UNavigationMenu :items="navItems" variant="link" contentOrientation="vertical" />
+    <UNavigationMenu
+      :items="navItems"
+      variant="link"
+      contentOrientation="vertical"
+      :disableHoverTrigger="!canHover"
+      :disablePointerLeaveClose="!canHover"
+    />
 
     <template #left>
       <NuxtLink to="/">
