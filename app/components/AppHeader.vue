@@ -1,6 +1,7 @@
 <template>
   <UHeader :ui="{ center: 'flex-1' }" to="/">
-    <AppSearchButton :collapsed="false" class="w-full" />
+    <!-- <AppSearchButton :collapsed="false" class="w-full" /> -->
+    <AppNav />
 
     <template #left>
       <NuxtLink to="/">
@@ -9,7 +10,7 @@
     </template>
 
     <template #right>
-      <AppSearchButton class="lg:hidden" />
+      <AppSearchButton />
       <UColorModeButton />
       <GameMenu />
     </template>
