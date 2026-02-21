@@ -31,5 +31,6 @@
     </UMain>
 
     <AppFooter />
+    <AppMobileBottomNav />
   </UApp>
 </template>
