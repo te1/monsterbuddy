@@ -25,7 +25,7 @@
 </script>
 
 <template>
-  <UButton :icon="appConfig.ui.icons.search" color="neutral" variant="ghost" />
+  <UButton :icon="appConfig.ui.icons.search" color="neutral" variant="ghost" aria-label="Search" />
   <!--
   <UButton
     :icon="appConfig.ui.icons.search"

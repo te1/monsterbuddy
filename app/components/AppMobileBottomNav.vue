@@ -1,9 +1,12 @@
 <script lang="ts" setup>
-  const navItems = computed(() => getNavItems(useRoute().path));
+  const path = computed(() => useRoute().path);
+  const gameType = computed(() => routePathToGameType(path.value));
+  const navItems = computed(() => getNavItems(path.value));
 </script>
 
 <template>
   <UHeader
+    v-if="gameType !== 'none'"
     as="div"
     title=""
     :toggle="false"
@@ -15,10 +18,9 @@
       variant="link"
       contentOrientation="vertical"
       :ui="{
-        viewportWrapper:
-          'absolute bottom-full! top-auto! left-0 right-0 flex justify-end',
+        viewportWrapper: 'absolute top-auto! right-0 bottom-full! left-0 flex justify-end',
         viewport:
-          'left-auto! right-0! w-60 max-w-[calc(100vw-0.5rem)] sm:w-(--reka-navigation-menu-viewport-width)'
+          'right-0! left-auto! w-60 max-w-[calc(100vw-0.5rem)] sm:w-(--reka-navigation-menu-viewport-width)',
       }"
     />
   </UHeader>
