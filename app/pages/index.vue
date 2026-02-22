@@ -1,10 +1,13 @@
 <script setup lang="ts">
-  const title = 'Monster Buddy';
+  definePageMeta({
+    layout: false,
+  });
 
   useSeoMeta({
     titleTemplate: '',
-    title,
-    ogTitle: title,
+    title: 'Monster Buddy - Companion App For Monster Hunter Stories',
+    description:
+      'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions', // TODO mention all 3 games
     ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
     twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
   });

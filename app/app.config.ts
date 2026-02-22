@@ -11,4 +11,8 @@ export default defineAppConfig({
       },
     },
   },
+
+  seo: {
+    title: 'Monster Buddy',
+  },
 });
