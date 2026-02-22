@@ -7,6 +7,9 @@
     htmlAttrs: {
       lang: 'en',
     },
+    bodyAttrs: {
+      class: 'bg-elevated',
+    },
   });
 
   useSeoMeta({
