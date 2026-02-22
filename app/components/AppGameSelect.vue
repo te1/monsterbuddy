@@ -1,9 +1,12 @@
 <script lang="ts" setup>
+  import { createReusableTemplate } from '@vueuse/core';
   import type { DropdownMenuItem } from '@nuxt/ui';
+
+  const [DefineButtonTemplate, ReuseButtonTemplate] = createReusableTemplate<{ open: boolean }>();
 
   const gameType = computed(() => routePathToGameType(useRoute().path));
   const label = computed(() => gameTypeToShortLabel(gameType.value));
-  const title = computed(() => gameTypeToFullName(gameType.value));
+  const tooltip = computed(() => gameTypeToFullName(gameType.value));
 
   const items = ref<DropdownMenuItem[]>([
     {
@@ -25,14 +28,23 @@
 </script>
 
 <template>
-  <UDropdownMenu v-slot="{ open }" :items="items" :modal="false" :content="{ align: 'end' }">
+  <DefineButtonTemplate v-slot="{ open }">
     <UButton
       :label="label"
-      :title="title"
       color="neutral"
       variant="ghost"
       class="w-19 justify-center"
       :class="[open && 'bg-elevated']"
     />
+  </DefineButtonTemplate>
+
+  <UDropdownMenu v-slot="{ open }" :items="items" :modal="false" :content="{ align: 'end' }">
+    <span class="inline-flex">
+      <ReuseButtonTemplate v-if="open" :open="open" />
+
+      <UTooltip v-else :text="tooltip">
+        <ReuseButtonTemplate :open="open" />
+      </UTooltip>
+    </span>
   </UDropdownMenu>
 </template>
