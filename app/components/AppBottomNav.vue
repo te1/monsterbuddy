@@ -25,7 +25,7 @@
   >
     <UNavigationMenu :items="navItems" variant="link">
       <template #more="{ item }">
-        <UDropdownMenu as="span" :modal="false" class="p-0" :items="typeNavItem(item).items">
+        <UDropdownMenu :modal="false" :items="typeNavItem(item).items">
           <UButton :label="typeNavItem(item).label" color="neutral" variant="link" />
         </UDropdownMenu>
       </template>

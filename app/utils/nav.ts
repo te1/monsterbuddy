@@ -127,6 +127,8 @@ export function patchNavItemsForBottomNav(navItems: NavigationMenuItem[]): Navig
       return {
         ...item,
         slot: item.label?.replace(' ', '-').toLowerCase(),
+        as: 'span',
+        class: 'p-0',
         items: item.children,
         children: undefined,
       };
