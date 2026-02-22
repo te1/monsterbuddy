@@ -42,6 +42,10 @@ export default defineNuxtConfig({
     config: {},
   },
 
+  a11y: {
+    logIssues: false,
+  },
+
   icon: {
     provider: 'iconify',
   },
