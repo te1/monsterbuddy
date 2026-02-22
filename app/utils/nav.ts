@@ -96,6 +96,11 @@ export const mhst3NavItems: NavigationMenuItem[] = [
     label: 'More',
     children: [
       {
+        label: 'Areas',
+        description: 'Habitat Restoration',
+        to: '/3/areas',
+      },
+      {
         label: 'Riding Actions',
         to: '/3/riding-actions',
       },
