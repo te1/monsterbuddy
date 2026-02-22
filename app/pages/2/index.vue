@@ -13,8 +13,8 @@
       'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions',
   });
 
-  defineOgImageComponent('Docs', {
-    headline: headline,
+  defineOgImageComponent('Text', {
+    // headline: headline,
   });
 </script>
 
