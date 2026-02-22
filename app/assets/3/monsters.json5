@@ -1075,7 +1075,10 @@
   {
     name: 'Nerscylla',
     genus: 'Temnoceran',
-    related: [{ type: 'feral', monster: 'Feral Nerscylla' }],
+    related: [
+      { type: 'feral', monster: 'Feral Nerscylla' },
+      { type: 'invasive', monster: 'Invasive Nerscylla' },
+    ],
     flavor: {
       DEFAULT: 'A Temnoceran that weaves nests to defend its territory and hunt. It ensnares prey, weakening them with abnormal statuses, then feasts using its razor-sharp mandibles.',
       'Gypceros, My Favorite': 'Its preferred prey are Gypceros, whose hides it peels off and wears after feeding. The purple hides protect it from its weakness to lightning and conceal its true white coloring.',
@@ -1133,7 +1136,10 @@
   {
     name: 'Feral Nerscylla',
     genus: 'Temnoceran',
-    related: [{ type: 'feralOf', monster: 'Nerscylla' }],
+    related: [
+      { type: 'feralOf', monster: 'Nerscylla' },
+      { type: 'invasive', monster: 'Invasive Nerscylla' },
+    ],
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1173,6 +1179,29 @@
         },
       },
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Nerscylla_(MHST3)
+  {
+    name: 'Invasive Nerscylla',
+    genus: 'Temnoceran',
+    related: [
+      { type: 'invasiveOf', monster: 'Nerscylla' },
+      { type: 'feral', monster: 'Feral Nerscylla' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Nibelsnarf_(MHST3)
+  {
+    name: 'Nibelsnarf',
+    genus: 'Leviathan',
+  },
+
+  // https://monsterhunterwiki.org/wiki/Odogaron_(MHST3)
+  {
+    name: 'Odogaron',
+    genus: 'Fanged Wyvern',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Paolumu_(MHST3)
@@ -1917,6 +1946,12 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Thunder_Serpent_Narwa_(MHST3)
+  {
+    name: 'Thunder Serpent Narwa',
+    genus: 'Elder Dragon',
+  },
+
   // https://monsterhunterwiki.org/wiki/Tigrex_(MHST3)
   {
     name: 'Tigrex',
@@ -2130,6 +2165,12 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Wind_Serpent_Ibushi
+  {
+    name: 'Wind Serpent Ibushi',
+    genus: 'Elder Dragon',
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)

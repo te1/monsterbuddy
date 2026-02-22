@@ -68,7 +68,7 @@
       {
         name: 'Mirror Lake',
         element: 'water',
-        permanent: ['?', 'Green Plesioth', 'Plesioth', 'Royal Ludroth', 'Yian Kut-Ku'],
+        permanent: ['Namielle', 'Green Plesioth', 'Plesioth', 'Royal Ludroth', 'Yian Kut-Ku'],
         feral: 'Feral Nerscylla',
         invasive: '?',
         endangered: '?',
@@ -170,5 +170,22 @@
         endangered: '?',
       },
     ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Turkuan
+  {
+    name: 'Turkuan',
+    monsters: {
+      large: [],
+      small: [],
+      feral: [],
+      invasive: [],
+      endangered: [],
+    },
+    powers: {
+      skills: {},
+      stats: {},
+    },
+    areas: [],
   },
 ]
