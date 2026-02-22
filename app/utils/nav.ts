@@ -121,6 +121,20 @@ export function getNavItems(routePath: string): NavigationMenuItem[] {
   return navItems[gameType];
 }
 
+export function patchNavItemsForBottomNav(navItems: NavigationMenuItem[]): NavigationMenuItem[] {
+  return navItems.map((item) => {
+    if (item.children) {
+      return {
+        ...item,
+        slot: item.label?.replace(' ', '-').toLowerCase(),
+        items: item.children,
+        children: undefined,
+      };
+    }
+    return item;
+  });
+}
+
 export function routePathToGameType(routePath: string): GameType {
   if (routePath.startsWith('/1')) {
     return 'mhst1';
