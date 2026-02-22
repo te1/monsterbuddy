@@ -5,15 +5,23 @@ export default defineAppConfig({
       neutral: 'mist',
     },
 
-    pageHeader: {
+    header: {
       slots: {
-        root: 'pt-4',
+        root: 'border-accented dark:border-default',
       },
     },
 
     footer: {
       slots: {
-        root: 'border-t border-default',
+        root: 'border-t border-accented',
+      },
+    },
+
+    pageHeader: {
+      slots: {
+        root: 'py-4 border-0',
+        headline: 'font-medium',
+        title: 'font-normal dark:text-toned',
       },
     },
   },

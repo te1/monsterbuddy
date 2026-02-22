@@ -5,7 +5,7 @@
 <template>
   <UFooter :ui="{ container: 'py-2', center: 'flex-col gap-2' }">
     <!-- prettier-ignore -->
-    <div class="text-center text-balance text-muted text-sm">
+    <div class="text-center text-pretty text-muted text-sm">
       <PrettyNuxtLink to="/" plain>{{ title }}</PrettyNuxtLink> is a companion app for
       <span class="whitespace-nowrap">
         <PrettyLink href="https://www.capcom.com" plain bare>Capcom</PrettyLink>'s

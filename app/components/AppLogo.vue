@@ -1,3 +1,3 @@
 <template>
-  <div class="text-xl font-semibold tracking-wide text-toned">Monster Buddy</div>
+  <div class="text-xl font-medium tracking-wide dark:text-toned">Monster Buddy</div>
 </template>
