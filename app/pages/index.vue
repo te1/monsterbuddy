@@ -33,9 +33,7 @@
       </template>
 
       <template #links>
-        <UButton to="/getting-started" size="xl" trailingIcon="i-lucide-arrow-right">
-          Get started
-        </UButton>
+        <UButton to="/" size="xl" trailingIcon="i-lucide-arrow-right">Get started</UButton>
 
         <UButton
           icon="i-simple-icons-github"
