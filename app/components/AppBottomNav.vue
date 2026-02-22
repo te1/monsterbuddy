@@ -23,10 +23,20 @@
     class="lg:hidden"
     :ui="{ root: 'top-auto bottom-0 border-t border-b-0', center: 'flex' }"
   >
-    <UNavigationMenu :items="navItems" variant="link">
+    <UNavigationMenu :items="navItems" variant="link" :ui="{ link: 'text-base' }">
       <template #more="{ item }">
-        <UDropdownMenu :modal="false" :items="typeNavItem(item).items">
-          <UButton :label="typeNavItem(item).label" color="neutral" variant="link" />
+        <UDropdownMenu
+          :modal="false"
+          size="xl"
+          :items="typeNavItem(item).items"
+          :content="{ sideOffset: 0 }"
+        >
+          <UButton
+            :label="typeNavItem(item).label"
+            color="neutral"
+            variant="link"
+            class="text-base"
+          />
         </UDropdownMenu>
       </template>
     </UNavigationMenu>

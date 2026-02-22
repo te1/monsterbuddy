@@ -5,6 +5,12 @@ export default defineAppConfig({
       neutral: 'mist',
     },
 
+    pageHeader: {
+      slots: {
+        root: 'pt-4',
+      },
+    },
+
     footer: {
       slots: {
         root: 'border-t border-default',

@@ -3,11 +3,13 @@
 </script>
 
 <template>
-  <UFooter :ui="{ center: 'flex-col gap-2' }">
+  <UFooter :ui="{ container: 'py-2', center: 'flex-col gap-2' }">
     <!-- prettier-ignore -->
-    <div class="text-center text-balance text-muted">
+    <div class="text-center text-balance text-muted text-sm">
       <PrettyNuxtLink to="/" plain>{{ title }}</PrettyNuxtLink> is a companion app for
-      <PrettyLink href="https://www.capcom.com" plain bare>Capcom</PrettyLink>'s
+      <span class="whitespace-nowrap">
+        <PrettyLink href="https://www.capcom.com" plain bare>Capcom</PrettyLink>'s
+      </span>
       Monster Hunter Stories games. This project is not affiliated with or endorsed by
       Capcom or the Monster Hunter brand. All trademarks referenced herein are the
       properties of their respective owners.
