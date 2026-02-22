@@ -31,7 +31,7 @@
       :title="title"
       color="neutral"
       variant="ghost"
-      class="w-18 justify-center"
+      class="w-19 justify-center"
       :class="[open && 'bg-elevated']"
     />
   </UDropdownMenu>
