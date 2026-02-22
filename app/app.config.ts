@@ -13,7 +13,7 @@ export default defineAppConfig({
 
     footer: {
       slots: {
-        root: 'border-t border-accented',
+        root: 'border-t border-accented', // TODO remove border?
       },
     },
 
