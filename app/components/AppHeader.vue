@@ -18,6 +18,7 @@
       contentOrientation="vertical"
       :disableHoverTrigger="!canHover"
       :disablePointerLeaveClose="!canHover"
+      :ui="{ content: 'w-max' }"
     />
 
     <template #left>
