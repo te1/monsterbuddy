@@ -1,5 +1,5 @@
-<script setup lang="ts">
-  const { title } = useAppConfig().seo;
+<script lang="ts" setup>
+  const { description, title } = useAppConfig().seo;
 
   useHead({
     meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
@@ -8,8 +8,6 @@
       lang: 'en',
     },
   });
-
-  const description = 'Create stunning, fast and SEO-optimized documentation sites with Nuxt UI.';
 
   useSeoMeta({
     titleTemplate: `%s - ${title}`,

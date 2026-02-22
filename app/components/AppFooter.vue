@@ -1,8 +1,12 @@
+<script lang="ts" setup>
+  const { title } = useAppConfig().seo;
+</script>
+
 <template>
   <UFooter :ui="{ center: 'flex-col gap-2' }">
     <!-- prettier-ignore -->
     <div class="text-center text-balance text-muted">
-      <PrettyNuxtLink to="/" plain>Monster Buddy</PrettyNuxtLink> is a companion app for
+      <PrettyNuxtLink to="/" plain>{{ title }}</PrettyNuxtLink> is a companion app for
       <PrettyLink href="https://www.capcom.com" plain bare>Capcom</PrettyLink>'s
       Monster Hunter Stories games. This project is not affiliated with or endorsed by
       Capcom or the Monster Hunter brand. All trademarks referenced herein are the
@@ -15,8 +19,8 @@
       icon="i-simple-icons-github"
       to="https://github.com/te1/monsterbuddy"
       target="_blank"
-      title="Monster Buddy on GitHub"
-      aria-label="Monster Buddy on GitHub"
+      :title="`${title} on GitHub`"
+      :aria-label="`${title} on GitHub`"
     />
   </UFooter>
 </template>

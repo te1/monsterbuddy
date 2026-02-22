@@ -10,7 +10,7 @@
   }
 </script>
 
-<script setup lang="ts">
+<script lang="ts" setup>
   defineOptions({ inheritAttrs: false });
 
   // const props = withDefaults(defineProps<AppSearchButtonProps>(), {

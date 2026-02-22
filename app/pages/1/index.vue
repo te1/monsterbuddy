@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  const { title } = useAppConfig().seo;
   const headline = gameTypeToFullName('mhst1');
 
   definePageMeta({
@@ -7,7 +8,7 @@
 
   useSeoMeta({
     titleTemplate: '',
-    title: 'Monster Buddy - Companion App For Monster Hunter Stories 1',
+    title: `${title} - Companion App For Monster Hunter Stories 1`,
     description:
       'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions',
   });
@@ -17,7 +18,7 @@
   <UContainer>
     <UPage>
       <UPageHeader
-        title="Monster Buddy"
+        :title="title"
         description="Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions"
         :headline="headline"
       />
