@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-  const headline = gameTypeToFullName('mhst2');
+  const headline = gameTypeToFullName('mhst1');
 
   useSeoMeta({
-    title: 'Monster List For Monster Hunter Stories 2',
+    title: 'Monster List For Monster Hunter Stories 1 / Remastered',
     description:
       'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
   });

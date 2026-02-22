@@ -3,6 +3,8 @@
 
   useSeoMeta({
     title: "Elder's Lair Monster List For Monster Hunter Stories 2",
+    description:
+      "Overview of all the high rank monsters and on which floor to find them in the Elder's Lair and Special Elder's Lair end game zones",
   });
 </script>
 

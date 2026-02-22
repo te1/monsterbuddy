@@ -3,6 +3,8 @@
 
   useSeoMeta({
     title: 'Catavan Stand Fast Travel List For Monster Hunter Stories 2',
+    description:
+      'Overview of catavan stand fast travel locations and list of monsters you will find there',
   });
 </script>
 

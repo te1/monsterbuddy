@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-  const headline = gameTypeToFullName('mhst2');
+  const headline = gameTypeToFullName('mhst1');
 
   useSeoMeta({
-    title: 'Monstie List For Monster Hunter Stories 2',
+    title: 'Monstie List For Monster Hunter Stories 1 / Remastered',
     description:
       'Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats',
   });

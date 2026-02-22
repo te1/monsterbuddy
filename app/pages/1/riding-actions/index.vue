@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-  const headline = gameTypeToFullName('mhst2');
+  const headline = gameTypeToFullName('mhst1');
 
   useSeoMeta({
-    title: 'Riding Actions In Monster Hunter Stories 2',
+    title: ' Riding Actions In Monster Hunter Stories 1 / Remastered',
     description: 'Overview of all riding actions and list of monsties that can learn them',
   });
 </script>
