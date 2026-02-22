@@ -1,64 +1,68 @@
-<script lang="ts">
-  export interface AppSearchButtonProps {
-    /**
-     * Whether the button is collapsed.
-     * @defaultValue true
-     */
-    collapsed?: boolean;
+<script setup lang="ts">
+  import { createReusableTemplate } from '@vueuse/core';
 
-    class?: string;
-  }
-</script>
-
-<script lang="ts" setup>
-  defineOptions({ inheritAttrs: false });
-
-  // const props = withDefaults(defineProps<AppSearchButtonProps>(), {
-  //   collapsed: true,
-  //   class: undefined,
-  // });
-
-  // const kbds = ['meta', 'k'];
-
-  // const open = ref(false);
   const appConfig = useAppConfig();
+
+  const [DefineButtonTemplate, ReuseButtonTemplate] = createReusableTemplate();
+
+  const open = ref(false);
+  const search = ref('');
+
+  const { data: users, status } = await useFetch('https://jsonplaceholder.typicode.com/users', {
+    key: 'command-palette-users',
+    params: { q: search },
+    transform: (data: { id: number; name: string; email: string }[]) => {
+      return (
+        data?.map((user) => ({
+          id: user.id,
+          label: user.name,
+          suffix: user.email,
+          avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` },
+        })) || []
+      );
+    },
+    lazy: true,
+  });
+
+  const groups = computed(() => [
+    {
+      id: 'users',
+      label: search.value ? `Users matching “${search.value}”...` : 'Users',
+      items: users.value || [],
+      ignoreFilter: true,
+    },
+  ]);
+
+  defineShortcuts({
+    meta_k: () => (open.value = !open.value),
+  });
 </script>
 
 <template>
-  <UButton :icon="appConfig.ui.icons.search" color="neutral" variant="ghost" aria-label="Search" />
-  <!--
-  <UButton
-    :icon="appConfig.ui.icons.search"
-    :label="collapsed ? undefined : 'Search...'"
-    color="neutral"
-    :variant="collapsed ? 'ghost' : 'outline'"
-    v-bind="{
-      ...(collapsed
-        ? {
-            square: true,
-            'aria-label': 'LABEL',
-          }
-        : {}),
-      ...$attrs,
-    }"
-    :class="props.class"
-    :kbds="kbds"
-    @click="open = true"
-  >
-    <template #trailing="{ ui: uiProxy }">
-      <div data-slot="trailing" class="ms-auto hidden items-center gap-0.5 lg:flex">
-        <slot name="trailing" :ui="uiProxy">
-          <template v-if="kbds?.length">
-            <UKbd
-              v-for="(kbd, index) in kbds"
-              :key="index"
-              variant="subtle"
-              v-bind="typeof kbd === 'string' ? { value: kbd } : kbd"
-            />
-          </template>
-        </slot>
-      </div>
+  <DefineButtonTemplate>
+    <UButton
+      :icon="appConfig.ui.icons.search"
+      color="neutral"
+      variant="ghost"
+      aria-label="Search"
+    />
+  </DefineButtonTemplate>
+
+  <UModal v-model:open="open">
+    <ReuseButtonTemplate v-if="open" />
+
+    <UTooltip v-else text="Search" :kbds="['meta', 'k']">
+      <ReuseButtonTemplate />
+    </UTooltip>
+
+    <template #content>
+      <UCommandPalette
+        v-model:searchTerm="search"
+        :loading="status === 'pending'"
+        :groups="groups"
+        placeholder="Search users..."
+        class="h-80"
+      />
     </template>
-  </UButton>
-  -->
+  </UModal>
 </template>

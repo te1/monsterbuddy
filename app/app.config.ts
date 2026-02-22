@@ -5,6 +5,12 @@ export default defineAppConfig({
       neutral: 'mist',
     },
 
+    tooltip: {
+      slots: {
+        kbds: 'not-first-of-type:before:content-["_"]',
+      },
+    },
+
     header: {
       slots: {
         root: 'border-accented dark:border-default',
@@ -22,6 +28,7 @@ export default defineAppConfig({
         root: 'py-4 border-0',
         headline: 'font-medium',
         title: 'font-normal dark:text-toned',
+        description: 'text-toned dark:text-muted',
       },
     },
   },

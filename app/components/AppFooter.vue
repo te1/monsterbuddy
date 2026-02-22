@@ -5,7 +5,7 @@
 <template>
   <UFooter :ui="{ container: 'py-2', center: 'flex-col gap-2' }">
     <!-- prettier-ignore -->
-    <div class="text-center text-pretty text-muted text-sm">
+    <div class="text-center text-pretty text-toned dark:text-muted text-sm">
       <PrettyNuxtLink to="/" plain>{{ title }}</PrettyNuxtLink> is a companion app for
       <span class="whitespace-nowrap">
         <PrettyLink href="https://www.capcom.com" plain bare>Capcom</PrettyLink>'s
@@ -15,14 +15,15 @@
       properties of their respective owners.
     </div>
 
-    <UButton
-      color="neutral"
-      variant="link"
-      icon="i-simple-icons-github"
-      to="https://github.com/te1/monsterbuddy"
-      target="_blank"
-      :title="`${title} on GitHub`"
-      :aria-label="`${title} on GitHub`"
-    />
+    <UTooltip :text="`${title} on GitHub`">
+      <UButton
+        color="neutral"
+        variant="link"
+        icon="i-simple-icons-github"
+        to="https://github.com/te1/monsterbuddy"
+        target="_blank"
+        :aria-label="`${title} on GitHub`"
+      />
+    </UTooltip>
   </UFooter>
 </template>

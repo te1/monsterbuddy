@@ -30,7 +30,7 @@
 </script>
 
 <template>
-  <UApp>
+  <UApp :tooltip="{ delayDuration: 300, skipDelayDuration: 0 }">
     <AppHeader />
 
     <UMain>
