@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     'nuxt-llms',
     '@nuxtjs/mdc',
     '@nuxt/a11y',
-    '@nuxt/hints',
+    // '@nuxt/hints',
   ],
 
   telemetry: false,
