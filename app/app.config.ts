@@ -27,8 +27,8 @@ export default defineAppConfig({
       slots: {
         root: 'py-4 border-0',
         headline: 'font-medium',
-        title: 'font-normal dark:text-toned',
-        description: 'text-toned dark:text-muted',
+        title: 'text-xl font-normal dark:text-toned',
+        description: 'text-base text-toned dark:text-muted',
       },
     },
   },
