@@ -93,7 +93,7 @@ export function formatAttackType(attackTypeOrMonster?: AttackType | Monster): st
   }
 }
 
-export function formatWeaponType(weaponType: WeaponType): string {
+export function formatWeaponType(weaponType?: WeaponType): string {
   switch (weaponType) {
     case 'slash':
       return 'Slash';
@@ -103,6 +103,31 @@ export function formatWeaponType(weaponType: WeaponType): string {
 
     case 'pierce':
       return 'Pierce';
+
+    default:
+      return 'Unknown';
+  }
+}
+
+export function formatElement(element?: ElementType): string {
+  switch (element) {
+    case 'none':
+      return 'Non-elemental';
+
+    case 'fire':
+      return 'Fire';
+
+    case 'water':
+      return 'Water';
+
+    case 'thunder':
+      return 'Thunder';
+
+    case 'ice':
+      return 'Ice';
+
+    case 'dragon':
+      return 'Dragon';
 
     default:
       return 'Unknown';

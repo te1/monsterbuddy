@@ -10,6 +10,18 @@ export function getAttackTypeIconUrl(attackType?: AttackType) {
   );
 }
 
+const elementIcons = import.meta.glob<string>('~/assets/icon/element-*.svg', {
+  eager: true,
+  import: 'default',
+});
+
+export function getElementIconUrl(element?: ElementType) {
+  return (
+    elementIcons[`/assets/icon/element-${element}.svg`] ??
+    elementIcons['/assets/icon/type-unknown.svg']
+  );
+}
+
 const weaponTypeIcons = import.meta.glob<string>('~/assets/icon/weapon-*.svg', {
   eager: true,
   import: 'default',
