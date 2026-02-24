@@ -5,5 +5,7 @@
 </script>
 
 <template>
-  <S2MonsterImage :monster="monster" />
+  <section>
+    <S2MonsterImage :monster="monster" />
+  </section>
 </template>

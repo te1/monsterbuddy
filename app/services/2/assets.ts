@@ -20,3 +20,16 @@ export function getMonsterIconUrl(monster: Monster) {
     monsterIcons['/assets/2/monster-icon/_Unknown.png']
   );
 }
+
+const eggIcons = import.meta.glob<string>('~/assets/2/egg/*.svg', {
+  eager: true,
+  import: 'default',
+});
+
+export function getEggIconUrlForGenus(genus: GenusType) {
+  return eggIcons[`/assets/2/egg/_${genus}.svg`] ?? eggIcons['/assets/2/egg/_Unknown.svg'];
+}
+
+export function getEggIconUrlForMonster(monster?: Monster) {
+  return eggIcons[`/assets/2/egg/${monster?.name}.svg`] ?? eggIcons['/assets/2/egg/_Unknown.svg'];
+}

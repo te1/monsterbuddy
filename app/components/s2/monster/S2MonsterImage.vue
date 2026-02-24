@@ -23,12 +23,11 @@
     <img :src="imageUrl" :alt="monster.name" />
   </UTooltip>
 
-  <div v-else-if="!hideFallback">
-    <div
-      class="flex h-full w-full items-center p-2"
-      :class="right ? 'justify-end' : 'justify-center'"
-    >
-      <S2MonsterIcon :monster="monster" />
-    </div>
+  <div
+    v-else-if="!hideFallback"
+    class="flex h-full w-full items-center p-2"
+    :class="right ? 'justify-end' : 'justify-center'"
+  >
+    <S2MonsterIcon :monster="monster" />
   </div>
 </template>
