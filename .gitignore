@@ -19,6 +19,9 @@ logs
 .fleet
 .idea
 
+# Generated data files
+app/assets/**/*.json
+
 # Local env files
 .env
 .env.*
