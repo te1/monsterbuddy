@@ -1,4 +1,4 @@
-export type LocationType = 'catavanStand' | 'coopQuest' | 'eldersLair';
+// -- monsters --------------------------------------------
 
 export type RelationType =
   | 'subspecies'
@@ -8,35 +8,11 @@ export type RelationType =
   | 'color'
   | 'element';
 
-export type ElementType = 'none' | 'fire' | 'water' | 'thunder' | 'ice' | 'dragon';
-
-export type CoopQuestType = 'explore' | 'slay' | 'time';
-
-export type RidingActionType = 'utility' | 'explore' | 'search';
-
-export type AttackType = 'power' | 'speed' | 'technical';
-
-export type GrowthType = 'quick' | 'regular' | 'slow';
-
-export type GenusType =
-  | 'Amphibian'
-  | 'Bird Wyvern'
-  | 'Brute Wyvern'
-  | 'Carapaceon'
-  | 'Elder Dragon'
-  | 'Fanged Beast'
-  | 'Fanged Wyvern'
-  | 'Flying Wyvern'
-  | 'Herbivore'
-  | 'Leviathan'
-  | 'Lynian'
-  | 'Neopteron'
-  | 'Piscine Wyvern'
-  | 'Temnoceran';
+export type LocationType = 'catavanStand' | 'coopQuest' | 'eldersLair';
 
 export type MonsterRarityType = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
-export type CoopQuestRarityType = 5 | 8 | 9;
+export type GrowthType = 'quick' | 'regular' | 'slow';
 
 export type EggColor =
   | 'black'
@@ -51,21 +27,55 @@ export type EggColor =
   | 'white'
   | 'yellow';
 
-export type MonsterLocation = {
-  type: LocationType;
-  main?: string;
-  sub?: string;
+export type Monster = {
+  no: number;
+  name: string;
+  slug: string;
+  genus: GenusType;
+  habitat: string;
+  related?: MonsterRelation[];
+  locations: MonsterLocation[];
+  rarity?: MonsterRarityType;
+  monster?: MonsterData;
+  hatchable?: boolean;
+  monstie?: MonstieData;
 };
 
 export type MonsterRelation = {
   type: RelationType;
   monster: string;
 };
+export type MonsterLocation = {
+  type: LocationType;
+  main?: string;
+  sub?: string;
+};
 
 export type MonsterData = {
-  attackPatterns?: Record<string, string>;
-  parts?: Record<string, string[]>;
+  attackPatterns?: Record<string, AttackType>;
+  parts?: Record<string, WeaponType[]>;
   elementalWeakness?: ElementType;
+};
+
+export type MonstieData = {
+  attackType: AttackType;
+  attackElement: ElementType;
+  growth?: GrowthType;
+  stats?: MonstieStats;
+  ridingActions: string[];
+  kinshipSkill?: string;
+  eggColors: EggColor[];
+  retreat?: string;
+};
+
+export type MonstieStats = {
+  base: MonstieBaseStats;
+  attack: MonstieElementStats;
+  defense: MonstieElementStats;
+  bestAttack: MonstieStatEntry;
+  bestDefense: MonstieStatEntry;
+  worstDefense?: MonstieStatEntry;
+  otherDefense?: MonstieStatEntry;
 };
 
 export type MonstieBaseStats = {
@@ -82,40 +92,22 @@ export type MonstieStatEntry = {
   value: number;
 };
 
-export type MonstieStats = {
-  base: MonstieBaseStats;
-  attack: MonstieElementStats;
-  defense: MonstieElementStats;
-  bestAttack: MonstieStatEntry;
-  bestDefense: MonstieStatEntry;
-  worstDefense?: MonstieStatEntry;
-  otherDefense?: MonstieStatEntry;
-};
+// -- riding actions --------------------------------------
 
-export type MonstieData = {
-  attackType: AttackType;
-  growth?: GrowthType;
-  ridingActions: string[];
-  kinshipSkill?: string;
-  eggColors: EggColor[];
-  retreat?: string;
-  stats?: MonstieStats;
-  attackElement: ElementType;
-};
+export type RidingActionType = 'utility' | 'explore' | 'search';
 
-export type Monster = {
-  no: number;
+export type RidingAction = {
   name: string;
-  genus: GenusType;
-  habitat: string;
-  locations: MonsterLocation[];
-  rarity?: MonsterRarityType;
-  monster?: MonsterData;
-  hatchable?: boolean;
-  monstie?: MonstieData;
+  description: string;
+  type: RidingActionType;
   slug: string;
-  related?: MonsterRelation[];
 };
+
+// -- coop quests------------------------------------------
+
+export type CoopQuestType = 'explore' | 'slay' | 'time';
+
+export type CoopQuestRarityType = 5 | 8 | 9;
 
 export type CoopQuest = {
   type: CoopQuestType;
@@ -124,10 +116,14 @@ export type CoopQuest = {
   slug: string;
 };
 
+// -- habitats --------------------------------------------
+
 export type Habitat = {
   name: string;
   sortOrder: number;
 };
+
+// -- catavan stands --------------------------------------
 
 export type CatavanStand = {
   name: string;
@@ -140,11 +136,4 @@ export type CatavanStandWithDetails = {
   slug: string;
   zone?: string;
   sortOrder: number;
-};
-
-export type RidingAction = {
-  name: string;
-  description: string;
-  type: RidingActionType;
-  slug: string;
 };

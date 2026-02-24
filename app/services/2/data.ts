@@ -1,12 +1,9 @@
 import { intersection, sortBy, uniq } from 'es-toolkit/array';
 import type {
-  AttackType,
   CatavanStand,
   CatavanStandWithDetails,
   CoopQuest,
   EggColor,
-  ElementType,
-  GenusType,
   Habitat,
   LocationType,
   Monster,
