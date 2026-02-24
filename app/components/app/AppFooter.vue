@@ -6,9 +6,9 @@
   <UFooter :ui="{ container: 'py-2', center: 'flex-col gap-2' }">
     <!-- prettier-ignore -->
     <div class="text-center text-pretty text-toned dark:text-muted text-sm">
-      <PrettyNuxtLink to="/" plain>{{ title }}</PrettyNuxtLink> is a companion app for
+      <AppNuxtLink to="/" plain>{{ title }}</AppNuxtLink> is a companion app for
       <span class="whitespace-nowrap">
-        <PrettyLink href="https://www.capcom.com" plain bare>Capcom</PrettyLink>'s
+        <AppLink href="https://www.capcom.com" plain bare>Capcom</AppLink>'s
       </span>
       Monster Hunter Stories games. This project is not affiliated with or endorsed by
       Capcom or the Monster Hunter brand. All trademarks referenced herein are the
