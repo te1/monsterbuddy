@@ -1,5 +1,5 @@
+import type { Monster, RidingAction } from './types';
 import { isDeviant } from './data';
-import type { Monster } from './types';
 
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst2')}`;
@@ -15,6 +15,36 @@ export function getMonsterSeo(monster: Monster) {
   }
 
   description += `${monster.genus} found in ${monster.habitat}.`;
+
+  return {
+    title,
+    description,
+  };
+}
+
+export function getRidingActionSeo(ridingAction: RidingAction, monsters: Monster[]) {
+  const title = `${ridingAction.name} In ${gameTypeToFullLabel('mhst2')}`;
+
+  let description = `${ridingAction.name} is a riding action that `;
+
+  if (monsters.length) {
+    description += `${monsters.length} `;
+  }
+
+  description += 'monsties can learn.';
+
+  switch (ridingAction.type) {
+    case 'utility':
+      description += ' It provides general utility.';
+      break;
+
+    case 'explore':
+      description += ' It helps with exploration and accessing treasure chests in dens.';
+      break;
+
+    case 'search':
+      description += ' It helps finding monsters, dens or materials.';
+  }
 
   return {
     title,
