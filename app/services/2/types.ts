@@ -54,7 +54,7 @@ export type MonsterLocation = {
 export type MonsterData = {
   attackPatterns?: Record<string, AttackType>;
   parts?: Record<string, WeaponType[]>;
-  elementalWeakness?: ElementType;
+  elementalWeakness?: ElementType | Record<string, ElementType>;
 };
 
 export type MonstieData = {

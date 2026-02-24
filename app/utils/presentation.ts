@@ -92,3 +92,19 @@ export function formatAttackType(attackTypeOrMonster?: AttackType | Monster): st
       return 'Unknown';
   }
 }
+
+export function formatWeaponType(weaponType: WeaponType): string {
+  switch (weaponType) {
+    case 'slash':
+      return 'Slash';
+
+    case 'blunt':
+      return 'Blunt';
+
+    case 'pierce':
+      return 'Pierce';
+
+    default:
+      return 'Unknown';
+  }
+}
