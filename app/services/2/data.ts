@@ -22,18 +22,6 @@ const sortedHabitats = sortedHabitats_ as Habitat[];
 const sortedCatavanStands = sortedCatavanStands_ as CatavanStand[];
 const sortedRidingActions = sortedRidingActions_ as RidingAction[];
 
-function makeSlug(text: string): string {
-  return text
-    .replace(/( |\/)/g, '-')
-    .replace(/\(|\)/g, '')
-    .replace(/-&/, '')
-    .toLowerCase();
-}
-
-function keyBy<T, K extends keyof T>(items: T[], key: K): Map<T[K], T> {
-  return new Map(items.map((item) => [item[key], item]));
-}
-
 export { monsters, coopQuests, sortedHabitats, sortedRidingActions };
 export const monstersByNo = keyBy(monsters, 'no');
 export const monstersByName = keyBy(monsters, 'name');
