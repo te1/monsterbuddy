@@ -35,7 +35,7 @@ export type Monster = {
   habitat: string;
   related?: MonsterRelation[];
   locations: MonsterLocation[];
-  rarity?: MonsterRarityType;
+  rarity: MonsterRarityType;
   monster?: MonsterData;
   hatchable?: boolean;
   monstie?: MonstieData;
