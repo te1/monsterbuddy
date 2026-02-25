@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-  const headline = gameTypeToFullName('mhst2');
-
   useSeoMeta({
     title: 'Co-Op Quest List (Dens) For Monster Hunter Stories 2',
     description: 'Overview of co-op missions and list of eggs you can find in the different dens',
   });
+
+  const headline = gameTypeToFullName('mhst2');
 </script>
 
 <template>

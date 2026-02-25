@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-  import { monsters } from '~/services/2/data';
-
   useSeoMeta({
     title: 'Monster List For Monster Hunter Stories 2',
     description:
