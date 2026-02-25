@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-  import { createReusableTemplate } from '@vueuse/core';
   import type { DropdownMenuItem } from '@nuxt/ui';
+  import { createReusableTemplate } from '@vueuse/core';
 
   const [DefineButtonTemplate, ReuseButtonTemplate] = createReusableTemplate<{ open: boolean }>();
 

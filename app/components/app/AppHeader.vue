@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   const canHover = useCanHover();
-
-  const navItems = computed(() => getNavItems(useRoute().path));
+  const navItems = useNavItems();
 </script>
 
 <template>
