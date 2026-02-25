@@ -8,7 +8,12 @@ export type RelationType =
   | 'color'
   | 'element';
 
-export type LocationType = 'catavanStand' | 'coopQuest' | 'eldersLair';
+export type LocationType =
+  | 'catavanStand'
+  | 'coopQuest'
+  | 'eldersLair'
+  | 'subQuest'
+  | 'superRareDen';
 
 export type MonsterRarityType = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
