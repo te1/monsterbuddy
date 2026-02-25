@@ -38,6 +38,14 @@ export const coopQuestsBySlug = keyBy(coopQuests, 'slug');
 export const ridingActions = getRidingActions();
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
 export const eggColors = getEggColors();
+export const allElements: ElementType[] = [
+  'none',
+  'fire',
+  'water',
+  'thunder',
+  'ice',
+  'dragon',
+] as const;
 
 export function getGenera(monsterList: Monster[] = monsters): GenusType[] {
   return uniq(monsterList.map((monster) => monster.genus)).sort();

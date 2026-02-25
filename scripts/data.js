@@ -63,7 +63,7 @@ function transformRidingActions(ridingActions) {
 
 // -- 1 ---------------------------------------------------
 
-const allElements = ['fire', 'water', 'thunder', 'ice', 'dragon'];
+const allElements = ['fire', 'water', 'thunder', 'ice', 'dragon']; // none is absent for MHST1 handling
 
 function transformMonsters1(monsters) {
   for (const monster of monsters) {

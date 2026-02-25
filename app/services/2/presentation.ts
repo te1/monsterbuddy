@@ -1,4 +1,4 @@
-import type { CoopQuest, CoopQuestType, Monster } from './types';
+import type { CoopQuest, CoopQuestType, GrowthType, Monster } from './types';
 import { isColorVariant, isDeviant, isElementalVariant, isSubspecies } from './data';
 
 export function formatMonsterNumber(number: number, withHash = true) {
@@ -63,6 +63,22 @@ export function formatCoopQuest(coopQuest: CoopQuest) {
   result += coopQuest.name;
 
   return result;
+}
+
+export function formatGrowth(growth?: GrowthType) {
+  switch (growth) {
+    case 'slow':
+      return 'Slow';
+
+    case 'regular':
+      return 'Regular';
+
+    case 'quick':
+      return 'Quick';
+
+    default:
+      return 'Unknown';
+  }
 }
 
 export function formatPhase(phase: string) {
