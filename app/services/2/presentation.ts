@@ -1,4 +1,4 @@
-import type { CoopQuest, CoopQuestType, GrowthType, Monster } from './types';
+import type { CoopQuest, CoopQuestType, GrowthType, Monster, RidingActionType } from './types';
 import {
   getMonsterLocation,
   isColorVariant,
@@ -75,6 +75,22 @@ export function formatCoopQuest(coopQuest: CoopQuest) {
   result += coopQuest.name;
 
   return result;
+}
+
+export function formatRidingActionType(type: RidingActionType) {
+  switch (type) {
+    case 'utility':
+      return 'Utility';
+
+    case 'explore':
+      return 'Exploration';
+
+    case 'search':
+      return 'Search';
+
+    default:
+      return '';
+  }
 }
 
 export function formatGrowth(growth?: GrowthType) {
