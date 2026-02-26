@@ -133,3 +133,25 @@ export function formatElement(element?: ElementType): string {
       return 'Unknown';
   }
 }
+
+export function stripTags(input: string): string {
+  if (typeof window !== 'undefined') {
+    // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/47140708#47140708
+
+    let doc = new DOMParser().parseFromString(input, 'text/html');
+    return doc.body.textContent || '';
+  }
+
+  // DOMParser is not available in SSR, so use a workaround
+  // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/822464#822464
+  return input.replace(/<[^>]*>?/gm, '');
+}
+
+export function parseSomeMarkdown(input: string): string {
+  let result = stripTags(input);
+
+  // **some text** -> <b>some text</b>
+  result = result.replace(/\*\*([^**]*)\*\*/g, '<b>$1</b>');
+
+  return result;
+}

@@ -1,5 +1,11 @@
 import type { CoopQuest, CoopQuestType, GrowthType, Monster } from './types';
-import { isColorVariant, isDeviant, isElementalVariant, isSubspecies } from './data';
+import {
+  getMonsterLocation,
+  isColorVariant,
+  isDeviant,
+  isElementalVariant,
+  isSubspecies,
+} from './data';
 
 export function formatMonsterNumber(number: number, withHash = true) {
   let result = String(number).padStart(3, '0');
@@ -31,6 +37,15 @@ export function formatMonsterInfo(monster: Monster) {
   }
 
   return result;
+}
+
+export function formatMonsterPrimaryLocation(monster: Monster) {
+  let location = getMonsterLocation(monster, 'catavanStand');
+
+  if (location && location.sub) {
+    return location.sub;
+  }
+  return null;
 }
 
 export function formatCoopQuestType(type: CoopQuestType) {

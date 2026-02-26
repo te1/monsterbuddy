@@ -5,7 +5,7 @@
     if (props.value != null && props.value >= n) {
       return 'bg-primary-600/75 dark:bg-primary-500/75';
     }
-    return 'bg-gray-500/25 dark:bg-cool-400/25';
+    return 'bg-neutral-500/25 dark:bg-neutral-400/25';
   }
 </script>
 

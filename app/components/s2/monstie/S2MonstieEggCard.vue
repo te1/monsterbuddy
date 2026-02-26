@@ -3,7 +3,7 @@
 
   const props = defineProps<{ monster: Monster }>();
 
-  const retreat = computed(() => props.monster.monstie?.retreat ?? ''); // TODO markdown parsing
+  const retreat = computed(() => parseSomeMarkdown(props.monster.monstie?.retreat ?? ''));
 
   const isPinned = false; // TODO history store
 

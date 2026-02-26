@@ -12,26 +12,26 @@
   <section>
     <div class="flex items-start justify-between overflow-hidden">
       <div>
-        <div class="dark:text-cool-400 -mb-1 text-gray-500" v-text="info" />
+        <div class="-mb-1 text-neutral-500 dark:text-neutral-400" v-text="info" />
 
         <h2 class="mb-1 text-2xl font-semibold" v-text="monster.name" />
 
         <div class="flex items-center gap-1">
-          <span class="dark:text-cool-400 text-gray-600">
+          <span class="text-neutral-600 dark:text-neutral-400">
             <!-- <FaIcon :icon="['fas', 'dna']" title="Genus" /> -->
           </span>
           <span v-text="monster.genus" />
         </div>
 
         <div class="flex items-center gap-1">
-          <span class="dark:text-cool-400 text-gray-600">
+          <span class="text-neutral-600 dark:text-neutral-400">
             <!-- <FaIcon :icon="['fas', 'map-marker-alt']" title="Habitat" /> -->
           </span>
           <span v-text="monster.habitat" />
         </div>
 
         <div class="flex items-center gap-1">
-          <span class="dark:text-cool-400 text-gray-600">
+          <span class="text-neutral-600 dark:text-neutral-400">
             <!-- <FaIcon :icon="['fas', 'star']" title="Rarity" /> -->
           </span>
           <span v-text="monster.rarity" />
