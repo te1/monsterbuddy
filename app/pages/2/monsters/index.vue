@@ -16,6 +16,8 @@
     // }
     // return this.monsterFilter.mode;
   });
+
+  // TODO use store with grouping, sorting and filtering
 </script>
 
 <template>

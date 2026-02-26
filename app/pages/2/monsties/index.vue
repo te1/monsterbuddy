@@ -13,6 +13,8 @@
     return 'location'; // TODO
     // return this.monstieFilter.mode;
   });
+
+  // TODO use store with grouping, sorting and filtering
 </script>
 
 <template>
