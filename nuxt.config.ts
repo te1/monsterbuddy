@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/mdc',
     '@nuxt/a11y',
     // '@nuxt/hints',
+    '@pinia/nuxt',
   ],
 
   telemetry: false,

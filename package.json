@@ -22,6 +22,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.5.0",
     "@nuxtjs/mdc": "0.20.1",
+    "@pinia/nuxt": "0.11.3",
     "@vueuse/core": "^14.2.1",
     "es-toolkit": "^1.44.0",
     "nuxt": "^4.3.1",
