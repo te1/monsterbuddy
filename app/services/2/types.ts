@@ -140,6 +140,6 @@ export type CatavanStand = {
 export type CatavanStandWithDetails = {
   name: string;
   slug: string;
-  zone?: string;
+  zone: string;
   sortOrder: number;
 };

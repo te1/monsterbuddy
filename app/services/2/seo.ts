@@ -1,5 +1,5 @@
-import type { CoopQuest, Monster, RidingAction } from './types';
-import { isDeviant } from './data';
+import type { CatavanStand, CoopQuest, Monster, RidingAction } from './types';
+import { isDeviant, monsters } from './data';
 
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst2')}`;
@@ -15,6 +15,52 @@ export function getMonsterSeo(monster: Monster) {
   }
 
   description += `${monster.genus} found in ${monster.habitat}.`;
+
+  return {
+    title,
+    description,
+  };
+}
+
+export function getCatavanStandSeo(catavanStand: CatavanStand, monsterCount: number) {
+  const title = `${catavanStand.name} In ${gameTypeToFullLabel('mhst2')}`;
+
+  let description = `${catavanStand.name} is a catavan stand `;
+
+  if (catavanStand.zone) {
+    description += `in ${catavanStand.zone} `;
+  }
+
+  description += 'that you can fast travel to.';
+
+  if (monsterCount) {
+    description += ` It is home to ${monsterCount} different monsters.`;
+  }
+
+  return {
+    title,
+    description,
+  };
+}
+
+export function getCoopQuestSeo(coopQuest: CoopQuest, monsterCount: number) {
+  const title = `${coopQuest.name} In ${gameTypeToFullLabel('mhst2')}`;
+
+  let description = `${coopQuest.name} is a `;
+
+  if (coopQuest.rarity) {
+    description += `${coopQuest.rarity} star rarity `;
+  }
+
+  if (coopQuest.type) {
+    description += `${coopQuest.type} type `;
+  }
+
+  description += 'co-op quest';
+
+  if (coopQuest.type === 'explore') {
+    description += `. You can find ${monsterCount} different monstie eggs inside.`;
+  }
 
   return {
     title,
@@ -44,31 +90,6 @@ export function getRidingActionSeo(ridingAction: RidingAction, monsters: Monster
 
     case 'search':
       description += ' It helps finding monsters, dens or materials.';
-  }
-
-  return {
-    title,
-    description,
-  };
-}
-
-export function getCoopQuestSeo(coopQuest: CoopQuest, monsterCount: number) {
-  const title = `${coopQuest.name} In ${gameTypeToFullLabel('mhst2')}`;
-
-  let description = `${coopQuest.name} is a `;
-
-  if (coopQuest.rarity) {
-    description += `${coopQuest.rarity} star rarity `;
-  }
-
-  if (coopQuest.type) {
-    description += `${coopQuest.type} type `;
-  }
-
-  description += 'co-op quest';
-
-  if (coopQuest.type === 'explore') {
-    description += `. You can find ${monsterCount} different monstie eggs inside.`;
   }
 
   return {

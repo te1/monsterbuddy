@@ -95,7 +95,7 @@ export function getCatavanStandsWithDetails(
       return {
         name,
         slug: makeSlug(name),
-        zone: details?.zone,
+        zone: details?.zone ?? 'Unknown',
         sortOrder: details?.sortOrder ?? Infinity,
       };
     }),
