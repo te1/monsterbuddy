@@ -40,12 +40,9 @@ export function formatMonsterInfo(monster: Monster) {
 }
 
 export function formatMonsterPrimaryLocation(monster: Monster) {
-  let location = getMonsterLocation(monster, 'catavanStand');
+  const location = getMonsterLocation(monster, 'catavanStand');
 
-  if (location && location.sub) {
-    return location.sub;
-  }
-  return null;
+  return location?.sub ?? null;
 }
 
 export function formatCoopQuestType(type: CoopQuestType) {

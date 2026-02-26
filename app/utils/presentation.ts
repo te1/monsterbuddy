@@ -138,7 +138,7 @@ export function stripTags(input: string): string {
   if (typeof window !== 'undefined') {
     // https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/47140708#47140708
 
-    let doc = new DOMParser().parseFromString(input, 'text/html');
+    const doc = new DOMParser().parseFromString(input, 'text/html');
     return doc.body.textContent || '';
   }
 
