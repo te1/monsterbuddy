@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import type { Monster } from '~/services/2/types';
+  import type { GenericMonster } from '~/services/types';
   import { getAttackTypeIconUrl } from '~/services/assets';
 
   const props = withDefaults(
     defineProps<{
       type?: AttackType;
-      monster?: Monster;
+      monster?: GenericMonster;
     }>(),
     {
       type: undefined,

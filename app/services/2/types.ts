@@ -50,6 +50,7 @@ export type MonsterRelation = {
   type: RelationType;
   monster: string;
 };
+
 export type MonsterLocation = {
   type: LocationType;
   main?: string;
