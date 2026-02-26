@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  import { monsters } from '~/services/2/data';
+
   useSeoMeta({
     title: `Monster List For ${gameTypeToFullLabel('mhst2')}`,
     description:
@@ -6,6 +8,14 @@
   });
 
   const headline = gameTypeToFullName('mhst2');
+
+  const mode = computed(() => {
+    return 'location'; // TODO
+    // if (this.display === 'pinned') {
+    //   return 'combat';
+    // }
+    // return this.monsterFilter.mode;
+  });
 </script>
 
 <template>
@@ -16,6 +26,14 @@
       :headline="headline"
     />
 
-    <UPageBody>Content</UPageBody>
+    <UPageBody>
+      <NuxtLink v-for="monster in monsters" :key="monster.no" :to="`/2/monsters/${monster.slug}/`">
+        <S2MonsterListItem
+          :monster="monster"
+          :mode="mode"
+          class="box box-link overflow-hidden px-1"
+        />
+      </NuxtLink>
+    </UPageBody>
   </div>
 </template>

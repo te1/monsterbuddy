@@ -51,11 +51,11 @@
 <template>
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex h-[120px] w-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <MonsterIcon :monster="monster" />
+      <S2MonsterIcon :monster="monster" />
 
       <img
         v-if="monster.hatchable"
-        :src="require('~/assets/icons/hatchable.svg')"
+        src="~/assets/icon/hatchable.svg"
         alt="Hatchable"
         title="Hatchable"
         width="20"
@@ -99,7 +99,7 @@
       </template>
     </div>
 
-    <MonsterImage
+    <S2MonsterImage
       class="h-full w-full overflow-hidden object-contain object-right p-2"
       style="flex-basis: 250px"
       :monster="monster"
