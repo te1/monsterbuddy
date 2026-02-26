@@ -55,6 +55,8 @@ export type MonsterLocation = {
   type: LocationType;
   main?: string;
   sub?: string;
+  finalNest?: boolean;
+  srTicket?: boolean;
 };
 
 export type MonsterData = {

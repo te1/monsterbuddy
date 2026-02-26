@@ -13,11 +13,11 @@
     defineProps<{
       monster: Monster;
       mode?: string;
-      ticket?: boolean;
+      ticket?: string;
     }>(),
     {
       mode: 'location',
-      ticket: false,
+      ticket: undefined,
     }
   );
 

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
+  const headline = gameTypeToFullName('mhst2');
+
   useSeoMeta({
     title: `Riding Actions In ${gameTypeToFullLabel('mhst2')}`,
     description: 'Overview of all riding actions and list of monsties that can learn them',
   });
-
-  const headline = gameTypeToFullName('mhst2');
 </script>
 
 <template>

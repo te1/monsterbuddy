@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-  import { coopQuestsBySlug } from '~/services/2/data';
+  import type { MonsterLocation } from '~/services/2/types';
+  import { coopQuestsBySlug, getMonstersByCoopQuest } from '~/services/2/data';
   import { getCoopQuestSeo } from '~/services/2/seo';
   import { formatCoopQuest } from '~/services/2/presentation';
+  import { groupBy, sortBy } from 'es-toolkit/array';
 
   const route = useRoute();
   const coopQuest = coopQuestsBySlug.get(route.params.slug as string);
@@ -10,9 +12,57 @@
     throw createError({ status: 404, statusText: 'Page Not Found' });
   }
 
-  useSeoMeta(getCoopQuestSeo(coopQuest, 42)); // TODO monsterCount
+  const items = computed(() => {
+    const monsters = getMonstersByCoopQuest(coopQuest.name);
+
+    let questLocation: MonsterLocation | undefined;
+
+    let items = monsters.map((monster) => {
+      questLocation = monster.locations.find(
+        (location) => location.type === 'coopQuest' && location.main === coopQuest.name
+      );
+
+      return {
+        monster,
+        quest: questLocation,
+      };
+    });
+
+    items = sortBy(items, [(item) => item.quest?.finalNest]);
+
+    return groupBy(items, (item) => (item.quest?.finalNest ? 'Final Nest' : 'Normal Nest'));
+  });
+
+  const monsterCount = computed(() => Object.values(items).flat().length);
+
+  useSeoMeta(getCoopQuestSeo(coopQuest, monsterCount.value));
 
   const description = computed(() => formatCoopQuest(coopQuest));
+  const isGrouped = computed(() => coopQuest.type === 'explore');
+
+  const display: Ref<string | undefined> = ref(undefined);
+
+  const mode = computed(() => {
+    switch (display.value) {
+      case 'monster':
+        return 'combat';
+
+      case 'monstie':
+      case 'egg':
+        return 'rarity';
+
+      default:
+        return undefined;
+    }
+  });
+
+  function getTicket(quest?: MonsterLocation) {
+    if (quest?.srTicket) {
+      return 'sr';
+    }
+    return undefined;
+  }
+
   const headline = gameTypeToFullName('mhst2');
 </script>
 
@@ -20,6 +70,33 @@
   <div>
     <UPageHeader :title="coopQuest.name" :description="description" :headline="headline" />
 
-    <!-- TODO List of monsties on this co-op quest -->
+    <UPageBody>
+      <ul class="space-y-5">
+        <li v-for="(group, key) in items" :key="key">
+          <div
+            v-if="isGrouped"
+            class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
+          >
+            <!-- <FaIcon
+              class="w-6! text-neutral-500 dark:text-neutral-400"
+              :icon="['fas', 'map-marker-alt']"
+            /> -->
+
+            <div class="mb-1 font-semibold" v-text="key" />
+          </div>
+
+          <div class="mt-1 grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <S2MonsterSmartListItem
+              v-for="item in group"
+              :key="item.monster.no"
+              :monster="item.monster"
+              :display="display"
+              :mode="mode"
+              :ticket="getTicket(item.quest)"
+            />
+          </div>
+        </li>
+      </ul>
+    </UPageBody>
   </div>
 </template>

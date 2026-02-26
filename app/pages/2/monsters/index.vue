@@ -1,13 +1,13 @@
 <script lang="ts" setup>
   import { monsters } from '~/services/2/data';
 
+  const headline = gameTypeToFullName('mhst2');
+
   useSeoMeta({
     title: `Monster List For ${gameTypeToFullLabel('mhst2')}`,
     description:
       'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
   });
-
-  const headline = gameTypeToFullName('mhst2');
 
   const mode = computed(() => {
     return 'location'; // TODO

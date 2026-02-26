@@ -6,7 +6,7 @@
       monster: Monster;
       display?: string;
       mode?: string;
-      ticket?: boolean;
+      ticket?: string;
     }>(),
     {
       display: undefined,
