@@ -19,6 +19,7 @@
     "**/*.code-search": true,
     ".data": true,
     ".output": true,
+    ".agents": true,
     "pnpm-lock.yaml": true
   },
   "files.associations": {
