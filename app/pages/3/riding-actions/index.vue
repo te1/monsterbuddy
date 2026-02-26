@@ -2,7 +2,7 @@
   const headline = gameTypeToFullName('mhst3');
 
   useSeoMeta({
-    title: 'Riding Actions In Monster Hunter Stories 3',
+    title: `Riding Actions In ${gameTypeToFullLabel('mhst3')}`,
     description: 'Overview of all riding actions and list of monsties that can learn them',
   });
 </script>

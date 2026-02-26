@@ -8,7 +8,7 @@
 
   useSeoMeta({
     titleTemplate: '',
-    title: `${title} - Companion App For Monster Hunter Stories 2`,
+    title: `${title} - Companion App For ${gameTypeToFullLabel('mhst2')}`,
     description:
       'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions',
   });

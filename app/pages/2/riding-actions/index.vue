@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   useSeoMeta({
-    title: 'Riding Actions In Monster Hunter Stories 2',
+    title: `Riding Actions In ${gameTypeToFullLabel('mhst2')}`,
     description: 'Overview of all riding actions and list of monsties that can learn them',
   });
 

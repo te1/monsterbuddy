@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   useSeoMeta({
-    title: 'Co-Op Quest List (Dens) For Monster Hunter Stories 2',
+    title: `Co-Op Quest List (Dens) For ${gameTypeToFullLabel('mhst2')}`,
     description: 'Overview of co-op missions and list of eggs you can find in the different dens',
   });
 

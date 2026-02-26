@@ -2,7 +2,7 @@
   const headline = gameTypeToFullName('mhst3');
 
   useSeoMeta({
-    title: 'Area List And Habitat Restoration Info For Monster Hunter Stories 3',
+    title: `Area List And Habitat Restoration Info For ${gameTypeToFullLabel('mhst3')}`,
     description:
       'Overview of areas and list of monsters you will find there including feral and invasive monsters and endangered species',
   });

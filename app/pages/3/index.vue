@@ -8,7 +8,7 @@
 
   useSeoMeta({
     titleTemplate: '',
-    title: `${title} - Companion App For Monster Hunter Stories 3`,
+    title: `${title} - Companion App For ${gameTypeToFullLabel('mhst3')}`,
     description: 'Includes monster attack types and weaknesses, egg patterns and monstie locations',
   });
 </script>

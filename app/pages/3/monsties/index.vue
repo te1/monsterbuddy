@@ -2,7 +2,7 @@
   const headline = gameTypeToFullName('mhst3');
 
   useSeoMeta({
-    title: 'Monstie List For Monster Hunter Stories 3',
+    title: `Monstie List For ${gameTypeToFullLabel('mhst3')}`,
     description:
       'Easily find all monsties in their natural habitats and check on their attack types and stats',
   });

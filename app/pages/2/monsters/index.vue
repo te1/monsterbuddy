@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   useSeoMeta({
-    title: 'Monster List For Monster Hunter Stories 2',
+    title: `Monster List For ${gameTypeToFullLabel('mhst2')}`,
     description:
       'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
   });

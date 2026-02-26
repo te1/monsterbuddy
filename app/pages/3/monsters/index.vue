@@ -2,7 +2,7 @@
   const headline = gameTypeToFullName('mhst3');
 
   useSeoMeta({
-    title: 'Monster List For Monster Hunter Stories 3',
+    title: `Monster List For ${gameTypeToFullLabel('mhst3')}`,
     description:
       'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
   });
