@@ -15,9 +15,9 @@ import sortedHabitats_ from '~/assets/2/habitats.json';
 import sortedCatavanStands_ from '~/assets/2/catavanStands.json';
 import sortedRidingActions_ from '~/assets/2/ridingActions.json';
 
-const monsters = monsters_ as Monster[];
-const coopQuests = coopQuests_ as CoopQuest[];
-const sortedHabitats = sortedHabitats_ as Habitat[];
+const monsters = monsters_ as unknown as Monster[];
+const coopQuests = coopQuests_ as unknown as CoopQuest[];
+const sortedHabitats = sortedHabitats_ as unknown as Habitat[];
 const sortedCatavanStands = sortedCatavanStands_ as CatavanStand[];
 const sortedRidingActions = sortedRidingActions_ as RidingAction[];
 
