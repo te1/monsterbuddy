@@ -51,6 +51,10 @@ export default defineNuxtConfig({
     provider: 'iconify',
   },
 
+  pinia: {
+    storesDirs: ['~/stores/**'],
+  },
+
   llms: {
     domain: 'https://docs-template.nuxt.dev/',
     title: 'Nuxt Docs Template',
