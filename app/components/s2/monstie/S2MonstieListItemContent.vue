@@ -46,15 +46,15 @@
   const defense = computed(() => {
     const result: number[] = [];
 
-    if (props.monster?.monstie?.stats?.bestDefense) {
+    if (props.monster?.monstie?.stats?.bestDefense?.value != null) {
       result.push(props.monster.monstie.stats.bestDefense.value);
     }
 
-    if (props.monster?.monstie?.stats?.otherDefense) {
+    if (props.monster?.monstie?.stats?.otherDefense?.value != null) {
       result.push(props.monster.monstie.stats.otherDefense.value);
     }
 
-    if (props.monster?.monstie?.stats?.worstDefense) {
+    if (props.monster?.monstie?.stats?.worstDefense?.value != null) {
       result.push(props.monster.monstie.stats.worstDefense.value);
     }
 

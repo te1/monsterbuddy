@@ -34,10 +34,10 @@
         <h4 class="pr-4 text-right font-semibold">Basic Stats</h4>
 
         <div class="space-y-1">
-          <StatsBar :value="monster?.monstie?.stats?.base?.maxHp" />
-          <StatsBar :value="monster?.monstie?.stats?.base?.speed" />
-          <StatsBar :value="monster?.monstie?.stats?.base?.recovery" />
-          <StatsBar :value="monster?.monstie?.stats?.base?.critRate" />
+          <StatsBar :value="monster?.monstie?.stats?.base?.maxHp ?? undefined" />
+          <StatsBar :value="monster?.monstie?.stats?.base?.speed ?? undefined" />
+          <StatsBar :value="monster?.monstie?.stats?.base?.recovery ?? undefined" />
+          <StatsBar :value="monster?.monstie?.stats?.base?.critRate ?? undefined" />
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
             v-for="element in allElements"
             :key="element"
             :label="formatElement(element)"
-            :value="monster?.monstie?.stats?.attack?.[element]"
+            :value="monster?.monstie?.stats?.attack?.[element] ?? undefined"
           >
             <ElementIcon class="w-5" :element="element" />
           </StatsBar>
@@ -66,7 +66,7 @@
             v-for="element in allElements"
             :key="element"
             :label="formatElement(element)"
-            :value="monster?.monstie?.stats?.defense?.[element]"
+            :value="monster?.monstie?.stats?.defense?.[element] ?? undefined"
           >
             <ElementIcon class="w-5" :element="element" />
           </StatsBar>
