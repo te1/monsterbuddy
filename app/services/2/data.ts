@@ -1,7 +1,6 @@
 import { intersection, sortBy, uniq } from 'es-toolkit/array';
 import type {
   CatavanStand,
-  CatavanStandWithDetails,
   CoopQuest,
   EggColor,
   Habitat,
@@ -76,9 +75,7 @@ export function getCatavanStands(monsterList: Monster[] = monsters): string[] {
   return getCatavanStandsWithDetails(monsterList).map((catavanStand) => catavanStand.name);
 }
 
-export function getCatavanStandsWithDetails(
-  monsterList: Monster[] = monsters
-): CatavanStandWithDetails[] {
+export function getCatavanStandsWithDetails(monsterList: Monster[] = monsters): CatavanStand[] {
   const names = uniq(
     monsterList.flatMap((monster) =>
       monster.locations
@@ -90,13 +87,13 @@ export function getCatavanStandsWithDetails(
 
   return sortBy(
     names.map((name) => {
-      const details = sortedCatavanStands.find((catavanStand) => catavanStand.name === name);
+      const catavanStand = sortedCatavanStands.find((catavanStand) => catavanStand.name === name);
 
       return {
         name,
         slug: makeSlug(name),
-        zone: details?.zone ?? 'Unknown',
-        sortOrder: details?.sortOrder ?? Infinity,
+        zone: catavanStand?.zone ?? 'Unknown',
+        sortOrder: catavanStand?.sortOrder ?? Infinity,
       };
     }),
     ['sortOrder']

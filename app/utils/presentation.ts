@@ -1,4 +1,4 @@
-import type { Monster } from '~/services/2/types';
+import type { GenericMonster } from '~/services/types';
 
 export function gameTypeToShortLabel(gameType: GameType): string {
   switch (gameType) {
@@ -72,7 +72,7 @@ export function gameTypeToFullName(gameType: GameType): string {
   }
 }
 
-export function formatAttackType(attackTypeOrMonster?: AttackType | Monster): string {
+export function formatAttackType(attackTypeOrMonster?: AttackType | GenericMonster): string {
   const attackType =
     typeof attackTypeOrMonster === 'string'
       ? attackTypeOrMonster
