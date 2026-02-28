@@ -1,5 +1,5 @@
 import type { CatavanStand, CoopQuest, Monster, RidingAction } from './types';
-import { isDeviant, monsters } from './data';
+import { isDeviant } from './data';
 
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst2')}`;

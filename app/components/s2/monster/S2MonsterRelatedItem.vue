@@ -26,12 +26,12 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
 
-  const props = defineProps<{ monster: Monster }>();
+  defineProps<{ monster: Monster }>();
 
-  const history = computed(() => {
-    // return useHistoryStore();
-    return null;
-  });
+  // const history = computed(() => {
+  //   // return useHistoryStore();
+  //   return null;
+  // });
 
   const showMonstie = computed(() => {
     // return history.value.shouldShowMonstie(props.monster);
