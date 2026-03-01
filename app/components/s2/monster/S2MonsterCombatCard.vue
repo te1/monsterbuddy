@@ -1,8 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
   import { formatPart, formatPhase } from '~/services/2/presentation';
+  import useHistoryStore from '~/stores/2/historyStore';
 
   const props = defineProps<{ monster: Monster }>();
+
+  const history = useHistoryStore();
 
   const hasAttackPatterns = computed(() => {
     return !isEmptyObject(props.monster.monster?.attackPatterns);
@@ -31,12 +34,11 @@
   });
 
   const isPinned = computed(() => {
-    // TODO history store
-    return false;
+    return history.isMonsterPinned(props.monster.slug);
   });
 
   function togglePin() {
-    // TODO history store
+    history.togglePinnedMonster(props.monster.slug);
   }
 </script>
 

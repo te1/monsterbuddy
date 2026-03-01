@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
+  import useHistoryStore from '~/stores/2/historyStore';
 
   const props = withDefaults(
     defineProps<{
@@ -15,25 +16,26 @@
     }
   );
 
+  const history = useHistoryStore();
+
   const showMonstie = computed(() => {
     if (props.display) {
       return props.display === 'monstie' && props.monster.hatchable;
     }
-    return false; // TODO
-    // return history.shouldShowMonstie(props.monster);
+
+    return history.shouldShowMonstie(props.monster);
   });
 
   const showEgg = computed(() => {
     if (props.display) {
       return props.display === 'egg' && props.monster.hatchable;
     }
-    return false; // TODO
-    // return history.shouldShowEgg(props.monster);
+
+    return history.shouldShowEgg(props.monster);
   });
 
   const smartMode = computed(() => {
-    return undefined; // TODO
-    // return history.listModeSmart(showMonstie.value, showEgg.value, props.mode);
+    return history.listModeSmart(showMonstie.value, showEgg.value, props.mode);
   });
 </script>
 

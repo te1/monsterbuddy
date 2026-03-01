@@ -18,21 +18,21 @@
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">
-            <!-- <FaIcon :icon="['fas', 'dna']" title="Genus" /> -->
+            <UIcon name="lucide:dna" title="Genus" />
           </span>
           <span v-text="monster.genus" />
         </div>
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">
-            <!-- <FaIcon :icon="['fas', 'map-marker-alt']" title="Habitat" /> -->
+            <UIcon name="lucide:map-pin" title="Habitat" />
           </span>
           <span v-text="monster.habitat" />
         </div>
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">
-            <!-- <FaIcon :icon="['fas', 'star']" title="Rarity" /> -->
+            <UIcon name="lucide:star" title="Rarity" />
           </span>
           <span v-text="monster.rarity" />
         </div>

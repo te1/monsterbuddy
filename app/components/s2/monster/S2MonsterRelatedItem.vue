@@ -1,3 +1,24 @@
+<script lang="ts" setup>
+  import type { Monster } from '~/services/2/types';
+  import useHistoryStore from '~/stores/2/historyStore';
+
+  const props = defineProps<{ monster: Monster }>();
+
+  const history = useHistoryStore();
+
+  const showMonstie = computed(() => {
+    return history.shouldShowMonstie(props.monster);
+  });
+
+  const showEgg = computed(() => {
+    return history.shouldShowEgg(props.monster);
+  });
+
+  const mode = computed(() => {
+    return history.lastListModeSmart(props.monster);
+  });
+</script>
+
 <template>
   <NuxtLink :to="`/2/monsters/${monster.slug}`">
     <S2EggListItem
@@ -22,29 +43,3 @@
     />
   </NuxtLink>
 </template>
-
-<script lang="ts" setup>
-  import type { Monster } from '~/services/2/types';
-
-  defineProps<{ monster: Monster }>();
-
-  // const history = computed(() => {
-  //   // return useHistoryStore();
-  //   return null;
-  // });
-
-  const showMonstie = computed(() => {
-    // return history.value.shouldShowMonstie(props.monster);
-    return true;
-  });
-
-  const showEgg = computed(() => {
-    // return history.value.shouldShowEgg(props.monster);
-    return false;
-  });
-
-  const mode = computed(() => {
-    // return history.value.lastListModeSmart(props.monster);
-    return 'location';
-  });
-</script>

@@ -103,9 +103,7 @@
     display.value = nextDisplay.value;
     showEggFinder.value = false;
 
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   const fabDisplayVisible = computed(() => {

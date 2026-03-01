@@ -15,16 +15,14 @@
   const items = computed(() => {
     const monsters = getMonstersByCoopQuest(coopQuest.name);
 
-    let questLocation: MonsterLocation | undefined;
-
     let items = monsters.map((monster) => {
-      questLocation = monster.locations.find(
+      const quest = monster.locations.find(
         (location) => location.type === 'coopQuest' && location.main === coopQuest.name
       );
 
       return {
         monster,
-        quest: questLocation,
+        quest,
       };
     });
 
@@ -36,11 +34,39 @@
   const monsterCount = computed(() => Object.values(items).flat().length);
 
   useSeoMeta(getCoopQuestSeo(coopQuest, monsterCount.value));
+  const headline = gameTypeToFullName('mhst2');
 
   const description = computed(() => formatCoopQuest(coopQuest));
   const isGrouped = computed(() => coopQuest.type === 'explore');
 
-  const display: Ref<string | undefined> = ref(undefined);
+  type Display = 'egg' | 'monstie' | 'monster' | undefined;
+
+  const displays = computed<Display[]>(() => {
+    switch (coopQuest.type) {
+      case 'explore':
+        return ['egg', 'monstie'];
+
+      case 'time':
+        return ['monster'];
+
+      default:
+        return [];
+    }
+  });
+
+  const display = ref<Display>(displays.value[0]);
+  console.log(display.value);
+
+  const nextDisplay = computed(() => {
+    const currentIndex = displays.value.indexOf(display.value);
+    const nextIndex = (currentIndex + 1) % displays.value.length;
+
+    return displays.value[nextIndex];
+  });
+
+  function toggleDisplay() {
+    display.value = nextDisplay.value;
+  }
 
   const mode = computed(() => {
     switch (display.value) {
@@ -63,7 +89,39 @@
     return undefined;
   }
 
-  const headline = gameTypeToFullName('mhst2');
+  const fabVisible = computed(() => {
+    return displays.value.length > 1;
+  });
+
+  const fabTitle = computed(() => {
+    switch (nextDisplay.value) {
+      case 'monster':
+        return 'Show monsters';
+
+      case 'monstie':
+        return 'Show monsties ';
+
+      case 'egg':
+        return 'Show eggs';
+
+      default:
+        return undefined;
+    }
+  });
+
+  const fabIcon = computed(() => {
+    switch (nextDisplay.value) {
+      case 'monster':
+      case 'monstie':
+        return 'i-lucide-image';
+
+      case 'egg':
+        return 'i-lucide-egg';
+
+      default:
+        return null;
+    }
+  });
 </script>
 
 <template>
@@ -71,16 +129,19 @@
     <UPageHeader :title="coopQuest.name" :description="description" :headline="headline" />
 
     <UPageBody>
+      <ClientOnly>
+        <UTooltip v-if="fabVisible" :text="fabTitle">
+          <UButton color="neutral" variant="soft" :icon="fabIcon" @click="toggleDisplay" />
+        </UTooltip>
+      </ClientOnly>
+
       <ul class="space-y-5">
         <li v-for="(group, key) in items" :key="key">
           <div
             v-if="isGrouped"
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
-            <!-- <FaIcon
-              class="w-6! text-neutral-500 dark:text-neutral-400"
-              :icon="['fas', 'map-marker-alt']"
-            /> -->
+            <UIcon name="i-lucide-map-pin" class="w-6! text-neutral-500 dark:text-neutral-400" />
 
             <div class="mb-1 font-semibold" v-text="key" />
           </div>
