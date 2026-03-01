@@ -1,192 +1,208 @@
 import type { Monster } from '~/services/2/types';
 import { pull } from 'es-toolkit/array';
 import { useLocalStorage } from '@vueuse/core';
+import { skipHydrate } from 'pinia';
 import useMonsterFilter from './monsterFilter';
 import useMonstieFilter from './monstieFilter';
 import useEggFilter from './eggFilter';
 import { monsters, monstersBySlug, monsties, getMonstersByHatchable } from '~/services/2/data';
 
-const storageKeyRecentMonsterSlugs = 's2/history/recentMonsterSlugs';
-const storageKeyPinnedMonsterSlugs = 's2/history/pinnedMonsterSlugs';
-const storageKeyPinnedMonstieSlugs = 's2/history/pinnedMonstieSlugs';
-const storageKeyPinnedEggSlugs = 's2/history/pinnedEggSlugs';
+const useHistoryStore = defineStore('s2/history', () => {
+  // -- state
+  const lastList = ref<'monsters' | 'monsties' | 'eggs' | null>(null);
+  const recentMonsterSlugs = useLocalStorage<string[]>('s2/history/recentMonsterSlugs', []);
+  const pinnedMonsterSlugs = useLocalStorage<string[]>('s2/history/pinnedMonsterSlugs', []);
+  const pinnedMonstieSlugs = useLocalStorage<string[]>('s2/history/pinnedMonstieSlugs', []);
+  const pinnedEggSlugs = useLocalStorage<string[]>('s2/history/pinnedEggSlugs', []);
 
-const useHistoryStore = defineStore('s2/history', {
-  state() {
-    return {
-      lastList: null as 'monsters' | 'monsties' | 'eggs' | null,
-      recentMonsterSlugs: useLocalStorage<string[]>(storageKeyRecentMonsterSlugs, []),
-      pinnedMonsterSlugs: useLocalStorage<string[]>(storageKeyPinnedMonsterSlugs, []),
-      pinnedMonstieSlugs: useLocalStorage<string[]>(storageKeyPinnedMonstieSlugs, []),
-      pinnedEggSlugs: useLocalStorage<string[]>(storageKeyPinnedEggSlugs, []),
-    };
-  },
+  // -- getters
+  const lastListStore = computed(() => {
+    switch (lastList.value) {
+      case 'monsters':
+        return useMonsterFilter();
 
-  hydrate(state) {
-    state.recentMonsterSlugs = useLocalStorage<string[]>(storageKeyRecentMonsterSlugs, []).value;
-    state.pinnedMonsterSlugs = useLocalStorage<string[]>(storageKeyPinnedMonsterSlugs, []).value;
-    state.pinnedMonstieSlugs = useLocalStorage<string[]>(storageKeyPinnedMonstieSlugs, []).value;
-    state.pinnedEggSlugs = useLocalStorage<string[]>(storageKeyPinnedEggSlugs, []).value;
-  },
+      case 'monsties':
+        return useMonstieFilter();
 
-  getters: {
-    lastListStore: (state) => {
-      switch (state.lastList) {
-        case 'monsters':
-          return useMonsterFilter();
+      case 'eggs':
+        return useEggFilter();
 
-        case 'monsties':
-          return useMonstieFilter();
+      default:
+        return null;
+    }
+  });
 
-        case 'eggs':
-          return useEggFilter();
+  const lastListMode = computed(() => {
+    return lastListStore.value?.mode;
+  });
 
-        default:
-          return null;
-      }
-    },
+  const shouldShowMonstie = (monster: Monster) => {
+    return lastList.value === 'monsties' && monster.hatchable;
+  };
 
-    lastListMode(): string | undefined {
-      return this.lastListStore?.mode;
-    },
+  const shouldShowEgg = (monster: Monster) => {
+    return lastList.value === 'eggs' && monster.hatchable;
+  };
 
-    shouldShowMonstie: (state) => (monster: Monster) => {
-      return state.lastList === 'monsties' && monster.hatchable;
-    },
+  const listModeSmart = (showMonstie: boolean, showEgg: boolean, mode: string | null = null) => {
+    let store;
 
-    shouldShowEgg: (state) => (monster: Monster) => {
-      return state.lastList === 'eggs' && monster.hatchable;
-    },
+    if (showMonstie) {
+      store = useMonstieFilter();
+    } else if (showEgg) {
+      store = useEggFilter();
+    } else {
+      store = useMonsterFilter();
+    }
 
-    lastListModeSmart(): (monster: Monster) => string | undefined {
-      return (monster: Monster) => {
-        const showMonstie = this.shouldShowMonstie(monster);
-        const showEgg = this.shouldShowEgg(monster);
+    mode = mode ?? store.mode;
 
-        return this.listModeSmart(showMonstie, showEgg);
-      };
-    },
+    const autoSwitchModes: readonly string[] = store.autoSwitchModes;
+    if (autoSwitchModes.includes(mode)) {
+      return mode;
+    }
+    return undefined;
+  };
 
-    listModeSmart:
-      () =>
-      (showMonstie: boolean, showEgg: boolean, mode: string | null = null) => {
-        let store;
+  const lastListModeSmart = (monster: Monster) => {
+    const showMonstie = shouldShowMonstie(monster);
+    const showEgg = shouldShowEgg(monster);
 
-        if (showMonstie) {
-          store = useMonstieFilter();
-        } else if (showEgg) {
-          store = useEggFilter();
-        } else {
-          store = useMonsterFilter();
-        }
+    return listModeSmart(showMonstie, showEgg);
+  };
 
-        mode = mode ?? store.mode;
+  const recentMonsters = computed<Monster[]>(() => {
+    return recentMonsterSlugs.value
+      .map((slug) => monstersBySlug.get(slug))
+      .filter((monster): monster is Monster => monster != null);
+  });
 
-        const autoSwitchModes: readonly string[] = store.autoSwitchModes;
-        if (autoSwitchModes.includes(mode)) {
-          return mode;
-        }
-        return undefined;
-      },
+  const hasRecentMonsters = computed(() => {
+    return recentMonsters.value.length > 0;
+  });
 
-    recentMonsters: (state): Monster[] => {
-      return state.recentMonsterSlugs
-        .map((slug) => monstersBySlug.get(slug))
-        .filter((monster): monster is Monster => monster != null);
-    },
+  const recentMonsties = computed(() => {
+    return getMonstersByHatchable(true, recentMonsters.value);
+  });
 
-    hasRecentMonsters(): boolean {
-      return !!this.recentMonsters.length;
-    },
+  const hasRecentMonsties = computed(() => {
+    return recentMonsties.value.length > 0;
+  });
 
-    recentMonsties(): Monster[] {
-      return getMonstersByHatchable(true, this.recentMonsters);
-    },
+  const pinnedMonsters = computed(() => {
+    return monsters.filter((monster) => {
+      return pinnedMonsterSlugs.value.includes(monster.slug);
+    });
+  });
 
-    hasRecentMonsties(): boolean {
-      return !!this.recentMonsties.length;
-    },
+  const hasPinnedMonsters = computed(() => {
+    return pinnedMonsters.value.length > 0;
+  });
 
-    pinnedMonsters: (state) => {
-      return monsters.filter((monster) => {
-        return state.pinnedMonsterSlugs.includes(monster.slug);
-      });
-    },
+  const isMonsterPinned = (slug: string) => {
+    return pinnedMonsterSlugs.value.includes(slug);
+  };
 
-    hasPinnedMonsters(): boolean {
-      return !!this.pinnedMonsters.length;
-    },
+  const pinnedMonsties = computed(() => {
+    return monsties.filter((monster) => {
+      return pinnedMonstieSlugs.value.includes(monster.slug);
+    });
+  });
 
-    isMonsterPinned: (state) => (slug: string) => {
-      return state.pinnedMonsterSlugs.includes(slug);
-    },
+  const hasPinnedMonsties = computed(() => {
+    return pinnedMonsties.value.length > 0;
+  });
 
-    pinnedMonsties: (state) => {
-      return monsties.filter((monster) => {
-        return state.pinnedMonstieSlugs.includes(monster.slug);
-      });
-    },
+  const isMonstiePinned = (slug: string) => {
+    return pinnedMonstieSlugs.value.includes(slug);
+  };
 
-    hasPinnedMonsties(): boolean {
-      return !!this.pinnedMonsties.length;
-    },
+  const pinnedEggs = computed(() => {
+    return monsties.filter((monster) => {
+      return pinnedEggSlugs.value.includes(monster.slug);
+    });
+  });
 
-    isMonstiePinned: (state) => (slug: string) => {
-      return state.pinnedMonstieSlugs.includes(slug);
-    },
+  const hasPinnedEggs = computed(() => {
+    return pinnedEggs.value.length > 0;
+  });
 
-    pinnedEggs: (state) => {
-      return monsties.filter((monster) => {
-        return state.pinnedEggSlugs.includes(monster.slug);
-      });
-    },
+  const isEggPinned = (slug: string) => {
+    return pinnedEggSlugs.value.includes(slug);
+  };
 
-    hasPinnedEggs(): boolean {
-      return !!this.pinnedEggs.length;
-    },
+  // -- actions
+  function addRecentMonster(slug: string) {
+    const maxRecentItems = 25;
 
-    isEggPinned: (state) => (slug: string) => {
-      return state.pinnedEggSlugs.includes(slug);
-    },
-  },
+    pull(recentMonsterSlugs.value, [slug]);
 
-  actions: {
-    addRecentMonster(slug: string) {
-      const maxRecentItems = 25;
+    while (recentMonsterSlugs.value.length >= maxRecentItems) {
+      recentMonsterSlugs.value.pop();
+    }
 
-      pull(this.recentMonsterSlugs, [slug]);
+    recentMonsterSlugs.value.unshift(slug);
+  }
 
-      while (this.recentMonsterSlugs.length >= maxRecentItems) {
-        this.recentMonsterSlugs.pop();
-      }
+  function togglePinnedMonster(slug: string) {
+    if (isMonsterPinned(slug)) {
+      pull(pinnedMonsterSlugs.value, [slug]);
+    } else {
+      pinnedMonsterSlugs.value.unshift(slug);
+    }
+  }
 
-      this.recentMonsterSlugs.unshift(slug);
-    },
+  function togglePinnedMonstie(slug: string) {
+    if (isMonstiePinned(slug)) {
+      pull(pinnedMonstieSlugs.value, [slug]);
+    } else {
+      pinnedMonstieSlugs.value.unshift(slug);
+    }
+  }
 
-    togglePinnedMonster(slug: string) {
-      if (this.isMonsterPinned(slug)) {
-        pull(this.pinnedMonsterSlugs, [slug]);
-      } else {
-        this.pinnedMonsterSlugs.unshift(slug);
-      }
-    },
+  function togglePinnedEgg(slug: string) {
+    if (isEggPinned(slug)) {
+      pull(pinnedEggSlugs.value, [slug]);
+    } else {
+      pinnedEggSlugs.value.unshift(slug);
+    }
+  }
 
-    togglePinnedMonstie(slug: string) {
-      if (this.isMonstiePinned(slug)) {
-        pull(this.pinnedMonstieSlugs, [slug]);
-      } else {
-        this.pinnedMonstieSlugs.unshift(slug);
-      }
-    },
+  return {
+    // -- state
+    lastList,
+    recentMonsterSlugs: skipHydrate(recentMonsterSlugs),
+    pinnedMonsterSlugs: skipHydrate(pinnedMonsterSlugs),
+    pinnedMonstieSlugs: skipHydrate(pinnedMonstieSlugs),
+    pinnedEggSlugs: skipHydrate(pinnedEggSlugs),
 
-    togglePinnedEgg(slug: string) {
-      if (this.isEggPinned(slug)) {
-        pull(this.pinnedEggSlugs, [slug]);
-      } else {
-        this.pinnedEggSlugs.unshift(slug);
-      }
-    },
-  },
+    // -- getters
+    lastListStore,
+    lastListMode,
+    shouldShowMonstie,
+    shouldShowEgg,
+    lastListModeSmart,
+    listModeSmart,
+    recentMonsters,
+    hasRecentMonsters,
+    recentMonsties,
+    hasRecentMonsties,
+    pinnedMonsters,
+    hasPinnedMonsters,
+    isMonsterPinned,
+    pinnedMonsties,
+    hasPinnedMonsties,
+    isMonstiePinned,
+    pinnedEggs,
+    hasPinnedEggs,
+    isEggPinned,
+
+    // -- actions
+    addRecentMonster,
+    togglePinnedMonster,
+    togglePinnedMonstie,
+    togglePinnedEgg,
+  };
 });
 
 export default useHistoryStore;
