@@ -46,6 +46,9 @@
       case 'explore':
         return ['egg', 'monstie'];
 
+      case 'slay':
+        return ['monster', 'egg'];
+
       case 'time':
         return ['monster'];
 
@@ -55,7 +58,6 @@
   });
 
   const display = ref<Display>(displays.value[0]);
-  console.log(display.value);
 
   const nextDisplay = computed(() => {
     const currentIndex = displays.value.indexOf(display.value);
