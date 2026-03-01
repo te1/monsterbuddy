@@ -26,7 +26,7 @@
       };
     });
 
-    items = sortBy(items, [(item) => item.quest?.finalNest]);
+    items = sortBy(items, [(item) => !item.quest?.finalNest]);
 
     return groupBy(items, (item) => (item.quest?.finalNest ? 'Final Nest' : 'Normal Nest'));
   });

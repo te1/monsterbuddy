@@ -2,6 +2,10 @@
 @import '@nuxt/ui';
 
 @theme {
+  --color-power: oklch(0.5247 0.1698 27.32);
+  --color-speed: oklch(0.5006 0.1546 256.67);
+  --color-technical: oklch(0.6024 0.1505 133.1);
+  --color-gold: var(--color-amber-300);
   --default-transition-duration: 200ms;
 }
 
