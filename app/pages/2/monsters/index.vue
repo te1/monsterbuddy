@@ -52,12 +52,15 @@
     if (showFilter.value) {
       return 'View Options';
     }
+
     if (display.value === 'recent') {
       return 'Recent Monsters';
     }
+
     if (display.value === 'pinned') {
       return 'Bookmarked Monsters';
     }
+
     return null;
   });
 
@@ -79,7 +82,7 @@
     const currentIndex = displays.value.indexOf(display.value);
     const nextIndex = (currentIndex + 1) % displays.value.length;
 
-    return displays.value[nextIndex] as Display;
+    return displays.value[nextIndex] ?? 'default';
   });
 
   function toggleDisplay() {
@@ -122,6 +125,10 @@
       default:
         return null;
     }
+  });
+
+  onMounted(() => {
+    history.lastList = 'monsters';
   });
 </script>
 

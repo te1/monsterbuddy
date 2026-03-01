@@ -45,6 +45,8 @@
           class: 'cursor-pointer',
         }"
       />
+
+      <!-- TODO add search box -->
     </UMain>
 
     <AppFooter />
