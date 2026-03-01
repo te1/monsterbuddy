@@ -55,7 +55,7 @@
         title="Remove filter"
         @click.prevent="$emit('remove')"
       >
-        <FaIcon :icon="['fas', 'times']" />
+        <UIcon name="i-lucide-x" />
       </div>
 
       <div v-if="sortOrderIcon" class="flex items-center pr-2 text-base">

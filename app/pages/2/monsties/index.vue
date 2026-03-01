@@ -21,6 +21,7 @@
     if (display.value === 'pinned') {
       return 'combat';
     }
+
     return monstieFilter.mode;
   });
 
@@ -141,6 +142,8 @@
     />
 
     <UPageBody>
+      <!-- TODO filter modal -->
+
       <ClientOnly>
         <UTooltip v-if="fabDisplayVisible" :text="fabDisplayTitle">
           <UButton color="neutral" variant="soft" :icon="fabDisplayIcon" @click="toggleDisplay" />

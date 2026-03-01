@@ -6,10 +6,12 @@
     defineProps<{
       monster?: Monster;
       genus?: GenusType;
+      tooltipTop?: boolean;
     }>(),
     {
       monster: undefined,
       genus: undefined,
+      tooltipTop: false,
     }
   );
 
@@ -29,7 +31,7 @@
 </script>
 
 <template>
-  <UTooltip :text="caption">
+  <UTooltip :text="caption" :content="{ side: tooltipTop ? 'top' : 'bottom' }">
     <img :src="imageUrl" :alt="caption" width="120" height="120" />
   </UTooltip>
 </template>

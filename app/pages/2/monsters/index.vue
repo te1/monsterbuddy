@@ -21,6 +21,7 @@
     if (display.value === 'pinned') {
       return 'combat';
     }
+
     return monsterFilter.mode;
   });
 
