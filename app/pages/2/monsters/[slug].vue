@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { monstersBySlug } from '~/services/2/data';
   import { getMonsterSeo } from '~/services/2/seo';
+  import useHistoryStore from '~/stores/2/historyStore';
 
   const route = useRoute();
   const monster = monstersBySlug.get(route.params.slug as string);
@@ -10,8 +11,13 @@
   }
 
   useSeoMeta(getMonsterSeo(monster));
-
   const headline = gameTypeToFullName('mhst2');
+
+  const history = useHistoryStore();
+
+  onMounted(() => {
+    history.addRecentMonster(monster.slug);
+  });
 </script>
 
 <template>
