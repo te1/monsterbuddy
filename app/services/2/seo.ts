@@ -68,13 +68,13 @@ export function getCoopQuestSeo(coopQuest: CoopQuest, monsterCount: number) {
   };
 }
 
-export function getRidingActionSeo(ridingAction: RidingAction, monsters: Monster[]) {
+export function getRidingActionSeo(ridingAction: RidingAction, monsterCount: number) {
   const title = `${ridingAction.name} In ${gameTypeToFullLabel('mhst2')}`;
 
   let description = `${ridingAction.name} is a riding action that `;
 
-  if (monsters.length) {
-    description += `${monsters.length} `;
+  if (monsterCount) {
+    description += `${monsterCount} `;
   }
 
   description += 'monsties can learn.';

@@ -3,12 +3,11 @@
   import { sortedRidingActions } from '~/services/2/data';
   import { formatRidingActionType } from '~/services/2/presentation';
 
-  const headline = gameTypeToFullName('mhst2');
-
   useSeoMeta({
     title: `Riding Actions In ${gameTypeToFullLabel('mhst2')}`,
     description: 'Overview of all riding actions and list of monsties that can learn them',
   });
+  const headline = gameTypeToFullName('mhst2');
 
   const ridingActions = groupBy(sortedRidingActions, (ridingAction) => ridingAction.type);
 </script>
@@ -27,7 +26,10 @@
           <div
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
-            <!-- <FaIcon class="dark:text-neutral-400 w-6! text-neutral-500" :icon="['fas', 'exclamation']" /> -->
+            <UIcon
+              name="i-lucide-gamepad-directional"
+              class="w-6! text-neutral-500 dark:text-neutral-400"
+            />
 
             <div class="mb-1 font-semibold">
               {{ formatRidingActionType(type) }}
