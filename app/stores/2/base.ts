@@ -405,3 +405,6 @@ export function makeMonsterFilterStore<T extends object = object>(
     },
   });
 }
+
+export const filterStoreKey: InjectionKey<ReturnType<ReturnType<typeof makeMonsterFilterStore>>> =
+  Symbol();
