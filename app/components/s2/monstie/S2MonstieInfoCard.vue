@@ -1,8 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
   import { sortedRidingActions } from '~/services/2/data';
+  import useHistoryStore from '~/stores/2/historyStore';
 
   const props = defineProps<{ monster: Monster }>();
+
+  const history = useHistoryStore();
 
   const hasRidingActions = computed(() => {
     return !!props.monster?.monstie?.ridingActions?.length;
@@ -18,12 +21,11 @@
   });
 
   const isPinned = computed(() => {
-    // TODO history store
-    return false;
+    return history.isMonstiePinned(props.monster.slug);
   });
 
   function togglePin() {
-    // TODO history store
+    history.togglePinnedMonstie(props.monster.slug);
   }
 </script>
 

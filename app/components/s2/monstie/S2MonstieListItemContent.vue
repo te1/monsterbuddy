@@ -7,6 +7,7 @@
     formatMonsterInfo,
     formatMonsterPrimaryLocation,
   } from '~/services/2/presentation';
+  import useMonstieFilter from '~/stores/2/monstieFilter';
 
   const props = withDefaults(
     defineProps<{
@@ -17,6 +18,8 @@
       mode: 'location',
     }
   );
+
+  const monstieFilter = useMonstieFilter();
 
   const info = computed(() => formatMonsterInfo(props.monster));
   const location = computed(() => formatMonsterPrimaryLocation(props.monster));
@@ -70,15 +73,11 @@
   const showStats = computed(() => props.mode === 'stats');
 
   function getStatClass(...statKeys: string[]) {
-    if (!Array.isArray(statKeys)) {
-      statKeys = [statKeys];
-    }
     statKeys = statKeys.map((statKey) => 'monstie.stats.' + statKey);
 
-    // TODO store
-    // if (statKeys.includes(monstieFilter.sortKey)) {
-    //   return ['text-primary-600', 'dark:text-primary-400'];
-    // }
+    if (statKeys.includes(monstieFilter.sortKey ?? '')) {
+      return ['text-primary-600', 'dark:text-primary-400'];
+    }
     return undefined;
   }
 </script>

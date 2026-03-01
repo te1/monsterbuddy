@@ -33,7 +33,14 @@
 </script>
 
 <template>
-  <UTooltip :text="title">
-    <UButton variant="link" icon="i-lucide-bookmark" @click="togglePin" />
-  </UTooltip>
+  <ClientOnly>
+    <UTooltip :text="title">
+      <UButton
+        :color="pinned ? 'primary' : 'neutral'"
+        variant="link"
+        icon="i-lucide-bookmark"
+        @click="togglePin"
+      />
+    </UTooltip>
+  </ClientOnly>
 </template>
