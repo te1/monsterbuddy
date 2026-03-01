@@ -2,13 +2,12 @@
   import { groupBy } from 'es-toolkit/array';
   import { catavanStands as catavanStands_ } from '~/services/2/data';
 
-  const headline = gameTypeToFullName('mhst2');
-
   useSeoMeta({
     title: `Catavan Stand Fast Travel List For ${gameTypeToFullLabel('mhst2')}`,
     description:
       'Overview of catavan stand fast travel locations and list of monsters you will find there',
   });
+  const headline = gameTypeToFullName('mhst2');
 
   const catavanStands = groupBy(catavanStands_, (catavanStand) => catavanStand.zone);
 </script>
@@ -27,10 +26,7 @@
           <div
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
-            <!-- <FaIcon
-              class="w-6! text-neutral-500 dark:text-neutral-400"
-              :icon="['fas', 'map-marker-alt']"
-            /> -->
+            <UIcon name="i-lucide-map-pin" class="w-6! text-neutral-500 dark:text-neutral-400" />
 
             <div class="mb-1 font-semibold">
               {{ zone }}

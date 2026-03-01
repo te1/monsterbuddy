@@ -15,26 +15,69 @@
   });
 
   useSeoMeta(getCatavanStandSeo(catavanStand, monsters.value.length));
-
   const headline = gameTypeToFullName('mhst2');
 
-  const display: string | undefined = undefined;
+  type Display = 'monster' | 'monstie' | 'egg';
+  const display = ref<Display>('monster');
+
+  const displays = computed<Display[]>(() => ['monster', 'monstie', 'egg']);
+
+  const nextDisplay = computed(() => {
+    const currentIndex = displays.value.indexOf(display.value);
+    const nextIndex = (currentIndex + 1) % displays.value.length;
+    return displays.value[nextIndex] ?? 'monster';
+  });
+
+  const fabVisible = computed(() => {
+    return displays.value.length > 1;
+  });
+
+  const fabTitle = computed(() => {
+    switch (nextDisplay.value) {
+      case 'monster':
+        return 'Show monsters';
+
+      case 'monstie':
+        return 'Show monsties ';
+
+      case 'egg':
+        return 'Show eggs';
+
+      default:
+        return undefined;
+    }
+  });
+
+  const fabIcon = computed(() => {
+    switch (nextDisplay.value) {
+      case 'monster':
+      case 'monstie':
+        return 'i-lucide-image';
+
+      case 'egg':
+        return 'i-lucide-egg';
+
+      default:
+        return null;
+    }
+  });
 
   function getMode(monster: Monster) {
-    switch (display) {
+    switch (display.value) {
       case 'monster':
         return 'rarity';
 
       case 'monstie':
       case 'egg':
-        if (monster.hatchable) {
-          return 'retreat';
-        }
-        return 'rarity';
+        return monster.hatchable ? 'location' : 'rarity';
 
       default:
         return undefined;
     }
+  }
+
+  function toggleDisplay() {
+    display.value = nextDisplay.value;
   }
 </script>
 
@@ -42,12 +85,22 @@
   <div>
     <UPageHeader :title="catavanStand.name" :headline="headline" />
 
-    <S2MonsterSmartListItem
-      v-for="monster in monsters"
-      :key="monster.no"
-      :monster="monster"
-      :display="display"
-      :mode="getMode(monster)"
-    />
+    <UPageBody>
+      <ClientOnly>
+        <UTooltip v-if="fabVisible" :text="fabTitle">
+          <UButton color="neutral" variant="soft" :icon="fabIcon" @click="toggleDisplay" />
+        </UTooltip>
+      </ClientOnly>
+
+      <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <S2MonsterSmartListItem
+          v-for="monster in monsters"
+          :key="monster.no"
+          :monster="monster"
+          :display="display"
+          :mode="getMode(monster)"
+        />
+      </div>
+    </UPageBody>
   </div>
 </template>

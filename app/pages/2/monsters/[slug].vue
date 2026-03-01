@@ -24,12 +24,14 @@
   <div>
     <UPageHeader :title="monster.name" :headline="headline" />
 
-    <S2MonsterInfoCard :monster="monster" />
-    <S2MonsterCombatCard :monster="monster" />
-    <S2MonstieEggCard v-if="monster.hatchable" :monster="monster" />
-    <S2MonsterImageCard :monster="monster" />
-    <S2MonstieInfoCard v-if="monster.hatchable" :monster="monster" />
-    <S2MonstieStatsCard v-if="monster.hatchable" :monster="monster" />
-    <S2MonsterRelatedCard :monster="monster" />
+    <UPageBody>
+      <S2MonsterInfoCard :monster="monster" />
+      <S2MonsterCombatCard :monster="monster" />
+      <S2MonstieEggCard v-if="monster.hatchable" :monster="monster" />
+      <S2MonsterImageCard :monster="monster" />
+      <S2MonstieInfoCard v-if="monster.hatchable" :monster="monster" />
+      <S2MonstieStatsCard v-if="monster.hatchable" :monster="monster" />
+      <S2MonsterRelatedCard :monster="monster" />
+    </UPageBody>
   </div>
 </template>
