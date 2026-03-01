@@ -39,7 +39,7 @@
               <div v-if="index > 0" class="border-t border-neutral-300 dark:border-neutral-600" />
 
               <NuxtLink
-                :to="`/2/riding-actions/${action.slug}/`"
+                :to="`/2/riding-actions/${action.slug}`"
                 class="box-link block px-6 py-2 font-semibold"
               >
                 {{ action.name }}

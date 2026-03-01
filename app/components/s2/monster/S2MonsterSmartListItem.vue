@@ -38,7 +38,7 @@
 </script>
 
 <template>
-  <NuxtLink :to="`/2/monsters/${monster.slug}/`">
+  <NuxtLink :to="`/2/monsters/${monster.slug}`">
     <S2EggListItem
       v-if="showEgg"
       class="box box-link overflow-hidden px-1"

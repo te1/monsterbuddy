@@ -61,7 +61,7 @@
 
       <div>
         <span v-for="(action, index) in ridingActions" :key="action.name" class="inline-flex">
-          <AppNuxtLink :to="`/2/riding-actions/${action.slug}/`" class="link">
+          <AppNuxtLink :to="`/2/riding-actions/${action.slug}`" class="link">
             {{ action.name }}
           </AppNuxtLink>
           <span v-if="index + 1 < (ridingActions?.length ?? 0)">,&nbsp;</span>

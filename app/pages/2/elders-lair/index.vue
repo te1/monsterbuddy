@@ -26,7 +26,7 @@
     />
 
     <UPageBody>
-      <NuxtLink v-for="monster in monsters" :key="monster.no" :to="`/2/monsters/${monster.slug}/`">
+      <NuxtLink v-for="monster in monsters" :key="monster.no" :to="`/2/monsters/${monster.slug}`">
         <S2MonsterListItem :monster="monster" class="box box-link overflow-hidden px-1" />
         <!-- :mode="eldersLairFilter.mode" -->
       </NuxtLink>

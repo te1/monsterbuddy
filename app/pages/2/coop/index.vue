@@ -42,7 +42,7 @@
               <div v-if="index > 0" class="border-t border-neutral-300 dark:border-neutral-600" />
 
               <NuxtLink
-                :to="`/2/coop/${quest.slug}/`"
+                :to="`/2/coop/${quest.slug}`"
                 class="box-link block px-6 py-2 font-semibold"
               >
                 <span class="inline-block w-48">

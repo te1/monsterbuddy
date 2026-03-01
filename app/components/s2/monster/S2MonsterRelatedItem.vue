@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/2/monsters/${monster.slug}/`">
+  <NuxtLink :to="`/2/monsters/${monster.slug}`">
     <S2EggListItem
       v-if="showEgg"
       class="box-link-inline -mx-3 overflow-hidden"
