@@ -164,7 +164,7 @@
             :caption="filter.value"
             filterTarget="/monsters/filter/"
             showRemove
-            @remove="monsterFilter[filter.name] = null"
+            @remove="monsterFilter[filter.name] = undefined"
           />
         </div>
       </div>

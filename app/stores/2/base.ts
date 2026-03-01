@@ -76,6 +76,19 @@ export interface MonsterFilterInitialState {
   deviantsFilter?: boolean;
 }
 
+type FilterKey =
+  | 'genusFilter'
+  | 'habitatFilter'
+  | 'coopQuestFilter'
+  | 'catavanFilter'
+  | 'eldersLairFilter'
+  | 'attackTypeFilter'
+  | 'attackElementFilter'
+  | 'ridingActionFilter'
+  | 'eggColorsFilter'
+  | 'hatchableFilter'
+  | 'deviantsFilter';
+
 export function makeMonsterFilterStore<T extends object = object>(
   storeId: string,
   monsters: Monster[],
@@ -305,7 +318,7 @@ export function makeMonsterFilterStore<T extends object = object>(
       },
 
       activeFilters: (state) => {
-        const result: { name: string; value: string }[] = [];
+        const result: { name: FilterKey; value: string }[] = [];
 
         if (state.genusFilter != null && state.sortKey !== 'genus') {
           result.push({ name: 'genusFilter', value: state.genusFilter });

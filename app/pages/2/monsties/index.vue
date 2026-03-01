@@ -162,7 +162,7 @@
             :caption="filter.value"
             filterTarget="/monsties/filter/"
             showRemove
-            @remove="monstieFilter[filter.name] = null"
+            @remove="monstieFilter[filter.name] = undefined"
           />
         </div>
       </div>
