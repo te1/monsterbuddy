@@ -14,23 +14,16 @@
 
   const resolvedType = computed(() => props.type ?? props.monster?.monstie?.attackType);
   const caption = computed(() => formatAttackType(resolvedType.value));
-  const classes = computed(() => {
-    switch (resolvedType.value) {
-      case 'power':
-        return 'text-power dark:brightness-150';
-
-      case 'speed':
-        return 'text-speed  dark:brightness-150';
-
-      case 'technical':
-        return 'text-technical dark:brightness-150';
-
-      default:
-        return undefined;
-    }
-  });
 </script>
 
 <template>
-  <span :class="classes" v-text="caption" />
+  <span
+    :class="{
+      'text-power': resolvedType === 'power',
+      'text-speed': resolvedType === 'speed',
+      'text-technical': resolvedType === 'technical',
+    }"
+    class="dark:brightness-150"
+    v-text="caption"
+  />
 </template>

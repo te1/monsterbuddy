@@ -15,6 +15,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex h-[120px] w-[120px] shrink-0 flex-col items-center justify-center gap-2">
       <S2MonsterIcon :monster="monster" />
@@ -41,7 +43,7 @@
 
     <div
       v-if="ticket"
-      class="bg-gold/75 dark:bg-gold/25 dark:text-gold absolute top-0 right-0 rounded-bl px-2 py-0.5 text-xs font-semibold tracking-widest text-neutral-700"
+      class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-semibold tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
       title="Golden SR ticket required"
     >
       SR

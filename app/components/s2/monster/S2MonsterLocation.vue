@@ -74,7 +74,7 @@
   <div>
     {{ typeCaption }}
 
-    <AppNuxtLink v-if="hasLink" :to="target" class="link">
+    <AppNuxtLink v-if="hasLink" :to="target">
       {{ caption }}
     </AppNuxtLink>
 
