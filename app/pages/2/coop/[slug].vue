@@ -127,6 +127,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div>
     <UPageHeader :title="coopQuest.name" :description="description" :headline="headline" />
 

@@ -134,6 +134,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div>
     <UPageHeader
       title="Monsties"
