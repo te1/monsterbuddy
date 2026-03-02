@@ -23,6 +23,12 @@ export default defineAppConfig({
       },
     },
 
+    pageAside: {
+      slots: {
+        root: 'pt-3 lg:ps-8 lg:pe-0',
+      },
+    },
+
     pageHeader: {
       slots: {
         root: 'py-4 border-0',
@@ -30,6 +36,10 @@ export default defineAppConfig({
         title: 'text-2xl font-normal dark:text-toned',
         description: 'text-base text-toned dark:text-muted',
       },
+    },
+
+    skeleton: {
+      base: 'bg-accented',
     },
   },
 

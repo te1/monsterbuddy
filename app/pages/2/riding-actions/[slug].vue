@@ -81,7 +81,7 @@
         <div class="mb-1 font-semibold">Learnt By</div>
       </div>
 
-      <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
         <S2MonsterSmartListItem
           v-for="monster in monsters"
           :key="monster.no"

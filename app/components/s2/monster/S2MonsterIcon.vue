@@ -5,12 +5,10 @@
   const props = withDefaults(
     defineProps<{
       monster: Monster;
-      showHatchable?: boolean;
-      showAttackType?: boolean;
+      noTooltip?: boolean;
     }>(),
     {
-      showHatchable: false,
-      showAttackType: false,
+      noTooltip: false,
     }
   );
 
@@ -18,13 +16,9 @@
 </script>
 
 <template>
-  <UTooltip :text="monster.name">
+  <UTooltip v-if="!noTooltip" :text="monster.name">
     <img :src="imageUrl" :alt="monster.name" width="60" height="60" />
   </UTooltip>
 
-  <UTooltip v-if="showHatchable && monster.hatchable" text="Hatchable">
-    <img src="~/assets/icon/hatchable.svg" alt="Hatchable" width="20" height="20" />
-  </UTooltip>
-
-  <AttackTypeIcon v-if="showAttackType" :monster="monster" width="20" height="20" />
+  <img v-else :src="imageUrl" :alt="monster.name" width="60" height="60" />
 </template>

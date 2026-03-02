@@ -2,10 +2,6 @@
   const { title } = useAppConfig().seo;
   const headline = gameTypeToFullName('mhst1');
 
-  definePageMeta({
-    layout: false,
-  });
-
   useSeoMeta({
     titleTemplate: '',
     title: `${title} - Companion App For Monster Hunter Stories 1`,

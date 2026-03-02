@@ -2,10 +2,6 @@
   const { title } = useAppConfig().seo;
   const headline = gameTypeToFullName('mhst3');
 
-  definePageMeta({
-    layout: false,
-  });
-
   useSeoMeta({
     titleTemplate: '',
     title: `${title} - Companion App For ${gameTypeToFullLabel('mhst3')}`,
