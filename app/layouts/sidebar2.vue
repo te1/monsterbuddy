@@ -2,26 +2,58 @@
   import { take } from 'es-toolkit/array';
   import useHistoryStore from '~/stores/2/historyStore';
 
-  const history = useHistoryStore(); // TODO handle this for 1/3 based on game type
-  // TODO switch between monsters/monsties based on current page
+  const history = useHistoryStore();
+
+  const wantsMonsties = computed(() => {
+    const path = useRoute().path;
+
+    const onlyWantsMonsties =
+      path.startsWith('/2/monsties') ||
+      path.startsWith('/2/eggs') ||
+      path.startsWith('/2/riding-actions');
+
+    const sometimesWantsMonsties =
+      path.startsWith('/2/monsters/') &&
+      (history.lastList === 'monsties' || history.lastList === 'eggs');
+
+    return onlyWantsMonsties || sometimesWantsMonsties;
+  });
+
+  const wantsEggs = computed(() => {
+    const path = useRoute().path;
+
+    const onlyWantsEggs = path.startsWith('/2/eggs');
+
+    const sometimesWantsEggs = path.startsWith('/2/monsters/') && history.lastList === 'eggs';
+
+    return onlyWantsEggs || sometimesWantsEggs;
+  });
+
+  const maxItems = 15;
 
   const recent = computed(() => {
-    return take(history.recentMonsters, 15);
+    const items = wantsMonsties.value ? history.recentMonsties : history.recentMonsters;
+
+    return take(items, maxItems);
   });
 
   const pinned = computed(() => {
-    return take(history.pinnedMonsters, 15);
+    const items = wantsEggs.value
+      ? history.pinnedEggs
+      : wantsMonsties.value
+        ? history.pinnedMonsties
+        : history.pinnedMonsters;
+
+    return take(items, maxItems);
   });
 
   const tabs = [
     {
       label: 'Recent',
-      // icon: 'i-lucide-clock',
       slot: 'recent',
     },
     {
       label: 'Bookmarked',
-      // icon: 'i-lucide-bookmark',
       slot: 'pinned',
     },
   ];
@@ -47,6 +79,7 @@
                     v-for="monster in recent"
                     :key="monster.slug"
                     :monster="monster"
+                    :showEgg="wantsEggs"
                   />
 
                   <template #fallback>
@@ -66,6 +99,7 @@
                     v-for="monster in pinned"
                     :key="monster.slug"
                     :monster="monster"
+                    :showEgg="wantsEggs"
                   />
                 </ClientOnly>
               </div>

@@ -7,11 +7,13 @@
       monster?: Monster;
       genus?: GenusType;
       tooltipTop?: boolean;
+      noTooltip?: boolean;
     }>(),
     {
       monster: undefined,
       genus: undefined,
       tooltipTop: false,
+      noTooltip: false,
     }
   );
 
@@ -31,7 +33,9 @@
 </script>
 
 <template>
-  <UTooltip :text="caption" :content="{ side: tooltipTop ? 'top' : 'bottom' }">
+  <UTooltip v-if="!noTooltip" :text="caption" :content="{ side: tooltipTop ? 'top' : 'bottom' }">
     <img :src="imageUrl" :alt="caption" width="120" height="120" />
   </UTooltip>
+
+  <img v-else :src="imageUrl" :alt="caption" width="120" height="120" />
 </template>
