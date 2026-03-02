@@ -8,6 +8,7 @@
     description:
       'Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats',
   });
+  // TODO drop ?display from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   const history = useHistoryStore();
@@ -91,6 +92,23 @@
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  const route = useRoute();
+  watch(
+    () => route.query.display,
+    (newDisplay) => {
+      if (typeof newDisplay !== 'string') {
+        return;
+      }
+
+      if (displays.value.includes(newDisplay as Display)) {
+        display.value = newDisplay as Display;
+
+        useRouter().replace(route.path); // remove query parameters from URL
+      }
+    },
+    { immediate: true }
+  );
 
   const fabDisplayVisible = computed(() => {
     return !showFilter.value && displays.value.length > 1;

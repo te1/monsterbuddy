@@ -29,22 +29,26 @@
     return onlyWantsEggs || sometimesWantsEggs;
   });
 
-  const maxItems = 15;
-
   const recent = computed(() => {
-    const items = wantsMonsties.value ? history.recentMonsties : history.recentMonsters;
-
-    return take(items, maxItems);
+    return wantsMonsties.value ? history.recentMonsties : history.recentMonsters;
   });
-
   const pinned = computed(() => {
-    const items = wantsEggs.value
+    return wantsEggs.value
       ? history.pinnedEggs
       : wantsMonsties.value
         ? history.pinnedMonsties
         : history.pinnedMonsters;
+  });
 
-    return take(items, maxItems);
+  const maxItems = 15;
+  const topRecent = computed(() => take(recent.value, maxItems));
+  const topPinned = computed(() => take(pinned.value, maxItems));
+
+  const moreRecent = computed(() => Math.max(0, recent.value.length - maxItems));
+  const morePinned = computed(() => Math.max(0, pinned.value.length - maxItems));
+
+  const listLink = computed(() => {
+    return wantsEggs.value ? '/2/eggs' : wantsMonsties.value ? '/2/monsties' : '/2/monsters';
   });
 
   const tabs = [
@@ -76,11 +80,19 @@
               <div class="mt-1 flex flex-col gap-1 xl:mt-2 xl:gap-2">
                 <ClientOnly>
                   <S2MonsterMiniListItem
-                    v-for="monster in recent"
+                    v-for="monster in topRecent"
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
                   />
+
+                  <NuxtLink
+                    v-if="moreRecent > 0"
+                    :to="`${listLink}?display=recent`"
+                    class="px-1 text-muted hover:text-default"
+                  >
+                    And {{ moreRecent }} more
+                  </NuxtLink>
 
                   <template #fallback>
                     <div v-for="i in 7" :key="i" class="flex items-center gap-3 px-1">
@@ -96,11 +108,19 @@
               <div class="mt-1 flex flex-col gap-1 xl:mt-2 xl:gap-2">
                 <ClientOnly>
                   <S2MonsterMiniListItem
-                    v-for="monster in pinned"
+                    v-for="monster in topPinned"
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
                   />
+
+                  <NuxtLink
+                    v-if="morePinned > 0"
+                    :to="`${listLink}?display=pinned`"
+                    class="px-1 text-muted hover:text-default"
+                  >
+                    And {{ morePinned }} more
+                  </NuxtLink>
                 </ClientOnly>
               </div>
             </template>
