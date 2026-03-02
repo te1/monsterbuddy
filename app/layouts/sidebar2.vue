@@ -65,7 +65,7 @@
       <slot />
 
       <template #right>
-        <UPageAside class="overflow-y-hidden">
+        <UPageAside class="scrollbar-hide">
           <UTabs
             color="neutral"
             variant="link"
