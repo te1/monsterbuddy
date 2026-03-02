@@ -21,6 +21,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <section v-if="hasRelated">
     <h3 class="text-lg font-semibold">Related</h3>
 

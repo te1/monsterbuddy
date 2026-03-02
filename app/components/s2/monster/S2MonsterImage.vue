@@ -19,6 +19,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <UTooltip v-if="hasImage" :text="monster.name">
     <img :src="imageUrl" :alt="monster.name" />
   </UTooltip>

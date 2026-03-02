@@ -20,6 +20,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <NuxtLink :to="`/2/monsters/${monster.slug}`">
     <S2EggListItem
       v-if="showEgg"

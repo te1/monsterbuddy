@@ -30,6 +30,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <section class="relative space-y-3 overflow-hidden">
     <div class="space-y-1">
       <h3 class="text-lg font-semibold">Monstie Info</h3>

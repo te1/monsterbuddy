@@ -5,6 +5,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div class="box flex flex-col items-center space-y-4 py-4">
     <span class="text-2xl font-semibold text-neutral-500 dark:text-neutral-300">
       <slot>No results found</slot>

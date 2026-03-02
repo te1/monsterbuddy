@@ -9,6 +9,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <section>
     <div class="flex items-start justify-between overflow-hidden">
       <div>

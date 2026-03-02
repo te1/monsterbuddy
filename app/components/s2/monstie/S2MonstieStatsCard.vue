@@ -15,6 +15,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <section v-if="hasStats" class="space-y-2 overflow-hidden">
     <h3 class="text-lg font-semibold">Monstie Stats</h3>
 

@@ -83,6 +83,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div>
     <div class="leading-tight text-neutral-500 dark:text-neutral-400" v-text="info" />
     <div class="text-base leading-snug font-semibold" v-text="monster.name" />

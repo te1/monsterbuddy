@@ -21,6 +21,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div class="flex h-[150px] flex-col items-center">
     <S2EggImage class="-mx-3 h-[120px] w-[120px]" :monster="monster" :genus="genus" tooltipTop />
 

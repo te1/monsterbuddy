@@ -10,6 +10,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <div class="flex items-center gap-2">
     <slot>
       <span class="h-5 w-5" />

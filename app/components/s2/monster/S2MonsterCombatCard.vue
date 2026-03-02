@@ -43,6 +43,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <section v-if="hasCombatInfo" class="relative space-y-2 overflow-hidden">
     <div v-if="hasAttackPatterns">
       <h3 class="text-lg font-semibold">Attack Patterns</h3>

@@ -18,6 +18,8 @@
 </script>
 
 <template>
+  <!-- TODO CSS -->
+
   <section class="relative">
     <S2EggImage :monster="monster" />
 
