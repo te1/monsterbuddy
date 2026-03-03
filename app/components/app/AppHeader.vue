@@ -15,9 +15,7 @@
     />
 
     <template #left>
-      <NuxtLink to="/">
-        <AppLogo />
-      </NuxtLink>
+      <AppTitle />
     </template>
 
     <template #right>
