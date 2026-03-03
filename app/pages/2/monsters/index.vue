@@ -1,7 +1,12 @@
 <script lang="ts" setup>
   import { filterStoreKey } from '~/stores/2/base';
+  import S2MonsterSidebar from '~/components/s2/monster/S2MonsterSidebar.vue';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonsterFilter from '~/stores/2/monsterFilter';
+
+  definePageMeta({
+    sidebarComponent: S2MonsterSidebar,
+  });
 
   useSeoMeta({
     title: `Monster List For ${gameTypeToFullLabel('mhst2')}`,

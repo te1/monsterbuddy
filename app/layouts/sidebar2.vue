@@ -2,10 +2,11 @@
   import { take } from 'es-toolkit/array';
   import useHistoryStore from '~/stores/2/historyStore';
 
+  const route = useRoute();
   const history = useHistoryStore();
 
   const wantsMonsties = computed(() => {
-    const path = useRoute().path;
+    const path = route.path;
 
     const onlyWantsMonsties =
       path.startsWith('/2/monsties') ||
@@ -20,7 +21,7 @@
   });
 
   const wantsEggs = computed(() => {
-    const path = useRoute().path;
+    const path = route.path;
 
     const onlyWantsEggs = path.startsWith('/2/eggs');
 
@@ -69,6 +70,11 @@
     { label: 'Recent', slot: 'recent' },
     { label: 'Bookmarked', slot: 'pinned' },
   ];
+
+  const sidebarComponent = computed(() => {
+    const component = route.meta.sidebarComponent;
+    return component ? toRaw(component) : undefined;
+  });
 </script>
 
 <template>
@@ -77,15 +83,17 @@
       <slot />
 
       <template #right>
-        <UPageAside class="scrollbar-hide">
+        <UPageAside class="scrollbar-hide flex flex-col gap-8">
+          <component :is="sidebarComponent" v-if="sidebarComponent" />
+
           <UTabs
             color="neutral"
             variant="link"
             :items="tabs"
-            :ui="{ list: 'gap-4', trigger: 'px-0 py-0' }"
+            :ui="{ list: 'gap-4', trigger: 'px-0 py-0', content: 'mt-1 xl:mt-2' }"
           >
             <template #recent>
-              <div class="mt-1 flex flex-col gap-1 text-muted xl:mt-2 xl:gap-2">
+              <div class="flex flex-col gap-1 text-muted xl:gap-2">
                 <ClientOnly>
                   <div v-if="topRecent.length <= 0" class="px-1">No recent {{ type }}</div>
 
@@ -115,7 +123,7 @@
             </template>
 
             <template #pinned>
-              <div class="mt-1 flex flex-col gap-1 text-muted xl:mt-2 xl:gap-2">
+              <div class="flex flex-col gap-1 text-muted xl:gap-2">
                 <ClientOnly>
                   <div v-if="topPinned.length <= 0" class="px-1">No bookmarked {{ type }}</div>
 
