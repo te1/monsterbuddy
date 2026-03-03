@@ -52,14 +52,8 @@
   });
 
   const tabs = [
-    {
-      label: 'Recent',
-      slot: 'recent',
-    },
-    {
-      label: 'Bookmarked',
-      slot: 'pinned',
-    },
+    { label: 'Recent', slot: 'recent' },
+    { label: 'Bookmarked', slot: 'pinned' },
   ];
 </script>
 
@@ -77,8 +71,10 @@
             :ui="{ list: 'gap-4', trigger: 'px-0 py-0' }"
           >
             <template #recent>
-              <div class="mt-1 flex flex-col gap-1 xl:mt-2 xl:gap-2">
+              <div class="mt-1 flex flex-col gap-1 text-muted xl:mt-2 xl:gap-2">
                 <ClientOnly>
+                  <div v-if="topRecent.length <= 0" class="px-1">No recent monsters</div>
+
                   <S2MonsterMiniListItem
                     v-for="monster in topRecent"
                     :key="monster.slug"
@@ -89,7 +85,7 @@
                   <NuxtLink
                     v-if="moreRecent > 0"
                     :to="`${listLink}?display=recent`"
-                    class="px-1 text-muted hover:text-default"
+                    class="px-1 hover:text-default"
                   >
                     And {{ moreRecent }} more
                   </NuxtLink>
@@ -105,8 +101,10 @@
             </template>
 
             <template #pinned>
-              <div class="mt-1 flex flex-col gap-1 xl:mt-2 xl:gap-2">
+              <div class="mt-1 flex flex-col gap-1 text-muted xl:mt-2 xl:gap-2">
                 <ClientOnly>
+                  <div v-if="topPinned.length <= 0" class="px-1">No bookmarked monsters</div>
+
                   <S2MonsterMiniListItem
                     v-for="monster in topPinned"
                     :key="monster.slug"
@@ -117,7 +115,7 @@
                   <NuxtLink
                     v-if="morePinned > 0"
                     :to="`${listLink}?display=pinned`"
-                    class="px-1 text-muted hover:text-default"
+                    class="px-1 hover:text-default"
                   >
                     And {{ morePinned }} more
                   </NuxtLink>
