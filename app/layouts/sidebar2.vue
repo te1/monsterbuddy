@@ -51,6 +51,20 @@
     return wantsEggs.value ? '/2/eggs' : wantsMonsties.value ? '/2/monsties' : '/2/monsters';
   });
 
+  const type = computed(() => {
+    return wantsEggs.value ? 'eggs' : wantsMonsties.value ? 'monsties' : 'monsters';
+  });
+
+  function removePinned(slug: string) {
+    if (wantsEggs.value) {
+      history.togglePinnedEgg(slug);
+    } else if (wantsMonsties.value) {
+      history.togglePinnedMonstie(slug);
+    } else {
+      history.togglePinnedMonster(slug);
+    }
+  }
+
   const tabs = [
     { label: 'Recent', slot: 'recent' },
     { label: 'Bookmarked', slot: 'pinned' },
@@ -73,7 +87,7 @@
             <template #recent>
               <div class="mt-1 flex flex-col gap-1 text-muted xl:mt-2 xl:gap-2">
                 <ClientOnly>
-                  <div v-if="topRecent.length <= 0" class="px-1">No recent monsters</div>
+                  <div v-if="topRecent.length <= 0" class="px-1">No recent {{ type }}</div>
 
                   <S2MonsterMiniListItem
                     v-for="monster in topRecent"
@@ -85,7 +99,7 @@
                   <NuxtLink
                     v-if="moreRecent > 0"
                     :to="`${listLink}?display=recent`"
-                    class="px-1 hover:text-default"
+                    class="ml-0 max-w-max px-1 hover:text-default xl:ml-12"
                   >
                     And {{ moreRecent }} more
                   </NuxtLink>
@@ -103,19 +117,21 @@
             <template #pinned>
               <div class="mt-1 flex flex-col gap-1 text-muted xl:mt-2 xl:gap-2">
                 <ClientOnly>
-                  <div v-if="topPinned.length <= 0" class="px-1">No bookmarked monsters</div>
+                  <div v-if="topPinned.length <= 0" class="px-1">No bookmarked {{ type }}</div>
 
                   <S2MonsterMiniListItem
                     v-for="monster in topPinned"
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
+                    removeable
+                    @remove="removePinned(monster.slug)"
                   />
 
                   <NuxtLink
                     v-if="morePinned > 0"
                     :to="`${listLink}?display=pinned`"
-                    class="px-1 hover:text-default"
+                    class="ml-0 max-w-max px-1 hover:text-default xl:ml-12"
                   >
                     And {{ morePinned }} more
                   </NuxtLink>

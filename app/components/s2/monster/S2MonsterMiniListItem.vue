@@ -5,19 +5,36 @@
     defineProps<{
       monster: Monster;
       showEgg?: boolean;
+      removeable?: boolean;
     }>(),
     {
       showEgg: false,
+      removeable: false,
     }
   );
+
+  const emit = defineEmits<{
+    (e: 'remove'): void;
+  }>();
 </script>
 
 <template>
-  <NuxtLink :to="`/2/monsters/${monster.slug}`">
-    <div class="flex items-center gap-3 px-1 hover:text-default">
+  <div class="group relative">
+    <NuxtLink
+      :to="`/2/monsters/${monster.slug}`"
+      class="flex max-w-max items-center gap-3 px-1 hover:text-default"
+    >
       <S2EggImage v-if="showEgg" :monster="monster" noTooltip class="hidden h-9 w-9 xl:block" />
       <S2MonsterIcon v-else :monster="monster" noTooltip class="hidden h-9 w-9 xl:block" />
-      <div v-text="monster.name" />
-    </div>
-  </NuxtLink>
+      <div class="truncate" v-text="monster.name" />
+    </NuxtLink>
+
+    <UTooltip
+      v-if="removeable"
+      class="absolute top-1/2 right-0 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-75"
+      text="Remove bookmark"
+    >
+      <UButton variant="soft" color="neutral" icon="i-lucide-bookmark-x" @click="emit('remove')" />
+    </UTooltip>
+  </div>
 </template>
