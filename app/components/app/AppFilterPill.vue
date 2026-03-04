@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-  import type { SortOrder } from '~/stores/2/base'; // TODO move up
-
   const props = withDefaults(
     defineProps<{
       caption: string;
