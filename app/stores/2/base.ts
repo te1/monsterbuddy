@@ -87,7 +87,7 @@ export interface MonsterFilterInitialState {
   autoSwitchModes: Mode[];
 }
 
-type FilterKey =
+export type FilterKey =
   | 'genusFilter'
   | 'habitatFilter'
   | 'coopQuestFilter'

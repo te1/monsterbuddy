@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { FilterStore, Mode, SortKey } from '~/stores/2/base';
+  import type { FilterKey, FilterStore, Mode, SortKey } from '~/stores/2/base';
 
   export type Modes = {
     value: Mode;
@@ -19,7 +19,7 @@
 
   const inputName = useTemplateRef('inputName');
 
-  const items = [{ label: 'Filter' }]; // TODO move to template
+  const items = [{ label: 'View' }]; // TODO move to template
 
   const sortConfig = computed(() => {
     const result: {
@@ -79,6 +79,20 @@
     return result;
   });
 
+  const genusItems = computed(() => {
+    return [
+      { label: 'All', value: 'ALL' },
+      ...props.store.allGenera.map((genus) => ({
+        label: genus,
+        value: genus,
+      })),
+    ];
+  });
+
+  function setMode(value: Mode) {
+    props.store.$patch({ mode: value });
+  }
+
   function setNameFilter(value: string) {
     props.store.$patch({ nameFilter: value });
   }
@@ -89,18 +103,15 @@
     inputName.value?.inputRef?.focus();
   }
 
-  function setSortKey(value: string) {
-    const oldValue = props.store.sortKey;
-    const newValue = value as SortKey;
-
-    if (oldValue === newValue) {
+  function setSortKey(value: SortKey) {
+    if (value === props.store.sortKey) {
       return;
     }
 
-    const config = sortConfig.value.find((config) => config.value === newValue);
+    const config = sortConfig.value.find((config) => config.value === value);
 
     props.store.$patch({
-      sortKey: newValue,
+      sortKey: value,
       sortOrder: config?.default ?? 'asc',
       mode:
         config?.mode &&
@@ -114,6 +125,27 @@
   function setSortOrder(value: SortOrder) {
     props.store.$patch({ sortOrder: value });
   }
+
+  function setGenusFilter(value: string) {
+    setFilter('genusFilter', value, 'location');
+  }
+
+  function setFilter<T>(filterKey: FilterKey, value: T, mode?: Mode) {
+    if (value === props.store[filterKey]) {
+      return;
+    }
+
+    props.store.$patch({
+      [filterKey]: value === 'ALL' ? undefined : value,
+      mode:
+        value != null &&
+        mode != null &&
+        props.store.mode !== 'compact' &&
+        props.store.autoSwitchModes.includes(mode)
+          ? mode
+          : props.store.mode,
+    });
+  }
 </script>
 
 <template>
@@ -125,7 +157,20 @@
   >
     <template #content>
       <div class="flex flex-col gap-2 px-1">
-        <UFormField label="Info" orientation="horizontal">TODO</UFormField>
+        <UFormField label="Info" orientation="horizontal" :ui="{ container: 'w-full' }">
+          <USelect
+            :modelValue="props.store.mode"
+            color="neutral"
+            variant="soft"
+            :items="modes"
+            class="w-full"
+            :ui="{
+              base: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
+              trailingIcon: 'transition-transform duration-200 group-data-[state=open]:rotate-180',
+            }"
+            @update:model-value="setMode"
+          />
+        </UFormField>
 
         <UFormField label="Name" orientation="horizontal">
           <UInput
@@ -175,7 +220,20 @@
           <AppSortOrderToggle :value="props.store.sortOrder" @update="setSortOrder" />
         </UFormField>
 
-        <UFormField label="Genus" orientation="horizontal">TODO</UFormField>
+        <UFormField label="Genus" orientation="horizontal" :ui="{ container: 'w-full' }">
+          <USelect
+            :modelValue="props.store.genusFilter ?? 'ALL'"
+            color="neutral"
+            variant="soft"
+            :items="genusItems"
+            class="w-full"
+            :ui="{
+              base: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
+              trailingIcon: 'transition-transform duration-200 group-data-[state=open]:rotate-180',
+            }"
+            @update:model-value="setGenusFilter"
+          />
+        </UFormField>
       </div>
     </template>
   </UTabs>

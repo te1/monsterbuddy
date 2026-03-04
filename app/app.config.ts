@@ -38,6 +38,12 @@ export default defineAppConfig({
       },
     },
 
+    select: {
+      slots: {
+        base: 'select-none',
+      },
+    },
+
     skeleton: {
       base: 'bg-accented',
     },
