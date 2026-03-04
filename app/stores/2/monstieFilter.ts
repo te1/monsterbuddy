@@ -1,12 +1,9 @@
-import { makeMonsterFilterStore } from './base';
+import { makeMonsterFilterStore, type Mode } from './base';
 import { monsties } from '~/services/2/data';
 
 const initial = {
   sortKey: 'no',
   sortOrder: 'asc',
-} as const;
-
-const extended = {
   mode: 'location',
   autoSwitchModes: [
     'location',
@@ -16,9 +13,9 @@ const extended = {
     'retreat',
     'rarity',
     'stats',
-  ],
+  ] as Mode[],
 } as const;
 
-const useMonstieFilter = makeMonsterFilterStore('s2/monstieFilter', monsties, initial, extended);
+const useMonstieFilter = makeMonsterFilterStore('s2/monstieFilter', monsties, initial);
 
 export default useMonstieFilter;

@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+  import type { Monster } from '~/services/2/types';
+  import type { Mode } from '~/stores/2/base';
   import { catavanStandsBySlug, getMonstersByCatavanStand } from '~/services/2/data';
   import { getCatavanStandSeo } from '~/services/2/seo';
-  import type { Monster } from '~/services/2/types';
 
   const route = useRoute();
   const catavanStand = catavanStandsBySlug.get(route.params.slug as string);
@@ -62,7 +63,7 @@
     }
   });
 
-  function getMode(monster: Monster) {
+  function getMode(monster: Monster): Mode | undefined {
     switch (display.value) {
       case 'monster':
         return 'rarity';

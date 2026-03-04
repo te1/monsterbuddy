@@ -1,12 +1,17 @@
 <script lang="ts" setup>
-  const items = [{ label: 'Filter' }];
+  import useMonsterFilter from '~/stores/2/monsterFilter';
+  import type { Modes } from '../S2Sidebar.vue';
+
+  const monsterFilter = useMonsterFilter();
+
+  const modes: Modes = [
+    { value: 'location', label: 'Location' },
+    { value: 'location-eldersLair', label: "Elder's Lair" },
+    { value: 'combat', label: 'Attack Pattern' },
+    { value: 'rarity', label: 'Rarity' },
+  ];
 </script>
 
 <template>
-  <UTabs
-    color="neutral"
-    variant="link"
-    :items="items"
-    :ui="{ list: 'gap-4', trigger: 'px-0 py-0' }"
-  />
+  <S2Sidebar :store="monsterFilter" :modes="modes" />
 </template>

@@ -20,7 +20,10 @@
   });
 
   useHead(() => ({
-    meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    meta: [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'format-detection', content: 'telephone=no' },
+    ],
     link: [{ key: 'app-favicon', rel: 'icon', href: icon.value }],
     htmlAttrs: {
       lang: 'en',

@@ -1,10 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
+  import type { Mode } from '~/stores/2/base';
 
   withDefaults(
     defineProps<{
       monster: Monster;
-      mode?: string;
+      mode?: Mode;
       ticket?: string;
     }>(),
     {

@@ -59,6 +59,17 @@ const sortValueGetters = {
 
 export type SortOrder = 'asc' | 'desc';
 
+export type Mode =
+  | 'combat'
+  | 'compact'
+  | 'location'
+  | 'location-coop'
+  | 'location-eldersLair'
+  | 'rarity'
+  | 'retreat'
+  | 'ridingActions'
+  | 'stats';
+
 export interface MonsterFilterInitialState {
   sortKey?: SortKey;
   sortOrder?: SortOrder;
@@ -74,6 +85,8 @@ export interface MonsterFilterInitialState {
   eggColorsFilter?: EggColor[];
   hatchableFilter?: boolean;
   deviantsFilter?: boolean;
+  mode: Mode;
+  autoSwitchModes: Mode[];
 }
 
 type FilterKey =
@@ -89,11 +102,10 @@ type FilterKey =
   | 'hatchableFilter'
   | 'deviantsFilter';
 
-export function makeMonsterFilterStore<T extends object = object>(
+export function makeMonsterFilterStore(
   storeId: string,
   monsters: Monster[],
-  initial: MonsterFilterInitialState = {},
-  extended: T = {} as T
+  initial: MonsterFilterInitialState
 ) {
   return defineStore(storeId, {
     state() {
@@ -115,7 +127,8 @@ export function makeMonsterFilterStore<T extends object = object>(
         hatchableFilter: initial.hatchableFilter,
         deviantsFilter: initial.deviantsFilter,
 
-        ...extended,
+        mode: initial.mode,
+        autoSwitchModes: initial.autoSwitchModes,
       };
     },
 
@@ -419,5 +432,6 @@ export function makeMonsterFilterStore<T extends object = object>(
   });
 }
 
-export const filterStoreKey: InjectionKey<ReturnType<ReturnType<typeof makeMonsterFilterStore>>> =
-  Symbol();
+export type FilterStore = ReturnType<ReturnType<typeof makeMonsterFilterStore>>;
+
+export const filterStoreKey: InjectionKey<FilterStore> = Symbol();

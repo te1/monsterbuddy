@@ -1,14 +1,11 @@
-import { makeMonsterFilterStore } from './base';
+import { makeMonsterFilterStore, type Mode } from './base';
 import { monsters } from '~/services/2/data';
 
 const initial = {
   sortKey: 'eldersLair',
   sortOrder: 'asc',
-} as const;
-
-const extended = {
   mode: 'combat',
-  autoSwitchModes: ['location', 'combat'],
+  autoSwitchModes: ['location', 'combat'] as Mode[],
 } as const;
 
 const filteredMonsters = monsters.filter((monster) => {
@@ -18,8 +15,7 @@ const filteredMonsters = monsters.filter((monster) => {
 const useEldersLairFilter = makeMonsterFilterStore(
   's2/eldersLairFilter',
   filteredMonsters,
-  initial,
-  extended
+  initial
 );
 
 export default useEldersLairFilter;

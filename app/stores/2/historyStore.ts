@@ -1,4 +1,5 @@
 import type { Monster } from '~/services/2/types';
+import type { Mode } from './base';
 import { pull } from 'es-toolkit/array';
 import { useLocalStorage } from '@vueuse/core';
 import { skipHydrate } from 'pinia';
@@ -44,7 +45,7 @@ const useHistoryStore = defineStore('s2/history', () => {
     return lastList.value === 'eggs' && monster.hatchable;
   };
 
-  const listModeSmart = (showMonstie: boolean, showEgg: boolean, mode: string | null = null) => {
+  const listModeSmart = (showMonstie: boolean, showEgg: boolean, mode?: Mode) => {
     let store;
 
     if (showMonstie) {
@@ -55,10 +56,9 @@ const useHistoryStore = defineStore('s2/history', () => {
       store = useMonsterFilter();
     }
 
-    mode = mode ?? store.mode;
+    mode ??= store.mode;
 
-    const autoSwitchModes: readonly string[] = store.autoSwitchModes;
-    if (autoSwitchModes.includes(mode)) {
+    if (store.autoSwitchModes.includes(mode)) {
       return mode;
     }
     return undefined;

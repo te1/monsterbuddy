@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { MonsterLocation } from '~/services/2/types';
+  import type { Mode } from '~/stores/2/base';
   import { coopQuestsBySlug, getMonstersByCoopQuest } from '~/services/2/data';
   import { getCoopQuestSeo } from '~/services/2/seo';
   import { formatCoopQuest } from '~/services/2/presentation';
@@ -70,7 +71,7 @@
     display.value = nextDisplay.value;
   }
 
-  const mode = computed(() => {
+  const mode = computed<Mode | undefined>(() => {
     switch (display.value) {
       case 'monster':
         return 'combat';

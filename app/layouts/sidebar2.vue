@@ -83,7 +83,7 @@
       <slot />
 
       <template #right>
-        <UPageAside class="scrollbar-hide flex flex-col gap-8">
+        <UPageAside class="scrollbar-hide" :ui="{ container: 'flex flex-col gap-4' }">
           <component :is="sidebarComponent" v-if="sidebarComponent" />
 
           <UTabs
