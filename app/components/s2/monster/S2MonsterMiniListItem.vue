@@ -22,7 +22,7 @@
   <div class="group relative">
     <NuxtLink
       :to="`/2/monsters/${monster.slug}`"
-      class="flex max-w-max items-center gap-3 px-1 hover:text-default"
+      class="flex max-w-max items-center gap-3 hover:text-default"
     >
       <S2EggImage v-if="showEgg" :monster="monster" noTooltip class="hidden h-9 w-9 xl:block" />
       <S2MonsterIcon v-else :monster="monster" noTooltip class="hidden h-9 w-9 xl:block" />

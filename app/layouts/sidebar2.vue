@@ -90,7 +90,7 @@
             <template #recent>
               <div class="flex flex-col gap-1 text-muted xl:gap-2">
                 <ClientOnly>
-                  <div v-if="topRecent.length <= 0" class="px-1">No recent {{ type }}</div>
+                  <div v-if="topRecent.length <= 0">No recent {{ type }}</div>
 
                   <S2MonsterMiniListItem
                     v-for="monster in topRecent"
@@ -102,13 +102,13 @@
                   <NuxtLink
                     v-if="moreRecent > 0"
                     :to="`${listLink}?display=recent`"
-                    class="ml-0 max-w-max px-1 hover:text-default xl:ml-12"
+                    class="ml-0 max-w-max hover:text-default xl:ml-12"
                   >
                     And {{ moreRecent }} more
                   </NuxtLink>
 
                   <template #fallback>
-                    <div v-for="i in 7" :key="i" class="flex items-center gap-3 px-1">
+                    <div v-for="i in 7" :key="i" class="flex items-center gap-3">
                       <USkeleton class="hidden h-9 w-9 rounded-full xl:block" />
                       <USkeleton class="my-1 h-4 w-[80%]" />
                     </div>
@@ -120,7 +120,7 @@
             <template #pinned>
               <div class="flex flex-col gap-1 text-muted xl:gap-2">
                 <ClientOnly>
-                  <div v-if="topPinned.length <= 0" class="px-1">No bookmarked {{ type }}</div>
+                  <div v-if="topPinned.length <= 0">No bookmarked {{ type }}</div>
 
                   <S2MonsterMiniListItem
                     v-for="monster in topPinned"
@@ -134,7 +134,7 @@
                   <NuxtLink
                     v-if="morePinned > 0"
                     :to="`${listLink}?display=pinned`"
-                    class="ml-0 max-w-max px-1 hover:text-default xl:ml-12"
+                    class="ml-0 max-w-max hover:text-default xl:ml-12"
                   >
                     And {{ morePinned }} more
                   </NuxtLink>
