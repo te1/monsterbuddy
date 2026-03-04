@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-  import type { GenericMonster } from '~/services/types';
-
   const props = withDefaults(
     defineProps<{
       type?: AttackType;

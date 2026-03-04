@@ -1,3 +1,4 @@
+import type { EggColor, Monster } from '~/services/2/types';
 import { groupBy, orderBy } from 'es-toolkit/array';
 import { upperFirst } from 'es-toolkit/string';
 import {
@@ -22,7 +23,6 @@ import {
   getMonstersByIsDeviant,
   sortedHabitats,
 } from '~/services/2/data';
-import type { EggColor, Monster } from '~/services/2/types';
 
 export type SortKey =
   | 'no'
@@ -57,8 +57,6 @@ const sortValueGetters = {
   eldersLair: () => null, // only used for grouping, not sorting
 } satisfies Record<SortKey, (item: Monster) => unknown>;
 
-export type SortOrder = 'asc' | 'desc';
-
 export type Mode =
   | 'combat'
   | 'compact'
@@ -71,8 +69,8 @@ export type Mode =
   | 'stats';
 
 export interface MonsterFilterInitialState {
-  sortKey?: SortKey;
-  sortOrder?: SortOrder;
+  sortKey: SortKey;
+  sortOrder: SortOrder;
   nameFilter?: string;
   genusFilter?: GenusType;
   habitatFilter?: string;

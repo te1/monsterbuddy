@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { FilterStore, Mode, SortKey, SortOrder } from '~/stores/2/base';
+  import type { FilterStore, Mode, SortKey } from '~/stores/2/base';
 
   export type Modes = {
     value: Mode;
@@ -110,6 +110,10 @@
           : props.store.mode,
     });
   }
+
+  function setSortOrder(value: SortOrder) {
+    props.store.$patch({ sortOrder: value });
+  }
 </script>
 
 <template>
@@ -120,7 +124,9 @@
     :ui="{ list: 'gap-4', trigger: 'px-0 py-0', content: 'xl:mt- mt-1' }"
   >
     <template #content>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 px-1">
+        <UFormField label="Info" orientation="horizontal">TODO</UFormField>
+
         <UFormField label="Name" orientation="horizontal">
           <UInput
             ref="inputName"
@@ -164,6 +170,12 @@
             @update:model-value="setSortKey"
           />
         </UFormField>
+
+        <UFormField label="Order" orientation="horizontal" :ui="{ container: 'w-full' }">
+          <AppSortOrderToggle :value="props.store.sortOrder" @update="setSortOrder" />
+        </UFormField>
+
+        <UFormField label="Genus" orientation="horizontal">TODO</UFormField>
       </div>
     </template>
   </UTabs>

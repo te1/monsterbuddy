@@ -1,5 +1,3 @@
-import type { GenericMonster } from '~/services/types';
-
 export function gameTypeToShortLabel(gameType: GameType): string {
   switch (gameType) {
     case 'none':

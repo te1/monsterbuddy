@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-  import type { GenericMonster } from '~/services/types';
   import { getAttackTypeIconUrl } from '~/services/assets';
 
   const props = withDefaults(
