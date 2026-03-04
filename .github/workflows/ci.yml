@@ -31,4 +31,7 @@ jobs:
         run: pnpm run lint
 
       - name: Typecheck
-        run: pnpm run data && pnpm run typecheck
+        run: pnpm run typecheck
+
+      - name: Build data
+        run: pnpm run data
