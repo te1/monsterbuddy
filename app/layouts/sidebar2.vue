@@ -68,7 +68,7 @@
 
   const tabs = [
     { label: 'Recent', slot: 'recent' },
-    { label: 'Bookmarked', slot: 'pinned' },
+    { label: 'Bookmarks', slot: 'pinned' },
   ];
 
   const sidebarComponent = computed(() => {

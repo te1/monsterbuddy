@@ -23,9 +23,17 @@ export default defineAppConfig({
       },
     },
 
+    page: {
+      slots: {
+        root: 'lg:grid-cols-12 lg:gap-16',
+        center: 'lg:col-span-9',
+        right: 'lg:col-span-3',
+      },
+    },
+
     pageAside: {
       slots: {
-        root: 'pt-3 lg:ps-8 lg:pe-0',
+        root: 'pt-3 lg:pe-0',
       },
     },
 
@@ -38,9 +46,40 @@ export default defineAppConfig({
       },
     },
 
+    button: {
+      variants: {
+        variant: {
+          soft2:
+            'bg-default/50 hover:bg-default focus-visible:bg-default active:bg-default disabled:bg-default/50 aria-disabled:bg-default/50',
+        },
+      },
+    },
+
+    formField: {
+      slots: {
+        root: 'place-items-baseline',
+        container: 'w-full overflow-hidden',
+        labelWrapper: 'w-14',
+      },
+    },
+
+    input: {
+      variants: {
+        variant: {
+          soft2: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
+        },
+      },
+    },
+
     select: {
       slots: {
         base: 'select-none',
+        trailingIcon: 'transition-transform duration-200 group-data-[state=open]:rotate-180',
+      },
+      variants: {
+        variant: {
+          soft2: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
+        },
       },
     },
 

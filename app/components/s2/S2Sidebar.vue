@@ -156,18 +156,14 @@
     :ui="{ list: 'gap-4', trigger: 'px-0 py-0', content: 'xl:mt- mt-1' }"
   >
     <template #content>
-      <div class="flex flex-col gap-2 px-1">
-        <UFormField label="Info" orientation="horizontal" :ui="{ container: 'w-full' }">
+      <div class="flex flex-col gap-1 px-1">
+        <UFormField label="Info" orientation="horizontal">
           <USelect
             :modelValue="props.store.mode"
             color="neutral"
-            variant="soft"
+            variant="soft2"
             :items="modes"
             class="w-full"
-            :ui="{
-              base: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
-              trailingIcon: 'transition-transform duration-200 group-data-[state=open]:rotate-180',
-            }"
             @update:model-value="setMode"
           />
         </UFormField>
@@ -177,13 +173,11 @@
             ref="inputName"
             :modelValue="props.store.nameFilter"
             color="neutral"
-            variant="soft"
+            variant="soft2"
             icon="i-lucide-search"
             placeholder="Search..."
-            :ui="{
-              base: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
-              trailing: 'pe-1',
-            }"
+            :ui="{ trailing: 'pe-1' }"
+            class="w-full"
             @update:model-value="setNameFilter"
           >
             <template v-if="props.store.nameFilter?.length" #trailing>
@@ -201,36 +195,28 @@
           </UInput>
         </UFormField>
 
-        <UFormField label="Sort By" orientation="horizontal" :ui="{ container: 'w-full' }">
+        <UFormField label="Sort By" orientation="horizontal">
           <USelect
             :modelValue="props.store.sortKey"
             color="neutral"
-            variant="soft"
+            variant="soft2"
             :items="sortConfig"
             class="w-full"
-            :ui="{
-              base: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
-              trailingIcon: 'transition-transform duration-200 group-data-[state=open]:rotate-180',
-            }"
             @update:model-value="setSortKey"
           />
         </UFormField>
 
-        <UFormField label="Order" orientation="horizontal" :ui="{ container: 'w-full' }">
+        <UFormField label="Order" orientation="horizontal">
           <AppSortOrderToggle :value="props.store.sortOrder" @update="setSortOrder" />
         </UFormField>
 
-        <UFormField label="Genus" orientation="horizontal" :ui="{ container: 'w-full' }">
+        <UFormField label="Genus" orientation="horizontal">
           <USelect
             :modelValue="props.store.genusFilter ?? 'ALL'"
             color="neutral"
-            variant="soft"
+            variant="soft2"
             :items="genusItems"
             class="w-full"
-            :ui="{
-              base: 'bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
-              trailingIcon: 'transition-transform duration-200 group-data-[state=open]:rotate-180',
-            }"
             @update:model-value="setGenusFilter"
           />
         </UFormField>

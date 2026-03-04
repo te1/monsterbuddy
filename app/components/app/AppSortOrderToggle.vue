@@ -15,13 +15,13 @@
 <template>
   <UButton
     color="neutral"
-    variant="soft"
+    variant="soft2"
     class="w-full"
-    :ui="{
-      base: 'bg-default/50 hover:bg-default focus-visible:bg-default active:bg-default disabled:bg-default/50 aria-disabled:bg-default/50',
-    }"
-    :icon="value === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow'"
+    :trailingIcon="
+      value === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow'
+    "
     :label="value === 'asc' ? 'Ascending' : 'Descending'"
+    :ui="{ base: 'justify-between' }"
     @click="toggle"
   />
 </template>
