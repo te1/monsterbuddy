@@ -46,6 +46,14 @@ export default defineAppConfig({
       },
     },
 
+    tabs: {
+      slots: {
+        list: 'gap-4',
+        trigger: 'px-0 py-0',
+        content: 'mt-1',
+      },
+    },
+
     button: {
       variants: {
         variant: {

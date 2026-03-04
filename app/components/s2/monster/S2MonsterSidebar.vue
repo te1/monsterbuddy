@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-  import useMonsterFilter from '~/stores/2/monsterFilter';
   import type { Modes } from '../S2Sidebar.vue';
+  import useMonsterFilter from '~/stores/2/monsterFilter';
 
   const monsterFilter = useMonsterFilter();
 

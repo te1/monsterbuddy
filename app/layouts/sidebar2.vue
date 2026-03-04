@@ -86,12 +86,7 @@
         <UPageAside class="scrollbar-hide" :ui="{ container: 'flex flex-col gap-4' }">
           <component :is="sidebarComponent" v-if="sidebarComponent" />
 
-          <UTabs
-            color="neutral"
-            variant="link"
-            :items="tabs"
-            :ui="{ list: 'gap-4', trigger: 'px-0 py-0', content: 'mt-1 xl:mt-2' }"
-          >
+          <UTabs color="neutral" variant="link" :items="tabs">
             <template #recent>
               <div class="flex flex-col gap-1 text-muted xl:gap-2">
                 <ClientOnly>
