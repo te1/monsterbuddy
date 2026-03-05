@@ -133,7 +133,7 @@ const useHistoryStore = defineStore('s2/history', () => {
 
   // -- actions
   function addRecentMonster(slug: string) {
-    const maxRecentItems = 25;
+    const maxRecentItems = 50;
 
     pull(recentMonsterSlugs.value, [slug]);
 

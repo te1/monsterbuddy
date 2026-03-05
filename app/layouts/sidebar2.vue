@@ -41,7 +41,7 @@
         : history.pinnedMonsters;
   });
 
-  const maxItems = 15;
+  const maxItems = 12;
   const topRecent = computed(() => take(recent.value, maxItems));
   const topPinned = computed(() => take(pinned.value, maxItems));
 

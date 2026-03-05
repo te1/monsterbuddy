@@ -3,8 +3,6 @@
 
   const props = defineProps<{ store: FilterStore }>();
 
-  const inputName = useTemplateRef('inputName');
-
   const genusItems = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
@@ -14,16 +12,6 @@
       })),
     ];
   });
-
-  function setNameFilter(value: string) {
-    props.store.$patch({ nameFilter: value });
-  }
-
-  function clearNameFilter() {
-    props.store.$patch({ nameFilter: undefined });
-
-    inputName.value?.inputRef?.focus();
-  }
 
   function setGenusFilter(value: string) {
     setFilter('genusFilter', value, 'location');
@@ -50,30 +38,10 @@
 <template>
   <div class="flex flex-col gap-1">
     <UFormField label="Name" orientation="horizontal">
-      <UInput
-        ref="inputName"
+      <AppInputSearch
         :modelValue="props.store.nameFilter"
-        color="neutral"
-        variant="soft2"
-        icon="i-lucide-search"
-        placeholder="Search..."
-        :ui="{ trailing: 'pe-1' }"
-        class="w-full"
-        @update:model-value="setNameFilter"
-      >
-        <template v-if="props.store.nameFilter?.length" #trailing>
-          <UTooltip text="Clear filter">
-            <UButton
-              color="neutral"
-              variant="link"
-              size="sm"
-              icon="i-lucide-x"
-              aria-label="Clear filter"
-              @click="clearNameFilter"
-            />
-          </UTooltip>
-        </template>
-      </UInput>
+        @update:modelValue="store.$patch({ nameFilter: $event })"
+      />
     </UFormField>
 
     <UFormField label="Genus" orientation="horizontal">
@@ -83,7 +51,7 @@
         variant="soft2"
         :items="genusItems"
         class="w-full"
-        @update:model-value="setGenusFilter"
+        @update:modelValue="setGenusFilter"
       />
     </UFormField>
   </div>

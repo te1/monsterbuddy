@@ -113,6 +113,13 @@
   <UTabs color="neutral" variant="link" :items="tabs">
     <template #view>
       <div class="flex flex-col gap-3">
+        <UFormField label="Name" orientation="horizontal">
+          <AppInputSearch
+            :modelValue="filter.nameFilter"
+            @update:modelValue="filter.$patch({ nameFilter: $event })"
+          />
+        </UFormField>
+
         <UFormField label="List" orientation="horizontal">
           <div class="flex flex-col gap-1">
             <ClientOnly>
@@ -145,7 +152,7 @@
             variant="soft2"
             :items="modes"
             class="w-full"
-            @update:model-value="filter.mode = $event"
+            @update:modelValue="filter.mode = $event"
           />
         </UFormField>
 
@@ -160,7 +167,7 @@
             variant="soft2"
             :items="sortConfig"
             class="w-full"
-            @update:model-value="setSortKey"
+            @update:modelValue="setSortKey"
           />
           <AppSortOrderToggle :value="filter.sortOrder" @update="filter.sortOrder = $event" />
         </UFormField>
