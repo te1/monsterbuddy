@@ -286,7 +286,14 @@
         />
       </UFormField>
 
-      <!-- TODO Deviants -->
+      <UFormField v-if="showDeviantsFilter" label="Deviants" orientation="horizontal">
+        <AppFilterToggle
+          :modelValue="props.store.deviantsFilter"
+          :texts="['Include', 'Only Deviants', 'Exclude']"
+          class="w-full"
+          @update:modelValue="setFilter('deviantsFilter', $event)"
+        />
+      </UFormField>
     </div>
 
     <div>
