@@ -277,7 +277,15 @@
         />
       </UFormField>
 
-      <!-- TODO Hatchable -->
+      <UFormField v-if="showHatchableFilter" label="Hatchable" orientation="horizontal">
+        <AppFilterToggle
+          :modelValue="props.store.hatchableFilter"
+          :texts="['Include', 'Only Hatchable', 'Exclude']"
+          class="w-full"
+          @update:modelValue="setFilter('hatchableFilter', $event)"
+        />
+      </UFormField>
+
       <!-- TODO Deviants -->
     </div>
 
