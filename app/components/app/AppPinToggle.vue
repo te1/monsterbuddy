@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   const props = withDefaults(
     defineProps<{
-      pinned: boolean;
       subject?: string;
     }>(),
     {
@@ -9,27 +8,23 @@
     }
   );
 
-  const emit = defineEmits<{
-    (e: 'toggle', pinned: boolean): void;
-  }>();
+  const pinned = defineModel<boolean>({
+    required: true,
+  });
 
   const title = computed(() => {
     if (props.subject) {
-      if (props.pinned) {
+      if (pinned.value) {
         return `Remove ${props.subject} bookmark`;
       }
       return `Bookmark ${props.subject}`;
     }
 
-    if (props.pinned) {
+    if (pinned.value) {
       return 'Remove bookmark';
     }
     return 'Bookmark';
   });
-
-  function togglePin() {
-    emit('toggle', !props.pinned);
-  }
 </script>
 
 <template>
@@ -39,7 +34,7 @@
         :color="pinned ? 'primary' : 'neutral'"
         variant="link"
         icon="i-lucide-bookmark"
-        @click="togglePin"
+        @click="pinned = !pinned"
       />
     </UTooltip>
   </ClientOnly>

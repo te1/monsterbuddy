@@ -164,7 +164,7 @@
             class="w-full"
             @update:modelValue="setSortKey"
           />
-          <AppSortOrderToggle :value="filter.sortOrder" @update="filter.sortOrder = $event" />
+          <AppSortOrderToggle v-model="filter.sortOrder" />
         </UFormField>
 
         <UFormField label=" " orientation="horizontal"></UFormField>

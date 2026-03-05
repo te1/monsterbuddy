@@ -102,7 +102,11 @@
     </div>
 
     <div class="absolute top-0 right-0 pt-1 pr-3">
-      <AppPinToggle :pinned="isPinned" subject="monster attack pattern" @toggle="togglePin" />
+      <AppPinToggle
+        :modelValue="isPinned"
+        subject="monster attack pattern"
+        @update:modelValue="togglePin"
+      />
     </div>
   </section>
 </template>

@@ -1,21 +1,19 @@
 <script lang="ts" setup>
   const props = withDefaults(
     defineProps<{
-      modelValue?: boolean;
       texts?: string[];
     }>(),
     {
-      modelValue: undefined,
       texts: undefined,
     }
   );
 
-  const emit = defineEmits<{
-    'update:modelValue': [value: boolean | undefined];
-  }>();
+  const model = defineModel<boolean | undefined>({
+    default: undefined,
+  });
 
   const icon = computed(() => {
-    switch (props.modelValue) {
+    switch (model.value) {
       case undefined:
         return 'i-lucide-asterisk';
 
@@ -33,7 +31,7 @@
   const label = computed(() => {
     const texts = props.texts ?? [];
 
-    switch (props.modelValue) {
+    switch (model.value) {
       case undefined:
         return texts[0] ?? 'All';
 
@@ -50,10 +48,7 @@
 
   function toggle() {
     // cycle undefined -> true -> false -> undefined -> ...
-    emit(
-      'update:modelValue',
-      props.modelValue === undefined ? true : props.modelValue === true ? false : undefined
-    );
+    model.value = model.value === undefined ? true : model.value === true ? false : undefined;
   }
 </script>
 

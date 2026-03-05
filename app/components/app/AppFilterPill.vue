@@ -12,7 +12,7 @@
     }
   );
 
-  defineEmits<{
+  const emit = defineEmits<{
     remove: [];
   }>();
 
@@ -51,7 +51,7 @@
         v-if="showRemove"
         class="transition-colors-slow-interactive m-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-neutral-300 text-xs text-neutral-600 hover:text-neutral-900 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-100"
         title="Remove filter"
-        @click.prevent="$emit('remove')"
+        @click.prevent="emit('remove')"
       >
         <UIcon name="i-lucide-x" />
       </div>

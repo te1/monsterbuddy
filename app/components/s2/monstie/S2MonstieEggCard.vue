@@ -31,7 +31,7 @@
     </div>
 
     <div class="absolute top-0 right-0 pt-3 pr-3">
-      <AppPinToggle :pinned="isPinned" subject="egg" @toggle="togglePin" />
+      <AppPinToggle :modelValue="isPinned" subject="egg" @update:modelValue="togglePin" />
     </div>
   </section>
 </template>

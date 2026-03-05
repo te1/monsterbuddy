@@ -1,20 +1,16 @@
 <script lang="ts" setup>
-  const props = defineProps<{
-    value: SortOrder;
-  }>();
-
-  const emit = defineEmits<{
-    update: [value: SortOrder];
-  }>();
+  const model = defineModel<SortOrder>({
+    required: true,
+  });
 
   const icon = computed(() =>
-    props.value === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow'
+    model.value === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow'
   );
 
-  const label = computed(() => (props.value === 'asc' ? 'Ascending' : 'Descending'));
+  const label = computed(() => (model.value === 'asc' ? 'Ascending' : 'Descending'));
 
   function toggle() {
-    emit('update', props.value === 'asc' ? 'desc' : 'asc');
+    model.value = model.value === 'asc' ? 'desc' : 'asc';
   }
 </script>
 
