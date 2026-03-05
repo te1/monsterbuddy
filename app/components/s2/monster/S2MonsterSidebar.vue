@@ -19,12 +19,7 @@
     }
   }
 
-  type Modes = {
-    value: Mode;
-    label: string;
-  }[];
-
-  const modes: Modes = [
+  const modes: { value: Mode; label: string }[] = [
     { value: 'location', label: 'Location' },
     { value: 'location-eldersLair', label: "Elder's Lair" },
     { value: 'combat', label: 'Attack Pattern' },
@@ -177,7 +172,13 @@
     </template>
 
     <template #filter>
-      <S2MonsterFilter :store="filter" :modes="modes" />
+      <S2MonsterFilter
+        :store="filter"
+        showHabitatFilter
+        showCatavanFilter
+        showEldersLairFilter
+        showHatchableFilter
+      />
     </template>
   </UTabs>
 </template>
