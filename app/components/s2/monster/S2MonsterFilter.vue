@@ -167,115 +167,132 @@
 </script>
 
 <template>
-  <div class="flex flex-col gap-1">
-    <UFormField label="Name" orientation="horizontal">
-      <AppInputSearch
-        :modelValue="props.store.nameFilter"
-        @update:modelValue="store.$patch({ nameFilter: $event })"
-      />
-    </UFormField>
+  <div class="flex flex-col gap-3">
+    <div>
+      <UFormField label="Name" orientation="horizontal">
+        <AppInputSearch
+          :modelValue="props.store.nameFilter"
+          @update:modelValue="store.$patch({ nameFilter: $event })"
+        />
+      </UFormField>
+    </div>
 
-    <UFormField v-if="showEggColorFilter" label="Egg Color" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.eggColorsFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="eggColors"
-        class="w-full"
-        @update:modelValue="setFilter('eggColorsFilter', $event)"
-      />
-    </UFormField>
+    <div class="flex flex-col gap-1">
+      <UFormField v-if="showEggColorFilter" label="Egg Color" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.eggColorsFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="eggColors"
+          class="w-full"
+          @update:modelValue="setFilter('eggColorsFilter', $event)"
+        />
+      </UFormField>
 
-    <UFormField label="Genus" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.genusFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="genera"
-        class="w-full"
-        @update:modelValue="setGenusFilter"
-      />
-    </UFormField>
+      <UFormField label="Genus" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.genusFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="genera"
+          class="w-full"
+          @update:modelValue="setGenusFilter"
+        />
+      </UFormField>
 
-    <UFormField v-if="showHabitatFilter" label="Habitat" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.habitatFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="habitats"
-        class="w-full"
-        @update:modelValue="setHabitatFilter"
-      />
-    </UFormField>
+      <UFormField v-if="showHabitatFilter" label="Habitat" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.habitatFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="habitats"
+          class="w-full"
+          @update:modelValue="setHabitatFilter"
+        />
+      </UFormField>
 
-    <UFormField v-if="showCoopQuestFilter" label="Co-Op Quest" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.coopQuestFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="coopQuests"
-        class="w-full"
-        @update:modelValue="setCoopQuestFilter"
-      />
-    </UFormField>
+      <UFormField v-if="showCoopQuestFilter" label="Co-Op Quest" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.coopQuestFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="coopQuests"
+          class="w-full"
+          @update:modelValue="setCoopQuestFilter"
+        />
+      </UFormField>
 
-    <UFormField v-if="showCatavanFilter" label="Catavan Stand" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.catavanFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="catavanStands"
-        class="w-full"
-        @update:modelValue="setCatavanFilter"
-      />
-    </UFormField>
+      <UFormField v-if="showCatavanFilter" label="Catavan Stand" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.catavanFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="catavanStands"
+          class="w-full"
+          @update:modelValue="setCatavanFilter"
+        />
+      </UFormField>
 
-    <UFormField v-if="showEldersLairFilter" label="Elder's Lair" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.eldersLairFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="eldersLairFloors"
-        class="w-full"
-        @update:modelValue="setEldersLairFilter"
-      />
-    </UFormField>
+      <UFormField v-if="showEldersLairFilter" label="Elder's Lair" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.eldersLairFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="eldersLairFloors"
+          class="w-full"
+          @update:modelValue="setEldersLairFilter"
+        />
+      </UFormField>
 
-    <UFormField v-if="showAttackTypeFilter" label="Attack Type" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.attackTypeFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="attackTypes"
-        class="w-full"
-        @update:modelValue="setFilter('attackTypeFilter', $event)"
-      />
-    </UFormField>
+      <UFormField v-if="showAttackTypeFilter" label="Attack Type" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.attackTypeFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="attackTypes"
+          class="w-full"
+          @update:modelValue="setFilter('attackTypeFilter', $event)"
+        />
+      </UFormField>
 
-    <UFormField v-if="showAttackElementFilter" label="Attack Element" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.attackElementFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="attackElements"
-        class="w-full"
-        @update:modelValue="setFilter('attackElementFilter', $event)"
-      />
-    </UFormField>
+      <UFormField v-if="showAttackElementFilter" label="Attack Element" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.attackElementFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="attackElements"
+          class="w-full"
+          @update:modelValue="setFilter('attackElementFilter', $event)"
+        />
+      </UFormField>
 
-    <UFormField v-if="showRidingActionFilter" label="Riding Action" orientation="horizontal">
-      <USelect
-        :modelValue="props.store.ridingActionFilter ?? 'ALL'"
-        color="neutral"
-        variant="soft2"
-        :items="ridingActions"
-        class="w-full"
-        @update:modelValue="setRidingActionFilter"
-      />
-    </UFormField>
+      <UFormField v-if="showRidingActionFilter" label="Riding Action" orientation="horizontal">
+        <USelect
+          :modelValue="props.store.ridingActionFilter ?? 'ALL'"
+          color="neutral"
+          variant="soft2"
+          :items="ridingActions"
+          class="w-full"
+          @update:modelValue="setRidingActionFilter"
+        />
+      </UFormField>
 
-    <!-- TODO Hatchable -->
-    <!-- TODO Deviants -->
-    <!-- TODO Result Count? -->
+      <!-- TODO Hatchable -->
+      <!-- TODO Deviants -->
+    </div>
+
+    <div>
+      <UFormField :label="`${store.resultCount} Results`" orientation="horizontal">
+        <UButton
+          color="neutral"
+          variant="soft2"
+          class="w-full"
+          trailingIcon="i-lucide-rotate-ccw"
+          label="Reset"
+          :ui="{ base: 'justify-between' }"
+          @click="props.store.resetFilter"
+        />
+      </UFormField>
+    </div>
   </div>
 </template>

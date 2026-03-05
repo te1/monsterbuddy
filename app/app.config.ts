@@ -77,7 +77,8 @@ export default defineAppConfig({
       slots: {
         root: 'place-items-baseline',
         container: 'w-full overflow-hidden',
-        labelWrapper: 'w-14',
+        labelWrapper: 'w-14 xl:w-24',
+        label: 'truncate',
       },
     },
 
