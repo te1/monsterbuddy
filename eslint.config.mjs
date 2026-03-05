@@ -6,6 +6,7 @@ export default withNuxt(
   {
     rules: {
       'vue/attribute-hyphenation': ['error', 'never'],
+      'vue/v-on-event-hyphenation': ['error', 'never'],
     },
   },
   eslintConfigPrettier
