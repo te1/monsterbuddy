@@ -66,9 +66,9 @@ export default defineAppConfig({
       variants: {
         variant: {
           soft2:
-            'text-default bg-default/50 hover:bg-default active:bg-default focus:outline-none focus-visible:bg-default disabled:bg-default/50 aria-disabled:bg-default/50',
+            'text-default bg-default/50 hover:bg-default active:bg-accented/50 focus:outline-none focus-visible:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 select-none',
           subtle2:
-            'ring ring-inset ring-inverted/50 text-default bg-default/50 hover:bg-default active:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted',
+            'ring ring-inset ring-inverted/50 text-default bg-default/50 hover:bg-default active:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted select-none',
         },
       },
     },
@@ -78,7 +78,7 @@ export default defineAppConfig({
         root: 'place-items-baseline',
         container: 'w-full overflow-hidden',
         labelWrapper: 'w-14 xl:w-24',
-        label: 'truncate',
+        label: 'truncate select-none',
       },
     },
 
