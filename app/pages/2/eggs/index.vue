@@ -1,8 +1,14 @@
 <script lang="ts" setup>
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
+  import S2EggSidebar from '~/components/s2/egg/S2EggSidebar.vue';
   import useHistoryStore from '~/stores/2/historyStore';
   import useEggFilter from '~/stores/2/eggFilter';
+  import useEggDisplay, { type Display } from '~/stores/2/eggDisplay';
   import { getGenera, monsties } from '~/services/2/data';
+
+  definePageMeta({
+    sidebarComponent: S2EggSidebar,
+  });
 
   useSeoMeta({
     title: `Egg List For ${gameTypeToFullLabel('mhst2')}`,
@@ -15,6 +21,7 @@
   const history = useHistoryStore();
   const eggFilter = useEggFilter();
   provide(filterStoreKey, eggFilter);
+  const display = useEggDisplay();
 
   const genera = computed(() => {
     return getGenera(monsties);
@@ -22,21 +29,10 @@
 
   const showEggFinder = ref(false);
 
-  type Display = 'default' | 'recent' | 'pinned';
-  const display = ref<Display>('default');
-
-  const mode = computed(() => {
-    if (display.value === 'pinned') {
-      return 'compact';
-    }
-
-    return eggFilter.mode;
-  });
-
   const showFilter = ref(false);
 
   const showRecentOrPinned = computed(() => {
-    return display.value === 'recent' || display.value === 'pinned';
+    return display.current === 'recent' || display.current === 'pinned';
   });
 
   const showActiveFilters = computed(() => {
@@ -48,11 +44,11 @@
   });
 
   const groupedMonsters = computed(() => {
-    if (display.value === 'recent') {
+    if (display.current === 'recent') {
       return { all: history.recentMonsties };
     }
 
-    if (display.value === 'pinned') {
+    if (display.current === 'pinned') {
       return { all: history.pinnedEggs };
     }
 
@@ -68,40 +64,19 @@
       return 'Egg Finder';
     }
 
-    if (display.value === 'recent') {
+    if (display.current === 'recent') {
       return 'Recent Eggs';
     }
 
-    if (display.value === 'pinned') {
+    if (display.current === 'pinned') {
       return 'Bookmarked Eggs';
     }
 
     return null;
   });
 
-  const displays = computed(() => {
-    const results: Display[] = ['default'];
-
-    if (history.hasRecentMonsties) {
-      results.push('recent');
-    }
-
-    if (history.hasPinnedEggs) {
-      results.push('pinned');
-    }
-
-    return results;
-  });
-
-  const nextDisplay = computed(() => {
-    const currentIndex = displays.value.indexOf(display.value);
-    const nextIndex = (currentIndex + 1) % displays.value.length;
-
-    return displays.value[nextIndex] ?? 'default';
-  });
-
   function toggleDisplay() {
-    display.value = nextDisplay.value;
+    display.current = display.next;
     showEggFinder.value = false;
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -115,8 +90,8 @@
         return;
       }
 
-      if (displays.value.includes(newDisplay as Display)) {
-        display.value = newDisplay as Display;
+      if (display.all.includes(newDisplay as Display)) {
+        display.current = newDisplay as Display;
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -125,11 +100,11 @@
   );
 
   const fabDisplayVisible = computed(() => {
-    return !showFilter.value && displays.value.length > 1;
+    return !showFilter.value && display.all.length > 1;
   });
 
   const fabDisplayTitle = computed(() => {
-    switch (nextDisplay.value) {
+    switch (display.next) {
       case 'default':
         return 'Show all eggs';
 
@@ -145,7 +120,7 @@
   });
 
   const fabDisplayIcon = computed(() => {
-    switch (nextDisplay.value) {
+    switch (display.next) {
       case 'default':
         return 'i-lucide-x';
 
@@ -182,7 +157,7 @@
 
   function toggleEggFinder() {
     showEggFinder.value = !showEggFinder.value;
-    display.value = 'default';
+    display.current = 'default';
 
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -279,7 +254,7 @@
           </div>
 
           <div
-            v-if="mode === 'compact'"
+            v-if="eggFilter.mode === 'compact'"
             class="mt-1 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
           >
             <NuxtLink
@@ -299,7 +274,7 @@
             >
               <S2EggListItem
                 :monster="monster"
-                :mode="mode"
+                :mode="eggFilter.mode"
                 class="box box-link overflow-hidden px-1"
               />
             </NuxtLink>
