@@ -189,7 +189,13 @@
 
       <ClientOnly>
         <UTooltip v-if="fabDisplayVisible" :text="fabDisplayTitle">
-          <UButton color="neutral" variant="soft" :icon="fabDisplayIcon" @click="toggleDisplay" />
+          <UButton
+            color="neutral"
+            variant="soft"
+            :icon="fabDisplayIcon"
+            class="absolute top-[275px] z-10"
+            @click="toggleDisplay"
+          />
         </UTooltip>
 
         <UTooltip v-if="fabEggFinderVisible" :text="fabEggFinderTitle">
@@ -197,6 +203,7 @@
             color="neutral"
             variant="soft"
             :icon="fabEggFinderIcon"
+            class="absolute top-[275px] left-[60px] z-10"
             @click="toggleEggFinder"
           />
         </UTooltip>
