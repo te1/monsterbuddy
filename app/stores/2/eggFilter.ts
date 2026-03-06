@@ -1,4 +1,4 @@
-import { makeMonsterFilterStore, type Mode } from './base';
+import { makeMonsterFilterStore, type Mode } from './baseMonsterFilter';
 import { monsties } from '~/services/2/data';
 
 const initial = {

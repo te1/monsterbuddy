@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
-  import type { Mode } from '~/stores/2/base';
+  import type { Mode } from '~/stores/2/baseMonsterFilter';
   import { take } from 'es-toolkit/array';
   import { coopQuests as coopQuestsData, getMonsterLocations } from '~/services/2/data';
   import {

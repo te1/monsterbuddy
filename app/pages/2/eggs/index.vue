@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { filterStoreKey } from '~/stores/2/base';
+  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
   import useEggFilter from '~/stores/2/eggFilter';
   import { getGenera, monsties } from '~/services/2/data';

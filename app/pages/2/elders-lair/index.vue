@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { filterStoreKey } from '~/stores/2/base';
+  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useEldersLairFilter from '~/stores/2/eldersLairFilter';
 
   useSeoMeta({

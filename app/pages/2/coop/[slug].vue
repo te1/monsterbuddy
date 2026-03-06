@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { MonsterLocation } from '~/services/2/types';
-  import type { Mode } from '~/stores/2/base';
+  import type { Mode } from '~/stores/2/baseMonsterFilter';
   import { coopQuestsBySlug, getMonstersByCoopQuest } from '~/services/2/data';
   import { getCoopQuestSeo } from '~/services/2/seo';
   import { formatCoopQuest } from '~/services/2/presentation';

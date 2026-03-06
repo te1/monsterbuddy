@@ -1,7 +1,13 @@
 <script lang="ts" setup>
-  import { filterStoreKey } from '~/stores/2/base';
+  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
+  import S2MonstieSidebar from '~/components/s2/monstie/S2MonstieSidebar.vue';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonstieFilter from '~/stores/2/monstieFilter';
+  import useMonstieDisplay, { type Display } from '~/stores/2/monstieDisplay';
+
+  definePageMeta({
+    sidebarComponent: S2MonstieSidebar,
+  });
 
   useSeoMeta({
     title: `Monstie List For ${gameTypeToFullLabel('mhst2')}`,
@@ -14,17 +20,7 @@
   const history = useHistoryStore();
   const monstieFilter = useMonstieFilter();
   provide(filterStoreKey, monstieFilter);
-
-  type Display = 'default' | 'recent' | 'pinned';
-  const display = ref<Display>('default');
-
-  const mode = computed(() => {
-    if (display.value === 'pinned') {
-      return 'combat';
-    }
-
-    return monstieFilter.mode;
-  });
+  const display = useMonstieDisplay();
 
   const showFilter = ref(false); // TODO?
 
@@ -35,15 +31,15 @@
   });
 
   const showRecentOrPinned = computed(() => {
-    return display.value === 'recent' || display.value === 'pinned';
+    return display.current === 'recent' || display.current === 'pinned';
   });
 
   const groupedMonsters = computed(() => {
-    if (display.value === 'recent') {
+    if (display.current === 'recent') {
       return { all: history.recentMonsties };
     }
 
-    if (display.value === 'pinned') {
+    if (display.current === 'pinned') {
       return { all: history.pinnedMonsties };
     }
 
@@ -55,40 +51,19 @@
       return 'View Options';
     }
 
-    if (display.value === 'recent') {
+    if (display.current === 'recent') {
       return 'Recent Monsties';
     }
 
-    if (display.value === 'pinned') {
+    if (display.current === 'pinned') {
       return 'Bookmarked Monsties';
     }
 
     return null;
   });
 
-  const displays = computed(() => {
-    const results: Display[] = ['default'];
-
-    if (history.hasRecentMonsties) {
-      results.push('recent');
-    }
-
-    if (history.hasPinnedMonsties) {
-      results.push('pinned');
-    }
-
-    return results;
-  });
-
-  const nextDisplay = computed(() => {
-    const currentIndex = displays.value.indexOf(display.value);
-    const nextIndex = (currentIndex + 1) % displays.value.length;
-
-    return displays.value[nextIndex] ?? 'default';
-  });
-
   function toggleDisplay() {
-    display.value = nextDisplay.value;
+    display.current = display.next;
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -101,8 +76,8 @@
         return;
       }
 
-      if (displays.value.includes(newDisplay as Display)) {
-        display.value = newDisplay as Display;
+      if (display.all.includes(newDisplay as Display)) {
+        display.current = newDisplay as Display;
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -111,11 +86,11 @@
   );
 
   const fabDisplayVisible = computed(() => {
-    return !showFilter.value && displays.value.length > 1;
+    return !showFilter.value && display.all.length > 1;
   });
 
   const fabDisplayTitle = computed(() => {
-    switch (nextDisplay.value) {
+    switch (display.next) {
       case 'default':
         return 'Show all monsters';
 
@@ -131,7 +106,7 @@
   });
 
   const fabDisplayIcon = computed(() => {
-    switch (nextDisplay.value) {
+    switch (display.next) {
       case 'default':
         return 'i-lucide-x';
 
@@ -166,7 +141,13 @@
 
       <ClientOnly>
         <UTooltip v-if="fabDisplayVisible" :text="fabDisplayTitle">
-          <UButton color="neutral" variant="soft" :icon="fabDisplayIcon" @click="toggleDisplay" />
+          <UButton
+            color="neutral"
+            variant="soft"
+            :icon="fabDisplayIcon"
+            class="absolute z-10"
+            @click="toggleDisplay"
+          />
         </UTooltip>
       </ClientOnly>
 
@@ -219,7 +200,7 @@
             >
               <S2MonstieListItem
                 :monster="monster"
-                :mode="mode"
+                :mode="monstieFilter.mode"
                 class="box box-link overflow-hidden px-1"
               />
             </NuxtLink>

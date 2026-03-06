@@ -1,10 +1,10 @@
 <script lang="ts" setup>
   import { allElements } from '~/services/2/data';
-  import type { FilterKey, FilterStore, Mode } from '~/stores/2/base';
+  import type { FilterKey, FilterStore, Mode } from '~/stores/2/baseMonsterFilter';
 
   const props = withDefaults(
     defineProps<{
-      store: FilterStore;
+      filter: FilterStore;
       showEggColorFilter?: boolean;
       showHabitatFilter?: boolean;
       showCoopQuestFilter?: boolean;
@@ -31,19 +31,19 @@
   );
 
   function setFilter<T>(filterKey: FilterKey, value: T, mode?: Mode) {
-    if (value === props.store[filterKey]) {
+    if (value === props.filter[filterKey]) {
       return;
     }
 
-    props.store.$patch({
+    props.filter.$patch({
       [filterKey]: value === 'ALL' ? undefined : value,
       mode:
         value != null &&
         mode != null &&
-        props.store.mode !== 'compact' &&
-        props.store.autoSwitchModes.includes(mode)
+        props.filter.mode !== 'compact' &&
+        props.filter.autoSwitchModes.includes(mode)
           ? mode
-          : props.store.mode,
+          : props.filter.mode,
     });
   }
 
@@ -62,7 +62,7 @@
   const genera = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
-      ...props.store.allGenera.map((genus) => ({
+      ...props.filter.allGenera.map((genus) => ({
         label: genus,
         value: genus,
       })),
@@ -76,7 +76,7 @@
   const habitats = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
-      ...props.store.allHabitats.map((habitat) => ({
+      ...props.filter.allHabitats.map((habitat) => ({
         label: habitat,
         value: habitat,
       })),
@@ -90,7 +90,7 @@
   const coopQuests = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
-      ...props.store.allCoopQuests.map((coopQuest) => ({
+      ...props.filter.allCoopQuests.map((coopQuest) => ({
         label: coopQuest.name,
         value: coopQuest.name,
       })),
@@ -104,7 +104,7 @@
   const catavanStands = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
-      ...props.store.allCatavanStands.map((catavanStand) => ({
+      ...props.filter.allCatavanStands.map((catavanStand) => ({
         label: catavanStand,
         value: catavanStand,
       })),
@@ -118,7 +118,7 @@
   const eldersLairFloors = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
-      ...props.store.allEldersLairFloors.map((floor) => ({
+      ...props.filter.allEldersLairFloors.map((floor) => ({
         label: floor,
         value: floor,
       })),
@@ -154,7 +154,7 @@
   const ridingActions = computed(() => {
     return [
       { label: 'All', value: 'ALL' },
-      ...props.store.allRidingActions.map((ridingAction) => ({
+      ...props.filter.allRidingActions.map((ridingAction) => ({
         label: ridingAction,
         value: ridingAction,
       })),
@@ -171,8 +171,8 @@
     <div>
       <UFormField label="Name" orientation="horizontal">
         <AppInputSearch
-          :modelValue="props.store.nameFilter"
-          @update:modelValue="store.$patch({ nameFilter: $event })"
+          :modelValue="props.filter.nameFilter"
+          @update:modelValue="filter.$patch({ nameFilter: $event })"
         />
       </UFormField>
     </div>
@@ -180,7 +180,7 @@
     <div class="flex flex-col gap-1">
       <UFormField v-if="showEggColorFilter" label="Egg Color" orientation="horizontal">
         <USelect
-          :modelValue="props.store.eggColorsFilter ?? 'ALL'"
+          :modelValue="props.filter.eggColorsFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="eggColors"
@@ -191,7 +191,7 @@
 
       <UFormField label="Genus" orientation="horizontal">
         <USelect
-          :modelValue="props.store.genusFilter ?? 'ALL'"
+          :modelValue="props.filter.genusFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="genera"
@@ -202,7 +202,7 @@
 
       <UFormField v-if="showHabitatFilter" label="Habitat" orientation="horizontal">
         <USelect
-          :modelValue="props.store.habitatFilter ?? 'ALL'"
+          :modelValue="props.filter.habitatFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="habitats"
@@ -213,7 +213,7 @@
 
       <UFormField v-if="showCoopQuestFilter" label="Co-Op Quest" orientation="horizontal">
         <USelect
-          :modelValue="props.store.coopQuestFilter ?? 'ALL'"
+          :modelValue="props.filter.coopQuestFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="coopQuests"
@@ -224,7 +224,7 @@
 
       <UFormField v-if="showCatavanFilter" label="Catavan Stand" orientation="horizontal">
         <USelect
-          :modelValue="props.store.catavanFilter ?? 'ALL'"
+          :modelValue="props.filter.catavanFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="catavanStands"
@@ -235,7 +235,7 @@
 
       <UFormField v-if="showEldersLairFilter" label="Elder's Lair" orientation="horizontal">
         <USelect
-          :modelValue="props.store.eldersLairFilter ?? 'ALL'"
+          :modelValue="props.filter.eldersLairFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="eldersLairFloors"
@@ -246,7 +246,7 @@
 
       <UFormField v-if="showAttackTypeFilter" label="Attack Type" orientation="horizontal">
         <USelect
-          :modelValue="props.store.attackTypeFilter ?? 'ALL'"
+          :modelValue="props.filter.attackTypeFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="attackTypes"
@@ -257,7 +257,7 @@
 
       <UFormField v-if="showAttackElementFilter" label="Attack Element" orientation="horizontal">
         <USelect
-          :modelValue="props.store.attackElementFilter ?? 'ALL'"
+          :modelValue="props.filter.attackElementFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="attackElements"
@@ -268,7 +268,7 @@
 
       <UFormField v-if="showRidingActionFilter" label="Riding Action" orientation="horizontal">
         <USelect
-          :modelValue="props.store.ridingActionFilter ?? 'ALL'"
+          :modelValue="props.filter.ridingActionFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="ridingActions"
@@ -279,7 +279,7 @@
 
       <UFormField v-if="showHatchableFilter" label="Hatchable" orientation="horizontal">
         <AppFilterToggle
-          :modelValue="props.store.hatchableFilter"
+          :modelValue="props.filter.hatchableFilter"
           :texts="['Include', 'Only Hatchable', 'Exclude']"
           class="w-full"
           @update:modelValue="setFilter('hatchableFilter', $event)"
@@ -288,7 +288,7 @@
 
       <UFormField v-if="showDeviantsFilter" label="Deviants" orientation="horizontal">
         <AppFilterToggle
-          :modelValue="props.store.deviantsFilter"
+          :modelValue="props.filter.deviantsFilter"
           :texts="['Include', 'Only Deviants', 'Exclude']"
           class="w-full"
           @update:modelValue="setFilter('deviantsFilter', $event)"
@@ -297,7 +297,7 @@
     </div>
 
     <div>
-      <UFormField :label="`${store.resultCount} Results`" orientation="horizontal">
+      <UFormField :label="`${filter.resultCount} Results`" orientation="horizontal">
         <UButton
           color="neutral"
           variant="soft2"
@@ -305,7 +305,7 @@
           trailingIcon="i-lucide-rotate-ccw"
           label="Reset"
           :ui="{ base: 'justify-between' }"
-          @click="props.store.resetFilter"
+          @click="props.filter.resetFilter"
         />
       </UFormField>
     </div>

@@ -1,5 +1,5 @@
 import type { Monster } from '~/services/2/types';
-import type { Mode } from './base';
+import type { Mode } from './baseMonsterFilter';
 import { pull } from 'es-toolkit/array';
 import { useLocalStorage } from '@vueuse/core';
 import { skipHydrate } from 'pinia';

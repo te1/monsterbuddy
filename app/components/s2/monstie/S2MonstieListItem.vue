@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
-  import type { Mode } from '~/stores/2/base';
+  import type { Mode } from '~/stores/2/baseMonsterFilter';
 
   withDefaults(
     defineProps<{

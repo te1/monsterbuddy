@@ -1,11 +1,10 @@
-import type { FilterStore } from './baseMonsterFilter';
 import { makeMonsterDisplayStore } from './baseMonsterDisplay';
 import useHistoryStore from './historyStore';
 
 export type Display = 'default' | 'recent' | 'pinned';
 
-const useMonsterDisplay = makeMonsterDisplayStore<Display>(
-  's2/monsterDisplay',
+const useMonstieDisplay = makeMonsterDisplayStore<Display>(
+  's2/monstieDisplay',
   'default',
   'default',
   (display: Display): string => {
@@ -25,21 +24,16 @@ const useMonsterDisplay = makeMonsterDisplayStore<Display>(
 
     const results: Display[] = ['default'];
 
-    if (history.hasRecentMonsters) {
+    if (history.hasRecentMonsties) {
       results.push('recent');
     }
 
-    if (history.hasPinnedMonsters) {
+    if (history.hasPinnedMonsties) {
       results.push('pinned');
     }
 
     return results;
-  },
-  (display: Display, filter: FilterStore) => {
-    if (display === 'pinned') {
-      filter.mode = 'combat';
-    }
   }
 );
 
-export default useMonsterDisplay;
+export default useMonstieDisplay;
