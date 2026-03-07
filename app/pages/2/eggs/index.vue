@@ -122,13 +122,13 @@
   const fabDisplayIcon = computed(() => {
     switch (display.next) {
       case 'default':
-        return 'i-lucide-x';
+        return 'ph:x';
 
       case 'recent':
-        return 'i-lucide-history';
+        return 'ph:clock-counter-clockwise';
 
       case 'pinned':
-        return 'i-lucide-bookmark';
+        return 'ph:bookmark-simple';
 
       default:
         return null;
@@ -149,10 +149,10 @@
 
   const fabEggFinderIcon = computed(() => {
     if (showEggFinder.value) {
-      return 'i-lucide-x';
+      return 'ph:x';
     }
 
-    return 'i-lucide-egg';
+    return 'ph:egg';
   });
 
   function toggleEggFinder() {
@@ -247,13 +247,13 @@
           >
             <UIcon
               v-if="eggFilter.sortKey === 'genus'"
-              name="i-lucide-dna"
+              name="ph:dna"
               class="w-6! text-neutral-500 dark:text-neutral-400"
             />
 
             <UIcon
               v-if="eggFilter.sortKey === 'habitat'"
-              name="i-lucide-map-pin"
+              name="ph:map-pin-fill"
               class="w-6! text-neutral-500 dark:text-neutral-400"
             />
 

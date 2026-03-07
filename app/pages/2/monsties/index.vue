@@ -108,13 +108,13 @@
   const fabDisplayIcon = computed(() => {
     switch (display.next) {
       case 'default':
-        return 'i-lucide-x';
+        return 'ph:x';
 
       case 'recent':
-        return 'i-lucide-history';
+        return 'ph:clock-counter-clockwise';
 
       case 'pinned':
-        return 'i-lucide-bookmark';
+        return 'ph:bookmark-simple';
 
       default:
         return null;
@@ -179,13 +179,13 @@
           >
             <UIcon
               v-if="monstieFilter.sortKey === 'genus'"
-              name="i-lucide-dna"
+              name="ph:dna"
               class="w-6! text-neutral-500 dark:text-neutral-400"
             />
 
             <UIcon
               v-if="monstieFilter.sortKey === 'habitat'"
-              name="i-lucide-map-pin"
+              name="ph:map-pin-fill"
               class="w-6! text-neutral-500 dark:text-neutral-400"
             />
 

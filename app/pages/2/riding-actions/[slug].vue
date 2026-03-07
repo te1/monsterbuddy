@@ -45,10 +45,10 @@
   const fabIcon = computed(() => {
     switch (nextDisplay.value) {
       case 'monstie':
-        return 'i-lucide-image';
+        return 'ph:image-square';
 
       case 'egg':
-        return 'i-lucide-egg';
+        return 'ph:egg';
 
       default:
         return null;
@@ -78,7 +78,7 @@
       </ClientOnly>
 
       <div class="mb-1 flex items-center">
-        <UIcon name="i-lucide-dna" class="w-6! text-neutral-500 dark:text-neutral-400" />
+        <UIcon name="ph:dna" class="w-6! text-neutral-500 dark:text-neutral-400" />
 
         <div class="mb-1 font-semibold">Learnt By</div>
       </div>

@@ -33,7 +33,7 @@
 
     <UIcon
       v-if="!bare"
-      name="i-lucide-external-link"
+      name="ph:arrow-square-out"
       class="size-3.5 shrink-0 opacity-70"
       aria-hidden
     />

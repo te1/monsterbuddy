@@ -22,7 +22,7 @@
     :modelValue="modelValue"
     color="neutral"
     variant="soft2"
-    icon="i-lucide-search"
+    icon="ph:magnifying-glass"
     placeholder="Search..."
     :ui="{ trailing: 'pe-1' }"
     class="w-full"
@@ -34,7 +34,7 @@
           color="neutral"
           variant="link"
           size="sm"
-          icon="i-lucide-x"
+          icon="ph:x"
           aria-label="Clear filter"
           @click="clear"
         />

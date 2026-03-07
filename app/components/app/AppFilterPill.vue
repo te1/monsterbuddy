@@ -19,9 +19,9 @@
   const sortOrderIcon = computed(() => {
     switch (props.sortOrder) {
       case 'asc':
-        return 'i-lucide-move-up';
+        return 'ph:arrow-up';
       case 'desc':
-        return 'i-lucide-move-down';
+        return 'ph:arrow-down';
       default:
         return null;
     }
@@ -53,7 +53,7 @@
         title="Remove filter"
         @click.prevent="emit('remove')"
       >
-        <UIcon name="i-lucide-x" />
+        <UIcon name="ph:x" />
       </div>
 
       <div v-if="sortOrderIcon" class="flex items-center pr-2 text-base">

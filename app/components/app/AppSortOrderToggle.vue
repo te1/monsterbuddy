@@ -3,9 +3,7 @@
     required: true,
   });
 
-  const icon = computed(() =>
-    model.value === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow'
-  );
+  const icon = computed(() => (model.value === 'asc' ? 'ph:sort-descending' : 'ph:sort-ascending'));
 
   const label = computed(() => (model.value === 'asc' ? 'Ascending' : 'Descending'));
 

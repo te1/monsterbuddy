@@ -33,10 +33,10 @@
       </template>
 
       <template #links>
-        <UButton to="/" size="xl" trailingIcon="i-lucide-arrow-right">Get started</UButton>
+        <UButton to="/" size="xl" trailingIcon="ph:arrow-right">Get started</UButton>
 
         <UButton
-          icon="i-simple-icons-github"
+          icon="simple-icons:github"
           color="neutral"
           variant="outline"
           size="xl"
@@ -59,7 +59,7 @@
           size="lg"
           target="_blank"
           to="https://ui.nuxt.com/docs/getting-started/installation/nuxt"
-          trailingIcon="i-lucide-arrow-right"
+          trailingIcon="ph:arrow-right"
           variant="subtle"
         >
           Explore Nuxt UI
@@ -68,38 +68,38 @@
 
       <template #features>
         <UPageFeature
-          icon="i-lucide-palette"
+          icon="ph:palette"
           title="100+ UI Components"
           description="Access the complete Nuxt UI component library. From badges to modals, everything styled and accessible out of the box."
         />
 
         <UPageFeature
-          icon="i-lucide-type"
+          icon="ph:text-t"
           title="Beautiful Typography"
           description="Pre-styled prose components with perfect visual harmony. No need for @tailwindcss/typography - get precise control over every element."
         />
 
         <UPageFeature
-          icon="i-lucide-layers"
+          icon="ph:stack"
           title="Rich Prose Components"
           description="Accordions, cards, callouts, tabs, steps, code blocks, and more - all provided by Nuxt UI for interactive documentation."
         />
 
         <UPageFeature
-          icon="i-lucide-search"
+          icon="ph:magnifying-glass"
           title="Built-in Search"
           description="Full-text search with ContentSearch component. No need for Algolia - instant, relevant results with keyboard shortcuts "
           (⌘K).
         />
 
         <UPageFeature
-          icon="i-lucide-navigation"
+          icon="ph:navigation-arrow"
           title="Smart Navigation"
           description="Auto-generated navigation with ContentNavigation and ContentToc components. Sticky table of contents and prev/next links."
         />
 
         <UPageFeature
-          icon="i-lucide-moon"
+          icon="ph:moon"
           title="Dark Mode Ready"
           description="Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice."
         />

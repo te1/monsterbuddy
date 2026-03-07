@@ -23,7 +23,7 @@
       size: 'xl',
       color: 'neutral',
       variant: 'link',
-      icon: 'i-lucide-arrow-left',
+      icon: 'ph:arrow-left',
       class: 'cursor-pointer',
     }"
   />

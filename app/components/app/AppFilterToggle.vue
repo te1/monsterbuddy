@@ -15,13 +15,13 @@
   const icon = computed(() => {
     switch (model.value) {
       case undefined:
-        return 'i-lucide-asterisk';
+        return 'ph:asterisk';
 
       case true:
-        return 'i-lucide-check';
+        return 'ph:check';
 
       case false:
-        return 'i-lucide-x';
+        return 'ph:x';
 
       default:
         return null;

@@ -28,7 +28,7 @@
           <div
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
-            <UIcon name="i-lucide-map-pin" class="w-6! text-neutral-500 dark:text-neutral-400" />
+            <UIcon name="ph:map-pin-fill" class="w-6! text-neutral-500 dark:text-neutral-400" />
 
             <div class="mb-1 font-semibold">
               {{ zone }}

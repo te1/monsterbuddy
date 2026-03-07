@@ -20,21 +20,21 @@
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">
-            <UIcon name="i-lucide-dna" title="Genus" />
+            <UIcon name="ph:dna" title="Genus" />
           </span>
           <span v-text="monster.genus" />
         </div>
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">
-            <UIcon name="i-lucide-map-pin" title="Habitat" />
+            <UIcon name="ph:map-pin-fill" title="Habitat" />
           </span>
           <span v-text="monster.habitat" />
         </div>
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">
-            <UIcon name="i-lucide-star" title="Rarity" />
+            <UIcon name="ph:star-fill" title="Rarity" />
           </span>
           <span v-text="monster.rarity" />
         </div>

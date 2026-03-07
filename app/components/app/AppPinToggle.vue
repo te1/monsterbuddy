@@ -33,7 +33,7 @@
       <UButton
         :color="pinned ? 'primary' : 'neutral'"
         variant="link"
-        icon="i-lucide-bookmark"
+        :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
         @click="pinned = !pinned"
       />
     </UTooltip>

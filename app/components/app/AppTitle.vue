@@ -28,7 +28,7 @@
   <!--
   <UTooltip v-if="isMobile" text="Back">
     <UButton
-      icon="i-lucide-arrow-left"
+      icon="ph:arrow-left"
       color="neutral"
       variant="ghost"
       aria-label="Back"

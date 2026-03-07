@@ -12,7 +12,7 @@
       <slot>No results found</slot>
     </span>
 
-    <UIcon class="h-16! w-16! text-neutral-400 dark:text-neutral-400" name="i-lucide-frown" />
+    <UIcon class="h-16! w-16! text-neutral-400 dark:text-neutral-400" name="ph:smiley-sad-light" />
 
     <UButton color="neutral" variant="soft" class="w-[160px]" @click="filterStore?.resetFilter">
       Reset filter

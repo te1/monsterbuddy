@@ -302,7 +302,7 @@
           color="neutral"
           variant="soft2"
           class="w-full"
-          trailingIcon="i-lucide-rotate-ccw"
+          trailingIcon="ph:arrow-counter-clockwise"
           label="Reset"
           :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
           @click="props.filter.resetFilter"

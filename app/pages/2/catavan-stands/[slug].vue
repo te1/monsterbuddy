@@ -53,10 +53,10 @@
     switch (nextDisplay.value) {
       case 'monster':
       case 'monstie':
-        return 'i-lucide-image';
+        return 'ph:image-square';
 
       case 'egg':
-        return 'i-lucide-egg';
+        return 'ph:egg';
 
       default:
         return null;

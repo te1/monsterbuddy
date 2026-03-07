@@ -34,7 +34,7 @@
       class="absolute top-1/2 right-0 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-75"
       text="Remove bookmark"
     >
-      <UButton variant="soft" color="neutral" icon="i-lucide-bookmark-x" @click="emit('remove')" />
+      <UButton variant="soft" color="neutral" icon="ph:trash" @click="emit('remove')" />
     </UTooltip>
   </div>
 </template>
