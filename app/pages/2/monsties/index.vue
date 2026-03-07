@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import S2MonstieSidebar from '~/components/s2/monstie/S2MonstieSidebar.vue';
   import { monsties } from '~/services/2/data';
+  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonstieFilter from '~/stores/2/monstieFilter';
   import useMonstieDisplay, { type Display } from '~/stores/2/monstieDisplay';
@@ -192,7 +192,7 @@
           <AppFilterPill
             v-if="monstieFilter.hasActiveSort"
             :caption="monstieFilter.activeSort?.caption ?? ''"
-            filterTarget="/monsties/filter/"
+            filterTarget="/monsties/filter"
             :sortOrder="monstieFilter.activeSort?.order"
           />
 
@@ -200,7 +200,7 @@
             v-for="filter in monstieFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/monsties/filter/"
+            filterTarget="/monsties/filter"
             showRemove
             @remove="monstieFilter[filter.name] = undefined"
           />

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import S2MonsterSidebar from '~/components/s2/monster/S2MonsterSidebar.vue';
   import { monsters } from '~/services/2/data';
+  import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonsterFilter from '~/stores/2/monsterFilter';
   import useMonsterDisplay, { type Display } from '~/stores/2/monsterDisplay';
@@ -192,7 +192,7 @@
           <AppFilterPill
             v-if="monsterFilter.hasActiveSort"
             :caption="monsterFilter.activeSort?.caption ?? ''"
-            filterTarget="/monsties/filter/"
+            filterTarget="/monsters/filter"
             :sortOrder="monsterFilter.activeSort?.order"
           />
 
@@ -200,7 +200,7 @@
             v-for="filter in monsterFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/monsters/filter/"
+            filterTarget="/monsters/filter"
             showRemove
             @remove="monsterFilter[filter.name] = undefined"
           />
