@@ -42,10 +42,10 @@ export function makeMonsterDisplayStore<DisplayType extends string = string>(
     },
 
     actions: {
-      setCurrent(value: DisplayType, filter: FilterStore) {
+      setCurrent(value: DisplayType, filter?: FilterStore) {
         this.current = value as typeof this.current;
 
-        if (updateFilter) {
+        if (updateFilter && filter != null) {
           updateFilter(value, filter);
         }
       },

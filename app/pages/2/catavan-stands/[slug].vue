@@ -3,6 +3,7 @@
   import type { Mode } from '~/stores/2/baseMonsterFilter';
   import { catavanStandsBySlug, getMonstersByCatavanStand } from '~/services/2/data';
   import { getCatavanStandSeo } from '~/services/2/seo';
+  import useCatavanStandDisplay from '~/stores/2/catavanStandDisplay';
 
   const route = useRoute();
   const catavanStand = catavanStandsBySlug.get(route.params.slug as string);
@@ -40,23 +41,12 @@
     return result;
   });
 
-  type Display = 'monster' | 'monstie' | 'egg';
-  const display = ref<Display>('monster');
+  const display = useCatavanStandDisplay();
 
-  const displays = computed<Display[]>(() => ['monster', 'monstie', 'egg']);
-
-  const nextDisplay = computed(() => {
-    const currentIndex = displays.value.indexOf(display.value);
-    const nextIndex = (currentIndex + 1) % displays.value.length;
-    return displays.value[nextIndex] ?? 'monster';
-  });
-
-  const fabVisible = computed(() => {
-    return displays.value.length > 1;
-  });
+  const fabVisible = computed(() => display.all.length > 1);
 
   const fabTitle = computed(() => {
-    switch (nextDisplay.value) {
+    switch (display.next) {
       case 'monster':
         return 'Show monsters';
 
@@ -72,7 +62,7 @@
   });
 
   const fabIcon = computed(() => {
-    switch (nextDisplay.value) {
+    switch (display.next) {
       case 'monster':
       case 'monstie':
         return 'ph:image-square';
@@ -86,7 +76,7 @@
   });
 
   function getMode(monster: Monster): Mode | undefined {
-    switch (display.value) {
+    switch (display.current) {
       case 'monster':
         return 'rarity';
 
@@ -100,7 +90,7 @@
   }
 
   function toggleDisplay() {
-    display.value = nextDisplay.value;
+    display.setCurrent(display.next);
   }
 </script>
 
@@ -126,7 +116,7 @@
           v-for="monster in monsters"
           :key="monster.no"
           :monster="monster"
-          :display="display"
+          :display="display.current"
           :mode="getMode(monster)"
         />
       </div>
