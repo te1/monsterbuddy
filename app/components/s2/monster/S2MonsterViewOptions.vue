@@ -115,38 +115,36 @@
       @update:modelValue="displays.setCurrent($event)"
     />
 
+    <ClientOnly v-if="sources != null">
+      <URadioGroup
+        color="neutral"
+        variant="table"
+        orientation="horizontal"
+        indicator="hidden"
+        :ui="{ item: 'grow' }"
+        :modelValue="sources.current"
+        :items="sources.items"
+        @update:modelValue="sources.setCurrent($event, filter)"
+      />
+
+      <template #fallback>
+        <URadioGroup
+          color="neutral"
+          variant="table"
+          orientation="horizontal"
+          indicator="hidden"
+          :ui="{ item: 'grow' }"
+          :modelValue="sources.items[0]?.value"
+          :items="[sources.items[0]!]"
+        />
+      </template>
+    </ClientOnly>
+
     <UFormField v-if="filter != null" label="Name" orientation="horizontal">
       <AppInputSearch
         :modelValue="filter.nameFilter"
         @update:modelValue="filter.$patch({ nameFilter: $event })"
       />
-    </UFormField>
-
-    <UFormField v-if="sources != null" label="List" orientation="horizontal">
-      <div class="flex flex-col gap-1">
-        <ClientOnly>
-          <UButton
-            v-for="item in sources.items"
-            :key="item.value"
-            color="neutral"
-            :variant="sources.current === item.value ? 'subtle2' : 'soft2'"
-            :label="item.label"
-            class="w-full"
-            :ui="{ base: 'font-normal' }"
-            @click="sources.setCurrent(item.value, filter)"
-          />
-
-          <template #fallback>
-            <UButton
-              color="neutral"
-              variant="soft2"
-              :label="sources.items[0]?.label"
-              class="w-full"
-              :ui="{ base: 'font-normal' }"
-            />
-          </template>
-        </ClientOnly>
-      </div>
     </UFormField>
 
     <UFormField v-if="filter != null && modes != null" label="Show" orientation="horizontal">

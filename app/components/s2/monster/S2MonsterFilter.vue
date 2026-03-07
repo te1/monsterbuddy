@@ -1,11 +1,13 @@
 <script lang="ts" setup>
   import type { EggColor } from '~/services/2/types';
   import type { FilterKey, FilterStore, Mode } from '~/stores/2/baseMonsterFilter';
+  import type { SourcesStore } from '~/stores/2/baseMonsterSources';
   import { allElements } from '~/services/2/data';
 
   const props = withDefaults(
     defineProps<{
       filter: FilterStore;
+      sources?: SourcesStore;
       showEggColorFilter?: boolean;
       showHabitatFilter?: boolean;
       showCoopQuestFilter?: boolean;
@@ -18,6 +20,7 @@
       showDeviantsFilter?: boolean;
     }>(),
     {
+      sources: undefined,
       showEggColorFilter: false,
       showHabitatFilter: false,
       showCoopQuestFilter: false,
@@ -198,14 +201,25 @@
 
 <template>
   <div class="flex flex-col gap-3">
-    <div>
-      <UFormField label="Name" orientation="horizontal">
-        <AppInputSearch
-          :modelValue="filter.nameFilter"
-          @update:modelValue="filter.$patch({ nameFilter: $event })"
-        />
-      </UFormField>
-    </div>
+    <ClientOnly v-if="sources != null">
+      <URadioGroup
+        color="neutral"
+        variant="table"
+        orientation="horizontal"
+        indicator="hidden"
+        :ui="{ item: 'grow' }"
+        :modelValue="sources.current"
+        :items="sources.items"
+        @update:modelValue="sources.setCurrent($event, filter)"
+      />
+    </ClientOnly>
+
+    <UFormField label="Name" orientation="horizontal">
+      <AppInputSearch
+        :modelValue="filter.nameFilter"
+        @update:modelValue="filter.$patch({ nameFilter: $event })"
+      />
+    </UFormField>
 
     <div class="flex flex-col gap-1">
       <UFormField v-if="showEggColorFilter" label="Egg Color" orientation="horizontal">

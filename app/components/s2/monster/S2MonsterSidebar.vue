@@ -28,6 +28,7 @@
     <template #filter>
       <S2MonsterFilter
         :filter="filter"
+        :sources="sources"
         showHabitatFilter
         showCatavanFilter
         showEldersLairFilter

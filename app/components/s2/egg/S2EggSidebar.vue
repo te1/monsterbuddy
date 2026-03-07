@@ -30,6 +30,7 @@
     <template #filter>
       <S2MonsterFilter
         :filter="filter"
+        :sources="sources"
         showEggColorFilter
         showHabitatFilter
         showCoopQuestFilter
