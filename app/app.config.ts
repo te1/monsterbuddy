@@ -50,6 +50,12 @@ export default defineAppConfig({
       warning: 'ph:warning',
     },
 
+    error: {
+      slots: {
+        statusMessage: 'font-medium',
+      },
+    },
+
     tooltip: {
       slots: {
         kbds: 'not-first-of-type:before:content-["_"]',
