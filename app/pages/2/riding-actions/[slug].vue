@@ -1,6 +1,12 @@
 <script lang="ts" setup>
+  import S2RidingActionSidebar from '~/components/s2/S2RidingActionSidebar.vue';
   import { getMonstiesByRidingAction, ridingActionsBySlug } from '~/services/2/data';
   import { getRidingActionSeo } from '~/services/2/seo';
+  import useRidingActionDisplays from '~/stores/2/ridingActionDisplays';
+
+  definePageMeta({
+    sidebarComponent: S2RidingActionSidebar,
+  });
 
   const route = useRoute();
   const ridingAction = ridingActionsBySlug.get(route.params.slug as string);
@@ -13,24 +19,29 @@
   useSeoMeta(getRidingActionSeo(ridingAction, monsters.value.length));
   const headline = gameTypeToFullName('mhst2');
 
-  type Display = 'monstie' | 'egg';
-  const display = ref<Display>('monstie');
+  const descriptionParts = computed(() => {
+    const part1 = 'This ';
+    const part2 = 'riding action';
 
-  const displays = ref<Display[]>(['monstie', 'egg']);
+    let part3 = 'can be learnt by ';
 
-  const nextDisplay = computed(() => {
-    const currentIndex = displays.value.indexOf(display.value);
-    const nextIndex = (currentIndex + 1) % displays.value.length;
+    const monsterCount = monsters.value.length;
 
-    return displays.value[nextIndex] ?? 'monstie';
+    if (monsterCount === 1) {
+      part3 += `one monster.`;
+    } else {
+      part3 += `${monsterCount} different monsters.`;
+    }
+
+    return [part1, part2, part3];
   });
 
-  const fabVisible = computed(() => {
-    return displays.value.length > 1;
-  });
+  const displays = useRidingActionDisplays();
+
+  const fabVisible = computed(() => displays.all.length > 1);
 
   const fabTitle = computed(() => {
-    switch (nextDisplay.value) {
+    switch (displays.next) {
       case 'monstie':
         return 'Show monsties';
 
@@ -43,7 +54,7 @@
   });
 
   const fabIcon = computed(() => {
-    switch (nextDisplay.value) {
+    switch (displays.next) {
       case 'monstie':
         return 'ph:image-square';
 
@@ -56,7 +67,7 @@
   });
 
   function toggleDisplay() {
-    display.value = nextDisplay.value;
+    displays.setCurrent(displays.next);
   }
 </script>
 
@@ -64,11 +75,16 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
-      :title="ridingAction.name"
-      :description="ridingAction.description"
-      :headline="headline"
-    />
+    <UPageHeader :title="ridingAction.name" :headline="headline">
+      <template #description>
+        {{ ridingAction.description }}
+        <br />
+
+        {{ descriptionParts[0] }}
+        <AppNuxtLink to="/2/riding-actions">{{ descriptionParts[1] }}</AppNuxtLink>
+        {{ descriptionParts[2] }}
+      </template>
+    </UPageHeader>
 
     <UPageBody>
       <ClientOnly>
@@ -88,7 +104,7 @@
           v-for="monster in monsters"
           :key="monster.no"
           :monster="monster"
-          :display="display"
+          :display="displays.current"
         />
       </div>
     </UPageBody>

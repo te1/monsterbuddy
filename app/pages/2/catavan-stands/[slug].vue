@@ -24,26 +24,30 @@
   useSeoMeta(getCatavanStandSeo(catavanStand, monsters.value.length));
   const headline = gameTypeToFullName('mhst2');
 
-  const description = computed(() => {
-    let result = 'You can find ';
+  const descriptionParts = computed(() => {
+    let part1 = 'You can find ';
 
     const monsterCount = monsters.value.length;
 
     if (monsterCount === 1) {
-      result += `one monster `;
+      part1 += `one monster `;
     } else {
-      result += `${monsterCount} different monsters `;
+      part1 += `${monsterCount} different monsters `;
     }
 
-    result += 'nearby this catavan stand';
+    part1 += 'nearby this ';
+
+    const part2 = 'catavan stand';
+
+    let part3 = '';
 
     if (catavanStand.zone) {
-      result += ` in ${catavanStand.zone}`;
+      part3 += ` in ${catavanStand.zone}`;
     }
 
-    result += '.';
+    part3 += '.';
 
-    return result;
+    return [part1, part2, part3];
   });
 
   const displays = useCatavanStandDisplays();
@@ -101,7 +105,13 @@
 
 <template>
   <div>
-    <UPageHeader :title="catavanStand.name" :headline="headline" :description="description" />
+    <UPageHeader :title="catavanStand.name" :headline="headline">
+      <template #description>
+        {{ descriptionParts[0] }}
+        <AppNuxtLink to="/2/catavan-stands">{{ descriptionParts[1] }}</AppNuxtLink>
+        {{ descriptionParts[2] }}
+      </template>
+    </UPageHeader>
 
     <UPageBody>
       <ClientOnly>
