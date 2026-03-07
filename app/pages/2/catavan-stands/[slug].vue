@@ -17,9 +17,7 @@
     throw createError({ status: 404, statusText: 'Page Not Found' });
   }
 
-  const monsters = computed(() => {
-    return getMonstersByCatavanStand(catavanStand.name);
-  });
+  const monsters = computed(() => getMonstersByCatavanStand(catavanStand.name));
 
   useSeoMeta(getCatavanStandSeo(catavanStand, monsters.value.length));
   const headline = gameTypeToFullName('mhst2');

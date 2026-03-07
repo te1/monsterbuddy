@@ -89,7 +89,13 @@
     <UPageBody>
       <ClientOnly>
         <UTooltip v-if="fabVisible" :text="fabTitle">
-          <UButton color="neutral" variant="soft" :icon="fabIcon" @click="toggleDisplay" />
+          <UButton
+            color="neutral"
+            variant="soft"
+            class="absolute top-[300px] z-10"
+            :icon="fabIcon"
+            @click="toggleDisplay"
+          />
         </UTooltip>
       </ClientOnly>
 
