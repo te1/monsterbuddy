@@ -166,7 +166,7 @@
       v-if="!hideSort && filter != null"
       label="Sort By"
       orientation="horizontal"
-      :ui="{ container: 'flex flex-col gap-1' }"
+      :ui="{ container: 'flex gap-1' }"
     >
       <USelect
         :modelValue="filter.sortKey"
