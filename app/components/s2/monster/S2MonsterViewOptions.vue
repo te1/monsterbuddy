@@ -81,16 +81,15 @@
 
     const config = sortConfig.value.find((config) => config.value === value);
 
-    props.filter.$patch({
-      sortKey: value,
-      sortOrder: config?.default ?? 'asc',
-      mode:
-        config?.mode &&
-        props.filter.mode !== 'compact' &&
-        props.filter.autoSwitchModes.includes(config.mode)
-          ? config.mode
-          : props.filter.mode,
-    });
+    props.filter.setSort(value, config?.default ?? 'asc');
+
+    if (
+      config?.mode &&
+      props.filter.mode !== 'compact' &&
+      props.filter.autoSwitchModes.includes(config.mode)
+    ) {
+      props.filter.$patch({ mode: config.mode });
+    }
   }
 </script>
 
@@ -152,7 +151,7 @@
       />
       <AppSortOrderToggle
         :modelValue="props.filter.sortOrder"
-        @update:modelValue="props.filter.$patch({ sortOrder: $event })"
+        @update:modelValue="props.filter.setSortOrder($event)"
       />
     </UFormField>
   </div>

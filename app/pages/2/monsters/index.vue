@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import S2MonsterSidebar from '~/components/s2/monster/S2MonsterSidebar.vue';
+  import { monsters } from '~/services/2/data';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonsterFilter from '~/stores/2/monsterFilter';
   import useMonsterDisplay, { type Display } from '~/stores/2/monsterDisplay';
@@ -22,29 +23,64 @@
   provide(filterStoreKey, monsterFilter);
   const display = useMonsterDisplay();
 
-  const showFilter = ref(false); // TODO?
+  const oldSortKey = ref(monsterFilter.sortKey);
+  const oldSortOrder = ref(monsterFilter.sortOrder);
 
   const showActiveFilters = computed(() => {
-    return (
-      (monsterFilter.hasActiveSort || monsterFilter.hasActiveFilters) && !showRecentOrPinned.value
-    );
+    return monsterFilter.hasActiveSort || monsterFilter.hasActiveFilters;
   });
 
-  const showRecentOrPinned = computed(() => {
-    return display.current === 'recent' || display.current === 'pinned';
-  });
+  const displayMonsters = computed(() => {
+    switch (display.current) {
+      case 'recent':
+        return history.recentMonsters;
 
-  const groupedMonsters = computed(() => {
-    if (display.current === 'recent') {
-      return { all: history.recentMonsters };
+      case 'pinned':
+        return history.pinnedMonsters;
+
+      default:
+        return monsters;
     }
-
-    if (display.current === 'pinned') {
-      return { all: history.pinnedMonsters };
-    }
-
-    return monsterFilter.groupedMonsters;
   });
+
+  function syncDisplayedMonsters() {
+    monsterFilter.setMonsters(displayMonsters.value, {
+      preserveSourceOrder: display.current === 'recent' && monsterFilter.preserveSourceOrder,
+    });
+  }
+
+  watch(
+    () => display.current,
+    (newValue, oldValue) => {
+      if (newValue === 'recent' && oldValue !== 'recent') {
+        // switch to recent
+
+        oldSortKey.value = monsterFilter.sortKey;
+        oldSortOrder.value = monsterFilter.sortOrder;
+
+        monsterFilter.sortKey = 'no';
+        monsterFilter.sortOrder = 'asc';
+        monsterFilter.preserveSourceOrder = true;
+      } else if (
+        oldValue === 'recent' &&
+        newValue !== 'recent' &&
+        monsterFilter.preserveSourceOrder
+      ) {
+        // switch away from recent
+
+        monsterFilter.sortKey = oldSortKey.value;
+        monsterFilter.sortOrder = oldSortOrder.value;
+        monsterFilter.preserveSourceOrder = false;
+      }
+
+      syncDisplayedMonsters();
+    },
+    { immediate: true }
+  );
+
+  watch(displayMonsters, syncDisplayedMonsters);
+
+  const showFilter = ref(false); // TODO?
 
   const _heading = computed(() => {
     if (showFilter.value) {
@@ -63,7 +99,7 @@
   });
 
   function toggleDisplay() {
-    display.current = display.next;
+    display.setCurrent(display.next, monsterFilter);
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -77,7 +113,7 @@
       }
 
       if (display.all.includes(newDisplay as Display)) {
-        display.current = newDisplay as Display;
+        display.setCurrent(newDisplay as Display, monsterFilter);
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -172,9 +208,9 @@
       </div>
 
       <ul class="space-y-5" :class="{ 'mt-8': showActiveFilters }">
-        <li v-for="(group, key) in groupedMonsters" :key="key">
+        <li v-for="(group, key) in monsterFilter.groupedMonsters" :key="key">
           <div
-            v-if="monsterFilter.isGrouped && !showRecentOrPinned"
+            v-if="monsterFilter.isGrouped"
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
             <UIcon
@@ -208,9 +244,7 @@
         </li>
       </ul>
 
-      <S2MonsterNoResults v-if="monsterFilter.isEmpty && !showRecentOrPinned">
-        No monsters found
-      </S2MonsterNoResults>
+      <S2MonsterNoResults v-if="monsterFilter.isEmpty">No monsters found</S2MonsterNoResults>
     </UPageBody>
   </div>
 </template>

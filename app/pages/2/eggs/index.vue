@@ -23,37 +23,66 @@
   provide(filterStoreKey, eggFilter);
   const display = useEggDisplay();
 
+  const oldSortKey = ref(eggFilter.sortKey);
+  const oldSortOrder = ref(eggFilter.sortOrder);
+
   const genera = computed(() => {
     return getGenera(monsties);
   });
 
   const showEggFinder = ref(false);
 
-  const showFilter = ref(false);
-
-  const showRecentOrPinned = computed(() => {
-    return display.current === 'recent' || display.current === 'pinned';
-  });
-
   const showActiveFilters = computed(() => {
-    return (
-      (eggFilter.hasActiveSort || eggFilter.hasActiveFilters) &&
-      !showRecentOrPinned.value &&
-      !showEggFinder.value
-    );
+    return (eggFilter.hasActiveSort || eggFilter.hasActiveFilters) && !showEggFinder.value;
   });
 
-  const groupedMonsters = computed(() => {
-    if (display.current === 'recent') {
-      return { all: history.recentMonsties };
-    }
+  const displayMonsters = computed(() => {
+    switch (display.current) {
+      case 'recent':
+        return history.recentMonsties;
 
-    if (display.current === 'pinned') {
-      return { all: history.pinnedEggs };
-    }
+      case 'pinned':
+        return history.pinnedEggs;
 
-    return eggFilter.groupedMonsters;
+      default:
+        return monsties;
+    }
   });
+
+  function syncDisplayedMonsters() {
+    eggFilter.setMonsters(displayMonsters.value, {
+      preserveSourceOrder: display.current === 'recent' && eggFilter.preserveSourceOrder,
+    });
+  }
+
+  watch(
+    () => display.current,
+    (newValue, oldValue) => {
+      if (newValue === 'recent' && oldValue !== 'recent') {
+        // switch to recent
+
+        oldSortKey.value = eggFilter.sortKey;
+        oldSortOrder.value = eggFilter.sortOrder;
+
+        eggFilter.sortKey = 'no';
+        eggFilter.sortOrder = 'asc';
+        eggFilter.preserveSourceOrder = true;
+      } else if (oldValue === 'recent' && newValue !== 'recent' && eggFilter.preserveSourceOrder) {
+        // switch away from recent
+
+        eggFilter.sortKey = oldSortKey.value;
+        eggFilter.sortOrder = oldSortOrder.value;
+        eggFilter.preserveSourceOrder = false;
+      }
+
+      syncDisplayedMonsters();
+    },
+    { immediate: true }
+  );
+
+  watch(displayMonsters, syncDisplayedMonsters);
+
+  const showFilter = ref(false); // TODO?
 
   const _heading = computed(() => {
     if (showFilter.value) {
@@ -76,7 +105,7 @@
   });
 
   function toggleDisplay() {
-    display.current = display.next;
+    display.setCurrent(display.next, eggFilter);
     showEggFinder.value = false;
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -91,7 +120,7 @@
       }
 
       if (display.all.includes(newDisplay as Display)) {
-        display.current = newDisplay as Display;
+        display.setCurrent(newDisplay as Display, eggFilter);
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -157,7 +186,7 @@
 
   function toggleEggFinder() {
     showEggFinder.value = !showEggFinder.value;
-    display.current = 'default';
+    display.setCurrent('default', eggFilter);
 
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -240,9 +269,9 @@
       </ul>
 
       <ul v-if="!showEggFinder" class="space-y-5" :class="{ 'mt-8': showActiveFilters }">
-        <li v-for="(group, key) in groupedMonsters" :key="key">
+        <li v-for="(group, key) in eggFilter.groupedMonsters" :key="key">
           <div
-            v-if="eggFilter.isGrouped && !showRecentOrPinned"
+            v-if="eggFilter.isGrouped"
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
             <UIcon
@@ -289,7 +318,7 @@
         </li>
       </ul>
 
-      <S2MonsterNoResults v-if="eggFilter.isEmpty && !showRecentOrPinned">
+      <S2MonsterNoResults v-if="eggFilter.isEmpty && !showEggFinder">
         No eggs found
       </S2MonsterNoResults>
     </UPageBody>

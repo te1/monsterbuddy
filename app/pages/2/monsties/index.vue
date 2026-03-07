@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import S2MonstieSidebar from '~/components/s2/monstie/S2MonstieSidebar.vue';
+  import { monsties } from '~/services/2/data';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonstieFilter from '~/stores/2/monstieFilter';
   import useMonstieDisplay, { type Display } from '~/stores/2/monstieDisplay';
@@ -22,29 +23,64 @@
   provide(filterStoreKey, monstieFilter);
   const display = useMonstieDisplay();
 
-  const showFilter = ref(false); // TODO?
+  const oldSortKey = ref(monstieFilter.sortKey);
+  const oldSortOrder = ref(monstieFilter.sortOrder);
 
   const showActiveFilters = computed(() => {
-    return (
-      (monstieFilter.hasActiveSort || monstieFilter.hasActiveFilters) && !showRecentOrPinned.value
-    );
+    return monstieFilter.hasActiveSort || monstieFilter.hasActiveFilters;
   });
 
-  const showRecentOrPinned = computed(() => {
-    return display.current === 'recent' || display.current === 'pinned';
-  });
+  const displayMonsters = computed(() => {
+    switch (display.current) {
+      case 'recent':
+        return history.recentMonsties;
 
-  const groupedMonsters = computed(() => {
-    if (display.current === 'recent') {
-      return { all: history.recentMonsties };
+      case 'pinned':
+        return history.pinnedMonsties;
+
+      default:
+        return monsties;
     }
-
-    if (display.current === 'pinned') {
-      return { all: history.pinnedMonsties };
-    }
-
-    return monstieFilter.groupedMonsters;
   });
+
+  function syncDisplayedMonsters() {
+    monstieFilter.setMonsters(displayMonsters.value, {
+      preserveSourceOrder: display.current === 'recent' && monstieFilter.preserveSourceOrder,
+    });
+  }
+
+  watch(
+    () => display.current,
+    (newValue, oldValue) => {
+      if (newValue === 'recent' && oldValue !== 'recent') {
+        // switch to recent
+
+        oldSortKey.value = monstieFilter.sortKey;
+        oldSortOrder.value = monstieFilter.sortOrder;
+
+        monstieFilter.sortKey = 'no';
+        monstieFilter.sortOrder = 'asc';
+        monstieFilter.preserveSourceOrder = true;
+      } else if (
+        oldValue === 'recent' &&
+        newValue !== 'recent' &&
+        monstieFilter.preserveSourceOrder
+      ) {
+        // switch away from recent
+
+        monstieFilter.sortKey = oldSortKey.value;
+        monstieFilter.sortOrder = oldSortOrder.value;
+        monstieFilter.preserveSourceOrder = false;
+      }
+
+      syncDisplayedMonsters();
+    },
+    { immediate: true }
+  );
+
+  watch(displayMonsters, syncDisplayedMonsters);
+
+  const showFilter = ref(false); // TODO?
 
   const _heading = computed(() => {
     if (showFilter.value) {
@@ -63,7 +99,7 @@
   });
 
   function toggleDisplay() {
-    display.current = display.next;
+    display.setCurrent(display.next, monstieFilter);
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -77,7 +113,7 @@
       }
 
       if (display.all.includes(newDisplay as Display)) {
-        display.current = newDisplay as Display;
+        display.setCurrent(newDisplay as Display, monstieFilter);
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -172,9 +208,9 @@
       </div>
 
       <ul class="space-y-5" :class="{ 'mt-8': showActiveFilters }">
-        <li v-for="(group, key) in groupedMonsters" :key="key">
+        <li v-for="(group, key) in monstieFilter.groupedMonsters" :key="key">
           <div
-            v-if="monstieFilter.isGrouped && !showRecentOrPinned"
+            v-if="monstieFilter.isGrouped"
             class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
           >
             <UIcon
@@ -208,9 +244,7 @@
         </li>
       </ul>
 
-      <S2MonsterNoResults v-if="monstieFilter.isEmpty && !showRecentOrPinned">
-        No monsties found
-      </S2MonsterNoResults>
+      <S2MonsterNoResults v-if="monstieFilter.isEmpty">No monsties found</S2MonsterNoResults>
     </UPageBody>
   </div>
 </template>

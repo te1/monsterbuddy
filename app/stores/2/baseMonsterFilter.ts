@@ -112,6 +112,7 @@ export function makeMonsterFilterStore(
 
         sortKey: initial.sortKey,
         sortOrder: initial.sortOrder,
+        preserveSourceOrder: false,
         nameFilter: initial.nameFilter,
         genusFilter: initial.genusFilter,
         habitatFilter: initial.habitatFilter,
@@ -197,6 +198,10 @@ export function makeMonsterFilterStore(
         const monsters = this.filteredMonsters;
 
         if (this.sortKey == null) {
+          return monsters;
+        }
+
+        if (this.preserveSourceOrder) {
           return monsters;
         }
 
@@ -331,11 +336,11 @@ export function makeMonsterFilterStore(
       activeFilters: (state) => {
         const result: { name: FilterKey; value: string }[] = [];
 
-        if (state.genusFilter != null && state.sortKey !== 'genus') {
+        if (state.genusFilter != null) {
           result.push({ name: 'genusFilter', value: state.genusFilter });
         }
 
-        if (state.habitatFilter != null && state.sortKey !== 'habitat') {
+        if (state.habitatFilter != null) {
           result.push({ name: 'habitatFilter', value: state.habitatFilter });
         }
 
@@ -405,6 +410,27 @@ export function makeMonsterFilterStore(
     },
 
     actions: {
+      setMonsters(
+        monsters: Monster[],
+        options: {
+          preserveSourceOrder?: boolean;
+        } = {}
+      ) {
+        this.monsters = monsters;
+        this.preserveSourceOrder = options.preserveSourceOrder ?? false;
+      },
+
+      setSort(sortKey: SortKey, sortOrder: SortOrder) {
+        this.preserveSourceOrder = false;
+        this.sortKey = sortKey;
+        this.sortOrder = sortOrder;
+      },
+
+      setSortOrder(sortOrder: SortOrder) {
+        this.preserveSourceOrder = false;
+        this.sortOrder = sortOrder;
+      },
+
       resetFilter() {
         this.nameFilter = initial.nameFilter;
         this.genusFilter = initial.genusFilter;
@@ -422,9 +448,7 @@ export function makeMonsterFilterStore(
 
       resetFilterAndSort() {
         this.resetFilter();
-
-        this.sortKey = initial.sortKey;
-        this.sortOrder = initial.sortOrder;
+        this.setSort(initial.sortKey, initial.sortOrder);
       },
     },
   });
