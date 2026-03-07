@@ -1,14 +1,14 @@
-import { makeMonsterDisplayStore } from './baseMonsterDisplay';
+import { makeMonsterSourcesStore } from './baseMonsterSources';
 import useHistoryStore from './historyStore';
 
-export type Display = 'default' | 'recent' | 'pinned';
+export type Source = 'default' | 'recent' | 'pinned';
 
-const useMonstieDisplay = makeMonsterDisplayStore<Display>(
-  's2/monstieDisplay',
+const useMonstieSources = makeMonsterSourcesStore<Source>(
+  's2/monstieSources',
   'default',
   'default',
-  (display: Display): string => {
-    switch (display) {
+  (source: Source): string => {
+    switch (source) {
       case 'default':
         return 'All';
 
@@ -19,10 +19,10 @@ const useMonstieDisplay = makeMonsterDisplayStore<Display>(
         return 'Bookmarks';
     }
   },
-  (): Display[] => {
+  (): Source[] => {
     const history = useHistoryStore();
 
-    const results: Display[] = ['default'];
+    const results: Source[] = ['default'];
 
     if (history.hasRecentMonsties) {
       results.push('recent');
@@ -36,4 +36,4 @@ const useMonstieDisplay = makeMonsterDisplayStore<Display>(
   }
 );
 
-export default useMonstieDisplay;
+export default useMonstieSources;

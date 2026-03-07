@@ -1,20 +1,23 @@
 <script lang="ts" setup>
-  import type { DisplayStore } from '~/stores/2/baseMonsterDisplay';
+  import type { DisplaysStore } from '~/stores/2/baseDisplays';
   import type { FilterStore, Mode, SortKey } from '~/stores/2/baseMonsterFilter';
+  import type { SourcesStore } from '~/stores/2/baseMonsterSources';
 
   export type Modes = { value: Mode; label: string }[];
 
   const props = withDefaults(
     defineProps<{
+      displays?: DisplaysStore;
       filter?: FilterStore;
-      display?: DisplayStore;
+      sources?: SourcesStore;
       modes?: Modes;
       hideSort?: boolean;
       showSortByStats?: boolean;
     }>(),
     {
+      displays: undefined,
       filter: undefined,
-      display: undefined,
+      sources: undefined,
       modes: undefined,
       hideSort: false,
       showSortByStats: false,
@@ -100,6 +103,18 @@
 
 <template>
   <div class="flex flex-col gap-3">
+    <URadioGroup
+      v-if="displays != null"
+      color="neutral"
+      variant="table"
+      orientation="horizontal"
+      indicator="hidden"
+      :ui="{ item: 'grow' }"
+      :modelValue="displays.current"
+      :items="displays.items"
+      @update:modelValue="displays.setCurrent($event)"
+    />
+
     <UFormField v-if="filter != null" label="Name" orientation="horizontal">
       <AppInputSearch
         :modelValue="filter.nameFilter"
@@ -107,25 +122,25 @@
       />
     </UFormField>
 
-    <UFormField v-if="display != null" label="List" orientation="horizontal">
+    <UFormField v-if="sources != null" label="List" orientation="horizontal">
       <div class="flex flex-col gap-1">
         <ClientOnly>
           <UButton
-            v-for="item in display.items"
+            v-for="item in sources.items"
             :key="item.value"
             color="neutral"
-            :variant="display.current === item.value ? 'subtle2' : 'soft2'"
+            :variant="sources.current === item.value ? 'subtle2' : 'soft2'"
             :label="item.label"
             class="w-full"
             :ui="{ base: 'font-normal' }"
-            @click="display.setCurrent(item.value, filter)"
+            @click="sources.setCurrent(item.value, filter)"
           />
 
           <template #fallback>
             <UButton
               color="neutral"
               variant="soft2"
-              :label="display.items[0]?.label"
+              :label="sources.items[0]?.label"
               class="w-full"
               :ui="{ base: 'font-normal' }"
             />

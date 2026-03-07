@@ -4,7 +4,7 @@
   import S2CatavanStandSidebar from '~/components/s2/S2CatavanStandSidebar.vue';
   import { catavanStandsBySlug, getMonstersByCatavanStand } from '~/services/2/data';
   import { getCatavanStandSeo } from '~/services/2/seo';
-  import useCatavanStandDisplay from '~/stores/2/catavanStandDisplay';
+  import useCatavanStandDisplays from '~/stores/2/catavanStandDisplays';
 
   definePageMeta({
     sidebarComponent: S2CatavanStandSidebar,
@@ -46,12 +46,12 @@
     return result;
   });
 
-  const display = useCatavanStandDisplay();
+  const displays = useCatavanStandDisplays();
 
-  const fabVisible = computed(() => display.all.length > 1);
+  const fabVisible = computed(() => displays.all.length > 1);
 
   const fabTitle = computed(() => {
-    switch (display.next) {
+    switch (displays.next) {
       case 'monster':
         return 'Show monsters';
 
@@ -67,7 +67,7 @@
   });
 
   const fabIcon = computed(() => {
-    switch (display.next) {
+    switch (displays.next) {
       case 'monster':
       case 'monstie':
         return 'ph:image-square';
@@ -81,7 +81,7 @@
   });
 
   function getMode(monster: Monster): Mode | undefined {
-    switch (display.current) {
+    switch (displays.current) {
       case 'monster':
         return 'rarity';
 
@@ -95,7 +95,7 @@
   }
 
   function toggleDisplay() {
-    display.setCurrent(display.next);
+    displays.setCurrent(displays.next);
   }
 </script>
 
@@ -121,7 +121,7 @@
           v-for="monster in monsters"
           :key="monster.no"
           :monster="monster"
-          :display="display.current"
+          :display="displays.current"
           :mode="getMode(monster)"
         />
       </div>

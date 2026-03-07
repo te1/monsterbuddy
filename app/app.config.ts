@@ -113,6 +113,18 @@ export default defineAppConfig({
       },
     },
 
+    radioGroup: {
+      compoundVariants: [
+        {
+          size: 'md',
+          variant: ['card', 'table'],
+          class: {
+            item: 'p-1 py-1.25',
+          },
+        },
+      ],
+    },
+
     button: {
       variants: {
         variant: {

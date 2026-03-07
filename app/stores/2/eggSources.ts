@@ -1,15 +1,15 @@
 import type { FilterStore } from './baseMonsterFilter';
-import { makeMonsterDisplayStore } from './baseMonsterDisplay';
+import { makeMonsterSourcesStore } from './baseMonsterSources';
 import useHistoryStore from './historyStore';
 
-export type Display = 'default' | 'recent' | 'pinned';
+export type Source = 'default' | 'recent' | 'pinned';
 
-const useEggDisplay = makeMonsterDisplayStore<Display>(
-  's2/eggDisplay',
+const useEggSources = makeMonsterSourcesStore<Source>(
+  's2/eggSources',
   'default',
   'default',
-  (display: Display): string => {
-    switch (display) {
+  (source: Source): string => {
+    switch (source) {
       case 'default':
         return 'All';
 
@@ -20,10 +20,10 @@ const useEggDisplay = makeMonsterDisplayStore<Display>(
         return 'Bookmarks';
     }
   },
-  (): Display[] => {
+  (): Source[] => {
     const history = useHistoryStore();
 
-    const results: Display[] = ['default'];
+    const results: Source[] = ['default'];
 
     if (history.hasRecentMonsties) {
       results.push('recent');
@@ -35,11 +35,11 @@ const useEggDisplay = makeMonsterDisplayStore<Display>(
 
     return results;
   },
-  (display: Display, filter: FilterStore) => {
-    if (display === 'pinned') {
+  (source: Source, filter: FilterStore) => {
+    if (source === 'pinned') {
       filter.mode = 'compact';
     }
   }
 );
 
-export default useEggDisplay;
+export default useEggSources;

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
   import type { Modes } from '../monster/S2MonsterViewOptions.vue';
   import useEggFilter from '~/stores/2/eggFilter';
-  import useEggDisplay from '~/stores/2/eggDisplay';
+  import useEggSources from '~/stores/2/eggSources';
 
   const filter = useEggFilter();
-  const display = useEggDisplay();
+  const sources = useEggSources();
 
   const tabs = [
     { label: 'View', slot: 'view' },
@@ -24,7 +24,7 @@
 <template>
   <UTabs color="neutral" variant="link" :items="tabs">
     <template #view>
-      <S2MonsterViewOptions :filter="filter" :display="display" :modes="modes" />
+      <S2MonsterViewOptions :filter="filter" :sources="sources" :modes="modes" />
     </template>
 
     <template #filter>

@@ -3,10 +3,12 @@
   import type { Mode } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
 
+  export type Display = 'monster' | 'monstie' | 'egg';
+
   const props = withDefaults(
     defineProps<{
       monster: Monster;
-      display?: string;
+      display?: Display;
       mode?: Mode;
       ticket?: string;
     }>(),

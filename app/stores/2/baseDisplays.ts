@@ -1,17 +1,14 @@
-import type { FilterStore } from './baseMonsterFilter';
-
 export type DisplayItem<DisplayType> = {
   value: DisplayType;
   label: string;
 };
 
-export function makeMonsterDisplayStore<DisplayType extends string = string>(
+export function makeDisplaysStore<DisplayType extends string = string>(
   storeId: string,
   initial: DisplayType,
   fallback: DisplayType,
   displayToLabel: (display: DisplayType) => string,
-  all: () => DisplayType[],
-  updateFilter?: (display: DisplayType, filter: FilterStore) => void
+  all: () => DisplayType[]
 ) {
   return defineStore(storeId, {
     state() {
@@ -42,15 +39,11 @@ export function makeMonsterDisplayStore<DisplayType extends string = string>(
     },
 
     actions: {
-      setCurrent(value: DisplayType, filter?: FilterStore) {
+      setCurrent(value: DisplayType) {
         this.current = value as typeof this.current;
-
-        if (updateFilter && filter != null) {
-          updateFilter(value, filter);
-        }
       },
     },
   });
 }
 
-export type DisplayStore = ReturnType<ReturnType<typeof makeMonsterDisplayStore>>;
+export type DisplaysStore = ReturnType<ReturnType<typeof makeDisplaysStore>>;

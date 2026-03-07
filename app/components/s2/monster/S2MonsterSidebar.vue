@@ -1,10 +1,10 @@
 <script lang="ts" setup>
   import type { Modes } from './S2MonsterViewOptions.vue';
   import useMonsterFilter from '~/stores/2/monsterFilter';
-  import useMonsterDisplay from '~/stores/2/monsterDisplay';
+  import useMonsterSources from '~/stores/2/monsterSources';
 
   const filter = useMonsterFilter();
-  const display = useMonsterDisplay();
+  const sources = useMonsterSources();
 
   const tabs = [
     { label: 'View', slot: 'view' },
@@ -22,7 +22,7 @@
 <template>
   <UTabs color="neutral" variant="link" :items="tabs">
     <template #view>
-      <S2MonsterViewOptions :filter="filter" :display="display" :modes="modes" />
+      <S2MonsterViewOptions :filter="filter" :sources="sources" :modes="modes" />
     </template>
 
     <template #filter>

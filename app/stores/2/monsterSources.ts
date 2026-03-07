@@ -1,15 +1,15 @@
 import type { FilterStore } from './baseMonsterFilter';
-import { makeMonsterDisplayStore } from './baseMonsterDisplay';
+import { makeMonsterSourcesStore } from './baseMonsterSources';
 import useHistoryStore from './historyStore';
 
-export type Display = 'default' | 'recent' | 'pinned';
+export type Source = 'default' | 'recent' | 'pinned';
 
-const useMonsterDisplay = makeMonsterDisplayStore<Display>(
-  's2/monsterDisplay',
+const useMonsterSources = makeMonsterSourcesStore<Source>(
+  's2/monsterSources',
   'default',
   'default',
-  (display: Display): string => {
-    switch (display) {
+  (source: Source): string => {
+    switch (source) {
       case 'default':
         return 'All';
 
@@ -20,10 +20,10 @@ const useMonsterDisplay = makeMonsterDisplayStore<Display>(
         return 'Bookmarks';
     }
   },
-  (): Display[] => {
+  (): Source[] => {
     const history = useHistoryStore();
 
-    const results: Display[] = ['default'];
+    const results: Source[] = ['default'];
 
     if (history.hasRecentMonsters) {
       results.push('recent');
@@ -35,11 +35,11 @@ const useMonsterDisplay = makeMonsterDisplayStore<Display>(
 
     return results;
   },
-  (display: Display, filter: FilterStore) => {
-    if (display === 'pinned') {
+  (source: Source, filter: FilterStore) => {
+    if (source === 'pinned') {
       filter.mode = 'combat';
     }
   }
 );
 
-export default useMonsterDisplay;
+export default useMonsterSources;

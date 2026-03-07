@@ -3,7 +3,7 @@
   import S2EggSidebar from '~/components/s2/egg/S2EggSidebar.vue';
   import useHistoryStore from '~/stores/2/historyStore';
   import useEggFilter from '~/stores/2/eggFilter';
-  import useEggDisplay, { type Display } from '~/stores/2/eggDisplay';
+  import useEggSources, { type Source } from '~/stores/2/eggSources';
   import { getGenera, monsties } from '~/services/2/data';
 
   definePageMeta({
@@ -15,13 +15,13 @@
     description:
       'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
   });
-  // TODO drop ?display from canonical url
+  // TODO drop ?source from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   const history = useHistoryStore();
   const eggFilter = useEggFilter();
   provide(filterStoreKey, eggFilter);
-  const display = useEggDisplay();
+  const sources = useEggSources();
 
   const oldSortKey = ref(eggFilter.sortKey);
   const oldSortOrder = ref(eggFilter.sortOrder);
@@ -36,8 +36,8 @@
     return (eggFilter.hasActiveSort || eggFilter.hasActiveFilters) && !showEggFinder.value;
   });
 
-  const displayMonsters = computed(() => {
-    switch (display.current) {
+  const sourceItems = computed(() => {
+    switch (sources.current) {
       case 'recent':
         return history.recentMonsties;
 
@@ -49,14 +49,14 @@
     }
   });
 
-  function syncDisplayedMonsters() {
-    eggFilter.setMonsters(displayMonsters.value, {
-      preserveSourceOrder: display.current === 'recent' && eggFilter.preserveSourceOrder,
+  function syncSource() {
+    eggFilter.setMonsters(sourceItems.value, {
+      preserveSourceOrder: sources.current === 'recent' && eggFilter.preserveSourceOrder,
     });
   }
 
   watch(
-    () => display.current,
+    () => sources.current,
     (newValue, oldValue) => {
       if (newValue === 'recent' && oldValue !== 'recent') {
         // switch to recent
@@ -75,12 +75,12 @@
         eggFilter.preserveSourceOrder = false;
       }
 
-      syncDisplayedMonsters();
+      syncSource();
     },
     { immediate: true }
   );
 
-  watch(displayMonsters, syncDisplayedMonsters);
+  watch(sourceItems, syncSource);
 
   const showFilter = ref(false); // TODO?
 
@@ -93,19 +93,19 @@
       return 'Egg Finder';
     }
 
-    if (display.current === 'recent') {
+    if (sources.current === 'recent') {
       return 'Recent Eggs';
     }
 
-    if (display.current === 'pinned') {
+    if (sources.current === 'pinned') {
       return 'Bookmarked Eggs';
     }
 
     return null;
   });
 
-  function toggleDisplay() {
-    display.setCurrent(display.next, eggFilter);
+  function toggleSource() {
+    sources.setCurrent(sources.next, eggFilter);
     showEggFinder.value = false;
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -113,14 +113,14 @@
 
   const route = useRoute();
   watch(
-    () => route.query.display,
-    (newDisplay) => {
-      if (typeof newDisplay !== 'string') {
+    () => route.query.source as Source,
+    (newSource) => {
+      if (typeof newSource !== 'string') {
         return;
       }
 
-      if (display.all.includes(newDisplay as Display)) {
-        display.setCurrent(newDisplay as Display, eggFilter);
+      if (sources.all.includes(newSource)) {
+        sources.setCurrent(newSource, eggFilter);
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -128,12 +128,12 @@
     { immediate: true }
   );
 
-  const fabDisplayVisible = computed(() => {
-    return !showFilter.value && display.all.length > 1;
+  const fabSourceVisible = computed(() => {
+    return !showFilter.value && sources.all.length > 1;
   });
 
-  const fabDisplayTitle = computed(() => {
-    switch (display.next) {
+  const fabSourceTitle = computed(() => {
+    switch (sources.next) {
       case 'default':
         return 'Show all eggs';
 
@@ -148,8 +148,8 @@
     }
   });
 
-  const fabDisplayIcon = computed(() => {
-    switch (display.next) {
+  const fabSourceIcon = computed(() => {
+    switch (sources.next) {
       case 'default':
         return 'ph:x';
 
@@ -186,7 +186,7 @@
 
   function toggleEggFinder() {
     showEggFinder.value = !showEggFinder.value;
-    display.setCurrent('default', eggFilter);
+    sources.setCurrent('default', eggFilter);
 
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -217,13 +217,13 @@
       <!-- TODO filter modal -->
 
       <ClientOnly>
-        <UTooltip v-if="fabDisplayVisible" :text="fabDisplayTitle">
+        <UTooltip v-if="fabSourceVisible" :text="fabSourceTitle">
           <UButton
             color="neutral"
             variant="soft"
-            :icon="fabDisplayIcon"
+            :icon="fabSourceIcon"
             class="absolute top-[275px] z-10"
-            @click="toggleDisplay"
+            @click="toggleSource"
           />
         </UTooltip>
 

@@ -4,7 +4,7 @@
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonstieFilter from '~/stores/2/monstieFilter';
-  import useMonstieDisplay, { type Display } from '~/stores/2/monstieDisplay';
+  import useMonstieSources, { type Source } from '~/stores/2/monstieSources';
 
   definePageMeta({
     sidebarComponent: S2MonstieSidebar,
@@ -15,13 +15,13 @@
     description:
       'Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats',
   });
-  // TODO drop ?display from canonical url
+  // TODO drop ?source from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   const history = useHistoryStore();
   const monstieFilter = useMonstieFilter();
   provide(filterStoreKey, monstieFilter);
-  const display = useMonstieDisplay();
+  const sources = useMonstieSources();
 
   const oldSortKey = ref(monstieFilter.sortKey);
   const oldSortOrder = ref(monstieFilter.sortOrder);
@@ -30,8 +30,8 @@
     return monstieFilter.hasActiveSort || monstieFilter.hasActiveFilters;
   });
 
-  const displayMonsters = computed(() => {
-    switch (display.current) {
+  const sourceItems = computed(() => {
+    switch (sources.current) {
       case 'recent':
         return history.recentMonsties;
 
@@ -43,14 +43,14 @@
     }
   });
 
-  function syncDisplayedMonsters() {
-    monstieFilter.setMonsters(displayMonsters.value, {
-      preserveSourceOrder: display.current === 'recent' && monstieFilter.preserveSourceOrder,
+  function syncSource() {
+    monstieFilter.setMonsters(sourceItems.value, {
+      preserveSourceOrder: sources.current === 'recent' && monstieFilter.preserveSourceOrder,
     });
   }
 
   watch(
-    () => display.current,
+    () => sources.current,
     (newValue, oldValue) => {
       if (newValue === 'recent' && oldValue !== 'recent') {
         // switch to recent
@@ -73,12 +73,12 @@
         monstieFilter.preserveSourceOrder = false;
       }
 
-      syncDisplayedMonsters();
+      syncSource();
     },
     { immediate: true }
   );
 
-  watch(displayMonsters, syncDisplayedMonsters);
+  watch(sourceItems, syncSource);
 
   const showFilter = ref(false); // TODO?
 
@@ -87,33 +87,33 @@
       return 'View Options';
     }
 
-    if (display.current === 'recent') {
+    if (sources.current === 'recent') {
       return 'Recent Monsties';
     }
 
-    if (display.current === 'pinned') {
+    if (sources.current === 'pinned') {
       return 'Bookmarked Monsties';
     }
 
     return null;
   });
 
-  function toggleDisplay() {
-    display.setCurrent(display.next, monstieFilter);
+  function toggleSource() {
+    sources.setCurrent(sources.next, monstieFilter);
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   const route = useRoute();
   watch(
-    () => route.query.display,
-    (newDisplay) => {
-      if (typeof newDisplay !== 'string') {
+    () => route.query.source as Source,
+    (newSource) => {
+      if (typeof newSource !== 'string') {
         return;
       }
 
-      if (display.all.includes(newDisplay as Display)) {
-        display.setCurrent(newDisplay as Display, monstieFilter);
+      if (sources.all.includes(newSource)) {
+        sources.setCurrent(newSource, monstieFilter);
 
         useRouter().replace(route.path); // remove query parameters from URL
       }
@@ -121,12 +121,12 @@
     { immediate: true }
   );
 
-  const fabDisplayVisible = computed(() => {
-    return !showFilter.value && display.all.length > 1;
+  const fabSourceVisible = computed(() => {
+    return !showFilter.value && sources.all.length > 1;
   });
 
-  const fabDisplayTitle = computed(() => {
-    switch (display.next) {
+  const fabSourceTitle = computed(() => {
+    switch (sources.next) {
       case 'default':
         return 'Show all monsters';
 
@@ -141,8 +141,8 @@
     }
   });
 
-  const fabDisplayIcon = computed(() => {
-    switch (display.next) {
+  const fabSourceIcon = computed(() => {
+    switch (sources.next) {
       case 'default':
         return 'ph:x';
 
@@ -176,13 +176,13 @@
       <!-- TODO filter modal -->
 
       <ClientOnly>
-        <UTooltip v-if="fabDisplayVisible" :text="fabDisplayTitle">
+        <UTooltip v-if="fabSourceVisible" :text="fabSourceTitle">
           <UButton
             color="neutral"
             variant="soft"
-            :icon="fabDisplayIcon"
+            :icon="fabSourceIcon"
             class="absolute z-10"
-            @click="toggleDisplay"
+            @click="toggleSource"
           />
         </UTooltip>
       </ClientOnly>
