@@ -352,7 +352,7 @@ export function makeMonsterFilterStore(
           result.push({ name: 'catavanFilter', value: state.catavanFilter });
         }
 
-        if (state.eldersLairFilter != null && state.sortKey !== 'eldersLair') {
+        if (state.eldersLairFilter != null) {
           result.push({
             name: 'eldersLairFilter',
             value: "Elder's Lair - " + state.eldersLairFilter,
