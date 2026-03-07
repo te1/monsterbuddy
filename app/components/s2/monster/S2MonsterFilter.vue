@@ -201,7 +201,7 @@
     <div>
       <UFormField label="Name" orientation="horizontal">
         <AppInputSearch
-          :modelValue="props.filter.nameFilter"
+          :modelValue="filter.nameFilter"
           @update:modelValue="filter.$patch({ nameFilter: $event })"
         />
       </UFormField>
@@ -221,7 +221,7 @@
 
       <UFormField label="Genus" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.genusFilter ?? 'ALL'"
+          :modelValue="filter.genusFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="genera"
@@ -232,7 +232,7 @@
 
       <UFormField v-if="showHabitatFilter" label="Habitat" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.habitatFilter ?? 'ALL'"
+          :modelValue="filter.habitatFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="habitats"
@@ -243,7 +243,7 @@
 
       <UFormField v-if="showCoopQuestFilter" label="Co-Op Quest" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.coopQuestFilter ?? 'ALL'"
+          :modelValue="filter.coopQuestFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="coopQuests"
@@ -254,7 +254,7 @@
 
       <UFormField v-if="showCatavanFilter" label="Catavan Stand" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.catavanFilter ?? 'ALL'"
+          :modelValue="filter.catavanFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="catavanStands"
@@ -265,7 +265,7 @@
 
       <UFormField v-if="showEldersLairFilter" label="Elder's Lair" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.eldersLairFilter ?? 'ALL'"
+          :modelValue="filter.eldersLairFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="eldersLairFloors"
@@ -276,7 +276,7 @@
 
       <UFormField v-if="showAttackTypeFilter" label="Attack Type" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.attackTypeFilter ?? 'ALL'"
+          :modelValue="filter.attackTypeFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="attackTypes"
@@ -287,7 +287,7 @@
 
       <UFormField v-if="showAttackElementFilter" label="Attack Element" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.attackElementFilter ?? 'ALL'"
+          :modelValue="filter.attackElementFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="attackElements"
@@ -298,7 +298,7 @@
 
       <UFormField v-if="showRidingActionFilter" label="Riding Action" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.ridingActionFilter ?? 'ALL'"
+          :modelValue="filter.ridingActionFilter ?? 'ALL'"
           color="neutral"
           variant="soft2"
           :items="ridingActions"
@@ -309,7 +309,7 @@
 
       <UFormField v-if="showHatchableFilter" label="Hatchable" orientation="horizontal">
         <AppFilterToggle
-          :modelValue="props.filter.hatchableFilter"
+          :modelValue="filter.hatchableFilter"
           :texts="['Include', 'Only Hatchable', 'Exclude']"
           class="w-full"
           @update:modelValue="setFilter('hatchableFilter', $event)"
@@ -318,7 +318,7 @@
 
       <UFormField v-if="showDeviantsFilter" label="Deviants" orientation="horizontal">
         <AppFilterToggle
-          :modelValue="props.filter.deviantsFilter"
+          :modelValue="filter.deviantsFilter"
           :texts="['Include', 'Only Deviants', 'Exclude']"
           class="w-full"
           @update:modelValue="setFilter('deviantsFilter', $event)"
@@ -335,7 +335,7 @@
           trailingIcon="ph:arrow-counter-clockwise"
           label="Reset"
           :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
-          @click="props.filter.resetFilter"
+          @click="filter.resetFilter"
         />
       </UFormField>
     </div>

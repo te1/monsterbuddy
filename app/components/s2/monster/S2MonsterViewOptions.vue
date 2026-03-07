@@ -6,14 +6,16 @@
 
   const props = withDefaults(
     defineProps<{
-      filter: FilterStore;
+      filter?: FilterStore;
       display?: DisplayStore;
-      modes: Modes;
+      modes?: Modes;
       hideSort?: boolean;
       showSortByStats?: boolean;
     }>(),
     {
+      filter: undefined,
       display: undefined,
+      modes: undefined,
       hideSort: false,
       showSortByStats: false,
     }
@@ -78,30 +80,30 @@
   });
 
   function setSortKey(value: SortKey) {
-    if (value === props.filter.sortKey) {
+    if (value === props.filter?.sortKey) {
       return;
     }
 
     const config = sortConfig.value.find((config) => config.value === value);
 
-    props.filter.setSort(value, config?.default ?? 'asc');
+    props.filter?.setSort(value, config?.default ?? 'asc');
 
     if (
       config?.mode &&
-      props.filter.mode !== 'compact' &&
-      props.filter.autoSwitchModes.includes(config.mode)
+      props.filter?.mode !== 'compact' &&
+      props.filter?.autoSwitchModes.includes(config.mode)
     ) {
-      props.filter.$patch({ mode: config.mode });
+      props.filter?.$patch({ mode: config.mode });
     }
   }
 </script>
 
 <template>
   <div class="flex flex-col gap-3">
-    <UFormField label="Name" orientation="horizontal">
+    <UFormField v-if="filter != null" label="Name" orientation="horizontal">
       <AppInputSearch
-        :modelValue="props.filter.nameFilter"
-        @update:modelValue="props.filter.$patch({ nameFilter: $event })"
+        :modelValue="filter.nameFilter"
+        @update:modelValue="filter.$patch({ nameFilter: $event })"
       />
     </UFormField>
 
@@ -116,7 +118,7 @@
             :label="item.label"
             class="w-full"
             :ui="{ base: 'font-normal' }"
-            @click="display.setCurrent(item.value, props.filter)"
+            @click="display.setCurrent(item.value, filter)"
           />
 
           <template #fallback>
@@ -132,25 +134,25 @@
       </div>
     </UFormField>
 
-    <UFormField label="Show" orientation="horizontal">
+    <UFormField v-if="filter != null && modes != null" label="Show" orientation="horizontal">
       <USelect
-        :modelValue="props.filter.mode"
+        :modelValue="filter.mode"
         color="neutral"
         variant="soft2"
         :items="modes"
         class="w-full"
-        @update:modelValue="props.filter.$patch({ mode: $event })"
+        @update:modelValue="filter.$patch({ mode: $event })"
       />
     </UFormField>
 
     <UFormField
-      v-if="!hideSort"
+      v-if="!hideSort && filter != null"
       label="Sort By"
       orientation="horizontal"
       :ui="{ container: 'flex flex-col gap-1' }"
     >
       <USelect
-        :modelValue="props.filter.sortKey"
+        :modelValue="filter.sortKey"
         color="neutral"
         variant="soft2"
         :items="sortConfig"
@@ -158,8 +160,8 @@
         @update:modelValue="setSortKey"
       />
       <AppSortOrderToggle
-        :modelValue="props.filter.sortOrder"
-        @update:modelValue="props.filter.setSortOrder($event)"
+        :modelValue="filter.sortOrder"
+        @update:modelValue="filter.setSortOrder($event)"
       />
     </UFormField>
   </div>

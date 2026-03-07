@@ -1,9 +1,14 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
   import type { Mode } from '~/stores/2/baseMonsterFilter';
+  import S2CatavanStandSidebar from '~/components/s2/S2CatavanStandSidebar.vue';
   import { catavanStandsBySlug, getMonstersByCatavanStand } from '~/services/2/data';
   import { getCatavanStandSeo } from '~/services/2/seo';
   import useCatavanStandDisplay from '~/stores/2/catavanStandDisplay';
+
+  definePageMeta({
+    sidebarComponent: S2CatavanStandSidebar,
+  });
 
   const route = useRoute();
   const catavanStand = catavanStandsBySlug.get(route.params.slug as string);
@@ -82,7 +87,7 @@
 
       case 'monstie':
       case 'egg':
-        return monster.hatchable ? 'location' : 'rarity';
+        return monster.hatchable ? 'retreat' : 'rarity';
 
       default:
         return undefined;
