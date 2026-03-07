@@ -18,6 +18,28 @@
   useSeoMeta(getCatavanStandSeo(catavanStand, monsters.value.length));
   const headline = gameTypeToFullName('mhst2');
 
+  const description = computed(() => {
+    let result = 'You can find ';
+
+    const monsterCount = monsters.value.length;
+
+    if (monsterCount === 1) {
+      result += `one monster `;
+    } else {
+      result += `${monsterCount} different monsters `;
+    }
+
+    result += 'nearby this catavan stand';
+
+    if (catavanStand.zone) {
+      result += ` in ${catavanStand.zone}`;
+    }
+
+    result += '.';
+
+    return result;
+  });
+
   type Display = 'monster' | 'monstie' | 'egg';
   const display = ref<Display>('monster');
 
@@ -84,12 +106,18 @@
 
 <template>
   <div>
-    <UPageHeader :title="catavanStand.name" :headline="headline" />
+    <UPageHeader :title="catavanStand.name" :headline="headline" :description="description" />
 
     <UPageBody>
       <ClientOnly>
         <UTooltip v-if="fabVisible" :text="fabTitle">
-          <UButton color="neutral" variant="soft" :icon="fabIcon" @click="toggleDisplay" />
+          <UButton
+            color="neutral"
+            variant="soft"
+            class="absolute z-10"
+            :icon="fabIcon"
+            @click="toggleDisplay"
+          />
         </UTooltip>
       </ClientOnly>
 

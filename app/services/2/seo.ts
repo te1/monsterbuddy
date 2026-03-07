@@ -33,8 +33,12 @@ export function getCatavanStandSeo(catavanStand: CatavanStand, monsterCount: num
 
   description += 'that you can fast travel to.';
 
-  if (monsterCount) {
-    description += ` It is home to ${monsterCount} different monsters.`;
+  if (monsterCount > 0) {
+    if (monsterCount === 1) {
+      description += ` It's home to one monster.`;
+    } else {
+      description += ` It's home to ${monsterCount} different monsters.`;
+    }
   }
 
   return {
@@ -58,7 +62,7 @@ export function getCoopQuestSeo(coopQuest: CoopQuest, monsterCount: number) {
 
   description += 'co-op quest';
 
-  if (coopQuest.type === 'explore') {
+  if (coopQuest.type === 'explore' && monsterCount > 1) {
     description += `. You can find ${monsterCount} different monstie eggs inside.`;
   }
 
@@ -73,7 +77,7 @@ export function getRidingActionSeo(ridingAction: RidingAction, monsterCount: num
 
   let description = `${ridingAction.name} is a riding action that `;
 
-  if (monsterCount) {
+  if (monsterCount > 1) {
     description += `${monsterCount} `;
   }
 
