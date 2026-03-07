@@ -1,7 +1,12 @@
 <script lang="ts" setup>
+  import S2MonsterDetailsSidebar from '~/components/s2/monster/S2MonsterDetailsSidebar.vue';
   import { monstersBySlug } from '~/services/2/data';
   import { getMonsterSeo } from '~/services/2/seo';
   import useHistoryStore from '~/stores/2/historyStore';
+
+  definePageMeta({
+    sidebarComponent: S2MonsterDetailsSidebar,
+  });
 
   const route = useRoute();
   const monster = monstersBySlug.get(route.params.slug as string);

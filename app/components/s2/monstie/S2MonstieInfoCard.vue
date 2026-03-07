@@ -73,8 +73,15 @@
       </div>
     </div>
 
-    <div class="absolute top-0 right-0 pr-3">
-      <AppPinToggle :modelValue="isPinned" subject="monstie" @update:modelValue="togglePin" />
-    </div>
+    <ClientOnly>
+      <div class="absolute top-0 right-0 pr-3">
+        <AppPinToggle
+          :modelValue="isPinned"
+          subject="monstie"
+          noLabel
+          @update:modelValue="togglePin"
+        />
+      </div>
+    </ClientOnly>
   </section>
 </template>

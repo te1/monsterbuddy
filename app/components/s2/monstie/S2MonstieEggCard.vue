@@ -30,8 +30,10 @@
       <div v-html="retreat" />
     </div>
 
-    <div class="absolute top-0 right-0 pt-3 pr-3">
-      <AppPinToggle :modelValue="isPinned" subject="egg" @update:modelValue="togglePin" />
-    </div>
+    <ClientOnly>
+      <div class="absolute top-0 right-0 pt-3 pr-3">
+        <AppPinToggle :modelValue="isPinned" subject="egg" noLabel @update:modelValue="togglePin" />
+      </div>
+    </ClientOnly>
   </section>
 </template>

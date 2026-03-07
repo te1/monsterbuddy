@@ -110,7 +110,7 @@
                   <template #fallback>
                     <div v-for="i in 7" :key="i" class="flex items-center gap-3">
                       <USkeleton class="hidden h-9 w-9 rounded-full xl:block" />
-                      <USkeleton class="my-1 h-4 w-[80%]" />
+                      <USkeleton class="my-1 h-4 w-[80%] xl:w-[calc(80%-3rem)]" />
                     </div>
                   </template>
                 </ClientOnly>

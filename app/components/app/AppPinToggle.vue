@@ -2,9 +2,11 @@
   const props = withDefaults(
     defineProps<{
       subject?: string;
+      noLabel?: boolean;
     }>(),
     {
       subject: undefined,
+      noLabel: false,
     }
   );
 
@@ -12,7 +14,21 @@
     required: true,
   });
 
-  const title = computed(() => {
+  const tooltip = computed(() => {
+    if (props.subject) {
+      if (pinned.value) {
+        return `Remove ${props.subject} bookmark`;
+      }
+      return `Bookmark ${props.subject}`;
+    }
+
+    if (pinned.value) {
+      return 'Remove bookmark';
+    }
+    return 'Bookmark';
+  });
+
+  const label = computed(() => {
     if (props.subject) {
       if (pinned.value) {
         return `Remove ${props.subject} bookmark`;
@@ -28,14 +44,22 @@
 </script>
 
 <template>
-  <ClientOnly>
-    <UTooltip :text="title">
-      <UButton
-        :color="pinned ? 'primary' : 'neutral'"
-        variant="link"
-        :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
-        @click="pinned = !pinned"
-      />
-    </UTooltip>
-  </ClientOnly>
+  <UTooltip v-if="noLabel" :text="tooltip">
+    <UButton
+      :color="pinned ? 'primary' : 'neutral'"
+      variant="link"
+      :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
+      @click="pinned = !pinned"
+    />
+  </UTooltip>
+
+  <UButton
+    v-else
+    color="neutral"
+    variant="link"
+    :label="label"
+    :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
+    :ui="{ base: 'px-0' }"
+    @click="pinned = !pinned"
+  />
 </template>
