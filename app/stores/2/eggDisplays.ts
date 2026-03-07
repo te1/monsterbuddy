@@ -1,17 +1,17 @@
 import type { Display } from '~/components/s2/monster/S2MonsterSmartListItem.vue';
 import { makeDisplaysStore } from './baseDisplays';
 
-const useRidingActionDisplays = makeDisplaysStore<Display>(
-  's2/ridingActionDisplays',
+const useEggsDisplay = makeDisplaysStore<Display>(
+  's2/eggDisplays',
   'monstie',
   'monstie',
   (display: Display): string => {
     switch (display) {
       case 'monstie':
-        return 'Monstie';
+        return 'All eggs';
 
       case 'egg':
-        return 'Egg';
+        return 'Egg finder';
 
       default:
         return '';
@@ -22,4 +22,4 @@ const useRidingActionDisplays = makeDisplaysStore<Display>(
   }
 );
 
-export default useRidingActionDisplays;
+export default useEggsDisplay;

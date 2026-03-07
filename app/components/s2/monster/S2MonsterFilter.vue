@@ -2,10 +2,12 @@
   import type { EggColor } from '~/services/2/types';
   import type { FilterKey, FilterStore, Mode } from '~/stores/2/baseMonsterFilter';
   import type { SourcesStore } from '~/stores/2/baseMonsterSources';
+  import type { DisplaysStore } from '~/stores/2/baseDisplays';
   import { allElements } from '~/services/2/data';
 
   const props = withDefaults(
     defineProps<{
+      displays?: DisplaysStore;
       filter: FilterStore;
       sources?: SourcesStore;
       showEggColorFilter?: boolean;
@@ -20,6 +22,7 @@
       showDeviantsFilter?: boolean;
     }>(),
     {
+      displays: undefined,
       sources: undefined,
       showEggColorFilter: false,
       showHabitatFilter: false,
@@ -201,6 +204,18 @@
 
 <template>
   <div class="flex flex-col gap-3">
+    <URadioGroup
+      v-if="displays != null"
+      color="neutral"
+      variant="table"
+      orientation="horizontal"
+      indicator="hidden"
+      :ui="{ item: 'grow' }"
+      :modelValue="displays.current"
+      :items="displays.items"
+      @update:modelValue="displays.setCurrent($event)"
+    />
+
     <ClientOnly v-if="sources != null">
       <URadioGroup
         color="neutral"

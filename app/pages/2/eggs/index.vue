@@ -5,6 +5,7 @@
   import useEggFilter from '~/stores/2/eggFilter';
   import useEggSources, { type Source } from '~/stores/2/eggSources';
   import { getGenera, monsties } from '~/services/2/data';
+  import useEggsDisplay from '~/stores/2/eggDisplays';
 
   definePageMeta({
     sidebarComponent: S2EggSidebar,
@@ -22,6 +23,7 @@
   const eggFilter = useEggFilter();
   provide(filterStoreKey, eggFilter);
   const sources = useEggSources();
+  const displays = useEggsDisplay();
 
   const oldSortKey = ref(eggFilter.sortKey);
   const oldSortOrder = ref(eggFilter.sortOrder);
@@ -30,7 +32,9 @@
     return getGenera(monsties);
   });
 
-  const showEggFinder = ref(false);
+  const showEggFinder = computed(() => {
+    return displays.current === 'egg';
+  });
 
   const showActiveFilters = computed(() => {
     return (eggFilter.hasActiveSort || eggFilter.hasActiveFilters) && !showEggFinder.value;
@@ -106,7 +110,7 @@
 
   function toggleSource() {
     sources.setCurrent(sources.next, eggFilter);
-    showEggFinder.value = false;
+    displays.setCurrent('monstie');
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -185,12 +189,10 @@
   });
 
   function toggleEggFinder() {
-    showEggFinder.value = !showEggFinder.value;
+    displays.setCurrent(displays.next);
     sources.setCurrent('default', eggFilter);
 
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function setGenusFilter(genus: GenusType) {
