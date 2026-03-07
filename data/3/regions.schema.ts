@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ElementTypeSchema } from '../shared.schema';
+import { ElementTypeSchema } from '~~/data/shared.schema';
 
 const RegionMonstersSchema = z.object({
   large: z.array(z.string()),

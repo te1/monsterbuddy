@@ -4,7 +4,7 @@ import {
   ElementTypeSchema,
   GenusTypeSchema,
   WeaponTypeSchema,
-} from '../shared.schema';
+} from '~~/data/shared.schema';
 
 export const RelationTypeSchema = z.enum([
   'subspecies',

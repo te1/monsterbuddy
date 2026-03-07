@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { Modes } from '../monster/S2MonsterViewOptions.vue';
+  import type { Modes } from '~/components/s2/monster/S2MonsterViewOptions.vue';
   import useMonstieFilter from '~/stores/2/monstieFilter';
   import useMonstieDisplay from '~/stores/2/monstieDisplay';
 

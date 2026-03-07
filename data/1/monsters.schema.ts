@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { AttackTypeSchema, ElementTypeSchema, GenusTypeSchema } from '../shared.schema';
+import { AttackTypeSchema, ElementTypeSchema, GenusTypeSchema } from '~~/data/shared.schema';
 
 export const RelationTypeSchema = z.enum([
   'subspecies',
