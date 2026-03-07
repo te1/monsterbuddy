@@ -113,6 +113,7 @@
             :variant="display.current === item.value ? 'subtle2' : 'soft2'"
             :label="item.label"
             class="w-full"
+            :ui="{ base: 'font-normal' }"
             @click="display.setCurrent(item.value, props.filter)"
           />
 
@@ -122,6 +123,7 @@
               variant="soft2"
               :label="display.items[0]?.label"
               class="w-full"
+              :ui="{ base: 'font-normal' }"
             />
           </template>
         </ClientOnly>

@@ -33,8 +33,9 @@
       :label="label"
       color="neutral"
       variant="ghost"
-      class="w-19 justify-center"
+      class="w-18 justify-center"
       :class="[open && 'bg-elevated']"
+      :ui="{ base: 'font-normal' }"
     />
   </DefineButtonTemplate>
 

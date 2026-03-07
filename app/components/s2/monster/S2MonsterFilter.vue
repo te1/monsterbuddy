@@ -304,7 +304,7 @@
           class="w-full"
           trailingIcon="i-lucide-rotate-ccw"
           label="Reset"
-          :ui="{ base: 'justify-between' }"
+          :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
           @click="props.filter.resetFilter"
         />
       </UFormField>

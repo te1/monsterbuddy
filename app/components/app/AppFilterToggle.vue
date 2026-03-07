@@ -59,7 +59,7 @@
     class="w-full"
     :trailingIcon="icon"
     :label="label ?? ''"
-    :ui="{ base: 'justify-between' }"
+    :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
     @click="toggle"
   />
 </template>
