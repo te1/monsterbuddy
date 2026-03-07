@@ -1,10 +1,16 @@
 <script lang="ts" setup>
   import type { MonsterLocation } from '~/services/2/types';
   import type { Mode } from '~/stores/2/baseMonsterFilter';
+  import S2CoopQuestSidebar from '~/components/s2/S2CoopQuestSidebar.vue';
+  import { groupBy, sortBy } from 'es-toolkit/array';
   import { coopQuestsBySlug, getMonstersByCoopQuest } from '~/services/2/data';
   import { getCoopQuestSeo } from '~/services/2/seo';
-  import { formatCoopQuest } from '~/services/2/presentation';
-  import { groupBy, sortBy } from 'es-toolkit/array';
+  import { formatCoopQuestType } from '~/services/2/presentation';
+  import useCoopQuestDisplays from '~/stores/2/coopQuestDisplays';
+
+  definePageMeta({
+    sidebarComponent: S2CoopQuestSidebar,
+  });
 
   const route = useRoute();
   const coopQuest = coopQuestsBySlug.get(route.params.slug as string);
@@ -32,47 +38,45 @@
     return groupBy(items, (item) => (item.quest?.finalNest ? 'Final Nest' : 'Normal Nest'));
   });
 
-  const monsterCount = computed(() => Object.values(items).flat().length);
+  const monsterCount = computed(() => Object.values(items.value).flat().length);
 
   useSeoMeta(getCoopQuestSeo(coopQuest, monsterCount.value));
   const headline = gameTypeToFullName('mhst2');
 
-  const description = computed(() => formatCoopQuest(coopQuest));
+  const descriptionParts = computed(() => {
+    const type = formatCoopQuestType(coopQuest.type);
+
+    let part1 = `This `;
+
+    if (type) {
+      part1 += `(${type}) `;
+    }
+
+    const part2 = 'co-op quest';
+
+    let part3 = `is rated ★ ${coopQuest.rarity}.`;
+
+    if (coopQuest.type === 'explore' && monsterCount.value > 1) {
+      part3 += ` You can find ${monsterCount.value} different monstie eggs inside.`;
+    }
+
+    return [part1, part2, part3];
+  });
+
   const isGrouped = computed(() => coopQuest.type === 'explore');
 
-  type Display = 'egg' | 'monstie' | 'monster' | undefined;
-
-  const displays = computed<Display[]>(() => {
-    switch (coopQuest.type) {
-      case 'explore':
-        return ['egg', 'monstie'];
-
-      case 'slay':
-        return ['monster', 'egg'];
-
-      case 'time':
-        return ['monster'];
-
-      default:
-        return [];
-    }
-  });
-
-  const display = ref<Display>(displays.value[0]);
-
-  const nextDisplay = computed(() => {
-    const currentIndex = displays.value.indexOf(display.value);
-    const nextIndex = (currentIndex + 1) % displays.value.length;
-
-    return displays.value[nextIndex];
-  });
+  const displays = useCoopQuestDisplays();
+  displays.type = coopQuest.type;
+  if (displays.all[0] != null) {
+    displays.setCurrent(displays.all[0]);
+  }
 
   function toggleDisplay() {
-    display.value = nextDisplay.value;
+    displays.setCurrent(displays.next);
   }
 
   const mode = computed<Mode | undefined>(() => {
-    switch (display.value) {
+    switch (displays.current) {
       case 'monster':
         return 'combat';
 
@@ -92,12 +96,10 @@
     return undefined;
   }
 
-  const fabVisible = computed(() => {
-    return displays.value.length > 1;
-  });
+  const fabVisible = computed(() => displays.all.length > 1);
 
   const fabTitle = computed(() => {
-    switch (nextDisplay.value) {
+    switch (displays.next) {
       case 'monster':
         return 'Show monsters';
 
@@ -113,7 +115,7 @@
   });
 
   const fabIcon = computed(() => {
-    switch (nextDisplay.value) {
+    switch (displays.next) {
       case 'monster':
       case 'monstie':
         return 'ph:image-square';
@@ -131,12 +133,24 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader :title="coopQuest.name" :description="description" :headline="headline" />
+    <UPageHeader :title="coopQuest.name" :headline="headline">
+      <template #description>
+        {{ descriptionParts[0] }}
+        <AppNuxtLink to="/2/coop">{{ descriptionParts[1] }}</AppNuxtLink>
+        {{ descriptionParts[2] }}
+      </template>
+    </UPageHeader>
 
     <UPageBody>
       <ClientOnly>
         <UTooltip v-if="fabVisible" :text="fabTitle">
-          <UButton color="neutral" variant="soft" :icon="fabIcon" @click="toggleDisplay" />
+          <UButton
+            color="neutral"
+            variant="soft"
+            class="absolute top-[275px] z-10"
+            :icon="fabIcon"
+            @click="toggleDisplay"
+          />
         </UTooltip>
       </ClientOnly>
 
@@ -156,7 +170,7 @@
               v-for="item in group"
               :key="item.monster.no"
               :monster="item.monster"
-              :display="display"
+              :display="displays.current"
               :mode="mode"
               :ticket="getTicket(item.quest)"
             />

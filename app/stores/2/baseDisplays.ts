@@ -3,18 +3,27 @@ export type DisplayItem<DisplayType> = {
   label: string;
 };
 
-export function makeDisplaysStore<DisplayType extends string = string>(
+type DisplaysState<DisplayType extends string, ExtraStateType extends object> = {
+  current: DisplayType;
+} & ExtraStateType;
+
+export function makeDisplaysStore<
+  DisplayType extends string = string,
+  ExtraStateType extends object = object,
+>(
   storeId: string,
   initial: DisplayType,
   fallback: DisplayType,
   displayToLabel: (display: DisplayType) => string,
-  all: () => DisplayType[]
+  all: (this: DisplaysState<DisplayType, ExtraStateType>) => DisplayType[],
+  extraState?: ExtraStateType
 ) {
   return defineStore(storeId, {
     state() {
       return {
         current: initial,
-      };
+        ...extraState,
+      } as DisplaysState<DisplayType, ExtraStateType>;
     },
 
     getters: {

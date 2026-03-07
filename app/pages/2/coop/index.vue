@@ -18,7 +18,7 @@
   <div>
     <UPageHeader
       title="Co-Op Quests"
-      description="Overview of co-op missions and list of eggs you can find in the different dens"
+      description="Overview of important co-op quests and list of eggs you can find in the different dens"
       :headline="headline"
     />
 
