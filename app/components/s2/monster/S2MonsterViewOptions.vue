@@ -7,11 +7,14 @@
   const props = withDefaults(
     defineProps<{
       filter: FilterStore;
-      display: DisplayStore;
+      display?: DisplayStore;
       modes: Modes;
+      hideSort?: boolean;
       showSortByStats?: boolean;
     }>(),
     {
+      display: undefined,
+      hideSort: false,
       showSortByStats: false,
     }
   );
@@ -102,7 +105,7 @@
       />
     </UFormField>
 
-    <UFormField label="List" orientation="horizontal">
+    <UFormField v-if="display != null" label="List" orientation="horizontal">
       <div class="flex flex-col gap-1">
         <ClientOnly>
           <UButton
@@ -140,7 +143,12 @@
       />
     </UFormField>
 
-    <UFormField label="Sort By" orientation="horizontal" :ui="{ container: 'flex flex-col gap-1' }">
+    <UFormField
+      v-if="!hideSort"
+      label="Sort By"
+      orientation="horizontal"
+      :ui="{ container: 'flex flex-col gap-1' }"
+    >
       <USelect
         :modelValue="props.filter.sortKey"
         color="neutral"

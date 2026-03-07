@@ -1,6 +1,11 @@
 <script lang="ts" setup>
+  import S2EldersLairSidebar from '~/components/s2/S2EldersLairSidebar.vue';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useEldersLairFilter from '~/stores/2/eldersLairFilter';
+
+  definePageMeta({
+    sidebarComponent: S2EldersLairSidebar,
+  });
 
   useSeoMeta({
     title: `Elder's Lair Monster List For ${gameTypeToFullLabel('mhst2')}`,
@@ -52,7 +57,7 @@
           <AppFilterPill
             v-if="eldersLairFilter.hasActiveSort"
             :caption="eldersLairFilter.activeSort?.caption ?? ''"
-            filterTarget="/monsties/filter/"
+            filterTarget="/elders-lair/filter"
             :sortOrder="eldersLairFilter.activeSort?.order"
           />
 
@@ -60,7 +65,7 @@
             v-for="filter in eldersLairFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/monsters/filter/"
+            filterTarget="/elders-lair/filter"
             showRemove
             @remove="eldersLairFilter[filter.name] = undefined"
           />
