@@ -104,6 +104,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // update source from query string
   const route = useRoute();
   watch(
     () => route.query.source as Source,

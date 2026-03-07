@@ -25,6 +25,26 @@
     { value: 'retreat', label: 'Retreat' },
     { value: 'rarity', label: 'Rarity' },
   ];
+
+  // switch to source: all when entering egg finder
+  watch(
+    () => displays.current,
+    (newValue) => {
+      if (newValue === 'egg') {
+        sources.setCurrent('default', filter);
+      }
+    }
+  );
+
+  // turn off egg finder when switching sources
+  watch(
+    () => sources.current,
+    (newValue) => {
+      if (newValue !== 'default') {
+        displays.setCurrent('monstie');
+      }
+    }
+  );
 </script>
 
 <template>
