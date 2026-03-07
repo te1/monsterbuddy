@@ -10,6 +10,7 @@
       displays?: DisplaysStore;
       filter: FilterStore;
       sources?: SourcesStore;
+      disabled?: boolean;
       showEggColorFilter?: boolean;
       showHabitatFilter?: boolean;
       showCoopQuestFilter?: boolean;
@@ -24,6 +25,7 @@
     {
       displays: undefined,
       sources: undefined,
+      disabled: false,
       showEggColorFilter: false,
       showHabitatFilter: false,
       showCoopQuestFilter: false,
@@ -232,6 +234,7 @@
     <UFormField label="Name" orientation="horizontal">
       <AppInputSearch
         :modelValue="filter.nameFilter"
+        :disabled="disabled"
         @update:modelValue="filter.$patch({ nameFilter: $event })"
       />
     </UFormField>
@@ -244,6 +247,7 @@
           variant="soft2"
           :items="eggColors"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setEggColor"
         />
       </UFormField>
@@ -255,6 +259,7 @@
           variant="soft2"
           :items="genera"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setGenusFilter"
         />
       </UFormField>
@@ -266,6 +271,7 @@
           variant="soft2"
           :items="habitats"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setHabitatFilter"
         />
       </UFormField>
@@ -277,6 +283,7 @@
           variant="soft2"
           :items="coopQuests"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setCoopQuestFilter"
         />
       </UFormField>
@@ -288,6 +295,7 @@
           variant="soft2"
           :items="catavanStands"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setCatavanFilter"
         />
       </UFormField>
@@ -299,6 +307,7 @@
           variant="soft2"
           :items="eldersLairFloors"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setEldersLairFilter"
         />
       </UFormField>
@@ -310,6 +319,7 @@
           variant="soft2"
           :items="attackTypes"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setFilter('attackTypeFilter', $event)"
         />
       </UFormField>
@@ -321,6 +331,7 @@
           variant="soft2"
           :items="attackElements"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setFilter('attackElementFilter', $event)"
         />
       </UFormField>
@@ -332,6 +343,7 @@
           variant="soft2"
           :items="ridingActions"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setRidingActionFilter"
         />
       </UFormField>
@@ -341,6 +353,7 @@
           :modelValue="filter.hatchableFilter"
           :texts="['Include', 'Only Hatchable', 'Exclude']"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setFilter('hatchableFilter', $event)"
         />
       </UFormField>
@@ -350,6 +363,7 @@
           :modelValue="filter.deviantsFilter"
           :texts="['Include', 'Only Deviants', 'Exclude']"
           class="w-full"
+          :disabled="disabled"
           @update:modelValue="setFilter('deviantsFilter', $event)"
         />
       </UFormField>
@@ -364,6 +378,7 @@
           trailingIcon="ph:arrow-counter-clockwise"
           label="Reset"
           :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
+          :disabled="disabled"
           @click="filter.resetFilter"
         />
       </UFormField>

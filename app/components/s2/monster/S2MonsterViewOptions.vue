@@ -11,6 +11,7 @@
       filter?: FilterStore;
       sources?: SourcesStore;
       modes?: Modes;
+      disabled?: boolean;
       hideSort?: boolean;
       showSortByStats?: boolean;
     }>(),
@@ -19,6 +20,7 @@
       filter: undefined,
       sources: undefined,
       modes: undefined,
+      disabled: false,
       hideSort: false,
       showSortByStats: false,
     }
@@ -143,6 +145,7 @@
     <UFormField v-if="filter != null" label="Name" orientation="horizontal">
       <AppInputSearch
         :modelValue="filter.nameFilter"
+        :disabled="disabled"
         @update:modelValue="filter.$patch({ nameFilter: $event })"
       />
     </UFormField>
@@ -154,6 +157,7 @@
         variant="soft2"
         :items="modes"
         class="w-full"
+        :disabled="disabled"
         @update:modelValue="filter.$patch({ mode: $event })"
       />
     </UFormField>
@@ -170,10 +174,12 @@
         variant="soft2"
         :items="sortConfig"
         class="w-full"
+        :disabled="disabled"
         @update:modelValue="setSortKey"
       />
       <AppSortOrderToggle
         :modelValue="filter.sortOrder"
+        :disabled="disabled"
         @update:modelValue="filter.setSortOrder($event)"
       />
     </UFormField>

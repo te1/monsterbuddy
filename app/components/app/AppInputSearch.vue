@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+  withDefaults(
+    defineProps<{
+      disabled?: boolean;
+    }>(),
+    {
+      disabled: false,
+    }
+  );
+
   const modelValue = defineModel<string | undefined>({
     required: true,
   });
@@ -26,6 +35,7 @@
     placeholder="Search..."
     :ui="{ trailing: 'pe-1' }"
     class="w-full"
+    :disabled="disabled"
     @update:modelValue="updateValue"
   >
     <template v-if="modelValue?.length" #trailing>

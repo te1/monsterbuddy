@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+  withDefaults(
+    defineProps<{
+      disabled?: boolean;
+    }>(),
+    {
+      disabled: false,
+    }
+  );
+
   const model = defineModel<SortOrder>({
     required: true,
   });
@@ -20,6 +29,7 @@
     :trailingIcon="icon"
     :label="label"
     :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
+    :disabled="disabled"
     @click="toggle"
   />
 </template>

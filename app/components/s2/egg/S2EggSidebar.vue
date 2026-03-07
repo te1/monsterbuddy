@@ -8,6 +8,10 @@
   const filter = useEggFilter();
   const sources = useEggSources();
 
+  const disableSortingAndFiltering = computed(() => {
+    return displays.current === 'egg';
+  });
+
   const tabs = [
     { label: 'View', slot: 'view' },
     { label: 'Filter', slot: 'filter' },
@@ -31,6 +35,7 @@
         :filter="filter"
         :sources="sources"
         :modes="modes"
+        :disabled="disableSortingAndFiltering"
       />
     </template>
 
@@ -39,6 +44,7 @@
         :displays="displays"
         :filter="filter"
         :sources="sources"
+        :disabled="disableSortingAndFiltering"
         showEggColorFilter
         showHabitatFilter
         showCoopQuestFilter
