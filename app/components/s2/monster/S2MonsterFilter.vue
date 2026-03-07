@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-  import { allElements } from '~/services/2/data';
+  import type { EggColor } from '~/services/2/types';
   import type { FilterKey, FilterStore, Mode } from '~/stores/2/baseMonsterFilter';
+  import { allElements } from '~/services/2/data';
 
   const props = withDefaults(
     defineProps<{
@@ -47,17 +48,46 @@
     });
   }
 
-  const eggColors = [
-    { label: 'All', value: 'ALL' },
-    { label: 'Black', value: ['black'] },
-    { label: 'White / Gray', value: ['white', 'gray'] },
-    { label: 'Red', value: ['red'] },
-    { label: 'Orange / Brown', value: ['orange', 'brown'] },
-    { label: 'Yellow', value: ['yellow'] },
-    { label: 'Green', value: ['green'] },
-    { label: 'Blue', value: ['blue'] },
-    { label: 'Purple / Pink', value: ['purple', 'pink'] },
-  ];
+  const eggColors: { label: string; value: string; colors: EggColor[] }[] = [
+    { label: 'All', value: 'ALL', colors: [] },
+    { label: 'Black', value: 'black', colors: ['black'] },
+    { label: 'White / Gray', value: 'white-gray', colors: ['white', 'gray'] },
+    { label: 'Red', value: 'red', colors: ['red'] },
+    { label: 'Orange / Brown', value: 'orange-brown', colors: ['orange', 'brown'] },
+    { label: 'Yellow', value: 'yellow', colors: ['yellow'] },
+    { label: 'Green', value: 'green', colors: ['green'] },
+    { label: 'Blue', value: 'blue', colors: ['blue'] },
+    { label: 'Purple / Pink', value: 'purple-pink', colors: ['purple', 'pink'] },
+  ] as const;
+
+  const eggColor = computed(() => {
+    if (props.filter.eggColorsFilter == null || props.filter.eggColorsFilter.length === 0) {
+      return 'ALL';
+    }
+
+    const selectedColors = props.filter.eggColorsFilter;
+    const match = eggColors.find((item) => {
+      return (
+        item.colors.length === selectedColors.length &&
+        item.colors.every((color) => selectedColors.includes(color))
+      );
+    });
+
+    return match?.value ?? 'ALL';
+  });
+
+  function setEggColor(value: string) {
+    if (value === 'ALL') {
+      setFilter('eggColorsFilter', value);
+      return;
+    }
+
+    const item = eggColors.find((item) => item.value === value);
+
+    if (item != null) {
+      setFilter('eggColorsFilter', [...item.colors]);
+    }
+  }
 
   const genera = computed(() => {
     return [
@@ -180,12 +210,12 @@
     <div class="flex flex-col gap-1">
       <UFormField v-if="showEggColorFilter" label="Egg Color" orientation="horizontal">
         <USelect
-          :modelValue="props.filter.eggColorsFilter ?? 'ALL'"
+          :modelValue="eggColor"
           color="neutral"
           variant="soft2"
           :items="eggColors"
           class="w-full"
-          @update:modelValue="setFilter('eggColorsFilter', $event)"
+          @update:modelValue="setEggColor"
         />
       </UFormField>
 
