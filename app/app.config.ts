@@ -122,6 +122,14 @@ export default defineAppConfig({
             item: 'p-1 py-1.25',
           },
         },
+        {
+          color: 'neutral',
+          variant: 'table',
+          class: {
+            item: 'group bg-default/50 has-data-[state=checked]:bg-default/50 has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-1',
+            label: 'font-normal text-toned group-has-data-[state=checked]:text-highlighted',
+          },
+        },
       ],
     },
 
