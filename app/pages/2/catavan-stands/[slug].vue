@@ -50,15 +50,15 @@
 
   const displays = useCatavanStandDisplays();
 
-  const fabVisible = computed(() => displays.all.length > 1);
+  const fabDisplayVisible = computed(() => displays.all.length > 1);
 
-  const fabTitle = computed(() => {
+  const fabDisplayTooltip = computed(() => {
     switch (displays.next) {
       case 'monster':
         return 'Show monsters';
 
       case 'monstie':
-        return 'Show monsties ';
+        return 'Show monsties';
 
       case 'egg':
         return 'Show eggs';
@@ -68,17 +68,19 @@
     }
   });
 
-  const fabIcon = computed(() => {
+  const fabDisplayIcon = computed(() => {
     switch (displays.next) {
       case 'monster':
+        return 'ph:book-open';
+
       case 'monstie':
-        return 'ph:image-square';
+        return 'ph:note';
 
       case 'egg':
         return 'ph:egg';
 
       default:
-        return null;
+        return undefined;
     }
   });
 
@@ -112,18 +114,6 @@
     </UPageHeader>
 
     <UPageBody>
-      <ClientOnly>
-        <UTooltip v-if="fabVisible" :text="fabTitle">
-          <UButton
-            color="neutral"
-            variant="soft"
-            class="absolute z-10"
-            :icon="fabIcon"
-            @click="toggleDisplay"
-          />
-        </UTooltip>
-      </ClientOnly>
-
       <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
         <S2MonsterSmartListItem
           v-for="monster in monsters"
@@ -134,5 +124,16 @@
         />
       </div>
     </UPageBody>
+
+    <ClientOnly>
+      <AppFabPanel>
+        <AppFab
+          v-if="fabDisplayVisible"
+          :tooltip="fabDisplayTooltip"
+          :icon="fabDisplayIcon"
+          @click="toggleDisplay"
+        />
+      </AppFabPanel>
+    </ClientOnly>
   </div>
 </template>

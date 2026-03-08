@@ -96,15 +96,12 @@
     return undefined;
   }
 
-  const fabVisible = computed(() => displays.all.length > 1);
+  const fabDisplayVisible = computed(() => displays.all.length > 1);
 
-  const fabTitle = computed(() => {
+  const fabDisplayTooltip = computed(() => {
     switch (displays.next) {
-      case 'monster':
-        return 'Show monsters';
-
       case 'monstie':
-        return 'Show monsties ';
+        return 'Show monsties';
 
       case 'egg':
         return 'Show eggs';
@@ -114,17 +111,16 @@
     }
   });
 
-  const fabIcon = computed(() => {
+  const fabDisplayIcon = computed(() => {
     switch (displays.next) {
-      case 'monster':
       case 'monstie':
-        return 'ph:image-square';
+        return 'ph:book-open';
 
       case 'egg':
         return 'ph:egg';
 
       default:
-        return null;
+        return undefined;
     }
   });
 </script>
@@ -142,18 +138,6 @@
     </UPageHeader>
 
     <UPageBody>
-      <ClientOnly>
-        <UTooltip v-if="fabVisible" :text="fabTitle">
-          <UButton
-            color="neutral"
-            variant="soft"
-            class="absolute top-[275px] z-10"
-            :icon="fabIcon"
-            @click="toggleDisplay"
-          />
-        </UTooltip>
-      </ClientOnly>
-
       <ul class="space-y-5">
         <li v-for="(group, key) in items" :key="key">
           <div
@@ -178,5 +162,16 @@
         </li>
       </ul>
     </UPageBody>
+
+    <ClientOnly>
+      <AppFabPanel>
+        <AppFab
+          v-if="fabDisplayVisible"
+          :tooltip="fabDisplayTooltip"
+          :icon="fabDisplayIcon"
+          @click="toggleDisplay"
+        />
+      </AppFabPanel>
+    </ClientOnly>
   </div>
 </template>

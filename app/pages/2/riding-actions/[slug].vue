@@ -38,9 +38,9 @@
 
   const displays = useRidingActionDisplays();
 
-  const fabVisible = computed(() => displays.all.length > 1);
+  const fabDisplayVisible = computed(() => displays.all.length > 1);
 
-  const fabTitle = computed(() => {
+  const fabDisplayTooltip = computed(() => {
     switch (displays.next) {
       case 'monstie':
         return 'Show monsties';
@@ -53,16 +53,16 @@
     }
   });
 
-  const fabIcon = computed(() => {
+  const fabDisplayIcon = computed(() => {
     switch (displays.next) {
       case 'monstie':
-        return 'ph:image-square';
+        return 'ph:book-open';
 
       case 'egg':
         return 'ph:egg';
 
       default:
-        return null;
+        return undefined;
     }
   });
 
@@ -87,18 +87,6 @@
     </UPageHeader>
 
     <UPageBody>
-      <ClientOnly>
-        <UTooltip v-if="fabVisible" :text="fabTitle">
-          <UButton
-            color="neutral"
-            variant="soft"
-            class="absolute top-[300px] z-10"
-            :icon="fabIcon"
-            @click="toggleDisplay"
-          />
-        </UTooltip>
-      </ClientOnly>
-
       <div class="mb-1 flex items-center">
         <UIcon name="ph:dna" class="w-6! text-neutral-500 dark:text-neutral-400" />
 
@@ -114,5 +102,16 @@
         />
       </div>
     </UPageBody>
+
+    <ClientOnly>
+      <AppFabPanel>
+        <AppFab
+          v-if="fabDisplayVisible"
+          :tooltip="fabDisplayTooltip"
+          :icon="fabDisplayIcon"
+          @click="toggleDisplay"
+        />
+      </AppFabPanel>
+    </ClientOnly>
   </div>
 </template>
