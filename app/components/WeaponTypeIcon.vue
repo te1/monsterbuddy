@@ -25,7 +25,7 @@
 </script>
 
 <template>
-  <UTooltip :text="caption">
+  <UTooltip :text="caption" :content="{ side: 'top' }">
     <img
       :src="imageUrl"
       :alt="caption"

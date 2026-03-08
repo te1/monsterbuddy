@@ -5,10 +5,12 @@
   const props = withDefaults(
     defineProps<{
       monster: Monster;
+      noTooltip?: boolean;
       hideFallback?: boolean;
       right?: boolean;
     }>(),
     {
+      noTooltip: false,
       hideFallback: false,
       right: false,
     }
@@ -21,7 +23,7 @@
 <template>
   <!-- TODO CSS -->
 
-  <UTooltip v-if="hasImage" :text="monster.name">
+  <UTooltip v-if="hasImage" :text="noTooltip ? undefined : monster.name">
     <img :src="imageUrl" :alt="monster.name" />
   </UTooltip>
 
@@ -30,6 +32,6 @@
     class="flex h-full w-full items-center p-2"
     :class="right ? 'justify-end' : 'justify-center'"
   >
-    <S2MonsterIcon :monster="monster" />
+    <S2MonsterIcon :monster="monster" :noTooltip="noTooltip" />
   </div>
 </template>

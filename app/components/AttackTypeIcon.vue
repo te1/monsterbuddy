@@ -5,10 +5,12 @@
     defineProps<{
       type?: AttackType;
       monster?: GenericMonster;
+      noTooltip?: boolean;
     }>(),
     {
       type: undefined,
       monster: undefined,
+      noTooltip: false,
     }
   );
 
@@ -18,7 +20,7 @@
 </script>
 
 <template>
-  <UTooltip :text="caption">
+  <UTooltip :text="noTooltip ? undefined : caption" :content="{ side: 'top' }">
     <img :src="imageUrl" :alt="caption" width="60" height="60" />
   </UTooltip>
 </template>

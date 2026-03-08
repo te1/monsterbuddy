@@ -19,7 +19,7 @@
   <!-- TODO CSS -->
 
   <div class="relative flex h-[122px] items-center">
-    <S2EggImage class="-mx-3 h-[120px] w-[120px] shrink-0" :monster="monster" />
+    <S2EggImage class="-mx-3 h-[120px] w-[120px] shrink-0" :monster="monster" noTooltip />
 
     <S2MonstieListItemContent
       class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap"
@@ -32,6 +32,7 @@
       style="flex-basis: 250px"
       :monster="monster"
       right
+      noTooltip
     />
 
     <div

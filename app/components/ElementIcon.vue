@@ -4,9 +4,11 @@
   const props = withDefaults(
     defineProps<{
       element?: ElementType;
+      noTooltip?: boolean;
     }>(),
     {
       element: undefined,
+      noTooltip: false,
     }
   );
 
@@ -15,7 +17,7 @@
 </script>
 
 <template>
-  <UTooltip :text="caption">
+  <UTooltip :text="noTooltip ? undefined : caption" :content="{ side: 'top' }">
     <img :src="imageUrl" :alt="caption" width="30" height="30" />
   </UTooltip>
 </template>

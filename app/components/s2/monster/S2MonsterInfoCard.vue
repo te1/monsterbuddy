@@ -43,15 +43,15 @@
       <div class="flex flex-col items-center gap-2">
         <S2MonsterIcon :monster="monster" />
 
-        <img
-          v-if="monster.hatchable"
-          src="~/assets/icon/hatchable.svg"
-          alt="Hatchable"
-          title="Hatchable"
-          width="20"
-          height="20"
-          class="h-8 w-8"
-        />
+        <UTooltip v-if="monster.hatchable" text="Hatchable">
+          <img
+            src="~/assets/icon/hatchable.svg"
+            alt="Hatchable"
+            width="20"
+            height="20"
+            class="h-8 w-8"
+          />
+        </UTooltip>
       </div>
     </div>
 

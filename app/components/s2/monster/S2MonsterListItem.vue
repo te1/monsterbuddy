@@ -54,13 +54,12 @@
 
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex h-[120px] w-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <S2MonsterIcon :monster="monster" />
+      <S2MonsterIcon :monster="monster" noTooltip />
 
       <img
         v-if="monster.hatchable"
         src="~/assets/icon/hatchable.svg"
         alt="Hatchable"
-        title="Hatchable"
         width="20"
         height="20"
         class="h-8 w-8"
@@ -107,6 +106,7 @@
       style="flex-basis: 250px"
       :monster="monster"
       hideFallback
+      noTooltip
     />
 
     <div

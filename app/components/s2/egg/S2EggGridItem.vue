@@ -24,7 +24,7 @@
   <!-- TODO CSS -->
 
   <div class="flex h-[150px] flex-col items-center">
-    <S2EggImage class="-mx-3 h-[120px] w-[120px]" :monster="monster" :genus="genus" tooltipTop />
+    <S2EggImage class="-mx-3 h-[120px] w-[120px]" :monster="monster" :genus="genus" noTooltip />
 
     <div class="mb-2 font-semibold whitespace-nowrap" v-text="text" />
   </div>

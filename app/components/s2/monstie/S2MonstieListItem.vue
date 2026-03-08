@@ -20,12 +20,12 @@
 
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex h-[120px] w-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <S2MonsterIcon :monster="monster" />
+      <S2MonsterIcon :monster="monster" noTooltip />
 
       <div class="flex items-center gap-1">
-        <AttackTypeIcon class="h-8 w-8" :monster="monster" />
+        <AttackTypeIcon class="h-8 w-8" :monster="monster" noTooltip />
 
-        <ElementIcon class="h-8 w-8" :element="monster?.monstie?.attackElement" />
+        <ElementIcon class="h-8 w-8" :element="monster?.monstie?.attackElement" noTooltip />
       </div>
     </div>
 
@@ -40,6 +40,7 @@
       style="flex-basis: 250px"
       :monster="monster"
       hideFallback
+      noTooltip
     />
 
     <div
