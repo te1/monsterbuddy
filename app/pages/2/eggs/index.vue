@@ -246,7 +246,7 @@
           <AppFilterPill
             v-if="eggFilter.hasActiveSort"
             :caption="eggFilter.activeSort?.caption ?? ''"
-            filterTarget="/eggs/filter"
+            filterTarget="/2/eggs/filter"
             :sortOrder="eggFilter.activeSort?.order"
           />
 
@@ -254,7 +254,7 @@
             v-for="filter in eggFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/eggs/filter"
+            filterTarget="/2/eggs/filter"
             showRemove
             @remove="eggFilter[filter.name] = undefined"
           />

@@ -193,7 +193,7 @@
           <AppFilterPill
             v-if="monstieFilter.hasActiveSort"
             :caption="monstieFilter.activeSort?.caption ?? ''"
-            filterTarget="/monsties/filter"
+            filterTarget="/2/monsties/filter"
             :sortOrder="monstieFilter.activeSort?.order"
           />
 
@@ -201,7 +201,7 @@
             v-for="filter in monstieFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/monsties/filter"
+            filterTarget="/2/monsties/filter"
             showRemove
             @remove="monstieFilter[filter.name] = undefined"
           />

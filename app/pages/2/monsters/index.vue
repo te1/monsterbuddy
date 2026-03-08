@@ -193,7 +193,7 @@
           <AppFilterPill
             v-if="monsterFilter.hasActiveSort"
             :caption="monsterFilter.activeSort?.caption ?? ''"
-            filterTarget="/monsters/filter"
+            filterTarget="/2/monsters/filter"
             :sortOrder="monsterFilter.activeSort?.order"
           />
 
@@ -201,7 +201,7 @@
             v-for="filter in monsterFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/monsters/filter"
+            filterTarget="/2/monsters/filter"
             showRemove
             @remove="monsterFilter[filter.name] = undefined"
           />
