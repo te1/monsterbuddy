@@ -59,7 +59,7 @@
     variant="link"
     :label="label"
     :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
-    :ui="{ base: 'px-0' }"
+    :ui="{ base: 'px-0 font-normal' }"
     @click="pinned = !pinned"
   />
 </template>
