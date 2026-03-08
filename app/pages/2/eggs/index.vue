@@ -137,7 +137,7 @@
     return !showFilter.value && sources.all.length > 1;
   });
 
-  const fabSourceTitle = computed(() => {
+  const fabSourceTooltip = computed(() => {
     switch (sources.next) {
       case 'default':
         return 'Show all eggs';
@@ -165,7 +165,7 @@
         return 'ph:bookmark-simple';
 
       default:
-        return null;
+        return undefined;
     }
   });
 
@@ -173,7 +173,7 @@
     return !showFilter.value;
   });
 
-  const fabEggFinderTitle = computed(() => {
+  const fabEggFinderTooltip = computed(() => {
     if (showEggFinder.value) {
       return 'Show all eggs';
     }
@@ -218,28 +218,6 @@
 
     <UPageBody>
       <!-- TODO filter modal -->
-
-      <ClientOnly>
-        <UTooltip v-if="fabSourceVisible" :text="fabSourceTitle">
-          <UButton
-            color="neutral"
-            variant="soft"
-            :icon="fabSourceIcon"
-            class="absolute top-[275px] z-10"
-            @click="toggleSource"
-          />
-        </UTooltip>
-
-        <UTooltip v-if="fabEggFinderVisible" :text="fabEggFinderTitle">
-          <UButton
-            color="neutral"
-            variant="soft"
-            :icon="fabEggFinderIcon"
-            class="absolute top-[275px] left-[60px] z-10"
-            @click="toggleEggFinder"
-          />
-        </UTooltip>
-      </ClientOnly>
 
       <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
         <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
@@ -325,5 +303,23 @@
         No eggs found
       </S2MonsterNoResults>
     </UPageBody>
+
+    <ClientOnly>
+      <AppFabPanel>
+        <AppFab
+          v-if="fabEggFinderVisible"
+          :tooltip="fabEggFinderTooltip"
+          :icon="fabEggFinderIcon"
+          @click="toggleEggFinder"
+        />
+
+        <AppFab
+          v-if="fabSourceVisible"
+          :tooltip="fabSourceTooltip"
+          :icon="fabSourceIcon"
+          @click="toggleSource"
+        />
+      </AppFabPanel>
+    </ClientOnly>
   </div>
 </template>

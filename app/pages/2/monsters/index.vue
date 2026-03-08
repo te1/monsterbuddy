@@ -126,7 +126,7 @@
     return !showFilter.value && sources.all.length > 1;
   });
 
-  const fabSourceTitle = computed(() => {
+  const fabSourceTooltip = computed(() => {
     switch (sources.next) {
       case 'default':
         return 'Show all monsters';
@@ -154,7 +154,7 @@
         return 'ph:bookmark-simple';
 
       default:
-        return null;
+        return undefined;
     }
   });
 
@@ -175,18 +175,6 @@
 
     <UPageBody>
       <!-- TODO filter modal -->
-
-      <ClientOnly>
-        <UTooltip v-if="fabSourceVisible" :text="fabSourceTitle">
-          <UButton
-            color="neutral"
-            variant="soft"
-            :icon="fabSourceIcon"
-            class="absolute z-10"
-            @click="toggleSource"
-          />
-        </UTooltip>
-      </ClientOnly>
 
       <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
         <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
@@ -247,5 +235,16 @@
 
       <S2MonsterNoResults v-if="monsterFilter.isEmpty">No monsters found</S2MonsterNoResults>
     </UPageBody>
+
+    <ClientOnly>
+      <AppFabPanel>
+        <AppFab
+          v-if="fabSourceVisible"
+          :tooltip="fabSourceTooltip"
+          :icon="fabSourceIcon"
+          @click="toggleSource"
+        />
+      </AppFabPanel>
+    </ClientOnly>
   </div>
 </template>

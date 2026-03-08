@@ -140,6 +140,7 @@ export default defineAppConfig({
             'text-highlighted bg-default/50 hover:bg-default active:bg-accented/50 focus:outline-none focus-visible:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 select-none',
           subtle2:
             'ring ring-inset ring-inverted/50 text-highlighted bg-default/50 hover:bg-default active:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted select-none',
+          fab: 'ring ring-inset ring-accented text-toned active:text-highlighted bg-default hover:bg-elevated active:bg-accented focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted shadow-md',
         },
       },
     },
