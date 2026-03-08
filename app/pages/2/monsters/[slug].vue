@@ -29,14 +29,27 @@
   <div>
     <UPageHeader :title="monster.name" :headline="headline" />
 
-    <UPageBody>
-      <S2MonsterInfoCard :monster="monster" />
-      <S2MonsterCombatCard :monster="monster" />
-      <S2MonstieEggCard v-if="monster.hatchable" :monster="monster" />
-      <S2MonsterImageCard :monster="monster" />
-      <S2MonstieInfoCard v-if="monster.hatchable" :monster="monster" />
-      <S2MonstieStatsCard v-if="monster.hatchable" :monster="monster" />
-      <S2MonsterRelatedCard :monster="monster" />
+    <UPageBody
+      class="mt-0 grid grid-cols-1 gap-3 space-y-0 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2"
+    >
+      <S2MonsterInfoCard :monster="monster" class="box order-1 px-4 py-2" />
+      <S2MonsterCombatCard :monster="monster" class="box order-2 px-4 py-2" />
+      <S2MonstieEggCard v-if="monster.hatchable" :monster="monster" class="box order-3 px-4 py-2" />
+      <S2MonsterImageCard
+        :monster="monster"
+        class="box order-4 p-3 md:order-5 lg:order-4 xl:order-5"
+      />
+      <S2MonstieInfoCard
+        v-if="monster.hatchable"
+        :monster="monster"
+        class="box order-5 px-4 py-2 md:order-4 lg:order-5 xl:order-4"
+      />
+      <S2MonstieStatsCard
+        v-if="monster.hatchable"
+        :monster="monster"
+        class="box order-6 px-4 py-2"
+      />
+      <S2MonsterRelatedCard :monster="monster" class="box order-7 px-4 py-2" />
     </UPageBody>
   </div>
 </template>

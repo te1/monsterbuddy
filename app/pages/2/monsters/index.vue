@@ -229,7 +229,7 @@
             <div class="font-semibold" v-text="key" />
           </div>
 
-          <div class="mt-1 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <div class="mt-1 grid gap-3 md:grid-cols-2 2xl:grid-cols-3">
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"

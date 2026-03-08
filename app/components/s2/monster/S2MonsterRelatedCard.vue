@@ -24,10 +24,10 @@
   <!-- TODO CSS -->
 
   <section v-if="hasRelated">
-    <h3 class="text-lg font-semibold">Related</h3>
+    <h3 class="text-lg font-medium">Related</h3>
 
     <div v-for="(relation, index) in relations" :key="relation.monster.name">
-      <div v-if="index > 0" class="my-2 border-t border-neutral-300 dark:border-neutral-600" />
+      <div v-if="index > 0" class="my-2 border-t border-accented" />
 
       <S2MonsterRelatedItem :monster="relation.monster" />
     </div>
