@@ -1,4 +1,4 @@
-import { makeMonsterFilterStore, type Mode } from './baseMonsterFilter';
+import { makeMonsterFilterStore, type Mode, type Modes } from './baseMonsterFilter';
 import { monsters } from '~/services/2/data';
 
 const initial = {
@@ -19,3 +19,8 @@ const useEldersLairFilter = makeMonsterFilterStore(
 );
 
 export default useEldersLairFilter;
+
+export const modes: Modes = [
+  { value: 'location', label: 'Location' },
+  { value: 'combat', label: 'Attack Pattern' },
+];

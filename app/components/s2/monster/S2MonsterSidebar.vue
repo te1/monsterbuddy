@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-  import type { Modes } from './S2MonsterViewOptions.vue';
-  import useMonsterFilter from '~/stores/2/monsterFilter';
+  import useMonsterFilter, { modes } from '~/stores/2/monsterFilter';
   import useMonsterSources from '~/stores/2/monsterSources';
 
   const filter = useMonsterFilter();
@@ -9,13 +8,6 @@
   const tabs = [
     { label: 'View', slot: 'view' },
     { label: 'Filter', slot: 'filter' },
-  ];
-
-  const modes: Modes = [
-    { value: 'location', label: 'Location' },
-    { value: 'location-eldersLair', label: "Elder's Lair" },
-    { value: 'combat', label: 'Attack Pattern' },
-    { value: 'rarity', label: 'Rarity' },
   ];
 </script>
 

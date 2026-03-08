@@ -1,17 +1,11 @@
 <script lang="ts" setup>
-  import type { Modes } from '~/components/s2/monster/S2MonsterViewOptions.vue';
-  import useEldersLairFilter from '~/stores/2/eldersLairFilter';
+  import useEldersLairFilter, { modes } from '~/stores/2/eldersLairFilter';
 
   const filter = useEldersLairFilter();
 
   const tabs = [
     { label: 'View', slot: 'view' },
     { label: 'Filter', slot: 'filter' },
-  ];
-
-  const modes: Modes = [
-    { value: 'location', label: 'Location' },
-    { value: 'combat', label: 'Attack Pattern' },
   ];
 </script>
 

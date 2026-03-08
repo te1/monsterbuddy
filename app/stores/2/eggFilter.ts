@@ -1,4 +1,4 @@
-import { makeMonsterFilterStore, type Mode } from './baseMonsterFilter';
+import { makeMonsterFilterStore, type Mode, type Modes } from './baseMonsterFilter';
 import { monsties } from '~/services/2/data';
 
 const initial = {
@@ -11,3 +11,12 @@ const initial = {
 const useEggFilter = makeMonsterFilterStore('s2/eggFilter', monsties, initial);
 
 export default useEggFilter;
+
+export const modes: Modes = [
+  { value: 'compact', label: 'Compact' },
+  { value: 'location', label: 'Location' },
+  { value: 'location-coop', label: 'Co-Op Quest' },
+  { value: 'ridingActions', label: 'Riding Actions' },
+  { value: 'retreat', label: 'Retreat' },
+  { value: 'rarity', label: 'Rarity' },
+];

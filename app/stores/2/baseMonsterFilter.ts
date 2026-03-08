@@ -68,6 +68,8 @@ export type Mode =
   | 'ridingActions'
   | 'stats';
 
+export type Modes = { value: Mode; label: string }[];
+
 export interface MonsterFilterInitialState {
   sortKey: SortKey;
   sortOrder: SortOrder;

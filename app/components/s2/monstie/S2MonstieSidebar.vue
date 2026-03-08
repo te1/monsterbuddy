@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-  import type { Modes } from '~/components/s2/monster/S2MonsterViewOptions.vue';
-  import useMonstieFilter from '~/stores/2/monstieFilter';
+  import useMonstieFilter, { modes } from '~/stores/2/monstieFilter';
   import useMonstieSources from '~/stores/2/monstieSources';
 
   const filter = useMonstieFilter();
@@ -9,16 +8,6 @@
   const tabs = [
     { label: 'View', slot: 'view' },
     { label: 'Filter', slot: 'filter' },
-  ];
-
-  const modes: Modes = [
-    { value: 'location', label: 'Location' },
-    { value: 'location-coop', label: 'Co-Op Quest' },
-    { value: 'location-eldersLair', label: "Elder's Lair" },
-    { value: 'ridingActions', label: 'Riding Actions' },
-    { value: 'retreat', label: 'Retreat' },
-    { value: 'rarity', label: 'Rarity' },
-    { value: 'stats', label: 'Stats' },
   ];
 </script>
 

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-  import type { Modes } from '../monster/S2MonsterViewOptions.vue';
   import useEggsDisplay from '~/stores/2/eggDisplays';
-  import useEggFilter from '~/stores/2/eggFilter';
+  import useEggFilter, { modes } from '~/stores/2/eggFilter';
   import useEggSources from '~/stores/2/eggSources';
 
   const displays = useEggsDisplay();
@@ -15,15 +14,6 @@
   const tabs = [
     { label: 'View', slot: 'view' },
     { label: 'Filter', slot: 'filter' },
-  ];
-
-  const modes: Modes = [
-    { value: 'compact', label: 'Compact' },
-    { value: 'location', label: 'Location' },
-    { value: 'location-coop', label: 'Co-Op Quest' },
-    { value: 'ridingActions', label: 'Riding Actions' },
-    { value: 'retreat', label: 'Retreat' },
-    { value: 'rarity', label: 'Rarity' },
   ];
 
   // switch to source: all when entering egg finder
