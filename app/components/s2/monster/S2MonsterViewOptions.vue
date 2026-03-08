@@ -1,9 +1,7 @@
 <script lang="ts" setup>
   import type { DisplaysStore } from '~/stores/2/baseDisplays';
-  import type { FilterStore, Mode, SortKey } from '~/stores/2/baseMonsterFilter';
+  import type { FilterStore, Mode, Modes, SortKey } from '~/stores/2/baseMonsterFilter';
   import type { SourcesStore } from '~/stores/2/baseMonsterSources';
-
-  export type Modes = { value: Mode; label: string }[];
 
   const props = withDefaults(
     defineProps<{
@@ -12,8 +10,10 @@
       sources?: SourcesStore;
       modes?: Modes;
       disabled?: boolean;
+      hideSearch?: boolean;
       hideSort?: boolean;
       showSortByStats?: boolean;
+      modalLayout?: boolean;
     }>(),
     {
       displays: undefined,
@@ -21,8 +21,10 @@
       sources: undefined,
       modes: undefined,
       disabled: false,
+      hideSearch: false,
       hideSort: false,
       showSortByStats: false,
+      modalLayout: false,
     }
   );
 
@@ -142,7 +144,12 @@
       </template>
     </ClientOnly>
 
-    <UFormField v-if="filter != null" label="Name" orientation="horizontal">
+    <UFormField
+      v-if="!hideSearch && filter != null"
+      label="Name"
+      orientation="horizontal"
+      :data-modal-layout="modalLayout"
+    >
       <AppInputSearch
         :modelValue="filter.nameFilter"
         :disabled="disabled"
@@ -150,7 +157,12 @@
       />
     </UFormField>
 
-    <UFormField v-if="filter != null && modes != null" label="Show" orientation="horizontal">
+    <UFormField
+      v-if="filter != null && modes != null"
+      label="Show"
+      orientation="horizontal"
+      :data-modal-layout="modalLayout"
+    >
       <USelect
         :modelValue="filter.mode"
         color="neutral"
@@ -167,6 +179,7 @@
       label="Sort By"
       orientation="horizontal"
       :ui="{ container: 'flex gap-1' }"
+      :data-modal-layout="modalLayout"
     >
       <USelect
         :modelValue="filter.sortKey"

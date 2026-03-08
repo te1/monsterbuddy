@@ -147,9 +147,9 @@ export default defineAppConfig({
 
     formField: {
       slots: {
-        root: 'place-items-baseline',
+        root: 'place-items-baseline group',
         container: 'w-full overflow-hidden',
-        labelWrapper: 'w-14 xl:w-24',
+        labelWrapper: 'w-14 xl:w-24 group-data-[modal-layout=true]:w-24',
         label: 'font-normal truncate select-none',
       },
     },

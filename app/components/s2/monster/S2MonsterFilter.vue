@@ -11,6 +11,7 @@
       filter: FilterStore;
       sources?: SourcesStore;
       disabled?: boolean;
+      hideSearch?: boolean;
       showEggColorFilter?: boolean;
       showHabitatFilter?: boolean;
       showCoopQuestFilter?: boolean;
@@ -21,11 +22,14 @@
       showRidingActionFilter?: boolean;
       showHatchableFilter?: boolean;
       showDeviantsFilter?: boolean;
+      backTarget?: string;
+      modalLayout?: boolean;
     }>(),
     {
       displays: undefined,
       sources: undefined,
       disabled: false,
+      hideSearch: false,
       showEggColorFilter: false,
       showHabitatFilter: false,
       showCoopQuestFilter: false,
@@ -36,6 +40,8 @@
       showRidingActionFilter: false,
       showHatchableFilter: false,
       showDeviantsFilter: false,
+      backTarget: undefined,
+      modalLayout: false,
     }
   );
 
@@ -231,7 +237,12 @@
       />
     </ClientOnly>
 
-    <UFormField label="Name" orientation="horizontal">
+    <UFormField
+      v-if="!hideSearch"
+      label="Name"
+      orientation="horizontal"
+      :data-modal-layout="modalLayout"
+    >
       <AppInputSearch
         :modelValue="filter.nameFilter"
         :disabled="disabled"
@@ -240,7 +251,12 @@
     </UFormField>
 
     <div class="flex flex-col gap-1">
-      <UFormField v-if="showEggColorFilter" label="Egg Color" orientation="horizontal">
+      <UFormField
+        v-if="showEggColorFilter"
+        label="Egg Color"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="eggColor"
           color="neutral"
@@ -252,7 +268,7 @@
         />
       </UFormField>
 
-      <UFormField label="Genus" orientation="horizontal">
+      <UFormField label="Genus" orientation="horizontal" :data-modal-layout="modalLayout">
         <USelect
           :modelValue="filter.genusFilter ?? 'ALL'"
           color="neutral"
@@ -264,7 +280,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showHabitatFilter" label="Habitat" orientation="horizontal">
+      <UFormField
+        v-if="showHabitatFilter"
+        label="Habitat"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.habitatFilter ?? 'ALL'"
           color="neutral"
@@ -276,7 +297,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showCoopQuestFilter" label="Co-Op Quest" orientation="horizontal">
+      <UFormField
+        v-if="showCoopQuestFilter"
+        label="Co-Op Quest"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.coopQuestFilter ?? 'ALL'"
           color="neutral"
@@ -288,7 +314,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showCatavanFilter" label="Catavan Stand" orientation="horizontal">
+      <UFormField
+        v-if="showCatavanFilter"
+        label="Catavan Stand"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.catavanFilter ?? 'ALL'"
           color="neutral"
@@ -300,7 +331,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showEldersLairFilter" label="Elder's Lair" orientation="horizontal">
+      <UFormField
+        v-if="showEldersLairFilter"
+        label="Elder's Lair"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.eldersLairFilter ?? 'ALL'"
           color="neutral"
@@ -312,7 +348,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showAttackTypeFilter" label="Attack Type" orientation="horizontal">
+      <UFormField
+        v-if="showAttackTypeFilter"
+        label="Attack Type"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.attackTypeFilter ?? 'ALL'"
           color="neutral"
@@ -324,7 +365,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showAttackElementFilter" label="Attack Element" orientation="horizontal">
+      <UFormField
+        v-if="showAttackElementFilter"
+        label="Attack Element"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.attackElementFilter ?? 'ALL'"
           color="neutral"
@@ -336,7 +382,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showRidingActionFilter" label="Riding Action" orientation="horizontal">
+      <UFormField
+        v-if="showRidingActionFilter"
+        label="Riding Action"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.ridingActionFilter ?? 'ALL'"
           color="neutral"
@@ -348,7 +399,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showHatchableFilter" label="Hatchable" orientation="horizontal">
+      <UFormField
+        v-if="showHatchableFilter"
+        label="Hatchable"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <AppFilterToggle
           :modelValue="filter.hatchableFilter"
           :texts="['Include', 'Only Hatchable', 'Exclude']"
@@ -358,7 +414,12 @@
         />
       </UFormField>
 
-      <UFormField v-if="showDeviantsFilter" label="Deviants" orientation="horizontal">
+      <UFormField
+        v-if="showDeviantsFilter"
+        label="Deviants"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <AppFilterToggle
           :modelValue="filter.deviantsFilter"
           :texts="['Include', 'Only Deviants', 'Exclude']"
@@ -369,19 +430,40 @@
       </UFormField>
     </div>
 
-    <div>
-      <UFormField :label="`${filter.resultCount} Results`" orientation="horizontal">
+    <UFormField
+      :label="`${filter.resultCount} Results`"
+      orientation="horizontal"
+      :data-modal-layout="modalLayout"
+    >
+      <UButton
+        color="neutral"
+        variant="soft2"
+        class="w-full"
+        trailingIcon="ph:arrow-counter-clockwise"
+        label="Reset"
+        :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
+        :disabled="disabled"
+        @click="filter.resetFilter"
+      />
+    </UFormField>
+
+    <UFormField
+      v-if="modalLayout"
+      label=" "
+      orientation="horizontal"
+      :data-modal-layout="modalLayout"
+    >
+      <NuxtLink :to="backTarget">
         <UButton
           color="neutral"
           variant="soft2"
           class="w-full"
-          trailingIcon="ph:arrow-counter-clockwise"
-          label="Reset"
+          trailingIcon="ph:check"
+          label="Apply"
           :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
           :disabled="disabled"
-          @click="filter.resetFilter"
         />
-      </UFormField>
-    </div>
+      </NuxtLink>
+    </UFormField>
   </div>
 </template>

@@ -3,7 +3,7 @@
   import { monsters } from '~/services/2/data';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
-  import useMonsterFilter from '~/stores/2/monsterFilter';
+  import useMonsterFilter, { modes } from '~/stores/2/monsterFilter';
   import useMonsterSources, { type Source } from '~/stores/2/monsterSources';
 
   definePageMeta({
@@ -15,8 +15,11 @@
     description:
       'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
   });
-  // TODO drop ?source from canonical url
+  // TODO drop ?source and ?filter from canonical url
   const headline = gameTypeToFullName('mhst2');
+
+  const router = useRouter();
+  const route = useRoute();
 
   const history = useHistoryStore();
   const monsterFilter = useMonsterFilter();
@@ -80,7 +83,51 @@
 
   watch(sourceItems, syncSource);
 
-  const showFilter = ref(false); // TODO?
+  function toggleSource() {
+    sources.setCurrent(sources.next, monsterFilter);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // update source from query string
+  watch(
+    () => route.query.source as Source,
+    (newSource) => {
+      if (typeof newSource !== 'string') {
+        return;
+      }
+
+      if (sources.all.includes(newSource)) {
+        sources.setCurrent(newSource, monsterFilter);
+
+        router.replace(route.path); // remove query parameters from URL
+      }
+    },
+    { immediate: true }
+  );
+
+  const showFilter = computed({
+    get: () => route.query.filter !== undefined,
+    set: (value) => {
+      if (value === (route.query.filter !== undefined)) {
+        return;
+      }
+
+      if (value) {
+        router.push({
+          path: route.path,
+          query: { ...route.query, filter: null },
+        });
+        return;
+      }
+
+      const { filter: _filter, ...query } = route.query;
+      router.push({
+        path: route.path,
+        query,
+      });
+    },
+  });
 
   const _heading = computed(() => {
     if (showFilter.value) {
@@ -98,29 +145,26 @@
     return null;
   });
 
-  function toggleSource() {
-    sources.setCurrent(sources.next, monsterFilter);
+  const fabFilterTarget = computed(() => {
+    if (showFilter.value) {
+      return '/2/monsters';
+    }
+    return '/2/monsters?filter';
+  });
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  const fabFilterTooltip = computed(() => {
+    if (showFilter.value) {
+      return 'Apply';
+    }
+    return 'View options';
+  });
 
-  // update source from query string
-  const route = useRoute();
-  watch(
-    () => route.query.source as Source,
-    (newSource) => {
-      if (typeof newSource !== 'string') {
-        return;
-      }
-
-      if (sources.all.includes(newSource)) {
-        sources.setCurrent(newSource, monsterFilter);
-
-        useRouter().replace(route.path); // remove query parameters from URL
-      }
-    },
-    { immediate: true }
-  );
+  const fabFilterIcon = computed(() => {
+    if (showFilter.value) {
+      return 'ph:check';
+    }
+    return 'ph:sliders';
+  });
 
   const fabSourceVisible = computed(() => {
     return !showFilter.value && sources.all.length > 1;
@@ -236,6 +280,27 @@
       <S2MonsterNoResults v-if="monsterFilter.isEmpty">No monsters found</S2MonsterNoResults>
     </UPageBody>
 
+    <UModal
+      v-model:open="showFilter"
+      title="View Options"
+      :ui="{ body: 'flex flex-col gap-3 bg-elevated' }"
+    >
+      <template #body>
+        <S2MonsterViewOptions :filter="monsterFilter" :modes="modes" modalLayout />
+
+        <S2MonsterFilter
+          :filter="monsterFilter"
+          hideSearch
+          showHabitatFilter
+          showCatavanFilter
+          showEldersLairFilter
+          showHatchableFilter
+          modalLayout
+          backTarget="/2/monsters"
+        />
+      </template>
+    </UModal>
+
     <ClientOnly>
       <AppFabPanel>
         <AppFab
@@ -244,6 +309,10 @@
           :icon="fabSourceIcon"
           @click="toggleSource"
         />
+
+        <NuxtLink :to="fabFilterTarget">
+          <AppFab :tooltip="fabFilterTooltip" :icon="fabFilterIcon" />
+        </NuxtLink>
       </AppFabPanel>
     </ClientOnly>
   </div>
