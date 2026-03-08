@@ -55,8 +55,6 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    provider: 'none',
-    fallbackToApi: false,
     clientBundle: {
       scan: {
         globInclude: ['**/*.{vue,jsx,tsx,md,mdc,mdx,yml,yaml}', 'app/app.config.ts'],
