@@ -702,6 +702,13 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Goss_Harag_(MHST3)
+  {
+    name: 'Goss Harag',
+    genus: 'Fanged Beast',
+    hatchable: true,
+  },
+
   // https://monsterhunterwiki.org/wiki/Gravios_(MHST3)
   {
     name: 'Gravios',
@@ -922,6 +929,13 @@
     monstie: {
       eggColors: ['yellow', 'white', 'blue', 'black'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Lunagaron_(MHST3)
+  {
+    name: 'Lunagaron',
+    genus: 'Fanged Wyvern',
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Magnamalo_(MHST3)
@@ -1499,19 +1513,49 @@
   {
     name: 'Rathalos',
     genus: 'Flying Wyvern',
-    related: [{ type: 'story', monster: 'Ratha' }],
+    related: [
+      { type: 'subspecies', monster: 'Azure Rathalos' },
+      { type: 'honed', monster: 'Honed Azure Rathalos' },
+      { type: 'story', monster: 'Skyscale Ratha' },
+    ],
     hatchable: true,
     monstie: {
       eggColors: ['red', 'blue'],
     },
   },
 
-  // https://monsterhunterwiki.org/wiki/Ratha_(MHST3)
+  // https://monsterhunterwiki.org/wiki/Azure_Rathalos_(MHST3)
   {
-    name: 'Ratha',
+    name: 'Azure Rathalos',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspeciesOf', monster: 'Rathalos' },
+      { type: 'honed', monster: 'Honed Azure Rathalos' },
+      { type: 'story', monster: 'Skyscale Ratha' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Honed_Azure_Rathalos
+  {
+    name: 'Honed Azure Rathalos',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'honedOf', monster: 'Rathalos' },
+      { type: 'subspecies', monster: 'Azure Rathalos' },
+      { type: 'story', monster: 'Skyscale Ratha' },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Skyscale_Ratha
+  {
+    name: 'Skyscale Ratha',
     genus: 'Flying Wyvern',
     rank: 4,
-    related: [{ type: 'storyOf', monster: 'Rathalos' }],
+    related: [
+      { type: 'storyOf', monster: 'Rathalos' },
+      { type: 'subspecies', monster: 'Azure Rathalos' },
+      { type: 'honed', monster: 'Honed Azure Rathalos' },
+    ],
     flavor: {
       DEFAULT: "Ten years ago, this Skyscale Rathalos was born from an egg quartz that Amara discovered in Blightstone Woods. One of a pair of twins, it serves as the prince/princess's Monstie.",
     },
@@ -2050,6 +2094,16 @@
       { type: 'honedOf', monster: 'Tobi-Kadachi' },
       { type: 'feral', monster: 'Feral Tobi-Kadachi' },
     ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Velkhana_(MHST3)
+  {
+    name: 'Velkhana',
+    genus: 'Elder Dragon',
+    hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'white', 'gray'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Velociprey_(MHST3)
