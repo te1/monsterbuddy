@@ -219,8 +219,21 @@
   {
     name: 'Barioth',
     genus: 'Flying Wyvern',
+    related: [{ type: 'subspecies', monster: 'Sand Barioth' }],
+    hatchable: true,
     monstie: {
       eggColors: ['white', 'yellow', 'orange'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Sand_Barioth_(MHST3)
+  {
+    name: 'Sand Barioth',
+    genus: 'Flying Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Barioth' }],
+    hatchable: true,
+    monstie: {
+      eggColors: ['orange', 'red', 'pink'],
     },
   },
 
@@ -228,10 +241,43 @@
   {
     name: 'Barroth',
     genus: 'Brute Wyvern',
-    related: [{ type: 'honed', monster: 'Honed Barroth' }],
+    related: [
+      { type: 'subspecies', monster: 'Jade Barroth' },
+      { type: 'feral', monster: 'Feral Barroth' },
+      { type: 'honed', monster: 'Honed Barroth' },
+    ],
     hatchable: true,
     monstie: {
       eggColors: ['brown', 'orange'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Jade_Barroth_(MHST3)
+  {
+    name: 'Jade Barroth',
+    genus: 'Brute Wyvern',
+    related: [
+      { type: 'subspeciesOf', monster: 'Barroth' },
+      { type: 'feral', monster: 'Feral Barroth' },
+      { type: 'honed', monster: 'Honed Barroth' },
+    ],
+    hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'green'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Barroth
+  {
+    name: 'Feral Barroth',
+    genus: 'Brute Wyvern',
+    related: [
+      { type: 'feralOf', monster: 'Barroth' },
+      { type: 'subspecies', monster: 'Jade Barroth' },
+      { type: 'honed', monster: 'Honed Barroth' },
+    ],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
   },
 
@@ -239,7 +285,11 @@
   {
     name: 'Honed Barroth',
     genus: 'Brute Wyvern',
-    related: [{ type: 'honedOf', monster: 'Barroth' }],
+    related: [
+      { type: 'honedOf', monster: 'Barroth' },
+      { type: 'feral', monster: 'Feral Barroth' },
+      { type: 'subspecies', monster: 'Jade Barroth' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Bishaten_(MHST3)
@@ -261,6 +311,7 @@
       { type: 'subspeciesOf', monster: 'Bishaten' },
       { type: 'feral', monster: 'Feral Bishaten' },
     ],
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Bishaten_(MHST3)
@@ -633,10 +684,26 @@
   {
     name: 'Glavenus',
     genus: 'Brute Wyvern',
-    related: [{ type: 'honed', monster: 'Honed Glavenus' }],
+    related: [
+      { type: 'feral', monster: 'Feral Glavenus' },
+      { type: 'honed', monster: 'Honed Glavenus' },
+    ],
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Glavenus
+  {
+    name: 'Feral Glavenus',
+    genus: 'Brute Wyvern',
+    related: [
+      { type: 'feralOf', monster: 'Glavenus' },
+      { type: 'honed', monster: 'Honed Glavenus' },
+    ],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
   },
 
@@ -644,7 +711,10 @@
   {
     name: 'Honed Glavenus',
     genus: 'Brute Wyvern',
-    related: [{ type: 'honedOf', monster: 'Glavenus' }],
+    related: [
+      { type: 'honedOf', monster: 'Glavenus' },
+      { type: 'feral', monster: 'Feral Glavenus' },
+    ],
     flavor: {
       DEFAULT: "A Glavenus spotted near Azuria's border. It is stronger than the regular species, and its whole body is covered in armor. While some think it has been artificially enhanced, details are unknown.",
     },
@@ -910,6 +980,16 @@
     hatchable: true,
     monstie: {
       eggColors: ['pink', 'red'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Kulu-Ya-Ku_(MHST3)
+  {
+    name: 'Kulu-Ya-Ku',
+    genus: 'Bird Wyvern',
+    hatchable: true,
+    monstie: {
+      eggColors: ['yellow', 'white', 'orange'],
     },
   },
 
@@ -1252,6 +1332,15 @@
   {
     name: 'Odogaron',
     genus: 'Fanged Wyvern',
+    related: [{ type: 'subspecies', monster: 'Ebony Odogaron' }],
+    hatchable: true,
+  },
+
+  // https://monsterhunterwiki.org/wiki/Ebony_Odogaron_(MHST3)
+  {
+    name: 'Ebony Odogaron',
+    genus: 'Fanged Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Odogaron' }],
     hatchable: true,
   },
 
@@ -1539,6 +1628,12 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Rachnoid_(MHST3)
+  {
+    name: 'Rachnoid',
+    genus: 'Temnoceran',
+  },
+
   // https://monsterhunterwiki.org/wiki/Rakna-Kadaki_(MHST3)
   {
     name: 'Rakna-Kadaki',
@@ -1553,6 +1648,7 @@
     related: [
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
+      { type: 'mutation', monster: 'Dreadking Rathalos' },
       { type: 'story', monster: 'Skyscale Ratha' },
     ],
     hatchable: true,
@@ -1568,8 +1664,13 @@
     related: [
       { type: 'subspeciesOf', monster: 'Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
+      { type: 'mutation', monster: 'Dreadking Rathalos' },
       { type: 'story', monster: 'Skyscale Ratha' },
     ],
+    hatchable: true,
+    monstie: {
+      eggColors: ['blue'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Honed_Azure_Rathalos
@@ -1579,8 +1680,25 @@
     related: [
       { type: 'honedOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
+      { type: 'mutation', monster: 'Dreadking Rathalos' },
       { type: 'story', monster: 'Skyscale Ratha' },
     ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Dreadking_Rathalos_(MHST3)
+  {
+    name: 'Dreadking Rathalos',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'mutationOf', monster: 'Rathalos' },
+      { type: 'subspecies', monster: 'Azure Rathalos' },
+      { type: 'honed', monster: 'Honed Azure Rathalos' },
+      { type: 'story', monster: 'Skyscale Ratha' },
+    ],
+    hatchable: true,
+    monstie: {
+      eggColors: ['red', 'black'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Skyscale_Ratha
@@ -1592,6 +1710,7 @@
       { type: 'storyOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
+      { type: 'mutation', monster: 'Dreadking Rathalos' },
     ],
     flavor: {
       DEFAULT: "Ten years ago, this Skyscale Rathalos was born from an egg quartz that Amara discovered in Blightstone Woods. One of a pair of twins, it serves as the prince/princess's Monstie.",
@@ -1961,7 +2080,15 @@
   {
     name: 'Shogun Ceanataur',
     genus: 'Carapaceon',
+    related: [{ type: 'invasive', monster: 'Invasive Shogun Ceanataur' }],
     hatchable: true,
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Shogun_Ceanataur
+  {
+    name: 'Invasive Shogun Ceanataur',
+    genus: 'Carapaceon',
+    related: [{ type: 'invasiveOf', monster: 'Shogun Ceanataur' }],
   },
 
   // https://monsterhunterwiki.org/wiki/Slagtoth_(MHST3)
@@ -2267,11 +2394,19 @@
     calamitous: true,
   },
 
+  // https://monsterhunterwiki.org/wiki/Yama_Tsukami_(MHST3)
+  {
+    name: 'Yama Tsukami',
+    genus: 'Elder Dragon',
+    related: [{ type: 'feral', monster: 'Feral Yama Tsukami' }],
+    calamitous: true,
+  },
+
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
   {
     name: 'Feral Yama Tsukami',
     genus: 'Elder Dragon',
-    calamitous: true,
+    related: [{ type: 'feralOf', monster: 'Yama Tsukami' }],
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
