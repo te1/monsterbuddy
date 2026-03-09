@@ -131,11 +131,7 @@
     },
   });
 
-  const _heading = computed(() => {
-    if (showFilter.value) {
-      return 'View Options';
-    }
-
+  const title = computed(() => {
     if (sources.current === 'recent') {
       return 'Recent Monsties';
     }
@@ -146,6 +142,8 @@
 
     return null;
   });
+
+  useMobileHeaderTitle().bind(title);
 
   const fabFilterTarget = computed(() => {
     if (showFilter.value) {

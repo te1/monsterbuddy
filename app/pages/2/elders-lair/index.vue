@@ -44,14 +44,6 @@
     },
   });
 
-  const _heading = computed(() => {
-    if (showFilter.value) {
-      return 'View Options';
-    }
-
-    return null;
-  });
-
   if (route.query.floor) {
     eldersLairFilter.eldersLairFilter = route.query.floor as string;
 
