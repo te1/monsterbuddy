@@ -11,6 +11,9 @@ const RegionMonstersSchema = z.object({
 });
 export type RegionMonsters = z.infer<typeof RegionMonstersSchema>;
 
+const StatsTypeSchema = z.enum(['hp', 'attack', 'speed', 'defense', 'crit', 'recovery', 'stamina']);
+export type StatsType = z.infer<typeof StatsTypeSchema>;
+
 const RegionAreaSchema = z.object({
   name: z.string(),
   element: ElementTypeSchema,
@@ -27,7 +30,7 @@ export const RegionSchema = z.object({
   monsters: RegionMonstersSchema,
   powers: z.object({
     skills: z.record(z.string(), z.string()),
-    stats: z.record(z.string(), z.number()),
+    stats: z.array(StatsTypeSchema),
   }),
   areas: z.array(RegionAreaSchema),
 });

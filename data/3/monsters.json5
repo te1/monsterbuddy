@@ -192,7 +192,8 @@
   {
     name: 'Astalos',
     genus: 'Flying Wyvern',
-    related: [{ type: 'deviant', monster: 'Boltreaver Astalos' }],
+    endangered: true,
+    related: [{ type: 'mutation', monster: 'Boltreaver Astalos' }],
     element: 'thunder',
     monster: {},
     hatchable: true,
@@ -205,7 +206,7 @@
   {
     name: 'Boltreaver Astalos',
     genus: 'Flying Wyvern',
-    related: [{ type: 'deviantOf', monster: 'Astalos' }],
+    related: [{ type: 'mutationOf', monster: 'Astalos' }],
     element: 'thunder',
     monster: {},
     hatchable: true,
@@ -399,6 +400,7 @@
   {
     name: 'Canyne',
     genus: 'Fanged Beast',
+    endangered: true,
     hatchable: true,
   },
 
@@ -713,9 +715,21 @@
   {
     name: 'Gravios',
     genus: 'Flying Wyvern',
+    related: [{ type: 'subspecies', monster: 'Black Gravios' }],
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'white', 'gray', 'orange'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Black_Gravios_(MHST3)
+  {
+    name: 'Black Gravios',
+    genus: 'Flying Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Gravios' }],
+    hatchable: true,
+    monstie: {
+      eggColors: ['gray', 'orange'],
     },
   },
 
@@ -903,7 +917,8 @@
   {
     name: 'Lagiacrus',
     genus: 'Leviathan',
-    related: [{ type: 'subspecies', monster: 'Ivory Lagiacrus' }],
+    endangered: true,
+    related: [{ type: 'mutation', monster: 'Ivory Lagiacrus' }],
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
@@ -914,7 +929,7 @@
   {
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
-    related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
+    related: [{ type: 'mutationOf', monster: 'Lagiacrus' }],
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'blue'],
@@ -949,6 +964,7 @@
   {
     name: 'Malzeno',
     genus: 'Elder Dragon',
+    calamitous: true,
     hatchable: true,
   },
 
@@ -956,7 +972,8 @@
   {
     name: 'Mizutsune',
     genus: 'Leviathan',
-    related: [{ type: 'deviant', monster: 'Soulseer Mizutsune' }],
+    endangered: true,
+    related: [{ type: 'mutation', monster: 'Soulseer Mizutsune' }],
     hatchable: true,
     monstie: {
       eggColors: ['red', 'pink', 'white', 'gray'],
@@ -967,7 +984,7 @@
   {
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
-    related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
+    related: [{ type: 'mutationOf', monster: 'Mizutsune' }],
     hatchable: true,
     monstie: {
       eggColors: ['white', 'red', 'purple', 'pink'],
@@ -996,6 +1013,7 @@
   {
     name: 'Namielle',
     genus: 'Elder Dragon',
+    calamitous: true,
     flavor: {
       DEFAULT: 'This Elder Dragon is completely enveloped in liquid and can command vast quantities of water. Unique electric organs allow it to charge water attacks with electricity, creating massive explosions.',
     },
@@ -1047,9 +1065,10 @@
   {
     name: 'Nargacuga',
     genus: 'Flying Wyvern',
+    endangered: true,
     related: [
-      { type: 'subspecies', monster: 'Green Nargacuga' },
-      { type: 'deviant', monster: 'Silverwind Nargacuga' },
+      { type: 'mutation', monster: 'Green Nargacuga' },
+      { type: 'mutation', monster: 'Silverwind Nargacuga' },
     ],
     hatchable: true,
     monstie: {
@@ -1062,8 +1081,8 @@
     name: 'Green Nargacuga',
     genus: 'Flying Wyvern',
     related: [
-      { type: 'subspeciesOf', monster: 'Nargacuga' },
-      { type: 'deviant', monster: 'Silverwind Nargacuga' },
+      { type: 'mutationOf', monster: 'Nargacuga' },
+      { type: 'mutation', monster: 'Silverwind Nargacuga' },
     ],
     hatchable: true,
     monstie: {
@@ -1076,8 +1095,8 @@
     name: 'Silverwind Nargacuga',
     genus: 'Flying Wyvern',
     related: [
-      { type: 'deviantOf', monster: 'Nargacuga' },
-      { type: 'subspecies', monster: 'Green Nargacuga' },
+      { type: 'mutationOf', monster: 'Nargacuga' },
+      { type: 'mutation', monster: 'Green Nargacuga' },
     ],
     hatchable: true,
     monstie: {
@@ -1090,6 +1109,7 @@
     name: 'Nerscylla',
     genus: 'Temnoceran',
     related: [
+      { type: 'subspecies', monster: 'Nerscylla' },
       { type: 'feral', monster: 'Feral Nerscylla' },
       { type: 'invasive', monster: 'Invasive Nerscylla' },
     ],
@@ -1146,12 +1166,28 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Shrouded_Nerscylla_(MHST3)
+  {
+    name: 'Shrouded Nerscylla',
+    genus: 'Temnoceran',
+    related: [
+      { type: 'subspeciesOf', monster: 'Nerscylla' },
+      { type: 'feral', monster: 'Feral Nerscylla' },
+      { type: 'invasive', monster: 'Invasive Nerscylla' },
+    ],
+    hatchable: true,
+    monstie: {
+      eggColors: ['white', 'gray', 'yellow'],
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Feral_Nerscylla_(MHST3)
   {
     name: 'Feral Nerscylla',
     genus: 'Temnoceran',
     related: [
       { type: 'feralOf', monster: 'Nerscylla' },
+      { type: 'subspecies', monster: 'Nerscylla' },
       { type: 'invasive', monster: 'Invasive Nerscylla' },
     ],
     flavor: {
@@ -1201,6 +1237,7 @@
     genus: 'Temnoceran',
     related: [
       { type: 'invasiveOf', monster: 'Nerscylla' },
+      { type: 'subspecies', monster: 'Nerscylla' },
       { type: 'feral', monster: 'Feral Nerscylla' },
     ],
   },
@@ -1590,9 +1627,10 @@
   {
     name: 'Rathian',
     genus: 'Flying Wyvern',
+    endangered: true,
     related: [
-      { type: 'subspecies', monster: 'Pink Rathian' },
-      { type: 'deviant', monster: 'Dreadqueen Rathian' },
+      { type: 'mutation', monster: 'Pink Rathian' },
+      { type: 'mutation', monster: 'Dreadqueen Rathian' },
     ],
     rank: 4,
     flavor: {
@@ -1665,8 +1703,8 @@
     name: 'Pink Rathian',
     genus: 'Flying Wyvern',
     related: [
-      { type: 'subspeciesOf', monster: 'Rathian' },
-      { type: 'deviant', monster: 'Dreadqueen Rathian' },
+      { type: 'mutationOf', monster: 'Rathian' },
+      { type: 'mutation', monster: 'Dreadqueen Rathian' },
     ],
     rank: 5,
     flavor: {
@@ -1731,8 +1769,8 @@
     name: 'Dreadqueen Rathian',
     genus: 'Flying Wyvern',
     related: [
-      { type: 'deviantOf', monster: 'Rathian' },
-      { type: 'subspecies', monster: 'Pink Rathian' },
+      { type: 'mutationOf', monster: 'Rathian' },
+      { type: 'mutation', monster: 'Pink Rathian' },
     ],
     rank: 7,
     flavor: {
@@ -1994,6 +2032,7 @@
   {
     name: 'Thunder Serpent Narwa',
     genus: 'Elder Dragon',
+    calamitous: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Tigrex_(MHST3)
@@ -2225,12 +2264,14 @@
   {
     name: 'Wind Serpent Ibushi',
     genus: 'Elder Dragon',
+    calamitous: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
   {
     name: 'Feral Yama Tsukami',
     genus: 'Elder Dragon',
+    calamitous: true,
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -2241,7 +2282,7 @@
     name: 'Yian Garuga',
     genus: 'Bird Wyvern',
     related: [
-      { type: 'deviant', monster: 'Deadeye Yian Garuga' },
+      { type: 'mutation', monster: 'Deadeye Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
     hatchable: true,
@@ -2255,7 +2296,7 @@
     name: 'Deadeye Yian Garuga',
     genus: 'Bird Wyvern',
     related: [
-      { type: 'deviantOf', monster: 'Yian Garuga' },
+      { type: 'mutationOf', monster: 'Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
     hatchable: true,
@@ -2267,7 +2308,7 @@
     genus: 'Bird Wyvern',
     related: [
       { type: 'invasiveOf', monster: 'Yian Garuga' },
-      { type: 'deviant', monster: 'Deadeye Yian Garuga' },
+      { type: 'mutation', monster: 'Deadeye Yian Garuga' },
     ],
     flavor: {
       DEFAULT: 'This invasive subspecies of Yian Garuga is far deadlier than the regular species in terms of combat and toxicity. The body markings are caused by venom seeping out from its numerous venom glands.',
