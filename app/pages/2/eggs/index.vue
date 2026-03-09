@@ -117,6 +117,10 @@
   const showFilter = computed({
     get: () => route.query.filter !== undefined,
     set: (value) => {
+      if (value) {
+        displays.setCurrent('monstie'); // exit egg finder when opening filter
+      }
+
       if (value === (route.query.filter !== undefined)) {
         return;
       }
