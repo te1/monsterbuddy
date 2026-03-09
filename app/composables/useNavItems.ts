@@ -175,6 +175,22 @@ export function useBottomNavItems() {
           children: undefined,
         };
       }
+
+      item.onSelect = () => {
+        // scroll to top if we are on this page already
+
+        if (item.to == null) {
+          return;
+        }
+
+        const router = useRouter();
+        const route = router.resolve(item.to);
+
+        if (route.path === useRoute().path) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      };
+
       return item;
     })
   );
