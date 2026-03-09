@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import S2EldersLairSidebar from '~/components/s2/S2EldersLairSidebar.vue';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
-  import useEldersLairFilter from '~/stores/2/eldersLairFilter';
+  import useEldersLairFilter, { modes } from '~/stores/2/eldersLairFilter';
 
   definePageMeta({
     sidebarComponent: S2EldersLairSidebar,
@@ -15,10 +15,34 @@
   // TODO drop ?floor from canonical url
   const headline = gameTypeToFullName('mhst2');
 
+  const router = useRouter();
+  const route = useRoute();
+  const isMobile = useIsMobile();
+
   const eldersLairFilter = useEldersLairFilter();
   provide(filterStoreKey, eldersLairFilter);
 
-  const showFilter = ref(false); // TODO?
+  const showFilter = computed({
+    get: () => route.query.filter !== undefined,
+    set: (value) => {
+      if (value === (route.query.filter !== undefined)) {
+        return;
+      }
+
+      if (value) {
+        router.push({
+          path: route.path,
+          query: { ...route.query, filter: null },
+        });
+      } else {
+        const { filter: _filter, ...query } = route.query;
+        router.push({
+          path: route.path,
+          query,
+        });
+      }
+    },
+  });
 
   const _heading = computed(() => {
     if (showFilter.value) {
@@ -28,14 +52,34 @@
     return null;
   });
 
-  const route = useRoute();
   if (route.query.floor) {
     eldersLairFilter.eldersLairFilter = route.query.floor as string;
 
-    useRouter().replace(route.path); // remove query parameters from URL
+    router.replace(route.path); // remove query parameters from URL
   } else {
     eldersLairFilter.eldersLairFilter = undefined;
   }
+
+  const fabFilterTarget = computed(() => {
+    if (showFilter.value) {
+      return '/2/elders-lair';
+    }
+    return '/2/elders-lair?filter';
+  });
+
+  const fabFilterTooltip = computed(() => {
+    if (showFilter.value) {
+      return 'Apply';
+    }
+    return 'View options';
+  });
+
+  const fabFilterIcon = computed(() => {
+    if (showFilter.value) {
+      return 'ph:check';
+    }
+    return 'ph:sliders';
+  });
 </script>
 
 <template>
@@ -104,5 +148,33 @@
 
       <S2MonsterNoResults v-if="eldersLairFilter.isEmpty">No monsters found</S2MonsterNoResults>
     </UPageBody>
+
+    <ClientOnly>
+      <UDrawer
+        v-if="isMobile"
+        v-model:open="showFilter"
+        title="View Options"
+        description=" "
+        :ui="{ body: 'flex flex-col gap-3' }"
+      >
+        <template #body>
+          <S2MonsterViewOptions :filter="eldersLairFilter" :modes="modes" hideSort modalLayout />
+
+          <S2MonsterFilter
+            :filter="eldersLairFilter"
+            showEldersLairFilter
+            showHatchableFilter
+            modalLayout
+            backTarget="/2/elders-lair"
+          />
+        </template>
+      </UDrawer>
+
+      <AppFabPanel>
+        <NuxtLink v-if="!showFilter" :to="fabFilterTarget">
+          <AppFab :tooltip="fabFilterTooltip" :icon="fabFilterIcon" />
+        </NuxtLink>
+      </AppFabPanel>
+    </ClientOnly>
   </div>
 </template>

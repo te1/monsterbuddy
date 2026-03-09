@@ -3,7 +3,7 @@
   import { monsties } from '~/services/2/data';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
-  import useMonstieFilter from '~/stores/2/monstieFilter';
+  import useMonstieFilter, { modes } from '~/stores/2/monstieFilter';
   import useMonstieSources, { type Source } from '~/stores/2/monstieSources';
 
   definePageMeta({
@@ -17,6 +17,10 @@
   });
   // TODO drop ?source from canonical url
   const headline = gameTypeToFullName('mhst2');
+
+  const router = useRouter();
+  const route = useRoute();
+  const isMobile = useIsMobile();
 
   const history = useHistoryStore();
   const monstieFilter = useMonstieFilter();
@@ -80,7 +84,52 @@
 
   watch(sourceItems, syncSource);
 
-  const showFilter = ref(false); // TODO?
+  function toggleSource() {
+    sources.setCurrent(sources.next, monstieFilter);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // update source from query string
+  watch(
+    () => route.query.source as Source,
+    (newSource) => {
+      if (typeof newSource !== 'string') {
+        return;
+      }
+
+      if (sources.all.includes(newSource)) {
+        sources.setCurrent(newSource, monstieFilter);
+
+        router.replace(route.path); // remove query parameters from URL
+      }
+    },
+    { immediate: true }
+  );
+
+  const showFilter = computed({
+    get: () => route.query.filter !== undefined,
+    set: (value) => {
+      if (value === (route.query.filter !== undefined)) {
+        return; // value is unchanged -> do nothing
+      }
+
+      if (value) {
+        // value is now true -> add ?filter to URL
+        router.push({
+          path: route.path,
+          query: { ...route.query, filter: null },
+        });
+      } else {
+        // value is now false -> remove ?filter from URL
+        const { filter: _filter, ...query } = route.query;
+        router.push({
+          path: route.path,
+          query,
+        });
+      }
+    },
+  });
 
   const _heading = computed(() => {
     if (showFilter.value) {
@@ -98,29 +147,26 @@
     return null;
   });
 
-  function toggleSource() {
-    sources.setCurrent(sources.next, monstieFilter);
+  const fabFilterTarget = computed(() => {
+    if (showFilter.value) {
+      return '/2/monsties';
+    }
+    return '/2/monsties?filter';
+  });
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  const fabFilterTooltip = computed(() => {
+    if (showFilter.value) {
+      return 'Apply';
+    }
+    return 'View options';
+  });
 
-  // update source from query string
-  const route = useRoute();
-  watch(
-    () => route.query.source as Source,
-    (newSource) => {
-      if (typeof newSource !== 'string') {
-        return;
-      }
-
-      if (sources.all.includes(newSource)) {
-        sources.setCurrent(newSource, monstieFilter);
-
-        useRouter().replace(route.path); // remove query parameters from URL
-      }
-    },
-    { immediate: true }
-  );
+  const fabFilterIcon = computed(() => {
+    if (showFilter.value) {
+      return 'ph:check';
+    }
+    return 'ph:sliders';
+  });
 
   const fabSourceVisible = computed(() => {
     return !showFilter.value && sources.all.length > 1;
@@ -235,6 +281,37 @@
     </UPageBody>
 
     <ClientOnly>
+      <UDrawer
+        v-if="isMobile"
+        v-model:open="showFilter"
+        title="View Options"
+        description=" "
+        :ui="{ body: 'flex flex-col gap-3' }"
+      >
+        <template #body>
+          <S2MonsterViewOptions
+            :filter="monstieFilter"
+            :modes="modes"
+            showSortByStats
+            modalLayout
+          />
+
+          <S2MonsterFilter
+            :filter="monstieFilter"
+            hideSearch
+            showHabitatFilter
+            showCoopQuestFilter
+            showCatavanFilter
+            showEldersLairFilter
+            showAttackTypeFilter
+            showAttackElementFilter
+            showRidingActionFilter
+            modalLayout
+            backTarget="/2/monsties"
+          />
+        </template>
+      </UDrawer>
+
       <AppFabPanel>
         <AppFab
           v-if="fabSourceVisible"
@@ -242,6 +319,10 @@
           :icon="fabSourceIcon"
           @click="toggleSource"
         />
+
+        <NuxtLink v-if="!showFilter" :to="fabFilterTarget">
+          <AppFab :tooltip="fabFilterTooltip" :icon="fabFilterIcon" />
+        </NuxtLink>
       </AppFabPanel>
     </ClientOnly>
   </div>

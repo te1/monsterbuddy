@@ -3,18 +3,43 @@
   import useEggFilter, { modes } from '~/stores/2/eggFilter';
   import useEggSources from '~/stores/2/eggSources';
 
+  const router = useRouter();
+  const route = useRoute();
+  const isMobile = useIsMobile();
+
   const displays = useEggsDisplay();
   const filter = useEggFilter();
   const sources = useEggSources();
+
+  const tab = ref<'view' | 'filter'>('view');
 
   const disableSortingAndFiltering = computed(() => {
     return displays.current === 'egg';
   });
 
   const tabs = [
-    { label: 'View', slot: 'view' },
-    { label: 'Filter', slot: 'filter' },
+    { label: 'View', slot: 'view', value: 'view' },
+    { label: 'Filter', slot: 'filter', value: 'filter' },
   ];
+
+  // update tab from query string
+  watch(
+    [() => route.query.filter, isMobile],
+    ([filter, isMobile]) => {
+      if (filter === undefined || isMobile) {
+        return; // on mobile filter triggers a drawer instead
+      }
+
+      tab.value = 'filter';
+
+      const { filter: _filter, ...query } = route.query;
+      router.replace({
+        path: route.path,
+        query,
+      });
+    },
+    { immediate: true }
+  );
 
   // switch to source: all when entering egg finder
   watch(
@@ -38,7 +63,7 @@
 </script>
 
 <template>
-  <UTabs color="neutral" variant="link" :items="tabs">
+  <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
     <template #view>
       <S2MonsterViewOptions
         :displays="displays"
