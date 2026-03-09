@@ -45,6 +45,10 @@
     }
   );
 
+  const variant = computed(() => {
+    return props.modalLayout ? 'soft-filter-modal' : 'soft-filter';
+  });
+
   function setFilter<T>(filterKey: FilterKey, value: T, mode?: Mode) {
     if (value === props.filter[filterKey]) {
       return;
@@ -246,6 +250,7 @@
       <AppInputSearch
         :modelValue="filter.nameFilter"
         :disabled="disabled"
+        :modalLayout="modalLayout"
         @update:modelValue="filter.$patch({ nameFilter: $event })"
       />
     </UFormField>
@@ -260,7 +265,7 @@
         <USelect
           :modelValue="eggColor"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="eggColors"
           class="w-full"
           :disabled="disabled"
@@ -272,7 +277,7 @@
         <USelect
           :modelValue="filter.genusFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="genera"
           class="w-full"
           :disabled="disabled"
@@ -289,7 +294,7 @@
         <USelect
           :modelValue="filter.habitatFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="habitats"
           class="w-full"
           :disabled="disabled"
@@ -306,7 +311,7 @@
         <USelect
           :modelValue="filter.coopQuestFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="coopQuests"
           class="w-full"
           :disabled="disabled"
@@ -323,7 +328,7 @@
         <USelect
           :modelValue="filter.catavanFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="catavanStands"
           class="w-full"
           :disabled="disabled"
@@ -340,7 +345,7 @@
         <USelect
           :modelValue="filter.eldersLairFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="eldersLairFloors"
           class="w-full"
           :disabled="disabled"
@@ -357,7 +362,7 @@
         <USelect
           :modelValue="filter.attackTypeFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="attackTypes"
           class="w-full"
           :disabled="disabled"
@@ -374,7 +379,7 @@
         <USelect
           :modelValue="filter.attackElementFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="attackElements"
           class="w-full"
           :disabled="disabled"
@@ -391,7 +396,7 @@
         <USelect
           :modelValue="filter.ridingActionFilter ?? 'ALL'"
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           :items="ridingActions"
           class="w-full"
           :disabled="disabled"
@@ -410,6 +415,7 @@
           :texts="['Include', 'Only Hatchable', 'Exclude']"
           class="w-full"
           :disabled="disabled"
+          :modalLayout="modalLayout"
           @update:modelValue="setFilter('hatchableFilter', $event)"
         />
       </UFormField>
@@ -425,6 +431,7 @@
           :texts="['Include', 'Only Deviants', 'Exclude']"
           class="w-full"
           :disabled="disabled"
+          :modalLayout="modalLayout"
           @update:modelValue="setFilter('deviantsFilter', $event)"
         />
       </UFormField>
@@ -437,7 +444,7 @@
     >
       <UButton
         color="neutral"
-        variant="soft2"
+        :variant="variant"
         class="w-full"
         trailingIcon="ph:arrow-counter-clockwise"
         label="Reset"
@@ -456,7 +463,7 @@
       <NuxtLink :to="backTarget">
         <UButton
           color="neutral"
-          variant="soft2"
+          :variant="variant"
           class="w-full"
           trailingIcon="ph:check"
           label="Apply"

@@ -28,6 +28,10 @@
     }
   );
 
+  const variant = computed(() => {
+    return props.modalLayout ? 'soft-filter-modal' : 'soft-filter';
+  });
+
   const sortConfig = computed(() => {
     const result: {
       value: SortKey;
@@ -153,6 +157,7 @@
       <AppInputSearch
         :modelValue="filter.nameFilter"
         :disabled="disabled"
+        :modalLayout="modalLayout"
         @update:modelValue="filter.$patch({ nameFilter: $event })"
       />
     </UFormField>
@@ -166,7 +171,7 @@
       <USelect
         :modelValue="filter.mode"
         color="neutral"
-        variant="soft2"
+        :variant="variant"
         :items="modes"
         class="w-full"
         :disabled="disabled"
@@ -184,7 +189,7 @@
       <USelect
         :modelValue="filter.sortKey"
         color="neutral"
-        variant="soft2"
+        :variant="variant"
         :items="sortConfig"
         class="w-full"
         :disabled="disabled"
@@ -193,6 +198,7 @@
       <AppSortOrderToggle
         :modelValue="filter.sortOrder"
         :disabled="disabled"
+        :modalLayout="modalLayout"
         @update:modelValue="filter.setSortOrder($event)"
       />
     </UFormField>

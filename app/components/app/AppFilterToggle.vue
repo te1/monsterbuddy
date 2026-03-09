@@ -2,9 +2,11 @@
   const props = withDefaults(
     defineProps<{
       texts?: string[];
+      modalLayout?: boolean;
     }>(),
     {
       texts: undefined,
+      modalLayout: false,
     }
   );
 
@@ -55,7 +57,7 @@
 <template>
   <UButton
     color="neutral"
-    variant="soft2"
+    :variant="modalLayout ? 'soft-filter-modal' : 'soft-filter'"
     class="w-full"
     :trailingIcon="icon"
     :label="label ?? ''"

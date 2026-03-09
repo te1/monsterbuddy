@@ -1,17 +1,23 @@
 <script lang="ts" setup>
-  withDefaults(
+  const props = withDefaults(
     defineProps<{
       noLabel?: boolean;
       disabled?: boolean;
+      modalLayout?: boolean;
     }>(),
     {
       noLabel: true,
       disabled: false,
+      modalLayout: false,
     }
   );
 
   const model = defineModel<SortOrder>({
     required: true,
+  });
+
+  const variant = computed(() => {
+    return props.modalLayout ? 'soft-filter-modal' : 'soft-filter';
   });
 
   const icon = computed(() => (model.value === 'asc' ? 'ph:sort-descending' : 'ph:sort-ascending'));
@@ -30,7 +36,7 @@
   <UTooltip v-if="noLabel" :text="tooltip">
     <UButton
       color="neutral"
-      variant="soft2"
+      :variant="variant"
       :icon="icon"
       :ui="{ leadingIcon: 'text-dimmed' }"
       :disabled="disabled"
@@ -41,7 +47,7 @@
   <UButton
     v-else
     color="neutral"
-    variant="soft2"
+    :variant="variant"
     class="w-full"
     :trailingIcon="icon"
     :label="label"

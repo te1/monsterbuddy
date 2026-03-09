@@ -2,9 +2,11 @@
   withDefaults(
     defineProps<{
       disabled?: boolean;
+      modalLayout?: boolean;
     }>(),
     {
       disabled: false,
+      modalLayout: false,
     }
   );
 
@@ -30,7 +32,7 @@
     ref="input"
     :modelValue="modelValue"
     color="neutral"
-    variant="soft2"
+    :variant="modalLayout ? 'soft-filter-modal' : 'soft-filter'"
     icon="ph:magnifying-glass"
     placeholder="Search..."
     :ui="{ trailing: 'pe-1' }"

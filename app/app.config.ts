@@ -136,10 +136,10 @@ export default defineAppConfig({
     button: {
       variants: {
         variant: {
-          soft2:
+          'soft-filter':
             'text-highlighted bg-default/50 hover:bg-default active:bg-accented/50 focus:outline-none focus-visible:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 select-none',
-          subtle2:
-            'ring ring-inset ring-inverted/50 text-highlighted bg-default/50 hover:bg-default active:bg-default disabled:bg-default/50 aria-disabled:bg-default/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted select-none',
+          'soft-filter-modal':
+            'text-default bg-accented dark:bg-elevated/50 hover:bg-elevated active:bg-elevated dark:active:bg-accented/75 focus:outline-none focus-visible:bg-elevated dark:focus-visible:bg-accented/75 disabled:bg-elevated aria-disabled:bg-elevated select-none',
           fab: 'ring ring-inset ring-accented text-toned active:text-highlighted bg-default hover:bg-elevated active:bg-accented focus:outline-none focus-visible:ring-2 focus-visible:ring-inverted shadow-md',
         },
       },
@@ -150,15 +150,18 @@ export default defineAppConfig({
         root: 'place-items-baseline group',
         container: 'w-full overflow-hidden',
         labelWrapper: 'w-14 xl:w-24 group-data-[modal-layout=true]:w-24',
-        label: 'font-normal truncate select-none',
+        label:
+          'font-normal truncate select-none group-data-[modal-layout=true]:text-highlighted group-data-[modal-layout=true]:dark:text-default',
       },
     },
 
     input: {
       variants: {
         variant: {
-          soft2:
+          'soft-filter':
             'text-highlighted bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
+          'soft-filter-modal':
+            'text-highlighted bg-accented dark:bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50',
         },
       },
     },
@@ -170,8 +173,10 @@ export default defineAppConfig({
       },
       variants: {
         variant: {
-          soft2:
+          'soft-filter':
             'text-highlighted bg-default/50 hover:bg-default focus:bg-default disabled:bg-default/50',
+          'soft-filter-modal':
+            'text-highlighted bg-accented dark:bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50',
         },
       },
     },
