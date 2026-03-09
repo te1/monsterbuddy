@@ -110,22 +110,23 @@
     get: () => route.query.filter !== undefined,
     set: (value) => {
       if (value === (route.query.filter !== undefined)) {
-        return;
+        return; // value is unchanged -> do nothing
       }
 
       if (value) {
+        // value is now true -> add ?filter to URL
         router.push({
           path: route.path,
           query: { ...route.query, filter: null },
         });
-        return;
+      } else {
+        // value is now false -> remove ?filter from URL
+        const { filter: _filter, ...query } = route.query;
+        router.push({
+          path: route.path,
+          query,
+        });
       }
-
-      const { filter: _filter, ...query } = route.query;
-      router.push({
-        path: route.path,
-        query,
-      });
     },
   });
 
@@ -280,10 +281,11 @@
       <S2MonsterNoResults v-if="monsterFilter.isEmpty">No monsters found</S2MonsterNoResults>
     </UPageBody>
 
-    <UModal
+    <UDrawer
       v-model:open="showFilter"
       title="View Options"
-      :ui="{ body: 'flex flex-col gap-3 bg-elevated' }"
+      description=" "
+      :ui="{ body: 'flex flex-col gap-3' }"
     >
       <template #body>
         <S2MonsterViewOptions :filter="monsterFilter" :modes="modes" modalLayout />
@@ -299,7 +301,7 @@
           backTarget="/2/monsters"
         />
       </template>
-    </UModal>
+    </UDrawer>
 
     <ClientOnly>
       <AppFabPanel>
