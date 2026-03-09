@@ -9,8 +9,8 @@ import {
 export const RelationTypeSchema = z.enum([
   'subspecies',
   'subspeciesOf',
-  'deviant',
-  'deviantOf',
+  'mutation',
+  'mutationOf',
   'feral',
   'feralOf',
   'invasive',

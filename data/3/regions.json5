@@ -38,9 +38,7 @@
         A: 'Egg Power: Hardiness',
         B: 'Egg Power: Pwr Resilience',
       },
-      stats: {
-        hp: 2,
-      },
+      stats: ['hp'],
     },
     areas: [
       {
@@ -105,9 +103,10 @@
         'Tetranadon',
         'Yian Garuga',
       ],
-      small: ['Canyne', 'Bnahabra', 'Gargwa', 'Slagtoth'],
+      small: ['Blango', 'Canyne', 'Bnahabra', 'Gargwa', 'Slagtoth'],
       feral: [
         'Feral Aknosom',
+        'Feral Espinas',
         'Feral Great Izuchi',
         'Feral Somnacanth',
         'Feral Tetranadon',
@@ -116,7 +115,8 @@
         'Feral Yama Tsukami',
       ],
       invasive: ['Invasive Arzuros'],
-      endangered: ['Mizutsune', 'Nargacuga'],
+      endangered: ['Canyne', 'Mizutsune', 'Nargacuga'],
+      calamitous: ['Thunder Serpent Narwa', 'Wind Serpent Ibushi'],
     },
     powers: {
       skills: {
@@ -124,9 +124,7 @@
         A: 'Egg Power: High Morale',
         B: 'Egg Power: Spd Resilience',
       },
-      stats: {
-        recovery: 1,
-      },
+      stats: ['recovery'],
     },
     areas: [
       {
@@ -172,19 +170,98 @@
     ],
   },
 
-  // https://monsterhunterwiki.org/wiki/Turkuan
+  // https://monsterhunterwiki.org/wiki/Tarkuan
   {
     name: 'Turkuan',
+    monsters: {
+      large: [
+        'Ajarakan',
+        'Almudron',
+        'Barroth',
+        'Blood Orange Bishaten',
+        'Diablos',
+        'Black Diablos',
+        'Espinas',
+        'Garangolm',
+        'Glavenus',
+        'Gravios',
+        'Black Gravios',
+        'Green Plesioth',
+        'Kulu-Ya-Ku',
+        'Nibelsnarf',
+        'Shogun Ceanataur',
+        'Shrouded Nerscylla',
+      ],
+      small: ['Remobra'],
+      feral: ['Feral Ajarakan'],
+      invasive: [],
+      endangered: [],
+      calamitous: ['Yama Tsukami'],
+    },
+    powers: {
+      skills: {
+        S: 'Egg Power: Resonance',
+        A: 'Egg Power: Best Buds',
+        B: 'Egg Power: Tech Resilience',
+      },
+      stats: ['hp', 'defense'],
+    },
+    areas: [
+      {
+        name: "Colossal Dragon's Remains",
+        element: 'dragon',
+        permanent: ['Almudron', 'Kulu-Ya-Ku', 'Garangolm', 'Shogun Ceanataur', 'Barroth'],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+      {
+        name: 'Rococo Rocks',
+        element: 'thunder',
+        permanent: ['Glavenus', 'Black Diablos', 'Shrouded Nerscylla', 'Gravios', 'Diablos'],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+      {
+        name: 'Bountiful Dunes',
+        element: 'fire',
+        permanent: [
+          'Espinas',
+          'Black Gravios',
+          'Blood Orange Bishaten',
+          'Green Plesioth',
+          'Ajarakan',
+        ],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+      {
+        name: "Death's Maw",
+        element: 'none',
+        permanent: [],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+    ],
+  },
+
+  // https://monsterhunterwiki.org/wiki/Serathis
+  {
+    name: 'Serathis',
     monsters: {
       large: [],
       small: [],
       feral: [],
       invasive: [],
       endangered: [],
+      calamitous: [],
     },
     powers: {
       skills: {},
-      stats: {},
+      stats: [],
     },
     areas: [],
   },
