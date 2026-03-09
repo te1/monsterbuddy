@@ -57,7 +57,7 @@
           <AppFilterPill
             v-if="eldersLairFilter.hasActiveSort"
             :caption="eldersLairFilter.activeSort?.caption ?? ''"
-            filterTarget="/2/elders-lair/filter"
+            filterTarget="/2/elders-lair?filter"
             :sortOrder="eldersLairFilter.activeSort?.order"
           />
 
@@ -65,7 +65,7 @@
             v-for="filter in eldersLairFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/2/elders-lair/filter"
+            filterTarget="/2/elders-lair?filter"
             showRemove
             @remove="eldersLairFilter[filter.name] = undefined"
           />

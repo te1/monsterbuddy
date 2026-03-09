@@ -37,7 +37,6 @@ export default defineNuxtConfig({
       routes: ['/'],
       crawlLinks: true,
       autoSubfolderIndex: false,
-      ignore: ['/2/elders-lair/filter'],
     },
 
     preset: 'cloudflare_module',

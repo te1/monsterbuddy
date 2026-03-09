@@ -217,14 +217,12 @@
     />
 
     <UPageBody>
-      <!-- TODO filter modal -->
-
       <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
         <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
           <AppFilterPill
             v-if="eggFilter.hasActiveSort"
             :caption="eggFilter.activeSort?.caption ?? ''"
-            filterTarget="/2/eggs/filter"
+            filterTarget="/2/eggs?filter"
             :sortOrder="eggFilter.activeSort?.order"
           />
 
@@ -232,7 +230,7 @@
             v-for="filter in eggFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/2/eggs/filter"
+            filterTarget="/2/eggs?filter"
             showRemove
             @remove="eggFilter[filter.name] = undefined"
           />

@@ -20,6 +20,7 @@
 
   const router = useRouter();
   const route = useRoute();
+  const isMobile = useIsMobile();
 
   const history = useHistoryStore();
   const monsterFilter = useMonsterFilter();
@@ -219,14 +220,12 @@
     />
 
     <UPageBody>
-      <!-- TODO filter modal -->
-
       <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
         <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
           <AppFilterPill
             v-if="monsterFilter.hasActiveSort"
             :caption="monsterFilter.activeSort?.caption ?? ''"
-            filterTarget="/2/monsters/filter"
+            filterTarget="/2/monsters?filter"
             :sortOrder="monsterFilter.activeSort?.order"
           />
 
@@ -234,7 +233,7 @@
             v-for="filter in monsterFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/2/monsters/filter"
+            filterTarget="/2/monsters?filter"
             showRemove
             @remove="monsterFilter[filter.name] = undefined"
           />
@@ -281,29 +280,30 @@
       <S2MonsterNoResults v-if="monsterFilter.isEmpty">No monsters found</S2MonsterNoResults>
     </UPageBody>
 
-    <UDrawer
-      v-model:open="showFilter"
-      title="View Options"
-      description=" "
-      :ui="{ body: 'flex flex-col gap-3' }"
-    >
-      <template #body>
-        <S2MonsterViewOptions :filter="monsterFilter" :modes="modes" modalLayout />
-
-        <S2MonsterFilter
-          :filter="monsterFilter"
-          hideSearch
-          showHabitatFilter
-          showCatavanFilter
-          showEldersLairFilter
-          showHatchableFilter
-          modalLayout
-          backTarget="/2/monsters"
-        />
-      </template>
-    </UDrawer>
-
     <ClientOnly>
+      <UDrawer
+        v-if="isMobile"
+        v-model:open="showFilter"
+        title="View Options"
+        description=" "
+        :ui="{ body: 'flex flex-col gap-3' }"
+      >
+        <template #body>
+          <S2MonsterViewOptions :filter="monsterFilter" :modes="modes" modalLayout />
+
+          <S2MonsterFilter
+            :filter="monsterFilter"
+            hideSearch
+            showHabitatFilter
+            showCatavanFilter
+            showEldersLairFilter
+            showHatchableFilter
+            modalLayout
+            backTarget="/2/monsters"
+          />
+        </template>
+      </UDrawer>
+
       <AppFabPanel>
         <AppFab
           v-if="fabSourceVisible"
@@ -312,7 +312,7 @@
           @click="toggleSource"
         />
 
-        <NuxtLink :to="fabFilterTarget">
+        <NuxtLink v-if="!showFilter" :to="fabFilterTarget">
           <AppFab :tooltip="fabFilterTooltip" :icon="fabFilterIcon" />
         </NuxtLink>
       </AppFabPanel>

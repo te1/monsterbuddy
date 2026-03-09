@@ -174,14 +174,12 @@
     />
 
     <UPageBody>
-      <!-- TODO filter modal -->
-
       <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
         <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
           <AppFilterPill
             v-if="monstieFilter.hasActiveSort"
             :caption="monstieFilter.activeSort?.caption ?? ''"
-            filterTarget="/2/monsties/filter"
+            filterTarget="/2/monsties?filter"
             :sortOrder="monstieFilter.activeSort?.order"
           />
 
@@ -189,7 +187,7 @@
             v-for="filter in monstieFilter.activeFilters"
             :key="filter.name"
             :caption="filter.value"
-            filterTarget="/2/monsties/filter"
+            filterTarget="/2/monsties?filter"
             showRemove
             @remove="monstieFilter[filter.name] = undefined"
           />
