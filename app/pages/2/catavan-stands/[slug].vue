@@ -8,6 +8,10 @@
 
   definePageMeta({
     sidebarComponent: S2CatavanStandSidebar,
+    back: {
+      show: true,
+      fallback: '/2/catavan-stands',
+    },
   });
 
   const route = useRoute();

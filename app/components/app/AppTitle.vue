@@ -1,22 +1,31 @@
 <script lang="ts" setup>
+  const router = useRouter();
+  const route = useRoute();
   const isMobile = useIsMobile();
   const { value: mobileHeader } = useMobileHeaderTitle();
 
-  // TODO implement back button
+  const hasBack = computed(() => route.meta.back?.show ?? false);
+  const backFallback = computed(() => route.meta.back?.fallback ?? '/');
+
+  function goBack() {
+    if (window.history.length > 2) {
+      router.back();
+    } else {
+      router.push(backFallback.value);
+    }
+  }
 </script>
 
 <template>
-  <!--
-  <UTooltip v-if="isMobile" text="Back">
+  <UTooltip v-if="hasBack" text="Back" class="md:hidden">
     <UButton
       icon="ph:arrow-left"
       color="neutral"
       variant="ghost"
       aria-label="Back"
-      @click="router.back()"
+      @click="goBack"
     />
   </UTooltip>
-  -->
 
   <div class="text-lg font-medium tracking-wide dark:text-toned">
     <span v-if="mobileHeader && isMobile" v-text="mobileHeader" />

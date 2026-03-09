@@ -6,6 +6,10 @@
 
   definePageMeta({
     sidebarComponent: S2RidingActionSidebar,
+    back: {
+      show: true,
+      fallback: '/2/riding-actions',
+    },
   });
 
   const route = useRoute();

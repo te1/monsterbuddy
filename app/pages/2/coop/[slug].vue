@@ -10,6 +10,10 @@
 
   definePageMeta({
     sidebarComponent: S2CoopQuestSidebar,
+    back: {
+      show: true,
+      fallback: '/2/coop',
+    },
   });
 
   const route = useRoute();

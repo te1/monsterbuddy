@@ -6,6 +6,10 @@
 
   definePageMeta({
     sidebarComponent: S2MonsterDetailsSidebar,
+    back: {
+      show: true,
+      fallback: '/2/monsters',
+    },
   });
 
   const route = useRoute();
