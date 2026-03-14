@@ -282,8 +282,8 @@
   {
     name: 'Astalos',
     genus: 'Flying Wyvern',
-    endangered: true,
-    related: [{ type: 'mutation', monster: 'Boltreaver Astalos' }],
+    tags: ['endangered'],
+    related: [{ type: 'deviant', monster: 'Boltreaver Astalos' }],
     rank: 5,
     element: 'thunder',
     monster: {
@@ -306,7 +306,8 @@
   {
     name: 'Boltreaver Astalos',
     genus: 'Flying Wyvern',
-    related: [{ type: 'mutationOf', monster: 'Astalos' }],
+    tags: ['mutation', 'deviant'],
+    related: [{ type: 'deviantOf', monster: 'Astalos' }],
     rank: 7,
     element: 'thunder',
     monster: {
@@ -656,7 +657,7 @@
     name: 'Canyne',
     genus: 'Fanged Beast',
     rank: 5,
-    endangered: true,
+    // tags: ['endangered'], // TODO is this true?
     element: 'none',
     monster: {
       states: {
@@ -1428,8 +1429,8 @@
   {
     name: 'Lagiacrus',
     genus: 'Leviathan',
-    endangered: true,
-    related: [{ type: 'mutation', monster: 'Ivory Lagiacrus' }],
+    tags: ['endangered'],
+    related: [{ type: 'subspecies', monster: 'Ivory Lagiacrus' }],
     rank: 5,
     element: 'thunder',
     monster: {
@@ -1455,7 +1456,8 @@
   {
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
-    related: [{ type: 'mutationOf', monster: 'Lagiacrus' }],
+    tags: ['mutation'],
+    related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
     rank: 6,
     element: 'thunder',
     monster: {
@@ -1549,7 +1551,7 @@
   {
     name: 'Malzeno',
     genus: 'Elder Dragon',
-    calamitous: true,
+    tags: ['calamitous'],
     rank: 7,
     element: 'dragon',
     monster: {
@@ -1572,8 +1574,8 @@
   {
     name: 'Mizutsune',
     genus: 'Leviathan',
-    endangered: true,
-    related: [{ type: 'mutation', monster: 'Soulseer Mizutsune' }],
+    tags: ['endangered'],
+    related: [{ type: 'deviant', monster: 'Soulseer Mizutsune' }],
     rank: 5,
     element: 'water',
     monster: {
@@ -1599,7 +1601,8 @@
   {
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
-    related: [{ type: 'mutationOf', monster: 'Mizutsune' }],
+    tags: ['mutation', 'deviant'],
+    related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
     rank: 7,
     element: 'water',
     monster: {
@@ -1637,7 +1640,7 @@
   {
     name: 'Namielle',
     genus: 'Elder Dragon',
-    calamitous: true,
+    tags: ['calamitous'],
     rank: 7,
     flavor: {
       DEFAULT: 'This Elder Dragon is completely enveloped in liquid and can command vast quantities of water. Unique electric organs allow it to charge water attacks with electricity, creating massive explosions.',
@@ -1691,10 +1694,10 @@
   {
     name: 'Nargacuga',
     genus: 'Flying Wyvern',
-    endangered: true,
+    tags: ['endangered'],
     related: [
-      { type: 'mutation', monster: 'Green Nargacuga' },
-      { type: 'mutation', monster: 'Silverwind Nargacuga' },
+      { type: 'subspecies', monster: 'Green Nargacuga' },
+      { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
     rank: 4,
     element: 'none',
@@ -1718,9 +1721,10 @@
   {
     name: 'Green Nargacuga',
     genus: 'Flying Wyvern',
+    tags: ['mutation'],
     related: [
-      { type: 'mutationOf', monster: 'Nargacuga' },
-      { type: 'mutation', monster: 'Silverwind Nargacuga' },
+      { type: 'subspeciesOf', monster: 'Nargacuga' },
+      { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
     rank: 5,
     element: 'none',
@@ -1744,9 +1748,10 @@
   {
     name: 'Silverwind Nargacuga',
     genus: 'Flying Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
-      { type: 'mutationOf', monster: 'Nargacuga' },
-      { type: 'mutation', monster: 'Green Nargacuga' },
+      { type: 'deviantOf', monster: 'Nargacuga' },
+      { type: 'subspecies', monster: 'Green Nargacuga' },
     ],
     rank: 7,
     element: 'none',
@@ -2302,7 +2307,7 @@
     related: [
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
-      { type: 'mutation', monster: 'Dreadking Rathalos' },
+      { type: 'deviant', monster: 'Dreadking Rathalos' },
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 5,
@@ -2333,7 +2338,7 @@
     related: [
       { type: 'subspeciesOf', monster: 'Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
-      { type: 'mutation', monster: 'Dreadking Rathalos' },
+      { type: 'deviant', monster: 'Dreadking Rathalos' },
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 6,
@@ -2365,7 +2370,7 @@
     related: [
       { type: 'honedOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
-      { type: 'mutation', monster: 'Dreadking Rathalos' },
+      { type: 'deviant', monster: 'Dreadking Rathalos' },
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
   },
@@ -2374,8 +2379,9 @@
   {
     name: 'Dreadking Rathalos',
     genus: 'Flying Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
-      { type: 'mutationOf', monster: 'Rathalos' },
+      { type: 'deviantOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
       // { type: 'story', monster: 'Skyscale Ratha' },
@@ -2405,7 +2411,7 @@
       { type: 'storyOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
-      { type: 'mutation', monster: 'Dreadking Rathalos' },
+      { type: 'deviant', monster: 'Dreadking Rathalos' },
     ],
     flavor: {
       DEFAULT: "Ten years ago, this Skyscale Rathalos was born from an egg quartz that Amara discovered in Blightstone Woods. One of a pair of twins, it serves as the prince/princess's Monstie.",
@@ -2442,10 +2448,10 @@
   {
     name: 'Rathian',
     genus: 'Flying Wyvern',
-    endangered: true,
+    tags: ['endangered'],
     related: [
-      { type: 'mutation', monster: 'Pink Rathian' },
-      { type: 'mutation', monster: 'Dreadqueen Rathian' },
+      { type: 'subspecies', monster: 'Pink Rathian' },
+      { type: 'deviant', monster: 'Dreadqueen Rathian' },
     ],
     rank: 4,
     flavor: {
@@ -2517,9 +2523,10 @@
   {
     name: 'Pink Rathian',
     genus: 'Flying Wyvern',
+    tags: ['mutation'],
     related: [
-      { type: 'mutationOf', monster: 'Rathian' },
-      { type: 'mutation', monster: 'Dreadqueen Rathian' },
+      { type: 'subspeciesOf', monster: 'Rathian' },
+      { type: 'deviant', monster: 'Dreadqueen Rathian' },
     ],
     rank: 5,
     flavor: {
@@ -2583,9 +2590,10 @@
   {
     name: 'Dreadqueen Rathian',
     genus: 'Flying Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
-      { type: 'mutationOf', monster: 'Rathian' },
-      { type: 'mutation', monster: 'Pink Rathian' },
+      { type: 'deviantOf', monster: 'Rathian' },
+      { type: 'subspecies', monster: 'Pink Rathian' },
     ],
     rank: 7,
     flavor: {
@@ -2945,7 +2953,7 @@
   {
     name: 'Thunder Serpent Narwa',
     genus: 'Elder Dragon',
-    calamitous: true,
+    tags: ['calamitous'],
   },
 
   // https://monsterhunterwiki.org/wiki/Tigrex_(MHST3)
@@ -3252,7 +3260,7 @@
   {
     name: 'Wind Serpent Ibushi',
     genus: 'Elder Dragon',
-    calamitous: true,
+    tags: ['calamitous'],
   },
 
   // https://monsterhunterwiki.org/wiki/Yama_Tsukami_(MHST3)
@@ -3260,7 +3268,7 @@
     name: 'Yama Tsukami',
     genus: 'Elder Dragon',
     related: [{ type: 'feral', monster: 'Feral Yama Tsukami' }],
-    calamitous: true,
+    tags: ['calamitous'],
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
@@ -3278,7 +3286,7 @@
     name: 'Yian Garuga',
     genus: 'Bird Wyvern',
     related: [
-      { type: 'mutation', monster: 'Deadeye Yian Garuga' },
+      { type: 'deviant', monster: 'Deadeye Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
     rank: 4,
@@ -3303,8 +3311,9 @@
   {
     name: 'Deadeye Yian Garuga',
     genus: 'Bird Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
-      { type: 'mutationOf', monster: 'Yian Garuga' },
+      { type: 'deviantOf', monster: 'Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
     rank: 7,
@@ -3318,7 +3327,7 @@
     genus: 'Bird Wyvern',
     related: [
       { type: 'invasiveOf', monster: 'Yian Garuga' },
-      { type: 'mutation', monster: 'Deadeye Yian Garuga' },
+      { type: 'deviant', monster: 'Deadeye Yian Garuga' },
     ],
     flavor: {
       DEFAULT: 'This invasive subspecies of Yian Garuga is far deadlier than the regular species in terms of combat and toxicity. The body markings are caused by venom seeping out from its numerous venom glands.',
