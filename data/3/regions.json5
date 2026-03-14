@@ -74,7 +74,7 @@
       {
         name: 'Blightstone Woods',
         element: 'none',
-        permanent: ['Purple Gypceros', 'Nerscylla', 'Chatacabra', 'Paolumu', 'Gypceros'],
+        permanent: ['Purple Gypceros', 'Nerscylla', 'Chatacabra', 'Paolumu', 'Gypceros'], // Blue Yian Kut-Ku instead of Purple Gypceros?
         feral: 'Feral Yian Kut-Ku',
         invasive: '?',
         endangered: '?',
@@ -115,7 +115,11 @@
         'Feral Yama Tsukami',
       ],
       invasive: ['Invasive Arzuros'],
-      endangered: ['Canyne', 'Mizutsune', 'Nargacuga'],
+      endangered: [
+        // 'Canyne', // TODO is this real?
+        'Mizutsune',
+        'Nargacuga',
+      ],
       calamitous: ['Thunder Serpent Narwa', 'Wind Serpent Ibushi'],
     },
     powers: {
@@ -146,7 +150,7 @@
       {
         name: 'Howlinyowl Forest',
         element: 'fire',
-        permanent: ['Great Izuchi', 'Aknosom', 'Yian Garuga', 'Bishaten', 'Pukei-Pukei'],
+        permanent: ['Great Izuchi', 'Aknosom', 'Yian Garuga', 'Bishaten', 'Pukei-Pukei'], // no Aknosom?
         feral: 'Feral Bishaten',
         invasive: '?',
         endangered: '?',
@@ -154,15 +158,15 @@
       {
         name: 'Blessing Hill',
         element: 'none',
-        permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchiu', 'Arzuros'],
-        feral: '?',
+        permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchiu', 'Arzuros'], // no Arzuros? no Purple Ludroth? no Great Izuchiu?
+        feral: 'Feral Tobi-Kadachi',
         invasive: '?',
         endangered: '?',
       },
       {
         name: 'Frozen Grotto',
         element: 'ice',
-        permanent: ['Somnacanth', 'Tetranadon', 'Red Khezu', 'Aurora Somnacanth', 'Khezu'],
+        permanent: ['Somnacanth', 'Tetranadon', 'Red Khezu', 'Aurora Somnacanth', 'Khezu'], // no Tetranadon?
         feral: 'Feral Tetranadon',
         invasive: '?',
         endangered: '?',
@@ -172,7 +176,7 @@
 
   // https://monsterhunterwiki.org/wiki/Tarkuan
   {
-    name: 'Turkuan',
+    name: 'Tarkuan',
     monsters: {
       large: [
         'Ajarakan',
@@ -189,13 +193,16 @@
         'Green Plesioth',
         'Kulu-Ya-Ku',
         'Nibelsnarf',
+        'Odogaron',
+        'Rakna-Kadaki',
+        'Rey Dau',
         'Shogun Ceanataur',
         'Shrouded Nerscylla',
       ],
-      small: ['Remobra'],
-      feral: ['Feral Ajarakan'],
+      small: ['Rachnoid', 'Remobra'],
+      feral: ['Feral Ajarakan', 'Feral Barroth', 'Feral Glavenus', 'Feral Gravios'],
       invasive: [],
-      endangered: [],
+      endangered: ['Tigrex', 'Zinogre'],
       calamitous: ['Yama Tsukami'],
     },
     powers: {
@@ -240,7 +247,7 @@
       {
         name: "Death's Maw",
         element: 'none',
-        permanent: [],
+        permanent: ['Black Diablos', 'Black Gravios', 'Odogaron', 'Rakna-Kadaki', 'Rey Dau'],
         feral: '?',
         invasive: '?',
         endangered: '?',
@@ -252,17 +259,59 @@
   {
     name: 'Serathis',
     monsters: {
-      large: [],
+      large: [
+        'Arkveld',
+        'Fulgur Anjanath',
+        'Blangonga',
+        'Brachydios',
+        'Ebony Odogaron',
+        'Deviljho',
+        'Goss Harag',
+        'Jade Barroth',
+        'Legiana',
+        'Lunagaron',
+        'Malzeno',
+        'Magnamalo',
+        'Rathalos',
+        'Red Khezu',
+        // 'Shogun Ceanataur', // TODO is this real?
+        'Velkhana',
+      ],
       small: [],
       feral: [],
       invasive: [],
-      endangered: [],
+      endangered: ['Barioth'],
       calamitous: [],
     },
     powers: {
       skills: {},
       stats: [],
     },
-    areas: [],
+    areas: [
+      {
+        name: 'Glacial Gaps',
+        element: 'water',
+        permanent: ['Blangonga', 'Brachydios', 'Red Khezu', 'Legiana', 'Velkhana'],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+      {
+        name: 'Old Capital Road',
+        element: 'ice',
+        permanent: ['Magnamalo', 'Lunagaron', 'Goss Harag', 'Fulgur Anjanath', 'Jade Barroth'],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+      {
+        name: 'Sacrosanctum / Lazlion',
+        element: 'dragon',
+        permanent: ['Arkveld', 'Ebony Odogaron', 'Deviljho', 'Malzeno', 'Rathalos'],
+        feral: '?',
+        invasive: '?',
+        endangered: '?',
+      },
+    ],
   },
 ]
