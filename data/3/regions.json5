@@ -28,8 +28,8 @@
         'Feral Nerscylla',
         'Feral Brachydios',
       ],
-      invasive: ['Invasive Yian Garuga'],
-      endangered: ['Rathian', 'Lagiacrus', 'Astalos'],
+      invasive: ['Invasive Plesioth', 'Invasive Seregios', 'Invasive Yian Garuga'],
+      endangered: ['Astalos', 'Lagiacrus', 'Rathian'],
       calamitous: ['Namielle'],
     },
     powers: {
@@ -68,16 +68,16 @@
         element: 'water',
         permanent: ['Namielle', 'Green Plesioth', 'Plesioth', 'Royal Ludroth', 'Yian Kut-Ku'],
         feral: 'Feral Nerscylla',
-        invasive: '?',
-        endangered: '?',
+        invasive: 'Invasive Plesioth',
+        endangered: 'Lagiacrus',
       },
       {
         name: 'Blightstone Woods',
         element: 'none',
         permanent: ['Purple Gypceros', 'Nerscylla', 'Chatacabra', 'Paolumu', 'Gypceros'], // Blue Yian Kut-Ku instead of Purple Gypceros?
         feral: 'Feral Yian Kut-Ku',
-        invasive: '?',
-        endangered: '?',
+        invasive: 'Invasive Seregios',
+        endangered: 'Astalos',
       },
     ],
   },
@@ -114,12 +114,8 @@
         'Feral Velocidrome',
         'Feral Yama Tsukami',
       ],
-      invasive: ['Invasive Arzuros'],
-      endangered: [
-        // 'Canyne', // TODO is this real?
-        'Mizutsune',
-        'Nargacuga',
-      ],
+      invasive: ['Invasive Arzuros', 'Invasive Nerscylla', 'Invasive Shogun Ceanataur'],
+      endangered: ['Canyne', 'Mizutsune', 'Nargacuga'],
       calamitous: ['Thunder Serpent Narwa', 'Wind Serpent Ibushi'],
     },
     powers: {
@@ -152,16 +148,16 @@
         element: 'fire',
         permanent: ['Great Izuchi', 'Aknosom', 'Yian Garuga', 'Bishaten', 'Pukei-Pukei'], // no Aknosom?
         feral: 'Feral Bishaten',
-        invasive: '?',
-        endangered: '?',
+        invasive: 'Invasive Shogun Ceanataur',
+        endangered: 'Mizutsune',
       },
       {
         name: 'Blessing Hill',
         element: 'none',
         permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchiu', 'Arzuros'], // no Arzuros? no Purple Ludroth? no Great Izuchiu?
         feral: 'Feral Tobi-Kadachi',
-        invasive: '?',
-        endangered: '?',
+        invasive: 'Invasive Nerscylla',
+        endangered: 'Nargacuga',
       },
       {
         name: 'Frozen Grotto',
