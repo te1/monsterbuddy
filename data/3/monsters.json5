@@ -437,6 +437,7 @@
   },
 
   // https://monsterhunterwiki.org/wiki/Honed_Barroth_(MHST3)
+  // TODO is this real?
   {
     name: 'Honed Barroth',
     genus: 'Brute Wyvern',
@@ -1520,6 +1521,8 @@
     hatchable: true,
   },
 
+  // TODO Bound Lunagaron?
+
   // https://monsterhunterwiki.org/wiki/Magnamalo_(MHST3)
   {
     name: 'Magnamalo',
@@ -2300,7 +2303,7 @@
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
       { type: 'mutation', monster: 'Dreadking Rathalos' },
-      { type: 'story', monster: 'Skyscale Ratha' },
+      // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 5,
     element: 'fire',
@@ -2331,7 +2334,7 @@
       { type: 'subspeciesOf', monster: 'Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
       { type: 'mutation', monster: 'Dreadking Rathalos' },
-      { type: 'story', monster: 'Skyscale Ratha' },
+      // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 6,
     element: 'fire',
@@ -2355,6 +2358,7 @@
   },
 
   // https://monsterhunterwiki.org/wiki/Honed_Azure_Rathalos
+  // TODO is this real? Bound Azure Rathalos instead?
   {
     name: 'Honed Azure Rathalos',
     genus: 'Flying Wyvern',
@@ -2362,7 +2366,7 @@
       { type: 'honedOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'mutation', monster: 'Dreadking Rathalos' },
-      { type: 'story', monster: 'Skyscale Ratha' },
+      // { type: 'story', monster: 'Skyscale Ratha' },
     ],
   },
 
@@ -2374,7 +2378,7 @@
       { type: 'mutationOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
-      { type: 'story', monster: 'Skyscale Ratha' },
+      // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 7,
     element: 'fire',
@@ -2391,6 +2395,7 @@
     },
   },
 
+  /*
   // https://monsterhunterwiki.org/wiki/Skyscale_Ratha
   {
     name: 'Skyscale Ratha',
@@ -2431,6 +2436,7 @@
       kinshipSkill: 'Sky-High Dive',
     },
   },
+  */
 
   // https://monsterhunterwiki.org/wiki/Rathian_(MHST3)
   {
@@ -3091,6 +3097,7 @@
   },
 
   // https://monsterhunterwiki.org/wiki/Honed_Tobi-Kadachi
+  // TODO is this real?
   {
     name: 'Honed Tobi-Kadachi',
     genus: 'Fanged Wyvern',
