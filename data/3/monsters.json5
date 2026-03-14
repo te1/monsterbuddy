@@ -22,6 +22,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['brown', 'orange'],
+      svgEggColors: ['#7c4938', '#e14b23'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Ajarakan_(MHST3)
@@ -52,6 +56,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['white', 'gray', 'orange'],
+      svgEggColors: ['#b8b3a9', '#e13910'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Aknosom_(MHST3)
@@ -84,6 +92,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['black', 'gray', 'orange'],
+      svgEggColors: ['#4b4c53', '#ba6a4e'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Anjanath_(MHST3)
@@ -248,6 +260,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['gray', 'white'],
+      svgEggColors: ['#bbb', '#a0a0a0'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Arzuros_(MHST3)
@@ -479,6 +495,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'green'],
+      svgEggColors: ['#234670', '#17644f'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Blood_Orange_Bishaten_(MHST3)
@@ -502,6 +522,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['brown', 'orange'],
+      svgEggColors: ['#534a49', '#c3604b'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Bishaten_(MHST3)
@@ -544,6 +568,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['white', 'red', 'orange'],
+      svgEggColors: ['#9fcabb', '#ff2600'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Bnahabra_(MHST3)
@@ -677,6 +705,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'white', 'yellow'],
+      svgEggColors: ['#4a51cc', '#f2d8b8'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Chatacabra_(MHST3)
@@ -738,7 +770,10 @@
       },
     },
     hatchable: true,
-    monstie: {},
+    monstie: {
+      eggColors: ['green', 'black'],
+      svgEggColors: ['#4d898e', '#4b5c56'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Chatacabra_(MHST3)
@@ -958,6 +993,8 @@
     monstie: {
       attack: 'power',
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      eggColors: ['red', 'pink', 'green'],
+      svgEggColors: ['#bd415a', '#95a452'],
     },
   },
 
@@ -988,6 +1025,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['brown', 'green'],
+      svgEggColors: ['#946d4a', '#a8b049'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Gargwa_(MHST3)
@@ -1153,6 +1194,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'black', 'gray'],
+      svgEggColors: ['#5b99b4', '#3d3d38'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Gravios_(MHST3)
@@ -1227,6 +1272,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['orange', 'brown', 'yellow', 'white'],
+      svgEggColors: ['#c07634', '#d7cea3'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Great_Izuchi_(MHST3)
@@ -1547,6 +1596,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['blue'],
+      svgEggColors: ['#4666a1', '#3997db'],
+    },
   },
 
   // TODO Bound Lunagaron?
@@ -1571,6 +1624,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['purple', 'red'],
+      svgEggColors: ['#4e4166', '#ad4156'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Malzeno_(MHST3)
@@ -1594,6 +1651,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['pink', 'red', 'white', 'gray'],
+      svgEggColors: ['#c83269', '#dfd6d5'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Mizutsune_(MHST3)
@@ -1716,6 +1777,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['purple', 'orange'],
+      svgEggColors: ['#685990', '#dd652c'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Nargacuga_(MHST3)
@@ -1979,6 +2044,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['red', 'black'],
+      svgEggColors: ['#bf4755', '#653b48'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Ebony_Odogaron_(MHST3)
@@ -2002,6 +2071,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['purple', 'black'],
+      svgEggColors: ['#5a558d', '#2a3036'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Paolumu_(MHST3)
@@ -2207,6 +2280,8 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
+      eggColors: ['blue', 'green', 'orange'],
+      svgEggColors: ['#5a7076', '#d37a4d'],
     },
   },
 
@@ -2268,6 +2343,8 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
+      eggColors: ['green', 'orange'],
+      svgEggColors: ['#33956b', '#339669'],
     },
   },
 
@@ -2333,6 +2410,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['purple', 'white'],
+      svgEggColors: ['#523c8a', '#bdbcbc'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rathalos_(MHST3)
@@ -2693,6 +2774,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['black', 'yellow'],
+      svgEggColors: ['#4b483e', '#ddc243'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Ludroth_(MHST3)
@@ -2881,6 +2966,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'white', 'gray'],
+      svgEggColors: ['#3a58c8', '#c9b9ac'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Invasive_Shogun_Ceanataur
@@ -3566,7 +3655,7 @@
       attack: 'technical',
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Fireball Expulsion',
-      eggColors: ['blue,', 'green', 'yellow'],
+      eggColors: ['blue', 'green', 'yellow'],
       svgEggColors: ['#4a9f9b', '#e4a24b'],
     },
   },
