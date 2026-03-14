@@ -350,6 +350,18 @@
     name: 'Sand Barioth',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Barioth' }],
+    rank: 5,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['orange', 'red', 'pink'],
@@ -392,6 +404,18 @@
       { type: 'feral', monster: 'Feral Barroth' },
       { type: 'honed', monster: 'Honed Barroth' },
     ],
+    rank: 4,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
@@ -935,6 +959,18 @@
   {
     name: 'Garangolm',
     genus: 'Fanged Beast',
+    rank: 4,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -952,6 +988,21 @@
       { type: 'feral', monster: 'Feral Glavenus' },
       { type: 'honed', monster: 'Honed Glavenus' },
     ],
+    rank: 5,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'spped',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
@@ -965,6 +1016,7 @@
     related: [
       { type: 'feralOf', monster: 'Glavenus' },
       { type: 'honed', monster: 'Honed Glavenus' },
+      { type: 'deviant', monster: 'Hellblade Glavenus' },
     ],
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
@@ -978,6 +1030,7 @@
     related: [
       { type: 'honedOf', monster: 'Glavenus' },
       { type: 'feral', monster: 'Feral Glavenus' },
+      { type: 'deviant', monster: 'Hellblade Glavenus' },
     ],
     flavor: {
       DEFAULT: "A Glavenus spotted near Azuria's border. It is stronger than the regular species, and its whole body is covered in armor. While some think it has been artificially enhanced, details are unknown.",
@@ -1038,10 +1091,49 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Hellblade_Glavenus_(MHST3)
+  {
+    name: 'Hellblade Glavenus',
+    genus: 'Brute Wyvern',
+    related: [
+      { type: 'deviantOf', monster: 'Glavenus' },
+      { type: 'feral', monster: 'Feral Glavenus' },
+      { type: 'honed', monster: 'Honed Glavenus' },
+    ],
+    rank: 7,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'spped',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      eggColors: ['black', 'purple', 'red'],
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Goss_Harag_(MHST3)
   {
     name: 'Goss Harag',
     genus: 'Fanged Beast',
+    rank: 5,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1050,6 +1142,18 @@
     name: 'Gravios',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Black Gravios' }],
+    rank: 5,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'white', 'gray', 'orange'],
@@ -1090,6 +1194,18 @@
     name: 'Great Izuchi',
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Great Izuchi' }],
+    rank: 1,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1111,6 +1227,7 @@
       { type: 'feral', monster: 'Feral Gypceros' },
       { type: 'subspecies', monster: 'Purple Gypceros' },
     ],
+    rank: 2,
     flavor: {
       DEFAULT: 'A Bird Wyvern with an oddly-shaped crest and poisonous saliva. It often runs about due to its skittish nature, seldom remaining in one place for long.',
       'Stamina Source': 'This monster\'s seemingly limitless stamina is derived from a fluid coursing through its body known as "dash extract," a potent tonic that sees great demand for its medicinal uses.',
@@ -1166,6 +1283,7 @@
       { type: 'subspeciesOf', monster: 'Gypceros' },
       { type: 'feral', monster: 'Feral Gypceros' },
     ],
+    rank: 3,
     flavor: {
       DEFAULT: 'A purple-skinned subspecies of Gypceros. It boasts higher immunity to poison than its standard cousin, which allows it to hold more potent venom and in greater amounts.',
       'Powerful Poison': 'This subspecies eliminates intruders by poisoning them with a venom more potent than normal and then blinding them with a bright flash. Powerful blows can also be delivered at range with its tail.',
@@ -1242,6 +1360,18 @@
     name: 'Khezu',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Red Khezu' }],
+    rank: 3,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'white', 'pink'],
@@ -1253,6 +1383,18 @@
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Khezu' }],
+    rank: 4,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['pink', 'red'],
@@ -1263,6 +1405,18 @@
   {
     name: 'Kulu-Ya-Ku',
     genus: 'Bird Wyvern',
+    rank: 2,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'white', 'orange'],
@@ -1275,6 +1429,21 @@
     genus: 'Leviathan',
     endangered: true,
     related: [{ type: 'mutation', monster: 'Ivory Lagiacrus' }],
+    rank: 5,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
@@ -1286,6 +1455,21 @@
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
     related: [{ type: 'mutationOf', monster: 'Lagiacrus' }],
+    rank: 6,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+        '??': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'blue'],
@@ -1296,6 +1480,21 @@
   {
     name: 'Legiana',
     genus: 'Flying Wyvern',
+    rank: 4,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+        '??': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'white', 'blue', 'black'],
@@ -1306,6 +1505,18 @@
   {
     name: 'Lunagaron',
     genus: 'Fanged Wyvern',
+    rank: 5,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1313,6 +1524,21 @@
   {
     name: 'Magnamalo',
     genus: 'Fanged Wyvern',
+    rank: 6,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+        '??': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1321,6 +1547,21 @@
     name: 'Malzeno',
     genus: 'Elder Dragon',
     calamitous: true,
+    rank: 7,
+    element: 'dragon',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1330,6 +1571,21 @@
     genus: 'Leviathan',
     endangered: true,
     related: [{ type: 'mutation', monster: 'Soulseer Mizutsune' }],
+    rank: 5,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['red', 'pink', 'white', 'gray'],
@@ -1341,6 +1597,15 @@
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
     related: [{ type: 'mutationOf', monster: 'Mizutsune' }],
+    rank: 7,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['white', 'red', 'purple', 'pink'],
@@ -1370,9 +1635,11 @@
     name: 'Namielle',
     genus: 'Elder Dragon',
     calamitous: true,
+    rank: 7,
     flavor: {
       DEFAULT: 'This Elder Dragon is completely enveloped in liquid and can command vast quantities of water. Unique electric organs allow it to charge water attacks with electricity, creating massive explosions.',
     },
+    element: 'water',
     stats: {
       elementalResistance: {
         none: 0,
@@ -1426,6 +1693,18 @@
       { type: 'mutation', monster: 'Green Nargacuga' },
       { type: 'mutation', monster: 'Silverwind Nargacuga' },
     ],
+    rank: 4,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['pink', 'purple', 'blue'],
@@ -1440,6 +1719,18 @@
       { type: 'mutationOf', monster: 'Nargacuga' },
       { type: 'mutation', monster: 'Silverwind Nargacuga' },
     ],
+    rank: 5,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['green', 'yellow'],
@@ -1454,6 +1745,15 @@
       { type: 'mutationOf', monster: 'Nargacuga' },
       { type: 'mutation', monster: 'Green Nargacuga' },
     ],
+    rank: 7,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['white', 'blue'],
@@ -1469,6 +1769,7 @@
       { type: 'feral', monster: 'Feral Nerscylla' },
       { type: 'invasive', monster: 'Invasive Nerscylla' },
     ],
+    rank: 3,
     flavor: {
       DEFAULT: 'A Temnoceran that weaves nests to defend its territory and hunt. It ensnares prey, weakening them with abnormal statuses, then feasts using its razor-sharp mandibles.',
       'Gypceros, My Favorite': 'Its preferred prey are Gypceros, whose hides it peels off and wears after feeding. The purple hides protect it from its weakness to lightning and conceal its true white coloring.',
@@ -1531,6 +1832,18 @@
       { type: 'feral', monster: 'Feral Nerscylla' },
       { type: 'invasive', monster: 'Invasive Nerscylla' },
     ],
+    rank: 4,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['white', 'gray', 'yellow'],
@@ -1609,6 +1922,21 @@
     name: 'Odogaron',
     genus: 'Fanged Wyvern',
     related: [{ type: 'subspecies', monster: 'Ebony Odogaron' }],
+    rank: 5,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1786,6 +2114,7 @@
       { type: 'subspecies', monster: 'Green Plesioth' },
       { type: 'invasive', monster: 'Invasive Plesioth' },
     ],
+    rank: 4,
     flavor: {
       DEFAULT: 'This massive Piscine Wyvern is mainly seen around bodies of water. Though once capable of flight, its wings have adapted to aquatic locomotion, for which it relies on sound rather tha sight.',
       'Varied Diet': 'While it normally preys upon aquatic creatures while swimming, it is also known to attack Rhenoplos and other monsters on land with jets of compressed water. It apparently loves to eat frogs.',
@@ -1847,6 +2176,7 @@
       { type: 'subspeciesOf', monster: 'Plesioth' },
       { type: 'invasive', monster: 'Invasive Plesioth' },
     ],
+    rank: 5,
     flavor: {
       DEFAULT: 'Named after its jade-green scales, this subspecies is more agile than the common Plesioth, boasting incredible mobility both on land and in water. It is also more hostile than the regular species.',
       Amphibious: 'While it is typically in aquatic environments, this agile amphibious monster is also quite adept at moving on the ground. In fact, it often seeks out dry land when angered.',
@@ -1913,6 +2243,21 @@
   {
     name: 'Pukei-Pukei',
     genus: 'Bird Wyvern',
+    rank: 3,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['green', 'yellow', 'white'],
@@ -1929,6 +2274,21 @@
   {
     name: 'Rakna-Kadaki',
     genus: 'Temnoceran',
+    rank: 5,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1942,6 +2302,21 @@
       { type: 'mutation', monster: 'Dreadking Rathalos' },
       { type: 'story', monster: 'Skyscale Ratha' },
     ],
+    rank: 5,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['red', 'blue'],
@@ -2250,6 +2625,18 @@
   {
     name: 'Rey Dau',
     genus: 'Flying Wyvern',
+    rank: 6,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -2369,6 +2756,18 @@
     name: 'Purple Ludroth',
     genus: 'Leviathan',
     related: [{ type: 'subspeciesOf', monster: 'Royal Ludroth' }],
+    rank: 3,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['pink'],
@@ -2379,6 +2778,18 @@
   {
     name: 'Seregios',
     genus: 'Flying Wyvern',
+    rank: 6,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['yellow', 'orange', 'red'],
@@ -2396,6 +2807,21 @@
     name: 'Shogun Ceanataur',
     genus: 'Carapaceon',
     related: [{ type: 'invasive', monster: 'Invasive Shogun Ceanataur' }],
+    rank: 3,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -2420,6 +2846,21 @@
       { type: 'subspecies', monster: 'Aurora Somnacanth' },
       { type: 'feral', monster: 'Feral Somnacanth' },
     ],
+    rank: 4,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -2469,6 +2910,18 @@
     name: 'Tetranadon',
     genus: 'Amphibian',
     related: [{ type: 'feral', monster: 'Feral Tetranadon' }],
+    rank: 3,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -2497,6 +2950,18 @@
       { type: 'subspecies', monster: 'Brute Tigrex' },
       { type: 'deviant', monster: 'Grimclaw Tigrex' },
     ],
+    rank: 5,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['orange', 'blue'],
@@ -2526,6 +2991,22 @@
     hatchable: true,
     monstie: {
       eggColors: ['orange', 'brown'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Brute_Tigrex_(MHST3)
+  {
+    name: 'Grimclaw Tigrex',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'deviantOf', monster: 'Tigrex' },
+      { type: 'subspecies', monster: 'Brute Tigrex' },
+    ],
+    rank: 7,
+    element: 'none',
+    hatchable: true,
+    monstie: {
+      eggColors: ['orange', 'blue'],
     },
   },
 
@@ -2623,6 +3104,21 @@
   {
     name: 'Velkhana',
     genus: 'Elder Dragon',
+    rank: 7,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'white', 'gray'],
@@ -2681,6 +3177,7 @@
     name: 'Velocidrome',
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Velocidrome' }],
+    rank: 1,
     flavor: {
       DEFAULT: 'The alpha monster of a Velociprey pack, it is distinguishable by its larger size and bright orange crest. It patrols its expansive territory for prey and intruders alike.',
       'Sparing Nothing': 'Its scales are used to make durable armor, while its fangs are used in ammo and decorations. Even the flexible blue hide can be made into clothing or used to connect pieces of metal armour.',
@@ -2777,6 +3274,18 @@
       { type: 'mutation', monster: 'Deadeye Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
+    rank: 4,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['purple', 'pink'],
@@ -3048,9 +3557,80 @@
   {
     name: 'Zinogre',
     genus: 'Fanged Wyvern',
+    related: [
+      { type: 'subspecies', monster: 'Stygian Zinogre' },
+      { type: 'deviant', monster: 'Thunderlord Zinogre' },
+    ],
+    rank: 5,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green', 'yellow'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Stygian_Zinogre_(MHST3)
+  {
+    name: 'Stygian Zinogre',
+    genus: 'Fanged Wyvern',
+    related: [
+      { type: 'subspeciesOf', monster: 'Zinogre' },
+      { type: 'deviant', monster: 'Thunderlord Zinogre' },
+    ],
+    rank: 6,
+    element: 'dragon',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      eggColors: ['blue', 'yellow', 'white'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Thunderlord_Zinogre_(MHST3)
+  {
+    name: 'Thunderlord Zinogre',
+    genus: 'Fanged Wyvern',
+    related: [
+      { type: 'deviantOf', monster: 'Zinogre' },
+      { type: 'subspecies', monster: 'Stygian Zinogre' },
+    ],
+    rank: 7,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      eggColors: ['green', 'orange'],
     },
   },
 ]
