@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import JSON5 from 'json5';
 import { maxBy, minBy } from 'es-toolkit/array';
@@ -20,9 +20,9 @@ type Job = {
   transform?: (data: unknown) => void;
 };
 
-function generate() {
-  const root = join(process.cwd());
+const root = join(process.cwd());
 
+function generate() {
   const jobs: Job[] = [
     // -- 1 -------------------------------------------------
     { file: '1/habitats', schema: S1HabitatSchema.array() },
@@ -363,8 +363,56 @@ function transformS3Monsters(data: unknown) {
       monstie.attack ??= null;
       monstie.ridingActions ??= [];
       monstie.kinshipSkill ??= null;
+
+      if (
+        Array.isArray(monstie.svgEggColors) &&
+        monstie.svgEggColors.length === 2 &&
+        typeof monstie.svgEggColors[0] === 'string' &&
+        typeof monstie.svgEggColors[1] === 'string'
+      ) {
+        generateEggSvg(monster);
+      }
+
+      delete monstie.svgEggColors;
     }
   }
+}
+
+function generateEggSvg(monster: Record<string, unknown>) {
+  const monstie = monster.monstie as Record<string, unknown> | undefined;
+  const genus = monster.genus as string | undefined;
+  if (!monstie || !genus) {
+    return;
+  }
+
+  const eggColors = monstie.svgEggColors;
+  if (
+    !Array.isArray(eggColors) ||
+    eggColors.length !== 2 ||
+    typeof eggColors[0] !== 'string' ||
+    typeof eggColors[1] !== 'string'
+  ) {
+    return;
+  }
+
+  const templatePath = join(root, 'data', 'egg', `${genus}.svg`);
+  if (!existsSync(templatePath)) {
+    return;
+  }
+
+  let svg = readFileSync(templatePath, 'utf-8');
+  const placeholder1 = '___EGG_COLOR_1___';
+  const placeholder2 = '___EGG_COLOR_2___';
+  svg = svg
+    .replace(/#f00/g, placeholder1)
+    .replace(/#0f0/g, placeholder2)
+    .replaceAll(placeholder1, eggColors[0])
+    .replaceAll(placeholder2, eggColors[1]);
+
+  const outDir = join(root, 'app', 'assets', '3', 'egg');
+  mkdirSync(outDir, { recursive: true });
+  const outPath = join(outDir, `${monster.name}.svg`);
+  writeFileSync(outPath, svg.trimEnd(), 'utf-8');
 }
 
 function getS3MonsterBST(base: Record<string, unknown>) {
