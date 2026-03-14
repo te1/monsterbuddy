@@ -9,6 +9,18 @@
     name: 'Ajarakan',
     genus: 'Fanged Beast',
     related: [{ type: 'feral', monster: 'Feral Ajarakan' }],
+    rank: 5,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -27,6 +39,18 @@
     name: 'Aknosom',
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Aknosom' }],
+    rank: 3,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -44,6 +68,21 @@
   {
     name: 'Almudron',
     genus: 'Leviathan',
+    rank: 5,
+    element: 'water',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -51,6 +90,7 @@
   {
     name: 'Anjanath',
     genus: 'Brute Wyvern',
+    related: [{ type: 'subspecies', monster: 'Fulgur Anjanath' }],
     rank: 4,
     flavor: {
       DEFAULT: 'A belligerent Brute Wyvern that tries to sink its fangs into anything that moves. It is recognizable by the large membranes on its hips and the downy fur that runs along its back.',
@@ -116,6 +156,32 @@
     },
   },
 
+  // https://monsterhunterwiki.org/wiki/Fulgur_Anjanath_(MHST3)
+  {
+    name: 'Fulgur Anjanath',
+    genus: 'Brute Wyvern',
+    related: [{ type: 'subspeciesOf', monster: 'Anjanath' }],
+    rank: 5,
+    element: 'thunder',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      eggColors: ['gray', 'white', 'orange', 'red'],
+    },
+  },
+
   // https://monsterhunterwiki.org/wiki/Aptonoth_(MHST3)
   {
     name: 'Aptonoth',
@@ -167,6 +233,18 @@
   {
     name: 'Arkveld',
     genus: 'Flying Wyvern',
+    rank: 6,
+    element: 'dragon',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -175,6 +253,18 @@
     name: 'Arzuros',
     genus: 'Fanged Beast',
     related: [{ type: 'invasive', monster: 'Invasive Arzuros' }],
+    rank: 2,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
@@ -194,8 +284,18 @@
     genus: 'Flying Wyvern',
     endangered: true,
     related: [{ type: 'mutation', monster: 'Boltreaver Astalos' }],
+    rank: 5,
     element: 'thunder',
-    monster: {},
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['green', 'black'],
@@ -207,8 +307,15 @@
     name: 'Boltreaver Astalos',
     genus: 'Flying Wyvern',
     related: [{ type: 'mutationOf', monster: 'Astalos' }],
+    rank: 7,
     element: 'thunder',
-    monster: {},
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['green', 'black'],
@@ -220,6 +327,18 @@
     name: 'Barioth',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspecies', monster: 'Sand Barioth' }],
+    rank: 4,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['white', 'yellow', 'orange'],
@@ -246,6 +365,18 @@
       { type: 'feral', monster: 'Feral Barroth' },
       { type: 'honed', monster: 'Honed Barroth' },
     ],
+    rank: 3,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['brown', 'orange'],
@@ -300,6 +431,18 @@
       { type: 'subspecies', monster: 'Blood Orange Bishaten' },
       { type: 'feral', monster: 'Feral Bishaten' },
     ],
+    rank: 3,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -311,6 +454,18 @@
       { type: 'subspeciesOf', monster: 'Bishaten' },
       { type: 'feral', monster: 'Feral Bishaten' },
     ],
+    rank: 4,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -341,6 +496,19 @@
   {
     name: 'Blangonga',
     genus: 'Fanged Beast',
+    rank: 3,
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
   },
 
   // https://monsterhunterwiki.org/wiki/Bnahabra_(MHST3)
@@ -394,7 +562,18 @@
     name: 'Brachydios',
     genus: 'Brute Wyvern',
     related: [{ type: 'feral', monster: 'Feral Brachydios' }],
-    monster: {},
+    rank: 6,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
@@ -451,7 +630,16 @@
   {
     name: 'Canyne',
     genus: 'Fanged Beast',
+    rank: 5,
     endangered: true,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -460,6 +648,7 @@
     name: 'Chatacabra',
     genus: 'Amphibian',
     related: [{ type: 'feral', monster: 'Feral Chatacabra' }],
+    rank: 1,
     flavor: {
       DEFAULT: 'Using its long tongue, this Amphibian can grab objects and food from a distance. Its adhesive saliva can also be used to attach rocks and debris to its forelegs, enhancing its combat abilities.',
       'It Eats Anything?': 'A species with an insatiable hunger that uses its long, soft tongue to catch and feed on Neopterons. Some reports indicate its endless appetite even causes it to eat barrels when charging foes.',
@@ -578,6 +767,21 @@
   {
     name: 'Deviljho',
     genus: 'Brute Wyvern',
+    rank: 7,
+    element: 'dragon',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['green', 'orange', 'red'],
@@ -588,7 +792,25 @@
   {
     name: 'Diablos',
     genus: 'Flying Wyvern',
-    related: [{ type: 'subspecies', monster: 'Black Diablos' }],
+    related: [
+      { type: 'subspecies', monster: 'Black Diablos' },
+      { type: 'deviant', monster: 'Bloodbath Diablos' },
+    ],
+    rank: 5,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['brown'],
@@ -599,10 +821,51 @@
   {
     name: 'Black Diablos',
     genus: 'Flying Wyvern',
-    related: [{ type: 'subspeciesOf', monster: 'Diablos' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Diablos' },
+      { type: 'deviant', monster: 'Bloodbath Diablos' },
+    ],
+    rank: 6,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['green', 'brown'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Bloodbath_Diablos_(MHST3)
+  {
+    name: 'Bloodbath Diablos',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'deviantOf', monster: 'Diablos' },
+      { type: 'subspecies', monster: 'Black Diablos' },
+    ],
+    rank: 7,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      eggColors: ['yellow', 'white', 'blue'],
     },
   },
 
@@ -611,6 +874,7 @@
     name: 'Espinas',
     genus: 'Flying Wyvern',
     related: [{ type: 'feral', monster: 'Feral Espinas' }],
+    rank: 6,
     flavor: {
       DEFAULT: 'This fierce Flying Wyvern is distinguished by the red-violet thorns dotting its green carapace. Its blood contains properties that poison and paralyze, so most monsters steer clear of it.',
     },
@@ -797,6 +1061,18 @@
     name: 'Black Gravios',
     genus: 'Flying Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Gravios' }],
+    rank: 6,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['gray', 'orange'],
@@ -1341,6 +1617,21 @@
     name: 'Ebony Odogaron',
     genus: 'Fanged Wyvern',
     related: [{ type: 'subspeciesOf', monster: 'Odogaron' }],
+    rank: 6,
+    element: 'dragon',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        '?': {
+          attack: 'speed',
+        },
+        '??': {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
   },
 
@@ -1667,6 +1958,21 @@
       { type: 'mutation', monster: 'Dreadking Rathalos' },
       { type: 'story', monster: 'Skyscale Ratha' },
     ],
+    rank: 6,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'technical',
+        },
+        '??': {
+          attack: 'speed',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['blue'],
@@ -1695,6 +2001,15 @@
       { type: 'honed', monster: 'Honed Azure Rathalos' },
       { type: 'story', monster: 'Skyscale Ratha' },
     ],
+    rank: 7,
+    element: 'fire',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+      },
+    },
     hatchable: true,
     monstie: {
       eggColors: ['red', 'black'],
@@ -2116,10 +2431,22 @@
       { type: 'subspeciesOf', monster: 'Somnacanth' },
       { type: 'feral', monster: 'Feral Somnacanth' },
     ],
+    rank: 5,
     flavor: {
       DEFAULT: 'A bellicose Leviathan that lives in the water and spreads soporific dust via its neck gills and tail to ensnare its prey. When seen under the moonlight, it is said to resemble a maiden or mermaid.',
       'Mermaid Hair': "Although the appendage on this monster's head looks like little more than a purple fin, it is actually lined with countless spikes that can be released like arrows in a ranged attack.",
       'Lulled to Sleep': "A sleep-inducing substance contained in this monster's bivalve prey accumulates in the body and reacts with microbes to form a glowing powder visible in the countless gills of its mouth, neck, and tail.",
+    },
+    element: 'ice',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
     },
     hatchable: true,
   },
@@ -2166,9 +2493,39 @@
   {
     name: 'Tigrex',
     genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspecies', monster: 'Brute Tigrex' },
+      { type: 'deviant', monster: 'Grimclaw Tigrex' },
+    ],
     hatchable: true,
     monstie: {
       eggColors: ['orange', 'blue'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Brute_Tigrex_(MHST3)
+  {
+    name: 'Brute Tigrex',
+    genus: 'Flying Wyvern',
+    related: [
+      { type: 'subspeciesOf', monster: 'Tigrex' },
+      { type: 'deviant', monster: 'Grimclaw Tigrex' },
+    ],
+    rank: 6,
+    element: 'none',
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        '?': {
+          attack: 'speed',
+        },
+      },
+    },
+    hatchable: true,
+    monstie: {
+      eggColors: ['orange', 'brown'],
     },
   },
 
@@ -2434,6 +2791,8 @@
       { type: 'mutationOf', monster: 'Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
+    rank: 7,
+    element: 'fire',
     hatchable: true,
   },
 
