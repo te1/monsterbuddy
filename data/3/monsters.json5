@@ -995,7 +995,7 @@
     monster: {
       states: {
         Normal: {
-          attack: 'spped',
+          attack: 'speed',
         },
         '?': {
           attack: 'technical',
@@ -1107,7 +1107,7 @@
     monster: {
       states: {
         Normal: {
-          attack: 'spped',
+          attack: 'speed',
         },
       },
     },

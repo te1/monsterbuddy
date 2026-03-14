@@ -4,21 +4,30 @@ import {
   ElementTypeSchema,
   GenusTypeSchema,
   WeaponTypeSchema,
-} from '~~/data/shared.schema';
+} from '../shared.schema';
+
+export const MonsterTagSchema = z.enum([
+  //
+  'mutation',
+  'endangered',
+  'calamitous',
+  'deviant',
+]);
+export type MonsterTag = z.infer<typeof MonsterTagSchema>;
 
 export const RelationTypeSchema = z.enum([
   'subspecies',
   'subspeciesOf',
-  'mutation',
-  'mutationOf',
+  'deviant',
+  'deviantOf',
   'feral',
   'feralOf',
   'invasive',
   'invasiveOf',
   'honed',
   'honedOf',
-  'story',
-  'storyOf',
+  // 'story',
+  // 'storyOf',
 ]);
 export type RelationType = z.infer<typeof RelationTypeSchema>;
 
@@ -36,6 +45,7 @@ const MonsterStatsBaseSchema = z.object({
   crit: z.number().nullable(),
   recovery: z.number().nullable(),
   stamina: z.number().nullable(),
+  bst: z.number().nullable(),
 });
 export type MonsterStatsBase = z.infer<typeof MonsterStatsBaseSchema>;
 
@@ -95,6 +105,7 @@ export const MonsterSchema = z.object({
   name: z.string(),
   slug: z.string(),
   genus: GenusTypeSchema,
+  tags: z.array(MonsterTagSchema),
   related: z.array(MonsterRelationSchema),
   rank: z.number().nullable(),
   flavor: z.record(z.string(), z.string()).optional(),

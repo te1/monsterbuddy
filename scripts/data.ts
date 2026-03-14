@@ -316,8 +316,9 @@ function transformS3Monsters(data: unknown) {
   for (const monster of monsters) {
     monster.slug = makeSlug(monster.name as string);
 
-    monster.rank ??= null;
+    monster.tags ??= [];
     monster.related ??= [];
+    monster.rank ??= null;
     monster.element ??= null;
     monster.monster ??= {};
     monster.hatchable ??= false;
@@ -334,6 +335,7 @@ function transformS3Monsters(data: unknown) {
         base.crit ??= null;
         base.recovery ??= null;
         base.stamina ??= null;
+        base.bst = getS3MonsterBST(base);
       }
 
       if (stats.elementalResistance) {
@@ -363,6 +365,16 @@ function transformS3Monsters(data: unknown) {
       monstie.kinshipSkill ??= null;
     }
   }
+}
+
+function getS3MonsterBST(base: Record<string, unknown>) {
+  const bst =
+    Number(base.hp ?? 0) +
+    Number(base.attack ?? 0) +
+    Number(base.speed ?? 0) +
+    Number(base.defense ?? 0);
+
+  return bst > 0 ? bst : null;
 }
 
 function transformS3Regions(data: unknown) {
