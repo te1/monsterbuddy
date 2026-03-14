@@ -153,7 +153,7 @@
       ridingActions: ['jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Anja Assault',
       eggColors: ['pink', 'black'],
-      svgEggColors: ['#f3548a', '#1d0c1d'],
+      svgEggColors: ['#da7779', '#5a4856'],
     },
   },
 
@@ -179,8 +179,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['gray', 'white', 'orange', 'red'],
-      svgEggColors: ['#d0c9c9', '#cd3d03'],
+      eggColors: ['gray', 'white', 'orange'],
+      svgEggColors: ['#a9b7b9', '#ae672f'],
     },
   },
 
@@ -270,7 +270,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#5c70f3', '#03bf77'],
+      svgEggColors: ['#396ab9', '#35d256'],
     },
   },
 
@@ -302,7 +302,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['green', 'black'],
-      svgEggColors: ['#88d203', '#212713'],
+      svgEggColors: ['#708a43', '#463f40'],
     },
   },
 
@@ -324,7 +324,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['green', 'black'],
-      svgEggColors: ['#22b329', '#313b16'],
+      svgEggColors: ['#0ecd79', '#463b37'],
     },
   },
 
@@ -347,8 +347,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['white', 'yellow', 'orange'],
-      svgEggColors: ['#ff7200', '#f4edb3'],
+      eggColors: ['white', 'gray', 'orange'],
+      svgEggColors: ['#c08740', '#c2c3b9'],
     },
   },
 
@@ -371,8 +371,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['orange', 'red', 'pink'],
-      svgEggColors: ['#ff3636', '#ff7e00'],
+      eggColors: ['orange', 'red'],
+      svgEggColors: ['#e65841', '#fe9801'],
     },
   },
 
@@ -399,8 +399,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['brown', 'orange'],
-      svgEggColors: ['#ba4900', '#fb891c'],
+      eggColors: ['brown', 'yellow'],
+      svgEggColors: ['#98633e', '#d4a153'],
     },
   },
 
@@ -428,7 +428,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#00888a', '#1cfbec'],
+      svgEggColors: ['#009e9f', '#3ee0e0'],
     },
   },
 
@@ -612,7 +612,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#1536db', '#35ff00'],
+      svgEggColors: ['#3e4c95', '#7aeb55'],
     },
   },
 
@@ -820,8 +820,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['green', 'orange', 'red'],
-      svgEggColors: ['#28aa00', '#f83a1d'],
+      eggColors: ['green', 'orange'],
+      svgEggColors: ['#5d663a', '#df5d30'],
     },
   },
 
@@ -851,7 +851,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['brown'],
-      svgEggColors: ['#c77850', '#e0ba8c'],
+      svgEggColors: ['#a17c54', '#b39b82'],
     },
   },
 
@@ -880,8 +880,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['green', 'brown'],
-      svgEggColors: ['#8c8769', '#4a3f16'],
+      eggColors: ['black', 'gray'],
+      svgEggColors: ['#464d4b', '#77776c'],
     },
   },
 
@@ -904,8 +904,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['yellow', 'white', 'blue'],
-      svgEggColors: ['#162fa7', '#e6d28e'],
+      eggColors: ['blue', 'gray'],
+      svgEggColors: ['#475486', '#888078'],
     },
   },
 
@@ -1022,7 +1022,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'red'],
-      svgEggColors: ['#003a7d', '#db1d00'],
+      svgEggColors: ['#3d547d', '#cb3733'],
     },
   },
 
@@ -1128,8 +1128,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['black', 'purple', 'red'],
-      svgEggColors: ['#22152e', '#dd1f1b'],
+      eggColors: ['black', 'red'],
+      svgEggColors: ['#30313a', '#d9211b'],
     },
   },
 
@@ -1174,8 +1174,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['yellow', 'white', 'gray', 'orange'],
-      svgEggColors: ['#ff7200', '#fbe2c2'],
+      eggColors: ['brown', 'white', 'gray'],
+      svgEggColors: ['#886242', '#b6a3a4'],
     },
   },
 
@@ -1198,8 +1198,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['gray', 'orange'],
-      svgEggColors: ['#8a8074', '#a22300'],
+      eggColors: ['orange', 'gray'],
+      svgEggColors: ['#ab492a', '#7f7672'],
     },
   },
 
@@ -1292,7 +1292,7 @@
     monstie: {
       attack: 'power',
       eggColors: ['blue', 'pink'],
-      svgEggColors: ['#0099cd', '#ff4d7e'],
+      svgEggColors: ['#5679a7', '#c76d70'],
     },
   },
 
@@ -1349,7 +1349,7 @@
     monstie: {
       attack: 'power',
       eggColors: ['purple', 'green'],
-      svgEggColors: ['#a9068b', '#2fd91e'],
+      svgEggColors: ['#873e7c', '#46e231'],
     },
   },
 
@@ -1397,7 +1397,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'white', 'pink'],
-      svgEggColors: ['#fe6a80', '#a9ecf3'],
+      svgEggColors: ['#e5697e', '#6ca3ae'],
     },
   },
 
@@ -1421,7 +1421,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['pink', 'red'],
-      svgEggColors: ['#f3b0b0', '#d30607'],
+      svgEggColors: ['#d13f41', '#cb0302'],
     },
   },
 
@@ -1443,8 +1443,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['yellow', 'white', 'orange'],
-      svgEggColors: ['#ffe6c4', '#ff7b62'],
+      eggColors: ['gray', 'white', 'orange'],
+      svgEggColors: ['#cdc2b1', '#d0725b'],
     },
   },
 
@@ -1471,8 +1471,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['blue', 'red'],
-      svgEggColors: ['#00c1d7', '#f4272f'],
+      eggColors: ['blue', 'orange'],
+      svgEggColors: ['#4fa3c9', '#df572f'],
     },
   },
 
@@ -1499,8 +1499,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['yellow', 'blue'],
-      svgEggColors: ['#e8f178', '#2169ff'],
+      eggColors: ['white', 'blue'],
+      svgEggColors: ['#d2ccbc', '#3d689a'],
     },
   },
 
@@ -1525,8 +1525,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['yellow', 'white', 'blue', 'black'],
-      svgEggColors: ['#091242', '#f5e1a4'],
+      eggColors: ['yellow', 'white', 'blue'],
+      svgEggColors: ['#eee0a9', '#285eb1'],
     },
   },
 
@@ -1619,8 +1619,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['red', 'pink', 'white', 'gray'],
-      svgEggColors: ['#cd3958', '#e1decb'],
+      eggColors: ['pink', 'white', 'gray', 'yellow'],
+      svgEggColors: ['#c95a8f', '#e2cead'],
     },
   },
 
@@ -1641,8 +1641,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['white', 'red', 'purple', 'pink'],
-      svgEggColors: ['#a72c65', '#eae4d4'],
+      eggColors: ['white', 'pink', 'purple'],
+      svgEggColors: ['#b02d6f', '#ddd6da'],
     },
   },
 
@@ -1742,7 +1742,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['pink', 'purple', 'blue'],
-      svgEggColors: ['#f6169b', '#473ca4'],
+      svgEggColors: ['#c43c7c', '#375475'],
     },
   },
 
@@ -1770,7 +1770,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['green', 'yellow'],
-      svgEggColors: ['#e8ff19', '#5ad700'],
+      svgEggColors: ['#33a52f', '#acd304'],
     },
   },
 
@@ -1795,7 +1795,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['white', 'blue'],
-      svgEggColors: ['#e7f4df', '#283d74'],
+      svgEggColors: ['#a5b19f', '#213649'],
     },
   },
 
@@ -1858,8 +1858,8 @@
     hatchable: true,
     monstie: {
       attack: 'technical',
-      eggColors: ['purple', 'red', 'pink'],
-      svgEggColors: ['#8c00ff', '#e14747'],
+      eggColors: ['purple', 'orange'],
+      svgEggColors: ['#544c7a', '#dd753f'],
     },
   },
 
@@ -1887,7 +1887,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['white', 'gray', 'yellow'],
-      svgEggColors: ['#ccd8f8', '#ffd400'],
+      svgEggColors: ['#b6b8be', '#d0a031'],
     },
   },
 
@@ -2079,7 +2079,7 @@
       ridingActions: ['fly', 'jump', 'roar', 'melee'],
       kinshipSkill: 'Jet Balloon',
       eggColors: ['white', 'pink'],
-      svgEggColors: ['#ed9a94', '#f3e9de'],
+      svgEggColors: ['#ed9f99', '#f0e9de'],
     },
   },
 
@@ -2302,8 +2302,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['green', 'yellow', 'white'],
-      svgEggColors: ['#229616', '#e8da9f'],
+      eggColors: ['green', 'yellow'],
+      svgEggColors: ['#568f3a', '#c4b282'],
     },
   },
 
@@ -2362,8 +2362,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['red', 'blue'],
-      svgEggColors: ['#d34100', '#273a3d'],
+      eggColors: ['black', 'blue', 'orange', 'red'],
+      svgEggColors: ['#31373a', '#d13e0a'],
     },
   },
 
@@ -2394,8 +2394,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['blue'],
-      svgEggColors: ['#026676', '#00bdff'],
+      eggColors: ['blue', 'purple', 'black'],
+      svgEggColors: ['#5866d8', '#303551'],
     },
   },
 
@@ -2434,8 +2434,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['red', 'black'],
-      svgEggColors: ['#19171e', '#cd141d'],
+      eggColors: ['black', 'red'],
+      svgEggColors: ['#10110e', '#8d012e'],
     },
   },
 
@@ -2545,8 +2545,8 @@
       attack: 'speed',
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Scorching Slice',
-      eggColors: ['yellow', 'white', 'green'],
-      svgEggColors: ['#fff299', '#4cda04'],
+      eggColors: ['white', 'yellow', 'green'],
+      svgEggColors: ['#d0c992', '#65bc1e'],
       elementalResistance: {
         none: 0,
         fire: +2,
@@ -2621,8 +2621,8 @@
       attack: 'speed',
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Scorching Slice',
-      eggColors: ['pink', 'red'],
-      svgEggColors: ['#ec1a1a', '#ff6d83'],
+      eggColors: ['pink'],
+      svgEggColors: ['#ee7275', '#e99184'],
     },
   },
 
@@ -2671,8 +2671,8 @@
       attack: 'speed',
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Dual Razor',
-      eggColors: ['green', 'purple', 'black'],
-      svgEggColors: ['#84a120', '#34152e'],
+      eggColors: ['green', 'purple'],
+      svgEggColors: ['#a1b352', '#82386c'],
     },
   },
 
@@ -2803,7 +2803,7 @@
       ridingActions: ['swim', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Moonsault Splash',
       eggColors: ['green', 'yellow'],
-      svgEggColors: ['#6ded16', '#ffda00'],
+      svgEggColors: ['#879f5e', '#ebb245'],
     },
   },
 
@@ -2826,8 +2826,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['pink'],
-      svgEggColors: ['#ff4cc5', '#ffbcfb'],
+      eggColors: ['pink', 'purple'],
+      svgEggColors: ['#a6859e', '#c13579'],
     },
   },
 
@@ -2849,8 +2849,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['yellow', 'orange', 'red'],
-      svgEggColors: ['#ff4515', '#ffcb0d'],
+      eggColors: ['yellow', 'orange'],
+      svgEggColors: ['#d24825', '#d8b140'],
     },
   },
 
@@ -3022,8 +3022,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['orange', 'blue'],
-      svgEggColors: ['#1b6bd7', '#ff9300'],
+      eggColors: ['blue', 'orange'],
+      svgEggColors: ['#3d8eb5', '#d19537'],
     },
   },
 
@@ -3049,8 +3049,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['orange', 'brown'],
-      svgEggColors: ['#ff9300', '#604f30'],
+      eggColors: ['brown', 'orange'],
+      svgEggColors: ['#565043', '#f48340'],
     },
   },
 
@@ -3066,8 +3066,8 @@
     element: 'none',
     hatchable: true,
     monstie: {
-      eggColors: ['orange', 'blue'],
-      svgEggColors: ['#0d468c', '#ff850c'],
+      eggColors: ['blue', 'yellow'],
+      svgEggColors: ['#365f7c', '#d5bf34'],
     },
   },
 
@@ -3134,8 +3134,8 @@
       attack: 'speed',
       ridingActions: ['fly', 'wallclimb', 'jump', 'roar', 'melee'],
       kinshipSkill: 'Kadachi Fury',
-      eggColors: ['blue', 'white', 'black'],
-      svgEggColors: ['#afd9e2', '#162630'],
+      eggColors: ['gray', 'white', 'black', 'blue'],
+      svgEggColors: ['#94b0b7', '#546b77'],
     },
   },
 
@@ -3184,8 +3184,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['blue', 'white', 'gray'],
-      svgEggColors: ['#698dd1', '#c4d8e0'],
+      eggColors: ['purple', 'blue', 'white'],
+      svgEggColors: ['#8f83d0', '#a1ddf4'],
     },
   },
 
@@ -3292,7 +3292,7 @@
     monstie: {
       attack: 'speed',
       eggColors: ['blue', 'orange'],
-      svgEggColors: ['#27b7ff', '#ff7946'],
+      svgEggColors: ['#1ba2e2', '#ff5f4a'],
     },
   },
 
@@ -3354,7 +3354,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['purple', 'pink'],
-      svgEggColors: ['#2e2088', '#e669bc'],
+      svgEggColors: ['#4b4d7c', '#b64f9f'],
     },
   },
 
@@ -3370,6 +3370,10 @@
     rank: 7,
     element: 'fire',
     hatchable: true,
+    monstie: {
+      eggColors: ['purple', 'red'],
+      svgEggColors: ['#413466', '#d52a2c'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Invasive_Yian_Garuga_(MHST3)
@@ -3494,7 +3498,7 @@
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['pink', 'blue'],
-      svgEggColors: ['#fd65d7', '#146bef'],
+      svgEggColors: ['#e0586f', '#2189d0'],
     },
   },
 
@@ -3562,8 +3566,8 @@
       attack: 'technical',
       ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
       kinshipSkill: 'Fireball Expulsion',
-      eggColors: ['green', 'yellow'],
-      svgEggColors: ['#00d89f', '#ffd418'],
+      eggColors: ['blue,', 'green', 'yellow'],
+      svgEggColors: ['#4a9f9b', '#e4a24b'],
     },
   },
 
@@ -3648,7 +3652,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['blue', 'green', 'yellow'],
-      svgEggColors: ['#00d9bb', '#fc0'],
+      svgEggColors: ['#389587', '#d7a761'],
     },
   },
 
@@ -3677,8 +3681,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['blue', 'yellow', 'white'],
-      svgEggColors: ['#4019d2', '#ede1a4'],
+      eggColors: ['purple', 'white'],
+      svgEggColors: ['#35356e', '#e2d6c3'],
     },
   },
 
@@ -3701,8 +3705,8 @@
     },
     hatchable: true,
     monstie: {
-      eggColors: ['green', 'orange'],
-      svgEggColors: ['#a2fd32', '#fd9930'],
+      eggColors: ['green', 'yellow', 'orange'],
+      svgEggColors: ['#a2c749', '#d29b46'],
     },
   },
 ]
