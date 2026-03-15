@@ -19,7 +19,7 @@
 <template>
   <div class="relative grow lg:flex-1">
     <div
-      class="absolute inset-y-0 -left-1.5 flex items-center transition-[transform,opacity] duration-150 ease-out will-change-transform md:hidden"
+      class="absolute inset-y-0 -left-1.5 flex items-center transition-[transform,opacity] duration-150 ease-out will-change-transform lg:hidden"
       :class="
         hasBack && !hasSidebar
           ? 'translate-x-0 opacity-100'
