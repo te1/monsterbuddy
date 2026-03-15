@@ -89,7 +89,7 @@
       :headline="headline"
     />
 
-    <UPageBody :class="{ '-mt-3 lg:mt-0': eldersLairFilter.isGrouped || showActiveFilters }">
+    <UPageBody :class="{ '-mt-3 lg:mt-0': showActiveFilters }">
       <div
         v-if="showActiveFilters"
         class="sticky top-[calc(var(--ui-header-height)+var(--spacing))] z-20 mt-1 mb-2 lg:mb-3"

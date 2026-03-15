@@ -264,7 +264,10 @@
     />
 
     <UPageBody
-      :class="{ '-mt-3 lg:mt-0': (eggFilter.isGrouped || showActiveFilters) && !showEggFinder }"
+      :class="{
+        '-mt-3 lg:mt-0':
+          ((eggFilter.isGrouped && !eggFilter.isEmpty) || showActiveFilters) && !showEggFinder,
+      }"
     >
       <div
         v-if="showActiveFilters"
