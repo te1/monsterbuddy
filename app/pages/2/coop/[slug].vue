@@ -18,7 +18,7 @@
       (to) => {
         const coopQuest = coopQuestsBySlug.get(to.params.slug as string);
         if (coopQuest) {
-          to.meta.mobileHeaderTitle = formatCoopQuest(coopQuest);
+          to.meta.mobileHeaderTitle = coopQuest.name;
         }
       },
     ],
@@ -66,10 +66,10 @@
 
     const part2 = 'co-op quest';
 
-    let part3 = `is rated ★${coopQuest.rarity}.`;
+    let part3 = `is rated ★${coopQuest.rarity}`;
 
     if (coopQuest.type === 'explore' && monsterCount.value > 1) {
-      part3 += ` You can find ${monsterCount.value} different monstie eggs inside.`;
+      part3 += ` and you can find ${monsterCount.value} notable eggs inside`;
     }
 
     return [part1, part2, part3];

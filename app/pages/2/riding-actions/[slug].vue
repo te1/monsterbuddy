@@ -40,9 +40,9 @@
     const monsterCount = monsters.value.length;
 
     if (monsterCount === 1) {
-      part3 += `one monster.`;
+      part3 += `one monstie.`;
     } else {
-      part3 += `${monsterCount} different monsters.`;
+      part3 += `${monsterCount} monsties.`;
     }
 
     return [part1, part2, part3];

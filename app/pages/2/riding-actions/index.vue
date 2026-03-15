@@ -22,7 +22,7 @@
   <div>
     <UPageHeader
       title="Riding Actions"
-      description="Overview of all riding actions and list of monsties that can learn them"
+      description="All the riding actions and monsties that can learn them"
       :headline="headline"
       :ui="{
         root: 'py-3 lg:py-4',
