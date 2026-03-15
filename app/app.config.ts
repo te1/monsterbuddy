@@ -97,6 +97,10 @@ export default defineAppConfig({
       },
     },
 
+    pageBody: {
+      base: 'mt-3',
+    },
+
     tabs: {
       variants: {
         variant: {

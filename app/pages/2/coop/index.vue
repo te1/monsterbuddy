@@ -24,7 +24,12 @@
       title="Co-Op Quests"
       description="Overview of important co-op quests and list of eggs you can find in the different dens"
       :headline="headline"
-      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
+      :ui="{
+        root: 'py-3 lg:py-4',
+        headline: 'hidden lg:flex',
+        title: 'hidden lg:flex',
+        description: 'mt-0 lg:mt-4',
+      }"
     />
 
     <UPageBody>

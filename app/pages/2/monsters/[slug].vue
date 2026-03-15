@@ -10,6 +10,14 @@
       show: true,
       fallback: '/2/monsters',
     },
+    middleware: [
+      (to) => {
+        const monster = monstersBySlug.get(to.params.slug as string);
+        if (monster) {
+          to.meta.mobileHeaderTitle = monster.name;
+        }
+      },
+    ],
   });
 
   const route = useRoute();
@@ -31,7 +39,16 @@
 
 <template>
   <div>
-    <UPageHeader :title="monster.name" :headline="headline" />
+    <UPageHeader
+      :title="monster.name"
+      :headline="headline"
+      :ui="{
+        root: 'py-3 pt-0 lg:py-4',
+        headline: 'hidden lg:flex',
+        title: 'hidden lg:flex',
+        description: 'mt-0 lg:mt-4',
+      }"
+    />
 
     <UPageBody
       class="mt-0 grid grid-cols-1 gap-3 space-y-0 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2"

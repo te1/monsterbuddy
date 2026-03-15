@@ -83,7 +83,12 @@
       title="Elder's Lair"
       description="Overview of all the high rank monsters and on which floor to find them in the Elder's Lair and Special Elder's Lair end game zones"
       :headline="headline"
-      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
+      :ui="{
+        root: 'py-3 lg:py-4',
+        headline: 'hidden lg:flex',
+        title: 'hidden lg:flex',
+        description: 'mt-0 lg:mt-4',
+      }"
     />
 
     <UPageBody>

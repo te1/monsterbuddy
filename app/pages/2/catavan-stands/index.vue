@@ -24,7 +24,12 @@
       title="Catavan Stands"
       description="Overview of catavan stand fast travel locations and list of monsters you will find there"
       :headline="headline"
-      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
+      :ui="{
+        root: 'py-3 lg:py-4',
+        headline: 'hidden lg:flex',
+        title: 'hidden lg:flex',
+        description: 'mt-0 lg:mt-4',
+      }"
     />
 
     <UPageBody>
