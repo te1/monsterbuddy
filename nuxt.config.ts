@@ -32,6 +32,12 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-02-01',
 
+  vite: {
+    optimizeDeps: {
+      include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string'],
+    },
+  },
+
   nitro: {
     prerender: {
       routes: ['/'],
