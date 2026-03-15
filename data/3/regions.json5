@@ -38,7 +38,7 @@
         A: 'Egg Power: Hardiness',
         B: 'Egg Power: Pwr Resilience',
       },
-      stats: ['hp'],
+      stats: ['hp', 'attack'],
     },
     areas: [
       {
@@ -124,7 +124,7 @@
         A: 'Egg Power: High Morale',
         B: 'Egg Power: Spd Resilience',
       },
-      stats: ['recovery'],
+      stats: ['recovery', 'attack'],
     },
     areas: [
       {
@@ -281,7 +281,7 @@
     },
     powers: {
       skills: {},
-      stats: [],
+      stats: ['attack', 'recovery'],
     },
     areas: [
       {

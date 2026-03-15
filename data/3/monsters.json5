@@ -375,6 +375,7 @@
   {
     name: 'Sand Barioth',
     genus: 'Flying Wyvern',
+    tags: ['mutation'],
     related: [{ type: 'subspeciesOf', monster: 'Barioth' }],
     rank: 5,
     element: 'none',
@@ -945,6 +946,7 @@
   {
     name: 'Bloodbath Diablos',
     genus: 'Flying Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
       { type: 'deviantOf', monster: 'Diablos' },
       { type: 'subspecies', monster: 'Black Diablos' },
@@ -1107,6 +1109,7 @@
   {
     name: 'Hellblade Glavenus',
     genus: 'Brute Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
       { type: 'deviantOf', monster: 'Glavenus' },
       { type: 'feral', monster: 'Feral Glavenus' },
@@ -2579,6 +2582,7 @@
   {
     name: 'Azure Rathalos',
     genus: 'Flying Wyvern',
+    tags: ['mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
@@ -3262,6 +3266,7 @@
   {
     name: 'Brute Tigrex',
     genus: 'Flying Wyvern',
+    tags: ['mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Tigrex' },
       { type: 'deviant', monster: 'Grimclaw Tigrex' },
@@ -3289,6 +3294,7 @@
   {
     name: 'Grimclaw Tigrex',
     genus: 'Flying Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
       { type: 'deviantOf', monster: 'Tigrex' },
       { type: 'subspecies', monster: 'Brute Tigrex' },
@@ -3896,6 +3902,7 @@
   {
     name: 'Stygian Zinogre',
     genus: 'Fanged Wyvern',
+    tags: ['mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Zinogre' },
       { type: 'deviant', monster: 'Thunderlord Zinogre' },
@@ -3926,6 +3933,7 @@
   {
     name: 'Thunderlord Zinogre',
     genus: 'Fanged Wyvern',
+    tags: ['mutation', 'deviant'],
     related: [
       { type: 'deviantOf', monster: 'Zinogre' },
       { type: 'subspecies', monster: 'Stygian Zinogre' },
