@@ -148,8 +148,8 @@
         element: 'fire',
         permanent: ['Great Izuchi', 'Aknosom', 'Yian Garuga', 'Bishaten', 'Pukei-Pukei'], // no Aknosom?
         feral: 'Feral Bishaten',
-        invasive: 'Invasive Shogun Ceanataur',
-        endangered: 'Mizutsune',
+        invasive: '?',
+        endangered: '?',
       },
       {
         name: 'Blessing Hill',
@@ -164,8 +164,8 @@
         element: 'ice',
         permanent: ['Somnacanth', 'Tetranadon', 'Red Khezu', 'Aurora Somnacanth', 'Khezu'], // no Tetranadon?
         feral: 'Feral Tetranadon',
-        invasive: '?',
-        endangered: '?',
+        invasive: 'Invasive Shogun Ceanataur',
+        endangered: 'Mizutsune',
       },
     ],
   },
@@ -197,7 +197,7 @@
       ],
       small: ['Rachnoid', 'Remobra'],
       feral: ['Feral Ajarakan', 'Feral Barroth', 'Feral Glavenus', 'Feral Gravios'],
-      invasive: [],
+      invasive: ['Invasive Odogaron'],
       endangered: ['Tigrex', 'Zinogre'],
       calamitous: ['Yama Tsukami'],
     },
@@ -216,15 +216,15 @@
         permanent: ['Almudron', 'Kulu-Ya-Ku', 'Garangolm', 'Shogun Ceanataur', 'Barroth'],
         feral: '?',
         invasive: '?',
-        endangered: '?',
+        endangered: 'Tigrex',
       },
       {
         name: 'Rococo Rocks',
         element: 'thunder',
         permanent: ['Glavenus', 'Black Diablos', 'Shrouded Nerscylla', 'Gravios', 'Diablos'],
         feral: '?',
-        invasive: '?',
-        endangered: '?',
+        invasive: 'Invasive Odogaron',
+        endangered: 'Zinogre',
       },
       {
         name: 'Bountiful Dunes',
@@ -290,7 +290,7 @@
         permanent: ['Blangonga', 'Brachydios', 'Red Khezu', 'Legiana', 'Velkhana'],
         feral: '?',
         invasive: '?',
-        endangered: '?',
+        endangered: 'Barioth',
       },
       {
         name: 'Old Capital Road',
