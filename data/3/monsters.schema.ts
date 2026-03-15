@@ -7,9 +7,10 @@ import {
 } from '../shared.schema';
 
 export const MonsterTagSchema = z.enum([
-  //
   'mutation',
   'endangered',
+  'feral',
+  'invasive',
   'calamitous',
   'deviant',
 ]);
