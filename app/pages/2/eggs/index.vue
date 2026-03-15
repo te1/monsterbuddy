@@ -256,7 +256,7 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
+    <AppPageHeader
       title="Eggs"
       description="Egg patterns and colors for all hatchable monsties"
       :headline="headline"

@@ -20,16 +20,10 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
+    <AppPageHeader
       title="Riding Actions"
       description="All the riding actions and monsties that can learn them"
       :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
     />
 
     <UPageBody>

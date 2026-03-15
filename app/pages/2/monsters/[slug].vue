@@ -55,16 +55,11 @@
 
 <template>
   <div>
-    <UPageHeader
+    <AppPageHeader
       :title="monster.name"
       :headline="headline"
       :description="description"
-      :ui="{
-        root: 'py-3 pt-0 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'sr-only mt-0 lg:mt-4',
-      }"
+      :hideDescription="true"
     />
 
     <UPageBody

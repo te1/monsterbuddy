@@ -141,22 +141,13 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
-      :title="coopQuest.name"
-      :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
-    >
+    <AppPageHeader :title="coopQuest.name" :headline="headline">
       <template #description>
         {{ descriptionParts[0] }}
         <AppNuxtLink to="/2/coop">{{ descriptionParts[1] }}</AppNuxtLink>
         {{ descriptionParts[2] }}
       </template>
-    </UPageHeader>
+    </AppPageHeader>
 
     <UPageBody>
       <ul class="space-y-5">

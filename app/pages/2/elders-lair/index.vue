@@ -79,16 +79,10 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
+    <AppPageHeader
       title="Elder's Lair"
       description="All the high rank monsters and their floors in the Elder's Lair and Special Elder's Lair end game zones"
       :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
     />
 
     <UPageBody>

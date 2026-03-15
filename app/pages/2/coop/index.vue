@@ -20,16 +20,10 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
+    <AppPageHeader
       title="Co-Op Quests"
       description="Important co-op quests and eggs you can find in the different dens"
       :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
     />
 
     <UPageBody>

@@ -20,16 +20,10 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
+    <AppPageHeader
       title="Catavan Stands"
       description="Fast travel locations and monsters you can find nearby"
       :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
     />
 
     <UPageBody>

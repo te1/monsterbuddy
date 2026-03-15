@@ -87,16 +87,7 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
-      :title="ridingAction.name"
-      :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
-    >
+    <AppPageHeader :title="ridingAction.name" :headline="headline">
       <template #description>
         {{ ridingAction.description }}
 
@@ -106,7 +97,7 @@
           {{ descriptionParts[2] }}
         </div>
       </template>
-    </UPageHeader>
+    </AppPageHeader>
 
     <UPageBody>
       <div class="mb-1 flex items-center">

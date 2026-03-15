@@ -211,7 +211,7 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader
+    <AppPageHeader
       title="Monsters"
       description="Locations, attack patterns, elemental weaknesses and weapon effectiveness on body parts"
       :headline="headline"

@@ -115,22 +115,13 @@
 
 <template>
   <div>
-    <UPageHeader
-      :title="catavanStand.name"
-      :headline="headline"
-      :ui="{
-        root: 'py-3 lg:py-4',
-        headline: 'hidden lg:flex',
-        title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
-      }"
-    >
+    <AppPageHeader :title="catavanStand.name" :headline="headline">
       <template #description>
         {{ descriptionParts[0] }}
         <AppNuxtLink to="/2/catavan-stands">{{ descriptionParts[1] }}</AppNuxtLink>
         {{ descriptionParts[2] }}
       </template>
-    </UPageHeader>
+    </AppPageHeader>
 
     <UPageBody>
       <div class="mt-1 grid gap-3 md:grid-cols-2">
