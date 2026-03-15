@@ -327,7 +327,7 @@
             </NuxtLink>
           </div>
 
-          <div v-else class="mt-1 grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div v-else class="mt-1 grid gap-3 md:grid-cols-2">
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"

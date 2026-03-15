@@ -122,7 +122,7 @@
             <div class="mb-1 font-semibold">Elder's Lair - {{ key }}</div>
           </div>
 
-          <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <div class="mt-1 grid gap-3 md:grid-cols-2">
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"

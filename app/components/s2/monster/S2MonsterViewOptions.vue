@@ -191,7 +191,7 @@
         color="neutral"
         :variant="variant"
         :items="sortConfig"
-        class="w-full"
+        class="w-full truncate"
         :disabled="disabled"
         @update:modelValue="setSortKey"
       />

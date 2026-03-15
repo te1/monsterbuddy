@@ -76,9 +76,9 @@ export default defineAppConfig({
 
     page: {
       slots: {
-        root: 'lg:grid-cols-12 lg:gap-16',
-        center: 'lg:col-span-9',
-        right: 'lg:col-span-3',
+        root: 'lg:flex lg:flex-row lg:gap-8',
+        center: 'lg:flex-1',
+        right: 'lg:ps-0 lg:ms-0 lg:w-52 xl:w-66',
       },
     },
 

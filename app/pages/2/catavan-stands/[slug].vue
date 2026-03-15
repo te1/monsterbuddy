@@ -118,7 +118,7 @@
     </UPageHeader>
 
     <UPageBody>
-      <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <div class="mt-1 grid gap-3 md:grid-cols-2">
         <S2MonsterSmartListItem
           v-for="monster in monsters"
           :key="monster.no"
