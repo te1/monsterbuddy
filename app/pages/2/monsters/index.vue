@@ -213,7 +213,7 @@
   <div>
     <UPageHeader
       title="Monsters"
-      description="Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts"
+      description="Locations, attack patterns, elemental weaknesses and weapon effectiveness on body parts"
       :headline="headline"
       class="hidden lg:block"
     />

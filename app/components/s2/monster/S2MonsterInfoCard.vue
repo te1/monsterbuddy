@@ -14,9 +14,11 @@
   <section>
     <div class="flex items-start justify-between overflow-hidden">
       <div>
+        <h3 class="sr-only">General Monster Info</h3>
+
         <div class="-mb-1 text-neutral-500 dark:text-neutral-400" v-text="info" />
 
-        <h2 class="mb-1 text-2xl font-semibold" v-text="monster.name" />
+        <div class="mb-1 text-2xl font-semibold" v-text="monster.name" />
 
         <div class="flex items-center gap-1">
           <span class="text-neutral-600 dark:text-neutral-400">

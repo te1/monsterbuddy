@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import S2MonsterDetailsSidebar from '~/components/s2/monster/S2MonsterDetailsSidebar.vue';
-  import { monstersBySlug } from '~/services/2/data';
+  import { isDeviant, monstersBySlug } from '~/services/2/data';
   import { getMonsterSeo } from '~/services/2/seo';
   import useHistoryStore from '~/stores/2/historyStore';
 
@@ -30,6 +30,22 @@
   useSeoMeta(getMonsterSeo(monster));
   const headline = gameTypeToFullName('mhst2');
 
+  const description = computed(() => {
+    let result = `${monster.rarity} star rarity `;
+
+    if (monster.hatchable) {
+      result += 'hatchable ';
+    }
+
+    if (isDeviant(monster)) {
+      result += 'Deviant ';
+    }
+
+    result += `${monster.genus} found in ${monster.habitat}`;
+
+    return result;
+  });
+
   const history = useHistoryStore();
 
   onMounted(() => {
@@ -42,11 +58,12 @@
     <UPageHeader
       :title="monster.name"
       :headline="headline"
+      :description="description"
       :ui="{
         root: 'py-3 pt-0 lg:py-4',
         headline: 'hidden lg:flex',
         title: 'hidden lg:flex',
-        description: 'mt-0 lg:mt-4',
+        description: 'sr-only mt-0 lg:mt-4',
       }"
     />
 

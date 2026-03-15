@@ -213,7 +213,7 @@
   <div>
     <UPageHeader
       title="Monsties"
-      description="Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats"
+      description="Locations, retreat conditions, attack types and stats"
       :headline="headline"
       class="hidden lg:block"
     />

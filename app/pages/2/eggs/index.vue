@@ -258,7 +258,7 @@
   <div>
     <UPageHeader
       title="Eggs"
-      description="Visual guide with images for all egg patterns for every hatchable monstie"
+      description="Egg patterns and colors for all hatchable monsties"
       :headline="headline"
       class="hidden lg:block"
     />
