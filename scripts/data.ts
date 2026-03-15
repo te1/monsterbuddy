@@ -14,6 +14,8 @@ import { RidingActionSchema as S2RidingActionSchema } from '~~/data/2/ridingActi
 import { MonsterSchema as S3MonsterSchema } from '~~/data/3/monsters.schema';
 import { RegionSchema as S3RegionSchema } from '~~/data/3/regions.schema';
 
+const generateEggSvgs = false;
+
 type Job = {
   file: string;
   schema: z.ZodType;
@@ -379,6 +381,10 @@ function transformS3Monsters(data: unknown) {
 }
 
 function generateEggSvg(monster: Record<string, unknown>) {
+  if (!generateEggSvgs) {
+    return;
+  }
+
   const monstie = monster.monstie as Record<string, unknown> | undefined;
   const genus = monster.genus as string | undefined;
   if (!monstie || !genus) {
