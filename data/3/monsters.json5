@@ -3009,6 +3009,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['yellow', 'purple'],
+      svgEggColors: ['#c99a4f', '#705a95'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Aurora_Somnacanth_(MHST3)
@@ -3037,6 +3041,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['blue'],
+      svgEggColors: ['#58aad1', '#2d61b6'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Somnacanth_(MHST3)
@@ -3070,6 +3078,10 @@
       },
     },
     hatchable: true,
+    monstie: {
+      eggColors: ['green'],
+      svgEggColors: ['#6d8818', '#43612a'],
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Tetranadon_(MHST3)
