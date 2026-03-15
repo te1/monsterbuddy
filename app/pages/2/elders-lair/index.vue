@@ -53,6 +53,10 @@
     eldersLairFilter.eldersLairFilter = undefined;
   }
 
+  const showActiveFilters = computed(() => {
+    return eldersLairFilter.hasActiveSort || eldersLairFilter.hasActiveFilters;
+  });
+
   const fabFilterTarget = computed(() => {
     if (showFilter.value) {
       return '/2/elders-lair';
@@ -85,12 +89,12 @@
       :headline="headline"
     />
 
-    <UPageBody>
+    <UPageBody :class="{ '-mt-3 lg:mt-0': eldersLairFilter.isGrouped || showActiveFilters }">
       <div
-        v-if="eldersLairFilter.hasActiveSort || eldersLairFilter.hasActiveFilters"
-        class="fixed inset-x-0 top-12 z-20 mt-1 w-full"
+        v-if="showActiveFilters"
+        class="sticky top-[calc(var(--ui-header-height)+var(--spacing))] z-20 mt-1 mb-2 lg:mb-3"
       >
-        <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
+        <div class="flex flex-wrap items-center justify-center gap-2">
           <AppFilterPill
             v-if="eldersLairFilter.hasActiveSort"
             :caption="eldersLairFilter.activeSort?.caption ?? ''"
@@ -109,10 +113,7 @@
         </div>
       </div>
 
-      <ul
-        class="flex flex-col gap-3"
-        :class="{ 'mt-8': eldersLairFilter.hasActiveSort || eldersLairFilter.hasActiveFilters }"
-      >
+      <ul class="flex flex-col gap-3">
         <li v-for="(group, key) in eldersLairFilter.groupedMonsters" :key="key">
           <div
             v-if="eldersLairFilter.isGrouped"

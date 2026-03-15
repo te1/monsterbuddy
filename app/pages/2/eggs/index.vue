@@ -263,9 +263,14 @@
       class="hidden lg:block"
     />
 
-    <UPageBody :class="{ '-mt-3 lg:mt-0': eggFilter.isGrouped && !showEggFinder }">
-      <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
-        <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
+    <UPageBody
+      :class="{ '-mt-3 lg:mt-0': (eggFilter.isGrouped || showActiveFilters) && !showEggFinder }"
+    >
+      <div
+        v-if="showActiveFilters"
+        class="sticky top-[calc(var(--ui-header-height)+var(--spacing))] z-20 mt-1 mb-2 lg:mb-3"
+      >
+        <div class="flex flex-wrap items-center justify-center gap-2">
           <AppFilterPill
             v-if="eggFilter.hasActiveSort"
             :caption="eggFilter.activeSort?.caption ?? ''"
@@ -294,7 +299,7 @@
         </li>
       </ul>
 
-      <ul v-if="!showEggFinder" class="flex flex-col gap-3" :class="{ 'mt-8': showActiveFilters }">
+      <ul v-if="!showEggFinder" class="flex flex-col gap-3">
         <li v-for="(group, key) in eggFilter.groupedMonsters" :key="key">
           <div
             v-if="eggFilter.isGrouped"

@@ -98,7 +98,7 @@
     </AppPageHeader>
 
     <UPageBody>
-      <div class="flex items-center">
+      <div class="flex items-center py-1">
         <UIcon name="ph:dna" class="w-6 text-muted" />
 
         <div class="font-medium">Learnt By</div>

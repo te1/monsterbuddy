@@ -143,6 +143,14 @@ export default defineAppConfig({
       },
     },
 
+    badge: {
+      variants: {
+        variant: {
+          'soft-filter': 'text-default bg-accented hover:bg-default/50 active:bg-default',
+        },
+      },
+    },
+
     formField: {
       slots: {
         root: 'place-items-baseline group',
