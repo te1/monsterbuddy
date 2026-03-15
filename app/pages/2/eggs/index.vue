@@ -156,7 +156,7 @@
     return null;
   });
 
-  useMobileHeaderTitle().bind(title);
+  useMobileHeaderOverride().bind(title);
 
   const fabFilterTarget = computed(() => {
     if (showFilter.value) {
@@ -260,6 +260,7 @@
       title="Eggs"
       description="Visual guide with images for all egg patterns for every hatchable monstie"
       :headline="headline"
+      class="hidden lg:block"
     />
 
     <UPageBody>

@@ -12,6 +12,14 @@
       show: true,
       fallback: '/2/catavan-stands',
     },
+    middleware: [
+      (to) => {
+        const catavanStand = catavanStandsBySlug.get(to.params.slug as string);
+        if (catavanStand) {
+          to.meta.mobileHeaderTitle = catavanStand.name;
+        }
+      },
+    ],
   });
 
   const route = useRoute();
@@ -109,7 +117,11 @@
 
 <template>
   <div>
-    <UPageHeader :title="catavanStand.name" :headline="headline">
+    <UPageHeader
+      :title="catavanStand.name"
+      :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
+    >
       <template #description>
         {{ descriptionParts[0] }}
         <AppNuxtLink to="/2/catavan-stands">{{ descriptionParts[1] }}</AppNuxtLink>

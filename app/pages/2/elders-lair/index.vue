@@ -5,6 +5,7 @@
 
   definePageMeta({
     sidebarComponent: S2EldersLairSidebar,
+    mobileHeaderTitle: "Elder's Lair",
   });
 
   useSeoMeta({
@@ -82,6 +83,7 @@
       title="Elder's Lair"
       description="Overview of all the high rank monsters and on which floor to find them in the Elder's Lair and Special Elder's Lair end game zones"
       :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
     />
 
     <UPageBody>

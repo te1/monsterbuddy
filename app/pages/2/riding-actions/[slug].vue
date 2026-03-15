@@ -10,6 +10,14 @@
       show: true,
       fallback: '/2/riding-actions',
     },
+    middleware: [
+      (to) => {
+        const ridingAction = ridingActionsBySlug.get(to.params.slug as string);
+        if (ridingAction) {
+          to.meta.mobileHeaderTitle = ridingAction.name;
+        }
+      },
+    ],
   });
 
   const route = useRoute();
@@ -79,14 +87,19 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader :title="ridingAction.name" :headline="headline">
+    <UPageHeader
+      :title="ridingAction.name"
+      :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
+    >
       <template #description>
         {{ ridingAction.description }}
-        <br />
 
-        {{ descriptionParts[0] }}
-        <AppNuxtLink to="/2/riding-actions">{{ descriptionParts[1] }}</AppNuxtLink>
-        {{ descriptionParts[2] }}
+        <div class="hidden lg:block">
+          {{ descriptionParts[0] }}
+          <AppNuxtLink to="/2/riding-actions">{{ descriptionParts[1] }}</AppNuxtLink>
+          {{ descriptionParts[2] }}
+        </div>
       </template>
     </UPageHeader>
 

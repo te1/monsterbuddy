@@ -2,6 +2,10 @@
   import { groupBy } from 'es-toolkit/array';
   import { catavanStands as catavanStands_ } from '~/services/2/data';
 
+  definePageMeta({
+    mobileHeaderTitle: 'Catavan Stands',
+  });
+
   useSeoMeta({
     title: `Catavan Stand Fast Travel List For ${gameTypeToFullLabel('mhst2')}`,
     description:
@@ -20,6 +24,7 @@
       title="Catavan Stands"
       description="Overview of catavan stand fast travel locations and list of monsters you will find there"
       :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
     />
 
     <UPageBody>

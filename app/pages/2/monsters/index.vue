@@ -143,7 +143,7 @@
     return null;
   });
 
-  useMobileHeaderTitle().bind(title);
+  useMobileHeaderOverride().bind(title);
 
   const fabFilterTarget = computed(() => {
     if (showFilter.value) {
@@ -215,6 +215,7 @@
       title="Monsters"
       description="Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts"
       :headline="headline"
+      class="hidden lg:block"
     />
 
     <UPageBody>

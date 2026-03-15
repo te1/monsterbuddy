@@ -2,7 +2,9 @@
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();
-  const { value: mobileHeader } = useMobileHeaderTitle();
+  const { value: mobileHeader } = useMobileHeaderOverride();
+
+  const resolvedMobileHeader = computed(() => route.meta.mobileHeaderTitle ?? mobileHeader.value);
 
   const hasBack = computed(() => route.meta.back?.show ?? false);
   const backFallback = computed(() => route.meta.back?.fallback ?? '/');
@@ -43,7 +45,7 @@
       class="text-lg font-medium tracking-wide transition-transform duration-150 ease-out will-change-transform dark:text-toned"
       :class="hasBack && !hasSidebar ? 'translate-x-8' : 'translate-x-0'"
     >
-      <span v-if="mobileHeader && !hasSidebar" v-text="mobileHeader" />
+      <span v-if="resolvedMobileHeader && !hasSidebar" v-text="resolvedMobileHeader" />
 
       <NuxtLink v-else to="/">Monster Buddy</NuxtLink>
     </div>

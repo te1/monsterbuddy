@@ -5,7 +5,7 @@
   import { groupBy, sortBy } from 'es-toolkit/array';
   import { coopQuestsBySlug, getMonstersByCoopQuest } from '~/services/2/data';
   import { getCoopQuestSeo } from '~/services/2/seo';
-  import { formatCoopQuestType } from '~/services/2/presentation';
+  import { formatCoopQuest, formatCoopQuestType } from '~/services/2/presentation';
   import useCoopQuestDisplays from '~/stores/2/coopQuestDisplays';
 
   definePageMeta({
@@ -14,6 +14,14 @@
       show: true,
       fallback: '/2/coop',
     },
+    middleware: [
+      (to) => {
+        const coopQuest = coopQuestsBySlug.get(to.params.slug as string);
+        if (coopQuest) {
+          to.meta.mobileHeaderTitle = formatCoopQuest(coopQuest);
+        }
+      },
+    ],
   });
 
   const route = useRoute();
@@ -58,7 +66,7 @@
 
     const part2 = 'co-op quest';
 
-    let part3 = `is rated ★ ${coopQuest.rarity}.`;
+    let part3 = `is rated ★${coopQuest.rarity}.`;
 
     if (coopQuest.type === 'explore' && monsterCount.value > 1) {
       part3 += ` You can find ${monsterCount.value} different monstie eggs inside.`;
@@ -133,7 +141,11 @@
   <!-- TODO CSS -->
 
   <div>
-    <UPageHeader :title="coopQuest.name" :headline="headline">
+    <UPageHeader
+      :title="coopQuest.name"
+      :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
+    >
       <template #description>
         {{ descriptionParts[0] }}
         <AppNuxtLink to="/2/coop">{{ descriptionParts[1] }}</AppNuxtLink>

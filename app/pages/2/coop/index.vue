@@ -3,6 +3,10 @@
   import { coopQuests as coopQuests_ } from '~/services/2/data';
   import { formatCoopQuestType } from '~/services/2/presentation';
 
+  definePageMeta({
+    mobileHeaderTitle: 'Co-Op Quests',
+  });
+
   useSeoMeta({
     title: `Co-Op Quest List (Dens) For ${gameTypeToFullLabel('mhst2')}`,
     description: 'Overview of co-op missions and list of eggs you can find in the different dens',
@@ -20,6 +24,7 @@
       title="Co-Op Quests"
       description="Overview of important co-op quests and list of eggs you can find in the different dens"
       :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
     />
 
     <UPageBody>

@@ -143,7 +143,7 @@
     return null;
   });
 
-  useMobileHeaderTitle().bind(title);
+  useMobileHeaderOverride().bind(title);
 
   const fabFilterTarget = computed(() => {
     if (showFilter.value) {
@@ -215,6 +215,7 @@
       title="Monsties"
       description="Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats"
       :headline="headline"
+      class="hidden lg:block"
     />
 
     <UPageBody>

@@ -3,6 +3,10 @@
   import { sortedRidingActions } from '~/services/2/data';
   import { formatRidingActionType } from '~/services/2/presentation';
 
+  definePageMeta({
+    mobileHeaderTitle: 'Riding Actions',
+  });
+
   useSeoMeta({
     title: `Riding Actions In ${gameTypeToFullLabel('mhst2')}`,
     description: 'Overview of all riding actions and list of monsties that can learn them',
@@ -20,6 +24,7 @@
       title="Riding Actions"
       description="Overview of all riding actions and list of monsties that can learn them"
       :headline="headline"
+      :ui="{ headline: 'hidden lg:flex', title: 'hidden lg:flex' }"
     />
 
     <UPageBody>
