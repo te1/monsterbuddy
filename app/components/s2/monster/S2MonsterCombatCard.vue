@@ -99,15 +99,15 @@
       </div>
     </div>
 
-    <ClientOnly>
-      <div class="absolute top-1 right-1">
+    <div class="absolute top-1 right-1">
+      <ClientOnly>
         <AppPinToggle
           :modelValue="isPinned"
           subject="monster attack pattern"
           noLabel
           @update:modelValue="togglePin"
         />
-      </div>
-    </ClientOnly>
+      </ClientOnly>
+    </div>
   </section>
 </template>

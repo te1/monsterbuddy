@@ -21,13 +21,11 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <section v-if="hasRelated">
     <h3 class="text-lg font-medium">Related</h3>
 
     <div v-for="(relation, index) in relations" :key="relation.monster.name">
-      <div v-if="index > 0" class="my-2 border-t border-accented" />
+      <div v-if="index > 0" class="my-2 border-t border-accented dark:border-accented/50" />
 
       <S2MonsterRelatedItem :monster="relation.monster" />
     </div>

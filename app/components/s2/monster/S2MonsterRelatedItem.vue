@@ -20,28 +20,18 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
+  <!-- TODO CSS why -mx-3? -->
 
   <NuxtLink :to="`/2/monsters/${monster.slug}`">
-    <S2EggListItem
-      v-if="showEgg"
-      class="box-link-inline -mx-3 overflow-hidden"
-      :monster="monster"
-      :mode="mode"
-    />
+    <S2EggListItem v-if="showEgg" class="box-link-inline -mx-3" :monster="monster" :mode="mode" />
 
     <S2MonstieListItem
       v-else-if="showMonstie"
-      class="box-link-inline -mx-3 overflow-hidden"
+      class="box-link-inline -mx-3"
       :monster="monster"
       :mode="mode"
     />
 
-    <S2MonsterListItem
-      v-else
-      class="box-link-inline -mx-3 overflow-hidden"
-      :monster="monster"
-      :mode="mode"
-    />
+    <S2MonsterListItem v-else class="box-link-inline -mx-3" :monster="monster" :mode="mode" />
   </NuxtLink>
 </template>
