@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   const router = useRouter();
   const route = useRoute();
-  const hasSidebar = useHasSidebar();
   const { value: mobileHeader } = useMobileHeaderOverride();
 
   const resolvedMobileHeader = computed(() => route.meta.mobileHeaderTitle ?? mobileHeader.value);
@@ -23,9 +22,7 @@
     <div
       class="absolute inset-y-0 -left-1.5 flex items-center transition-[transform,opacity] duration-150 ease-out will-change-transform lg:hidden"
       :class="
-        hasBack && !hasSidebar
-          ? 'translate-x-0 opacity-100'
-          : 'pointer-events-none -translate-x-2 opacity-0'
+        hasBack ? 'translate-x-0 opacity-100' : 'pointer-events-none -translate-x-2 opacity-0'
       "
     >
       <UTooltip text="Back">
@@ -43,11 +40,12 @@
 
     <div
       class="text-lg font-medium tracking-wide transition-transform duration-150 ease-out will-change-transform dark:text-toned"
-      :class="hasBack && !hasSidebar ? 'translate-x-8' : 'translate-x-0'"
+      :class="hasBack ? 'translate-x-8 lg:translate-x-0' : 'translate-x-0'"
     >
-      <span v-if="resolvedMobileHeader && !hasSidebar" v-text="resolvedMobileHeader" />
-
-      <NuxtLink v-else to="/">Monster Buddy</NuxtLink>
+      <span v-if="resolvedMobileHeader" class="truncate lg:hidden" v-text="resolvedMobileHeader" />
+      <NuxtLink to="/" :class="resolvedMobileHeader ? 'hidden lg:inline' : 'inline'">
+        Monster Buddy
+      </NuxtLink>
     </div>
   </div>
 </template>
