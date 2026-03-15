@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   const router = useRouter();
   const route = useRoute();
-  const isMobile = useIsMobile();
+  const hasSidebar = useHasSidebar();
   const { value: mobileHeader } = useMobileHeaderTitle();
 
   const hasBack = computed(() => route.meta.back?.show ?? false);
@@ -21,7 +21,7 @@
     <div
       class="absolute inset-y-0 -left-1.5 flex items-center transition-[transform,opacity] duration-150 ease-out will-change-transform md:hidden"
       :class="
-        hasBack && isMobile
+        hasBack && !hasSidebar
           ? 'translate-x-0 opacity-100'
           : 'pointer-events-none -translate-x-2 opacity-0'
       "
@@ -41,9 +41,9 @@
 
     <div
       class="text-lg font-medium tracking-wide transition-transform duration-150 ease-out will-change-transform dark:text-toned"
-      :class="hasBack && isMobile ? 'translate-x-8' : 'translate-x-0'"
+      :class="hasBack && !hasSidebar ? 'translate-x-8' : 'translate-x-0'"
     >
-      <span v-if="mobileHeader && isMobile" v-text="mobileHeader" />
+      <span v-if="mobileHeader && !hasSidebar" v-text="mobileHeader" />
 
       <NuxtLink v-else to="/">Monster Buddy</NuxtLink>
     </div>

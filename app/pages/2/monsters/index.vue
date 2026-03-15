@@ -20,7 +20,7 @@
 
   const router = useRouter();
   const route = useRoute();
-  const isMobile = useIsMobile();
+  const hasSidebar = useHasSidebar();
 
   const history = useHistoryStore();
   const monsterFilter = useMonsterFilter();
@@ -280,7 +280,7 @@
 
     <ClientOnly>
       <UDrawer
-        v-if="isMobile"
+        v-if="!hasSidebar"
         v-model:open="showFilter"
         title="View Options"
         description=" "

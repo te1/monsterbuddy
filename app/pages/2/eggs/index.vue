@@ -21,7 +21,7 @@
 
   const router = useRouter();
   const route = useRoute();
-  const isMobile = useIsMobile();
+  const hasSidebar = useHasSidebar();
 
   const history = useHistoryStore();
   const eggFilter = useEggFilter();
@@ -350,7 +350,7 @@
 
     <ClientOnly>
       <UDrawer
-        v-if="isMobile"
+        v-if="!hasSidebar"
         v-model:open="showFilter"
         title="View Options"
         description=" "

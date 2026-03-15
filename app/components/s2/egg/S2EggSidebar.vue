@@ -5,7 +5,7 @@
 
   const router = useRouter();
   const route = useRoute();
-  const isMobile = useIsMobile();
+  const hasSidebar = useHasSidebar();
 
   const displays = useEggsDisplay();
   const filter = useEggFilter();
@@ -24,10 +24,10 @@
 
   // update tab from query string
   watch(
-    [() => route.query.filter, isMobile],
-    ([filter, isMobile]) => {
-      if (filter === undefined || isMobile) {
-        return; // on mobile filter triggers a drawer instead
+    [() => route.query.filter, hasSidebar],
+    ([filter, hasSidebar]) => {
+      if (filter === undefined || !hasSidebar) {
+        return; // without sidebar filter triggers a drawer instead
       }
 
       tab.value = 'filter';

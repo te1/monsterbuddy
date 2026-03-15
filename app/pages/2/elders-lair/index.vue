@@ -17,7 +17,7 @@
 
   const router = useRouter();
   const route = useRoute();
-  const isMobile = useIsMobile();
+  const hasSidebar = useHasSidebar();
 
   const eldersLairFilter = useEldersLairFilter();
   provide(filterStoreKey, eldersLairFilter);
@@ -143,7 +143,7 @@
 
     <ClientOnly>
       <UDrawer
-        v-if="isMobile"
+        v-if="!hasSidebar"
         v-model:open="showFilter"
         title="View Options"
         description=" "
