@@ -110,20 +110,20 @@
       </div>
 
       <ul
-        class="space-y-5"
+        class="flex flex-col gap-3"
         :class="{ 'mt-8': eldersLairFilter.hasActiveSort || eldersLairFilter.hasActiveFilters }"
       >
         <li v-for="(group, key) in eldersLairFilter.groupedMonsters" :key="key">
           <div
             v-if="eldersLairFilter.isGrouped"
-            class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/75 p-1 backdrop-blur dark:bg-muted/75"
           >
-            <UIcon name="ph:map-pin-fill" class="w-6! text-neutral-500 dark:text-neutral-400" />
+            <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
 
-            <div class="mb-1 font-semibold">Elder's Lair - {{ key }}</div>
+            <div class="font-medium">Elder's Lair - {{ key }}</div>
           </div>
 
-          <div class="mt-1 grid gap-3 md:grid-cols-2">
+          <div class="grid gap-3 md:grid-cols-2">
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"

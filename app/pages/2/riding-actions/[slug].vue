@@ -84,8 +84,6 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div>
     <AppPageHeader :title="ridingAction.name" :headline="headline">
       <template #description>
@@ -100,13 +98,13 @@
     </AppPageHeader>
 
     <UPageBody>
-      <div class="mb-1 flex items-center">
-        <UIcon name="ph:dna" class="w-6! text-neutral-500 dark:text-neutral-400" />
+      <div class="flex items-center">
+        <UIcon name="ph:dna" class="w-6 text-muted" />
 
-        <div class="mb-1 font-semibold">Learnt By</div>
+        <div class="font-medium">Learnt By</div>
       </div>
 
-      <div class="mt-1 grid gap-3 md:grid-cols-2">
+      <div class="grid gap-3 md:grid-cols-2">
         <S2MonsterSmartListItem
           v-for="monster in monsters"
           :key="monster.no"

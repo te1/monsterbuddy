@@ -17,8 +17,6 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div>
     <AppPageHeader
       title="Co-Op Quests"
@@ -27,26 +25,26 @@
     />
 
     <UPageBody>
-      <ul class="space-y-8">
+      <ul class="flex flex-col gap-3">
         <li v-for="(quests, type) in coopQuests" :key="type">
           <div
-            class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/75 p-1 backdrop-blur dark:bg-muted/75"
           >
-            <UIcon name="ph:question" class="w-6! text-neutral-500 dark:text-neutral-400" />
+            <UIcon name="ph:question-mark-bold" class="w-6" />
 
-            <div class="mb-1 font-semibold">
+            <div class="font-medium">
               {{ formatCoopQuestType(type) }}
             </div>
           </div>
 
-          <div class="box mt-1 overflow-hidden">
+          <div class="box">
             <div v-for="(quest, index) in quests" :key="quest.slug">
-              <div v-if="index > 0" class="border-t border-neutral-300 dark:border-neutral-600" />
+              <div
+                v-if="index > 0"
+                class="border-elevated border-2 border-t border-neutral-100 dark:border-default"
+              />
 
-              <NuxtLink
-                :to="`/2/coop/${quest.slug}`"
-                class="box-link block px-6 py-2 font-semibold"
-              >
+              <NuxtLink :to="`/2/coop/${quest.slug}`" class="box-link block px-6 py-2">
                 <span class="inline-block w-48">
                   {{ quest.name }}
                 </span>

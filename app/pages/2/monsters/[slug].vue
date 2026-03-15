@@ -62,9 +62,7 @@
       :hideDescription="true"
     />
 
-    <UPageBody
-      class="mt-0 grid grid-cols-1 gap-3 space-y-0 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2"
-    >
+    <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
       <S2MonsterInfoCard :monster="monster" class="box order-1 px-4 py-2" />
       <S2MonsterCombatCard :monster="monster" class="box order-2 px-4 py-2" />
       <S2MonstieEggCard v-if="monster.hatchable" :monster="monster" class="box order-3 px-4 py-2" />

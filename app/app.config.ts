@@ -68,12 +68,6 @@ export default defineAppConfig({
       },
     },
 
-    footer: {
-      slots: {
-        root: 'border-t border-accented', // TODO remove border?
-      },
-    },
-
     page: {
       slots: {
         root: 'lg:flex lg:flex-row lg:gap-8',
@@ -98,7 +92,7 @@ export default defineAppConfig({
     },
 
     pageBody: {
-      base: 'mt-3',
+      base: 'mt-0 pb-6 space-y-0',
     },
 
     tabs: {

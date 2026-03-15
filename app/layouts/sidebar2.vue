@@ -79,7 +79,7 @@
 
 <template>
   <UContainer>
-    <UPage>
+    <UPage class="mt-0" :ui="{ center: 'pt-3' }">
       <slot />
 
       <template #right>

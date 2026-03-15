@@ -26,10 +26,10 @@
     :headline="headline"
     :description="description"
     :ui="{
-      root: ['py-3 lg:py-4', { 'pt-0': hideDescription }],
+      root: ['p-0', hideDescription ? 'mb-0 lg:mb-3' : 'mb-3'],
       headline: 'hidden lg:flex',
       title: 'hidden lg:flex',
-      description: ['mt-0 lg:mt-4', { 'sr-only': hideDescription }],
+      description: ['mt-0 lg:mt-4', hideDescription ? 'sr-only' : ''],
     }"
   >
     <template v-if="slots.description" #description>

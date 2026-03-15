@@ -263,7 +263,7 @@
       class="hidden lg:block"
     />
 
-    <UPageBody>
+    <UPageBody :class="{ '-mt-3 lg:mt-0': eggFilter.isGrouped && !showEggFinder }">
       <div v-if="showActiveFilters" class="fixed inset-x-0 top-12 z-20 mt-1 w-full">
         <div class="container flex flex-wrap items-center justify-center gap-2 px-4">
           <AppFilterPill
@@ -284,7 +284,7 @@
         </div>
       </div>
 
-      <ul v-if="showEggFinder" class="mt-1 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      <ul v-if="showEggFinder" class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         <li v-for="genus in genera" :key="genus">
           <S2EggGridItem
             :genus="genus"
@@ -294,30 +294,26 @@
         </li>
       </ul>
 
-      <ul v-if="!showEggFinder" class="space-y-5" :class="{ 'mt-8': showActiveFilters }">
+      <ul v-if="!showEggFinder" class="flex flex-col gap-3" :class="{ 'mt-8': showActiveFilters }">
         <li v-for="(group, key) in eggFilter.groupedMonsters" :key="key">
           <div
             v-if="eggFilter.isGrouped"
-            class="sticky top-12 z-10 -mx-1 -mt-3 -mb-1 flex items-center border-t border-neutral-300 bg-neutral-300 px-1 py-1 dark:border-neutral-700 dark:bg-neutral-700"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/75 p-1 backdrop-blur dark:bg-muted/75"
           >
-            <UIcon
-              v-if="eggFilter.sortKey === 'genus'"
-              name="ph:dna"
-              class="w-6! text-neutral-500 dark:text-neutral-400"
-            />
+            <UIcon v-if="eggFilter.sortKey === 'genus'" name="ph:dna" class="w-6 text-muted" />
 
             <UIcon
               v-if="eggFilter.sortKey === 'habitat'"
               name="ph:map-pin-fill"
-              class="w-6! text-neutral-500 dark:text-neutral-400"
+              class="w-6 text-dimmed"
             />
 
-            <div class="font-semibold" v-text="key" />
+            <div class="font-medium" v-text="key" />
           </div>
 
           <div
             v-if="eggFilter.mode === 'compact'"
-            class="mt-1 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
+            class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
           >
             <NuxtLink
               v-for="monster in group"
@@ -328,7 +324,7 @@
             </NuxtLink>
           </div>
 
-          <div v-else class="mt-1 grid gap-3 md:grid-cols-2">
+          <div v-else class="grid gap-3 md:grid-cols-2">
             <NuxtLink
               v-for="monster in group"
               :key="monster.no"
