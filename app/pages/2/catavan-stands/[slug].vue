@@ -42,7 +42,7 @@
     if (monsterCount === 1) {
       part1 += `one monster `;
     } else {
-      part1 += `${monsterCount} different monsters `;
+      part1 += `${monsterCount} monsters `;
     }
 
     part1 += 'nearby this ';
@@ -54,8 +54,6 @@
     if (catavanStand.zone) {
       part3 += ` in ${catavanStand.zone}`;
     }
-
-    part3 += '.';
 
     return [part1, part2, part3];
   });

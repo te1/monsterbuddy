@@ -5,7 +5,7 @@
   import { groupBy, sortBy } from 'es-toolkit/array';
   import { coopQuestsBySlug, getMonstersByCoopQuest } from '~/services/2/data';
   import { getCoopQuestSeo } from '~/services/2/seo';
-  import { formatCoopQuest, formatCoopQuestType } from '~/services/2/presentation';
+  import { formatCoopQuestType } from '~/services/2/presentation';
   import useCoopQuestDisplays from '~/stores/2/coopQuestDisplays';
 
   definePageMeta({

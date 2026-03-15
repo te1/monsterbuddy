@@ -22,7 +22,7 @@
   <div>
     <UPageHeader
       title="Catavan Stands"
-      description="Overview of catavan stand fast travel locations and list of monsters you will find there"
+      description="Fast travel locations and monsters you can find nearby"
       :headline="headline"
       :ui="{
         root: 'py-3 lg:py-4',
