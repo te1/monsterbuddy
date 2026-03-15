@@ -294,6 +294,7 @@
   {
     name: 'Invasive Arzuros',
     genus: 'Fanged Beast',
+    tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Arzuros' }],
   },
 
@@ -867,6 +868,7 @@
     related: [
       { type: 'subspecies', monster: 'Black Diablos' },
       { type: 'deviant', monster: 'Bloodbath Diablos' },
+      { type: 'invasive', monster: 'Invasive Diablos' },
     ],
     rank: 5,
     element: 'none',
@@ -897,6 +899,7 @@
     related: [
       { type: 'subspeciesOf', monster: 'Diablos' },
       { type: 'deviant', monster: 'Bloodbath Diablos' },
+      { type: 'invasive', monster: 'Invasive Diablos' },
     ],
     rank: 6,
     element: 'none',
@@ -927,6 +930,7 @@
     related: [
       { type: 'deviantOf', monster: 'Diablos' },
       { type: 'subspecies', monster: 'Black Diablos' },
+      { type: 'invasive', monster: 'Invasive Diablos' },
     ],
     rank: 7,
     element: 'none',
@@ -942,6 +946,18 @@
       eggColors: ['blue', 'gray'],
       svgEggColors: ['#475486', '#888078'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Diablos
+  {
+    name: 'Invasive Diablos',
+    genus: 'Flying Wyvern',
+    tags: ['invasive'],
+    related: [
+      { type: 'invasiveOf', monster: 'Diablos' },
+      { type: 'subspecies', monster: 'Black Diablos' },
+      { type: 'deviant', monster: 'Bloodbath Diablos' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
@@ -1430,7 +1446,10 @@
   {
     name: 'Khezu',
     genus: 'Flying Wyvern',
-    related: [{ type: 'subspecies', monster: 'Red Khezu' }],
+    related: [
+      { type: 'subspecies', monster: 'Red Khezu' },
+      { type: 'invasive', monster: 'Invasive Khezu' },
+    ],
     rank: 3,
     element: 'thunder',
     monster: {
@@ -1454,7 +1473,10 @@
   {
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
-    related: [{ type: 'subspeciesOf', monster: 'Khezu' }],
+    related: [
+      { type: 'subspeciesOf', monster: 'Khezu' },
+      { type: 'invasive', monster: 'Invasive Khezu' },
+    ],
     rank: 4,
     element: 'thunder',
     monster: {
@@ -1472,6 +1494,17 @@
       eggColors: ['pink', 'red'],
       svgEggColors: ['#d13f41', '#cb0302'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Khezu
+  {
+    name: 'Invasive Khezu',
+    genus: 'Flying Wyvern',
+    tags: ['invasive'],
+    related: [
+      { type: 'invasiveOf', monster: 'Khezu' },
+      { type: 'subspecies', monster: 'Red Khezu' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Kulu-Ya-Ku_(MHST3)
@@ -2010,6 +2043,7 @@
   {
     name: 'Invasive Nerscylla',
     genus: 'Temnoceran',
+    tags: ['invasive'],
     related: [
       { type: 'invasiveOf', monster: 'Nerscylla' },
       { type: 'subspecies', monster: 'Nerscylla' },
@@ -2075,6 +2109,17 @@
       eggColors: ['purple', 'black'],
       svgEggColors: ['#5a558d', '#2a3036'],
     },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Odogaron
+  {
+    name: 'Invasive Odogaron',
+    genus: 'Fanged Wyvern',
+    tags: ['invasive'],
+    related: [
+      { type: 'invasiveOf', monster: 'Odogaron' },
+      { type: 'subspecies', monster: 'Ebony Odogaron' },
+    ],
   },
 
   // https://monsterhunterwiki.org/wiki/Paolumu_(MHST3)
@@ -2352,6 +2397,7 @@
   {
     name: 'Invasive Plesioth',
     genus: 'Piscine Wyvern',
+    tags: ['invasive'],
     related: [
       { type: 'invasiveOf', monster: 'Plesioth' },
       { type: 'subspecies', monster: 'Green Plesioth' },
@@ -2976,6 +3022,7 @@
   {
     name: 'Invasive Shogun Ceanataur',
     genus: 'Carapaceon',
+    tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Shogun Ceanataur' }],
   },
 
@@ -3481,6 +3528,7 @@
   {
     name: 'Invasive Yian Garuga',
     genus: 'Bird Wyvern',
+    tags: ['invasive'],
     related: [
       { type: 'invasiveOf', monster: 'Yian Garuga' },
       { type: 'deviant', monster: 'Deadeye Yian Garuga' },
