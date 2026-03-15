@@ -21,15 +21,13 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <UTooltip v-if="hasImage" :text="noTooltip ? undefined : monster.name">
     <img :src="imageUrl" :alt="monster.name" />
   </UTooltip>
 
   <div
     v-else-if="!hideFallback"
-    class="flex h-full w-full items-center p-2"
+    class="flex size-full items-center"
     :class="right ? 'justify-end' : 'justify-center'"
   >
     <S2MonsterIcon :monster="monster" :noTooltip="noTooltip" />

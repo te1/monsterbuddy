@@ -68,7 +68,7 @@
       <S2MonstieEggCard v-if="monster.hatchable" :monster="monster" class="box order-3 px-4 py-2" />
       <S2MonsterImageCard
         :monster="monster"
-        class="box order-4 p-3 md:order-5 lg:order-4 xl:order-5"
+        class="box order-4 px-4 py-2 md:order-5 lg:order-4 xl:order-5"
       />
       <S2MonstieInfoCard
         v-if="monster.hatchable"

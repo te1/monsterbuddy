@@ -18,20 +18,18 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
+  <section class="relative flex items-start">
+    <S2EggImage :monster="monster" class="-ml-3" />
 
-  <section class="relative">
-    <S2EggImage :monster="monster" />
-
-    <div class="mx-3 flex-1">
-      <h3 class="text-lg font-semibold">Retreat</h3>
+    <div>
+      <h3 class="text-lg font-medium">Retreat</h3>
 
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="retreat" />
     </div>
 
     <ClientOnly>
-      <div class="absolute top-0 right-0 pt-3 pr-3">
+      <div class="absolute top-1 right-1">
         <AppPinToggle :modelValue="isPinned" subject="egg" noLabel @update:modelValue="togglePin" />
       </div>
     </ClientOnly>

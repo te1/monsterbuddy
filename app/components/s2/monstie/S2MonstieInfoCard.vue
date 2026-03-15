@@ -30,42 +30,37 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
-  <section class="relative space-y-3 overflow-hidden">
-    <div class="space-y-1">
-      <h3 class="text-lg font-semibold">Monstie Info</h3>
+  <section class="relative flex flex-col gap-2">
+    <div class="flex flex-col gap-1">
+      <h3 class="text-lg font-medium">Monstie Info</h3>
 
       <div class="flex items-center">
         <span class="w-40">Attack Type</span>
 
-        <AttackTypeIcon class="mr-1.5 w-8" :monster="monster" />
-        <AttackTypeLabel class="font-semibold" :monster="monster" />
+        <AttackTypeIcon class="mr-1.5 size-8" :monster="monster" />
+        <AttackTypeLabel class="font-medium" :monster="monster" />
       </div>
 
       <div class="flex items-center">
         <span class="w-40">Attack Element</span>
 
-        <ElementIcon class="mr-1.5 w-8" :element="monster?.monstie?.attackElement" />
-        <ElementLabel class="font-semibold" :element="monster?.monstie?.attackElement" />
+        <ElementIcon class="mr-1.5 size-8" :element="monster?.monstie?.attackElement" />
+        <ElementLabel class="font-medium" :element="monster?.monstie?.attackElement" />
       </div>
 
       <div class="flex items-center">
         <span class="mr-1.5 w-40">Kinship Skill</span>
 
-        <div
-          class="pl-8 font-semibold dark:brightness-150"
-          v-text="monster?.monstie?.kinshipSkill"
-        />
+        <div class="pl-8 font-medium dark:brightness-150" v-text="monster?.monstie?.kinshipSkill" />
       </div>
     </div>
 
     <div v-if="hasRidingActions">
-      <h3 class="text-lg font-semibold">Riding Actions</h3>
+      <h3 class="text-lg font-medium">Riding Actions</h3>
 
       <div>
         <span v-for="(action, index) in ridingActions" :key="action.name" class="inline-flex">
-          <AppNuxtLink :to="`/2/riding-actions/${action.slug}`" class="link">
+          <AppNuxtLink :to="`/2/riding-actions/${action.slug}`">
             {{ action.name }}
           </AppNuxtLink>
           <span v-if="index + 1 < (ridingActions?.length ?? 0)">,&nbsp;</span>
@@ -74,7 +69,7 @@
     </div>
 
     <ClientOnly>
-      <div class="absolute top-0 right-0 pr-3">
+      <div class="absolute top-1 right-1">
         <AppPinToggle
           :modelValue="isPinned"
           subject="monstie"

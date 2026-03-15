@@ -10,17 +10,15 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div class="flex items-center gap-2">
     <slot>
-      <span class="h-5 w-5" />
+      <span class="size-5" />
     </slot>
 
     <span class="flex flex-1 gap-0.5">
       <div v-for="n in 10" :key="n" class="h-4 flex-1" :class="getColor(n)" />
     </span>
 
-    <span class="w-4 text-right font-semibold" v-text="value" />
+    <span class="w-4 text-right font-medium" v-text="value" />
   </div>
 </template>

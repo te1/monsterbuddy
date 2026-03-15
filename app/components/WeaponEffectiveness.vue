@@ -10,8 +10,8 @@
 
 <template>
   <div class="flex items-center">
-    <WeaponTypeIcon type="slash" :ineffective="slashIneffective" class="h-8 w-8" />
-    <WeaponTypeIcon type="pierce" :ineffective="pierceIneffective" class="h-8 w-8" />
-    <WeaponTypeIcon type="blunt" :ineffective="bluntIneffective" class="h-8 w-8" />
+    <WeaponTypeIcon type="slash" :ineffective="slashIneffective" class="size-8" />
+    <WeaponTypeIcon type="pierce" :ineffective="pierceIneffective" class="size-8" />
+    <WeaponTypeIcon type="blunt" :ineffective="bluntIneffective" class="size-8" />
   </div>
 </template>

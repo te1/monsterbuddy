@@ -6,6 +6,6 @@
 
 <template>
   <section>
-    <S2MonsterImage class="h-full max-h-[400px] w-full object-contain" :monster="monster" />
+    <S2MonsterImage class="size-full max-h-[400px] object-contain" :monster="monster" />
   </section>
 </template>

@@ -43,13 +43,11 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
-  <section v-if="hasCombatInfo" class="relative space-y-2 overflow-hidden">
+  <section v-if="hasCombatInfo" class="relative flex flex-col gap-2">
     <div v-if="hasAttackPatterns">
-      <h3 class="text-lg font-semibold">Attack Patterns</h3>
+      <h3 class="text-lg font-medium">Attack Patterns</h3>
 
-      <div class="space-y-1">
+      <div class="flex flex-col gap-1">
         <div
           v-for="(attackType, phase) in monster.monster?.attackPatterns"
           :key="phase"
@@ -57,12 +55,12 @@
         >
           <span class="w-36" v-text="formatPhase(phase)" />
 
-          <AttackTypeIcon class="mr-1.5 w-8" :type="attackType" />
-          <AttackTypeLabel class="font-semibold" :type="attackType" />
+          <AttackTypeIcon class="mr-1.5 size-8" :type="attackType" />
+          <AttackTypeLabel class="font-medium" :type="attackType" />
 
           <!--
           <AttackTypeLabel
-            class="ml-1.5 font-semibold"
+            class="ml-1.5 font-medium"
             :type="getCounterAttackType(attackType)"
           /> -->
         </div>
@@ -70,9 +68,9 @@
     </div>
 
     <div v-if="hasParts">
-      <h3 class="text-lg font-semibold">Parts</h3>
+      <h3 class="text-lg font-medium">Parts</h3>
 
-      <div class="space-y-1">
+      <div class="flex flex-col gap-1">
         <div
           v-for="(weaponTypes, part) in monster.monster?.parts"
           :key="part"
@@ -86,23 +84,23 @@
     </div>
 
     <div v-if="hasElementalWeakness" class="flex pt-2">
-      <h3 class="w-36 pt-0.5 text-lg font-semibold">Weakness</h3>
+      <h3 class="w-36 pt-0.5 text-lg font-medium">Weakness</h3>
 
-      <div class="space-y-2">
+      <div class="flex flex-col gap-2">
         <div
           v-for="(weakness, label) in elementalWeaknesses"
           :key="weakness"
           class="mr-4 flex items-center"
         >
-          <ElementIcon class="mr-1 w-8" :element="weakness" />
-          <ElementLabel class="font-semibold" :element="weakness" />
+          <ElementIcon class="mr-1 size-8" :element="weakness" />
+          <ElementLabel class="font-medium" :element="weakness" />
           <span v-if="label !== 'DEFAULT'" class="ml-1">({{ label }})</span>
         </div>
       </div>
     </div>
 
     <ClientOnly>
-      <div class="absolute top-0 right-0 pt-1 pr-3">
+      <div class="absolute top-1 right-1">
         <AppPinToggle
           :modelValue="isPinned"
           subject="monster attack pattern"

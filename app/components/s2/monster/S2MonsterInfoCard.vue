@@ -9,35 +9,36 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
-  <section>
-    <div class="flex items-start justify-between overflow-hidden">
+  <section class="flex flex-col gap-2">
+    <div class="flex justify-between">
       <div>
         <h3 class="sr-only">General Monster Info</h3>
 
-        <div class="-mb-1 text-neutral-500 dark:text-neutral-400" v-text="info" />
+        <div class="-mb-1 text-muted" v-text="info" />
 
-        <div class="mb-1 text-2xl font-semibold" v-text="monster.name" />
+        <div class="mb-1 text-2xl font-medium" v-text="monster.name" />
 
         <div class="flex items-center gap-1">
-          <span class="text-neutral-600 dark:text-neutral-400">
-            <UIcon name="ph:dna" title="Genus" />
-          </span>
+          <UTooltip text="Genus">
+            <UIcon name="ph:dna" class="text-muted" />
+          </UTooltip>
+
           <span v-text="monster.genus" />
         </div>
 
         <div class="flex items-center gap-1">
-          <span class="text-neutral-600 dark:text-neutral-400">
-            <UIcon name="ph:map-pin-fill" title="Habitat" />
-          </span>
+          <UTooltip text="Habitat">
+            <UIcon name="ph:map-pin-fill" class="text-dimmed" />
+          </UTooltip>
+
           <span v-text="monster.habitat" />
         </div>
 
         <div class="flex items-center gap-1">
-          <span class="text-neutral-600 dark:text-neutral-400">
-            <UIcon name="ph:star-fill" title="Rarity" />
-          </span>
+          <UTooltip text="Rarity">
+            <UIcon name="ph:star-fill" class="text-dimmed" />
+          </UTooltip>
+
           <span v-text="monster.rarity" />
         </div>
       </div>
@@ -49,16 +50,16 @@
           <img
             src="~/assets/icon/hatchable.svg"
             alt="Hatchable"
-            width="20"
-            height="20"
-            class="h-8 w-8"
+            width="32"
+            height="32"
+            class="size-8"
           />
         </UTooltip>
       </div>
     </div>
 
     <div v-if="hasLocations">
-      <h3 class="mt-2 text-lg font-semibold">Locations</h3>
+      <h3 class="text-lg font-medium">Locations</h3>
 
       <S2MonsterLocation
         v-for="location in monster.locations"
