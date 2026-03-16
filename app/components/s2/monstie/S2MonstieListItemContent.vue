@@ -127,14 +127,12 @@
           class="font-bold"
           :class="getStatClass('base.maxHp')"
           v-text="monster?.monstie?.stats?.base?.maxHp"
-        />
-        , Speed
+        />, Speed
         <span
           class="font-bold"
           :class="getStatClass('base.speed')"
           v-text="monster?.monstie?.stats?.base?.speed"
-        />
-        , Crit
+        />, Crit
         <span
           class="font-bold"
           :class="getStatClass('base.critRate')"
