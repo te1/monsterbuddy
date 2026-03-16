@@ -18,9 +18,10 @@ const RegionAreaSchema = z.object({
   name: z.string(),
   element: ElementTypeSchema,
   permanent: z.array(z.string()),
-  feral: z.string(),
-  invasive: z.string().optional(),
-  endangered: z.string().optional(),
+  feral: z.array(z.string()),
+  invasive: z.array(z.string()),
+  endangered: z.array(z.string()),
+  calamitous: z.array(z.string()),
 });
 export type RegionArea = z.infer<typeof RegionAreaSchema>;
 
