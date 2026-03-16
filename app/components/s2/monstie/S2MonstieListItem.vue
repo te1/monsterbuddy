@@ -16,16 +16,14 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div class="relative flex h-[122px] items-center">
-    <div class="-mx-3 flex h-[120px] w-[120px] shrink-0 flex-col items-center justify-center gap-2">
+    <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
       <S2MonsterIcon :monster="monster" noTooltip />
 
       <div class="flex items-center gap-1">
-        <AttackTypeIcon class="h-8 w-8" :monster="monster" noTooltip />
+        <AttackTypeIcon class="size-8" :monster="monster" noTooltip />
 
-        <ElementIcon class="h-8 w-8" :element="monster?.monstie?.attackElement" noTooltip />
+        <ElementIcon class="size-8" :element="monster?.monstie?.attackElement" noTooltip />
       </div>
     </div>
 
@@ -36,19 +34,19 @@
     />
 
     <S2MonsterImage
-      class="h-full w-full overflow-hidden object-contain object-right p-2"
+      class="size-full overflow-hidden object-contain p-2"
       style="flex-basis: 250px"
       :monster="monster"
       hideFallback
       noTooltip
     />
 
-    <div
-      v-if="ticket"
-      class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-semibold tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
-      title="Golden SR ticket required"
-    >
-      SR
-    </div>
+    <UTooltip v-if="ticket" text="Golden SR ticket required">
+      <div
+        class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-medium tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
+      >
+        SR
+      </div>
+    </UTooltip>
   </div>
 </template>
