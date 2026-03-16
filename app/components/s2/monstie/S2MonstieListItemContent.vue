@@ -32,7 +32,7 @@
       return coopQuestsData.find((coopQuest) => coopQuest.name === location.main);
     });
 
-    return quests.filter((coopQuest) => coopQuest != null).map(formatCoopQuest);
+    return quests.filter((coopQuest) => coopQuest != null);
   });
 
   const eldersLairFloors = computed(() => {
@@ -84,7 +84,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="min-w-0">
     <div class="leading-tight text-muted" v-text="info" />
     <div class="text-base leading-snug font-medium" v-text="monster.name" />
 
@@ -101,8 +101,9 @@
     </template>
 
     <template v-if="showCoopQuests">
-      <div v-for="coopQuest in coopQuests" :key="coopQuest">
-        {{ coopQuest }}
+      <div v-for="coopQuest in coopQuests" :key="coopQuest" class="@container truncate">
+        <span class="inline @3xs:hidden" v-text="coopQuest.name" />
+        <span class="hidden @3xs:inline" v-text="formatCoopQuest(coopQuest)" />
       </div>
     </template>
 
@@ -111,12 +112,12 @@
     </template>
 
     <!-- eslint-disable vue/no-v-html -->
-    <div v-if="showRetreat" class="whitespace-normal" v-html="retreat" />
+    <div v-if="showRetreat" class="line-clamp-3 whitespace-normal" v-html="retreat" />
 
     <div v-if="showRidingActions" class="whitespace-normal">
       <span v-for="(action, index) in monster?.monstie?.ridingActions" :key="action">
-        {{ action }}
-        <span v-if="index + 1 < (monster?.monstie?.ridingActions?.length ?? 0)">,</span>
+        <span v-text="action" />
+        <span v-if="index + 1 < (monster?.monstie?.ridingActions?.length ?? 0)">, </span>
       </span>
     </div>
 

@@ -208,8 +208,6 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div>
     <AppPageHeader
       title="Monsters"
