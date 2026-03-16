@@ -7,12 +7,10 @@
       monster: Monster;
       noTooltip?: boolean;
       hideFallback?: boolean;
-      right?: boolean;
     }>(),
     {
       noTooltip: false,
       hideFallback: false,
-      right: false,
     }
   );
 
@@ -25,11 +23,7 @@
     <img :src="imageUrl" :alt="monster.name" />
   </UTooltip>
 
-  <div
-    v-else-if="!hideFallback"
-    class="flex size-full items-center"
-    :class="right ? 'justify-end' : 'justify-center'"
-  >
+  <div v-else-if="!hideFallback" class="flex size-full items-center justify-center">
     <S2MonsterIcon :monster="monster" :noTooltip="noTooltip" />
   </div>
 </template>

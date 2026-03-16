@@ -84,11 +84,9 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div>
-    <div class="leading-tight text-neutral-500 dark:text-neutral-400" v-text="info" />
-    <div class="text-base leading-snug font-semibold" v-text="monster.name" />
+    <div class="leading-tight text-muted" v-text="info" />
+    <div class="text-base leading-snug font-medium" v-text="monster.name" />
 
     <template v-if="showLocation || showRarity">
       <div v-text="monster.genus" />
