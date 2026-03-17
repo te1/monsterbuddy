@@ -16,12 +16,226 @@
 
 <template>
   <div>
-    <UPageHeader
-      :title="title"
-      description="Monster Buddy is a companion app for Monster Hunter Stories 2: Wings of Ruin that can help you learn or remember information useful during combat and general gameplay. It's not a complete guide, walkthrough or advanced character / gene planner (yet)."
-      :headline="headline"
-    />
+    <AppPageHeader :title="title" :headline="headline">
+      <template #description>
+        <strong>Monster Buddy</strong> is a companion app for
+        <AppLink href="https://www.monsterhunter.com/stories2">
+          Monster Hunter Stories 2: Wings of Ruin
+        </AppLink>
+        that can help you learn or remember information useful during combat and general gameplay.
+        It's not a complete guide, walkthrough or advanced character / gene planner (yet).
+      </template>
+    </AppPageHeader>
 
-    <UPageBody>Content</UPageBody>
+    <UPageBody class="flex flex-col gap-8">
+      <section class="mt-4 -mb-4 flex flex-col items-center">
+        <div class="relative inline-block h-[200px] w-[180px]">
+          <AttackTypeIcon class="absolute top-0 right-0 left-0 mx-auto size-[70px]" type="power" />
+          <AttackTypeIcon class="absolute bottom-[25px] left-0 size-[70px]" type="speed" />
+          <AttackTypeIcon
+            class="absolute right-0 bottom-[25px] h-[75px] w-[70px]"
+            type="technical"
+          />
+          <UIcon
+            class="dark:text-cool-400 absolute top-[45px] right-[10px] size-12! rotate-85 text-dimmed"
+            name="ph:share-fat-fill"
+          />
+          <UIcon
+            class="dark:text-cool-400 absolute top-[45px] left-[10px] size-12! rotate-330 text-dimmed"
+            name="ph:share-fat-fill"
+          />
+          <UIcon
+            class="dark:text-cool-400 absolute right-0 bottom-0 left-0 mx-auto size-12! rotate-215 text-dimmed"
+            name="ph:share-fat-fill"
+          />
+        </div>
+      </section>
+
+      <UAlert color="neutral" variant="soft-bg">
+        <template #description>
+          Looking for the classic version of Monster Buddy? It's still available at
+          <AppLink href="https://mhst2.monsterbuddy.app">mhst2.monsterbuddy.app</AppLink>.
+        </template>
+      </UAlert>
+
+      <section>
+        <ProseH3>Spoiler Warning</ProseH3>
+
+        <ProseP>
+          This contains names and images of monsters, names of locations, information that can make
+          combat easier, information on which monsters can become monsties, etc. If you don't want
+          that information just yet proceed at your own discretion.
+        </ProseP>
+      </section>
+
+      <section>
+        <ProseH3>Features</ProseH3>
+
+        <ProseUl>
+          <ProseLi>
+            <AppNuxtLink to="/2/monsters">Monster list</AppNuxtLink>
+            with attack patterns, weapon and elemental weaknesses
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/2/monsties">Monstie list</AppNuxtLink>
+            with attack types, retreat conditions, locations and stats
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/2/eggs">Visual egg list</AppNuxtLink>
+            with search, sorting and filtering
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/2/catavan-stands">Catavan stands</AppNuxtLink>
+            with list of monsters you will find nearby
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/2/elders-lair">Elder's Lair overview</AppNuxtLink>
+            to quickly find high rank monsters on each floor
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/2/coop">Co-Op quest list</AppNuxtLink>
+            to see which eggs will be available in the different dens
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/2/riding-actions">Riding action list</AppNuxtLink>
+            and which monsties will learn them
+          </ProseLi>
+
+          <ProseLi>
+            Keeps track of your recently viewed monsters, monsties and eggs for fast and easy
+            navigation
+          </ProseLi>
+
+          <ProseLi>Bookmark monsters to quickly check their attack patterns</ProseLi>
+
+          <ProseLi>Bookmark your favorite monsties to find them quickly</ProseLi>
+
+          <ProseLi>Bookmark eggs to quickly find what your are currently looking for</ProseLi>
+        </ProseUl>
+      </section>
+
+      <div class="grid gap-8 xl:grid-cols-2 xl:gap-12">
+        <section>
+          <ProseH3>Sources for data and images</ProseH3>
+
+          <ProseUl>
+            <ProseLi>In-game field guide</ProseLi>
+
+            <ProseLi>
+              <AppLink href="https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki">
+                Monster Hunter Wiki
+              </AppLink>
+              (shout-out to
+              <AppLink href="https://monsterhunter.fandom.com/wiki/User:YukiHerz">YukiHerz</AppLink
+              >)
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink href="https://mhst.kiranico.com/mhs2">MHStories 2</AppLink>
+              by
+              <AppLink href="https://twitter.com/kiranico_db">Kiranico</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://docs.google.com/spreadsheets/d/1QzM9X34IfACPtRa_yWq2BZUidWJqs0l2K_Gs2023bO0"
+              >
+                MHStories 2 data
+              </AppLink>
+              by
+              <AppLink href="https://www.reddit.com/user/iSharingan">iSharingan</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/oo8fpi/monster_attacktype_chart"
+              >
+                Monster Attack-Type Chart
+              </AppLink>
+              by
+              <AppLink href="https://www.reddit.com/user/RPGwannabe">RPGwannabe</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o"
+              >
+                MH Stories 2 : Attack Types, Weakness &amp; Eggs
+              </AppLink>
+              by
+              <AppLink href="https://www.reddit.com/user/Criwok">Criwok</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/p8h25d/all_high_rank_monsters_in_each_zone_of_the_elder"
+              >
+                All High Rank Monsters in each Zone of the Elder Lair
+              </AppLink>
+              by
+              <AppLink href="https://www.reddit.com/user/PetePeterson53">PetePeterson53</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4"
+              >
+                MHS2
+              </AppLink>
+              by
+              <AppLink href="https://www.reddit.com/user/dorgesilas">dorgesilas</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              Missing data provided by
+              <AppLink href="https://www.reddit.com/user/DerMotze">DerMotze</AppLink>
+            </ProseLi>
+          </ProseUl>
+        </section>
+
+        <section>
+          <ProseH3>Other great resources</ProseH3>
+
+          <ProseUl>
+            <ProseLi>
+              <AppLink href="https://game.capcom.com/manual/MHST2/">Official Web Manual</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://docs.google.com/spreadsheets/d/1O1SZ_p9EFBmu7O9WbmvHISE82ZqVHWWV95vHRHZ3r1M"
+              >
+                All-in-one spreadsheet
+              </AppLink>
+              by
+              <AppLink href="https://www.reddit.com/user/aericee">Riikapii</AppLink>
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink href="https://www.youtube.com/@ArekkzGaming">Arekkz Gaming</AppLink> on
+              YouTube
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink href="https://www.youtube.com/@RageGamingVideos"> RageGamingVideos </AppLink>
+              on YouTube
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink href="https://www.youtube.com/channel/UCj5rxzvXpiPASGNw4-z_BbA">
+                Tidus69
+              </AppLink>
+              on YouTube
+            </ProseLi>
+          </ProseUl>
+        </section>
+      </div>
+    </UPageBody>
   </div>
 </template>

@@ -151,6 +151,16 @@ export default defineAppConfig({
       },
     },
 
+    alert: {
+      variants: {
+        variant: {
+          'soft-bg': {
+            root: 'bg-default/50 shadow',
+          },
+        },
+      },
+    },
+
     formField: {
       slots: {
         root: 'place-items-baseline group',
@@ -189,6 +199,13 @@ export default defineAppConfig({
 
     skeleton: {
       base: 'bg-accented',
+    },
+
+    prose: {
+      h3: { slots: { base: 'mt-0 mb-2 font-medium' } },
+      p: { base: 'my-0' },
+      ul: { base: 'ps-4.5 my-0' },
+      li: { base: 'ps-0 my-0.5' },
     },
   },
 
