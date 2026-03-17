@@ -44,7 +44,11 @@
                 class="border-2 border-t border-neutral-100 dark:border-default"
               />
 
-              <NuxtLink :to="`/2/riding-actions/${action.slug}`" class="box-link block px-6 py-2">
+              <NuxtLink
+                :to="`/2/riding-actions/${action.slug}`"
+                prefetchOn="interaction"
+                class="box-link block px-6 py-2"
+              >
                 {{ action.name }}
               </NuxtLink>
             </div>

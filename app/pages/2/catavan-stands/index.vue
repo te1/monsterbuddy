@@ -46,6 +46,7 @@
 
               <NuxtLink
                 :to="`/2/catavan-stands/${catavanStand.slug}`"
+                prefetchOn="interaction"
                 class="box-link block px-6 py-2"
               >
                 {{ catavanStand.name }}
