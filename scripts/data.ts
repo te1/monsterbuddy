@@ -359,8 +359,7 @@ function transformS3Monsters(data: unknown) {
       }
     }
 
-    // TODO add back condition when hatchable is known
-    if (/* monster.hatchable && */ monster.monstie) {
+    if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
       monstie.attack ??= null;
       monstie.ridingActions ??= [];
