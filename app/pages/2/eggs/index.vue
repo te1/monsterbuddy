@@ -235,6 +235,20 @@
     return 'ph:egg';
   });
 
+  const eagerCardsCount = 20;
+
+  const monsterGroups = computed(() => {
+    let index = 0;
+
+    return Object.entries(eggFilter.groupedMonsters).map(([key, group]) => ({
+      key,
+      monsters: group.map((monster) => ({
+        monster,
+        eager: index++ < eagerCardsCount,
+      })),
+    }));
+  });
+
   function toggleEggFinder() {
     displays.setCurrent(displays.next);
     sources.setCurrent('default', eggFilter);
@@ -301,7 +315,7 @@
       </ul>
 
       <ul v-if="!showEggFinder" class="flex flex-col gap-3">
-        <li v-for="(group, key) in eggFilter.groupedMonsters" :key="key">
+        <li v-for="group in monsterGroups" :key="group.key">
           <div
             v-if="eggFilter.isGrouped"
             class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
@@ -314,7 +328,7 @@
               class="w-6 text-dimmed"
             />
 
-            <div class="font-medium" v-text="key" />
+            <div class="font-medium" v-text="group.key" />
           </div>
 
           <div
@@ -322,24 +336,31 @@
             class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
           >
             <NuxtLink
-              v-for="monster in group"
-              :key="monster.no"
-              :to="`/2/monsters/${monster.slug}`"
+              v-for="item in group.monsters"
+              :key="item.monster.no"
+              :to="`/2/monsters/${item.monster.slug}`"
+              prefetchOn="interaction"
             >
-              <S2EggGridItem :monster="monster" class="box box-link overflow-hidden px-1" />
+              <S2EggGridItem
+                :monster="item.monster"
+                :eager="item.eager"
+                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:150px] [content-visibility:auto]"
+              />
             </NuxtLink>
           </div>
 
           <div v-else class="grid gap-3 md:grid-cols-2">
             <NuxtLink
-              v-for="monster in group"
-              :key="monster.no"
-              :to="`/2/monsters/${monster.slug}`"
+              v-for="item in group.monsters"
+              :key="item.monster.no"
+              :to="`/2/monsters/${item.monster.slug}`"
+              prefetchOn="interaction"
             >
               <S2EggListItem
-                :monster="monster"
+                :monster="item.monster"
                 :mode="eggFilter.mode"
-                class="box box-link overflow-hidden px-1"
+                :eager="item.eager"
+                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
               />
             </NuxtLink>
           </div>

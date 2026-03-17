@@ -77,6 +77,20 @@
     }
     return 'ph:sliders';
   });
+
+  const eagerCardsCount = 14;
+
+  const monsterGroups = computed(() => {
+    let index = 0;
+
+    return Object.entries(eldersLairFilter.groupedMonsters).map(([key, group]) => ({
+      key,
+      monsters: group.map((monster) => ({
+        monster,
+        eager: index++ < eagerCardsCount,
+      })),
+    }));
+  });
 </script>
 
 <template>
@@ -112,26 +126,28 @@
       </div>
 
       <ul class="flex flex-col gap-3">
-        <li v-for="(group, key) in eldersLairFilter.groupedMonsters" :key="key">
+        <li v-for="group in monsterGroups" :key="group.key">
           <div
             v-if="eldersLairFilter.isGrouped"
             class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
             <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
 
-            <div class="font-medium">Elder's Lair - {{ key }}</div>
+            <div class="font-medium">Elder's Lair - {{ group.key }}</div>
           </div>
 
           <div class="grid gap-3 md:grid-cols-2">
             <NuxtLink
-              v-for="monster in group"
-              :key="monster.no"
-              :to="`/2/monsters/${monster.slug}`"
+              v-for="item in group.monsters"
+              :key="item.monster.no"
+              :to="`/2/monsters/${item.monster.slug}`"
+              prefetchOn="interaction"
             >
               <S2MonsterListItem
-                :monster="monster"
+                :monster="item.monster"
                 :mode="eldersLairFilter.mode"
-                class="box box-link overflow-hidden px-1"
+                :eager="item.eager"
+                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
               />
             </NuxtLink>
           </div>

@@ -15,10 +15,12 @@
       monster: Monster;
       mode?: Mode;
       ticket?: string;
+      eager?: boolean;
     }>(),
     {
       mode: 'location',
       ticket: undefined,
+      eager: false,
     }
   );
 
@@ -56,7 +58,7 @@
 <template>
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <S2MonsterIcon :monster="monster" noTooltip />
+      <S2MonsterIcon :monster="monster" :eager="eager" noTooltip />
 
       <img
         v-if="monster.hatchable"
@@ -107,6 +109,7 @@
       class="size-full overflow-hidden object-contain p-2"
       style="flex-basis: 250px"
       :monster="monster"
+      :eager="eager"
       hideFallback
       noTooltip
     />

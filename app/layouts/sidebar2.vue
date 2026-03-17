@@ -102,6 +102,7 @@
                   <NuxtLink
                     v-if="moreRecent > 0"
                     :to="`${listLink}?source=recent`"
+                    prefetchOn="interaction"
                     class="ml-0 max-w-max hover:text-default xl:ml-12"
                   >
                     And {{ moreRecent }} more
@@ -134,6 +135,7 @@
                   <NuxtLink
                     v-if="morePinned > 0"
                     :to="`${listLink}?source=pinned`"
+                    prefetchOn="interaction"
                     class="ml-0 max-w-max hover:text-default xl:ml-12"
                   >
                     And {{ morePinned }} more

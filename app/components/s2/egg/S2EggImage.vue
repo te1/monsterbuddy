@@ -8,12 +8,14 @@
       genus?: GenusType;
       tooltipTop?: boolean;
       noTooltip?: boolean;
+      eager?: boolean;
     }>(),
     {
       monster: undefined,
       genus: undefined,
       tooltipTop: false,
       noTooltip: false,
+      eager: false,
     }
   );
 
@@ -34,8 +36,23 @@
 
 <template>
   <UTooltip v-if="!noTooltip" :text="caption" :content="{ side: tooltipTop ? 'top' : 'bottom' }">
-    <img :src="imageUrl" :alt="caption" width="120" height="120" />
+    <img
+      :src="imageUrl"
+      :alt="caption"
+      width="120"
+      height="120"
+      :loading="eager ? 'eager' : 'lazy'"
+      decoding="async"
+    />
   </UTooltip>
 
-  <img v-else :src="imageUrl" :alt="caption" width="120" height="120" />
+  <img
+    v-else
+    :src="imageUrl"
+    :alt="caption"
+    width="120"
+    height="120"
+    :loading="eager ? 'eager' : 'lazy'"
+    decoding="async"
+  />
 </template>

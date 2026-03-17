@@ -7,17 +7,19 @@
       monster: Monster;
       mode?: Mode;
       ticket?: string;
+      eager?: boolean;
     }>(),
     {
       mode: 'location',
       ticket: undefined,
+      eager: false,
     }
   );
 </script>
 
 <template>
   <div class="relative flex h-[122px] items-center">
-    <S2EggImage class="-mx-3 size-[120px] shrink-0" :monster="monster" noTooltip />
+    <S2EggImage class="-mx-3 size-[120px] shrink-0" :monster="monster" :eager="eager" noTooltip />
 
     <S2MonstieListItemContent
       class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap"
@@ -29,6 +31,7 @@
       class="size-full overflow-hidden object-contain p-2"
       style="flex-basis: 250px"
       :monster="monster"
+      :eager="eager"
       noTooltip
     />
 

@@ -11,11 +11,13 @@
       display?: Display;
       mode?: Mode;
       ticket?: string;
+      eager?: boolean;
     }>(),
     {
       display: undefined,
       mode: undefined,
       ticket: undefined,
+      eager: false,
     }
   );
 
@@ -43,29 +45,32 @@
 </script>
 
 <template>
-  <NuxtLink :to="`/2/monsters/${monster.slug}`">
+  <NuxtLink :to="`/2/monsters/${monster.slug}`" prefetchOn="interaction">
     <S2EggListItem
       v-if="showEgg"
-      class="box box-link overflow-hidden px-1"
+      class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
       :monster="monster"
       :mode="smartMode"
       :ticket="ticket"
+      :eager="eager"
     />
 
     <S2MonstieListItem
       v-else-if="showMonstie"
-      class="box box-link overflow-hidden px-1"
+      class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
       :monster="monster"
       :mode="smartMode"
       :ticket="ticket"
+      :eager="eager"
     />
 
     <S2MonsterListItem
       v-else
-      class="box box-link overflow-hidden px-1"
+      class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
       :monster="monster"
       :mode="smartMode"
       :ticket="ticket"
+      :eager="eager"
     />
   </NuxtLink>
 </template>

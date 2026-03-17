@@ -5,10 +5,12 @@
     defineProps<{
       monster?: Monster;
       genus?: GenusType;
+      eager?: boolean;
     }>(),
     {
       monster: undefined,
       genus: undefined,
+      eager: false,
     }
   );
 
@@ -22,7 +24,13 @@
 
 <template>
   <div class="flex h-[150px] flex-col items-center">
-    <S2EggImage class="-mx-3 size-[120px]" :monster="monster" :genus="genus" noTooltip />
+    <S2EggImage
+      class="-mx-3 size-[120px]"
+      :monster="monster"
+      :genus="genus"
+      :eager="eager"
+      noTooltip
+    />
 
     <div class="mb-2 font-medium whitespace-nowrap" v-text="text" />
   </div>

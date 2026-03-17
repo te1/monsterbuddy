@@ -7,10 +7,12 @@
       monster: Monster;
       noTooltip?: boolean;
       hideFallback?: boolean;
+      eager?: boolean;
     }>(),
     {
       noTooltip: false,
       hideFallback: false,
+      eager: false,
     }
   );
 
@@ -19,11 +21,19 @@
 </script>
 
 <template>
-  <UTooltip v-if="hasImage" :text="noTooltip ? undefined : monster.name">
-    <img :src="imageUrl" :alt="monster.name" />
+  <UTooltip v-if="hasImage && !noTooltip" :text="monster.name">
+    <img :src="imageUrl" :alt="monster.name" :loading="eager ? 'eager' : 'lazy'" decoding="async" />
   </UTooltip>
 
+  <img
+    v-else-if="hasImage"
+    :src="imageUrl"
+    :alt="monster.name"
+    :loading="eager ? 'eager' : 'lazy'"
+    decoding="async"
+  />
+
   <div v-else-if="!hideFallback" class="flex size-full items-center justify-center">
-    <S2MonsterIcon :monster="monster" :noTooltip="noTooltip" />
+    <S2MonsterIcon :monster="monster" :noTooltip="noTooltip" :eager="eager" />
   </div>
 </template>

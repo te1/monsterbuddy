@@ -202,6 +202,20 @@
     }
   });
 
+  const eagerCardsCount = 14;
+
+  const monsterGroups = computed(() => {
+    let index = 0;
+
+    return Object.entries(monstieFilter.groupedMonsters).map(([key, group]) => ({
+      key,
+      monsters: group.map((monster) => ({
+        monster,
+        eager: index++ < eagerCardsCount,
+      })),
+    }));
+  });
+
   onMounted(() => {
     history.lastList = 'monsties';
   });
@@ -241,7 +255,7 @@
       </div>
 
       <ul class="flex flex-col gap-3">
-        <li v-for="(group, key) in monstieFilter.groupedMonsters" :key="key">
+        <li v-for="group in monsterGroups" :key="group.key">
           <div
             v-if="monstieFilter.isGrouped"
             class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
@@ -254,19 +268,21 @@
               class="w-6 text-dimmed"
             />
 
-            <div class="font-medium" v-text="key" />
+            <div class="font-medium" v-text="group.key" />
           </div>
 
           <div class="grid gap-3 md:grid-cols-2">
             <NuxtLink
-              v-for="monster in group"
-              :key="monster.no"
-              :to="`/2/monsters/${monster.slug}`"
+              v-for="item in group.monsters"
+              :key="item.monster.no"
+              :to="`/2/monsters/${item.monster.slug}`"
+              prefetchOn="interaction"
             >
               <S2MonstieListItem
-                :monster="monster"
+                :monster="item.monster"
                 :mode="monstieFilter.mode"
-                class="box box-link overflow-hidden px-1"
+                :eager="item.eager"
+                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
               />
             </NuxtLink>
           </div>

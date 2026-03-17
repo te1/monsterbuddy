@@ -31,6 +31,15 @@
 
   const monsters = computed(() => getMonstersByCatavanStand(catavanStand.name));
 
+  const eagerCardsCount = 14;
+
+  const monsterItems = computed(() =>
+    monsters.value.map((monster, index) => ({
+      monster,
+      eager: index < eagerCardsCount,
+    }))
+  );
+
   useSeoMeta(getCatavanStandSeo(catavanStand, monsters.value.length));
   const headline = gameTypeToFullName('mhst2');
 
@@ -126,11 +135,12 @@
     <UPageBody>
       <div class="grid gap-3 md:grid-cols-2">
         <S2MonsterSmartListItem
-          v-for="monster in monsters"
-          :key="monster.no"
-          :monster="monster"
+          v-for="item in monsterItems"
+          :key="item.monster.no"
+          :monster="item.monster"
           :display="displays.current"
-          :mode="getMode(monster)"
+          :mode="getMode(item.monster)"
+          :eager="item.eager"
         />
       </div>
     </UPageBody>

@@ -50,6 +50,21 @@
     return groupBy(items, (item) => (item.quest?.finalNest ? 'Final Nest' : 'Normal Nest'));
   });
 
+  const eagerCardsCount = 14;
+
+  const groupedItems = computed(() => {
+    let index = 0;
+
+    return Object.entries(items.value).map(([key, group]) => ({
+      key,
+      items: group.map((item) => ({
+        monster: item.monster,
+        quest: item.quest,
+        eager: index++ < eagerCardsCount,
+      })),
+    }));
+  });
+
   const monsterCount = computed(() => Object.values(items.value).flat().length);
 
   useSeoMeta(getCoopQuestSeo(coopQuest, monsterCount.value));
@@ -149,24 +164,25 @@
 
     <UPageBody>
       <ul class="flex flex-col gap-3">
-        <li v-for="(group, key) in items" :key="key">
+        <li v-for="group in groupedItems" :key="group.key">
           <div
             v-if="isGrouped"
             class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
             <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
 
-            <div class="font-medium" v-text="key" />
+            <div class="font-medium" v-text="group.key" />
           </div>
 
           <div class="grid gap-3 md:grid-cols-2">
             <S2MonsterSmartListItem
-              v-for="item in group"
+              v-for="item in group.items"
               :key="item.monster.no"
               :monster="item.monster"
               :display="displays.current"
               :mode="mode"
               :ticket="getTicket(item.quest)"
+              :eager="item.eager"
             />
           </div>
         </li>

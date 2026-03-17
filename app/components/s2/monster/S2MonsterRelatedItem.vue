@@ -20,7 +20,7 @@
 </script>
 
 <template>
-  <NuxtLink :to="`/2/monsters/${monster.slug}`">
+  <NuxtLink :to="`/2/monsters/${monster.slug}`" prefetchOn="interaction">
     <S2EggListItem v-if="showEgg" class="ml-2" :monster="monster" :mode="mode" />
 
     <S2MonstieListItem v-else-if="showMonstie" :monster="monster" :mode="mode" />
