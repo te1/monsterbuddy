@@ -27,6 +27,4 @@
       class: 'cursor-pointer',
     }"
   />
-
-  <!-- TODO add search box -->
 </template>

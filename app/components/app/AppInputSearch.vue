@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  withDefaults(
+  const props = withDefaults(
     defineProps<{
       disabled?: boolean;
       modalLayout?: boolean;
@@ -20,10 +20,23 @@
 
   const input = useTemplateRef('input');
 
-  function clear() {
-    modelValue.value = undefined;
+  const canFocus = computed(() => !props.disabled);
+
+  function focus() {
+    if (!canFocus.value) {
+      return;
+    }
 
     input.value?.inputRef?.focus();
+  }
+
+  defineShortcuts({
+    '/': focus,
+  });
+
+  function clear() {
+    modelValue.value = undefined;
+    focus();
   }
 </script>
 
@@ -40,17 +53,21 @@
     :disabled="disabled"
     @update:modelValue="updateValue"
   >
-    <template v-if="modelValue?.length" #trailing>
-      <UTooltip text="Clear filter">
-        <UButton
-          color="neutral"
-          variant="link"
-          size="sm"
-          icon="ph:x"
-          aria-label="Clear filter"
-          @click="clear"
-        />
-      </UTooltip>
+    <template #trailing>
+      <div class="pe-0.5">
+        <UTooltip v-if="modelValue?.length" text="Clear filter">
+          <UButton
+            color="neutral"
+            variant="link"
+            size="sm"
+            icon="ph:x"
+            aria-label="Clear filter"
+            @click="clear"
+          />
+        </UTooltip>
+
+        <UKbd v-else value="/" variant="soft" aria-hidden="true" class="me-0.5 hidden lg:block" />
+      </div>
     </template>
   </UInput>
 </template>
