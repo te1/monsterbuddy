@@ -37,7 +37,7 @@
             </div>
           </div>
 
-          <div class="box">
+          <div class="box overflow-hidden">
             <div v-for="(action, index) in actions" :key="action.slug">
               <div
                 v-if="index > 0"

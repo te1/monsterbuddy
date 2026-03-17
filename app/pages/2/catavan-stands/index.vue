@@ -37,7 +37,7 @@
             </div>
           </div>
 
-          <div class="box">
+          <div class="box overflow-hidden">
             <div v-for="(catavanStand, index) in stands" :key="catavanStand.slug">
               <div
                 v-if="index > 0"

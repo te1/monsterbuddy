@@ -37,7 +37,7 @@
             </div>
           </div>
 
-          <div class="box">
+          <div class="box overflow-hidden">
             <div v-for="(quest, index) in quests" :key="quest.slug">
               <div
                 v-if="index > 0"
