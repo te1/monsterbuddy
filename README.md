@@ -1,62 +1,40 @@
-# Nuxt Docs Template
+# monsterbuddy
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Companion app for Monster Hunter Stories games
 
-Use this template to build your own documentation with [Nuxt UI](https://ui.nuxt.com) quickly.
+https://monsterbuddy.app
 
-- [Live demo](https://docs-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation)
+## Games
 
-<a href="https://docs-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/docs-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/docs-light.png">
-    <img alt="Nuxt Docs Template" src="https://ui.nuxt.com/assets/templates/nuxt/docs-light.png">
-  </picture>
-</a>
+- [Monster Hunter Stories 1 / Original / Remastered](https://www.monsterhunter.com/stories)
+- [Monster Hunter Stories 2: Wings of Ruin](https://www.monsterhunter.com/stories2)
+- [Monster Hunter Stories 3: Twisted Reflection](https://www.monsterhunter.com/stories3)
 
-## Quick Start
+## Features
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/docs
-```
+- Monster list with attack patterns, weapon and elemental weaknesses
+- Monstie list with attack types, retreat conditions, habitats and stats
+- Egg list with search, sorting and filtering
+- Catavan stands with list of nearby monsters
+- Elder's Lair with list of monsters by floor
+- Tower of Illusion with list of monsters by floor
+- Co-Op quests with list of eggs by den
+- Riding action list and related monsties
 
-## Deploy your own
+## Sources for data and images
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=docs&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fdocs&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fdocs-dark.png&demo-url=https%3A%2F%2Fdocs-template.nuxt.dev%2F&demo-title=Nuxt%20Docs%20Template&demo-description=A%20documentation%20template%20powered%20by%20Nuxt%20Content.)
+- In-game field guide / Monsterpedia
+- [Monster Hunter Wiki](https://monsterhunterwiki.org)
+- [Monster Hunter Wiki (Fandom)](https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki)
+- [MHStories 2](https://mhst.kiranico.com/mhs2) by [Kiranico](https://twitter.com/kiranico_db)
+- [MHStories 2 data](https://docs.google.com/spreadsheets/d/1QzM9X34IfACPtRa_yWq2BZUidWJqs0l2K_Gs2023bO0) by iSharingan
+- [Monster Attack-Type Chart](https://www.reddit.com/r/MonsterHunterStories/comments/oo8fpi/monster_attacktype_chart) by [RPGwannabe](https://www.reddit.com/user/RPGwannabe)
+- [MH Stories 2 : Attack Types, Weakness & Eggs](https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o) by [Criwok](https://www.reddit.com/user/Criwok)
+- [All High Rank Monsters in each Zone of the Elder Lair](https://www.reddit.com/r/MonsterHunterStories/comments/p8h25d/all_high_rank_monsters_in_each_zone_of_the_elder) by [PetePeterson53](https://www.reddit.com/user/PetePeterson53)
+- [MHS2](https://docs.google.com/spreadsheets/d/1ayBCZ7WrkXniGTjKlkf7JFTzJA_0ZcaLYf5A_MEhxN4) by [dorgesilas](https://www.reddit.com/user/dorgesilas)
 
-## Setup
+See [data](https://github.com/te1/monsterbuddy/tree/main/data) for the collected data.
 
-Make sure to install the dependencies:
+## Disclaimer
 
-```bash
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-pnpm dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-pnpm build
-```
-
-Locally preview production build:
-
-```bash
-pnpm preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## Renovate integration
-
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+This project is not affiliated with or endorsed by Capcom or the Monster Hunter brand. All trademarks referenced herein are the properties of their respective owners.
