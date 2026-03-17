@@ -22,12 +22,14 @@
 
 <template>
   <section v-if="hasRelated">
-    <h3 class="text-lg font-medium">Related</h3>
+    <h3 class="px-4 pt-2 text-lg font-medium">Related</h3>
 
     <div v-for="(relation, index) in relations" :key="relation.monster.name">
-      <div v-if="index > 0" class="my-2 border-t border-accented dark:border-accented/50" />
+      <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
-      <S2MonsterRelatedItem :monster="relation.monster" />
+      <div class="box-link">
+        <S2MonsterRelatedItem :monster="relation.monster" />
+      </div>
     </div>
   </section>
 </template>

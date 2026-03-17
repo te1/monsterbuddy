@@ -43,8 +43,4 @@
   .box-link {
     @apply transition-colors hover:bg-default active:bg-accented/50;
   }
-
-  .box-link-inline {
-    @apply transition-opacity hover:opacity-75 active:opacity-50;
-  }
 }

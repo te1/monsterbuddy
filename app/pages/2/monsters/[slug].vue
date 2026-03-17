@@ -80,7 +80,7 @@
         :monster="monster"
         class="box order-6 px-4 py-2"
       />
-      <S2MonsterRelatedCard :monster="monster" class="box order-7 px-4 py-2" />
+      <S2MonsterRelatedCard :monster="monster" class="box order-7 overflow-hidden" />
     </UPageBody>
   </div>
 </template>
