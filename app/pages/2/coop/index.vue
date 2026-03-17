@@ -41,7 +41,7 @@
             <div v-for="(quest, index) in quests" :key="quest.slug">
               <div
                 v-if="index > 0"
-                class="border-elevated border-2 border-t border-neutral-100 dark:border-default"
+                class="border-2 border-t border-neutral-100 dark:border-default"
               />
 
               <NuxtLink :to="`/2/coop/${quest.slug}`" class="box-link block px-6 py-2">

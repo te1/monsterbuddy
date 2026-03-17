@@ -41,7 +41,7 @@
             <div v-for="(catavanStand, index) in stands" :key="catavanStand.slug">
               <div
                 v-if="index > 0"
-                class="border-elevated border-2 border-t border-neutral-100 dark:border-default"
+                class="border-2 border-t border-neutral-100 dark:border-default"
               />
 
               <NuxtLink

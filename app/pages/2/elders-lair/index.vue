@@ -80,8 +80,6 @@
 </script>
 
 <template>
-  <!-- TODO CSS -->
-
   <div>
     <AppPageHeader
       title="Elder's Lair"
