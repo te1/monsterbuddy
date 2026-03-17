@@ -152,7 +152,7 @@
         <li v-for="(group, key) in items" :key="key">
           <div
             v-if="isGrouped"
-            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/75 p-1 backdrop-blur dark:bg-muted/75"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
             <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
 

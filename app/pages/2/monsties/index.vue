@@ -244,7 +244,7 @@
         <li v-for="(group, key) in monstieFilter.groupedMonsters" :key="key">
           <div
             v-if="monstieFilter.isGrouped"
-            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/75 p-1 backdrop-blur dark:bg-muted/75"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
             <UIcon v-if="monstieFilter.sortKey === 'genus'" name="ph:dna" class="w-6 text-muted" />
 

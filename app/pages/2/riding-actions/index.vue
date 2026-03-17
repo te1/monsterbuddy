@@ -28,7 +28,7 @@
       <ul class="flex flex-col gap-3">
         <li v-for="(actions, type) in ridingActions" :key="type">
           <div
-            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/75 p-1 backdrop-blur dark:bg-muted/75"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
             <UIcon name="ph:exclamation-mark-bold" class="w-6" />
 

@@ -64,7 +64,7 @@ export default defineAppConfig({
 
     header: {
       slots: {
-        root: 'border-accented dark:border-default',
+        root: 'border-accented dark:border-default bg-default/90',
       },
     },
 
