@@ -372,6 +372,7 @@
       </S2MonsterNoResults>
     </UPageBody>
 
+    <!-- TODO increase spacing, remove some options, make apply stand out more -->
     <ClientOnly>
       <UDrawer
         v-if="!hasSidebar"

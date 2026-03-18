@@ -12,6 +12,7 @@
 
     <UIcon class="h-16 w-16 text-dimmed" name="ph:smiley-sad-light" />
 
+    <!-- TODO increase contrast -->
     <UButton
       color="neutral"
       variant="soft"
