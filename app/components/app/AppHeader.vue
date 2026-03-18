@@ -1,6 +1,8 @@
 <script lang="ts" setup>
   const canHover = useCanHover();
   const navItems = useNavItems();
+
+  // TODO increase click area of top nav buttons and bottom nav links
 </script>
 
 <template>

@@ -15,6 +15,8 @@
       router.push(backFallback.value);
     }
   }
+
+  // TODO increase click area of title and back button
 </script>
 
 <template>
