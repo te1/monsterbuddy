@@ -33,6 +33,16 @@
   defineShortcuts({
     meta_k: () => (open.value = !open.value),
   });
+
+  // restore normal handling of home/end keys in UInput
+  function onKeydownCapture(e: KeyboardEvent) {
+    if (e.key === 'Home' || e.key === 'End') {
+      e.stopImmediatePropagation();
+    }
+  }
+
+  // type gymnastics so we can pass event listeners to UInput
+  const input = { onKeydownCapture } as Record<string, unknown>;
 </script>
 
 <template>
@@ -57,6 +67,7 @@
         :groups="searchConfig.groups"
         placeholder="Search anything..."
         class="h-[85dvh] lg:h-120"
+        :input="input"
         close
         selectedIcon=" "
         :ui="{ item: 'items-center', itemLabelSuffix: 'hidden' }"
