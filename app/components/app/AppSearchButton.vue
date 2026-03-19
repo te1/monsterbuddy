@@ -55,12 +55,40 @@
     />
   </DefineButtonTemplate>
 
-  <UModal v-model:open="open">
-    <ReuseButtonTemplate v-if="open" />
+  <UModal
+    v-model:open="open"
+    title="Search"
+    description="Filter results and open a destination. Use arrow keys to move, Enter to select, Escape to close."
+  >
+    <div class="flex items-center gap-2">
+      <div class="sm:hidden">
+        <ReuseButtonTemplate v-if="open" />
 
-    <UTooltip v-else text="Search" :kbds="['meta', 'k']">
-      <ReuseButtonTemplate />
-    </UTooltip>
+        <UTooltip v-else text="Search" :kbds="['meta', 'k']">
+          <ReuseButtonTemplate />
+        </UTooltip>
+      </div>
+
+      <UInput
+        color="neutral"
+        variant="soft"
+        icon="ph:magnifying-glass"
+        placeholder="Search..."
+        aria-label="Search"
+        :ui="{ trailing: 'pe-1' }"
+        class="hidden w-32 select-none sm:block lg:w-40"
+        readonly
+      >
+        <template #trailing>
+          <ClientOnly>
+            <div class="hidden items-center gap-0.5 pe-0.5 select-none lg:flex" aria-hidden="true">
+              <UKbd value="meta" variant="soft" :ui="{ base: 'bg-default pt-0.5 text-muted' }" />
+              <UKbd value="k" variant="soft" :ui="{ base: 'bg-default pt-0.5 text-muted' }" />
+            </div>
+          </ClientOnly>
+        </template>
+      </UInput>
+    </div>
 
     <template #content>
       <UCommandPalette
@@ -80,7 +108,7 @@
             :is="searchConfig.monsterIconComponent"
             :monster="item.data"
             noTooltip
-            class="size-8"
+            class="size-9"
           />
         </template>
       </UCommandPalette>

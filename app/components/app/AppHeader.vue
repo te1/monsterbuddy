@@ -21,8 +21,8 @@
     </template>
 
     <template #right>
-      <AppColorModeButton />
       <AppSearchButton />
+      <AppColorModeButton />
       <AppGameSelect />
     </template>
   </UHeader>

@@ -48,6 +48,7 @@
     :variant="modalLayout ? 'soft-filter-modal' : 'soft-filter'"
     icon="ph:magnifying-glass"
     placeholder="Search..."
+    aria-label="Search"
     :ui="{ trailing: 'pe-1' }"
     class="w-full"
     :disabled="disabled"
@@ -66,7 +67,13 @@
           />
         </UTooltip>
 
-        <UKbd v-else value="/" variant="soft" aria-hidden="true" class="me-0.5 hidden lg:block" />
+        <UKbd
+          v-else
+          value="/"
+          variant="soft"
+          aria-hidden="true"
+          class="me-0.5 hidden ps-2 pt-0.25 select-none lg:block"
+        />
       </div>
     </template>
   </UInput>
