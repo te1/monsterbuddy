@@ -209,9 +209,7 @@ Nuxt UI provides components to compose full page layouts. Load the reference mat
 | Layout | Description | Reference |
 |---|---|---|
 | Page | Landing, blog, changelog, pricing — public-facing pages | [layouts/page.md](references/layouts/page.md) |
-| Dashboard | Admin UI with resizable sidebar and panels | [layouts/dashboard.md](references/layouts/dashboard.md) |
 | Docs | Documentation with sidebar nav and TOC | [layouts/docs.md](references/layouts/docs.md) |
-| Chat | AI chat with messages and prompt | [layouts/chat.md](references/layouts/chat.md) |
 | Editor | Rich text editor with toolbars | [layouts/editor.md](references/layouts/editor.md) |
 
 ## Templates
