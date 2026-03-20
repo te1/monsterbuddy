@@ -343,7 +343,7 @@
           @click="toggleSource"
         />
 
-        <NuxtLink v-if="!showFilter" :to="fabFilterTarget">
+        <NuxtLink v-if="!showFilter" :to="fabFilterTarget" :aria-label="fabFilterTooltip">
           <AppFab :tooltip="fabFilterTooltip" :icon="fabFilterIcon" />
         </NuxtLink>
       </AppFabPanel>

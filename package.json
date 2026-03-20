@@ -28,6 +28,7 @@
     "@vueuse/core": "^14.2.1",
     "es-toolkit": "^1.45.1",
     "nuxt": "^4.4.2",
+    "nuxt-link-checker": "4.3.9",
     "nuxt-llms": "0.2.0",
     "nuxt-og-image": "^5.1.13",
     "nuxt-schema-org": "5.0.10",

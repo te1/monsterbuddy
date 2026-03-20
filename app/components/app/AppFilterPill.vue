@@ -29,7 +29,7 @@
 </script>
 
 <template>
-  <NuxtLink :to="filterTarget">
+  <NuxtLink :to="filterTarget" aria-label="Filter">
     <UBadge
       color="neutral"
       variant="soft-filter"

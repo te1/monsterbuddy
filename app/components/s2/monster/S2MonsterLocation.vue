@@ -62,7 +62,7 @@
         return '';
 
       case 'eldersLair':
-        return `/2/elders-lair/?floor=${props.location.main}`;
+        return `/2/elders-lair?floor=${props.location.main.toLowerCase()}`;
 
       default:
         return '';

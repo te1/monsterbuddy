@@ -55,7 +55,7 @@
   });
 
   if (route.query.floor) {
-    eldersLairFilter.eldersLairFilter = route.query.floor as string;
+    eldersLairFilter.eldersLairFilter = (route.query.floor as string).toUpperCase();
 
     router.replace(route.path); // remove query parameters from URL
   } else {
@@ -189,7 +189,7 @@
       </UDrawer>
 
       <AppFabPanel>
-        <NuxtLink v-if="!showFilter" :to="fabFilterTarget">
+        <NuxtLink v-if="!showFilter" :to="fabFilterTarget" :aria-label="fabFilterTooltip">
           <AppFab :tooltip="fabFilterTooltip" :icon="fabFilterIcon" />
         </NuxtLink>
       </AppFabPanel>

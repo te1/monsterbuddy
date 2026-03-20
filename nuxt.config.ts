@@ -1,3 +1,5 @@
+console.log('>> NODE_ENV', process.env.NODE_ENV);
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -13,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     'nuxt-og-image',
+    'nuxt-link-checker',
     'nuxt-llms',
   ],
 
@@ -88,7 +91,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     exclude: ['/404'],
-    zeroRuntime: true,
+    zeroRuntime: process.env.NODE_ENV !== 'development',
     discoverImages: false,
     discoverVideos: false,
     xsl: false,
