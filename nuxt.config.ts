@@ -82,6 +82,10 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
+  robots: {
+    credits: false,
+  },
+
   sitemap: {
     exclude: ['/404'],
     zeroRuntime: true,
