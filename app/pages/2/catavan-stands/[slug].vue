@@ -68,11 +68,12 @@
   });
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: 'Catavan Stands', url: '/2/catavan-stands' },
-      { name: catavanStand.name },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        { name: 'Catavan Stands', url: '/2/catavan-stands' },
+        { name: catavanStand.name },
+      ],
+    }),
   ]);
 
   const displays = useCatavanStandDisplays();

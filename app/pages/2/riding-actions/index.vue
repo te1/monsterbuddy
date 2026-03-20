@@ -14,11 +14,12 @@
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: gameTypeToShortLabel('mhst2'), url: '/2' },
-      { name: 'Riding Actions' },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        { name: gameTypeToShortLabel('mhst2'), url: '/2' },
+        { name: 'Riding Actions' },
+      ],
+    }),
   ]);
 
   const ridingActions = groupBy(sortedRidingActions, (ridingAction) => ridingAction.type);

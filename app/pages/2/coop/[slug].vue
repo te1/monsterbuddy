@@ -91,11 +91,13 @@
   });
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: 'Co-Op Quests', url: '/2/coop' },
-      { name: coopQuest.name },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        //
+        { name: 'Co-Op Quests', url: '/2/coop' },
+        { name: coopQuest.name },
+      ],
+    }),
   ]);
 
   const isGrouped = computed(() => coopQuest.type === 'explore');

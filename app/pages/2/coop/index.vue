@@ -14,11 +14,12 @@
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: gameTypeToShortLabel('mhst2'), url: '/2' },
-      { name: 'Co-Op Quests' },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        { name: gameTypeToShortLabel('mhst2'), url: '/2' },
+        { name: 'Co-Op Quests' },
+      ],
+    }),
   ]);
 
   const coopQuests = groupBy(coopQuests_, (coopQuest) => coopQuest.type);

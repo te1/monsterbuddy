@@ -17,11 +17,12 @@
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: gameTypeToShortLabel('mhst2'), url: '/2' },
-      { name: "Elder's Lair" },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        { name: gameTypeToShortLabel('mhst2'), url: '/2' },
+        { name: "Elder's Lair" },
+      ],
+    }),
   ]);
 
   const router = useRouter();

@@ -49,11 +49,12 @@
   });
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: 'Riding Actions', url: '/2/riding-actions' },
-      { name: ridingAction.name },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        { name: 'Riding Actions', url: '/2/riding-actions' },
+        { name: ridingAction.name },
+      ],
+    }),
   ]);
 
   const displays = useRidingActionDisplays();

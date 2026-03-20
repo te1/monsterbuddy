@@ -47,11 +47,13 @@
   });
 
   useSchemaOrg([
-    defineBreadcrumb([
-      //
-      { name: 'Monsters', url: '/2/monsters' },
-      { name: monster.name },
-    ]),
+    defineBreadcrumb({
+      itemListElement: [
+        //
+        { name: 'Monsters', url: '/2/monsters' },
+        { name: monster.name },
+      ],
+    }),
   ]);
 
   const history = useHistoryStore();
