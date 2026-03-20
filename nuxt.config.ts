@@ -35,9 +35,46 @@ export default defineNuxtConfig({
     asyncContext: true,
   },
 
+  build: {
+    // analyze: true,
+  },
+
+  analyzeDir: '.nuxt/analyze',
+
   compatibilityDate: '2026-02-01',
 
   vite: {
+    /*
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('/app/assets/2/') && id.endsWith('.json')) {
+              return 'mhst2-data';
+            }
+
+            if (/\/app\/assets\/2\/.*\.(png|svg|webp)$/.test(id)) {
+              return 'mhst2-images';
+            }
+
+            if (id.includes('/app/')) {
+              return 'app';
+            }
+
+            if (
+              id.includes('/node_modules/') &&
+              (id.includes('vue') ||
+                id.includes('nuxt') ||
+                id.includes('ui/') ||
+                id.includes('motion-v/'))
+            ) {
+              return 'ui';
+            }
+          },
+        },
+      },
+    },
+    */
     optimizeDeps: {
       include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string'],
     },
