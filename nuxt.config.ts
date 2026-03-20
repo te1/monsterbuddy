@@ -1,5 +1,3 @@
-console.log('>> NODE_ENV', process.env.NODE_ENV);
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
