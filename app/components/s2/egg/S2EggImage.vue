@@ -19,12 +19,17 @@
     }
   );
 
-  const imageUrl = computed(() => {
-    if (props.genus) {
-      return getEggIconUrlForGenus(props.genus);
-    }
-    return getEggIconUrlForMonster(props.monster);
-  });
+  const imageUrl = shallowRef<string | null>(null);
+
+  async function updateImageUrl() {
+    imageUrl.value = props.genus
+      ? await getEggIconUrlForGenus(props.genus)
+      : await getEggIconUrlForMonster(props.monster);
+  }
+
+  await updateImageUrl();
+
+  watch([() => props.genus, () => props.monster?.slug], updateImageUrl);
 
   const caption = computed(() => {
     if (props.genus) {

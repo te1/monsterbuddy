@@ -14,7 +14,15 @@
     }
   );
 
-  const imageUrl = computed(() => getMonsterIconUrl(props.monster));
+  const imageUrl = shallowRef<string | null>(null);
+
+  async function updateImageUrl() {
+    imageUrl.value = await getMonsterIconUrl(props.monster);
+  }
+
+  await updateImageUrl();
+
+  watch(() => props.monster.slug, updateImageUrl);
 </script>
 
 <template>

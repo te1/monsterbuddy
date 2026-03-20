@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/2/types';
-  import { getMonsterImageUrl } from '~/services/2/assets';
+  import { getMonsterImageUrl, hasMonsterImage } from '~/services/2/assets';
 
   const props = withDefaults(
     defineProps<{
@@ -16,8 +16,16 @@
     }
   );
 
-  const imageUrl = computed(() => getMonsterImageUrl(props.monster));
-  const hasImage = computed(() => !!imageUrl.value);
+  const imageUrl = shallowRef<string | null>(null);
+  const hasImage = computed(() => hasMonsterImage(props.monster));
+
+  async function updateImageUrl() {
+    imageUrl.value = hasImage.value ? await getMonsterImageUrl(props.monster) : null;
+  }
+
+  await updateImageUrl();
+
+  watch(() => props.monster.slug, updateImageUrl);
 </script>
 
 <template>
