@@ -2,14 +2,17 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    'nuxt-og-image',
-    'nuxt-llms',
-    '@nuxtjs/mdc',
     '@nuxt/a11y',
     // '@nuxt/hints',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxtjs/mdc',
     '@pinia/nuxt',
+    'nuxt-site-config',
+    '@nuxtjs/robots',
+    'nuxt-schema-org',
+    'nuxt-og-image',
+    'nuxt-llms',
   ],
 
   telemetry: false,
@@ -69,6 +72,13 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ['app/stores/**'],
+  },
+
+  site: {
+    name: 'Monster Buddy',
+    // TODO description?
+    trailingSlash: false,
+    defaultLocale: 'en',
   },
 
   llms: {

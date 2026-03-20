@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+User-agent: Yandex
+Disallow:
+Clean-param: source filter floor
