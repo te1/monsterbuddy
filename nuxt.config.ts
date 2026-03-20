@@ -91,6 +91,7 @@ export default defineNuxtConfig({
     zeroRuntime: true,
     discoverImages: false,
     discoverVideos: false,
+    xsl: false,
     credits: false,
   },
 
