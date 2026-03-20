@@ -23,6 +23,7 @@
     "@nuxt/ui": "^4.5.1",
     "@nuxtjs/mdc": "0.20.2",
     "@nuxtjs/robots": "5.7.1",
+    "@nuxtjs/sitemap": "7.6.0",
     "@pinia/nuxt": "0.11.3",
     "@vueuse/core": "^14.2.1",
     "es-toolkit": "^1.45.1",

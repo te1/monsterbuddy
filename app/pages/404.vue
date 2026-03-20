@@ -3,6 +3,7 @@
 
   definePageMeta({
     layout: false,
+    robots: 'noindex, follow',
   });
 
   useSeoMeta({

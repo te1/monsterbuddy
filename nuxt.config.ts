@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-site-config',
     '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
     'nuxt-schema-org',
     'nuxt-og-image',
     'nuxt-llms',
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/'],
+      routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
       autoSubfolderIndex: false,
     },
@@ -79,6 +80,14 @@ export default defineNuxtConfig({
     // TODO description?
     trailingSlash: false,
     defaultLocale: 'en',
+  },
+
+  sitemap: {
+    exclude: ['/404'],
+    zeroRuntime: true,
+    discoverImages: false,
+    discoverVideos: false,
+    credits: false,
   },
 
   llms: {
