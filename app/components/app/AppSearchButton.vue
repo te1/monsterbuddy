@@ -91,7 +91,7 @@
     </div>
 
     <template #content>
-      <UCommandPalette
+      <LazyUCommandPalette
         :groups="searchConfig.groups"
         placeholder="Search anything..."
         class="h-[85dvh] lg:h-120"
@@ -111,7 +111,7 @@
             class="size-9"
           />
         </template>
-      </UCommandPalette>
+      </LazyUCommandPalette>
     </template>
   </UModal>
 </template>
