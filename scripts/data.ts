@@ -13,6 +13,7 @@ import { MonsterSchema as S2MonsterSchema } from '~~/data/2/monsters.schema';
 import { RidingActionSchema as S2RidingActionSchema } from '~~/data/2/ridingActions.schema';
 import { MonsterSchema as S3MonsterSchema } from '~~/data/3/monsters.schema';
 import { RegionSchema as S3RegionSchema } from '~~/data/3/regions.schema';
+import { makeSlug } from '~~/app/utils/data';
 
 const generateEggSvgs = false;
 
@@ -86,14 +87,6 @@ function generate() {
 }
 
 // -- common ----------------------------------------------
-
-function makeSlug(text: string) {
-  return text
-    .replace(/( |\/)/g, '-')
-    .replace(/\(|\)/g, '')
-    .replace(/-&/, '')
-    .toLowerCase();
-}
 
 function transformRidingActions(data: unknown) {
   const ridingActions = data as { name: string; slug?: string }[];

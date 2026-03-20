@@ -3,6 +3,7 @@ export function makeSlug(text: string): string {
     .replace(/( |\/)/g, '-')
     .replace(/\(|\)/g, '')
     .replace(/-&/, '')
+    .replace(/-+/g, '-')
     .toLowerCase();
 }
 
