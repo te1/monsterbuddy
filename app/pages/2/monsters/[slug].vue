@@ -46,6 +46,14 @@
     return result;
   });
 
+  useSchemaOrg([
+    defineBreadcrumb([
+      //
+      { name: 'Monsters', url: '/2/monsters' },
+      { name: monster.name },
+    ]),
+  ]);
+
   const history = useHistoryStore();
 
   onMounted(() => {

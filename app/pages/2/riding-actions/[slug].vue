@@ -48,6 +48,14 @@
     return [part1, part2, part3];
   });
 
+  useSchemaOrg([
+    defineBreadcrumb([
+      //
+      { name: 'Riding Actions', url: '/2/riding-actions' },
+      { name: ridingAction.name },
+    ]),
+  ]);
+
   const displays = useRidingActionDisplays();
 
   const eagerCardsCount = 14;

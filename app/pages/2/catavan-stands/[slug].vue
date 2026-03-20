@@ -67,6 +67,14 @@
     return [part1, part2, part3];
   });
 
+  useSchemaOrg([
+    defineBreadcrumb([
+      //
+      { name: 'Catavan Stands', url: '/2/catavan-stands' },
+      { name: catavanStand.name },
+    ]),
+  ]);
+
   const displays = useCatavanStandDisplays();
 
   const fabDisplayVisible = computed(() => displays.all.length > 1);

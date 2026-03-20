@@ -18,6 +18,14 @@
   // TODO drop ?source from canonical url
   const headline = gameTypeToFullName('mhst2');
 
+  useSchemaOrg([
+    defineBreadcrumb([
+      //
+      { name: gameTypeToShortLabel('mhst2'), url: '/2' },
+      { name: 'Monsties' },
+    ]),
+  ]);
+
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();

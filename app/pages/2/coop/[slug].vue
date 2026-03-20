@@ -90,6 +90,14 @@
     return [part1, part2, part3];
   });
 
+  useSchemaOrg([
+    defineBreadcrumb([
+      //
+      { name: 'Co-Op Quests', url: '/2/coop' },
+      { name: coopQuest.name },
+    ]),
+  ]);
+
   const isGrouped = computed(() => coopQuest.type === 'explore');
 
   const displays = useCoopQuestDisplays();

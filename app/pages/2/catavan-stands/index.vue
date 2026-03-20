@@ -13,6 +13,14 @@
   });
   const headline = gameTypeToFullName('mhst2');
 
+  useSchemaOrg([
+    defineBreadcrumb([
+      //
+      { name: gameTypeToShortLabel('mhst2'), url: '/2' },
+      { name: 'Catavan Stands' },
+    ]),
+  ]);
+
   const catavanStands = groupBy(catavanStands_, (catavanStand) => catavanStand.zone);
 </script>
 
