@@ -75,6 +75,6 @@
     {{ typeCaption }}
 
     <AppNuxtLink v-if="hasLink" :to="target" :text="caption" />
-    <span v-else :text="caption" />
+    <span v-else v-text="caption" />
   </div>
 </template>
