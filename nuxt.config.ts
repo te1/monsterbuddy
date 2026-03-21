@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'nuxt-link-checker',
     'nuxt-llms',
+    '@nuxtjs/plausible',
   ],
 
   telemetry: false,
@@ -161,5 +162,9 @@ export default defineNuxtConfig({
         title: 'Essentials',
       },
     ],
+  },
+
+  plausible: {
+    apiHost: 'https://newt.te1.workers.dev',
   },
 });
