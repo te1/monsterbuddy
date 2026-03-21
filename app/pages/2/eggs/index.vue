@@ -16,7 +16,6 @@
     description:
       'Visual guide with images for all egg patterns for every hatchable monstie with search, sorting and filtering',
   });
-  // TODO drop ?source from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([

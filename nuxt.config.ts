@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'nuxt-link-checker',
     'nuxt-llms',
+    'nuxt-seo-utils',
   ],
 
   telemetry: false,
@@ -118,6 +119,10 @@ export default defineNuxtConfig({
     // TODO description?
     trailingSlash: false,
     defaultLocale: 'en',
+  },
+
+  seo: {
+    canonicalQueryWhitelist: [''],
   },
 
   robots: {

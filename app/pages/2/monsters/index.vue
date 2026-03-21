@@ -15,7 +15,6 @@
     description:
       'Quickly check for monster attack patterns, elemental weaknesses and weapon effectiveness on body parts',
   });
-  // TODO drop ?source and ?filter from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([

@@ -15,7 +15,6 @@
     description:
       'Easily find all monsties in their natural habitats and check on retreat conditions, their attack types and stats',
   });
-  // TODO drop ?source from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([

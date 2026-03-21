@@ -13,7 +13,6 @@
     description:
       "Overview of all the high rank monsters and on which floor to find them in the Elder's Lair and Special Elder's Lair end game zones",
   });
-  // TODO drop ?floor from canonical url
   const headline = gameTypeToFullName('mhst2');
 
   useSchemaOrg([
