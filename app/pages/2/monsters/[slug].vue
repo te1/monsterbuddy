@@ -56,16 +56,10 @@
     }),
   ]);
 
-  defineOgImage(
-    'Title',
-    {
-      title: monster.name,
-      description: headline,
-      lines: [monster.genus, monster.hatchable ? 'Monstie' : 'Monster'],
-      game: 'mhst2',
-    },
-    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
-  );
+  defineOgImage('MonsterS2', { monster, description: headline }, [
+    { key: 'og' },
+    { key: 'whatsapp', width: 800, height: 800 },
+  ]);
 
   const history = useHistoryStore();
 
