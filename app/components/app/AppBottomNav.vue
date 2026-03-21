@@ -9,7 +9,8 @@
     return item as NavigationMenuItemWithDropdown;
   }
 
-  const gameType = computed(() => routePathToGameType(useRoute().path));
+  const route = useRoute();
+  const gameType = computed(() => routePathToGameType(route.path));
   const navItems = useBottomNavItems();
 </script>
 

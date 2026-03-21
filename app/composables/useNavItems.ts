@@ -161,6 +161,7 @@ export function useNavItems() {
 }
 
 export function useBottomNavItems() {
+  const route = useRoute();
   const navItems = useNavItems();
 
   return computed(() =>
@@ -184,9 +185,9 @@ export function useBottomNavItems() {
         }
 
         const router = useRouter();
-        const route = router.resolve(item.to);
+        const resolvedRoute = router.resolve(item.to);
 
-        if (route.path === useRoute().path) {
+        if (resolvedRoute.path === route.path) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       };

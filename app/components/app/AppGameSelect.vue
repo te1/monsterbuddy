@@ -4,7 +4,8 @@
 
   const [DefineButtonTemplate, ReuseButtonTemplate] = createReusableTemplate<{ open: boolean }>();
 
-  const gameType = computed(() => routePathToGameType(useRoute().path));
+  const route = useRoute();
+  const gameType = computed(() => routePathToGameType(route.path));
   const label = computed(() => gameTypeToShortLabel(gameType.value));
   const tooltip = computed(() => gameTypeToFullName(gameType.value));
 
