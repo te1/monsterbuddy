@@ -35,9 +35,7 @@
 
   useSeoMeta({
     titleTemplate: `%s - ${title}`,
-    ogSiteName: title,
     description,
-    ogDescription: description,
     twitterCard: 'summary_large_image',
   });
 </script>
