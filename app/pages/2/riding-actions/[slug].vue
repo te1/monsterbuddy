@@ -57,6 +57,22 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: ridingAction.name,
+      description: headline,
+      lines: [
+        'Riding Action',
+        monsters.value.length === 1
+          ? `Learnt By 1 Monstie`
+          : `Learnt By ${monsters.value.length} Monsties`,
+      ],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const displays = useRidingActionDisplays();
 
   const eagerCardsCount = 14;

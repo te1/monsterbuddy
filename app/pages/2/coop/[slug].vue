@@ -100,6 +100,22 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: coopQuest.name,
+      description: headline,
+      lines: [
+        `Co-Op Quest (${formatCoopQuestType(coopQuest.type)})`,
+        coopQuest.type === 'explore' && monsterCount.value > 1
+          ? `${monsterCount.value} Notable Eggs`
+          : '',
+      ],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const isGrouped = computed(() => coopQuest.type === 'explore');
 
   const displays = useCoopQuestDisplays();

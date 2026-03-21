@@ -34,6 +34,8 @@
       .replace('**', '<span class="font-semibold text-sky-500 dark:text-sky-400 mr-2">')
       .replace('**', '</span>');
   }
+
+  const filteredLines = computed(() => props.lines.filter((line) => !!line));
 </script>
 
 <template>
@@ -55,7 +57,7 @@
 
     <ul v-if="lines.length > 0" class="hidden flex-col gap-6 text-5xl text-toned lg:flex">
       <!-- eslint-disable-next-line vue/no-v-html -->
-      <li v-for="line in lines" :key="line" v-html="prettyLine(line)" />
+      <li v-for="line in filteredLines" :key="line" v-html="prettyLine(line)" />
     </ul>
   </div>
 

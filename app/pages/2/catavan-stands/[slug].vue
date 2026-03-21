@@ -76,6 +76,20 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: catavanStand.name,
+      description: headline,
+      lines: [
+        'Catavan Stand',
+        monsters.value.length === 1 ? `One Monster` : `${monsters.value.length} Monsters`,
+      ],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const displays = useCatavanStandDisplays();
 
   const fabDisplayVisible = computed(() => displays.all.length > 1);
