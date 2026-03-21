@@ -136,7 +136,7 @@
     <AppPageHeader :title="catavanStand.name" :headline="headline">
       <template #description>
         {{ descriptionParts[0] }}
-        <AppNuxtLink to="/2/catavan-stands">{{ descriptionParts[1] }}</AppNuxtLink>
+        <AppNuxtLink to="/2/catavan-stands" :text="descriptionParts[1]" />
         {{ descriptionParts[2] }}
       </template>
     </AppPageHeader>

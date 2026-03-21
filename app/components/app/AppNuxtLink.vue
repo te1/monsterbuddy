@@ -1,10 +1,12 @@
 <script lang="ts" setup>
   withDefaults(
     defineProps<{
+      text?: string;
       /** no color */
       plain?: boolean;
     }>(),
     {
+      text: undefined,
       plain: false,
     }
   );
@@ -20,6 +22,7 @@
       { ['text-primary active:opacity-80']: !plain },
     ]"
   >
-    <slot />
+    <template v-if="text">{{ text }}</template>
+    <slot v-else />
   </NuxtLink>
 </template>

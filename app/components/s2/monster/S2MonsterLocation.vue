@@ -18,7 +18,7 @@
         return 'Co-Op Quest:';
 
       case 'subQuest':
-        return 'Subquest: ';
+        return 'Subquest:';
 
       default:
         return undefined;
@@ -74,12 +74,7 @@
   <div>
     {{ typeCaption }}
 
-    <AppNuxtLink v-if="hasLink" :to="target">
-      {{ caption }}
-    </AppNuxtLink>
-
-    <span v-else>
-      {{ caption }}
-    </span>
+    <AppNuxtLink v-if="hasLink" :to="target" :text="caption" />
+    <span v-else :text="caption" />
   </div>
 </template>

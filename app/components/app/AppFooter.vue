@@ -4,15 +4,12 @@
 
 <template>
   <UFooter :ui="{ container: 'py-2', center: 'flex-col gap-2' }">
-    <!-- prettier-ignore -->
-    <div class="text-center text-pretty text-toned dark:text-muted text-sm">
-      <AppNuxtLink to="/" plain>{{ title }}</AppNuxtLink> is a companion app for
-      <span class="whitespace-nowrap">
-        <AppLink href="https://www.capcom.com" plain bare>Capcom</AppLink>'s
-      </span>
-      Monster Hunter Stories games. This project is not affiliated with or endorsed by
-      Capcom or the Monster Hunter brand. All trademarks referenced herein are the
-      properties of their respective owners.
+    <div class="text-center text-sm text-pretty text-toned dark:text-muted">
+      <AppNuxtLink to="/" :text="title" plain /> is a companion app for
+      <AppLink href="https://www.capcom.com" text="Capcom's" plain bare />
+      Monster Hunter Stories games. This project is not affiliated with or endorsed by Capcom or the
+      Monster Hunter brand. All trademarks referenced herein are the properties of their respective
+      owners.
     </div>
 
     <UTooltip :text="`${title} on GitHub`">

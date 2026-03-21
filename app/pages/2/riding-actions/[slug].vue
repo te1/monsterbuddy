@@ -109,7 +109,7 @@
 
         <div class="hidden lg:block">
           {{ descriptionParts[0] }}
-          <AppNuxtLink to="/2/riding-actions">{{ descriptionParts[1] }}</AppNuxtLink>
+          <AppNuxtLink to="/2/riding-actions" :text="descriptionParts[1]" />
           {{ descriptionParts[2] }}
         </div>
       </template>

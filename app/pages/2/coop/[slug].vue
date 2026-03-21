@@ -167,7 +167,7 @@
     <AppPageHeader :title="coopQuest.name" :headline="headline">
       <template #description>
         {{ descriptionParts[0] }}
-        <AppNuxtLink to="/2/coop">{{ descriptionParts[1] }}</AppNuxtLink>
+        <AppNuxtLink to="/2/coop" :text="descriptionParts[1]" />
         {{ descriptionParts[2] }}
       </template>
     </AppPageHeader>
