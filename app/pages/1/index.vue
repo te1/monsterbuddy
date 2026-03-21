@@ -1,10 +1,11 @@
 <script lang="ts" setup>
   const { title } = useAppConfig().seo;
+  const subtitle = `Companion App For ${gameTypeToFullLabel('mhst1')} 1`;
   const headline = gameTypeToFullName('mhst1');
 
   useSeoMeta({
     titleTemplate: '',
-    title: `${title} - Companion App For Monster Hunter Stories 1`,
+    title: `${title} - ${subtitle}`,
     description:
       'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions',
   });
@@ -13,7 +14,7 @@
     'Title',
     {
       title,
-      description: `Companion App For ${gameTypeToFullLabel('mhst1')}`,
+      description: subtitle,
       lines: ['Eggs', 'Monsters', 'Attack Patterns'],
       game: 'mhst1',
     },
