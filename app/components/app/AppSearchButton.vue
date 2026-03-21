@@ -31,7 +31,10 @@
   });
 
   defineShortcuts({
-    meta_k: () => (open.value = !open.value),
+    meta_k: {
+      handler: () => (open.value = !open.value),
+      usingInput: true,
+    },
   });
 
   // restore normal handling of home/end keys in UInput
