@@ -27,6 +27,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: 'All Monsters',
+      description: headline,
+      lines: ['Attack Patterns', 'Locations', 'Weaknesses'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();

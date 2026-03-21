@@ -22,6 +22,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: 'All Catavan Stands',
+      description: headline,
+      lines: ['Fast Travel Locations', 'Monsters'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const catavanStands = groupBy(catavanStands_, (catavanStand) => catavanStand.zone);
 </script>
 

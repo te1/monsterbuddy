@@ -27,6 +27,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: 'All Monsties',
+      description: headline,
+      lines: ['Locations', 'Attack Types', 'Stats'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();

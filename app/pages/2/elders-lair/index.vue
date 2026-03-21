@@ -24,6 +24,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: "Elder's Lair Floors",
+      description: headline,
+      lines: ['High Rank Monsters', 'Attack Patterns'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();

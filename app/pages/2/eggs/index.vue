@@ -28,6 +28,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: 'All Eggs',
+      description: headline,
+      lines: ['Egg Patterns & Colors', 'Locations'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();

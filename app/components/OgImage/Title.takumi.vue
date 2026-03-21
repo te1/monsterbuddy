@@ -38,7 +38,7 @@
 
 <template>
   <div
-    class="flex size-full flex-col justify-between bg-default px-10 py-5 text-default lg:pt-20 lg:pb-10"
+    class="flex size-full flex-col justify-between bg-default px-20 py-30 text-default lg:pt-20 lg:pb-10"
     :style="{
       backgroundImage: 'linear-gradient(to top left, oklch(14.8% 0.004 228.8), transparent)',
     }"
@@ -48,7 +48,7 @@
         {{ title }}
       </h1>
 
-      <p v-if="description" class="text-7xl leading-tight text-primary lg:text-5xl">
+      <p v-if="description" class="hidden text-5xl leading-tight text-primary lg:block">
         {{ description }}
       </p>
     </section>

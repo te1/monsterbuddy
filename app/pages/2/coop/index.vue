@@ -22,6 +22,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: 'All Co-Op Quests',
+      description: headline,
+      lines: ['Dens', 'Eggs', 'Monsters'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const coopQuests = groupBy(coopQuests_, (coopQuest) => coopQuest.type);
 </script>
 

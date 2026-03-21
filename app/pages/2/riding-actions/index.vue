@@ -22,6 +22,17 @@
     }),
   ]);
 
+  defineOgImage(
+    'Title',
+    {
+      title: 'All Riding Actions',
+      description: headline,
+      lines: ['Types', 'Monsties'],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
   const ridingActions = groupBy(sortedRidingActions, (ridingAction) => ridingAction.type);
 </script>
 
