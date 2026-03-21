@@ -18,7 +18,7 @@
   <div>
     <AppPageHeader :title="title" :headline="headline">
       <template #description>
-        <strong>Monster Buddy</strong> is a companion app for
+        <strong class="font-medium">Monster Buddy</strong> is a companion app for
         <AppLink href="https://www.monsterhunter.com/stories2" text="Monster Hunter Stories 2" />
         that can help you learn or remember information useful during combat and general gameplay.
         It's not a complete guide, walkthrough or advanced character / gene planner (yet).

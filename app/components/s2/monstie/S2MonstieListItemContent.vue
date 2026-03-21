@@ -96,7 +96,7 @@
 
       <div v-if="showRarity">
         Rarity
-        <span class="font-bold" v-text="monster.rarity" />
+        <strong class="font-bold" v-text="monster.rarity" />
       </div>
     </template>
 
@@ -124,17 +124,17 @@
     <div v-if="showStats">
       <div v-if="hasStats">
         HP
-        <span
+        <strong
           class="font-bold"
           :class="getStatClass('base.maxHp')"
           v-text="monster?.monstie?.stats?.base?.maxHp"
         />, Speed
-        <span
+        <strong
           class="font-bold"
           :class="getStatClass('base.speed')"
           v-text="monster?.monstie?.stats?.base?.speed"
         />, Crit
-        <span
+        <strong
           class="font-bold"
           :class="getStatClass('base.critRate')"
           v-text="monster?.monstie?.stats?.base?.critRate"
@@ -143,7 +143,7 @@
 
       <div v-if="monster?.monstie?.stats?.bestAttack">
         Attack
-        <span
+        <strong
           class="font-bold"
           :class="getStatClass('bestAttack.value')"
           v-text="monster.monstie.stats.bestAttack.value"
@@ -152,7 +152,7 @@
 
       <div v-if="defense">
         Defense
-        <span
+        <strong
           class="font-bold"
           :class="getStatClass('bestDefense.value', 'otherDefense.value', 'worstDefense.value')"
           v-text="defense"
