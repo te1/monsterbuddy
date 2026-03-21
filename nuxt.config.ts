@@ -9,13 +9,13 @@ export default defineNuxtConfig({
     '@nuxtjs/mdc',
     '@pinia/nuxt',
     'nuxt-site-config',
+    'nuxt-seo-utils',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     'nuxt-og-image',
     'nuxt-link-checker',
     'nuxt-llms',
-    'nuxt-seo-utils',
   ],
 
   telemetry: false,
@@ -136,6 +136,13 @@ export default defineNuxtConfig({
     discoverVideos: false,
     xsl: false,
     credits: false,
+  },
+
+  ogImage: {
+    zeroRuntime: true,
+    buildCache: {
+      base: 'node_modules/.cache/nuxt/nuxt-seo/og-image/',
+    },
   },
 
   llms: {

@@ -8,6 +8,17 @@
     description:
       'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions',
   });
+
+  defineOgImage(
+    'Title',
+    {
+      title,
+      description: `Companion App For ${gameTypeToFullLabel('mhst1')}`,
+      lines: ['Eggs', 'Monsters', 'Attack Patterns'],
+      game: 'mhst1',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
 </script>
 
 <template>

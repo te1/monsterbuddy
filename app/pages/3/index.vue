@@ -7,6 +7,17 @@
     title: `${title} - Companion App For ${gameTypeToFullLabel('mhst3')}`,
     description: 'Includes monster attack types and weaknesses, egg patterns and monstie locations',
   });
+
+  defineOgImage(
+    'Title',
+    {
+      title,
+      description: `Companion App For ${gameTypeToFullLabel('mhst3')}`,
+      lines: ['Eggs', 'Monsters', 'Attack Patterns'],
+      game: 'mhst3',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
 </script>
 
 <template>

@@ -9,9 +9,18 @@
     titleTemplate: '',
     title: `${title} - Companion App For Monster Hunter Stories`,
     description,
-    ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png', // TODO
-    twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png', // TODO
   });
+
+  defineOgImage(
+    'Title',
+    {
+      title,
+      description: 'Companion App For Monster Hunter Stories',
+      lines: ['Eggs, Monsters, Attack Patterns', `**NEW** ${gameTypeToShortName('mhst3')}`],
+      game: 'mhst2',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
 </script>
 
 <template>
