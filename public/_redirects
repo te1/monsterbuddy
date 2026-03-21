@@ -1,12 +1,8 @@
-/monsters/:name/ /2/monsters/:name 301
-/monsters/:name /2/monsters/:name 301
 /monsters/filter/ /2/monsters 301
 /monsters/filter /2/monsters 301
 /monsters/ /2/monsters 301
 /monsters /2/monsters 301
 
-/monsties/:name/ /2/monsters/:name 301
-/monsties/:name /2/monsters/:name 301
 /monsties/filter/ /2/monsters 301
 /monsties/filter /2/monsters 301
 /monsties/ /2/monsties 301
@@ -23,8 +19,6 @@
 /catavan-stands/lamure-tower---3f /2/catavan-stands/lamure-tower-3f 301
 /catavan-stands/lamure-tower---5f/ /2/catavan-stands/lamure-tower-5f 301
 /catavan-stands/lamure-tower---5f /2/catavan-stands/lamure-tower-5f 301
-/catavan-stands/:name/ /2/catavan-stands/:name 301
-/catavan-stands/:name /2/catavan-stands/:name 301
 /catavan-stands/ /2/catavan-stands 301
 /catavan-stands /2/catavan-stands 301
 
@@ -33,12 +27,23 @@
 /elders-lair/ /2/elders-lair 301
 /elders-lair /2/elders-lair 301
 
-/coop/:name/ /2/coop/:name 301
-/coop/:name /2/coop/:name 301
 /coop/ /2/coop 301
 /coop /2/coop 301
 
-/riding-actions/:name/ /2/riding-actions/:name 301
-/riding-actions/:name /2/riding-actions/:name 301
 /riding-actions/ /2/riding-actions 301
 /riding-actions /2/riding-actions 301
+
+/monsters/:name/ /2/monsters/:name 301
+/monsters/:name /2/monsters/:name 301
+
+/monsties/:name/ /2/monsters/:name 301
+/monsties/:name /2/monsters/:name 301
+
+/catavan-stands/:name/ /2/catavan-stands/:name 301
+/catavan-stands/:name /2/catavan-stands/:name 301
+
+/coop/:name/ /2/coop/:name 301
+/coop/:name /2/coop/:name 301
+
+/riding-actions/:name/ /2/riding-actions/:name 301
+/riding-actions/:name /2/riding-actions/:name 301
