@@ -64,10 +64,18 @@
     },
   });
 
-  if (route.query.floor) {
-    eldersLairFilter.eldersLairFilter = (route.query.floor as string).toUpperCase();
+  const initialFloor = import.meta.client
+    ? new URL(window.location.href).searchParams.get('floor')
+    : typeof route.query.floor === 'string'
+      ? route.query.floor
+      : undefined;
 
-    router.replace(route.path); // remove query parameters from URL
+  if (initialFloor) {
+    eldersLairFilter.eldersLairFilter = initialFloor.toUpperCase();
+
+    if (import.meta.client) {
+      router.replace(route.path); // remove query parameters from URL
+    }
   } else {
     eldersLairFilter.eldersLairFilter = undefined;
   }
