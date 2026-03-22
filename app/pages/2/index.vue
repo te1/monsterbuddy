@@ -35,26 +35,7 @@
 
     <UPageBody class="flex flex-col gap-8">
       <section class="mt-4 -mb-4 flex flex-col items-center">
-        <div class="relative inline-block h-[200px] w-[180px]">
-          <AttackTypeIcon class="absolute top-0 right-0 left-0 mx-auto size-[70px]" type="power" />
-          <AttackTypeIcon class="absolute bottom-[25px] left-0 size-[70px]" type="speed" />
-          <AttackTypeIcon
-            class="absolute right-0 bottom-[25px] h-[75px] w-[70px]"
-            type="technical"
-          />
-          <UIcon
-            class="dark:text-cool-400 absolute top-[45px] right-[10px] size-12! rotate-85 text-dimmed"
-            name="ph:share-fat-fill"
-          />
-          <UIcon
-            class="dark:text-cool-400 absolute top-[45px] left-[10px] size-12! rotate-330 text-dimmed"
-            name="ph:share-fat-fill"
-          />
-          <UIcon
-            class="dark:text-cool-400 absolute right-0 bottom-0 left-0 mx-auto size-12! rotate-215 text-dimmed"
-            name="ph:share-fat-fill"
-          />
-        </div>
+        <AppTrinity />
       </section>
 
       <UAlert color="neutral" variant="soft-bg">
@@ -167,7 +148,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/p8h25d/all_high_rank_monsters_in_each_zone_of_the_elder"
-                text="All High Rank Monsters in each Zone of the Elder Lair"
+                text="All High Rank Monsters in Elder's Lair"
               />
               by
               <AppLink href="https://www.reddit.com/user/PetePeterson53" text="PetePeterson53" />
@@ -202,7 +183,7 @@
                 href="https://docs.google.com/spreadsheets/d/1O1SZ_p9EFBmu7O9WbmvHISE82ZqVHWWV95vHRHZ3r1M"
                 text="All-in-one spreadsheet"
               />
-              All-in-one spreadsheet by
+              by
               <AppLink href="https://www.reddit.com/user/aericee" text="Riikapii" />
             </ProseLi>
 
