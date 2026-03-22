@@ -175,7 +175,7 @@
 
           <ProseUl>
             <ProseLi>
-              <AppLink href="https://game.capcom.com/manual/MHST2/" text="Official Web Manual" />
+              <AppLink href="https://game.capcom.com/manual/MHST2" text="Official Web Manual" />
             </ProseLi>
 
             <ProseLi>

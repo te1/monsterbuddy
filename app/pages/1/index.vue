@@ -39,6 +39,13 @@
         <AppTrinity />
       </section>
 
+      <UAlert color="neutral" variant="soft-bg">
+        <template #description>
+          Looking for the classic version of Monster Buddy? It's still available at
+          <AppLink href="https://mhst1.monsterbuddy.app" text="mhst1.monsterbuddy.app" />
+        </template>
+      </UAlert>
+
       <section>
         <ProseH3>Spoiler Warning</ProseH3>
 
@@ -96,7 +103,7 @@
           <ProseH3>Sources for data and images</ProseH3>
 
           <ProseUl>
-            <ProseLi>In-game field guide</ProseLi>
+            <ProseLi>In-game Monsterpedia</ProseLi>
 
             <ProseLi>
               <AppLink
@@ -155,7 +162,7 @@
           <ProseUl>
             <ProseLi>
               <AppLink
-                href="https://game.capcom.com/manual/MHST_Multi/"
+                href="https://game.capcom.com/manual/MHST_Multi"
                 text="Official Web Manual"
               />
             </ProseLi>
