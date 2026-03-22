@@ -21,6 +21,7 @@ export type MonsterRelation = z.infer<typeof MonsterRelationSchema>;
 export const LocationTypeSchema = z.enum([
   //
   'primary',
+  'secondary',
   'den',
   'towerOfIllusion',
   'subQuest',
