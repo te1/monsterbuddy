@@ -144,8 +144,7 @@
 
             <ProseLi>
               <AppLink href="https://mhst.kiranico.com/mhs2" text="MHStories 2" />
-              by
-              <AppLink href="https://twitter.com/kiranico_db" text="Kiranico" />
+              by Kiranico
             </ProseLi>
 
             <ProseLi>
@@ -163,15 +162,6 @@
               />
               by
               <AppLink href="https://www.reddit.com/user/RPGwannabe" text="RPGwannabe" />
-            </ProseLi>
-
-            <ProseLi>
-              <AppLink
-                href="https://docs.google.com/spreadsheets/d/1h4BMaeHa89KFgxHoCNxbhH2BLYj5kUjl88uwZ7BQr4o"
-                text="MH Stories 2: Attack Types, Weakness &amp; Eggs"
-              />
-              by
-              <AppLink href="https://www.reddit.com/user/Criwok" text="Criwok" />
             </ProseLi>
 
             <ProseLi>
