@@ -4,43 +4,67 @@
     sortOrder: 10,
   },
   {
-    name: 'Darj Snowfields',
+    name: 'Mt. Pondry Caves',
     sortOrder: 20,
   },
   {
-    name: 'Perennial Pass',
+    name: 'Whistill Forest',
     sortOrder: 30,
   },
   {
-    name: 'Monsonne Plains',
+    name: 'Darj Snowfields',
     sortOrder: 40,
   },
   {
-    name: 'Babada Rainforest',
+    name: 'Wintertide Tunnel',
     sortOrder: 50,
   },
   {
-    name: 'Trese Desert',
+    name: 'Perennial Pass',
     sortOrder: 60,
   },
   {
-    name: 'Dovan Volcano',
+    name: 'Monsonne Plains',
     sortOrder: 70,
   },
   {
-    name: 'Paupau Beach',
+    name: 'Babada Rainforest',
     sortOrder: 80,
   },
   {
-    name: 'Mt. Celion',
+    name: 'Trese Desert',
     sortOrder: 90,
   },
   {
-    name: 'Tower of Illusion',
+    name: 'Dovan Volcano',
     sortOrder: 100,
   },
   {
+    name: 'Dovan Mines',
+    sortOrder: 110,
+  },
+  {
+    name: 'Aowa Valley',
+    sortOrder: 120,
+  },
+  {
+    name: 'Paupau Beach',
+    sortOrder: 130,
+  },
+  {
+    name: 'Mt. Celion',
+    sortOrder: 140,
+  },
+  {
+    name: 'Ruins of Zalam',
+    sortOrder: 150,
+  },
+  {
+    name: 'Tower of Illusion',
+    sortOrder: 160,
+  },
+  {
     name: 'Unknown Habitat',
-    sortOrder: 1000,
+    sortOrder: -1,
   },
 ]

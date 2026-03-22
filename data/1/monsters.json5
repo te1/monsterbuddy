@@ -51,6 +51,7 @@
     name: 'Velociprey',
     genus: 'Bird Wyvern',
     habitat: 'Pondry Hills',
+    locations: [{ type: 'secondary', main: 'Mt. Pondry Caves' }],
     rarity: null,
     description: 'Carnivorous monsters with vivid blue scales. They hunt in packs using a deadly mix of strength and cunning.',
     monster: {
@@ -63,7 +64,8 @@
     no: 3,
     name: 'Konchu (Yellow)',
     genus: 'Neopteron',
-    habitat: null,
+    habitat: 'Mt. Pondry Caves',
+    locations: [{ type: 'primary', main: 'Mt. Pondry Caves' }],
     rarity: null,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being sandy yellow.',
     related: [
@@ -80,6 +82,11 @@
     name: 'Kelbi',
     genus: 'Herbivore',
     habitat: 'Pondry Hills',
+    locations: [
+      { type: 'primary', main: 'Pondry Hills' },
+      { type: 'secondary', main: 'Perennial Pass' },
+      { type: 'secondary', main: 'Whistill Forest' },
+    ],
     rarity: null,
     description: 'Diminutive herbivorous monsters known for their kind nature. Their horns are said to be rich in nutrients.',
   },
@@ -88,8 +95,12 @@
     name: 'Hermitaur',
     genus: 'Carapaceon',
     habitat: 'Pondry Hills',
+    locations: [
+      { type: 'primary', main: 'Pondry Hills' },
+      { type: 'secondary', main: 'Whistill Forest' },
+      { type: 'towerOfIllusion', main: '13F' },
+    ],
     rarity: null,
-    locations: [{ type: 'towerOfIllusion', main: '13F' }],
     description: 'Small hard-shelled Carapaceons. Their brains are regarded as a delicacy in some regions.',
     monster: {
       tendency: 'technical',
@@ -102,8 +113,13 @@
     no: 6,
     name: 'Bullfango',
     genus: 'Fanged Beast',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '7F' }],
+    habitat: 'Whistill Forest',
+    locations: [
+      { type: 'primary', main: 'Whistill Forest' },
+      { type: 'secondary', main: 'Darj Snowfields' },
+      { type: 'secondary', main: 'Wintertide Tunnel' },
+      { type: 'towerOfIllusion', main: '7F' },
+    ],
     rarity: null,
     description: 'Small, aggressive Fanged Beasts that attack humans on sight. An acquired taste, but the meat is in demand.',
     monster: {
@@ -119,6 +135,7 @@
     habitat: 'Pondry Hills',
     locations: [
       { type: 'primary', main: 'Pondry Hills', rank: 'low' },
+      { type: 'secondary', main: 'Mt. Pondry Caves' },
       { type: 'subQuest', main: '★1 Blue Enemy of Love!' },
       { type: 'towerOfIllusion', main: '4F' },
     ],
@@ -166,6 +183,7 @@
     habitat: 'Pondry Hills',
     locations: [
       { type: 'primary', main: 'Pondry Hills', rank: 'low' },
+      { type: 'secondary', main: 'Whistill Forest' },
       { type: 'subQuest', main: '★1 The Honey Guard' },
       { type: 'towerOfIllusion', main: '6F' },
     ],
@@ -356,6 +374,10 @@
     name: 'Zamite',
     genus: 'Amphibian',
     habitat: 'Darj Snowfields',
+    locations: [
+      { type: 'primary', main: 'Darj Snowfields' },
+      { type: 'secondary', main: 'Wintertide Tunnel' },
+    ],
     rarity: null,
     description: 'A young Zamtrios. Uses its sharp teeth to bore into its prey before devouring it from the inside out.',
     monster: {
@@ -369,8 +391,11 @@
     no: 13,
     name: 'Bnahabra (Green)',
     genus: 'Neopteron',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '11F' }],
+    habitat: 'Wintertide Tunnel',
+    locations: [
+      { type: 'primary', main: 'Wintertide Tunnel' },
+      { type: 'towerOfIllusion', main: '11F' },
+    ],
     rarity: null,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a hardy green.',
     related: [
@@ -387,8 +412,12 @@
     no: 14,
     name: 'Konchu (Blue)',
     genus: 'Neopteron',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '14F' }],
+    habitat: 'Wintertide Tunnel',
+    locations: [
+      { type: 'primary', main: 'Wintertide Tunnel' },
+      { type: 'secondary', main: 'Darj Snowfields' },
+      { type: 'towerOfIllusion', main: '14F' },
+    ],
     rarity: null,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being an icy blue.',
     related: [
@@ -409,6 +438,7 @@
     habitat: 'Darj Snowfields',
     locations: [
       { type: 'primary', main: 'Darj Snowfields', rank: 'low' },
+      { type: 'secondary', main: 'Wintertide Tunnel' },
       { type: 'subQuest', main: '★2 Enchanting Ice Show' },
     ],
     rarity: 2,
@@ -456,6 +486,8 @@
     habitat: 'Darj Snowfields',
     locations: [
       { type: 'primary', main: 'Darj Snowfields', rank: 'low' },
+      { type: 'secondary', main: 'Wintertide Tunnel' },
+      { type: 'secondary', main: 'Dovan Volcano' },
       { type: 'subQuest', main: '★2 Bulldrome? RUN!' },
       { type: 'towerOfIllusion', main: '7F' },
     ],
@@ -548,9 +580,10 @@
     no: 18,
     name: 'Khezu',
     genus: 'Flying Wyvern',
-    habitat: 'Darj Snowfields',
+    habitat: 'Wintertide Tunnel',
     locations: [
-      { type: 'primary', main: 'Darj Snowfields', rank: 'low' },
+      { type: 'primary', main: 'Wintertide Tunnel' },
+      { type: 'secondary', main: 'Darj Snowfields', rank: 'low' },
       { type: 'subQuest', main: '★2 A Fascinating Khezu' },
       { type: 'towerOfIllusion', main: '32F' },
     ],
@@ -597,9 +630,10 @@
     no: 19,
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
-    habitat: 'Darj Snowfields',
+    habitat: 'Wintertide Tunnel',
     locations: [
-      { type: 'primary', main: 'Darj Snowfields', rank: 'low' },
+      { type: 'primary', main: 'Wintertide Tunnel' },
+      { type: 'secondary', main: 'Darj Snowfields', rank: 'low' },
       { type: 'towerOfIllusion', main: '37F' },
     ],
     rarity: 3,
@@ -647,6 +681,8 @@
     genus: 'Lynian',
     habitat: null,
     locations: [
+      { type: 'secondary', main: 'Dovan Volcano' },
+      { type: 'secondary', main: 'Paupau Beach' },
       { type: 'towerOfIllusion', main: '5F' },
       { type: 'towerOfIllusion', main: '15F' },
       { type: 'towerOfIllusion', main: '25F' },
@@ -670,6 +706,7 @@
     locations: [
       { type: 'primary', main: 'Monsonne Plains', rank: 'low' },
       { type: 'den', main: 'Perennial Pass', rank: 'low' },
+      { type: 'secondary', main: 'Trese Desert' },
       { type: 'towerOfIllusion', main: '2F' },
     ],
     rarity: 2,
@@ -714,7 +751,11 @@
     name: 'Genprey',
     genus: 'Bird Wyvern',
     habitat: 'Monsonne Plains',
-    locations: [{ type: 'towerOfIllusion', main: '3F' }],
+    locations: [
+      { type: 'primary', main: 'Monsonne Plains' },
+      { type: 'secondary', main: 'Trese Desert' },
+      { type: 'towerOfIllusion', main: '3F' },
+    ],
     rarity: null,
     description: 'Green-and-orange Bird Wyverns that hunt in packs. They make good use of their paralyzing venom.',
     monster: {
@@ -729,7 +770,10 @@
     name: 'Ludroth',
     genus: 'Leviathan',
     habitat: 'Monsonne Plains',
-    locations: [{ type: 'towerOfIllusion', main: '13F' }],
+    locations: [
+      { type: 'primary', main: 'Monsonne Plains' },
+      { type: 'towerOfIllusion', main: '13F' },
+    ],
     rarity: null,
     description: 'Aquatic female monsters. They form harems around large males, aggressively attacking interlopers.',
     monster: {
@@ -744,6 +788,7 @@
     name: 'Altaroth',
     genus: 'Neopteron',
     habitat: 'Monsonne Plains',
+    locations: [{ type: 'primary', main: 'Monsonne Plains' }],
     rarity: null,
     description: 'Neopterons found in many habitats. They forage for fruit, mushrooms, and honey to take back to their nests.',
     monster: {
@@ -754,7 +799,8 @@
     no: 25,
     name: 'Slagtoth (Green)',
     genus: 'Herbivore',
-    habitat: null,
+    habitat: 'Babda Rainforest',
+    locations: [{ type: 'primary', main: 'Babda Rainforest' }],
     rarity: null,
     description: 'A green variety of Slagtoth. They store nutrients in the thick layers of skin that hang from their bodies.',
     related: [{ type: 'color', monster: 'Slagtoth (Brown)' }],
@@ -768,8 +814,11 @@
     no: 26,
     name: 'Vespoid',
     genus: 'Neopteron',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '12F' }],
+    habitat: 'Babda Rainforest',
+    locations: [
+      { type: 'primary', main: 'Babda Rainforest' },
+      { type: 'towerOfIllusion', main: '12F' },
+    ],
     rarity: null,
     description: 'Giant Wasp-like Neopterons with paralyzing stingers, which they use on any who stray too close.',
     monster: {
@@ -784,6 +833,7 @@
     name: 'Bnahabra (Brown)',
     genus: 'Neopteron',
     habitat: 'Trese Desert',
+    locations: [{ type: 'primary', main: 'Trese Desert' }],
     rarity: null,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a sturdy brown.',
     related: [
@@ -801,7 +851,10 @@
     name: 'Cephalos',
     genus: 'Piscine Wyvern',
     habitat: 'Trese Desert',
-    locations: [{ type: 'towerOfIllusion', main: '12F' }],
+    locations: [
+      { type: 'primary', main: 'Trese Desert' },
+      { type: 'towerOfIllusion', main: '12F' },
+    ],
     rarity: null,
     description: 'Piscine Wyverns with acute hearing. They swim freely in the desert sands that their scales so resemble.',
     monster: {
@@ -1118,7 +1171,7 @@
     habitat: 'Monsonne Plains',
     locations: [
       { type: 'primary', main: 'Monsonne Plains', rank: 'low' },
-      { type: 'primary', main: 'Perennial Pass', rank: 'low' },
+      { type: 'secondary', main: 'Perennial Pass', rank: 'low' },
       { type: 'den', main: 'Trese Desert', rank: 'low' },
       { type: 'subQuest', main: "★3 The Queen's Day Out" },
     ],
@@ -1170,8 +1223,8 @@
     genus: 'Flying Wyvern',
     habitat: 'Perennial Pass',
     locations: [
-      { type: 'primary', main: 'Monsonne Plains', rank: 'low' },
-      { type: 'den', main: 'Perennial Pass', rank: 'low' },
+      { type: 'primary', main: 'Perennial Pass' },
+      { type: 'secondary', main: 'Monsonne Plains', rank: 'low' },
       { type: 'towerOfIllusion', main: '34F' },
     ],
     rarity: 4,
@@ -1222,6 +1275,7 @@
     genus: 'Carapaceon',
     habitat: 'Trese Desert',
     locations: [
+      { type: 'primary', main: 'Trese Desert' },
       { type: 'subQuest', main: '★3 The Sturdy Shield' },
       { type: 'towerOfIllusion', main: '13F' },
     ],
@@ -1240,7 +1294,10 @@
     name: 'Plum Daimyo Hermitaur',
     genus: 'Carapaceon',
     habitat: 'Monsonne Plains',
-    locations: [{ type: 'towerOfIllusion', main: '43F' }],
+    locations: [
+      { type: 'primary', main: 'Monsonne Plains' },
+      { type: 'towerOfIllusion', main: '43F' },
+    ],
     rarity: null,
     description: 'Armored Carapaceons that approach their prey with blinding speed and strike using their powerful claws.',
     related: [{ type: 'subspeciesOf', monster: 'Daimyo Hermitaur' }],
@@ -1532,6 +1589,7 @@
     name: 'Slagtoth (Brown)',
     genus: 'Herbivore',
     habitat: 'Dovan Volcano',
+    locations: [{ type: 'primary', main: 'Dovan Volcano' }],
     rarity: null,
     description: 'A brown variety of Slagtoth. They store nutrients in the thick layers of skin that hang from their bodies.',
     related: [{ type: 'color', monster: 'Slagtoth (Green)' }],
@@ -1546,7 +1604,10 @@
     name: 'Bnahabra (Red)',
     genus: 'Neopteron',
     habitat: 'Dovan Volcano',
-    locations: [{ type: 'towerOfIllusion', main: '11F' }],
+    locations: [
+      { type: 'primary', main: 'Dovan Volcano' },
+      { type: 'towerOfIllusion', main: '11F' },
+    ],
     rarity: null,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a lively red.',
     related: [
@@ -1564,7 +1625,10 @@
     name: 'Konchu (Red)',
     genus: 'Neopteron',
     habitat: 'Dovan Volcano',
-    locations: [{ type: 'towerOfIllusion', main: '14F' }],
+    locations: [
+      { type: 'primary', main: 'Dovan Volcano' },
+      { type: 'towerOfIllusion', main: '14F' },
+    ],
     rarity: null,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being a rusty red.',
     related: [
@@ -1583,7 +1647,10 @@
     name: 'Ioprey',
     genus: 'Bird Wyvern',
     habitat: 'Dovan Volcano',
-    locations: [{ type: 'towerOfIllusion', main: '3F' }],
+    locations: [
+      { type: 'primary', main: 'Dovan Volcano' },
+      { type: 'towerOfIllusion', main: '3F' },
+    ],
     rarity: null,
     description: 'Red-scaled Bird Wyverns that attack by excreting venom from their throat sacs which they spit at foes.',
     monster: {
@@ -1596,7 +1663,10 @@
     name: 'Uroktor',
     genus: 'Leviathan',
     habitat: 'Dovan Volcano',
-    locations: [{ type: 'towerOfIllusion', main: '17F' }],
+    locations: [
+      { type: 'primary', main: 'Dovan Volcano' },
+      { type: 'towerOfIllusion', main: '17F' },
+    ],
     rarity: null,
     description: 'Young Leviathans dwelling in volcanoes. Scavengers by nature, they feed off the scraps left behind by others.',
     related: [{ type: 'ex', monster: 'Uroktor EX' }],
@@ -1611,9 +1681,11 @@
     no: 50,
     name: 'Iodrome',
     genus: 'Bird Wyvern',
-    habitat: 'Dovan Volcano',
+    habitat: 'Dovan Mines',
     locations: [
-      { type: 'primary', main: 'Dovan Volcano', rank: 'low' },
+      { type: 'primary', main: 'Dovan Mines', rank: 'low' },
+      { type: 'secondary', main: 'Dovan Volcano' },
+      { type: 'secondary', main: 'Whistill Forest' },
       { type: 'subQuest', main: '★4 Poisonous Probing' },
       { type: 'towerOfIllusion', main: '18F' },
     ],
@@ -1658,9 +1730,9 @@
     no: 51,
     name: 'Basarios',
     genus: 'Flying Wyvern',
-    habitat: 'Dovan Volcano',
+    habitat: 'Dovan Mines',
     locations: [
-      { type: 'primary', main: 'Dovan Volcano', rank: 'low' },
+      { type: 'primary', main: 'Dovan Mines', rank: 'low' },
       { type: 'subQuest', main: '★4 Watch Out for Rocks!' },
       { type: 'towerOfIllusion', main: '14F' },
     ],
@@ -1711,7 +1783,7 @@
     locations: [
       { type: 'primary', main: 'Dovan Volcano', rank: 'low' },
       {
-        type: 'primary',
+        type: 'secondary',
         main: 'Babda Rainforest',
         sub: 'Peculiar Den',
         rank: 'low',
@@ -1730,6 +1802,7 @@
         lateGame: true,
         lateGameHint: 'After going to the Peculiar Den in Babda Rainforest',
       },
+      { type: 'secondary', main: 'Dovan Volcano' },
       { type: 'subQuest', main: '★4 Forged by Volcano' },
       { type: 'towerOfIllusion', main: '42F' },
     ],
@@ -1878,6 +1951,7 @@
     genus: 'Leviathan',
     habitat: 'Dovan Volcano',
     locations: [
+      { type: 'primary', main: 'Dovan Volcano' },
       { type: 'subQuest', main: '★4 Lava Dragon?!?!?!' },
       { type: 'towerOfIllusion', main: '24F' },
     ],
@@ -1961,7 +2035,8 @@
     no: 60,
     name: 'Gargwa',
     genus: 'Bird Wyvern',
-    habitat: null,
+    habitat: 'Aowa Valley',
+    locations: [{ type: 'primary', main: 'Aowa Valley' }],
     rarity: null,
     description: 'Placid Bird Wyverns raised as livestock. Their vestigial wings make them flightless.',
   },
@@ -1969,8 +2044,12 @@
     no: 61,
     name: 'Bnahabra (Blue)',
     genus: 'Neopteron',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '11F' }],
+    habitat: 'Aowa Valley',
+    locations: [
+      { type: 'primary', main: 'Aowa Valley' },
+      { type: 'secondary', main: 'Mt. Pondry Caves' },
+      { type: 'towerOfIllusion', main: '11F' },
+    ],
     rarity: null,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a deep blue.',
     related: [
@@ -1987,8 +2066,12 @@
     no: 62,
     name: 'Jaggi',
     genus: 'Bird Wyvern',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '8F' }],
+    habitat: 'Aowa Valley',
+    locations: [
+      { type: 'primary', main: 'Aowa Valley' },
+      { type: 'secondary', main: 'Paupau Beach' },
+      { type: 'towerOfIllusion', main: '8F' },
+    ],
     rarity: null,
     description: 'Carnivorous Bird Wyverns. They hunt in packs, and the young males are typically smaller than the females.',
     monster: {
@@ -2001,8 +2084,12 @@
     no: 63,
     name: 'Jaggia',
     genus: 'Bird Wyvern',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '8F' }],
+    habitat: 'Aowa Valley',
+    locations: [
+      { type: 'primary', main: 'Aowa Valley' },
+      { type: 'secondary', main: 'Paupau Beach' },
+      { type: 'towerOfIllusion', main: '8F' },
+    ],
     rarity: null,
     description: 'Female Jaggi that live in packs, generally responsible for protecting the nest and raising the young.',
     monster: {
@@ -2015,7 +2102,8 @@
     no: 64,
     name: 'Conga',
     genus: 'Fanged Beast',
-    habitat: null,
+    habitat: 'Babda Rainforest',
+    locations: [{ type: 'primary', main: 'Babda Rainforest' }],
     rarity: null,
     description: 'Pink furred Fanged Beasts. They prefer to live in small, close-knit groups than large troops.',
     monster: {
@@ -2028,7 +2116,8 @@
     no: 65,
     name: 'Konchu (Green)',
     genus: 'Neopteron',
-    habitat: null,
+    habitat: 'Babda Rainforest',
+    locations: [{ type: 'primary', main: 'Babda Rainforest' }],
     rarity: null,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being verdant green.',
     related: [
@@ -2044,7 +2133,8 @@
     no: 66,
     name: 'Great Thunderbug',
     genus: 'Neopteron',
-    habitat: null,
+    habitat: 'Babda Rainforest',
+    locations: [{ type: 'primary', main: 'Babda Rainforest' }],
     rarity: null,
     description: 'Gigantic Thunderbugs that are raised in the bellies of Elder Dragons. Electrifyingly lethal.',
     monster: {
@@ -2057,8 +2147,11 @@
     no: 67,
     name: 'Shakalaka',
     genus: 'Lynian',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '21F' }],
+    habitat: 'Mt. Pondry Caves',
+    locations: [
+      { type: 'primary', main: 'Mt. Pondry Caves' },
+      { type: 'towerOfIllusion', main: '21F' },
+    ],
     rarity: null,
     description: 'Lynians never seen without their masks. Specializing in camouflage, even spotting one is no easy task.',
     monster: {
@@ -2074,6 +2167,7 @@
     habitat: 'Paupau Beach',
     locations: [
       { type: 'primary', main: 'Paupau Beach', rank: 'low' },
+      { type: 'secondary', main: 'Aowa Valley' },
       { type: 'subQuest', main: '★5 Flotsam Great Jaggi' },
       { type: 'towerOfIllusion', main: '8F' },
     ],
@@ -2121,6 +2215,7 @@
     habitat: 'Paupau Beach',
     locations: [
       { type: 'primary', main: 'Paupau Beach', rank: 'low' },
+      { type: 'secondary', main: 'Aowa Valley' },
       { type: 'subQuest', main: '★5 Beware, Prankster!' },
       { type: 'towerOfIllusion', main: '43F' },
     ],
@@ -2170,6 +2265,7 @@
     habitat: 'Paupau Beach',
     locations: [
       { type: 'primary', main: 'Paupau Beach', rank: 'low' },
+      { type: 'secondary', main: 'Aowa Valley' },
       { type: 'towerOfIllusion', main: '18F' },
     ],
     rarity: 4,
@@ -2218,6 +2314,7 @@
     habitat: 'Paupau Beach',
     locations: [
       { type: 'primary', main: 'Paupau Beach', rank: 'low' },
+      { type: 'secondary', main: 'Aowa Valley' },
       { type: 'subQuest', main: '★5 Sandy Yian Garuga!' },
       { type: 'towerOfIllusion', main: '23F' },
     ],
@@ -2602,11 +2699,11 @@
     no: 77,
     name: 'Ruby Basarios',
     genus: 'Flying Wyvern',
-    habitat: 'Pondry Hills',
+    habitat: 'Mt. Pondry Caves',
     locations: [
       {
         type: 'primary',
-        main: 'Pondry Hills',
+        main: 'Mt. Pondry Caves',
         rank: 'low',
         lateGame: true,
         lateGameHint: 'After cleansing the Kinship Ore in Mt. Pondry Cave Depths',
@@ -2656,11 +2753,11 @@
     no: 78,
     name: 'Nargacuga',
     genus: 'Flying Wyvern',
-    habitat: 'Pondry Hills',
+    habitat: 'Mt. Pondry Caves',
     locations: [
       {
         type: 'primary',
-        main: 'Pondry Hills',
+        main: 'Mt. Pondry Caves',
         rank: 'low',
         lateGame: true,
         lateGameHint: 'After cleansing the Kinship Ore in Mt. Pondry Cave Depths',
@@ -2977,10 +3074,11 @@
     no: 84,
     name: 'Ash Kecha Wacha',
     genus: 'Fanged Beast',
-    habitat: 'Paupau Beach',
+    habitat: 'Aowa Valley',
     locations: [
+      { type: 'primary', main: 'Aowa Valley' },
       {
-        type: 'primary',
+        type: 'secondary',
         main: 'Paupau Beach',
         rank: 'low',
         lateGame: true,
@@ -3143,6 +3241,8 @@
     habitat: 'Mt. Celion',
     locations: [
       { type: 'primary', main: 'Mt. Celion', rank: 'low' },
+      { type: 'secondary', main: 'Whistill Forest' },
+      { type: 'secondary', main: 'Ruins of Zalam' },
       { type: 'towerOfIllusion', main: '48F' },
     ],
     rarity: 8,
@@ -3188,7 +3288,10 @@
     name: 'Baggi',
     genus: 'Bird Wyvern',
     habitat: 'Mt. Celion',
-    locations: [{ type: 'towerOfIllusion', main: '3F' }],
+    locations: [
+      { type: 'primary', main: 'Mt. Celion' },
+      { type: 'towerOfIllusion', main: '3F' },
+    ],
     rarity: null,
     description: 'Intelligent Bird Wyverns that hunt in packs, and use special bodily fluids to tranquilize their prey.',
     monster: {
@@ -3201,7 +3304,11 @@
     no: 89,
     name: 'Great Dracophage Bug',
     genus: 'Neopteron',
-    habitat: null,
+    habitat: 'Ruins of Zalam',
+    locations: [
+      { type: 'primary', main: 'Ruins of Zalam' },
+      { type: 'secondary', main: 'Mt. Celion' },
+    ],
     rarity: null,
     description: 'Large Dracophage Bugs. Dragon Element energy is said to lie dormant within their bodies.',
     monster: {
@@ -3214,8 +3321,11 @@
     no: 90,
     name: 'Remobra',
     genus: 'Snake Wyvern',
-    habitat: null,
-    locations: [{ type: 'towerOfIllusion', main: '18F' }],
+    habitat: 'Ruins of Zalam',
+    locations: [
+      { type: 'primary', main: 'Ruins of Zalam' },
+      { type: 'towerOfIllusion', main: '18F' },
+    ],
     rarity: null,
     description: 'Snake Wyverns that have mastered flight, and which soar in search of weakened prey to swoop upon.',
     monster: {
@@ -3232,6 +3342,7 @@
     habitat: 'Mt. Celion',
     locations: [
       { type: 'primary', main: 'Mt. Celion', rank: 'low' },
+      { type: 'secondary', main: 'Ruins of Zalam' },
       { type: 'subQuest', main: '★6 Tranquilizing Terror' },
     ],
     rarity: 2,
@@ -3276,8 +3387,11 @@
     no: 92,
     name: 'Jade Barroth',
     genus: 'Brute Wyvern',
-    habitat: 'Mt. Celion',
-    locations: [{ type: 'primary', main: 'Mt. Celion', rank: 'low' }],
+    habitat: 'Ruins of Zalam',
+    locations: [
+      { type: 'primary', main: 'Ruins of Zalam' },
+      { type: 'secondary', main: 'Mt. Celion', rank: 'low' },
+    ],
     rarity: 4,
     description: 'A subspecies of Barroth. Often seen in polar regions, bashing their crowns against the ice.',
     related: [{ type: 'subspeciesOf', monster: 'Barroth' }],
@@ -3325,11 +3439,12 @@
     locations: [
       { type: 'primary', main: 'Mt. Celion', rank: 'low' },
       {
-        type: 'primary',
+        type: 'secondary',
         main: 'Darj Snowfields',
         rank: 'low',
         lateGame: true,
       },
+      { type: 'secondary', main: 'Ruins of Zalam' },
       { type: 'subQuest', main: '★6 Freezing Fangs' },
       { type: 'towerOfIllusion', main: '46F' },
     ],
@@ -3431,7 +3546,10 @@
     name: 'Glacial Agnaktor',
     genus: 'Leviathan',
     habitat: 'Mt. Celion',
-    locations: [{ type: 'towerOfIllusion', main: '46F' }],
+    locations: [
+      { type: 'primary', main: 'Mt. Celion' },
+      { type: 'towerOfIllusion', main: '46F' },
+    ],
     rarity: null,
     description: 'A subspecies of Agnaktor. With its tough scales, even the tundra presents no obstacle to their movement.',
     related: [
@@ -3449,9 +3567,10 @@
     no: 96,
     name: 'Stygian Zinogre',
     genus: 'Fanged Wyvern',
-    habitat: 'Mt. Celion',
+    habitat: 'Ruins of Zalam',
     locations: [
-      { type: 'primary', main: 'Mt. Celion', rank: 'low' },
+      { type: 'primary', main: 'Ruins of Zalam' },
+      { type: 'secondary', main: 'Mt. Celion', rank: 'low' },
       { type: 'towerOfIllusion', main: '48F' },
     ],
     rarity: 7,
@@ -3497,9 +3616,10 @@
     no: 97,
     name: 'Brachydios',
     genus: 'Brute Wyvern',
-    habitat: 'Mt. Celion',
+    habitat: 'Ruins of Zalam',
     locations: [
-      { type: 'primary', main: 'Mt. Celion', rank: 'low' },
+      { type: 'primary', main: 'Ruins of Zalam' },
+      { type: 'secondary', main: 'Mt. Celion', rank: 'low' },
       { type: 'subQuest', main: '★6 Test of Strength!' },
       { type: 'towerOfIllusion', main: '47F' },
     ],
@@ -3545,9 +3665,10 @@
     no: 98,
     name: 'Rajang',
     genus: 'Fanged Beast',
-    habitat: 'Mt. Celion',
+    habitat: 'Ruins of Zalam',
     locations: [
-      { type: 'primary', main: 'Mt. Celion', rank: 'high' },
+      { type: 'primary', main: 'Ruins of Zalam' },
+      { type: 'secondary', main: 'Mt. Celion', rank: 'high' },
       { type: 'den', main: 'Perennial Pass', rank: 'high' },
       { type: 'subQuest', main: '★6 Destruction Daemon' },
       { type: 'towerOfIllusion', main: '49F' },
@@ -3593,6 +3714,7 @@
     locations: [
       { type: 'primary', main: 'Perennial Pass', rank: 'high' },
       { type: 'den', main: 'Monsonne Plains', rank: 'high' },
+      { type: 'secondary', main: 'Babda Rainforest' },
       { type: 'subQuest', main: '★7 Thunder Visions' },
       { type: 'towerOfIllusion', main: '39F' },
     ],
@@ -3640,6 +3762,7 @@
     name: 'Versa Pietru',
     genus: 'Elder Dragon',
     habitat: null,
+    locations: [{ type: 'secondary', main: 'Mt. Celion' }],
     rarity: null,
     description: 'Legendary White Dragon. Lights up the skies, pierces through darkness; the very embodiment of hope.',
   },
@@ -3759,7 +3882,8 @@
         sub: '19F',
         rank: 'high',
       },
-      { type: 'primary', main: 'Trese Desert', rank: 'high' },
+      { type: 'secondary', main: 'Trese Desert', rank: 'high' },
+      { type: 'secondary', main: 'Monsonne Plains' },
       { type: 'towerOfIllusion', main: '19F' },
       { type: 'towerOfIllusion', main: '50F' },
     ],
@@ -3814,7 +3938,7 @@
         rank: 'high',
       },
       {
-        type: 'primary',
+        type: 'secondary',
         main: 'Pondry Hills',
         rank: 'high',
         subQuest: true,
@@ -3910,6 +4034,7 @@
     name: 'Fatalis',
     genus: 'Elder Dragon',
     habitat: null,
+    locations: [{ type: 'secondary', main: 'Dovan Volcano' }],
     rarity: null,
     description: 'Legendary black dragon shrouded in mystery. Many sought to challenge it, few lived to tell the tale...',
   },
@@ -3951,7 +4076,10 @@
     name: 'White Monoblos',
     genus: 'Flying Wyvern',
     habitat: 'Trese Desert',
-    locations: [{ type: 'subQuest', main: '★7 One-horned Menace' }],
+    locations: [
+      { type: 'primary', main: 'Trese Desert' },
+      { type: 'subQuest', main: '★7 One-horned Menace' },
+    ],
     rarity: 7,
     description: 'Fiercer than its cousins, this white subspecies should be approached with the utmost caution.',
     related: [{ type: 'subspeciesOf', monster: 'Monoblos' }],
@@ -3992,7 +4120,10 @@
     name: 'Molten Tigrex',
     genus: 'Flying Wyvern',
     habitat: 'Dovan Volcano',
-    locations: [{ type: 'subQuest', main: '★7 Earth-Rending Roar' }],
+    locations: [
+      { type: 'primary', main: 'Dovan Volcano' },
+      { type: 'subQuest', main: '★7 Earth-Rending Roar' },
+    ],
     rarity: 9,
     description: 'A rare Tigrex subspecies. Its existence is unconfirmed due to a lack of reliable, and living, eye-witness accounts.',
     related: [
@@ -4038,8 +4169,9 @@
     genus: 'Elder Dragon',
     habitat: 'Darj Snowfields',
     locations: [
-      { type: 'subQuest', main: '★7 Snowfield Phantom' },
+      { type: 'primary', main: 'Darj Snowfields' },
       { type: 'den', main: 'Mt. Celion', rank: 'high' },
+      { type: 'subQuest', main: '★7 Snowfield Phantom' },
     ],
     rarity: 8,
     description: 'Mythical beasts that few have encountered. It is said that temperatures around them plummet below zero.',
