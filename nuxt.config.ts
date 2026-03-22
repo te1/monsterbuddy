@@ -165,6 +165,6 @@ export default defineNuxtConfig({
   },
 
   plausible: {
-    apiHost: 'https://newt.te1.workers.dev',
+    apiHost: 'https://newt.te1.workers.dev', // TODO /
   },
 });
