@@ -52,7 +52,7 @@
     genus: 'Bird Wyvern',
     habitat: 'Pondry Hills',
     locations: [{ type: 'secondary', main: 'Mt. Pondry Caves' }],
-    rarity: null,
+    rarity: 1,
     description: 'Carnivorous monsters with vivid blue scales. They hunt in packs using a deadly mix of strength and cunning.',
     monster: {
       tendency: 'speed',
@@ -66,7 +66,7 @@
     genus: 'Neopteron',
     habitat: 'Mt. Pondry Caves',
     locations: [{ type: 'primary', main: 'Mt. Pondry Caves' }],
-    rarity: null,
+    rarity: 1,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being sandy yellow.',
     related: [
       { type: 'color', monster: 'Konchu (Blue)' },
@@ -87,7 +87,7 @@
       { type: 'secondary', main: 'Perennial Pass' },
       { type: 'secondary', main: 'Whistill Forest' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Diminutive herbivorous monsters known for their kind nature. Their horns are said to be rich in nutrients.',
   },
   {
@@ -100,7 +100,7 @@
       { type: 'secondary', main: 'Whistill Forest' },
       { type: 'towerOfIllusion', main: '13F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Small hard-shelled Carapaceons. Their brains are regarded as a delicacy in some regions.',
     monster: {
       tendency: 'technical',
@@ -120,7 +120,7 @@
       { type: 'secondary', main: 'Wintertide Tunnel' },
       { type: 'towerOfIllusion', main: '7F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Small, aggressive Fanged Beasts that attack humans on sight. An acquired taste, but the meat is in demand.',
     monster: {
       tendency: 'power',
@@ -378,7 +378,7 @@
       { type: 'primary', main: 'Darj Snowfields' },
       { type: 'secondary', main: 'Wintertide Tunnel' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'A young Zamtrios. Uses its sharp teeth to bore into its prey before devouring it from the inside out.',
     monster: {
       tendency: 'technical',
@@ -396,7 +396,7 @@
       { type: 'primary', main: 'Wintertide Tunnel' },
       { type: 'towerOfIllusion', main: '11F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a hardy green.',
     related: [
       { type: 'color', monster: 'Bnahabra (Brown)' },
@@ -418,7 +418,7 @@
       { type: 'secondary', main: 'Darj Snowfields' },
       { type: 'towerOfIllusion', main: '14F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being an icy blue.',
     related: [
       { type: 'color', monster: 'Konchu (Yellow)' },
@@ -689,7 +689,7 @@
       { type: 'towerOfIllusion', main: '35F' },
       { type: 'towerOfIllusion', main: '45F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Trapped in barrels and unable to free themselves, these Felynes await rescue.',
     monster: {
       tendency: 'power',
@@ -756,7 +756,7 @@
       { type: 'secondary', main: 'Trese Desert' },
       { type: 'towerOfIllusion', main: '3F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Green-and-orange Bird Wyverns that hunt in packs. They make good use of their paralyzing venom.',
     monster: {
       tendency: 'speed',
@@ -774,7 +774,7 @@
       { type: 'primary', main: 'Monsonne Plains' },
       { type: 'towerOfIllusion', main: '13F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Aquatic female monsters. They form harems around large males, aggressively attacking interlopers.',
     monster: {
       tendency: 'power',
@@ -789,7 +789,7 @@
     genus: 'Neopteron',
     habitat: 'Monsonne Plains',
     locations: [{ type: 'primary', main: 'Monsonne Plains' }],
-    rarity: null,
+    rarity: 1,
     description: 'Neopterons found in many habitats. They forage for fruit, mushrooms, and honey to take back to their nests.',
     monster: {
       tendency: 'technical',
@@ -801,7 +801,7 @@
     genus: 'Herbivore',
     habitat: 'Babda Rainforest',
     locations: [{ type: 'primary', main: 'Babda Rainforest' }],
-    rarity: null,
+    rarity: 1,
     description: 'A green variety of Slagtoth. They store nutrients in the thick layers of skin that hang from their bodies.',
     related: [{ type: 'color', monster: 'Slagtoth (Brown)' }],
     monster: {
@@ -819,7 +819,7 @@
       { type: 'primary', main: 'Babda Rainforest' },
       { type: 'towerOfIllusion', main: '12F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Giant Wasp-like Neopterons with paralyzing stingers, which they use on any who stray too close.',
     monster: {
       tendency: 'technical',
@@ -834,7 +834,7 @@
     genus: 'Neopteron',
     habitat: 'Trese Desert',
     locations: [{ type: 'primary', main: 'Trese Desert' }],
-    rarity: null,
+    rarity: 1,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a sturdy brown.',
     related: [
       { type: 'color', monster: 'Bnahabra (Green)' },
@@ -855,7 +855,7 @@
       { type: 'primary', main: 'Trese Desert' },
       { type: 'towerOfIllusion', main: '12F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Piscine Wyverns with acute hearing. They swim freely in the desert sands that their scales so resemble.',
     monster: {
       tendency: 'speed',
@@ -1279,7 +1279,7 @@
       { type: 'subQuest', main: '★3 The Sturdy Shield' },
       { type: 'towerOfIllusion', main: '13F' },
     ],
-    rarity: null,
+    rarity: 3,
     description: 'These armored Carapaceons use their hardened pincers like shields to fend off the attacks of their enemies.',
     related: [{ type: 'subspecies', monster: 'Plum Daimyo Hermitaur' }],
     monster: {
@@ -1298,7 +1298,7 @@
       { type: 'primary', main: 'Monsonne Plains' },
       { type: 'towerOfIllusion', main: '43F' },
     ],
-    rarity: null,
+    rarity: 4,
     description: 'Armored Carapaceons that approach their prey with blinding speed and strike using their powerful claws.',
     related: [{ type: 'subspeciesOf', monster: 'Daimyo Hermitaur' }],
     monster: {
@@ -1574,7 +1574,7 @@
     name: 'Barroth EX',
     genus: 'Brute Wyvern',
     habitat: null,
-    rarity: null,
+    rarity: 4,
     description: 'Enhanced Barroth controlled by modified Kinship Stones. Implanted Flame Sacs allow them to breathe fire.',
     related: [{ type: 'exOf', monster: 'Barroth' }],
     monster: {
@@ -1590,7 +1590,7 @@
     genus: 'Herbivore',
     habitat: 'Dovan Volcano',
     locations: [{ type: 'primary', main: 'Dovan Volcano' }],
-    rarity: null,
+    rarity: 2,
     description: 'A brown variety of Slagtoth. They store nutrients in the thick layers of skin that hang from their bodies.',
     related: [{ type: 'color', monster: 'Slagtoth (Green)' }],
     monster: {
@@ -1608,7 +1608,7 @@
       { type: 'primary', main: 'Dovan Volcano' },
       { type: 'towerOfIllusion', main: '11F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a lively red.',
     related: [
       { type: 'color', monster: 'Bnahabra (Green)' },
@@ -1629,7 +1629,7 @@
       { type: 'primary', main: 'Dovan Volcano' },
       { type: 'towerOfIllusion', main: '14F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being a rusty red.',
     related: [
       { type: 'color', monster: 'Konchu (Yellow)' },
@@ -1651,7 +1651,7 @@
       { type: 'primary', main: 'Dovan Volcano' },
       { type: 'towerOfIllusion', main: '3F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Red-scaled Bird Wyverns that attack by excreting venom from their throat sacs which they spit at foes.',
     monster: {
       tendency: 'speed',
@@ -1667,7 +1667,7 @@
       { type: 'primary', main: 'Dovan Volcano' },
       { type: 'towerOfIllusion', main: '17F' },
     ],
-    rarity: null,
+    rarity: 2,
     description: 'Young Leviathans dwelling in volcanoes. Scavengers by nature, they feed off the scraps left behind by others.',
     related: [{ type: 'ex', monster: 'Uroktor EX' }],
     monster: {
@@ -1955,7 +1955,7 @@
       { type: 'subQuest', main: '★4 Lava Dragon?!?!?!' },
       { type: 'towerOfIllusion', main: '24F' },
     ],
-    rarity: null,
+    rarity: 5,
     description: 'Agnaktor use their tough beaks and powerful muscles to burrow into rock, moving freely through the earth.',
     related: [
       { type: 'subspecies', monster: 'Glacial Agnaktor' },
@@ -1973,7 +1973,7 @@
     name: 'Aptonoth EX',
     genus: 'Herbivore',
     habitat: null,
-    rarity: null,
+    rarity: 2,
     description: 'An artificially enhanced Aptonoth controlled by modified Kinship Stones. Armor-clad, fire-breathing.',
     related: [{ type: 'exOf', monster: 'Aptonoth' }],
     monster: {
@@ -1988,7 +1988,7 @@
     name: 'Uroktor EX',
     genus: 'Leviathan',
     habitat: null,
-    rarity: null,
+    rarity: 3,
     description: 'An artificially enhanced Uroktor controlled by modified Kinship Stones. Paralyzingly venomous.',
     related: [{ type: 'exOf', monster: 'Uroktor' }],
     monster: {
@@ -2003,7 +2003,7 @@
     name: 'Uragaan EX',
     genus: 'Brute Wyvern',
     habitat: null,
-    rarity: null,
+    rarity: 5,
     description: 'An artificially enhanced Uragaan controlled by modified Kinship Stones. Aggressively electrifying.',
     related: [{ type: 'ex', monster: 'Uragaan' }],
     monster: {
@@ -2018,7 +2018,7 @@
     name: 'Agnaktor EX',
     genus: 'Leviathan',
     habitat: null,
-    rarity: null,
+    rarity: 6,
     description: 'An artificially enhanced Agnaktor controlled by modified Kinship Stones. Draconically destructive.',
     related: [
       { type: 'exOf', monster: 'Agnaktor' },
@@ -2037,7 +2037,7 @@
     genus: 'Bird Wyvern',
     habitat: 'Aowa Valley',
     locations: [{ type: 'primary', main: 'Aowa Valley' }],
-    rarity: null,
+    rarity: 1,
     description: 'Placid Bird Wyverns raised as livestock. Their vestigial wings make them flightless.',
   },
   {
@@ -2050,7 +2050,7 @@
       { type: 'secondary', main: 'Mt. Pondry Caves' },
       { type: 'towerOfIllusion', main: '11F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Versatile Neopterons whose coloration and abilities differ according to habitat. This one is a deep blue.',
     related: [
       { type: 'color', monster: 'Bnahabra (Green)' },
@@ -2072,7 +2072,7 @@
       { type: 'secondary', main: 'Paupau Beach' },
       { type: 'towerOfIllusion', main: '8F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Carnivorous Bird Wyverns. They hunt in packs, and the young males are typically smaller than the females.',
     monster: {
       tendency: 'speed',
@@ -2090,7 +2090,7 @@
       { type: 'secondary', main: 'Paupau Beach' },
       { type: 'towerOfIllusion', main: '8F' },
     ],
-    rarity: null,
+    rarity: 2,
     description: 'Female Jaggi that live in packs, generally responsible for protecting the nest and raising the young.',
     monster: {
       tendency: 'power',
@@ -2104,7 +2104,7 @@
     genus: 'Fanged Beast',
     habitat: 'Babda Rainforest',
     locations: [{ type: 'primary', main: 'Babda Rainforest' }],
-    rarity: null,
+    rarity: 2,
     description: 'Pink furred Fanged Beasts. They prefer to live in small, close-knit groups than large troops.',
     monster: {
       tendency: 'power',
@@ -2118,7 +2118,7 @@
     genus: 'Neopteron',
     habitat: 'Babda Rainforest',
     locations: [{ type: 'primary', main: 'Babda Rainforest' }],
-    rarity: null,
+    rarity: 1,
     description: 'Neopterons that roam in search of food. Coloration varies based on habitat, this variety being verdant green.',
     related: [
       { type: 'color', monster: 'Konchu (Yellow)' },
@@ -2135,7 +2135,7 @@
     genus: 'Neopteron',
     habitat: 'Babda Rainforest',
     locations: [{ type: 'primary', main: 'Babda Rainforest' }],
-    rarity: null,
+    rarity: 2,
     description: 'Gigantic Thunderbugs that are raised in the bellies of Elder Dragons. Electrifyingly lethal.',
     monster: {
       tendency: 'speed',
@@ -2152,7 +2152,7 @@
       { type: 'primary', main: 'Mt. Pondry Caves' },
       { type: 'towerOfIllusion', main: '21F' },
     ],
-    rarity: null,
+    rarity: 3,
     description: 'Lynians never seen without their masks. Specializing in camouflage, even spotting one is no easy task.',
     monster: {
       tendency: 'technical',
@@ -2989,7 +2989,7 @@
     name: 'Tigrex EX',
     genus: 'Flying Wyvern',
     habitat: null,
-    rarity: null,
+    rarity: 4,
     description: 'Enhanced Tigrex controlled by modified Kinship Stones. Granted untold power by the Black Blight.',
     related: [
       { type: 'exOf', monster: 'Tigrex' },
@@ -3292,7 +3292,7 @@
       { type: 'primary', main: 'Mt. Celion' },
       { type: 'towerOfIllusion', main: '3F' },
     ],
-    rarity: null,
+    rarity: 1,
     description: 'Intelligent Bird Wyverns that hunt in packs, and use special bodily fluids to tranquilize their prey.',
     monster: {
       tendency: 'speed',
@@ -3309,7 +3309,7 @@
       { type: 'primary', main: 'Ruins of Zalam' },
       { type: 'secondary', main: 'Mt. Celion' },
     ],
-    rarity: null,
+    rarity: 2,
     description: 'Large Dracophage Bugs. Dragon Element energy is said to lie dormant within their bodies.',
     monster: {
       tendency: 'speed',
@@ -3326,7 +3326,7 @@
       { type: 'primary', main: 'Ruins of Zalam' },
       { type: 'towerOfIllusion', main: '18F' },
     ],
-    rarity: null,
+    rarity: 3,
     description: 'Snake Wyverns that have mastered flight, and which soar in search of weakened prey to swoop upon.',
     monster: {
       tendency: 'technical',
@@ -3550,7 +3550,7 @@
       { type: 'primary', main: 'Mt. Celion' },
       { type: 'towerOfIllusion', main: '46F' },
     ],
-    rarity: null,
+    rarity: 5,
     description: 'A subspecies of Agnaktor. With its tough scales, even the tundra presents no obstacle to their movement.',
     related: [
       { type: 'subspeciesOf', monster: 'Agnaktor' },
@@ -3763,7 +3763,7 @@
     genus: 'Elder Dragon',
     habitat: null,
     locations: [{ type: 'secondary', main: 'Mt. Celion' }],
-    rarity: null,
+    rarity: 9,
     description: 'Legendary White Dragon. Lights up the skies, pierces through darkness; the very embodiment of hope.',
   },
   {
@@ -3771,7 +3771,7 @@
     name: 'Makili Pietru',
     genus: 'Elder Dragon',
     habitat: null,
-    rarity: null,
+    rarity: 9,
     description: 'Legendary black dragon. Darkens the skies, swallows up light; the very embodiment of despair.',
   },
   {
