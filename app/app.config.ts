@@ -212,6 +212,6 @@ export default defineAppConfig({
   seo: {
     title: 'Monster Buddy',
     description:
-      'Includes monster attack types and weaknesses, egg patterns, monstie locations and retreat conditions', // TODO mention all 3 games
+      'Monster attack types and weaknesses, egg patterns and monstie locations for all three games',
   },
 });

@@ -22,9 +22,7 @@
   useSeoMeta({
     titleTemplate: `%s - ${title}`,
     title: 'Error',
-    ogSiteName: title,
     description,
-    ogDescription: description,
     twitterCard: 'summary_large_image',
   });
 </script>

@@ -117,7 +117,6 @@ export default defineNuxtConfig({
 
   site: {
     name: 'Monster Buddy',
-    // TODO description?
     trailingSlash: false,
     defaultLocale: 'en',
   },
