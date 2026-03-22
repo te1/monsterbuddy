@@ -39,7 +39,11 @@
 
       <UAlert color="neutral" variant="soft-bg">
         <template #description>
-          The site is still a work in progress and new data is added regularly.
+          The site is still a work in progress and new data is added regularly. Feel free to
+          <AppLink
+            href="https://github.com/te1/monsterbuddy/discussions/categories/data"
+            text="submit missing information or share corrections"
+          />
         </template>
       </UAlert>
 
@@ -124,6 +128,14 @@
 
             <ProseLi>
               <AppLink href="https://www.youtube.com/@RageGamingVideos" text="RageGamingVideos" />
+              on YouTube
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.youtube.com/watch?v=txLzHs-ajEg"
+                text="Advanced Monstie Guide"
+              />
               on YouTube
             </ProseLi>
 
