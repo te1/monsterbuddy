@@ -165,6 +165,7 @@ export default defineNuxtConfig({
   },
 
   plausible: {
+    enabled: process.env.PLAUSIBLE === 'true',
     apiHost: 'https://newt.te1.workers.dev', // TODO /
   },
 });
