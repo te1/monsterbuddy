@@ -4,19 +4,16 @@
   const props = withDefaults(
     defineProps<{
       type?: AttackType;
-      monster?: GenericMonster;
       noTooltip?: boolean;
     }>(),
     {
       type: undefined,
-      monster: undefined,
       noTooltip: false,
     }
   );
 
-  const resolvedType = computed(() => props.type ?? props.monster?.monstie?.attackType);
-  const caption = computed(() => formatAttackType(resolvedType.value));
-  const imageUrl = computed(() => getAttackTypeIconUrl(resolvedType.value));
+  const caption = computed(() => formatAttackType(props.type));
+  const imageUrl = computed(() => getAttackTypeIconUrl(props.type));
 </script>
 
 <template>

@@ -2,7 +2,6 @@
   const props = withDefaults(
     defineProps<{
       type?: AttackType;
-      monster?: GenericMonster;
     }>(),
     {
       type: undefined,
@@ -10,16 +9,15 @@
     }
   );
 
-  const resolvedType = computed(() => props.type ?? props.monster?.monstie?.attackType);
-  const caption = computed(() => formatAttackType(resolvedType.value));
+  const caption = computed(() => formatAttackType(props.type));
 </script>
 
 <template>
   <span
     :class="{
-      'text-power': resolvedType === 'power',
-      'text-speed': resolvedType === 'speed',
-      'text-technical': resolvedType === 'technical',
+      'text-power': type === 'power',
+      'text-speed': type === 'speed',
+      'text-technical': type === 'technical',
     }"
     class="dark:brightness-150"
     v-text="caption"

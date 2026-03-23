@@ -70,12 +70,7 @@ export function gameTypeToFullName(gameType: GameType): string {
   }
 }
 
-export function formatAttackType(attackTypeOrMonster?: AttackType | GenericMonster): string {
-  const attackType =
-    typeof attackTypeOrMonster === 'string'
-      ? attackTypeOrMonster
-      : attackTypeOrMonster?.monstie?.attackType;
-
+export function formatAttackType(attackType?: AttackType): string {
   switch (attackType) {
     case 'power':
       return 'Power';

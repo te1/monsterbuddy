@@ -23,7 +23,7 @@
       <S2MonsterIcon :monster="monster" :eager="eager" noTooltip />
 
       <div class="flex items-center gap-1">
-        <AttackTypeIcon class="size-8" :monster="monster" noTooltip />
+        <AttackTypeIcon class="size-8" :type="monster?.monstie?.attackType" noTooltip />
 
         <ElementIcon class="size-8" :element="monster?.monstie?.attackElement" noTooltip />
       </div>

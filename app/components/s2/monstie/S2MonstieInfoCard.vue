@@ -37,8 +37,8 @@
       <div class="flex items-center">
         <span class="w-40">Attack Type</span>
 
-        <AttackTypeIcon class="mr-1.5 size-8" :monster="monster" />
-        <AttackTypeLabel class="font-medium" :monster="monster" />
+        <AttackTypeIcon class="mr-1.5 size-8" :type="monster?.monstie?.attackType" />
+        <AttackTypeLabel class="font-medium" :type="monster?.monstie?.attackType" />
       </div>
 
       <div class="flex items-center">
