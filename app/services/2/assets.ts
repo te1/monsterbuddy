@@ -1,4 +1,5 @@
 import type { Monster } from './types';
+import { loadAsset } from '../assets';
 
 const monsterImages = import.meta.glob<string>('~/assets/2/monster/*.webp', {
   import: 'default',
@@ -6,16 +7,6 @@ const monsterImages = import.meta.glob<string>('~/assets/2/monster/*.webp', {
 
 function getMonsterImageKey(monster: Monster) {
   return `/assets/2/monster/${monster.name}.webp`;
-}
-
-async function loadAsset<T extends string>(
-  assets: Record<string, () => Promise<T>>,
-  key: string,
-  fallbackKey?: string
-) {
-  const loader = assets[key] ?? (fallbackKey ? assets[fallbackKey] : undefined);
-
-  return loader ? await loader() : null;
 }
 
 export function hasMonsterImage(monster: Monster) {
@@ -43,11 +34,7 @@ const eggIcons = import.meta.glob<string>('~/assets/2/egg/*.svg', {
 });
 
 export async function getEggIconUrlForGenus(genus: GenusType) {
-  return await loadAsset(
-    eggIcons,
-    `/assets/2/egg/_${genus}.svg`,
-    '/assets/2/egg/_Unknown.svg'
-  );
+  return await loadAsset(eggIcons, `/assets/2/egg/_${genus}.svg`, '/assets/2/egg/_Unknown.svg');
 }
 
 export async function getEggIconUrlForMonster(monster?: Monster) {

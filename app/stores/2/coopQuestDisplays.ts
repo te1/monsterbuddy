@@ -1,6 +1,6 @@
 import type { CoopQuestType } from '~~/data/2/coopQuests.schema';
 import type { Display } from '~/components/s2/monster/S2MonsterSmartListItem.vue';
-import { makeDisplaysStore } from './baseDisplays';
+import { makeDisplaysStore } from '../baseDisplays';
 
 const useCoopQuestDisplays = makeDisplaysStore<Display, { type: CoopQuestType }>(
   's2/coopQuestDisplays',

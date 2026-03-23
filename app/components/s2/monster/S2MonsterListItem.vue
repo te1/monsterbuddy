@@ -106,7 +106,7 @@
     </div>
 
     <S2MonsterImage
-      class="size-full overflow-hidden object-contain p-2"
+      class="size-full max-h-[122px] overflow-hidden object-contain p-2"
       style="flex-basis: 250px"
       :monster="monster"
       :eager="eager"

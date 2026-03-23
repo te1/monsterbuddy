@@ -1,3 +1,13 @@
+export async function loadAsset<T extends string>(
+  assets: Record<string, () => Promise<T>>,
+  key: string,
+  fallbackKey?: string
+) {
+  const loader = assets[key] ?? (fallbackKey ? assets[fallbackKey] : undefined);
+
+  return loader ? await loader() : null;
+}
+
 const attackTypeIcons = import.meta.glob<string>('~/assets/icon/type-*.svg', {
   eager: true,
   import: 'default',

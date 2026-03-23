@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { DisplaysStore } from '~/stores/2/baseDisplays';
+  import type { DisplaysStore } from '~/stores/baseDisplays';
   import type { FilterStore, Mode, Modes, SortKey } from '~/stores/2/baseMonsterFilter';
   import type { SourcesStore } from '~/stores/2/baseMonsterSources';
 

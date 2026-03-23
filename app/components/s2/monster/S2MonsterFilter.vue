@@ -2,7 +2,7 @@
   import type { EggColor } from '~/services/2/types';
   import type { FilterKey, FilterStore, Mode } from '~/stores/2/baseMonsterFilter';
   import type { SourcesStore } from '~/stores/2/baseMonsterSources';
-  import type { DisplaysStore } from '~/stores/2/baseDisplays';
+  import type { DisplaysStore } from '~/stores/baseDisplays';
   import { allElements } from '~/services/2/data';
 
   const props = withDefaults(
