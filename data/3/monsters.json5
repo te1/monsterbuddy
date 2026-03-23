@@ -175,6 +175,7 @@
   {
     name: 'Fulgur Anjanath',
     genus: 'Brute Wyvern',
+    tags: ['subspecies'],
     related: [{ type: 'subspeciesOf', monster: 'Anjanath' }],
     rank: 5,
     element: 'thunder',
@@ -329,7 +330,7 @@
   {
     name: 'Boltreaver Astalos',
     genus: 'Flying Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [{ type: 'deviantOf', monster: 'Astalos' }],
     rank: 7,
     element: 'thunder',
@@ -375,7 +376,7 @@
   {
     name: 'Sand Barioth',
     genus: 'Flying Wyvern',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [{ type: 'subspeciesOf', monster: 'Barioth' }],
     rank: 5,
     element: 'none',
@@ -428,6 +429,7 @@
   {
     name: 'Jade Barroth',
     genus: 'Brute Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Barroth' },
       { type: 'feral', monster: 'Feral Barroth' },
@@ -510,6 +512,7 @@
   {
     name: 'Blood Orange Bishaten',
     genus: 'Fanged Beast',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Bishaten' },
       { type: 'feral', monster: 'Feral Bishaten' },
@@ -915,6 +918,7 @@
   {
     name: 'Black Diablos',
     genus: 'Flying Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Diablos' },
       { type: 'deviant', monster: 'Bloodbath Diablos' },
@@ -946,7 +950,7 @@
   {
     name: 'Bloodbath Diablos',
     genus: 'Flying Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Diablos' },
       { type: 'subspecies', monster: 'Black Diablos' },
@@ -1109,7 +1113,7 @@
   {
     name: 'Hellblade Glavenus',
     genus: 'Brute Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Glavenus' },
       { type: 'feral', monster: 'Feral Glavenus' },
@@ -1271,6 +1275,7 @@
   {
     name: 'Black Gravios',
     genus: 'Flying Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Gravios' },
       { type: 'feral', monster: 'Feral Gravios' },
@@ -1410,6 +1415,7 @@
   {
     name: 'Purple Gypceros',
     genus: 'Bird Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Gypceros' },
       { type: 'feral', monster: 'Feral Gypceros' },
@@ -1519,6 +1525,7 @@
   {
     name: 'Red Khezu',
     genus: 'Flying Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Khezu' },
       { type: 'invasive', monster: 'Invasive Khezu' },
@@ -1608,7 +1615,7 @@
   {
     name: 'Ivory Lagiacrus',
     genus: 'Leviathan',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
     rank: 6,
     element: 'thunder',
@@ -1792,7 +1799,7 @@
   {
     name: 'Soulseer Mizutsune',
     genus: 'Leviathan',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
     rank: 7,
     element: 'water',
@@ -1918,7 +1925,7 @@
   {
     name: 'Green Nargacuga',
     genus: 'Flying Wyvern',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Nargacuga' },
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
@@ -1946,7 +1953,7 @@
   {
     name: 'Silverwind Nargacuga',
     genus: 'Flying Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Nargacuga' },
       { type: 'subspecies', monster: 'Green Nargacuga' },
@@ -2035,6 +2042,7 @@
   {
     name: 'Shrouded Nerscylla',
     genus: 'Temnoceran',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Nerscylla' },
       { type: 'feral', monster: 'Feral Nerscylla' },
@@ -2159,6 +2167,7 @@
   {
     name: 'Ebony Odogaron',
     genus: 'Fanged Wyvern',
+    tags: ['subspecies'],
     related: [{ type: 'subspeciesOf', monster: 'Odogaron' }],
     rank: 6,
     element: 'dragon',
@@ -2406,6 +2415,7 @@
   {
     name: 'Green Plesioth',
     genus: 'Piscine Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Plesioth' },
       { type: 'invasive', monster: 'Invasive Plesioth' },
@@ -2582,7 +2592,7 @@
   {
     name: 'Azure Rathalos',
     genus: 'Flying Wyvern',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Rathalos' },
       { type: 'honed', monster: 'Honed Azure Rathalos' },
@@ -2628,7 +2638,7 @@
   {
     name: 'Dreadking Rathalos',
     genus: 'Flying Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
@@ -2774,7 +2784,7 @@
   {
     name: 'Pink Rathian',
     genus: 'Flying Wyvern',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Rathian' },
       { type: 'deviant', monster: 'Dreadqueen Rathian' },
@@ -2842,7 +2852,7 @@
   {
     name: 'Dreadqueen Rathian',
     genus: 'Flying Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Rathian' },
       { type: 'subspecies', monster: 'Pink Rathian' },
@@ -3027,6 +3037,7 @@
   {
     name: 'Purple Ludroth',
     genus: 'Leviathan',
+    tags: ['subspecies'],
     related: [{ type: 'subspeciesOf', monster: 'Royal Ludroth' }],
     rank: 3,
     element: 'water',
@@ -3151,6 +3162,7 @@
   {
     name: 'Aurora Somnacanth',
     genus: 'Leviathan',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Somnacanth' },
       { type: 'feral', monster: 'Feral Somnacanth' },
@@ -3266,7 +3278,7 @@
   {
     name: 'Brute Tigrex',
     genus: 'Flying Wyvern',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Tigrex' },
       { type: 'deviant', monster: 'Grimclaw Tigrex' },
@@ -3294,7 +3306,7 @@
   {
     name: 'Grimclaw Tigrex',
     genus: 'Flying Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Tigrex' },
       { type: 'subspecies', monster: 'Brute Tigrex' },
@@ -3602,7 +3614,7 @@
   {
     name: 'Deadeye Yian Garuga',
     genus: 'Bird Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Yian Garuga' },
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
@@ -3747,6 +3759,7 @@
   {
     name: 'Blue Yian Kut-Ku',
     genus: 'Bird Wyvern',
+    tags: ['subspecies'],
     related: [
       { type: 'subspeciesOf', monster: 'Yian Kut-Ku' },
       { type: 'feral', monster: 'Feral Yian Kut-Ku' },
@@ -3902,7 +3915,7 @@
   {
     name: 'Stygian Zinogre',
     genus: 'Fanged Wyvern',
-    tags: ['mutation'],
+    tags: ['subspecies', 'mutation'],
     related: [
       { type: 'subspeciesOf', monster: 'Zinogre' },
       { type: 'deviant', monster: 'Thunderlord Zinogre' },
@@ -3933,7 +3946,7 @@
   {
     name: 'Thunderlord Zinogre',
     genus: 'Fanged Wyvern',
-    tags: ['mutation', 'deviant'],
+    tags: ['deviant', 'mutation'],
     related: [
       { type: 'deviantOf', monster: 'Zinogre' },
       { type: 'subspecies', monster: 'Stygian Zinogre' },
