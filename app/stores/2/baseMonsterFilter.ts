@@ -207,7 +207,6 @@ export function makeMonsterFilterStore(
           return monsters;
         }
 
-        const sortOrder = this.sortOrder ?? 'asc';
         const getSortValue = sortValueGetters[this.sortKey];
 
         return orderBy(
@@ -222,7 +221,7 @@ export function makeMonsterFilterStore(
               return value;
             },
           ],
-          [sortOrder]
+          [this.sortOrder]
         );
       },
 
@@ -265,7 +264,7 @@ export function makeMonsterFilterStore(
       },
 
       isGrouped: (state) => {
-        return ['genus', 'habitat', 'eldersLair'].includes(state.sortKey ?? '');
+        return ['genus', 'habitat', 'eldersLair'].includes(state.sortKey);
       },
 
       activeSort: (state) => {
