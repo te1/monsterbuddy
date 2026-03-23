@@ -5,7 +5,6 @@ export type {
   EggColor,
   GrowthType,
   Monster,
-  MonsterRelation,
   MonsterLocation,
   LocationType,
   RelationType,

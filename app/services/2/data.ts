@@ -22,21 +22,13 @@ const sortedCatavanStands = sortedCatavanStands_ as CatavanStand[];
 const sortedRidingActions = sortedRidingActions_ as RidingAction[];
 
 export { monsters, coopQuests, sortedHabitats, sortedRidingActions };
-export const monstersByNo = keyBy(monsters, 'no');
 export const monstersByName = keyBy(monsters, 'name');
 export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
-export const monstiesByNo = keyBy(monsties, 'no');
-export const monstiesByName = keyBy(monsties, 'name');
-export const monstiesBySlug = keyBy(monsties, 'slug');
-export const genera = getGenera();
-export const habitats = getHabitats();
 export const catavanStands = getCatavanStandsWithDetails();
 export const catavanStandsBySlug = keyBy(catavanStands, 'slug');
 export const coopQuestsBySlug = keyBy(coopQuests, 'slug');
-export const ridingActions = getRidingActions();
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
-export const eggColors = getEggColors();
 export const allElements: ElementType[] = [
   'none',
   'fire',
@@ -119,9 +111,9 @@ export function getEggColors(monsterList: Monster[] = monsties): EggColor[] {
 }
 
 export function getMonstersByName(name: string, monsterList: Monster[] = monsters): Monster[] {
-  const name_ = name.toLowerCase();
+  const query = name.toLowerCase();
 
-  return monsterList.filter((monster) => monster.name.toLowerCase().includes(name_));
+  return monsterList.filter((monster) => monster.name.toLowerCase().includes(query));
 }
 
 export function getMonstersByGenus(genus: GenusType, monsterList: Monster[] = monsters): Monster[] {
@@ -191,13 +183,6 @@ export function getMonstiesByRidingAction(
   );
 }
 
-export function getMonstiesByEggColor(
-  eggColor: EggColor,
-  monsterList: Monster[] = monsties
-): Monster[] {
-  return monsterList.filter((monster) => (monster.monstie?.eggColors ?? []).includes(eggColor));
-}
-
 export function getMonstiesByEggColors(
   eggColors: EggColor | EggColor[],
   monsterList: Monster[] = monsties
@@ -209,13 +194,6 @@ export function getMonstiesByEggColors(
 
     return intersection(monsterColors, colors).length > 0;
   });
-}
-
-export function getMonstersByIsSubspecies(
-  mustBeSubspecies: boolean,
-  monsterList: Monster[] = monsters
-): Monster[] {
-  return monsterList.filter((monster) => isSubspecies(monster) === mustBeSubspecies);
 }
 
 export function getMonstersByIsDeviant(
