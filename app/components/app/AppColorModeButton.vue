@@ -1,9 +1,8 @@
 <script lang="ts" setup>
   const colorMode = useColorMode();
-  const { t } = useLocale();
 
   const tooltip = computed(() => {
-    return colorMode.value === 'dark' ? t('colorMode.switchToLight') : t('colorMode.switchToDark');
+    return colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
   });
 </script>
 
