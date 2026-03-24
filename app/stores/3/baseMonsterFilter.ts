@@ -15,12 +15,25 @@ import {
   getMonstersByIsDeviant,
 } from '~/services/3/data';
 
-export type SortKey = 'name' | 'genus' | 'rank';
+export type SortKey =
+  | 'name'
+  | 'genus'
+  | 'rank'
+  | 'stats.base.attack'
+  | 'stats.base.speed'
+  | 'stats.base.crit'
+  | 'stats.base.hp'
+  | 'stats.base.defense';
 
 const sortValueGetters = {
   name: (item: Monster) => item.name,
   genus: (item: Monster) => item.genus,
   rank: (item: Monster) => item.rank,
+  'stats.base.attack': (item: Monster) => item.stats?.base?.attack,
+  'stats.base.speed': (item: Monster) => item.stats?.base?.speed,
+  'stats.base.crit': (item: Monster) => item.stats?.base?.crit,
+  'stats.base.hp': (item: Monster) => item.stats?.base?.hp,
+  'stats.base.defense': (item: Monster) => item.stats?.base?.defense,
 } satisfies Record<SortKey, (item: Monster) => unknown>;
 
 export type Mode = 'combat' | 'compact' | 'location' | 'rank' | 'ridingActions' | 'stats';
