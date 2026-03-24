@@ -1,6 +1,7 @@
 <script setup lang="ts">
+  import type { SearchConfig } from '~/services/search';
   import { createReusableTemplate } from '@vueuse/core';
-  import { buildDefaultSearch, type SearchConfig } from '~/services/search';
+  import { buildDefaultSearch } from '~/services/search';
   import { buildMhst1Search } from '~/services/1/search';
   import { buildMhst2Search } from '~/services/2/search';
   import { buildMhst3Search } from '~/services/3/search';

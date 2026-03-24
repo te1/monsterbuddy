@@ -1,3 +1,5 @@
+import { skipHydrate } from 'pinia';
+
 import type { EggColor, Monster } from '~/services/2/types';
 import { groupBy, orderBy } from 'es-toolkit/array';
 import { upperFirst } from 'es-toolkit/string';
@@ -104,354 +106,370 @@ export type FilterKey =
 
 export function makeMonsterFilterStore(
   storeId: string,
-  monsters: Monster[],
+  initialMonsters: Monster[],
   initial: MonsterFilterInitialState
 ) {
-  return defineStore(storeId, {
-    state() {
-      return {
-        monsters,
+  return defineStore(storeId, () => {
+    const monsters = skipHydrate(shallowRef(initialMonsters));
+    const sortKey = ref(initial.sortKey);
+    const sortOrder = ref(initial.sortOrder);
+    const preserveSourceOrder = ref(false);
+    const nameFilter = ref(initial.nameFilter);
+    const genusFilter = ref(initial.genusFilter);
+    const habitatFilter = ref(initial.habitatFilter);
+    const coopQuestFilter = ref(initial.coopQuestFilter);
+    const catavanFilter = ref(initial.catavanFilter);
+    const eldersLairFilter = ref(initial.eldersLairFilter);
+    const attackTypeFilter = ref(initial.attackTypeFilter);
+    const attackElementFilter = ref(initial.attackElementFilter);
+    const ridingActionFilter = ref(initial.ridingActionFilter);
+    const eggColorsFilter = ref(initial.eggColorsFilter);
+    const hatchableFilter = ref(initial.hatchableFilter);
+    const deviantsFilter = ref(initial.deviantsFilter);
+    const mode = ref(initial.mode);
+    const autoSwitchModes = ref(initial.autoSwitchModes);
 
-        sortKey: initial.sortKey,
-        sortOrder: initial.sortOrder,
-        preserveSourceOrder: false,
-        nameFilter: initial.nameFilter,
-        genusFilter: initial.genusFilter,
-        habitatFilter: initial.habitatFilter,
-        coopQuestFilter: initial.coopQuestFilter,
-        catavanFilter: initial.catavanFilter,
-        eldersLairFilter: initial.eldersLairFilter,
-        attackTypeFilter: initial.attackTypeFilter,
-        attackElementFilter: initial.attackElementFilter,
-        ridingActionFilter: initial.ridingActionFilter,
-        eggColorsFilter: initial.eggColorsFilter,
-        hatchableFilter: initial.hatchableFilter,
-        deviantsFilter: initial.deviantsFilter,
+    const allGenera = computed(() => getGenera(monsters.value));
+    const allHabitats = computed(() => getHabitats(monsters.value));
+    const allCoopQuests = computed(() => getCoopQuests(monsters.value));
+    const allCatavanStands = computed(() => getCatavanStands(monsters.value));
+    const allEldersLairFloors = computed(() => getEldersLairFloors(monsters.value));
+    const allRidingActions = computed(() => getRidingActions(monsters.value));
+    const allEggColors = computed(() => getEggColors(monsters.value));
 
-        mode: initial.mode,
-        autoSwitchModes: initial.autoSwitchModes,
-      };
-    },
+    const filteredMonsters = computed(() => {
+      let result = monsters.value;
 
-    getters: {
-      allGenera: (state) => getGenera(state.monsters),
-      allHabitats: (state) => getHabitats(state.monsters),
-      allCoopQuests: (state) => getCoopQuests(state.monsters),
-      allCatavanStands: (state) => getCatavanStands(state.monsters),
-      allEldersLairFloors: (state) => getEldersLairFloors(state.monsters),
-      allRidingActions: (state) => getRidingActions(state.monsters),
-      allEggColors: (state) => getEggColors(state.monsters),
+      if (nameFilter.value != null) {
+        result = getMonstersByName(nameFilter.value, result);
+      }
 
-      filteredMonsters: (state) => {
-        let result = state.monsters;
+      if (genusFilter.value != null) {
+        result = getMonstersByGenus(genusFilter.value, result);
+      }
 
-        if (state.nameFilter != null) {
-          result = getMonstersByName(state.nameFilter, result);
-        }
+      if (habitatFilter.value != null) {
+        result = getMonstersByHabitat(habitatFilter.value, result);
+      }
 
-        if (state.genusFilter != null) {
-          result = getMonstersByGenus(state.genusFilter, result);
-        }
+      if (coopQuestFilter.value != null) {
+        result = getMonstersByCoopQuest(coopQuestFilter.value, result);
+      }
 
-        if (state.habitatFilter != null) {
-          result = getMonstersByHabitat(state.habitatFilter, result);
-        }
+      if (catavanFilter.value != null) {
+        result = getMonstersByCatavanStand(catavanFilter.value, result);
+      }
 
-        if (state.coopQuestFilter != null) {
-          result = getMonstersByCoopQuest(state.coopQuestFilter, result);
-        }
+      if (eldersLairFilter.value != null) {
+        result = getMonstersByEldersLairFloor(eldersLairFilter.value, result);
+      }
 
-        if (state.catavanFilter != null) {
-          result = getMonstersByCatavanStand(state.catavanFilter, result);
-        }
+      if (attackTypeFilter.value != null) {
+        result = getMonstiesByAttackType(attackTypeFilter.value, result);
+      }
 
-        if (state.eldersLairFilter != null) {
-          result = getMonstersByEldersLairFloor(state.eldersLairFilter, result);
-        }
+      if (attackElementFilter.value != null) {
+        result = getMonstiesByAttackElement(attackElementFilter.value, result);
+      }
 
-        if (state.attackTypeFilter != null) {
-          result = getMonstiesByAttackType(state.attackTypeFilter, result);
-        }
+      if (ridingActionFilter.value != null) {
+        result = getMonstiesByRidingAction(ridingActionFilter.value, result);
+      }
 
-        if (state.attackElementFilter != null) {
-          result = getMonstiesByAttackElement(state.attackElementFilter, result);
-        }
+      if (eggColorsFilter.value != null) {
+        result = getMonstiesByEggColors(eggColorsFilter.value, result);
+      }
 
-        if (state.ridingActionFilter != null) {
-          result = getMonstiesByRidingAction(state.ridingActionFilter, result);
-        }
+      if (hatchableFilter.value != null) {
+        result = getMonstersByHatchable(hatchableFilter.value, result);
+      }
 
-        if (state.eggColorsFilter != null) {
-          result = getMonstiesByEggColors(state.eggColorsFilter, result);
-        }
+      if (deviantsFilter.value != null) {
+        result = getMonstersByIsDeviant(deviantsFilter.value, result);
+      }
 
-        if (state.hatchableFilter != null) {
-          result = getMonstersByHatchable(state.hatchableFilter, result);
-        }
+      return result;
+    });
 
-        if (state.deviantsFilter != null) {
-          result = getMonstersByIsDeviant(state.deviantsFilter, result);
-        }
+    function groupedMonstersByEldersLairFloors(monsterList: Monster[]) {
+      const floors = eldersLairFilter.value
+        ? [eldersLairFilter.value]
+        : getEldersLairFloors(monsterList);
 
-        return result;
-      },
-
-      sortedMonsters(): Monster[] {
-        const monsters = this.filteredMonsters;
-
-        if (this.sortKey == null) {
-          return monsters;
-        }
-
-        if (this.preserveSourceOrder) {
-          return monsters;
-        }
-
-        const getSortValue = sortValueGetters[this.sortKey];
-
-        return orderBy(
-          monsters,
-          [
-            (item: Monster) => {
-              const value = getSortValue(item);
-
-              if (value == null || value === '?') {
-                return -Infinity;
-              }
-              return value;
-            },
-          ],
-          [this.sortOrder]
-        );
-      },
-
-      groupedMonsters(): Record<string, Monster[]> {
-        const monsters = this.sortedMonsters;
-
-        switch (this.sortKey) {
-          case 'genus':
-            return groupBy(monsters, (item) => item.genus);
-
-          case 'habitat':
-            return groupBy(monsters, (item) => item.habitat);
-
-          case 'eldersLair':
-            return this.groupedMonstersByEldersLairFloors(monsters);
-
-          default:
-            return { all: monsters };
-        }
-      },
-
-      groupedMonstersByEldersLairFloors: (state) => (monsters: Monster[]) => {
-        const floors = state.eldersLairFilter
-          ? [state.eldersLairFilter]
-          : getEldersLairFloors(monsters);
-
-        return floors.reduce<Record<string, Monster[]>>((result, floor) => {
-          result[floor] = getMonstersByEldersLairFloor(floor, monsters);
-
-          return result;
-        }, {});
-      },
-
-      resultCount(): number {
-        return this.sortedMonsters.length;
-      },
-
-      isEmpty() {
-        return this.sortedMonsters.length <= 0;
-      },
-
-      isGrouped: (state) => {
-        return ['genus', 'habitat', 'eldersLair'].includes(state.sortKey);
-      },
-
-      activeSort: (state) => {
-        switch (state.sortKey) {
-          case 'name':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Name',
-            };
-
-          case 'rarity':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Rarity',
-            };
-
-          case 'monstie.stats.base.maxHp':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Max HP',
-            };
-
-          case 'monstie.stats.base.speed':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Speed',
-            };
-
-          case 'monstie.stats.base.critRate':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Crit Rate',
-            };
-
-          case 'monstie.stats.bestAttack.value':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Best Attack',
-            };
-
-          case 'monstie.stats.bestDefense.value':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Best Defense',
-            };
-
-          case 'monstie.stats.worstDefense.value':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Worst Defense',
-            };
-
-          default:
-            return null;
-        }
-      },
-
-      hasActiveSort() {
-        return this.activeSort != null;
-      },
-
-      activeFilters: (state) => {
-        const result: { name: FilterKey; value: string }[] = [];
-
-        if (state.genusFilter != null) {
-          result.push({ name: 'genusFilter', value: state.genusFilter });
-        }
-
-        if (state.habitatFilter != null) {
-          result.push({ name: 'habitatFilter', value: state.habitatFilter });
-        }
-
-        if (state.coopQuestFilter != null) {
-          result.push({ name: 'coopQuestFilter', value: state.coopQuestFilter });
-        }
-
-        if (state.catavanFilter != null) {
-          result.push({ name: 'catavanFilter', value: state.catavanFilter });
-        }
-
-        if (state.eldersLairFilter != null) {
-          result.push({
-            name: 'eldersLairFilter',
-            value: "Elder's Lair - " + state.eldersLairFilter,
-          });
-        }
-
-        if (state.attackTypeFilter != null) {
-          result.push({
-            name: 'attackTypeFilter',
-            value: formatAttackType(state.attackTypeFilter),
-          });
-        }
-
-        if (state.attackElementFilter != null) {
-          result.push({
-            name: 'attackElementFilter',
-            value: formatElement(state.attackElementFilter),
-          });
-        }
-
-        if (state.ridingActionFilter != null) {
-          result.push({
-            name: 'ridingActionFilter',
-            value: state.ridingActionFilter,
-          });
-        }
-
-        if (state.eggColorsFilter != null) {
-          result.push({
-            name: 'eggColorsFilter',
-            value: state.eggColorsFilter.map(upperFirst).join(' / '),
-          });
-        }
-
-        if (state.hatchableFilter != null) {
-          result.push({
-            name: 'hatchableFilter',
-            value: state.hatchableFilter ? 'Hatchable' : 'Not Hatchable',
-          });
-        }
-
-        if (state.deviantsFilter != null) {
-          result.push({
-            name: 'deviantsFilter',
-            value: state.deviantsFilter ? 'Deviant' : 'No Deviants',
-          });
-        }
+      return floors.reduce<Record<string, Monster[]>>((result, floor) => {
+        result[floor] = getMonstersByEldersLairFloor(floor, monsterList);
 
         return result;
-      },
+      }, {});
+    }
 
-      hasActiveFilters() {
-        return !!this.activeFilters?.length;
-      },
-    },
+    const sortedMonsters = computed<Monster[]>(() => {
+      const filtered = filteredMonsters.value;
 
-    actions: {
-      setMonsters(
-        monsters: Monster[],
-        options: {
-          preserveSourceOrder?: boolean;
-        } = {}
-      ) {
-        this.monsters = monsters;
-        this.preserveSourceOrder = options.preserveSourceOrder ?? false;
-      },
+      if (sortKey.value == null || preserveSourceOrder.value) {
+        return filtered;
+      }
 
-      setSort(sortKey: SortKey, sortOrder: SortOrder) {
-        this.preserveSourceOrder = false;
-        this.sortKey = sortKey;
-        this.sortOrder = sortOrder;
-      },
+      const getSortValue = sortValueGetters[sortKey.value];
 
-      setSortOrder(sortOrder: SortOrder) {
-        this.preserveSourceOrder = false;
-        this.sortOrder = sortOrder;
-      },
+      return orderBy(
+        filtered,
+        [
+          (item: Monster) => {
+            const value = getSortValue(item);
 
-      resetFilter() {
-        this.nameFilter = initial.nameFilter;
-        this.genusFilter = initial.genusFilter;
-        this.habitatFilter = initial.habitatFilter;
-        this.coopQuestFilter = initial.coopQuestFilter;
-        this.catavanFilter = initial.catavanFilter;
-        this.eldersLairFilter = initial.eldersLairFilter;
-        this.attackTypeFilter = initial.attackTypeFilter;
-        this.attackElementFilter = initial.attackElementFilter;
-        this.ridingActionFilter = initial.ridingActionFilter;
-        this.eggColorsFilter = initial.eggColorsFilter;
-        this.hatchableFilter = initial.hatchableFilter;
-        this.deviantsFilter = initial.deviantsFilter;
-      },
+            if (value == null || value === '?') {
+              return -Infinity;
+            }
 
-      resetFilterAndSort() {
-        this.resetFilter();
-        this.setSort(initial.sortKey, initial.sortOrder);
-      },
-    },
+            return value;
+          },
+        ],
+        [sortOrder.value]
+      );
+    });
+
+    const groupedMonsters = computed<Record<string, Monster[]>>(() => {
+      const sorted = sortedMonsters.value;
+
+      switch (sortKey.value) {
+        case 'genus':
+          return groupBy(sorted, (item) => item.genus);
+
+        case 'habitat':
+          return groupBy(sorted, (item) => item.habitat);
+
+        case 'eldersLair':
+          return groupedMonstersByEldersLairFloors(sorted);
+
+        default:
+          return { all: sorted };
+      }
+    });
+
+    const resultCount = computed(() => sortedMonsters.value.length);
+    const isEmpty = computed(() => sortedMonsters.value.length <= 0);
+    const isGrouped = computed(() => ['genus', 'habitat', 'eldersLair'].includes(sortKey.value));
+    const activeSort = computed(() => {
+      switch (sortKey.value) {
+        case 'name':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Name',
+          };
+
+        case 'rarity':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Rarity',
+          };
+
+        case 'monstie.stats.base.maxHp':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Max HP',
+          };
+
+        case 'monstie.stats.base.speed':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Speed',
+          };
+
+        case 'monstie.stats.base.critRate':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Crit Rate',
+          };
+
+        case 'monstie.stats.bestAttack.value':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Best Attack',
+          };
+
+        case 'monstie.stats.bestDefense.value':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Best Defense',
+          };
+
+        case 'monstie.stats.worstDefense.value':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Worst Defense',
+          };
+
+        default:
+          return null;
+      }
+    });
+
+    const hasActiveSort = computed(() => activeSort.value != null);
+    const activeFilters = computed(() => {
+      const result: { name: FilterKey; value: string }[] = [];
+
+      if (genusFilter.value != null) {
+        result.push({ name: 'genusFilter', value: genusFilter.value });
+      }
+
+      if (habitatFilter.value != null) {
+        result.push({ name: 'habitatFilter', value: habitatFilter.value });
+      }
+
+      if (coopQuestFilter.value != null) {
+        result.push({ name: 'coopQuestFilter', value: coopQuestFilter.value });
+      }
+
+      if (catavanFilter.value != null) {
+        result.push({ name: 'catavanFilter', value: catavanFilter.value });
+      }
+
+      if (eldersLairFilter.value != null) {
+        result.push({
+          name: 'eldersLairFilter',
+          value: "Elder's Lair - " + eldersLairFilter.value,
+        });
+      }
+
+      if (attackTypeFilter.value != null) {
+        result.push({
+          name: 'attackTypeFilter',
+          value: formatAttackType(attackTypeFilter.value),
+        });
+      }
+
+      if (attackElementFilter.value != null) {
+        result.push({
+          name: 'attackElementFilter',
+          value: formatElement(attackElementFilter.value),
+        });
+      }
+
+      if (ridingActionFilter.value != null) {
+        result.push({
+          name: 'ridingActionFilter',
+          value: ridingActionFilter.value,
+        });
+      }
+
+      if (eggColorsFilter.value != null) {
+        result.push({
+          name: 'eggColorsFilter',
+          value: eggColorsFilter.value.map(upperFirst).join(' / '),
+        });
+      }
+
+      if (hatchableFilter.value != null) {
+        result.push({
+          name: 'hatchableFilter',
+          value: hatchableFilter.value ? 'Hatchable' : 'Not Hatchable',
+        });
+      }
+
+      if (deviantsFilter.value != null) {
+        result.push({
+          name: 'deviantsFilter',
+          value: deviantsFilter.value ? 'Deviant' : 'No Deviants',
+        });
+      }
+
+      return result;
+    });
+
+    const hasActiveFilters = computed(() => !!activeFilters.value.length);
+
+    function setMonsters(
+      nextMonsters: Monster[],
+      options: {
+        preserveSourceOrder?: boolean;
+      } = {}
+    ) {
+      monsters.value = nextMonsters;
+      preserveSourceOrder.value = options.preserveSourceOrder ?? false;
+    }
+
+    function setSort(nextSortKey: SortKey, nextSortOrder: SortOrder) {
+      preserveSourceOrder.value = false;
+      sortKey.value = nextSortKey;
+      sortOrder.value = nextSortOrder;
+    }
+
+    function setSortOrder(nextSortOrder: SortOrder) {
+      preserveSourceOrder.value = false;
+      sortOrder.value = nextSortOrder;
+    }
+
+    function resetFilter() {
+      nameFilter.value = initial.nameFilter;
+      genusFilter.value = initial.genusFilter;
+      habitatFilter.value = initial.habitatFilter;
+      coopQuestFilter.value = initial.coopQuestFilter;
+      catavanFilter.value = initial.catavanFilter;
+      eldersLairFilter.value = initial.eldersLairFilter;
+      attackTypeFilter.value = initial.attackTypeFilter;
+      attackElementFilter.value = initial.attackElementFilter;
+      ridingActionFilter.value = initial.ridingActionFilter;
+      eggColorsFilter.value = initial.eggColorsFilter;
+      hatchableFilter.value = initial.hatchableFilter;
+      deviantsFilter.value = initial.deviantsFilter;
+    }
+
+    function resetFilterAndSort() {
+      resetFilter();
+      setSort(initial.sortKey, initial.sortOrder);
+    }
+
+    return {
+      sortKey,
+      sortOrder,
+      preserveSourceOrder,
+      nameFilter,
+      genusFilter,
+      habitatFilter,
+      coopQuestFilter,
+      catavanFilter,
+      eldersLairFilter,
+      attackTypeFilter,
+      attackElementFilter,
+      ridingActionFilter,
+      eggColorsFilter,
+      hatchableFilter,
+      deviantsFilter,
+      mode,
+      autoSwitchModes,
+      allGenera,
+      allHabitats,
+      allCoopQuests,
+      allCatavanStands,
+      allEldersLairFloors,
+      allRidingActions,
+      allEggColors,
+      filteredMonsters,
+      sortedMonsters,
+      groupedMonsters,
+      groupedMonstersByEldersLairFloors,
+      resultCount,
+      isEmpty,
+      isGrouped,
+      activeSort,
+      hasActiveSort,
+      activeFilters,
+      hasActiveFilters,
+      setMonsters,
+      setSort,
+      setSortOrder,
+      resetFilter,
+      resetFilterAndSort,
+    };
   });
 }
 

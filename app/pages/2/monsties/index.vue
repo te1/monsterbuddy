@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+  import type { Source } from '~/stores/2/monstieSources';
   import S2MonstieSidebar from '~/components/s2/monstie/S2MonstieSidebar.vue';
   import { monsties } from '~/services/2/data';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonstieFilter, { modes } from '~/stores/2/monstieFilter';
-  import useMonstieSources, { type Source } from '~/stores/2/monstieSources';
+  import useMonstieSources from '~/stores/2/monstieSources';
 
   definePageMeta({
     sidebarComponent: S2MonstieSidebar,

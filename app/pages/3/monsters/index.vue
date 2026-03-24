@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+  import type { Source } from '~/stores/3/monsterSources';
   import S3MonsterSidebar from '~/components/s3/monster/S3MonsterSidebar.vue';
   import { monsters } from '~/services/3/data';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
   import useHistoryStore from '~/stores/3/historyStore';
   import useMonsterFilter, { modes } from '~/stores/3/monsterFilter';
-  import useMonsterSources, { type Source } from '~/stores/3/monsterSources';
+  import useMonsterSources from '~/stores/3/monsterSources';
 
   definePageMeta({
     sidebarComponent: S3MonsterSidebar,

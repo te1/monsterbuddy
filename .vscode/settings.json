@@ -10,6 +10,7 @@
     ".wrangler": true,
     ".output": true,
     "dist": true,
+    ".VSCodeCounter": true,
     "**/*.svg": true,
     "**/*.webp": true,
     "**/*.png": true,

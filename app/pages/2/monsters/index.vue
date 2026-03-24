@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+  import type { Source } from '~/stores/2/monsterSources';
   import S2MonsterSidebar from '~/components/s2/monster/S2MonsterSidebar.vue';
   import { monsters } from '~/services/2/data';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useHistoryStore from '~/stores/2/historyStore';
   import useMonsterFilter, { modes } from '~/stores/2/monsterFilter';
-  import useMonsterSources, { type Source } from '~/stores/2/monsterSources';
+  import useMonsterSources from '~/stores/2/monsterSources';
 
   definePageMeta({
     sidebarComponent: S2MonsterSidebar,

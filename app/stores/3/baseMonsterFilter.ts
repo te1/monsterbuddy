@@ -1,3 +1,5 @@
+import { skipHydrate } from 'pinia';
+
 import type { EggColor, Monster } from '~/services/3/types';
 import { groupBy, orderBy } from 'es-toolkit/array';
 import { upperFirst } from 'es-toolkit/string';
@@ -70,240 +72,247 @@ export type FilterKey =
 
 export function makeMonsterFilterStore(
   storeId: string,
-  monsters: Monster[],
+  initialMonsters: Monster[],
   initial: MonsterFilterInitialState
 ) {
-  return defineStore(storeId, {
-    state() {
-      return {
-        monsters,
-        sortKey: initial.sortKey,
-        sortOrder: initial.sortOrder,
-        preserveSourceOrder: false,
-        nameFilter: initial.nameFilter,
-        genusFilter: initial.genusFilter,
-        attackTypeFilter: initial.attackTypeFilter,
-        attackElementFilter: initial.attackElementFilter,
-        ridingActionFilter: initial.ridingActionFilter,
-        eggColorsFilter: initial.eggColorsFilter,
-        hatchableFilter: initial.hatchableFilter,
-        deviantsFilter: initial.deviantsFilter,
+  return defineStore(storeId, () => {
+    const monsters = skipHydrate(shallowRef(initialMonsters));
+    const sortKey = ref(initial.sortKey);
+    const sortOrder = ref(initial.sortOrder);
+    const preserveSourceOrder = ref(false);
+    const nameFilter = ref(initial.nameFilter);
+    const genusFilter = ref(initial.genusFilter);
+    const attackTypeFilter = ref(initial.attackTypeFilter);
+    const attackElementFilter = ref(initial.attackElementFilter);
+    const ridingActionFilter = ref(initial.ridingActionFilter);
+    const eggColorsFilter = ref(initial.eggColorsFilter);
+    const hatchableFilter = ref(initial.hatchableFilter);
+    const deviantsFilter = ref(initial.deviantsFilter);
+    const mode = ref(initial.mode);
+    const autoSwitchModes = ref(initial.autoSwitchModes);
 
-        mode: initial.mode,
-        autoSwitchModes: initial.autoSwitchModes,
-      };
-    },
+    const allGenera = computed(() => getGenera(monsters.value));
+    const allRidingActions = computed(() => getRidingActions(monsters.value));
+    const allEggColors = computed(() => getEggColors(monsters.value));
 
-    getters: {
-      allGenera: (state) => getGenera(state.monsters),
-      allRidingActions: (state) => getRidingActions(state.monsters),
-      allEggColors: (state) => getEggColors(state.monsters),
+    const filteredMonsters = computed(() => {
+      let result = monsters.value;
 
-      filteredMonsters: (state) => {
-        let result = state.monsters;
+      if (nameFilter.value != null) {
+        result = getMonstersByName(nameFilter.value, result);
+      }
 
-        if (state.nameFilter != null) {
-          result = getMonstersByName(state.nameFilter, result);
-        }
+      if (genusFilter.value != null) {
+        result = getMonstersByGenus(genusFilter.value, result);
+      }
 
-        if (state.genusFilter != null) {
-          result = getMonstersByGenus(state.genusFilter, result);
-        }
+      if (attackTypeFilter.value != null) {
+        result = getMonstiesByAttackType(attackTypeFilter.value, result);
+      }
 
-        if (state.attackTypeFilter != null) {
-          result = getMonstiesByAttackType(state.attackTypeFilter, result);
-        }
+      if (attackElementFilter.value != null) {
+        result = getMonstiesByAttackElement(attackElementFilter.value, result);
+      }
 
-        if (state.attackElementFilter != null) {
-          result = getMonstiesByAttackElement(state.attackElementFilter, result);
-        }
+      if (ridingActionFilter.value != null) {
+        result = getMonstiesByRidingAction(ridingActionFilter.value, result);
+      }
 
-        if (state.ridingActionFilter != null) {
-          result = getMonstiesByRidingAction(state.ridingActionFilter, result);
-        }
+      if (eggColorsFilter.value != null) {
+        result = getMonstiesByEggColors(eggColorsFilter.value, result);
+      }
 
-        if (state.eggColorsFilter != null) {
-          result = getMonstiesByEggColors(state.eggColorsFilter, result);
-        }
+      if (hatchableFilter.value != null) {
+        result = getMonstersByHatchable(hatchableFilter.value, result);
+      }
 
-        if (state.hatchableFilter != null) {
-          result = getMonstersByHatchable(state.hatchableFilter, result);
-        }
+      if (deviantsFilter.value != null) {
+        result = getMonstersByIsDeviant(deviantsFilter.value, result);
+      }
 
-        if (state.deviantsFilter != null) {
-          result = getMonstersByIsDeviant(state.deviantsFilter, result);
-        }
+      return result;
+    });
 
-        return result;
-      },
+    const sortedMonsters = computed<Monster[]>(() => {
+      const filtered = filteredMonsters.value;
 
-      sortedMonsters(): Monster[] {
-        const monsters = this.filteredMonsters;
+      if (sortKey.value == null || preserveSourceOrder.value) {
+        return filtered;
+      }
 
-        if (this.sortKey == null) {
-          return monsters;
-        }
+      const getSortValue = sortValueGetters[sortKey.value];
 
-        if (this.preserveSourceOrder) {
-          return monsters;
-        }
+      return orderBy(
+        filtered,
+        [
+          (item: Monster) => {
+            const value = getSortValue(item);
 
-        const getSortValue = sortValueGetters[this.sortKey];
+            if (value == null || value === '?') {
+              return -Infinity;
+            }
 
-        return orderBy(
-          monsters,
-          [
-            (item: Monster) => {
-              const value = getSortValue(item);
+            return value;
+          },
+        ],
+        [sortOrder.value]
+      );
+    });
 
-              if (value == null || value === '?') {
-                return -Infinity;
-              }
+    const groupedMonsters = computed<Record<string, Monster[]>>(() => {
+      const sorted = sortedMonsters.value;
 
-              return value;
-            },
-          ],
-          [this.sortOrder]
-        );
-      },
+      switch (sortKey.value) {
+        case 'genus':
+          return groupBy(sorted, (item) => item.genus);
 
-      groupedMonsters(): Record<string, Monster[]> {
-        const monsters = this.sortedMonsters;
+        default:
+          return { all: sorted };
+      }
+    });
 
-        switch (this.sortKey) {
-          case 'genus':
-            return groupBy(monsters, (item) => item.genus);
+    const resultCount = computed(() => sortedMonsters.value.length);
+    const isEmpty = computed(() => sortedMonsters.value.length <= 0);
+    const isGrouped = computed(() => ['genus'].includes(sortKey.value));
+    const activeSort = computed(() => {
+      switch (sortKey.value) {
+        case 'rank':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Rank',
+          };
 
-          default:
-            return { all: monsters };
-        }
-      },
+        default:
+          return null;
+      }
+    });
 
-      resultCount(): number {
-        return this.sortedMonsters.length;
-      },
+    const hasActiveSort = computed(() => activeSort.value != null);
+    const activeFilters = computed(() => {
+      const result: { name: FilterKey; value: string }[] = [];
 
-      isEmpty() {
-        return this.sortedMonsters.length <= 0;
-      },
+      if (genusFilter.value != null) {
+        result.push({ name: 'genusFilter', value: genusFilter.value });
+      }
 
-      isGrouped: (state) => {
-        return ['genus'].includes(state.sortKey);
-      },
+      if (attackTypeFilter.value != null) {
+        result.push({
+          name: 'attackTypeFilter',
+          value: formatAttackType(attackTypeFilter.value),
+        });
+      }
 
-      activeSort: (state) => {
-        switch (state.sortKey) {
-          case 'rank':
-            return {
-              name: state.sortKey,
-              order: state.sortOrder,
-              caption: 'Rank',
-            };
+      if (attackElementFilter.value != null) {
+        result.push({
+          name: 'attackElementFilter',
+          value: formatElement(attackElementFilter.value),
+        });
+      }
 
-          default:
-            return null;
-        }
-      },
+      if (ridingActionFilter.value != null) {
+        result.push({
+          name: 'ridingActionFilter',
+          value: ridingActionFilter.value,
+        });
+      }
 
-      hasActiveSort() {
-        return this.activeSort != null;
-      },
+      if (eggColorsFilter.value != null) {
+        result.push({
+          name: 'eggColorsFilter',
+          value: eggColorsFilter.value.map(upperFirst).join(' / '),
+        });
+      }
 
-      activeFilters: (state) => {
-        const result: { name: FilterKey; value: string }[] = [];
+      if (hatchableFilter.value != null) {
+        result.push({
+          name: 'hatchableFilter',
+          value: hatchableFilter.value ? 'Hatchable' : 'Not Hatchable',
+        });
+      }
 
-        if (state.genusFilter != null) {
-          result.push({ name: 'genusFilter', value: state.genusFilter });
-        }
+      if (deviantsFilter.value != null) {
+        result.push({
+          name: 'deviantsFilter',
+          value: deviantsFilter.value ? 'Deviant' : 'No Deviants',
+        });
+      }
 
-        if (state.attackTypeFilter != null) {
-          result.push({
-            name: 'attackTypeFilter',
-            value: formatAttackType(state.attackTypeFilter),
-          });
-        }
+      return result;
+    });
 
-        if (state.attackElementFilter != null) {
-          result.push({
-            name: 'attackElementFilter',
-            value: formatElement(state.attackElementFilter),
-          });
-        }
+    const hasActiveFilters = computed(() => !!activeFilters.value.length);
 
-        if (state.ridingActionFilter != null) {
-          result.push({
-            name: 'ridingActionFilter',
-            value: state.ridingActionFilter,
-          });
-        }
+    function setMonsters(
+      nextMonsters: Monster[],
+      options: {
+        preserveSourceOrder?: boolean;
+      } = {}
+    ) {
+      monsters.value = nextMonsters;
+      preserveSourceOrder.value = options.preserveSourceOrder ?? false;
+    }
 
-        if (state.eggColorsFilter != null) {
-          result.push({
-            name: 'eggColorsFilter',
-            value: state.eggColorsFilter.map(upperFirst).join(' / '),
-          });
-        }
+    function setSort(nextSortKey: SortKey, nextSortOrder: SortOrder) {
+      preserveSourceOrder.value = false;
+      sortKey.value = nextSortKey;
+      sortOrder.value = nextSortOrder;
+    }
 
-        if (state.hatchableFilter != null) {
-          result.push({
-            name: 'hatchableFilter',
-            value: state.hatchableFilter ? 'Hatchable' : 'Not Hatchable',
-          });
-        }
+    function setSortOrder(nextSortOrder: SortOrder) {
+      preserveSourceOrder.value = false;
+      sortOrder.value = nextSortOrder;
+    }
 
-        if (state.deviantsFilter != null) {
-          result.push({
-            name: 'deviantsFilter',
-            value: state.deviantsFilter ? 'Deviant' : 'No Deviants',
-          });
-        }
+    function resetFilter() {
+      nameFilter.value = initial.nameFilter;
+      genusFilter.value = initial.genusFilter;
+      attackTypeFilter.value = initial.attackTypeFilter;
+      attackElementFilter.value = initial.attackElementFilter;
+      ridingActionFilter.value = initial.ridingActionFilter;
+      eggColorsFilter.value = initial.eggColorsFilter;
+      hatchableFilter.value = initial.hatchableFilter;
+      deviantsFilter.value = initial.deviantsFilter;
+    }
 
-        return result;
-      },
+    function resetFilterAndSort() {
+      resetFilter();
+      setSort(initial.sortKey, initial.sortOrder);
+    }
 
-      hasActiveFilters() {
-        return !!this.activeFilters?.length;
-      },
-    },
-
-    actions: {
-      setMonsters(
-        monsters: Monster[],
-        options: {
-          preserveSourceOrder?: boolean;
-        } = {}
-      ) {
-        this.monsters = monsters;
-        this.preserveSourceOrder = options.preserveSourceOrder ?? false;
-      },
-
-      setSort(sortKey: SortKey, sortOrder: SortOrder) {
-        this.preserveSourceOrder = false;
-        this.sortKey = sortKey;
-        this.sortOrder = sortOrder;
-      },
-
-      setSortOrder(sortOrder: SortOrder) {
-        this.preserveSourceOrder = false;
-        this.sortOrder = sortOrder;
-      },
-
-      resetFilter() {
-        this.nameFilter = initial.nameFilter;
-        this.genusFilter = initial.genusFilter;
-        this.attackTypeFilter = initial.attackTypeFilter;
-        this.attackElementFilter = initial.attackElementFilter;
-        this.ridingActionFilter = initial.ridingActionFilter;
-        this.eggColorsFilter = initial.eggColorsFilter;
-        this.hatchableFilter = initial.hatchableFilter;
-        this.deviantsFilter = initial.deviantsFilter;
-      },
-
-      resetFilterAndSort() {
-        this.resetFilter();
-        this.setSort(initial.sortKey, initial.sortOrder);
-      },
-    },
+    return {
+      sortKey,
+      sortOrder,
+      preserveSourceOrder,
+      nameFilter,
+      genusFilter,
+      attackTypeFilter,
+      attackElementFilter,
+      ridingActionFilter,
+      eggColorsFilter,
+      hatchableFilter,
+      deviantsFilter,
+      mode,
+      autoSwitchModes,
+      allGenera,
+      allRidingActions,
+      allEggColors,
+      filteredMonsters,
+      sortedMonsters,
+      groupedMonsters,
+      resultCount,
+      isEmpty,
+      isGrouped,
+      activeSort,
+      hasActiveSort,
+      activeFilters,
+      hasActiveFilters,
+      setMonsters,
+      setSort,
+      setSortOrder,
+      resetFilter,
+      resetFilterAndSort,
+    };
   });
 }
 
