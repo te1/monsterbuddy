@@ -1,0 +1,38 @@
+[
+  {
+    name: 'Fly',
+    type: 'utility',
+  },
+  {
+    name: 'Stealth',
+    type: 'utility',
+  },
+  {
+    name: 'Roar',
+    type: 'utility',
+  },
+  {
+    name: 'Jump',
+    type: 'explore',
+  },
+  {
+    name: 'Wall Climb',
+    type: 'explore',
+  },
+  {
+    name: 'Swim',
+    type: 'explore',
+  },
+  {
+    name: 'Ground Dive',
+    type: 'explore',
+  },
+  {
+    name: 'Melee Attack',
+    type: 'combat',
+  },
+  {
+    name: 'Breath',
+    type: 'combat',
+  },
+]

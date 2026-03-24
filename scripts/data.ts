@@ -13,6 +13,7 @@ import { MonsterSchema as S2MonsterSchema } from '~~/data/2/monsters.schema';
 import { RidingActionSchema as S2RidingActionSchema } from '~~/data/2/ridingActions.schema';
 import { MonsterSchema as S3MonsterSchema } from '~~/data/3/monsters.schema';
 import { RegionSchema as S3RegionSchema } from '~~/data/3/regions.schema';
+import { RidingActionSchema as S3RidingActionSchema } from '~~/data/3/ridingActions.schema';
 import { makeSlug } from '~~/app/utils/data';
 
 const generateEggSvgs = false;
@@ -52,6 +53,11 @@ function generate() {
     // -- 3 -------------------------------------------------
     { file: '3/monsters', schema: S3MonsterSchema.array(), transform: transformS3Monsters },
     { file: '3/regions', schema: S3RegionSchema.array(), transform: transformS3Regions },
+    {
+      file: '3/ridingActions',
+      schema: S3RidingActionSchema.array(),
+      transform: transformRidingActions,
+    },
   ];
 
   for (const job of jobs) {
