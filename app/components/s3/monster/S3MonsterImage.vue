@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
-  import S3MonsterIcon from '~/components/s3/monster/S3MonsterIcon.vue';
   import { getMonsterImageUrl, hasMonsterImage } from '~/services/3/assets';
 
   const props = withDefaults(
