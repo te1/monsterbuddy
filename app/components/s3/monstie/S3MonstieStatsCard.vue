@@ -51,7 +51,7 @@
       </div>
 
       <div v-if="stats?.total != null" class="flex items-center gap-2">
-        <span class="w-18">Total</span>
+        <span class="w-18">Major</span>
         <span class="flex-1">HP + Defense + Attack + Speed</span>
         <span class="text-right font-medium" v-text="stats?.total" />
       </div>
