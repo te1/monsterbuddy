@@ -146,19 +146,34 @@ export default defineNuxtConfig({
   },
 
   llms: {
-    domain: 'https://docs-template.nuxt.dev/',
-    title: 'Nuxt Docs Template',
-    description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
-    full: {
-      title: 'Nuxt Docs Template - Full Documentation',
-      description: 'This is the full documentation for the Nuxt Docs Template.',
-    },
+    domain: 'https://monsterbuddy.app',
+    title: 'Monster Buddy - Companion App For Monster Hunter Stories',
+    description:
+      "Learn or remember information useful during combat and general gameplay for Capcom's Monster Hunter Stories games. This includes all monsters with attack patterns and weaknesses, monsties with egg patterns and stats, and more.",
     sections: [
       {
-        title: 'Getting Started',
+        title: 'Monster Hunter Stories 1: Original / Remastered',
+        links: [
+          { title: 'Monsters with attack patterns and weaknesses', href: '/1/monsters' },
+          { title: 'Monsties with stats', href: '/1/monsties' },
+          { title: 'Visual egg guide', href: '/1/eggs' },
+        ],
       },
       {
-        title: 'Essentials',
+        title: 'Monster Hunter Stories 2: Wings of Ruin',
+        links: [
+          { title: 'Monsters with attack patterns and weaknesses', href: '/2/monsters' },
+          { title: 'Monsties with stats', href: '/2/monsties' },
+          { title: 'Visual egg guide', href: '/2/eggs' },
+        ],
+      },
+      {
+        title: 'Monster Hunter Stories 3: Twisted Reflection',
+        links: [
+          { title: 'Monsters with attack patterns and weaknesses', href: '/3/monsters' },
+          { title: 'Monsties with stats', href: '/3/monsties' },
+          { title: 'Visual egg guide', href: '/3/eggs' },
+        ],
       },
     ],
   },
