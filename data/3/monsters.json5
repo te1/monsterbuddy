@@ -3026,7 +3026,7 @@
     hatchable: true,
     monstie: {
       attack: 'power',
-      ridingActions: ['swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
+      ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Moonsault Splash',
       eggColors: ['green', 'yellow'],
       svgEggColors: ['#879f5e', '#ebb245'],
@@ -3381,7 +3381,7 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
-      ridingActions: ['Fly', 'wallclimb', 'Jump', 'Roar', 'Melee Attack'],
+      ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       kinshipSkill: 'Kadachi Fury',
       eggColors: ['gray', 'white', 'black', 'blue'],
       svgEggColors: ['#94b0b7', '#546b77'],
