@@ -63,18 +63,21 @@
     <div v-if="showStats">
       <div v-if="stats?.attack || stats?.speed || stats?.crit">
         Attack
-        <strong class="font-bold" :class="getStatClass('attack')" v-text="stats?.attack" />
-        , Speed
-        <strong class="font-bold" :class="getStatClass('speed')" v-text="stats?.speed" />
-        , Crit
+        <strong class="font-bold" :class="getStatClass('attack')" v-text="stats?.attack" />, Speed
+        <strong class="font-bold" :class="getStatClass('speed')" v-text="stats?.speed" />, Crit
         <strong class="font-bold" :class="getStatClass('crit')" v-text="stats?.crit" />
       </div>
 
       <div v-if="stats?.hp || stats?.defense">
         HP
-        <strong class="font-bold" :class="getStatClass('hp')" v-text="stats?.hp" />
-        , Defense
+        <strong class="font-bold" :class="getStatClass('hp')" v-text="stats?.hp" />, Defense
         <strong class="font-bold" :class="getStatClass('defense')" v-text="stats?.defense" />
+      </div>
+
+      <div v-if="stats?.bulk || stats?.total">
+        Bulk
+        <strong class="font-bold" :class="getStatClass('bulk')" v-text="stats?.bulk" />, Major
+        <strong class="font-bold" :class="getStatClass('total')" v-text="stats?.total" />
       </div>
     </div>
   </div>

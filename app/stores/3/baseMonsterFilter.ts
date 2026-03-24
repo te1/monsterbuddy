@@ -23,7 +23,9 @@ export type SortKey =
   | 'stats.base.speed'
   | 'stats.base.crit'
   | 'stats.base.hp'
-  | 'stats.base.defense';
+  | 'stats.base.defense'
+  | 'stats.base.bulk'
+  | 'stats.base.total';
 
 const sortValueGetters = {
   name: (item: Monster) => item.name,
@@ -34,6 +36,8 @@ const sortValueGetters = {
   'stats.base.crit': (item: Monster) => item.stats?.base?.crit,
   'stats.base.hp': (item: Monster) => item.stats?.base?.hp,
   'stats.base.defense': (item: Monster) => item.stats?.base?.defense,
+  'stats.base.bulk': (item: Monster) => item.stats?.base?.bulk,
+  'stats.base.total': (item: Monster) => item.stats?.base?.total,
 } satisfies Record<SortKey, (item: Monster) => unknown>;
 
 export type Mode = 'combat' | 'compact' | 'location' | 'rank' | 'ridingActions' | 'stats';

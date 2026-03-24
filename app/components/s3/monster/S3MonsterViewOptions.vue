@@ -44,6 +44,53 @@
       { value: 'genus', label: 'Genus', mode: 'location' },
     ];
 
+    if (props.showSortByStats) {
+      result.push(
+        {
+          value: 'stats.base.hp',
+          label: 'HP',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.defense',
+          label: 'Defense',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.attack',
+          label: 'Attack',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.speed',
+          label: 'Speed',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.crit',
+          label: 'Crit',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.bulk',
+          label: 'Bulk Stats',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.total',
+          label: 'Major Stats',
+          default: 'desc',
+          mode: 'stats',
+        }
+      );
+    }
+
     return result;
   });
 
