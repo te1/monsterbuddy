@@ -1,14 +1,14 @@
 import { markRaw } from 'vue';
-import type { Monster } from './types';
+import type { Monster, RidingAction } from './types';
 import { buildSearchGameRootItem, buildSearchHomePageItem, buildSearchPagesGroup } from '../search';
 import S3MonsterIcon from '~/components/s3/monster/S3MonsterIcon.vue';
-import { monsters } from './data';
-import { formatMonsterTag } from './presentation';
+import { monsters, sortedRidingActions } from './data';
+import { formatMonsterTag, formatRidingActionType } from './presentation';
 
 function getMonsterSuffix(monster: Monster) {
   const result: string[] = [];
 
-  result.push(...monster.tags.map(formatMonsterTag).filter(Boolean));
+  result.push(...monster.tags.map(formatMonsterTag).filter((tag) => tag != null));
 
   if (monster.hatchable) {
     result.push('Hatchable');
@@ -16,6 +16,20 @@ function getMonsterSuffix(monster: Monster) {
   }
 
   result.push('Monster');
+
+  return result.join(' ');
+}
+
+function getRidingActionSuffix(ridingAction: RidingAction) {
+  const result: string[] = [];
+
+  const type = formatRidingActionType(ridingAction.type);
+
+  if (type) {
+    result.push(type);
+  }
+
+  result.push('Riding Action');
 
   return result.join(' ');
 }
@@ -28,6 +42,13 @@ export function buildMhst3Search(appTitle: string) {
     data: monster,
   }));
 
+  const ridingActionItems = sortedRidingActions.map((ridingAction) => ({
+    label: ridingAction.name,
+    suffix: getRidingActionSuffix(ridingAction),
+    icon: 'ph:exclamation-mark-bold',
+    to: `/3/riding-actions/${ridingAction.slug}`,
+  }));
+
   return {
     groups: [
       {
@@ -35,6 +56,11 @@ export function buildMhst3Search(appTitle: string) {
         slot: 'monsters',
         label: 'Monsters',
         items: monsterItems,
+      },
+      {
+        id: 'ridingActions',
+        label: 'Riding Actions',
+        items: ridingActionItems,
       },
       buildSearchPagesGroup([
         buildSearchHomePageItem(appTitle),

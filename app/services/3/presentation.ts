@@ -1,4 +1,4 @@
-import type { Monster, MonsterTag } from './types';
+import type { Monster, MonsterTag, RidingActionType } from './types';
 
 export function formatMonsterInfo(monster: Monster) {
   return monster.tags.map(formatMonsterTag).join(', ');
@@ -20,6 +20,22 @@ export function formatMonsterTag(tag: MonsterTag) {
 
     case 'mutation':
       return 'Mutation';
+  }
+}
+
+export function formatRidingActionType(type: RidingActionType) {
+  switch (type) {
+    case 'utility':
+      return 'Utility';
+
+    case 'explore':
+      return 'Exploration';
+
+    case 'combat':
+      return 'Combat';
+
+    default:
+      return '';
   }
 }
 
