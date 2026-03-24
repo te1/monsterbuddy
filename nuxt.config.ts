@@ -45,12 +45,9 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-03-24',
 
-  sourcemap: false,
-
   vite: {
+    /*
     build: {
-      sourcemap: false,
-      /*
       rollupOptions: {
         output: {
           manualChunks(id) {
@@ -78,8 +75,8 @@ export default defineNuxtConfig({
           },
         },
       },
-      */
     },
+    */
     optimizeDeps: {
       include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string'],
     },
