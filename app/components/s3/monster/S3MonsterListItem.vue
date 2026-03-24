@@ -43,7 +43,7 @@
     </div>
 
     <div class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap">
-      <div class="leading-tight text-muted" v-text="info" />
+      <div class="min-h-lh leading-tight text-muted" v-text="info" />
       <div class="text-base leading-snug font-medium" v-text="monster.name" />
 
       <template v-if="showLocation || showRank">
