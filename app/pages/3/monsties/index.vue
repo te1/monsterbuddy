@@ -245,7 +245,7 @@
   <div>
     <AppPageHeader
       title="Monsties"
-      description="Easily find all monsties in their natural habitats and check on their attack types and stats"
+      description="Locations, attack types and stats"
       :headline="headline"
       class="hidden lg:block"
     />
