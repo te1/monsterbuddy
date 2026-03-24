@@ -40,7 +40,7 @@
       mode?: Mode;
     }[] = [
       { value: 'name', label: 'Name' },
-      { value: 'rank', label: 'Rarity', default: 'desc', mode: 'rank' },
+      { value: 'rank', label: 'Rank', default: 'desc', mode: 'rank' },
       { value: 'genus', label: 'Genus', mode: 'location' },
     ];
 

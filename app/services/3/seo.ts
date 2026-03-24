@@ -4,7 +4,7 @@ import { isDeviant } from './data';
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst3')}`;
 
-  let description = `${monster.name} is a ${monster.rank} star rarity `;
+  let description = `${monster.name} is a rank ${monster.rank} `;
 
   if (monster.hatchable) {
     description += 'hatchable ';

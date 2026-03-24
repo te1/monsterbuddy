@@ -193,7 +193,7 @@ export function makeMonsterFilterStore(
             return {
               name: state.sortKey,
               order: state.sortOrder,
-              caption: 'Rarity',
+              caption: 'Rank',
             };
 
           default:

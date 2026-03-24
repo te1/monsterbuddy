@@ -15,5 +15,5 @@ export default useMonsterFilter;
 export const modes: Modes = [
   { value: 'location', label: 'Location' },
   { value: 'combat', label: 'Attack Pattern' },
-  { value: 'rank', label: 'Rarity' },
+  { value: 'rank', label: 'Rank' },
 ];

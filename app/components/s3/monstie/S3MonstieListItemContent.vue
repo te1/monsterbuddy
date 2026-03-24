@@ -48,7 +48,7 @@
       --->
 
       <div v-if="showRank">
-        Rarity
+        Rank
         <strong class="font-bold" v-text="monster.rank" />
       </div>
     </template>
