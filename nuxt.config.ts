@@ -46,8 +46,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-02-01',
 
   vite: {
-    /*
     build: {
+      sourcemap: false,
+      /*
       rollupOptions: {
         output: {
           manualChunks(id) {
@@ -75,8 +76,8 @@ export default defineNuxtConfig({
           },
         },
       },
+      */
     },
-    */
     optimizeDeps: {
       include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string'],
     },
@@ -86,6 +87,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
+      concurrency: 1,
       autoSubfolderIndex: false,
     },
 
