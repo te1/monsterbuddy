@@ -89,7 +89,6 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
-      concurrency: 1,
       autoSubfolderIndex: false,
     },
 
