@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+  import type { Source } from '~/stores/3/monstieSources';
   import S3MonstieSidebar from '~/components/s3/monstie/S3MonstieSidebar.vue';
   import { monsties } from '~/services/3/data';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
   import useHistoryStore from '~/stores/3/historyStore';
   import useMonstieFilter, { modes } from '~/stores/3/monstieFilter';
-  import useMonstieSources, { type Source } from '~/stores/3/monstieSources';
+  import useMonstieSources from '~/stores/3/monstieSources';
 
   definePageMeta({
     sidebarComponent: S3MonstieSidebar,

@@ -1,9 +1,10 @@
 <script lang="ts" setup>
+  import type { Source } from '~/stores/3/eggSources';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
   import S3EggSidebar from '~/components/s3/egg/S3EggSidebar.vue';
   import useHistoryStore from '~/stores/3/historyStore';
   import useEggFilter, { modes } from '~/stores/3/eggFilter';
-  import useEggSources, { type Source } from '~/stores/3/eggSources';
+  import useEggSources from '~/stores/3/eggSources';
   import useEggsDisplay from '~/stores/3/eggDisplays';
   import { getGenera, monsties } from '~/services/3/data';
 
