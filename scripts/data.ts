@@ -324,13 +324,14 @@ function transformS3Monsters(data: unknown) {
       if (stats.base) {
         const base = stats.base as Record<string, unknown>;
         base.hp ??= null;
+        base.defense ??= null;
         base.attack ??= null;
         base.speed ??= null;
-        base.defense ??= null;
         base.crit ??= null;
-        base.recovery ??= null;
         base.stamina ??= null;
-        base.bst = getS3MonsterBST(base);
+        base.recovery ??= null;
+        base.bulk = getS3MonsterBulk(base);
+        base.total = getS3MonsterTotal(base);
       }
 
       if (stats.elementalResistance) {
@@ -413,14 +414,20 @@ function generateEggSvg(monster: Record<string, unknown>) {
   writeFileSync(outPath, svg.trimEnd(), 'utf-8');
 }
 
-function getS3MonsterBST(base: Record<string, unknown>) {
-  const bst =
+function getS3MonsterBulk(base: Record<string, unknown>) {
+  const sum = Number(base.hp ?? 0) + Number(base.defense ?? 0);
+
+  return sum > 0 ? sum : null;
+}
+
+function getS3MonsterTotal(base: Record<string, unknown>) {
+  const sum =
     Number(base.hp ?? 0) +
     Number(base.attack ?? 0) +
     Number(base.speed ?? 0) +
     Number(base.defense ?? 0);
 
-  return bst > 0 ? bst : null;
+  return sum > 0 ? sum : null;
 }
 
 function transformS3Regions(data: unknown) {

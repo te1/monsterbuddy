@@ -41,13 +41,14 @@ export type MonsterRelation = z.infer<typeof MonsterRelationSchema>;
 
 const MonsterStatsBaseSchema = z.object({
   hp: z.number().nullable(),
+  defense: z.number().nullable(),
   attack: z.number().nullable(),
   speed: z.number().nullable(),
-  defense: z.number().nullable(),
   crit: z.number().nullable(),
-  recovery: z.number().nullable(),
   stamina: z.number().nullable(),
-  bst: z.number().nullable(),
+  recovery: z.number().nullable(),
+  bulk: z.number().nullable(),
+  total: z.number().nullable(),
 });
 export type MonsterStatsBase = z.infer<typeof MonsterStatsBaseSchema>;
 
