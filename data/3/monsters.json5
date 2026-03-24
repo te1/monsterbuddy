@@ -164,7 +164,7 @@
     hatchable: true,
     monstie: {
       attack: 'power',
-      ridingActions: ['jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Anja Assault',
       eggColors: ['pink', 'black'],
       svgEggColors: ['#da7779', '#5a4856'],
@@ -1032,7 +1032,7 @@
     hatchable: true,
     monstie: {
       attack: 'power',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['red', 'pink', 'green'],
       svgEggColors: ['#bd415a', '#95a452'],
     },
@@ -2274,7 +2274,7 @@
     hatchable: true,
     monstie: {
       attack: 'technical',
-      ridingActions: ['fly', 'jump', 'roar', 'melee'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       kinshipSkill: 'Jet Balloon',
       eggColors: ['white', 'pink'],
       svgEggColors: ['#ed9f99', '#f0e9de'],
@@ -2698,7 +2698,7 @@
     },
     monstie: {
       attack: 'power',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Sky-High Dive',
     },
   },
@@ -2765,7 +2765,7 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Scorching Slice',
       eggColors: ['white', 'yellow', 'green'],
       svgEggColors: ['#d0c992', '#65bc1e'],
@@ -2841,7 +2841,7 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Scorching Slice',
       eggColors: ['pink'],
       svgEggColors: ['#ee7275', '#e99184'],
@@ -2891,7 +2891,7 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Dual Razor',
       eggColors: ['green', 'purple'],
       svgEggColors: ['#a1b352', '#82386c'],
@@ -3026,7 +3026,7 @@
     hatchable: true,
     monstie: {
       attack: 'power',
-      ridingActions: ['swim', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Moonsault Splash',
       eggColors: ['green', 'yellow'],
       svgEggColors: ['#879f5e', '#ebb245'],
@@ -3381,7 +3381,7 @@
     hatchable: true,
     monstie: {
       attack: 'speed',
-      ridingActions: ['fly', 'wallclimb', 'jump', 'roar', 'melee'],
+      ridingActions: ['Fly', 'wallclimb', 'Jump', 'Roar', 'Melee Attack'],
       kinshipSkill: 'Kadachi Fury',
       eggColors: ['gray', 'white', 'black', 'blue'],
       svgEggColors: ['#94b0b7', '#546b77'],
@@ -3748,7 +3748,7 @@
     hatchable: true,
     monstie: {
       attack: 'technical',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['pink', 'blue'],
       svgEggColors: ['#e0586f', '#2189d0'],
@@ -3818,7 +3818,7 @@
     hatchable: true,
     monstie: {
       attack: 'technical',
-      ridingActions: ['fly', 'jump', 'roar', 'melee', 'breath'],
+      ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['blue', 'green', 'yellow'],
       svgEggColors: ['#4a9f9b', '#e4a24b'],
