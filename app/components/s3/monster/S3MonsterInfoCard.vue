@@ -1,11 +1,13 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import { formatMonsterInfo } from '~/services/3/presentation';
+  import { getMonsterLocations } from '~/services/3/data';
 
   const props = defineProps<{ monster: Monster }>();
 
   const info = computed(() => formatMonsterInfo(props.monster));
-  const hasLocations = computed(() => false); // TODO locations
+  const locations = computed(() => getMonsterLocations(props.monster));
+  const hasLocations = computed(() => locations.value.length > 0);
 </script>
 
 <template>
@@ -26,22 +28,12 @@
           <span v-text="monster.genus" />
         </div>
 
-        <!-- TODO habitat?
-        <div class="flex items-center gap-1">
-          <UTooltip text="Habitat">
-            <UIcon name="ph:map-pin-fill" class="text-dimmed" />
-          </UTooltip>
-
-          <span v-text="monster.habitat" />
-        </div>
-        -->
-
         <div class="flex items-center gap-1">
           <UTooltip text="Rank">
             <UIcon name="ph:star-fill" class="text-dimmed" />
           </UTooltip>
 
-          <span v-text="monster.rank" />
+          <span v-text="monster.rank ?? '?'" />
         </div>
       </div>
 
@@ -54,7 +46,7 @@
             alt="Hatchable"
             width="32"
             height="32"
-            class="size-8"
+            class="-mb-5 size-8"
           />
         </UTooltip>
       </div>
@@ -63,13 +55,11 @@
     <div v-if="hasLocations">
       <h3 class="text-lg font-medium">Locations</h3>
 
-      <!-- TODO locations
       <S3MonsterLocation
-        v-for="location in monster.locations"
-        :key="location.main"
+        v-for="location in locations"
+        :key="`${location.type}_${location.region}_${location.area}`"
         :location="location"
       />
-      -->
     </div>
   </section>
 </template>
