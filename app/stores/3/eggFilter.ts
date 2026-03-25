@@ -3,7 +3,7 @@ import { makeMonsterFilterStore } from './baseMonsterFilter';
 import { monsties } from '~/services/3/data';
 
 const initial = {
-  sortKey: 'name', // TODO habitat?
+  sortKey: 'rank',
   sortOrder: 'asc',
   mode: 'compact',
   autoSwitchModes: ['location', 'ridingActions', 'rank'] as Mode[],
