@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div v-if="value != null" class="flex items-center gap-2">
     <span class="w-18" v-text="label" />
 
     <span class="flex flex-1 gap-0.5">

@@ -48,7 +48,7 @@
         <ElementLabel class="font-medium" :element="monster?.element ?? undefined" />
       </div>
 
-      <div class="flex items-center">
+      <div v-if="monster?.monstie?.kinshipSkill" class="flex items-center">
         <span class="mr-1.5 w-40">Kinship Skill</span>
 
         <div class="pl-8 font-medium dark:brightness-150" v-text="monster?.monstie?.kinshipSkill" />
