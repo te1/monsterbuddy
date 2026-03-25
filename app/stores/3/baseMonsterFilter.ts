@@ -184,6 +184,10 @@ export function makeMonsterFilterStore(
     const isGrouped = computed(() => ['genus'].includes(sortKey.value));
 
     const activeSort = computed(() => {
+      if (preserveSourceOrder.value) {
+        return null;
+      }
+
       switch (sortKey.value) {
         case 'name':
           return {
@@ -197,6 +201,55 @@ export function makeMonsterFilterStore(
             name: sortKey.value,
             order: sortOrder.value,
             caption: 'Rank',
+          };
+
+        case 'stats.base.hp':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'HP',
+          };
+
+        case 'stats.base.defense':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Defense',
+          };
+
+        case 'stats.base.attack':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Attack',
+          };
+
+        case 'stats.base.speed':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Speed',
+          };
+
+        case 'stats.base.crit':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Crit',
+          };
+
+        case 'stats.base.bulk':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Bulk',
+          };
+
+        case 'stats.base.total':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Total',
           };
 
         default:

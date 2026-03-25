@@ -1,8 +1,10 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
-  import { formatMonsterInfo } from '~/services/3/presentation';
+  import { formatLocationType, formatMonsterInfo } from '~/services/3/presentation';
   import useMonstieFilter from '~/stores/3/monstieFilter';
+  import { take } from 'es-toolkit/array';
+  import { getMonsterLocations } from '~/services/3/data';
 
   const props = withDefaults(
     defineProps<{
@@ -17,6 +19,9 @@
   const monstieFilter = useMonstieFilter();
 
   const info = computed(() => formatMonsterInfo(props.monster));
+
+  const locations = computed(() => take(getMonsterLocations(props.monster), 2));
+
   const stats = computed(() => props.monster?.stats?.base);
 
   const showLocation = computed(() => props.mode === 'location');
@@ -41,11 +46,17 @@
 
     <template v-if="showLocation || showRank">
       <div v-text="monster.genus" />
-      <!-- TODO location
-      <div v-text="monster.habitat" />
 
-      <div v-if="showLocation && location" v-text="location" />
-      --->
+      <template v-if="showLocation">
+        <div
+          v-for="location in locations"
+          :key="`${location.type}_${location.region}_${location.area}`"
+        >
+          {{ formatLocationType(location.type) }}: {{ location.area ?? location.region }}
+        </div>
+
+        <!-- <div v-if="monster.tags.includes('mutation')" v-text="formatMonsterTag('mutation')" /> -->
+      </template>
 
       <div v-if="showRank">
         Rank
@@ -61,23 +72,45 @@
     </div>
 
     <div v-if="showStats">
-      <div v-if="stats?.attack || stats?.speed || stats?.crit">
-        Attack
-        <strong class="font-bold" :class="getStatClass('attack')" v-text="stats?.attack" />, Speed
-        <strong class="font-bold" :class="getStatClass('speed')" v-text="stats?.speed" />, Crit
-        <strong class="font-bold" :class="getStatClass('crit')" v-text="stats?.crit" />
+      <div v-if="stats?.attack || stats?.speed || stats?.crit" class="flex">
+        <span v-if="stats?.attack">
+          Attack
+          <strong class="font-bold" :class="getStatClass('attack')" v-text="stats?.attack" />
+        </span>
+
+        <span v-if="stats?.speed">
+          , Speed
+          <strong class="font-bold" :class="getStatClass('speed')" v-text="stats?.speed" />
+        </span>
+
+        <span v-if="stats?.crit">
+          , Crit
+          <strong class="font-bold" :class="getStatClass('crit')" v-text="stats?.crit" />
+        </span>
       </div>
 
-      <div v-if="stats?.hp || stats?.defense">
-        HP
-        <strong class="font-bold" :class="getStatClass('hp')" v-text="stats?.hp" />, Defense
-        <strong class="font-bold" :class="getStatClass('defense')" v-text="stats?.defense" />
+      <div v-if="stats?.hp || stats?.defense" class="flex">
+        <span v-if="stats?.hp">
+          HP
+          <strong class="font-bold" :class="getStatClass('hp')" v-text="stats?.hp" />
+        </span>
+
+        <span v-if="stats?.defense">
+          , Defense
+          <strong class="font-bold" :class="getStatClass('defense')" v-text="stats?.defense" />
+        </span>
       </div>
 
-      <div v-if="stats?.bulk || stats?.total">
-        Bulk
-        <strong class="font-bold" :class="getStatClass('bulk')" v-text="stats?.bulk" />, Major
-        <strong class="font-bold" :class="getStatClass('total')" v-text="stats?.total" />
+      <div v-if="stats?.bulk || stats?.total" class="flex">
+        <span v-if="stats?.bulk">
+          Bulk
+          <strong class="font-bold" :class="getStatClass('bulk')" v-text="stats?.bulk" />
+        </span>
+
+        <span v-if="stats?.total">
+          , Major
+          <strong class="font-bold" :class="getStatClass('total')" v-text="stats?.total" />
+        </span>
       </div>
     </div>
   </div>
