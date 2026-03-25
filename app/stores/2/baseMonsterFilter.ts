@@ -110,7 +110,9 @@ export function makeMonsterFilterStore(
   initial: MonsterFilterInitialState
 ) {
   return defineStore(storeId, () => {
+    // -- state
     const monsters = skipHydrate(shallowRef(initialMonsters));
+
     const sortKey = ref(initial.sortKey);
     const sortOrder = ref(initial.sortOrder);
     const preserveSourceOrder = ref(false);
@@ -126,15 +128,23 @@ export function makeMonsterFilterStore(
     const eggColorsFilter = ref(initial.eggColorsFilter);
     const hatchableFilter = ref(initial.hatchableFilter);
     const deviantsFilter = ref(initial.deviantsFilter);
+
     const mode = ref(initial.mode);
     const autoSwitchModes = ref(initial.autoSwitchModes);
 
+    // -- getters
     const allGenera = computed(() => getGenera(monsters.value));
+
     const allHabitats = computed(() => getHabitats(monsters.value));
+
     const allCoopQuests = computed(() => getCoopQuests(monsters.value));
+
     const allCatavanStands = computed(() => getCatavanStands(monsters.value));
+
     const allEldersLairFloors = computed(() => getEldersLairFloors(monsters.value));
+
     const allRidingActions = computed(() => getRidingActions(monsters.value));
+
     const allEggColors = computed(() => getEggColors(monsters.value));
 
     const filteredMonsters = computed(() => {
@@ -248,8 +258,11 @@ export function makeMonsterFilterStore(
     });
 
     const resultCount = computed(() => sortedMonsters.value.length);
+
     const isEmpty = computed(() => sortedMonsters.value.length <= 0);
+
     const isGrouped = computed(() => ['genus', 'habitat', 'eldersLair'].includes(sortKey.value));
+
     const activeSort = computed(() => {
       switch (sortKey.value) {
         case 'name':
@@ -314,6 +327,7 @@ export function makeMonsterFilterStore(
     });
 
     const hasActiveSort = computed(() => activeSort.value != null);
+
     const activeFilters = computed(() => {
       const result: { name: FilterKey; value: string }[] = [];
 
@@ -387,6 +401,7 @@ export function makeMonsterFilterStore(
 
     const hasActiveFilters = computed(() => !!activeFilters.value.length);
 
+    // -- actions
     function setMonsters(
       nextMonsters: Monster[],
       options: {
@@ -429,6 +444,7 @@ export function makeMonsterFilterStore(
     }
 
     return {
+      // -- state
       sortKey,
       sortOrder,
       preserveSourceOrder,
@@ -446,6 +462,8 @@ export function makeMonsterFilterStore(
       deviantsFilter,
       mode,
       autoSwitchModes,
+
+      // -- getters
       allGenera,
       allHabitats,
       allCoopQuests,
@@ -464,6 +482,8 @@ export function makeMonsterFilterStore(
       hasActiveSort,
       activeFilters,
       hasActiveFilters,
+
+      // -- actions
       setMonsters,
       setSort,
       setSortOrder,

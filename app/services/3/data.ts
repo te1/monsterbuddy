@@ -99,3 +99,117 @@ export function getMonstersByHatchable(
 export function isDeviant(monster: Monster): boolean {
   return monster.tags.includes('deviant');
 }
+
+export type MonsterLocationType = 'permanent' | 'world';
+
+export type MonsterLocation = {
+  type: MonsterLocationType;
+  region: string;
+  area?: string;
+};
+
+export function getMonsterLocations(monster: Monster): MonsterLocation[] {
+  const locations: MonsterLocation[] = [];
+
+  let feral = false;
+  let invasive = false;
+  let endangered = false;
+  let calamitous = false;
+
+  for (const region of regions) {
+    if (region.monsters.world.includes(monster.name)) {
+      locations.push({
+        type: 'world',
+        region: region.name,
+      });
+    }
+
+    for (const area of region.areas) {
+      if (area.permanent.includes(monster.name)) {
+        locations.push({
+          type: 'permanent',
+          region: region.name,
+          area: area.name,
+        });
+      }
+
+      if (area.feral.includes(monster.name)) {
+        feral = true;
+
+        locations.push({
+          type: 'world',
+          region: region.name,
+          area: area.name,
+        });
+      }
+
+      if (area.invasive.includes(monster.name)) {
+        invasive = true;
+
+        locations.push({
+          type: 'world',
+          region: region.name,
+          area: area.name,
+        });
+      }
+
+      if (area.endangered.includes(monster.name)) {
+        endangered = true;
+
+        locations.push({
+          type: 'world',
+          region: region.name,
+          area: area.name,
+        });
+      }
+
+      if (area.calamitous.includes(monster.name)) {
+        calamitous = true;
+
+        locations.push({
+          type: 'world',
+          region: region.name,
+          area: area.name,
+        });
+      }
+    }
+
+    if (!feral && region.monsters.feral.includes(monster.name)) {
+      feral = true;
+
+      locations.push({
+        type: 'world',
+        region: region.name,
+      });
+    }
+
+    if (!invasive && region.monsters.invasive.includes(monster.name)) {
+      invasive = true;
+
+      locations.push({
+        type: 'world',
+        region: region.name,
+      });
+    }
+
+    if (!endangered && region.monsters.endangered.includes(monster.name)) {
+      endangered = true;
+
+      locations.push({
+        type: 'world',
+        region: region.name,
+      });
+    }
+
+    if (!calamitous && region.monsters.calamitous.includes(monster.name)) {
+      calamitous = true;
+
+      locations.push({
+        type: 'world',
+        region: region.name,
+      });
+    }
+  }
+
+  return locations;
+}

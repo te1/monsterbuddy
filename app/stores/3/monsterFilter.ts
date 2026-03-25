@@ -3,7 +3,7 @@ import { makeMonsterFilterStore } from './baseMonsterFilter';
 import { monsters } from '~/services/3/data';
 
 const initial = {
-  sortKey: 'name',
+  sortKey: 'rank',
   sortOrder: 'asc',
   mode: 'location',
   autoSwitchModes: ['location', 'combat', 'rank'] as Mode[],

@@ -283,14 +283,6 @@
           >
             <UIcon v-if="monsterFilter.sortKey === 'genus'" name="ph:dna" class="w-6 text-muted" />
 
-            <!--TODO location
-            <UIcon
-              v-if="monsterFilter.sortKey === 'habitat'"
-              name="ph:map-pin-fill"
-              class="w-6 text-dimmed"
-            />
-            -->
-
             <div class="font-medium" v-text="group.key" />
           </div>
 

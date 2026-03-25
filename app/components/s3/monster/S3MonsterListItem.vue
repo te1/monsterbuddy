@@ -2,7 +2,8 @@
   import type { Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
   import { take } from 'es-toolkit/array';
-  import { formatMonsterInfo, formatState } from '~/services/3/presentation';
+  import { formatLocationType, formatMonsterInfo, formatState } from '~/services/3/presentation';
+  import { getMonsterLocations } from '~/services/3/data';
 
   const props = withDefaults(
     defineProps<{
@@ -17,6 +18,8 @@
   );
 
   const info = computed(() => formatMonsterInfo(props.monster));
+
+  const locations = computed(() => take(getMonsterLocations(props.monster), 2));
 
   const combatStates = computed(() => {
     return take(Object.entries(props.monster.monster?.states ?? {}), 3);
@@ -48,15 +51,21 @@
 
       <template v-if="showLocation || showRank">
         <div v-text="monster.genus" />
-        <!-- TODO location
-        <div v-text="monster.habitat" />
 
-        <div v-if="showLocation && location" v-text="location" />
-        -->
+        <template v-if="showLocation">
+          <div
+            v-for="location in locations"
+            :key="`${location.type}_${location.region}_${location.area}`"
+          >
+            {{ formatLocationType(location.type) }}: {{ location.area ?? location.region }}
+          </div>
+
+          <!-- <div v-if="monster.tags.includes('mutation')" v-text="formatMonsterTag('mutation')" /> -->
+        </template>
 
         <div v-if="showRank">
           Rank
-          <span class="font-bold" v-text="monster.rank" />
+          <span class="font-bold" v-text="monster.rank ?? '?'" />
         </div>
       </template>
 

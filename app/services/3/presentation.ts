@@ -1,3 +1,4 @@
+import type { MonsterLocationType } from './data';
 import type { Monster, MonsterTag, RidingActionType } from './types';
 
 export function formatMonsterInfo(monster: Monster) {
@@ -50,5 +51,18 @@ export function formatState(state: string) {
 
     default:
       return state;
+  }
+}
+
+export function formatLocationType(locationType: MonsterLocationType) {
+  switch (locationType) {
+    case 'permanent':
+      return 'Habitat';
+
+    case 'world':
+      return 'World';
+
+    default:
+      return '';
   }
 }
