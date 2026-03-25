@@ -15,11 +15,13 @@
   const eggIcons = import.meta.glob('~/assets/2/egg/*.svg', {
     eager: true,
     import: 'default',
+    query: '?inline',
   });
 
   const monsterIcons = import.meta.glob('~/assets/2/monster-icon/*.png', {
     eager: true,
     import: 'default',
+    query: '?inline',
   });
 
   const eggIcon = computed(() => eggIcons[`/assets/2/egg/${props.monster.name}.svg`] ?? undefined);

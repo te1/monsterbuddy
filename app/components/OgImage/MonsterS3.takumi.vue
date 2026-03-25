@@ -15,11 +15,13 @@
   const eggIcons = import.meta.glob('~/assets/3/egg/*.svg', {
     eager: true,
     import: 'default',
+    query: '?inline',
   });
 
   const monsterIcons = import.meta.glob('~/assets/3/monster-icon/*.png', {
     eager: true,
     import: 'default',
+    query: '?inline',
   });
 
   const eggIcon = computed(() => eggIcons[`/assets/3/egg/${props.monster.name}.svg`] ?? undefined);
@@ -52,9 +54,6 @@
       <ul class="flex flex-col gap-6 text-5xl text-toned">
         <li class="text-dimmed">{{ formatMonsterInfo(monster) }}</li>
         <li>{{ monster.genus }}</li>
-        <!-- TODO location
-        <li>{{ monster.habitat }}</li>
-        -->
       </ul>
     </section>
   </div>
