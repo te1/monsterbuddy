@@ -4,19 +4,29 @@ import { isDeviant } from './data';
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst3')}`;
 
-  let description = `${monster.name} is a rank ${monster.rank} `;
+  let description = `${monster.name} is a rank ${monster.rank ?? '?'} `;
 
   if (monster.hatchable) {
     description += 'hatchable ';
   }
 
-  // TODO calamitous, endangered, mutation?
   if (isDeviant(monster)) {
     description += 'Deviant ';
   }
 
-  // TODO location
+  if (monster.tags.includes('endangered')) {
+    description += 'endangered ';
+  }
+
+  if (monster.tags.includes('calamitous')) {
+    description += 'Calamitous ';
+  }
+
   description += `${monster.genus}`;
+
+  if (monster.tags.includes('mutation')) {
+    description += ' (Mutation)';
+  }
 
   return {
     title,

@@ -31,19 +31,29 @@
   const headline = gameTypeToFullName('mhst3');
 
   const description = computed(() => {
-    let result = `Rank ${monster.rank} `;
+    let result = `Rank ${monster.rank ?? '?'} `;
 
     if (monster.hatchable) {
       result += 'hatchable ';
     }
 
-    // TODO calamitous, endangered, mutation?
     if (isDeviant(monster)) {
       result += 'Deviant ';
     }
 
-    // TODO location
+    if (monster.tags.includes('endangered')) {
+      result += 'endangered ';
+    }
+
+    if (monster.tags.includes('calamitous')) {
+      result += 'Calamitous ';
+    }
+
     result += `${monster.genus}`;
+
+    if (monster.tags.includes('mutation')) {
+      result += ' (Mutation)';
+    }
 
     return result;
   });
