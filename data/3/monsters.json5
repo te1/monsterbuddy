@@ -352,6 +352,7 @@
   {
     name: 'Barioth',
     genus: 'Flying Wyvern',
+    tags: ['endangered'],
     related: [{ type: 'subspecies', monster: 'Sand Barioth' }],
     rank: 4,
     element: 'ice',
@@ -3251,6 +3252,7 @@
   {
     name: 'Tigrex',
     genus: 'Flying Wyvern',
+    tags: ['endangered'],
     related: [
       { type: 'subspecies', monster: 'Brute Tigrex' },
       { type: 'deviant', monster: 'Grimclaw Tigrex' },
@@ -3885,6 +3887,7 @@
   {
     name: 'Zinogre',
     genus: 'Fanged Wyvern',
+    tags: ['endangered'],
     related: [
       { type: 'subspecies', monster: 'Stygian Zinogre' },
       { type: 'deviant', monster: 'Thunderlord Zinogre' },
