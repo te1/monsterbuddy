@@ -2,8 +2,8 @@ import { z } from 'zod';
 import { ElementTypeSchema } from '~~/data/shared.schema';
 
 const RegionMonstersSchema = z.object({
-  large: z.array(z.string()),
-  small: z.array(z.string()),
+  permanent: z.array(z.string()),
+  world: z.array(z.string()),
   feral: z.array(z.string()),
   invasive: z.array(z.string()),
   endangered: z.array(z.string()),

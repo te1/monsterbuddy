@@ -3,13 +3,11 @@
   {
     name: 'Azuria',
     monsters: {
-      large: [
+      permanent: [
         'Anjanath',
         'Chatacabra',
-        'Espinas',
         'Gypceros',
         'Purple Gypceros',
-        'Namielle',
         'Nerscylla',
         'Paolumu',
         'Plesioth',
@@ -20,16 +18,28 @@
         'Yian Kut-Ku',
         'Blue Yian Kut-Ku',
       ],
-      small: ['Aptonoth', 'Bnahabra', 'Kelbi', 'Ludroth', 'Moofah', 'Velociprey'],
+      world: [
+        'Brachydios',
+        'Espinas',
+        'Magnamalo',
+        'Aptonoth',
+        'Bnahabra',
+        'Kelbi',
+        'Ludroth',
+        'Moofah',
+        'Velociprey',
+      ],
       feral: [
         'Feral Chatacabra',
         'Feral Yian Kut-Ku',
         'Feral Paolumu',
         'Feral Nerscylla',
         'Feral Brachydios',
+        'Feral Velocidrome',
+        'Feral Gypceros',
       ],
-      invasive: ['Invasive Plesioth', 'Invasive Seregios', 'Invasive Yian Garuga'],
-      endangered: ['Astalos', 'Lagiacrus', 'Rathian'],
+      invasive: ['Invasive Yian Garuga', 'Invasive Plesioth', 'Invasive Seregios'],
+      endangered: ['Rathian', 'Lagiacrus', 'Astalos'],
       calamitous: ['Namielle'],
     },
     powers: {
@@ -90,11 +100,11 @@
   {
     name: 'Canalta Timberland',
     monsters: {
-      large: [
+      permanent: [
         'Aknosom',
         'Arzuros',
         'Bishaten',
-        'Deviljho',
+        'Canyne',
         'Garangolm',
         'Great Izuchi',
         'Khezu',
@@ -107,18 +117,27 @@
         'Tetranadon',
         'Yian Garuga',
       ],
-      small: ['Blango', 'Canyne', 'Bnahabra', 'Gargwa', 'Slagtoth'],
+      world: [
+        'Deviljho',
+        'Tobi-Kadachi',
+        'Yama Tsukami', // ???
+        'Blango',
+        'Bnahabra',
+        'Gargwa',
+        'Slagtoth',
+      ],
       feral: [
-        'Feral Aknosom',
+        'Feral Somnacanth',
+        'Feral Tobi-Kadachi',
+        'Feral Tetranadon',
+        'Feral Bishaten',
         'Feral Espinas',
         'Feral Great Izuchi',
-        'Feral Somnacanth',
-        'Feral Tetranadon',
-        'Feral Tobi-Kadachi',
-        'Feral Velocidrome',
-        'Feral Yama Tsukami',
+        'Feral Aknosom',
+        'Feral Velocidrome', // TODO not here?
+        'Feral Yama Tsukami', // TODO not here?
       ],
-      invasive: ['Invasive Arzuros', 'Invasive Nerscylla', 'Invasive Shogun Ceanataur'],
+      invasive: ['Invasive Arzuros', 'Invasive Shogun Ceanataur', 'Invasive Nerscylla'],
       endangered: ['Canyne', 'Mizutsune', 'Nargacuga'],
       calamitous: ['Thunder Serpent Narwa', 'Wind Serpent Ibushi'],
     },
@@ -144,7 +163,7 @@
         name: 'Cataracts',
         element: 'water',
         permanent: ['Pukei-Pukei', 'Arzuros', 'Somnacanth', 'Tetranadon', 'Purple Ludroth'],
-        feral: [],
+        feral: ['Feral Somnacanth'],
         invasive: [],
         endangered: [],
         calamitous: [],
@@ -183,7 +202,7 @@
   {
     name: 'Tarkuan',
     monsters: {
-      large: [
+      permanent: [
         'Ajarakan',
         'Almudron',
         'Barroth',
@@ -197,23 +216,29 @@
         'Black Gravios',
         'Green Plesioth',
         'Kulu-Ya-Ku',
-        'Nibelsnarf',
         'Odogaron',
         'Rakna-Kadaki',
         'Rey Dau',
         'Shogun Ceanataur',
         'Shrouded Nerscylla',
       ],
-      small: ['Rachnoid', 'Remobra'],
+      world: [
+        'Anjanath', // ???
+        'Chatacabra',
+        'Nibelsnarf',
+        'Bnahabra',
+        'Rachnoid',
+        'Remobra',
+      ],
       feral: [
         'Feral Ajarakan',
         'Feral Barroth',
-        'Feral Glavenus',
         'Feral Gravios',
-        'Feral Rakna-Kadaki',
+        'Feral Glavenus',
+        'Feral Rakna-Kadaki', // TODO not here?
       ],
-      invasive: ['Invasive Diablos', 'Invasive Odogaron'],
-      endangered: ['Tigrex', 'Zinogre'],
+      invasive: ['Invasive Odogaron', 'Invasive Diablos'],
+      endangered: ['Zinogre', 'Tigrex'],
       calamitous: ['Yama Tsukami'],
     },
     powers: {
@@ -229,7 +254,7 @@
         name: "Colossal Dragon's Remains",
         element: 'dragon',
         permanent: ['Almudron', 'Kulu-Ya-Ku', 'Garangolm', 'Shogun Ceanataur', 'Barroth'],
-        feral: ['Feral Ajarakan', 'Feral Barroth'],
+        feral: ['Feral Barroth', 'Feral Ajarakan'],
         invasive: ['Invasive Diablos'],
         endangered: ['Tigrex'],
         calamitous: [],
@@ -261,7 +286,7 @@
       {
         name: "Death's Maw",
         element: 'none',
-        permanent: ['Black Diablos', 'Black Gravios', 'Odogaron', 'Rakna-Kadaki', 'Rey Dau'],
+        permanent: ['Rey Dau', 'Black Diablos', 'Black Gravios', 'Odogaron', 'Rakna-Kadaki'],
         feral: ['Feral Rakna-Kadaki'],
         invasive: [],
         endangered: [],
@@ -274,13 +299,13 @@
   {
     name: 'Serathis',
     monsters: {
-      large: [
+      permanent: [
         'Arkveld',
-        'Fulgur Anjanath',
         'Blangonga',
         'Brachydios',
-        'Ebony Odogaron',
         'Deviljho',
+        'Ebony Odogaron',
+        'Fulgur Anjanath',
         'Goss Harag',
         'Jade Barroth',
         'Legiana',
@@ -292,11 +317,11 @@
         // 'Shogun Ceanataur', // TODO is this real?
         'Velkhana',
       ],
-      small: [],
-      feral: ['Feral Legiana', 'Feral Magnamalo'],
+      world: ['Seregios', 'Somacanth', 'Aurora Somnacanth', 'Blango', 'Izuchi', 'Remobra'],
+      feral: ['Feral Blangonga', 'Feral Legiana', 'Feral Magnamalo'],
       invasive: ['Invasive Khezu'],
       endangered: ['Barioth'],
-      calamitous: ['Velkhana', 'Malzeno'],
+      calamitous: ['Velkhana', 'Malzeno'], // no Malzeno?
     },
     powers: {
       skills: {},
@@ -306,8 +331,8 @@
       {
         name: 'Glacial Gaps',
         element: 'water',
-        permanent: ['Blangonga', 'Brachydios', 'Red Khezu', 'Legiana', 'Velkhana'],
-        feral: [],
+        permanent: ['Velkhana', 'Blangonga', 'Brachydios', 'Legiana', 'Red Khezu'],
+        feral: ['Feral Blangonga'],
         invasive: ['Invasive Khezu'],
         endangered: ['Barioth'],
         calamitous: ['Velkhana'],
@@ -324,7 +349,7 @@
       {
         name: 'Sacrosanctum / Lazlion',
         element: 'dragon',
-        permanent: ['Arkveld', 'Ebony Odogaron', 'Deviljho', 'Malzeno', 'Rathalos'],
+        permanent: ['Malzeno', 'Arkveld', 'Deviljho', 'Ebony Odogaron', 'Rathalos'],
         feral: ['Feral Magnamalo'],
         invasive: [],
         endangered: [],
