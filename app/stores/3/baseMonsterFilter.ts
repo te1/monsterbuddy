@@ -155,7 +155,7 @@ export function makeMonsterFilterStore(
             const value = getSortValue(item);
 
             if (value == null || value === '?') {
-              return -Infinity;
+              return sortOrder.value === 'asc' ? Infinity : -Infinity;
             }
 
             return value;
