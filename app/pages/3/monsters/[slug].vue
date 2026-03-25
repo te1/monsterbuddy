@@ -97,7 +97,8 @@
         :monster="monster"
         class="box order-6 px-4 py-2"
       />
-      <S3MonsterRelatedCard :monster="monster" class="box order-7 overflow-hidden" />
+      <S3MonsterFlavorCard :monster="monster" class="box order-7 px-4 py-2" />
+      <S3MonsterRelatedCard :monster="monster" class="box order-8 overflow-hidden" />
     </UPageBody>
   </div>
 </template>
