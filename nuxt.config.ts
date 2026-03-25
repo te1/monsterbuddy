@@ -135,7 +135,7 @@ export default defineNuxtConfig({
   ogImage: {
     zeroRuntime: true,
     buildCache: {
-      base: 'node_modules/.cache/nuxt/nuxt-seo/og-image/',
+      base: './node_modules/.cache/nuxt/nuxt-seo/og-image/', // move to nuxt folder so cloudflare picks it up
     },
   },
 
