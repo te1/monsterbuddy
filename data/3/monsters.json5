@@ -136,7 +136,7 @@
         sleep: -1,
         blastblight: +1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -231,7 +231,7 @@
         sleep: -2,
         blastblight: -2,
         bleeding: -2,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -615,7 +615,7 @@
         sleep: -2,
         blastblight: -2,
         bleeding: -2,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -680,7 +680,7 @@
         sleep: +1,
         blastblight: null,
         bleeding: null,
-        blind: null,
+        darkness: null,
       },
     },
     monster: {
@@ -755,7 +755,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -819,7 +819,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -1011,7 +1011,7 @@
         sleep: null,
         blastblight: null,
         bleeding: null,
-        blind: null,
+        darkness: null,
       },
     },
     monster: {
@@ -1186,7 +1186,7 @@
         sleep: -2,
         blastblight: +1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -1385,7 +1385,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: +1,
-        blind: +1,
+        darkness: +1,
       },
     },
     monster: {
@@ -1443,7 +1443,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: +1,
-        blind: +1,
+        darkness: +1,
       },
     },
     monster: {
@@ -1862,7 +1862,7 @@
         sleep: +1,
         blastblight: null,
         bleeding: null,
-        blind: null,
+        darkness: null,
       },
     },
     monster: {
@@ -2012,7 +2012,7 @@
         sleep: +2,
         blastblight: -1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -2098,7 +2098,7 @@
         sleep: +2,
         blastblight: null,
         bleeding: null,
-        blind: null,
+        darkness: null,
       },
     },
     monster: {
@@ -2240,7 +2240,7 @@
         sleep: -2,
         blastblight: -1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -2267,7 +2267,7 @@
             sleep: +2,
             blastblight: -1,
             bleeding: -1,
-            blind: -2,
+            darkness: -2,
           },
         },
       },
@@ -2314,7 +2314,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -2341,7 +2341,7 @@
             sleep: +2,
             blastblight: -1,
             bleeding: -1,
-            blind: -2,
+            darkness: -2,
           },
         },
       },
@@ -2385,7 +2385,7 @@
         sleep: +1,
         blastblight: +1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -2449,7 +2449,7 @@
         sleep: +1,
         blastblight: +1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -2744,7 +2744,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -2820,7 +2820,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -2954,7 +2954,7 @@
         sleep: -1,
         blastblight: -2,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3005,7 +3005,7 @@
         sleep: -1,
         blastblight: -2,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3361,7 +3361,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -3473,7 +3473,7 @@
         sleep: -2,
         blastblight: -2,
         bleeding: -2,
-        blind: -2,
+        darkness: -2,
       },
     },
     monster: {
@@ -3522,7 +3522,7 @@
         sleep: -1,
         blastblight: -2,
         bleeding: -2,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3660,7 +3660,7 @@
         sleep: +1,
         blastblight: null,
         bleeding: null,
-        blind: null,
+        darkness: null,
       },
     },
     monster: {
@@ -3728,7 +3728,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3798,7 +3798,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3862,7 +3862,7 @@
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
-        blind: -1,
+        darkness: -1,
       },
     },
     monster: {

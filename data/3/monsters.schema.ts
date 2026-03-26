@@ -59,7 +59,7 @@ const AilmentTypeSchema = z.enum([
   'sleep',
   'blastblight',
   'bleeding',
-  'blind',
+  'darkness',
 ]);
 export type AilmentType = z.infer<typeof AilmentTypeSchema>;
 
