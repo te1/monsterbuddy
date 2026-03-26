@@ -119,9 +119,9 @@
 
 <template>
   <div>
-    <AppPageHeader :title="ridingAction.name" :headline="headline">
+    <AppPageHeader :title="ridingAction.name" :headline="headline" class="hidden lg:block">
       <template #description>
-        <div class="hidden lg:block">
+        <div>
           {{ descriptionParts[0] }}
           <AppNuxtLink to="/2/riding-actions" :text="descriptionParts[1]" />
           {{ descriptionParts[2] }}
@@ -129,7 +129,7 @@
       </template>
     </AppPageHeader>
 
-    <UPageBody>
+    <UPageBody class="-mt-3 lg:mt-0">
       <div class="flex items-center py-1">
         <UIcon name="ph:dna" class="w-6 text-muted" />
 
