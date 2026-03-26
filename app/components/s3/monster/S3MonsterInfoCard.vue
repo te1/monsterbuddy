@@ -1,11 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
-  import { formatMonsterInfo } from '~/services/3/presentation';
+  import { formatMonsterInfoAll } from '~/services/3/presentation';
   import { getMonsterLocations } from '~/services/3/data';
 
   const props = defineProps<{ monster: Monster }>();
 
-  const info = computed(() => formatMonsterInfo(props.monster));
+  const info = computed(() => formatMonsterInfoAll(props.monster));
   const locations = computed(() => getMonsterLocations(props.monster));
   const hasLocations = computed(() => locations.value.length > 0);
 </script>

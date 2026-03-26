@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { formatMonsterInfo } from '~/services/3/presentation';
+  import { formatMonsterInfoAll } from '~/services/3/presentation';
   import type { Monster } from '~/services/3/types';
 
   const props = withDefaults(
@@ -52,7 +52,7 @@
       <img v-if="monsterIcon" :src="monsterIcon" class="size-[240px]" />
 
       <ul class="flex flex-col gap-6 text-5xl text-toned">
-        <li class="text-dimmed">{{ formatMonsterInfo(monster) }}</li>
+        <li class="text-dimmed">{{ formatMonsterInfoAll(monster) }}</li>
         <li>{{ monster.genus }}</li>
       </ul>
     </section>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
-  import { formatLocationType, formatMonsterInfo } from '~/services/3/presentation';
+  import { formatLocationType, formatMonsterInfoShort } from '~/services/3/presentation';
   import useMonstieFilter from '~/stores/3/monstieFilter';
   import { take } from 'es-toolkit/array';
   import { getMonsterLocations } from '~/services/3/data';
@@ -18,9 +18,9 @@
 
   const monstieFilter = useMonstieFilter();
 
-  const info = computed(() => formatMonsterInfo(props.monster));
+  const info = computed(() => formatMonsterInfoShort(props.monster));
 
-  const locations = computed(() => take(getMonsterLocations(props.monster), 2));
+  const locations = computed(() => take(getMonsterLocations(props.monster), 3));
 
   const stats = computed(() => props.monster?.stats?.base);
 
@@ -41,11 +41,13 @@
 
 <template>
   <div class="min-w-0">
-    <div class="min-h-lh leading-tight text-muted" v-text="info" />
     <div class="text-base leading-snug font-medium" v-text="monster.name" />
 
     <template v-if="showLocation || showRank">
-      <div v-text="monster.genus" />
+      <div>
+        <span v-text="monster.genus" />
+        <span v-if="info" class="text-muted">, {{ info }}</span>
+      </div>
 
       <template v-if="showLocation">
         <div

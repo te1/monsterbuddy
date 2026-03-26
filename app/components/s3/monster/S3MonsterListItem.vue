@@ -2,7 +2,11 @@
   import type { Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
   import { take } from 'es-toolkit/array';
-  import { formatLocationType, formatMonsterInfo, formatState } from '~/services/3/presentation';
+  import {
+    formatLocationType,
+    formatMonsterInfoShort,
+    formatState,
+  } from '~/services/3/presentation';
   import { getMonsterLocations } from '~/services/3/data';
 
   const props = withDefaults(
@@ -17,9 +21,9 @@
     }
   );
 
-  const info = computed(() => formatMonsterInfo(props.monster));
+  const info = computed(() => formatMonsterInfoShort(props.monster));
 
-  const locations = computed(() => take(getMonsterLocations(props.monster), 2));
+  const locations = computed(() => take(getMonsterLocations(props.monster), 3));
 
   const combatStates = computed(() => {
     return take(Object.entries(props.monster.monster?.states ?? {}), 3);
@@ -46,11 +50,13 @@
     </div>
 
     <div class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap">
-      <div class="min-h-lh leading-tight text-muted" v-text="info" />
       <div class="text-base leading-snug font-medium" v-text="monster.name" />
 
       <template v-if="showLocation || showRank">
-        <div v-text="monster.genus" />
+        <div>
+          <span v-text="monster.genus" />
+          <span v-if="info" class="text-muted">, {{ info }}</span>
+        </div>
 
         <template v-if="showLocation">
           <div
