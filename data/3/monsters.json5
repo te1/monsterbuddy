@@ -4,6 +4,19 @@
 // https://monsterhunterwiki.org/wiki/Invasive_Monsters
 
 [
+  /*
+  // https://monsterhunterwiki.org/wiki/Aenshin_(MHST3)
+  {
+    name: 'Aenshin',
+    genus: 'Elder Dragon',
+    flavor: {
+      DEFAULT: 'This enormous Elder Dragon preserved the Sacrosanctum\'s ecosystem 200 years ago, earning it the title of "Sentinel," but it vanished after the Sacrosanctum was destroyed during the Rift War.',
+      'Crystallizing Capacity': 'After devouring battle-bound monsters during the war 200 years ago, this monster gave rise to the Crystal Encroachment. Traces of its existence have begun reappearing over the last decade.',
+      'Catalyst of Devastation': "While this monster preyed on the Sacrosanctum's enemies and helped it prosper, it also sought to eliminate the battle-bound monsters used in the Rift War, leading to the Sacrosanctum's destruction.",
+    },
+  },
+  */
+
   // https://monsterhunterwiki.org/wiki/Ajarakan_(MHST3)
   {
     name: 'Ajarakan',
@@ -1008,6 +1021,7 @@
   {
     name: 'Blangonga',
     genus: 'Fanged Beast',
+    related: [{ type: 'feral', monster: 'Feral Blangonga' }],
     rank: 3,
     flavor: {
       DEFAULT: 'This Blango pack leader is found on snowy peaks and is recognizable by its giant fangs and whiskers. Twice as large as a Blango, it has far greater strength and mobility.',
@@ -1055,6 +1069,17 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'red', 'orange'],
       svgEggColors: ['#9fc7b9', '#ff2600'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Feral_Blangonga_(MHST3)
+  {
+    name: 'Feral Blangonga',
+    genus: 'Fanged Beast',
+    tags: ['feral'],
+    related: [{ type: 'feralOf', monster: 'Blangonga' }],
+    flavor: {
+      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
   },
 
@@ -1258,6 +1283,19 @@
       svgEggColors: ['#6971da', '#f6e3cb'],
     },
   },
+
+  /*
+  // https://monsterhunterwiki.org/wiki/Cephalos_(MHST3)
+  {
+    name: 'Cephalos',
+    genus: 'Piscine Wyvern',
+    flavor: {
+      DEFAULT: 'A species of Piscine Wyvern that swims through desert sand like a fish through water. Unlike most Piscine Wyverns, it often lives in groups that can be led by a larger monster called a Cephadrome.',
+      'Sand-Colored Skin': 'While this creature may appear to be the color of desert sand, its scales are actually blue. The beige color is caused by the accumulation of sand on its body as it swims through its habitat.',
+      'Well-Developed Hearing': 'With its highly developed sense of hearing, this monster navigates by sound. It rarely surfaces except to hunt, but loud noises can startle it out of the ground.',
+    },
+  },
+  */
 
   // https://monsterhunterwiki.org/wiki/Chatacabra_(MHST3)
   {
@@ -2817,6 +2855,21 @@
     },
   },
 
+  /*
+  // https://monsterhunterwiki.org/wiki/Exotic_Legiana_(MHST3)
+  {
+    name: 'Exotic Legiana',
+    genus: 'Flying Wyvern',
+    tags: ['exotic'],
+    related: [{ type: 'exoticOf', monster: 'Legiana' }],
+    flavor: {
+      DEFAULT: "In the desert, I happened across a Flying Wyvern normally found in colder regions. From its behavior, I surmised that it didn't get here by chance, but rather had been living here for a while.",
+      'Peculiar Flight': 'A species of Flying Wyvern spotted flying along known aerial routes near Rococo Rocks. It makes its home within the rock formations, navigating even the trickiest of crags with ease.',
+      'Truly Fascinating': "Used a Monstie's breath while investigating the Exotic Legiana, but it is still unclear what methods the note writer used to find the Legiana.",
+    },
+  },
+  */
+
   // https://monsterhunterwiki.org/wiki/Lunagaron_(MHST3)
   {
     name: 'Lunagaron',
@@ -3580,6 +3633,21 @@
       'Dazzling Fluid': 'Its shiny and richly colored bodily fluids excel at retaining moisture. By circulating through the body, these fluids ensure constant hydration even in dry deserts.',
     },
   },
+
+  /*
+  // https://monsterhunterwiki.org/wiki/Exotic_Nibelsnarf_(MHST3)
+  {
+    name: 'Exotic Nibelsnarf',
+    genus: 'Leviathan',
+    tags: ['exotic'],
+    related: [{ type: 'exoticOf', monster: 'Nibelsnarf' }],
+    flavor: {
+      DEFAULT: 'Upon noticing a curious spattering of round patches throughout a particular area of the Glacial Caps, I decided to investigate. As expected, a monster was lurking nearby.',
+      'Subterranean Stalker': 'This monster lurks underground until the very moment it attacks its prey. I foolishly attempted to frighten it, but it whipped up a cloud of dust and snapped at me.',
+      'Audiogenic Reactions': 'The Exotic Nibelsnarf resides underground and attacks prey detected by sound. A necklace was left behind at the scene of the hunt. Some brave adventurer is surely responsible for these notes.',
+    },
+  },
+  */
 
   // https://monsterhunterwiki.org/wiki/Odogaron_(MHST3)
   {
@@ -4374,6 +4442,8 @@
     ],
     flavor: {
       DEFAULT: "Ten years ago, this Skyscale Rathalos was born from an egg quartz that Amara discovered in Blightstone Woods. One of a pair of twins, it serves as the prince/princess's Monstie.",
+      'The Skyscale': "Although feared to bring disaster because of a legend about twin Rathalos with similar blue scales 200 years prior, it bonded with the prince/princess, making him/her Azuria's lone Rathalos Rider.",
+      'Bosom Buddies': 'Beyond the strong wings and aerial skill inherent to all Rathalos, this monster also uses keen senses to alert the prince/princess to sudden dangers. Moreover, it appears to resist crystallization.',
     },
     element: 'fire',
     stats: {
@@ -4399,6 +4469,17 @@
       attack: 'power',
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Sky-High Dive',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Ratha_V
+  {
+    name: 'Ratha V',
+    genus: 'Flying Wyvern',
+    flavor: {
+      DEFAULT: "A Skyscale Rathalos born ten years ago from egg quartz discovered in Blightstone Woods. As twins were prophesied to bring disaster, it was sentenced to death, but it fled Azuria with Amara's help.",
+      'Battle-Bound': 'Battle-bound—or "battle-honed"—in Vermeil, this monster has been trained so that highly capable Riders such as Clarissa can ride it even without forming a bond.',
+      'On a Journey': "This monster crossed the Northern Meridian ten years ago with Amara and met Kris in an abandoned village. Along with Kris, it remained in Vermeil's care afterward and eventually became battle-bound.",
     },
   },
   */
@@ -4613,6 +4694,17 @@
       kinshipSkill: 'Dual Razor',
       eggColors: ['green', 'purple'],
       svgEggColors: ['#a0b353', '#833571'],
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Remobra_(MHST3)
+  {
+    name: 'Remobra',
+    genus: 'Flying Wyvern',
+    flavor: {
+      DEFAULT: 'This small Snake Wyvern boasts remarkable flight capabilities with which it descends upon weakened prey. As it is often spotted near Elder Dragons, it became known as a harbinger of disaster.',
+      'Harbinger of Disaster': 'Remobra are often found where Elder Dragons roam, scavenging the corpses of creatures defeated by the powerful monsters. When many appear in the sky, an Elder Dragon may be approaching.',
+      Snakelike: "The Remobra's snakelike features include the beautiful black and red striped pattern of its hide, a material popular with particularists. High-grade hides shine like a lustrous black pearl.",
     },
   },
 
@@ -4848,6 +4940,7 @@
   {
     name: 'Seregios',
     genus: 'Flying Wyvern',
+    related: [{ type: 'invasive', monster: 'Invasive Seregios' }],
     rank: 6,
     flavor: {
       DEFAULT: 'A Flying Wyvern covered in a pinecone lattice of razor-sharp scales. It can launch a barrage of these deadly scales at prey, inflicting countless lacerations.',
@@ -4897,6 +4990,34 @@
       svgEggColors: ['#d44726', '#d7b142'],
     },
   },
+
+  // https://monsterhunterwiki.org/wiki/Invasive_Seregios_(MHST3)
+  {
+    name: 'Invasive Seregios',
+    genus: 'Flying Wyvern',
+    tags: ['invasive'],
+    related: [{ type: 'invasiveOf', monster: 'Seregios' }],
+    flavor: {
+      DEFAULT: 'The gleaming silver scales on this invasive subspecies of Seregios help differentiate it from the normal species. Flung at nearly the speed of sound, those bladescales unerringly find their mark.',
+      'Secrets of Steel': "This specimen's scales are as durable as steel and hold vast amounts of iron. Moreover, an acidic fluid can be secreted to remove rust from the scales and preserve their strength.",
+      'Heavy Bladescales': "Bladescales may be extremely hard, but they are just as heavy. This monster's muscles are well developed due to continually wielding the hefty scales, granting it exceptional physical prowess.",
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Exotic_Seregios_(MHST3)
+  /*
+  {
+    name: 'Exotic Seregios',
+    genus: 'Flying Wyvern',
+    tags: ['exotic'],
+    related: [{ type: 'exoticOf', monster: 'Seregios' }],
+    flavor: {
+      DEFAULT: 'Surrounded by sheer rocks, the only path forward led to a giant tree. What awaited me there was a cunning and deadly monster that knew how to trap its prey.',
+      "Canalta's Picky Eater": 'This species seems rather picky in its choice of prey as it only targets certain monsters. As expected, it appeared when I entered its territory accompanied by the monster it likes to snack on.',
+      'Clever Traps': 'The Exotic Seregios places beehives throughout its territory to lure in the Arzuros it preys upon. The adventurer who noticed such traps must possess a keen eye and sharp wit.',
+    },
+  },
+  */
 
   // https://monsterhunterwiki.org/wiki/Ceanataur_(MHST3)
   {
@@ -5196,6 +5317,11 @@
     name: 'Thunder Serpent Narwa',
     genus: 'Elder Dragon',
     tags: ['calamitous'],
+    flavor: {
+      DEFAULT: 'This Elder Dragon is the female counterpart to Wind Serpent Ibushi. Its thunder sacs thrum with stored electric power, enabling control over lightning and giving this monster an eerie golden glow.',
+      'Powerful Magnetic Field': "Thunder Serpent Narwa's floating mechanism differs from Wind Serpent Ibushi's. Its thunder sacs produce a current that generates a magnetic field with which the monster's body is held aloft.",
+      Resonance: 'It searches for suitable nest locations to await males during breeding season. After a pair meet, they take to the sky and resonate, creating a powerful storm that damages the surroundings.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Tigrex_(MHST3)
@@ -5646,11 +5772,29 @@
     },
   },
 
+  /*
+  // https://monsterhunterwiki.org/wiki/Exotic_Velocidrome_(MHST3)
+  {
+    name: 'Exotic Velocidrome',
+    genus: 'Bird Wyvern',
+    flavor: {
+      DEFAULT: 'This agile and elusive monster combs through areas for bugs and small prey. It may have developed this inefficient feeding behavior as a means to avoid competition with others of its species.',
+      'Catch Me If You Can': 'It focuses so much on hunting small game that it ignores its surroundings. Even so, it is extremely hard to catch. Start your observation from the egg quartz overlooking the castle.',
+      'Survival Strategy': 'As the note said, the Exotic Velocidrome has novel hunting methods. Its survival strategies lead to interesting behavioral differences. Whoever wrote the note deserves praise for catching this monster.',
+    },
+  },
+  */
+
   // https://monsterhunterwiki.org/wiki/Wind_Serpent_Ibushi
   {
     name: 'Wind Serpent Ibushi',
     genus: 'Elder Dragon',
     tags: ['calamitous'],
+    flavor: {
+      DEFAULT: 'Exhibiting inexplicable behavior such as levitating upside down, this male Elder Dragon can ascend to the heavens by generating fierce updrafts.',
+      'Floating Tricks': 'The special gas stored in its wind sacs allows this monster to float and maintain its peculiar upside-down stance. Discharging the gas from its gills grants it blustering acceleration.',
+      'Blustery Breath': 'It expels fearsome, gale-force breaths from its mouth by vigorously circulating gas throughout its wind sacs before releasing it like a cannon blast. Monsters tremble in fear at its roar.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Yama_Tsukami_(MHST3)
@@ -6224,6 +6368,7 @@
     },
   },
 
+  /*
   // https://monsterhunterwiki.org/wiki/Great_Poogie_(MHST3)
   {
     name: 'Great Poogie',
@@ -6266,4 +6411,5 @@
       svgEggColors: ['#323232', '#9e6efd'],
     },
   },
+  */
 ]
