@@ -47,6 +47,10 @@ const MonsterStatsBaseSchema = z.object({
   crit: z.number().nullable(),
   stamina: z.number().nullable(),
   recovery: z.number().nullable(),
+  startingStamina: z.number().nullable(),
+  rawRecovery: z.number().nullable(),
+  wyvernfell: z.number().nullable(),
+  rawSpeed: z.number().nullable(),
   bulk: z.number().nullable(),
   total: z.number().nullable(),
 });

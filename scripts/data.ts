@@ -336,6 +336,10 @@ function transformS3Monsters(data: unknown) {
         base.crit ??= null;
         base.stamina ??= null;
         base.recovery ??= null;
+        base.startingStamina ??= null;
+        base.rawRecovery ??= null;
+        base.wyvernfell ??= null;
+        base.rawSpeed ??= null;
         base.bulk = getS3MonsterBulk(base);
         base.total = getS3MonsterTotal(base);
       }
