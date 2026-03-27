@@ -76,10 +76,13 @@
       </div>
     </div>
 
-    <div v-if="elementalResistances || ailmentResistances" class="flex flex-col pt-2 @xs:flex-row">
+    <div
+      v-if="elementalResistances || ailmentResistances"
+      class="flex flex-col pt-0 @xs:flex-row @xs:pt-2"
+    >
       <h3 class="w-36 text-lg font-medium">Resistance</h3>
 
-      <div class="mt-1 pt-0.5">
+      <div class="mt-1 pt-0 @xs:pt-0.5">
         <div class="flex gap-2">
           <div v-for="(value, element) in elementalResistances" :key="element">
             <UTooltip :text="elementalResistanceTooltip(element, value)">
