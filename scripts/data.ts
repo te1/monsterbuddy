@@ -340,6 +340,7 @@ function transformS3Monsters(data: unknown) {
         base.rawRecovery ??= null;
         base.wyvernfell ??= null;
         base.rawSpeed ??= null;
+        base.rawCrit ??= null;
         base.bulk = getS3MonsterBulk(base);
         base.total = getS3MonsterTotal(base);
       }
