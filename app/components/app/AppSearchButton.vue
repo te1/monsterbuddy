@@ -79,7 +79,7 @@
         icon="ph:magnifying-glass"
         placeholder="Search..."
         aria-label="Search"
-        :ui="{ trailing: 'pe-1' }"
+        :ui="{ trailing: 'pe-1', base: 'bg-elevated dark:bg-elevated/50' }"
         class="hidden w-32 select-none sm:block lg:w-40"
         readonly
       >

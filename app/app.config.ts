@@ -99,7 +99,7 @@ export default defineAppConfig({
       variants: {
         variant: {
           link: {
-            list: 'gap-4',
+            list: 'gap-4 border-transparent',
             content: 'mt-1 px-1',
           },
         },
