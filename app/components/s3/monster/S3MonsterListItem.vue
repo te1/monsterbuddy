@@ -7,7 +7,6 @@
     formatMonsterInfoShort,
     formatState,
     intensityToIcon,
-    intensityToOpacity,
     intensityToTextColor,
   } from '~/services/3/presentation';
   import { getMonsterLocations } from '~/services/3/data';
@@ -102,12 +101,7 @@
               class="text-xl"
               :class="intensityToTextColor(value)"
             />
-            <ElementIcon
-              class="size-6"
-              :class="intensityToOpacity(value)"
-              :element="element"
-              noTooltip
-            />
+            <ElementIcon class="size-6" :element="element" noTooltip />
           </span>
         </div>
       </template>

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import {
+    ailmentResistanceTooltip,
+    elementalResistanceTooltip,
     formatState,
     intensityToIcon,
-    intensityToOpacity,
     intensityToTextColor,
-    intensityToTooltip,
   } from '~/services/3/presentation';
   import useHistoryStore from '~/stores/3/historyStore';
 
@@ -19,7 +19,7 @@
 
   const elementalResistances = computed(() => props.monster.stats?.elementalResistance);
 
-  // TOOD ailment resistance
+  const ailmentResistances = computed(() => props.monster.stats?.ailmentResistance);
 
   const isPinned = computed(() => {
     return history.isMonsterPinned(props.monster.slug);
@@ -76,30 +76,41 @@
       </div>
     </div>
 
-    <div v-if="elementalResistances" class="flex pt-2">
+    <div v-if="elementalResistances || ailmentResistances" class="flex pt-2">
       <h3 class="w-36 text-lg font-medium">Resistance</h3>
 
-      <div class="mt-1 flex gap-2 pt-0.5">
-        <div v-for="(value, element) in elementalResistances" :key="element">
-          <UTooltip :text="intensityToTooltip(value, element)">
-            <div class="flex flex-col items-center gap-1">
-              <ElementIcon
-                class="size-6"
-                :class="intensityToOpacity(value)"
-                :element="element"
-                noTooltip
-              />
-              <UIcon
-                :name="intensityToIcon(value)"
-                class="text-xl"
-                :class="intensityToTextColor(value)"
-              />
-            </div>
-          </UTooltip>
+      <div class="mt-1 pt-0.5">
+        <div class="flex gap-2">
+          <div v-for="(value, element) in elementalResistances" :key="element">
+            <UTooltip :text="elementalResistanceTooltip(element, value)">
+              <div class="flex flex-col items-center gap-1">
+                <ElementIcon class="size-6" :element="element" noTooltip />
+                <UIcon
+                  :name="intensityToIcon(value)"
+                  class="text-xl"
+                  :class="intensityToTextColor(value)"
+                />
+              </div>
+            </UTooltip>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <div v-for="(value, ailment) in ailmentResistances" :key="ailment">
+            <UTooltip :text="ailmentResistanceTooltip(ailment, value)">
+              <div class="flex flex-col items-center gap-1">
+                <!-- TODO add ailment icon -->
+                <AilmentIcon class="size-6" :ailment="ailment" noTooltip />
+                <UIcon
+                  :name="intensityToIcon(value)"
+                  class="text-xl"
+                  :class="intensityToTextColor(value)"
+                />
+              </div>
+            </UTooltip>
+          </div>
         </div>
       </div>
-
-      <!-- TODO ailment resistance -->
     </div>
 
     <div class="absolute top-1 right-1">

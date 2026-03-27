@@ -1,5 +1,5 @@
 import type { MonsterLocationType } from './data';
-import type { Monster, MonsterTag, RidingActionType } from './types';
+import type { AilmentType, Monster, MonsterTag, RidingActionType } from './types';
 
 export function formatMonsterInfoAll(monster: Monster) {
   return monster.tags.map(formatMonsterTag).join(', ');
@@ -114,30 +114,19 @@ export function intensityToIcon(intensity: number | null) {
 export function intensityToTextColor(intensity: number | null) {
   switch (intensity) {
     case -2:
+    case -1:
+      return 'text-red-500';
+
+    case 1:
+    case 2:
+      return 'text-blue-500';
+
+    default:
       return 'text-default';
-
-    case -1:
-      return 'text-muted';
-
-    default:
-      return 'text-dimmed';
   }
 }
 
-export function intensityToOpacity(intensity: number | null) {
-  switch (intensity) {
-    case -2:
-      return 'opacity-100';
-
-    case -1:
-      return 'opacity-60';
-
-    default:
-      return 'opacity-40';
-  }
-}
-
-export function intensityToTooltip(intensity: number | null, element: ElementType) {
+export function elementalResistanceTooltip(element: ElementType, intensity: number | null) {
   let modifier = '';
 
   switch (intensity) {
@@ -162,8 +151,67 @@ export function intensityToTooltip(intensity: number | null, element: ElementTyp
       break;
 
     default:
-      modifier = 'normal';
+      modifier = '?';
   }
 
   return `Takes ${modifier} ${formatElement(element).toLowerCase()} damage`;
+}
+
+export function formatAilment(ailment: AilmentType) {
+  switch (ailment) {
+    case 'poison':
+      return 'Poison';
+
+    case 'burn':
+      return 'Burn';
+
+    case 'paralysis':
+      return 'Paralysis';
+
+    case 'sleep':
+      return 'Sleep';
+
+    case 'blastblight':
+      return 'Blastblight';
+
+    case 'bleeding':
+      return 'Bleeding';
+
+    case 'darkness':
+      return 'Darkness';
+
+    default:
+      return 'Unknown';
+  }
+}
+
+export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number | null) {
+  let modifier = '';
+
+  switch (intensity) {
+    case -2:
+      modifier = 'greatly increased';
+      break;
+
+    case -1:
+      modifier = 'increased';
+      break;
+
+    case 0:
+      modifier = 'normal';
+      break;
+
+    case 1:
+      modifier = 'reduced';
+      break;
+
+    case 2:
+      modifier = 'greatly reduced';
+      break;
+
+    default:
+      modifier = '?';
+  }
+
+  return `Effect of ${formatAilment(ailment).toLowerCase()} ${modifier}`;
 }
