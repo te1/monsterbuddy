@@ -105,8 +105,6 @@
               <AppLink href="https://monsterhunterwiki.org" text="Monster Hunter Wiki" />
             </ProseLi>
 
-            <!-- TODO more links -->
-
             <ProseLi>
               <AppLink
                 href="https://docs.google.com/spreadsheets/d/1JvLmNY7l2jOKCk7QbUYmeK87xvzQzXVUJIgFX9bYaqk"
@@ -144,8 +142,6 @@
               />
               on YouTube
             </ProseLi>
-
-            <!-- TODO more links -->
           </ProseUl>
         </section>
       </div>
