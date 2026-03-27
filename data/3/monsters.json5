@@ -10,6 +10,11 @@
     genus: 'Fanged Beast',
     related: [{ type: 'feral', monster: 'Feral Ajarakan' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'This Fanged Beast affixes molten metals to its carapace, and the friction resulting from those minerals rubbing together allows it to accumulate heat and cause explosions.',
+      'Like a Blaze': 'Its high body heat is thought to result from the friction that arises as metals adhered to its body rub together. The shoulder protrusions get so hot that they melt projectiles on contact.',
+      'No Limits': 'Typically a quadruped, this highly mobile monster is also capable of bipedal movement, during which it will use its powerful arms to clamber onto high objects.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -71,6 +76,11 @@
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Aknosom' }],
     rank: 3,
+    flavor: {
+      DEFAULT: 'A Bird Wyvern often seen standing on one leg, giving it the unique appearance of a parasol. Highly territorial, it intimidates trespassers with outstretched wings and an eye-patterned crest.',
+      'Unique Figure': 'Rarely forming groups, these monsters stay independent outside of mating season. The distinctive crest is unfurled to intimidate foes by appearing bigger and stronger.',
+      'Eating Flames': 'Its flame sac stores a flammable liquid created from fire herbs. When enraged, this liquid pours into its mouth to be spit out in a downpour of fireballs.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -131,6 +141,11 @@
     name: 'Almudron',
     genus: 'Leviathan',
     rank: 5,
+    flavor: {
+      DEFAULT: 'A giant Leviathan believed to reside in marshlands deep in the mountains. Slipping between pools of mud, it stealthily approaches and then dispatches unsuspecting prey.',
+      'Hermit of the Swamp': 'This carnivorous monster preys on fish and creatures that live near water. It secretes a golden fluid from its tail that turns earth to mud with which it hides itself and prevents prey from escaping.',
+      'Wisdom of Age': 'This monster uses its long, red whiskers to detect intruders in its territory via the faintest vibrations in the mud. The whiskers grow longer with age and are considered a longevity charm by some.',
+    },
     element: 'water',
     stats: {
       base: {
@@ -185,8 +200,9 @@
     related: [{ type: 'subspecies', monster: 'Fulgur Anjanath' }],
     rank: 4, // TODO 5?
     flavor: {
-      DEFAULT: 'A belligerent Brute Wyvern that tries to sink its fangs into anything that moves. It is recognizable by the large membranes on its hips and the downy fur that runs along its back.',
-      'Condensing Heat': 'This monster condenses heat when enraged, causing a combustible substance to collect in a throat gland. The resulting mucus can then be expelled its nose to react explosively with the air.',
+      DEFAULT: 'A belligerent Brute Wyvern that tries to sink its fangs into anything that moves. It is recognizable by the large membranes on its hips and the downy fur that runs along its back and tail.',
+      'Back Membrane': "Membranes packed with capillaries and supported by cartilage grow from this monster's hips. These regulate temperature by absorbing heat from sunlight when cold or expelling heat when hot.",
+      'Condensing Heat': 'This monster condenses heat when enraged, causing a combustible substance to collect in a throat gland. The resulting mucus can then be expelled from its nose to react explosively with the air.',
     },
     element: 'fire',
     stats: {
@@ -261,6 +277,11 @@
     tags: ['subspecies'],
     related: [{ type: 'subspeciesOf', monster: 'Anjanath' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'This savage subspecies of Anjanath electrifies its jaws and dorsal membranes with every attack, further enhancing its already powerful body.',
+      'Electrified Attack': 'Mutated muscle cells developed electric organs in this subspecies, so some attacks are voltaic in nature. This monster is more hostile than the regular species and extremely dangerous when enraged.',
+      'Electrifying Membrane': "The membranes protruding from this variety's hips also regulate body temperature, but they generate large amounts of electricity as well, which means they play a more vital role during hunts.",
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -360,6 +381,11 @@
     name: 'Arkveld',
     genus: 'Flying Wyvern',
     rank: 6,
+    flavor: {
+      DEFAULT: 'A Flying Wyvern with chain-like wings that end in bladed tendrils. It can extend and retract these tendrils at will, dispatching prey with deadly efficiency.',
+      'Bladed Wing': 'Highly flexible chain-like blades on its wings can dispatch prey and absorb elemental energies. That energy can then be utilized as nourishment or converted and released as dragon-element attacks.',
+      'Overflowing with Energy': 'As they store energy, the chainblades flare out, greatly increasing attack range and power. But since the chains are also energy-absorbing organs, they may leak energy when damaged.',
+    },
     element: 'dragon',
     stats: {
       base: {
@@ -410,6 +436,11 @@
     genus: 'Fanged Beast',
     related: [{ type: 'invasive', monster: 'Invasive Arzuros' }],
     rank: 2,
+    flavor: {
+      DEFAULT: 'Found in warm, humid environments, this Fanged Beast is known to gather fish and honey while standing on its hind legs. The sturdy, clawed forearms pose a real threat when used offensively.',
+      'Green and Yellow Contrast': 'Portions of the fur are soft and yellow, while other parts are short, green, and bristly. Higher quality furs are identified by particularly soft yellow areas and extra-firm green sections.',
+      'Addicted to Honey': 'This omnivore primarily consumes fish, mushrooms, and honey. With olfactory senses finely tuned to detect its favorite food of honey, it goes to great lengths to pilfer any hidden supplies.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -460,6 +491,11 @@
     genus: 'Fanged Beast',
     tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Arzuros' }],
+    flavor: {
+      DEFAULT: 'The mighty blows dealt by this invasive subspecies of Arzuros can shatter rock with ease. Highly intelligent as well as strong, some have been sighted leading regular Arzuros on hunts.',
+      'Pack Leader': 'Particularly adept at using its excellent sense of smell to gather large amounts of food, this monster distributes collected food to the regular species to form bonds and strengthen the pack.',
+      'Food Allocation': 'Because the food source is literally the lifeline of the entire species, stolen honey is stored underground to be dug up as needed. As the leader, the Invasive Arzuros decides how it is distributed.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Astalos_(MHST3)
@@ -469,6 +505,11 @@
     tags: ['endangered'],
     related: [{ type: 'deviant', monster: 'Boltreaver Astalos' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'Special internal organs allow this Flying Wyvern to generate high-voltage electricity. By shaking its crest, wings, or tail, it can charge that body part with stored electricity for an attack.',
+      Boltscale: 'Astalos shells, or "boltscales," function as catalysts and protect organs that generate excess electrical current. Their unique composition makes these shells an electrifying topic of research.',
+      'A Shocking Scoundrel': 'Defined by its violent disposition, this monster will remove intruders from its territory by any means necessary. It is said to have fiercely competed with Rathalos before becoming endangered.',
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -520,6 +561,9 @@
     tags: ['deviant', 'mutation'],
     related: [{ type: 'deviantOf', monster: 'Astalos' }],
     rank: 7,
+    flavor: {
+      DEFAULT: 'An Astalos Deviant especially known for unleashing electric bolts as blue as the sky. Its highly developed shockshells produce spheres of electromagnetic energy to trap its foes.',
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -567,6 +611,11 @@
     tags: ['endangered'],
     related: [{ type: 'subspecies', monster: 'Sand Barioth' }],
     rank: 4,
+    flavor: {
+      DEFAULT: 'This white Flying Wyvern is identifiable by its giant fangs and the spiked scales adorning its forelegs and tail. Using these spikes, it traverses slippery ice with ease.',
+      'Icy Breath': "This monster's frost sac stores a freezing agent that combines with moisture in the air to create a block of ice when spat out. Upon hitting the ground, the block shatters and sprays shards of ice.",
+      'Scarlet Fang': "The Barioth's unique scarlet fangs boast a blade-like sharpness, and they are perfectly shaped for biting deeply into fat, furry prey or tearing foes into ribbons.",
+    },
     element: 'ice',
     stats: {
       base: {
@@ -618,6 +667,11 @@
     tags: ['subspecies', 'mutation'],
     related: [{ type: 'subspeciesOf', monster: 'Barioth' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'This Barioth subspecies can generate tornadoes with its powerful breath. The yellow carapace has a red tint, and its fangs are said to shine deep blue when polished.',
+      'Flexible Pleura': "The Sand Barioth has a thin, flexible organ called the pleura. This nigh-unbreakable material enhances the monster's breathing ability and enables it to unleash powerful tornado breaths.",
+      'Flying Wyvern in the Desert': 'This monster mainly lived in deserts before becoming endangered. As such, it has traits suited to desert life, such as a sandstorm-resistant carapace and sharp claws for quick movement on sand.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -672,6 +726,11 @@
       { type: 'honed', monster: 'Honed Barroth' },
     ],
     rank: 3,
+    flavor: {
+      DEFAULT: 'A Brute Wyvern that lives in hot, arid environments. Mud is vital to its survival, as it often remains beneath the mud to keep cool and sometimes uses it as a means of attack.',
+      'Daily Mudbath': 'This monster bathes in mud throughout the day to protect from heat, dryness, and parasites. The mud slowly hardens into a layered shell that makes the Barroth into a virtual moving boulder.',
+      'A Delicacy?': 'Barroth meat is known to be tough as rock, but for inexplicable reasons, its tail is considered a delicacy by some. It can be sold as a cooking ingredient, but not for any appreciable sum.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -727,6 +786,11 @@
       { type: 'honed', monster: 'Honed Barroth' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'Just as the regular species coats itself in mud, this subspecies of Barroth found in colder climates coats itself in a protective layer of snow and ice.',
+      'Main Diet': 'Both the regular species and subspecies mainly dine on Neopteron, but where Barroth are partial to ants, the Jade Barroth prefers Bnahabra. Differences in habitat create these split preferences.',
+      'Natural Growth': "Regular Barroth tail may be a delicacy, but this variety's tail meat is naturally kept frozen for long periods of time, allowing the flavor to mature and grow more savory.",
+    },
     element: 'ice',
     stats: {
       base: {
@@ -807,6 +871,11 @@
       { type: 'feral', monster: 'Feral Bishaten' },
     ],
     rank: 3,
+    flavor: {
+      DEFAULT: "This monster's winged arms enable versatile aerial movement and the prehensile tail allows it to spin like a top. It can be described as both endearingly inquisitive and insufferably mischievous.",
+      'Filled Belly Pouch': 'An omnivorous monster that largely eats plant-based foods. Fond of fruit, it often stores Jumbofruit in its belly pouch. Bitter and poisonous fruits are also used to hunt prey or befuddle predators.',
+      'Third Arm, Third Leg': 'The tail acts as a third arm or leg and has skid-resistant skin on the underside as well as pads at the tip to absorb blows. This monster also uses its hard, dorsal carapace to spin like a top.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -861,6 +930,11 @@
       { type: 'feral', monster: 'Feral Bishaten' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'This subspecies shares the curved horns, beaked mouth, and winged arms of the regular Bishaten, but as the name suggests, its body is mottled with unique, fiery-red patches.',
+      'Magician of Fire and Wind': "A single flap of this monster's wings whips up gusts of wind that fan searing flames. Moreover, the red horns can sense air currents to detect the location of prey and pinpoint the movement of sparks.",
+      'Pinecone Kindling': 'Regular Bishaten often store fruit in their belly pouch, but this subspecies keeps flammable cones that can be rubbed together and ignited or even used as kindling for its fire breath.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -926,6 +1000,7 @@
     flavor: {
       DEFAULT: 'A white-furred Fanged Beast found in mountainous regions. Packs are often led by a Blangonga, to whose call this monster will answer immediately.',
       'Snow-White Pelt': "This creature's protective white fur sees extensive use in cold-resistant gear. Such resilient pelts are difficult to work with but are prized for their utility.",
+      'Energy Source': 'Meat from the ribs is called "Blango Bacon" in regions where people consume it. It apparently promotes good health and robust strength.',
     },
   },
 
@@ -934,6 +1009,11 @@
     name: 'Blangonga',
     genus: 'Fanged Beast',
     rank: 3,
+    flavor: {
+      DEFAULT: 'This Blango pack leader is found on snowy peaks and is recognizable by its giant fangs and whiskers. Twice as large as a Blango, it has far greater strength and mobility.',
+      'Alpine Alpha': 'Often leading groups of Blango in organized hunts, this monster displays great leadership and intelligence by taking advantage of snowy terrain to encircle prey and ensure a successful kill.',
+      'Strength of a Leader': "Its massive tusks are too big for its mouth yet naturally sharp enough to be used as weapons. These tusks also identify the alpha of the pack, so losing them means losing one's position.",
+    },
     element: 'ice',
     stats: {
       base: {
@@ -984,7 +1064,8 @@
     genus: 'Neopteron',
     flavor: {
       DEFAULT: 'Neopterons that thrive in almost any environment. They fend off invaders with stingers full of paralyzing venom and are known for rapidly proliferating by laying their eggs in carrion.',
-      'Distinctive Fluid': 'The poisonous needles on this monster secrete a corrosive fiuld. After laying eggs, it injects the fiuld into carcasses to hasten decomposition, thereby aiding in egg incubation and larval growth.',
+      'Distinctive Fluid': 'The poisonous needles on this monster secrete a corrosive fluid. After laying eggs, it injects the fluid into carcasses to hasten decomposition, thereby aiding in egg incubation and larval growth.',
+      'Captivating Sparkle': 'Similar to other Neopteron, these creatures crumble to physical blows. After collection and processing, however, Bnahabra shells can become as durable as a Flying Wyvern carapace.',
     },
     element: 'none',
     stats: {
@@ -1030,6 +1111,11 @@
     genus: 'Brute Wyvern',
     related: [{ type: 'feral', monster: 'Feral Brachydios' }],
     rank: 6,
+    flavor: {
+      DEFAULT: 'An aggressive species of Brute Wyvern with a deep-blue carapace. The volatile green slime covering its head and powerful forearms can be primed to explode by a chemical agent in its saliva.',
+      'Living with Slime Mold': 'A symbiotic slime grows on the head and forelegs of the Brachydios. Impacts cause the ooze to change from green to yellow to red before it explodes, scattering spores and dispatching enemies.',
+      'Enraged Invigoration': "Although a slime mold covers this creature's entire body, the mold is only visible on the head and forelegs. Angering this monster activates the mold and causes its entire body to turn yellow.",
+    },
     element: 'none',
     stats: {
       base: {
@@ -1127,6 +1213,11 @@
     genus: 'Fanged Beast',
     rank: 5,
     // tags: ['endangered'], // TODO is this true?
+    flavor: {
+      DEFAULT: 'A blue-furred Fanged Beast that is both clever and highly athletic. Relatively gentle for a Fanged Beast, it plays an integral role in Sheparden life as a hunting partner and means of transportation.',
+      'Canyne Weapons': "With proper training, these creatures can learn to hunt with tools. Sheparden's residents even created specialized weapons that their Canyne companions can wield with their mouths.",
+      'Faithful Protectors': 'Before becoming endangered, this species would bravely defend Sheparden\'s people from monsters. In return, the villagers revere these monsters as "wards" for their courageous loyalty.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -1176,6 +1267,7 @@
     rank: 1,
     flavor: {
       DEFAULT: 'Using its long tongue, this Amphibian can grab objects and food from a distance. Its adhesive saliva can also be used to attach rocks and debris to its forelegs, enhancing its combat abilities.',
+      'Encrusted Arms': 'The well-developed forelegs are able to retain an adhesive saliva. When this monster is riled up, it will rub its forelegs in the dirt to affix stones and grit that increase its offensive capacity.',
       'It Eats Anything?': 'A species with an insatiable hunger that uses its long, soft tongue to catch and feed on Neopterons. Some reports indicate its endless appetite even causes it to eat barrels when charging foes.',
     },
     element: 'none',
@@ -1308,6 +1400,11 @@
     genus: 'Brute Wyvern',
     related: [{ type: 'feral', monster: 'Feral Deviljho' }],
     rank: 7,
+    flavor: {
+      DEFAULT: 'This exceedingly aggressive Brute Wyvern roams the land in search of sustenance. Its insatiable appetite is said to have driven other species to extinction.',
+      'Fiendish Glutton': 'Watching a Deviljho run down prey with saliva streaming from its maw drives fear into all other creatures. The saliva is highly acidic and expedites the digestion of hard-shelled monsters.',
+      'Ferocious Jaws': "The Deviljho's powerful jaw maintains a vice-like grip on prey, and the numerous spikes are actually fully developed fangs. Teeth that become damaged or weak are filed on the ground to encourage growth.",
+    },
     element: 'dragon',
     stats: {
       base: {
@@ -1376,6 +1473,11 @@
       { type: 'invasive', monster: 'Invasive Diablos' },
     ],
     rank: 5,
+    flavor: {
+      DEFAULT: 'A Flying Wyvern easily recognized by its two curved horns. Fiercely territorial, it attacks any who dare stray into its domain, causing many to call it "the tyrant of the desert."',
+      'Huge Horns': 'This monster moves above and below ground at similar speeds by using its horns to push aside earth, rock, and sand. Its sophisticated sense of hearing allows it to detect prey above.',
+      'Hydrating with Cacti': 'An herbivore that mostly eats water-rich succulents, such as cacti. It stays hydrated just by eating, which makes its diet perfect for patrolling territory since it does not have to seek out water.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -1434,6 +1536,11 @@
       { type: 'invasive', monster: 'Invasive Diablos' },
     ],
     rank: 6,
+    flavor: {
+      DEFAULT: 'Once thought to be a Diablos subspecies, it is actually a female Diablos whose shell darkened for mating season. This color serves as a warning to other creatures, including male Diablos.',
+      'Subspecies Transformation': 'To protect the eggs in its abdomen, this fierce female is always on high alert. Its extra durable shell and behavioral differences from the regular species make some think its ecology has changed.',
+      'Cacti and Nutrition': 'Like the regular species, this subspecies feeds primarily on cacti. Unlike the regular species, this monster elects to eat cacti with more nutrients than water content in preparation for laying eggs.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -1492,6 +1599,9 @@
       { type: 'invasive', monster: 'Invasive Diablos' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'Tales of this Diablos Deviant are passed down in a faraway desert. It is rumored to have annihilated entire battalions sent after it, leaving nothing but empty sand where once stood soldiers.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -1543,6 +1653,11 @@
       { type: 'subspecies', monster: 'Black Diablos' },
       { type: 'deviant', monster: 'Bloodbath Diablos' },
     ],
+    flavor: {
+      DEFAULT: 'An invasive subspecies of Diablos with far greater lethality than the regular species. It swiftly burrows underground to surprise threats by delivering a decisive attack from below with its horns.',
+      'Survival Instinct': 'This monster faced extinction due to poor thermoregulation, but survived by moving underground. When fighting aboveground, it tends to prefer places that are less open to the elements.',
+      'Twisted Horns': "This creature's twisted horns are an acquired characteristic. One theory posits that the horns were damaged by pressure and rotation while burrowing, and then gradually twisted as they regenerated.",
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
@@ -1553,6 +1668,8 @@
     rank: 6,
     flavor: {
       DEFAULT: 'This fierce Flying Wyvern is distinguished by the red-violet thorns dotting its green carapace. Its blood contains properties that poison and paralyze, so most monsters steer clear of it.',
+      'No Known Predators': "The Espinas' peerless combat prowess is owed to its solid armor, sharp spikes, and poisonous blood. Lacking natural predators, it is often seen lying around in seemingly vulnerable positions.",
+      'Poisonous Fire Breath': 'This monster unleashes fiery breath that also contains a thick, poisonous blood. Targets hit by this devastating attack will suffer paralysis, debilitating poison, and scorching hot burns.',
     },
     element: 'fire',
     stats: {
@@ -1629,6 +1746,11 @@
     name: 'Garangolm',
     genus: 'Fanged Beast',
     rank: 4,
+    flavor: {
+      DEFAULT: 'A giant Fanged Beast often mistaken for a pile of boulders. Its bodily fluids can promote plant growth, forming a unique symbiotic relationship with the flora that grows on its body.',
+      'The Kindly Monster': 'As evidenced by the plants and flowers growing out of its body, this monster has a calm disposition. It is unusually timid for a large monster and shows no inclination to compete for territory.',
+      'A Golem of a Monster': 'The thick, durable scales are formed by layers of bodily fluids and moss growing on the body surface. Both arms are pillar-shaped, with the left arm covered in moss and the right covered in lava.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -1677,6 +1799,11 @@
   {
     name: 'Gargwa',
     genus: 'Bird Wyvern',
+    flavor: {
+      DEFAULT: 'Bird Wyverns found in plains and other flat terrain. The wings are vestigial organs that are incapable of flight. These monsters are prized as livestock for their wide variety of uses.',
+      'Golden Egg': 'A timid monster that may spontaneously lay an egg when surprised from behind. Such eggs can occasionally be made of gold, but this phenomenon is not yet fully understood.',
+      'Two Gargwa with One Stone': 'The saying "two Gargwa with one stone" refers to gaining two benefits from a single action or difficult task, as in throwing a stone at a single Gargwa but somehow felling two of them.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Glavenus_(MHST3)
@@ -1689,6 +1816,11 @@
       { type: 'deviant', monster: 'Hellblade Glavenus' },
     ],
     rank: 5, // TODO 6?
+    flavor: {
+      DEFAULT: 'A Brute Wyvern that brandishes its heavy blue tail like a blade. The combustible metals contained inside increase in temperature with every swing, sharpening the tail and making it red-hot.',
+      Overheated: "The friction from repeated attacks raises the tail's temperature until it glows red-hot. In this state, the tail becomes sharper and drastically deadlier. Some swings even cause flames to erupt.",
+      'Fiery Throat': 'When its tail becomes dull, this monster uses its fangs to grind off the rust, which is stored in the flame sac in its throat to be heated and finally exhaled at extraordinary temperatures.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -1747,6 +1879,9 @@
       { type: 'honed', monster: 'Honed Glavenus' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'Deep within this Glavenus Deviant burns a searing heat. A single sweep of its tail is enough to lay waste to everything before it, even incinerating entire mountains.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -1876,6 +2011,11 @@
     name: 'Goss Harag',
     genus: 'Fanged Beast',
     rank: 5,
+    flavor: {
+      DEFAULT: 'This Fanged Beast thrives in harsh snowy regions with thick fur that staves off the bitter cold. Its aggressive hunting behavior and horned visage make it appear like some kind of arctic demon.',
+      'Blue Demon? Red Demon?': 'Its temperature rises when angered, causing internal fluids to roil and the body to become flush with energy. The resulting alteration to skin color makes it look like a different creature altogether.',
+      'A Monstrous Appetite': 'A large amount of energy is required to maintain its body temperature. That fierce hunger sometimes prompts it to attack even large monsters, but it will eat what it can get, including carrion.',
+    },
     element: 'ice',
     stats: {
       base: {
@@ -1932,6 +2072,11 @@
       { type: 'feral', monster: 'Feral Gravios' },
     ],
     rank: 5,
+    flavor: {
+      DEFAULT: 'A large Flying Wyvern found in torrid regions. It possesses a sturdy carapace and likes to consume minerals that contain explosive properties, such as volcanic rocks or Firestones.',
+      'The Trick to Swimming in Lava': 'The heat-resistant outer shell, massive body that reduces thermal conductivity, and centralized internal organs enable this monster to submerge itself in lava for brief periods of time.',
+      'A Variety of Attacks': 'Making up for its sluggishness with an arsenal of varied attacks, this monster uses flame gas to repel threats, sleep gas to knock enemies out, and heat beams to fry distant foes.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -1986,6 +2131,11 @@
       { type: 'feral', monster: 'Feral Gravios' },
     ],
     rank: 6,
+    flavor: {
+      DEFAULT: 'A subspecies of Gravios distinguished by its tough black carapace. The heat produced inside its body far surpasses that of regular Gravios and is thought to be the reason for this coloration.',
+      'Spitting Fire': 'Because its internal temperatures can grow even hotter than a regular Gravios, it must occasionally expel the heat. For this reason, it is frequently observed unleashing powerful heat beams.',
+      'Blistering Heat Beam': 'The body of this subspecies is optimized for releasing heat beams. It performs a lengthy charging motion unique to the subspecies before firing off beams in order to defeat foes in a single blow.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -2048,6 +2198,11 @@
   {
     name: 'Izuchi',
     genus: 'Bird Wyvern',
+    flavor: {
+      DEFAULT: 'This Bird Wyvern commonly appears in a pack led by a Great Izuchi. The distinctive sickle-shaped tail is used not only as a weapon, but to climb trees and gather fruit as well.',
+      'The Next Leader': 'Pairs of elite Izuchi follow a Great Izuchi to learn how to work together. Some form of hierarchy seems to exist beyond these two elites because when one is chased away another will take its place.',
+      'Vital Materials': 'Its hide is used in a variety of ways, from fashion to armor. Skins from so-called elites are particularly smooth, while the highest quality hides give off a pale orange sheen.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Izuchi_(MHST3)
@@ -2056,6 +2211,11 @@
     genus: 'Bird Wyvern',
     related: [{ type: 'feral', monster: 'Feral Great Izuchi' }],
     rank: 1,
+    flavor: {
+      DEFAULT: 'The leader of an Izuchi pack, this monster is identifiable by its larger build, bristled fur, and scythe-like tail. It rarely acts alone, instead patrolling its territory with two elite Izuchi.',
+      'Leader of the Pack': 'The Great Izuchi takes the best hunters of Izuchi packs on hunts to teach them. Experienced males are tasked with guarding nests, and the most capable among them becomes the next pack leader.',
+      'Versatile Tail': 'The distinctive, sickle-like tailblade can be used to pierce and cut down prey, swing through tree branches, and perhaps even give orders to Izuchi through certain gestures or movements.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -2123,6 +2283,7 @@
     flavor: {
       DEFAULT: 'A Bird Wyvern with an oddly-shaped crest and poisonous saliva. It often runs about due to its skittish nature, seldom remaining in one place for long.',
       'Stamina Source': 'This monster\'s seemingly limitless stamina is derived from a fluid coursing through its body known as "dash extract," a potent tonic that sees great demand for its medicinal uses.',
+      'Flashing Its Crest': 'This monster is known to vigorously shake its head when agitated. In doing so, it strikes its own crest with its curved beak to break up mineral compounds and emit a dazzling flash of light.',
     },
     element: 'none',
     stats: {
@@ -2194,8 +2355,9 @@
     ],
     rank: 3,
     flavor: {
-      DEFAULT: 'A purple-skinned subspecies of Gypceros. It boasts higher immunity to poison than its standard cousin, which allows it to hold more potent venom and in greater amounts.',
+      DEFAULT: 'A purple-skinned subspecies of Gypceros. It boasts higher immunity to poison than its standard cousins, which allows it to hold more potent venom and in greater amounts.',
       'Powerful Poison': 'This subspecies eliminates intruders by poisoning them with a venom more potent than normal and then blinding them with a bright flash. Powerful blows can also be delivered at range with its tail.',
+      'Eye-Catching Colors': 'Gypceros hide is a popular material due to its elasticity, poison resistance, and insulating properties. The unique purple color of the subspecies adds a fancy flair favored by fashionistas.',
     },
     element: 'none',
     stats: {
@@ -2275,9 +2437,9 @@
     name: 'Kelbi',
     genus: 'Herbivore',
     flavor: {
-      DEFAULT: 'A dainty, small-statured herbivore. Like other herbivorous beasts, it has a gentle disposition and is easily spooked, It will quickly hop away from any perceived threats.',
-      'A Cure-All': 'Its horns are used in making a medicine that can supposedly cure all diseases. The most potent horns are harvested from a live monster, and it takes nearly a year for them to regenerate.',
+      DEFAULT: 'A dainty, small-statured herbivore. Like other herbivorous beasts, it has a gentle disposition and is easily spooked. It will quickly hop away from any perceived threats.',
       'Paired Off': 'These monsters are known to form strong mating bonds, and pairs can often be seen grazing together during mating season. Males use their horns to protect females and fend off any perceived threats.',
+      'A Cure-All': 'Its horns are used in making a medicine that can supposedly cure all diseases. The most potent horns are harvested from a live monster, and it takes nearly a year for them to regenerate.',
     },
   },
 
@@ -2290,6 +2452,11 @@
       { type: 'invasive', monster: 'Invasive Khezu' },
     ],
     rank: 3,
+    flavor: {
+      DEFAULT: "Lacking scales or carapace, this monster's body is instead covered by an elastic white hide. Life in dimly-lit caves has caused its vision to regress, but a heightened sense of smell makes up for it.",
+      'Electrifying Body': 'This unique monster generates electricity that it discharges from its entire body or releases as thunder attacks from its mouth. The soft, spongy skin absorbs impacts and acts as an insulator.',
+      'Pale Bone': 'The fatty rib meat is legendary among grotesque gourmet aficionados. But while the marbled portion appears to be the choicest cut, it must not be eaten under any circumstances.',
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -2344,6 +2511,11 @@
       { type: 'invasive', monster: 'Invasive Khezu' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'A strange subspecies of Khezu with red flesh. Its electricity-producing organ enables a wide variety of attacks, including electric traps to disable and ensnare prey.',
+      'Alluring Body': 'Materials from regular white Khezu are pearl-colored, while materials from the red subspecies have an alluring color and glossy luster that make them highly valuable.',
+      'Crimson Belly Meat': "This monster's fatty belly meat is a brilliant crimson color, but much like the meat of the regular species, it is certainly not safe for consumption.",
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -2397,6 +2569,11 @@
       { type: 'invasiveOf', monster: 'Khezu' },
       { type: 'subspecies', monster: 'Red Khezu' },
     ],
+    flavor: {
+      DEFAULT: 'This invasive variety of Khezu is the source of the "Death Shriek" legend from Glacial Caps folklore. Its resonance organ can emit a shrill cry that elicits instinctive fear responses in victims.',
+      'Death Shriek': 'Characterized by a specialized throat structure and highly developed resonance organ, this monster can vibrate its exceptionally thick vocal cords to emit explosively loud screams.',
+      'Electrifying Death Shrieks': "This monster's Death Shriek causes powerful vocal cord oscillations that create energy to stimulate its muscles and electric organs, drastically increasing this specimen's power generation capacity.",
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Kulu-Ya-Ku_(MHST3)
@@ -2404,6 +2581,11 @@
     name: 'Kulu-Ya-Ku',
     genus: 'Bird Wyvern',
     rank: 2,
+    flavor: {
+      DEFAULT: 'A Flying Wyvern whose forelimbs have developed to carry objects. Often seen stealing eggs from monster nests, it is also known to dig up rocks to use as a weapon or shield against threats.',
+      'Seeking Eggs': 'This monster uses its forelegs to steal eggs from other nests, and eats an average of three to four eggs a day. Any kind of egg will suffice, but it mostly feeds on the nutritious yolks.',
+      'Battling Hunger, Rearing Young': 'Females lay two eggs after mating, and the two parents then care for one egg each. Because the parents must fast during this time, one may eat its own egg in rare cases of desperate hunger.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -2455,6 +2637,11 @@
     tags: ['endangered'],
     related: [{ type: 'subspecies', monster: 'Ivory Lagiacrus' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'This Leviathan sits atop the aquatic food chain. Electricity generated by its scales is stored in dorsal organs to later be released in a discharge that can electrify the very ocean.',
+      'Unbelievable Lung Capacity': 'Although Lagiacrus are mostly found in the sea, they breathe with lungs like other land creatures. However, their great lung capacity allows them to remain submerged for up to half a day.',
+      'Efficient Electricity Storage': 'It can contract the muscles on the surface of its body to activate electricity-generating cells. Quantities of electricity that rival even a lightning bolt are then stored within its shockspikes.',
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -2509,6 +2696,11 @@
     tags: ['subspecies', 'mutation'],
     related: [{ type: 'subspeciesOf', monster: 'Lagiacrus' }],
     rank: 6,
+    flavor: {
+      DEFAULT: 'A subspecies of Lagiacrus with a beautiful ivory carapace. Its blue shockspikes are far more evolved than that of the regular species and capable of storing vast amounts of electricity.',
+      'Conqueror of Land and Sea': 'While Leviathans are primarily active in the water, the Ivory Lagiacrus can be said to rule two domains as it uses its ferocious strength to dominate monsters on sea and land alike.',
+      'Evolution of Shockspikes': "The Ivory Lagiacrus' shockspikes feature greater conductivity and requires no cooling after discharge, allowing the monster to emit powerful electric bursts more frequently.",
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -2562,6 +2754,11 @@
     genus: 'Flying Wyvern',
     related: [{ type: 'feral', monster: 'Feral Legiana' }],
     rank: 4,
+    flavor: {
+      DEFAULT: 'A Flying Wyvern renowned for its grace when traversing the skies. It flies smoothly even in heavy turbulence by expertly adjusting the specialized membranes on its wings and tail.',
+      'Assault from Above': 'Because this monster prefers to fight from above while airborne, current theories speculate that the legs and talons have evolved to become specialized for grasping and seizing objects.',
+      'Ride the Wind': 'Membranes on its head, wingarms, and tail are perfectly designed for flight. Fine adjustments alter altitude and airspeed, allowing this monster to deftly maneuver through the sky.',
+    },
     element: 'ice',
     stats: {
       base: {
@@ -2625,6 +2822,11 @@
     name: 'Lunagaron',
     genus: 'Fanged Wyvern',
     rank: 5,
+    flavor: {
+      DEFAULT: 'A Fanged Wyvern with distinctive azure scales. Although normally quadrupedal, it can change its body composition by inhibiting its thermoregulatory organs to increase heat and enlarge muscles.',
+      'Four Legs or Two': "This monster's behavior varies with its stance. When on all fours, it swiftly charges to bite prey. When on its hind legs, it attacks with its forelegs and uses its ferocious claws to tear prey apart.",
+      'Cobalt Core': 'Its abdomen is inset with a glowing, cobalt-blue core that radiates intensely cold air. Some believe this is caused by special body fluids circulating through and acting as a coolant.',
+    },
     element: 'ice',
     stats: {
       base: {
@@ -2677,6 +2879,11 @@
     genus: 'Fanged Wyvern',
     related: [{ type: 'feral', monster: 'Feral Magnamalo' }],
     rank: 6,
+    flavor: {
+      DEFAULT: 'A Fanged Wyvern clad in a heavy carapace. It consumes even the bones of its prey to satiate its voracious appetite, and the hellfire expelled from its body is a byproduct of metabolism.',
+      'Hellfire Handling': 'Hellfireblight is a concentrated gas that explodes on impact. Not only is this monster shrouded in it, but it can also be expelled from the tailblade and used as a propellant to leap into the sky.',
+      'The Key to Courtship': "This monster's crescent-shaped horns are used to attract females, but they can never be regrown. Those with broken horns become more aggressive and focus on expanding territory rather than breeding.",
+    },
     element: 'none',
     stats: {
       base: {
@@ -2741,6 +2948,11 @@
     genus: 'Elder Dragon',
     tags: ['calamitous'],
     rank: 7,
+    flavor: {
+      DEFAULT: 'Notable for its silver carapace, this elegant Elder Dragon stalks the night to drain the energy from its prey. Once it has drunk its fill, it reveals its dreadful true form in all its glory.',
+      'The Qurio': 'Malzeno uses life-forms called the Qurio to drain the energy of other living creatures. The Qurio harbor a unique virus that can inflict the Blood Rite condition on their prey.',
+      'Blood Ritual': 'When Malzeno becomes invigorated, its carapace turns black as ink while the chest and webbing become blood-red. In this "Blood Rite" state, it loses self-control and becomes extremely violent.',
+    },
     element: 'dragon',
     stats: {
       base: {
@@ -2795,6 +3007,11 @@
     tags: ['endangered'],
     related: [{ type: 'deviant', monster: 'Soulseer Mizutsune' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'This Leviathan has evolved in such a way as to be particularly mobile on land. After immobilizing its prey with bubbles produced by an internal fluid, it gracefully runs it down.',
+      'A Bewitching Dance': 'This monster secretes a bubbly lubricant that is used to gracefully glide about. Stopping such a bewitching dancer requires a fair amount of experience and dedication.',
+      'Gorgeous Scale': 'Its translucent scales have layers that break light into a colorful array like a prism. Legends say each Mizutsune bears a single scale as old as itself that will produce a rainbow when held aloft.',
+    },
     element: 'water',
     stats: {
       base: {
@@ -2849,6 +3066,9 @@
     tags: ['deviant', 'mutation'],
     related: [{ type: 'deviantOf', monster: 'Mizutsune' }],
     rank: 7,
+    flavor: {
+      DEFAULT: 'A Mizutsune Deviant that has been rendered blind by past conflicts. Such an affliction would normally spell the end for a monster, but it has adapted by using bubbles for perception.',
+    },
     element: 'water',
     stats: {
       base: {
@@ -2897,6 +3117,7 @@
     flavor: {
       DEFAULT: 'Small, extremely tractable herbivores that can be found throughout Azuria. Their fluffy, high-quality fur has been used in clothing and ceremonial tools since ancient times.',
       'For the Coldest Seasons': 'This creature is characterized by its soft and fluffy white fleece. Fabric made from Moofah fur is an excellent insulator used in cold-resistant gear, which makes it invaluable in chilly climates.',
+      'Invaluable Monster': 'Moofah are prized for their fur and milk, and their personality makes them easy to rear, so they are sometimes kept as livestock. There are evidently even fan clubs that celebrate their cuteness.',
     },
     stats: {
       base: {
@@ -2916,6 +3137,8 @@
     rank: 7,
     flavor: {
       DEFAULT: 'This Elder Dragon is completely enveloped in liquid and can command vast quantities of water. Unique electric organs allow it to charge water attacks with electricity, creating massive explosions.',
+      'Skin Structure': "This monster's skin is made of flexible fibers that can change shape depending on the situation. Meticulous adjustments to the composition can boost either water absorption or retention.",
+      'Water and Thunder Combust': 'Beyond controlling water, this monster can release energy stored in electricity-generating organs from its limbs and wings. Intense heat from this release generates violent explosions of steam.',
     },
     element: 'water',
     stats: {
@@ -2986,6 +3209,11 @@
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'Cloaked in fur as dark as night, this Flying Wyvern lurks in the shadows to then pounce upon prey with frightening speed and agility.',
+      'Blade-Like Wings': 'The forelegs boast blade-like wings called "cutwings" that this monster uses to shear through dense forest. When springing upon its prey, it spreads these wings to become even more lethal.',
+      'The Tail Is the Biggest Weapon': "The Nargacuga's lengthy tail is just as dangerous a weapon as its cutwings. Thin spines along the tail become rigid during attacks or when the monster is enraged, enhancing its lethality.",
+    },
     element: 'none',
     stats: {
       base: {
@@ -3039,6 +3267,11 @@
       { type: 'deviant', monster: 'Silverwind Nargacuga' },
     ],
     rank: 5,
+    flavor: {
+      DEFAULT: 'The mottled green fur of this Nargacuga subspecies is speculated to have served as an excellent camouflage in its verdant habitat before it became endangered.',
+      'Green Camouflage': 'Its fur and scales are optimized to blend into green environments. The irregular pattern of colors in its fur helps it hide, while the appearance of its scales varies dramatically with the light.',
+      'Tail Spikes': 'The tail bears sharper spikes than that of the regular species and thus sees more extensive use. Spikes can be flung at blinding speed to pin prey to the ground while this monster hides in the foliage.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -3092,6 +3325,9 @@
       { type: 'subspecies', monster: 'Green Nargacuga' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'A Nargacuga Deviant that is covered in distinctive silver markings. Quick swings from its tail generate slicing gusts of wind, the phenomenal sight of which earned it its name.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -3145,6 +3381,7 @@
     flavor: {
       DEFAULT: 'A Temnoceran that weaves nests to defend its territory and hunt. It ensnares prey, weakening them with abnormal statuses, then feasts using its razor-sharp mandibles.',
       'Gypceros, My Favorite': 'Its preferred prey are Gypceros, whose hides it peels off and wears after feeding. The purple hides protect it from its weakness to lightning and conceal its true white coloring.',
+      'Ample Ailments': 'Spikes along its back act as poison sacs, and the internal coma sac produces a powder that sedates foes. With masterful use of these tools, it incapacitates prey and binds them in silk.',
     },
     element: 'none',
     stats: {
@@ -3216,6 +3453,11 @@
       { type: 'invasive', monster: 'Invasive Nerscylla' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'A subspecies of Nerscylla that mostly inhabits desert areas and wraps itself in Khezu hides. Rather than spinning webs, it instead lurks beneath the sands to pounce on unsuspecting prey.',
+      'Unique Traversal': 'The juveniles fly by releasing silk into the air to catch the wind in a process called "ballooning." They travel far from the desert, and those who obtain Khezu hides return during spawning season.',
+      'Regional Differences?': 'Although it shares the same habit of donning the hides of its prey as the regular species, this subspecies displays a preference for Khezu hides. The skins worn evidently vary from region to region.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -3321,12 +3563,22 @@
       { type: 'subspecies', monster: 'Nerscylla' },
       { type: 'feral', monster: 'Feral Nerscylla' },
     ],
+    flavor: {
+      DEFAULT: "An invasive subspecies of Nerscylla that stealthily hunts any who wander into its territory. Prey is seized and immobilized by this monster's massive chelicera before being mercilessly devoured.",
+      'Head Scars': "This monster's head bears scars from turf wars with territorial rivals. Although these scars are weak points, they are well hidden by the creature's large chelicera and proficiency with camouflage.",
+      'Sneakiness Evolved': "Large pigmentation cells dot the surface of this monster's body. It releases darker pigments to camouflage itself better as night falls, which is why it excels at ambushing prey in the dark.",
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Nibelsnarf_(MHST3)
   {
     name: 'Nibelsnarf',
     genus: 'Leviathan',
+    flavor: {
+      DEFAULT: 'A Leviathan that has adapted to sandy environments. It blends in with sand dunes and locates prey aurally to then suck both the target and the surrounding sand into its maw.',
+      'The Desert Gourmand': 'An immoderate glutton, this monster uses its large mouth to swallow prey and sand together. After absorbing vital nutrients, it expels the indigestible sand through gills in its neck.',
+      'Dazzling Fluid': 'Its shiny and richly colored bodily fluids excel at retaining moisture. By circulating through the body, these fluids ensure constant hydration even in dry deserts.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Odogaron_(MHST3)
@@ -3335,6 +3587,11 @@
     genus: 'Fanged Wyvern',
     related: [{ type: 'subspecies', monster: 'Ebony Odogaron' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'This Fanged Wyvern is so aggressive in its wide-ranging hunt for meat that it will attack stronger monsters without hesitation. Its distinctive claws rend grisly gouges into the flesh of foes.',
+      'Seeking Fuel': 'This monster owes it agility to its relative lack of body fat, but it must constantly seek out prey to satisfy its energy needs. This is also why it is often seen carrying chunks of meat in its mouth.',
+      'All About the Claws': "Without a doubt, this monster's most distinctive and terrifying feature is its layered claws. The serrated edges inflict ragged wounds that cause extensive bleeding in the unfortunate prey.",
+    },
     element: 'none',
     stats: {
       base: {
@@ -3389,6 +3646,11 @@
     tags: ['subspecies'],
     related: [{ type: 'subspeciesOf', monster: 'Odogaron' }],
     rank: 6,
+    flavor: {
+      DEFAULT: 'A jet-black subspecies of Odogaron whose fangs and unique claws hold dragon energy, allowing it to reave elemental power from its target.',
+      'Hungry for Meat': 'This subspecies carries around extra meat to gain more strength when needed. As it is even more dependent on meat than the normal species, it keeps a chunk in its mouth even during combat.',
+      'Dragon Breath': "While this monster can certainly attack with its dragon breath, it rarely aims directly at the target. Instead, it aims at its foe's feet to distract it before closing in for a direct attack.",
+    },
     element: 'dragon',
     stats: {
       base: {
@@ -3445,6 +3707,11 @@
       { type: 'invasiveOf', monster: 'Odogaron' },
       { type: 'subspecies', monster: 'Ebony Odogaron' },
     ],
+    flavor: {
+      DEFAULT: 'An invasive subspecies of Odogaron that seeks only to butcher any creature it sees. The flaming arms are said to have dragged many a hunter to hell, lending to its horrifying presence.',
+      'Oil Slick': "This monster's body is specially built to absorb fat from carrion and then secrete that fat onto its skin. Striking the ground with its claws ignites those oils to engulf invaders in flame.",
+      'Unique Claws': "A unique compound in this specimen's heat-resistant claws prevents damage even when run against the hard ground. Even if they wear down, the claws soon grow back due to an unusually high metabolism.",
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Paolumu_(MHST3)
@@ -3455,8 +3722,8 @@
     rank: 3,
     flavor: {
       DEFAULT: 'After sucking in a large volume of air, this Flying Wyvern takes on its unique, rotund appearance. That air can then be expelled to propel itself. It is just as mild-mannered as it looks.',
-      'On Wafts of Air': 'Paolumu are the only species known to have a neck pouch, a flexible organ that expands when it inhales. The buoyancy lets it conserve energy by reducing the number of times it has to flap its wings.',
       'Softness Can Be Deceiving': 'The calm disposition, adorable face, and soft, white down make some think this is a benign monster. However, it is extremely hostile to threats and can be quite intimidating.',
+      'On Wafts of Air': 'Paolumu are the only species known to have a neck pouch, a flexible organ that expands when it inhales. The buoyancy lets it conserve energy by reducing the number of times it has to flap its wings.',
     },
     element: 'none',
     stats: {
@@ -3607,9 +3874,9 @@
     ],
     rank: 4,
     flavor: {
-      DEFAULT: 'This massive Piscine Wyvern is mainly seen around bodies of water. Though once capable of flight, its wings have adapted to aquatic locomotion, for which it relies on sound rather tha sight.',
-      'Varied Diet': 'While it normally preys upon aquatic creatures while swimming, it is also known to attack Rhenoplos and other monsters on land with jets of compressed water. It apparently loves to eat frogs.',
+      DEFAULT: 'This massive Piscine Wyvern is mainly seen around bodies of water. Though once capable of flight, its wings have adapted to aquatic locomotion, for which it relies on sound rather than sight.',
       'Not a Land Fan': 'Although aquatic in appearance, this monster breathes with lungs and is active on land. However, disdain for dryness and difficulty walking on two legs mean it will not stay on land for long.',
+      'Varied Diet': 'While it normally preys upon aquatic creatures while swimming, it is also known to attack Rhenoplos and other monsters on land with jets of compressed water. It apparently loves to eat frogs.',
     },
     element: 'water',
     stats: {
@@ -3682,7 +3949,8 @@
     rank: 5,
     flavor: {
       DEFAULT: 'Named after its jade-green scales, this subspecies is more agile than the common Plesioth, boasting incredible mobility both on land and in water. It is also more hostile than the regular species.',
-      Amphibious: 'While it is typically in aquatic environments, this agile amphibious monster is also quite adept at moving on the ground. In fact, it often seeks out dry land when angered.',
+      Amphibious: 'While it is typically active in aquatic environments, this agile amphibious monster is also quite adept at moving on the ground. In fact, it often seeks out dry land when angered.',
+      'Like a Gemstone': 'The Green Plesioth earns its name from its captivating, jade-colored scales, which can be sold at a high price. Its fins also see extensive use as ornaments and jewelry.',
     },
     element: 'water',
     stats: {
@@ -3752,6 +4020,11 @@
       { type: 'invasiveOf', monster: 'Plesioth' },
       { type: 'subspecies', monster: 'Green Plesioth' },
     ],
+    flavor: {
+      DEFAULT: 'This invasive subspecies of Plesioth has evolved to absorb water through its skin for storage. This water can then be violently expelled from the mouth with the force of a cannon blast.',
+      'Aquatic Armor': 'The cells within its scales have evolved to store vast amounts of water. When in danger, it uses these water reserves to cover its body in an aquatic armor that protects from all impacts.',
+      'Protruding Fragments': 'This specimen boasts excellent water retention thanks to tubes that connect its distinctive protrusions to water-storing organs. These allow it to absorb water directly when stores run critically low.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Pukei-Pukei_(MHST3)
@@ -3759,6 +4032,11 @@
     name: 'Pukei-Pukei',
     genus: 'Bird Wyvern',
     rank: 3,
+    flavor: {
+      DEFAULT: 'A venomous, forest-dwelling Bird Wyvern that uses its extendable tongue like a whip to lash out and grab food. It tends to harass weaker monsters but cowers before stronger ones.',
+      'Blend of Food and Poison': 'The Pukei-Pukei is known to keep eaten food in its jaw and tail pouches. Attacks are performed by combining stored food with poison from the poison sac and expelling the mixture from its mouth.',
+      'Shifting Colors': 'The uniquely structured feathers are coated with a fine crystal particulate. As such, adjusting the angle at which the feathers reflect light can make its body appear to change colors.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -3810,6 +4088,11 @@
   {
     name: 'Rachnoid',
     genus: 'Temnoceran',
+    flavor: {
+      DEFAULT: "These juvenile Rakna-Kadaki cling to their mother's abdomen and primarily feed off scraps of regurgitated prey. Covered in silk, they can almost be mistaken for large cotton balls.",
+      'Obedient Offspring': "It can spin silk as strong as its parent's right after birth. When ordered to, it will ensnare prey with silk before using those threads to draw the catch to its large, lumbering mother.",
+      'Working Up an Appetite': 'The glowgut found within Rakna-Kadaki abdomens is a light-emitting organ that generates the heat necessary for incubating and hatching Rachnoids. Maintaining this heat requires a great deal of food.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rakna-Kadaki_(MHST3)
@@ -3818,6 +4101,11 @@
     genus: 'Temnoceran',
     related: [{ type: 'feral', monster: 'Feral Rakna-Kadaki' }],
     rank: 5,
+    flavor: {
+      DEFAULT: 'Distinctly swathed in its own webbing and attended by several Rachnoid offspring, this Temnoceran almost appears to be part of a royal procession as it strolls about in a gown of pure white.',
+      'Laid and Hatched': 'If the number of attached Rachnoids decreases, the Rakna-Kadaki will produce eggs that grow rapidly within the egg sac and then hatch. The monster becomes more aggressive as this cycle repeats.',
+      'Princess Spider': "Larger Rakna-Kadaki are all female, while males are similar in size and appearance to Rachnoids. Males live amongst the Rachnoids attached to the female's abdomen and take turns mating with them.",
+    },
     element: 'fire',
     stats: {
       base: {
@@ -3887,6 +4175,11 @@
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 5,
+    flavor: {
+      DEFAULT: 'Simply mentioning Flying Wyverns brings this fire-breathing monster to mind. Aptly known as the "King of the Skies," it spends little time on land, instead using its powerful wings to hunt from above.',
+      "Sky King's Testament": 'Most Flying Wyverns struggle with long-duration flight, but thanks to its powerful wings, the Rathalos can fly continuously for days and still move with enough precision to capture birds in flight.',
+      'Poison Secretion Location': "While Rathian have poison-secreting organs in their tails, males of the species possess poisonous claws. This is attributed to the Rathalos' preference for airborne attacks.",
+    },
     element: 'fire',
     stats: {
       base: {
@@ -3946,6 +4239,11 @@
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 6,
+    flavor: {
+      DEFAULT: 'An azure subspecies of Rathalos. More mobile than the regular species, it swoops down from above for ferocious attacks. It has been known to hunt alongside the Pink Rathian.',
+      'Overwhelming Air Superiority': 'A subspecies of Rathalos with even greater flight capabilities than those of the normal species. It rarely descends to the ground even in battle, instead staying aloft to deliver attacks from above.',
+      'Combo Attacks': "When enraged, this monster's fire breath becomes more potent, its flight speed increases, and it begins linking various attacks together with impressive agility.",
+    },
     element: 'fire',
     stats: {
       base: {
@@ -4018,6 +4316,9 @@
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'A king among kings, this Rathalos Deviant soars through the skies on majestic black wings. All those who dare oppose its rightful rule will be incinerated by its scorching breath.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -4113,7 +4414,9 @@
     ],
     rank: 4,
     flavor: {
-      DEFAULT: 'This Flying Wyvern earns its title of "Queen of the Land" by using its powerful legs to unt primarily on the ground. Any challenges to her reign will be swiftly put down by the poison-laden tail.',
+      DEFAULT: 'This Flying Wyvern earns its title of "Queen of the Land" by using its powerful legs to hunt primarily on the ground. Any challenges to her reign will be swiftly put down by the poison-laden tail.',
+      'Organs for Rearing Young': "Protective poison spikes protrude from this monster's body. While its chin spike might look equally threatening, it is actually used to deliver chewed food while nursing juveniles.",
+      'Egg Guardian': 'Before becoming endangered, records show that Rathian would raise young with a mate. Even now, they mercilessly assail any threat to their eggs, suggesting they retain some vestige of this habit.',
     },
     element: 'fire',
     stats: {
@@ -4195,6 +4498,8 @@
     rank: 5,
     flavor: {
       DEFAULT: 'The vibrant pink scales of this Rathian subspecies belie a terrible ferocity. It deftly utilizes its toxic tail to corner prey, then closes in for the kill.',
+      'Solid Tail': "The tail differs in composition from that of a regular Rathian's and is noticeably harder. Some hypothesize that this adaptation emerged to help it survive ferocious encounters with its enemies.",
+      'Types of Tail Attacks': 'This subspecies uses its poisonous tail in a variety of ways with lethal effect. For instance, it can swing its tail during an aerial barrel roll to clear all threats in the vicinity.',
     },
     element: 'fire',
     stats: {
@@ -4267,7 +4572,7 @@
     ],
     rank: 7,
     flavor: {
-      DEFAULT: 'The tail of this Rathian Deviant bears venom of the deadliest kind. When expelled, the venom forms a majestic purple cloud of iasma that suffocates any unfortunate prey.',
+      DEFAULT: 'The tail of this Rathian Deviant bears venom of the deadliest kind. When expelled, the venom forms a majestic purple cloud of miasma that suffocates any unfortunate prey.',
     },
     element: 'fire',
     stats: {
@@ -4316,6 +4621,11 @@
     name: 'Rey Dau',
     genus: 'Flying Wyvern',
     rank: 6,
+    flavor: {
+      DEFAULT: 'A luminous gold Flying Wyvern that dwells in sandy, arid regions. Its defining features are its two horns, from which tremendous amounts of electrical energy can be discharged.',
+      'Glistening Blue Fulgurite': "Fulgurite forms wherever Rey Dau's electrified wings or tail touch the ground. Parts covered in this material have increased attack range and amplified electric charge. Approach with caution.",
+      Thundercharged: 'Its barbed scales and intricate carapace efficiently conduct electricity provided by the electric organs. Fulgurites on its wings and tail indicate its proficiency with storing electricity.',
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -4416,6 +4726,7 @@
     flavor: {
       DEFAULT: 'A male Ludroth that has grown larger and taken control of the pack. This aquatic creature is found in both freshwater and saltwater, and its absorbent mane retains moisture, enabling movement on land.',
       'Spongy Mane': 'This monster boasts a spongy, yellow mane running from its neck down its back. The mane can absorb and store water for use while on land, but the Royal Ludroth quickly tires if its mane dries up.',
+      'Aquatic Hunting': 'This monster specializes in hunting with water. Liquid stored in its aqua sac can be sprayed at prey or mixed with bodily fluids to create an immobilizing mucus.',
     },
     element: 'water',
     stats: {
@@ -4484,6 +4795,11 @@
     tags: ['subspecies'],
     related: [{ type: 'subspeciesOf', monster: 'Royal Ludroth' }],
     rank: 3,
+    flavor: {
+      DEFAULT: 'This subspecies of Royal Ludroth sports a spongy, purple mane that stores toxins produced in the body. With each step, poison seeps out and permeates the vicinity.',
+      'Color Theory': 'The purple complexion that earned this monster its name is caused by poison, but the beautiful milk-white scales are largely unmarred by this discoloration and are popular choices for jewelry.',
+      'Purple Reign': 'This subspecies displays a preference for watery areas since hydrating its mane helps it revitalize. Nearby waters will turn purple when it expels absorbed water along with its poison.',
+    },
     element: 'water',
     stats: {
       base: {
@@ -4533,6 +4849,11 @@
     name: 'Seregios',
     genus: 'Flying Wyvern',
     rank: 6,
+    flavor: {
+      DEFAULT: 'A Flying Wyvern covered in a pinecone lattice of razor-sharp scales. It can launch a barrage of these deadly scales at prey, inflicting countless lacerations.',
+      'Rathalos Rival?': 'A territorial monster that patrols wide swaths of land from above. Fierce enough to challenge Rathalos for the title of "King of the Skies," it repels threats with its bladescales and powerful legs.',
+      'A Golden Grave': 'Before going in for the kill, this monster fires bladescales around fallen prey. The dazzling light reflecting off these golden scales spells the end for any unlucky enough to see it.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -4581,6 +4902,11 @@
   {
     name: 'Ceanataur',
     genus: 'Carapaceon',
+    flavor: {
+      DEFAULT: "A small Carapaceon that uses other creatures' shells to protect itself. It mainly spends its time buried underground, but it will rise from below to ambush threats that get too close.",
+      'Shogun Ceanataur Youth': "The underdeveloped claws lack the scythe-like capacity of the Shogun Ceanataur's, but they are still lethally sharp. This monster is aggressive, moves quickly, and spits venom when ambushing foes.",
+      'Coveted Delicacy': 'Carapaceon brains can be harvested from the Ceanataur and other members of the class. The brains are a known delicacy, with high-quality brains being particularly valuable.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Shogun_Ceanataur_(MHST3)
@@ -4589,6 +4915,11 @@
     genus: 'Carapaceon',
     related: [{ type: 'invasive', monster: 'Invasive Shogun Ceanataur' }],
     rank: 3,
+    flavor: {
+      DEFAULT: "A giant Carapaceon found in caves and marshlands, this fully grown form of the Ceanataur has a giant monster's skull on its back and highly-developed pincers that it wields like scythes.",
+      'Favorite Shell': 'This monster appears to prefer certain shells over others, but it often dons Gravios skulls. The jaw of the skull helps stabilize its tail as it jettisons streams of water at prey from its abdomen.',
+      'Exquisite Sharpness': 'When this monster is angered or threatened, the retracted claws will quickly extend into a scythe-like shape. They are as sharp as a blade and make metallic sounds when run along a whetstone.',
+    },
     element: 'water',
     stats: {
       base: {
@@ -4642,12 +4973,22 @@
     genus: 'Carapaceon',
     tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Shogun Ceanataur' }],
+    flavor: {
+      DEFAULT: 'Like any true warrior, this invasive subspecies of Shogun Ceanataur excels at both offense and defense. It uses large, mutated claws to eviscerate prey while its sturdy black shell wards off attacks.',
+      'Lustrous Black Shell': 'This monster has been observed scraping its shell against solid rock. After years of such polishing, the shell grows as unyielding as diamond and takes on a ghastly black luster.',
+      'Razor-Sharp Weakness': "This monster's massive pincers have extremely sharp tips, but they cannot withstand powerful impacts against hard objects. The easily broken pincers are therefore the monster's weak point.",
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Slagtoth_(MHST3)
   {
     name: 'Slagtoth',
     genus: 'Herbivore',
+    flavor: {
+      DEFAULT: 'Highly territorial herbivores that live near bodies of water. They store nutrients in their thick, sagging hides.',
+      'Possibly a Good Source of Oil': 'This monster is characterized by a thick, droopy hide that protects it from potentially fatal injuries. As this skin also boasts water- and heat-resistant properties, it is valued as an armor material.',
+      'For Protection': 'Like most herbivores, these creatures are not aggressive by nature. However, they are very territorial, and males are known to stand their ground even in the face of Flying Wyverns.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Somnacanth_(MHST3)
@@ -4659,6 +5000,11 @@
       { type: 'feral', monster: 'Feral Somnacanth' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'A bellicose Leviathan that lives in the water and spreads soporific dust via its neck gills and tail to ensnare prey. When seen under the moonlight, it is said to resemble a maiden or mermaid.',
+      'Lulled to Sleep': "A sleep-inducing substance contained in this monster's bivalve prey accumulates in the body and reacts with microbes to form a glowing powder visible in the countless gills of its mouth, neck, and tail.",
+      'Mermaid Hair': "Although the appendage on this monster's head looks like little more than a purple fin, it is actually lined with countless spikes that can be released like arrows in a ranged attack.",
+    },
     element: 'water',
     stats: {
       base: {
@@ -4717,9 +5063,9 @@
     ],
     rank: 5,
     flavor: {
-      DEFAULT: 'A bellicose Leviathan that lives in the water and spreads soporific dust via its neck gills and tail to ensnare its prey. When seen under the moonlight, it is said to resemble a maiden or mermaid.',
-      'Mermaid Hair': "Although the appendage on this monster's head looks like little more than a purple fin, it is actually lined with countless spikes that can be released like arrows in a ranged attack.",
-      'Lulled to Sleep': "A sleep-inducing substance contained in this monster's bivalve prey accumulates in the body and reacts with microbes to form a glowing powder visible in the countless gills of its mouth, neck, and tail.",
+      DEFAULT: 'This subspecies of Somnacanth resembles a frighteningly beautiful phantasm veiled in frost. It uses the cold that emanates from its body to freeze surfaces, on which it swiftly chases down prey.',
+      'Full of Cold Air': "Some large monsters contain a type of organ called a cryo sac that emanates cold air from the body. The Aurora Somnacanth's cryo sac functions similarly to that of the Goss Harag and others.",
+      'Frozen Locks': 'Frost lines the edges of the grey mantle, which can be used to hide its head. A pattern reminiscent of snowflakes covers the body and glows brilliantly when the monster is angered.',
     },
     element: 'ice',
     stats: {
@@ -4785,6 +5131,11 @@
     genus: 'Amphibian',
     related: [{ type: 'feral', monster: 'Feral Tetranadon' }],
     rank: 3,
+    flavor: {
+      DEFAULT: 'This gluttonous Amphibian waits in deep waters for prey, which it will swallow whole along with nearby rocks and dirt. It is also known to flatten prey beneath its crushing weight.',
+      'Stuffed Glutton': 'This monster swallows rocks to aid digestion by pulverizing its meal inside the stomach. Once its prey has been partially digested, it will spit up the rocks, water, and anything inedible.',
+      'Tetranadon Disc': 'The disc-like protrusion on its skull protects moisturizing organs essential for land activity. This disc becomes more blue over the years, and unblemished discs are used as fine tableware.',
+    },
     element: 'water',
     stats: {
       base: {
@@ -4857,6 +5208,11 @@
       { type: 'deviant', monster: 'Grimclaw Tigrex' },
     ],
     rank: 5,
+    flavor: {
+      DEFAULT: 'A Flying Wyvern that retains much of its primeval physical traits. Ferocity incarnate, its deafening roar and unrelenting onrush are feared far and wide.',
+      'Feat of Absolute Power': 'Known to use its powerful forelegs to dig up earth and stones and launch them at foes. Although this species cannot use breath attacks, it is still capable of taking down prey from a distance.',
+      'Charge of Absolute Power': 'Compared to other Flying Wyverns, this monster boasts exceptional athleticism even on the ground. This is exemplified by how it uses its powerful legs to charge and relentlessly hound its prey.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -4911,6 +5267,11 @@
       { type: 'deviant', monster: 'Grimclaw Tigrex' },
     ],
     rank: 6,
+    flavor: {
+      DEFAULT: 'This black-scaled subspecies of the Tigrex possesses astounding strength and extreme ferociousness. The might of its terrible roar surpasses even that of the regular species.',
+      'Ear-Splitting Roar': 'The cardiopulmonary system of this subspecies is considerably more developed than that of a regular Tigrex. It inhales great amounts of air before unleashing a supersonic roar that blows threats away.',
+      'The Price of Power': 'Its cardiovascular and athletic abilities far outpace the regular species at the cost of increased metabolism and energy demands. Having to seek more prey for food means it is also more ferocious.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -4965,6 +5326,9 @@
       { type: 'subspecies', monster: 'Brute Tigrex' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'For a species already known for its absolute power, this Deviant commands even more compelling strength. Its name refers to the preternaturally sharp claws with which it decimates its prey.',
+    },
     element: 'none',
     stats: {
       base: {
@@ -5011,6 +5375,7 @@
     flavor: {
       DEFAULT: 'This Fanged Wyvern flits from tree to tree in its forest canopy home. Its fur brushes against tree bark and the ground as it moves, building up static electricity.',
       'Electrically Charged': 'The fur stores static electricity and stands up when this monster becomes excited. In this state, attacks become electric and more lethal. The static electricity may enhance its agility.',
+      'Massive Tail': "The length of a Tobi-Kadachi's tail is an excellent indicator of strength. Increased surface area means more contact points, which enable the monster to enter a charged state more easily.",
     },
     element: 'thunder',
     stats: {
@@ -5102,6 +5467,11 @@
     name: 'Velkhana',
     genus: 'Elder Dragon',
     rank: 7,
+    flavor: {
+      DEFAULT: 'Legends hold that this Elder Dragon can conjure great spires of ice out of thin air and instantly freeze any creature that stands before it, turning even massive monsters to icebound statues.',
+      'Supercooled Water': 'Velkhana can produce a supercooled liquid within its body that remains below the freezing point. It expels this liquid as a breath attack, and anything hit by it is frozen solid.',
+      'Clad in Ice': 'Velkhana increases the amount of supercooled water it produces upon entering a heightened emotional state. The water eventually overflows and coats its body before freezing.',
+    },
     element: 'ice',
     stats: {
       base: {
@@ -5155,8 +5525,8 @@
     genus: 'Bird Wyvern',
     flavor: {
       DEFAULT: 'Small Bird Wyverns characterized by their blue and black stripes and yellow bill. These monsters often form groups centered around a Velocidrome. Their swift, slender bodies boast razor-sharp claws.',
-      "They're Everywhere": 'Although it is rarely seen in colder months, this highly adaptable monster has been observed living in all manner of habitats, residing in caves during the day and going out at night to hunt.',
       'Hunting in Packs': 'After detecting other creatures with their keen senses, these agile monsters swiftly descend on prey in packs, hopping just outside of range for retaliation and then attacking with sharp claws.',
+      "They're Everywhere": 'Although it is rarely seen in colder months, this highly adaptable monster has been observed living in all manner of habitats, residing in caves during the day and going out at night to hunt.',
     },
     element: 'none',
     stats: {
@@ -5204,8 +5574,8 @@
     rank: 1,
     flavor: {
       DEFAULT: 'The alpha monster of a Velociprey pack, it is distinguishable by its larger size and bright orange crest. It patrols its expansive territory for prey and intruders alike.',
-      'Sparing Nothing': 'Its scales are used to make durable armor, while its fangs are used in ammo and decorations. Even the flexible blue hide can be made into clothing or used to connect pieces of metal armour.',
       'Careful Cunning': 'Observations indicate this monster is highly intelligent. Not only does it lead groups and hunt in packs, it will also flee combat after sustaining serious wounds to find a safe place to recover.',
+      'Sparing Nothing': 'Its scales are used to make durable armor, while its fangs are used in ammo and decorations. Even the flexible blue hide can be made into clothing or used to connect pieces of metal armor.',
     },
     element: 'none',
     stats: {
@@ -5289,6 +5659,11 @@
     genus: 'Elder Dragon',
     related: [{ type: 'feral', monster: 'Feral Yama Tsukami' }],
     tags: ['calamitous'],
+    flavor: {
+      DEFAULT: 'This floating Elder Dragon is colossal enough to have an ecosystem of flora living on it. It consumes the earth and swallows forests whole as it wanders in search of rich soil.',
+      'Expelled Thunderbugs': 'Attacks foes by forcefully expelling Thunderbugs and Dracophage Bugs from its body. The expelled Thunderbugs are highly unstable and will explode at the slightest touch.',
+      'Secrets of Floating': 'Although wingless, Yama Tsukami can still float via internal gases. It ingests vast amounts of soil and rotted carrion, which in turn release gases that allow it to float for long periods of time.',
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
@@ -5298,7 +5673,7 @@
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Yama Tsukami' }],
     flavor: {
-      DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+      DEFAULT: 'A monster feared in Sheparden as "a force of nature." Rather than wandering about, this particular specimen has long resided in the Canalta Timberland. A portion of its body is crystallized.',
     },
   },
 
@@ -5311,6 +5686,11 @@
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
     rank: 4,
+    flavor: {
+      DEFAULT: 'A Bird Wyvern known for its hard body and long mane. Quick to anger and extremely aggressive, it will unleash a flurry of attacks using its crushing beak and poison-filled tail.',
+      'An Evolution of Yian Kut-Ku?': 'Yian Garuga are said to have evolved from a Yian Kut-Ku that became separated from its pack. Despite similar ecologies, this monster is far more ferocious than the Yian Kut-Ku.',
+      'Noxious Poison and Tail Spikes': 'This monster possesses a unique tail with a three-pronged spike that can pierce foes and inject them with venom. Any perceived weakness will be relentlessly targeted by this ruthless killer.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -5365,6 +5745,9 @@
       { type: 'invasive', monster: 'Invasive Yian Garuga' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'From among the ferocious Yian Garuga species stands a Deviant with even more love for the fight. Its one remaining eye burns with the fervor of the countless life-and-death struggles it has endured.',
+    },
     element: 'fire',
     stats: {
       base: {
@@ -5410,7 +5793,8 @@
     ],
     flavor: {
       DEFAULT: 'This invasive subspecies of Yian Garuga is far deadlier than the regular species in terms of combat and toxicity. The body markings are caused by venom seeping out from its numerous venom glands.',
-      'Venom Production Process': 'The venom prodouction process within this monster increases energy utilization, meaning neurotransmission speed and muscular strength can be enhanced by secreting greater quantities of venom.',
+      'Venom Production Process': 'The venom production process within this monster increases energy utilization, meaning neurotransmission speed and muscular strength can be enhanced by secreting greater quantities of venom.',
+      'Savage Ferocity': 'This monster is far more ferocious than the normal species due to a chemical byproduct of venom production. As it secretes venom, this chemical irritates its nerves, keeping it constantly agitated.',
     },
     element: 'fire',
     stats: {
@@ -5467,7 +5851,7 @@
     ],
     rank: 2,
     flavor: {
-      DEFAULT: 'A Bird Wyvern commonly found in warm regions, it has a distinctive large beak and wide ears that splay out to intimidate potential threats. It is docile and flees more than it fights.',
+      DEFAULT: 'A Bird Wyvern commonly found in warm regions, it has a distinctive large beak and wide ears that splay out to intimidate potential threats. It is docile by nature and flees more than it fights.',
       'Versatile Ears': 'This monster uses its wide ears to amplify its cries and intimidate foes with extreme noise. Its excellent hearing can detect threats from a distance, but loud sounds can also daze it.',
       'Giant Beak': 'This monster uses the giant beak covering its face to dig up the ground in search of its favorite food: insects and earthworms. Its territory is therefore pockmarked with telltale holes.',
     },
@@ -5672,6 +6056,11 @@
       { type: 'deviant', monster: 'Thunderlord Zinogre' },
     ],
     rank: 5,
+    flavor: {
+      DEFAULT: "Pale-blue sparks course across this Fanged Wyvern's body. With the help of its electrified carapace and shockfur, it can amass profound stores of electricity to then enter a supercharged state.",
+      'Shell and Shockfur': "The turquoise-colored carapace insulates and protects from excess electricity, while the heavy, shell-studded tail is used to balance the monster's massive body and as a weapon to repel threats.",
+      'Symbiotic Relationship with Thunderbugs': "Thunderbugs absorb electricity from the Zinogre's shockfur, enabling them to turn into Fulgurbugs that provide electricity back to the Zinogre, thereby creating a symbiotic relationship.",
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -5729,6 +6118,11 @@
       { type: 'deviant', monster: 'Thunderlord Zinogre' },
     ],
     rank: 6,
+    flavor: {
+      DEFAULT: 'A subspecies of Zinogre endowed with dragon-element power. Its jet-black shell and silver-white fur combine with the red glow distinctive of dragons to instill fear in all who see it.',
+      'Symbiotic Relationship with Dracophage Bugs': 'Sharing a symbiotic relationship with Dragonfell Berry-eating Dracophage Bugs, this monster absorbs dragon energy from the bugs and then amplifies and returns energy back when supercharged.',
+      'Dragon Shroud': 'Much like the regular species, when this monster enters an excited state, spikes along its body stand upright. However, the emission of dragon energy makes it more vulnerable to elemental attacks.',
+    },
     element: 'dragon',
     stats: {
       base: {
@@ -5786,6 +6180,9 @@
       { type: 'subspecies', monster: 'Stygian Zinogre' },
     ],
     rank: 7,
+    flavor: {
+      DEFAULT: 'A Zinogre Deviant cloaked in dazzling, golden electricity. With its command over blinding lights and crashing bolts of lightning, the title "Thunderlord" is certainly appropriate.',
+    },
     element: 'thunder',
     stats: {
       base: {
@@ -5832,6 +6229,11 @@
     name: 'Great Poogie',
     genus: '???',
     rank: 7,
+    flavor: {
+      DEFAULT: 'A legendary Poogie possessing unmatched charisma and grandeur. Some farfetched tales claim this Poogie can summon all the other Poogies in the world with a single call.',
+      'Stylish Scarf': "Although the origin of its scarf remains a mystery, the Great Poogie is extremely attached to the accessory. Try touching the scarf, and there'll be hell to pay.",
+      'Scarred Left Eye': 'The origin of the scar on its left eye is unknown. When questioned, the creature answers only with silence and a thousand-yard stare. Perhaps some questions are better left unanswered.',
+    },
     element: 'none',
     stats: {
       base: {
