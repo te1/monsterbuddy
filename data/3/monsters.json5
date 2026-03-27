@@ -25,7 +25,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown', 'orange'],
-      svgEggColors: ['#7c4938', '#e14b23'],
+      svgEggColors: ['#7c493b', '#e14b26'],
     },
   },
 
@@ -61,7 +61,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'gray', 'orange'],
-      svgEggColors: ['#b8b3a9', '#e13910'],
+      svgEggColors: ['#b8b2a6', '#e0380d'],
     },
   },
 
@@ -99,7 +99,7 @@
     monstie: {
       ridingActions: ['Swim', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['black', 'gray', 'orange'],
-      svgEggColors: ['#4b4c53', '#ba6a4e'],
+      svgEggColors: ['#494d53', '#b8694f'],
     },
   },
 
@@ -170,7 +170,7 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Anja Assault',
       eggColors: ['pink', 'black'],
-      svgEggColors: ['#da7779', '#5a4856'],
+      svgEggColors: ['#da7776', '#5c4755'],
     },
   },
 
@@ -199,7 +199,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['gray', 'white', 'orange'],
-      svgEggColors: ['#a9b7b9', '#ae672f'],
+      svgEggColors: ['#aab6bb', '#ae662e'],
     },
   },
 
@@ -270,7 +270,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['gray', 'white'],
-      svgEggColors: ['#bbb', '#a0a0a0'],
+      svgEggColors: ['#bababa', '#a0a0a0'],
     },
   },
 
@@ -295,7 +295,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#396ab9', '#35d256'],
+      svgEggColors: ['#5888c9', '#56de78'],
     },
   },
 
@@ -329,7 +329,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
-      svgEggColors: ['#708a43', '#463f40'],
+      svgEggColors: ['#708b42', '#47403d'],
     },
   },
 
@@ -352,7 +352,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
-      svgEggColors: ['#0ecd79', '#463b37'],
+      svgEggColors: ['#0dcd76', '#453b38'],
     },
   },
 
@@ -378,7 +378,7 @@
     monstie: {
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'gray', 'orange'],
-      svgEggColors: ['#c08740', '#c2c3b9'],
+      svgEggColors: ['#c28645', '#c1c2bb'],
     },
   },
 
@@ -404,7 +404,7 @@
     monstie: {
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['orange', 'red'],
-      svgEggColors: ['#e65841', '#fe9801'],
+      svgEggColors: ['#e45a42', '#ff9600'],
     },
   },
 
@@ -433,7 +433,7 @@
     monstie: {
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['brown', 'yellow'],
-      svgEggColors: ['#98633e', '#d4a153'],
+      svgEggColors: ['#976540', '#d7a255'],
     },
   },
 
@@ -463,7 +463,7 @@
     monstie: {
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#009e9f', '#3ee0e0'],
+      svgEggColors: ['#009d9f', '#40e1e1'],
     },
   },
 
@@ -518,7 +518,7 @@
     monstie: {
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#234670', '#17644f'],
+      svgEggColors: ['#40658f', '#2e8371'],
     },
   },
 
@@ -547,7 +547,7 @@
     monstie: {
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown', 'orange'],
-      svgEggColors: ['#534a49', '#c3604b'],
+      svgEggColors: ['#534b49', '#c2604b'],
     },
   },
 
@@ -595,7 +595,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'red', 'orange'],
-      svgEggColors: ['#9fcabb', '#ff2600'],
+      svgEggColors: ['#9fc7b9', '#ff2600'],
     },
   },
 
@@ -666,7 +666,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green'],
-      svgEggColors: ['#3e4c95', '#7aeb55'],
+      svgEggColors: ['#3b4d94', '#7aec56'],
     },
   },
 
@@ -735,7 +735,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'white', 'yellow'],
-      svgEggColors: ['#4a51cc', '#f2d8b8'],
+      svgEggColors: ['#6971da', '#f6e3cb'],
     },
   },
 
@@ -801,7 +801,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
-      svgEggColors: ['#4d898e', '#4b5c56'],
+      svgEggColors: ['#4b8a8e', '#495d55'],
     },
   },
 
@@ -888,7 +888,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green', 'orange'],
-      svgEggColors: ['#5d663a', '#df5d30'],
+      svgEggColors: ['#5c6638', '#e15f2e'],
     },
   },
 
@@ -931,7 +931,7 @@
     monstie: {
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown'],
-      svgEggColors: ['#a17c54', '#b39b82'],
+      svgEggColors: ['#a17a51', '#b39e85'],
     },
   },
 
@@ -964,7 +964,7 @@
     monstie: {
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['black', 'gray'],
-      svgEggColors: ['#464d4b', '#77776c'],
+      svgEggColors: ['#454d49', '#757669'],
     },
   },
 
@@ -991,7 +991,7 @@
     monstie: {
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'gray'],
-      svgEggColors: ['#475486', '#888078'],
+      svgEggColors: ['#495684', '#8a7f79'],
     },
   },
 
@@ -1057,7 +1057,7 @@
       attack: 'power',
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['red', 'pink', 'green'],
-      svgEggColors: ['#bd415a', '#95a452'],
+      svgEggColors: ['#bc4056', '#94a54f'],
     },
   },
 
@@ -1091,7 +1091,7 @@
     hatchable: true,
     monstie: {
       eggColors: ['brown', 'green'],
-      svgEggColors: ['#946d4a', '#a8b049'],
+      svgEggColors: ['#946d49', '#a8b149'],
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
     },
   },
@@ -1130,7 +1130,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'red'],
-      svgEggColors: ['#3d547d', '#cb3733'],
+      svgEggColors: ['#3d557d', '#c73b35'],
     },
   },
 
@@ -1157,7 +1157,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['black', 'red'],
-      svgEggColors: ['#30313a', '#d9211b'],
+      svgEggColors: ['#32323b', '#db221c'],
     },
   },
 
@@ -1267,7 +1267,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'black', 'gray'],
-      svgEggColors: ['#5b99b4', '#3d3d38'],
+      svgEggColors: ['#5898b3', '#3d3d38'],
     },
   },
 
@@ -1295,7 +1295,7 @@
     monstie: {
       ridingActions: ['Fly', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['brown', 'white', 'gray'],
-      svgEggColors: ['#886242', '#b6a3a4'],
+      svgEggColors: ['#886342', '#b5a3a3'],
     },
   },
 
@@ -1324,7 +1324,7 @@
     monstie: {
       ridingActions: ['Fly', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['orange', 'gray'],
-      svgEggColors: ['#ab492a', '#7f7672'],
+      svgEggColors: ['#ac472a', '#7e7673'],
     },
   },
 
@@ -1369,7 +1369,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['orange', 'brown', 'yellow', 'white'],
-      svgEggColors: ['#c07634', '#d7cea3'],
+      svgEggColors: ['#c27635', '#d7cda3'],
     },
   },
 
@@ -1438,7 +1438,7 @@
       attack: 'power',
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'pink'],
-      svgEggColors: ['#5679a7', '#c76d70'],
+      svgEggColors: ['#557aac', '#cd6d70'],
     },
   },
 
@@ -1497,7 +1497,7 @@
       attack: 'power',
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'green'],
-      svgEggColors: ['#873e7c', '#46e231'],
+      svgEggColors: ['#883d7c', '#47e232'],
     },
   },
 
@@ -1550,7 +1550,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'white', 'pink'],
-      svgEggColors: ['#e5697e', '#6ca3ae'],
+      svgEggColors: ['#eb899a', '#90b8bd'],
     },
   },
 
@@ -1579,7 +1579,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'red'],
-      svgEggColors: ['#d13f41', '#cb0302'],
+      svgEggColors: ['#de6060', '#dd0d0d'],
     },
   },
 
@@ -1614,7 +1614,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['gray', 'white', 'orange'],
-      svgEggColors: ['#cdc2b1', '#d0725b'],
+      svgEggColors: ['#ccc2af', '#d0715c'],
     },
   },
 
@@ -1643,7 +1643,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'orange'],
-      svgEggColors: ['#4fa3c9', '#df572f'],
+      svgEggColors: ['#51a0ce', '#de562e'],
     },
   },
 
@@ -1672,7 +1672,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'blue'],
-      svgEggColors: ['#d2ccbc', '#3d689a'],
+      svgEggColors: ['#cfcaba', '#3d6699'],
     },
   },
 
@@ -1700,7 +1700,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['yellow', 'white', 'blue'],
-      svgEggColors: ['#eee0a9', '#285eb1'],
+      svgEggColors: ['#eee0a7', '#265fab'],
     },
   },
 
@@ -1735,7 +1735,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue'],
-      svgEggColors: ['#4666a1', '#3997db'],
+      svgEggColors: ['#4766a0', '#3895dc'],
     },
   },
 
@@ -1765,7 +1765,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'red'],
-      svgEggColors: ['#4e4166', '#ad4156'],
+      svgEggColors: ['#4f4268', '#ae4258'],
     },
   },
 
@@ -1804,7 +1804,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'red', 'white', 'gray'],
-      svgEggColors: ['#c83269', '#dfd6d5'],
+      svgEggColors: ['#c63268', '#dcd5d3'],
     },
   },
 
@@ -1833,7 +1833,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'white', 'gray', 'yellow'],
-      svgEggColors: ['#c95a8f', '#e2cead'],
+      svgEggColors: ['#c85a8f', '#e2ceae'],
     },
   },
 
@@ -1856,7 +1856,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'pink', 'purple'],
-      svgEggColors: ['#b02d6f', '#ddd6da'],
+      svgEggColors: ['#b12e72', '#dcd5db'],
     },
   },
 
@@ -1933,7 +1933,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'orange'],
-      svgEggColors: ['#685990', '#dd652c'],
+      svgEggColors: ['#655a90', '#dc6232'],
     },
   },
 
@@ -1962,7 +1962,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Stealth', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['pink', 'purple', 'blue'],
-      svgEggColors: ['#c43c7c', '#375475'],
+      svgEggColors: ['#c23d7c', '#385576'],
     },
   },
 
@@ -1991,7 +1991,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Stealth', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'yellow'],
-      svgEggColors: ['#33a52f', '#acd304'],
+      svgEggColors: ['#51bd4b', '#bee000'],
     },
   },
 
@@ -2017,7 +2017,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Stealth', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['white', 'blue'],
-      svgEggColors: ['#a5b19f', '#213649'],
+      svgEggColors: ['#bdc4b7', '#40566a'],
     },
   },
 
@@ -2082,7 +2082,7 @@
       attack: 'technical',
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'orange'],
-      svgEggColors: ['#544c7a', '#dd753f'],
+      svgEggColors: ['#554d7c', '#de753d'],
     },
   },
 
@@ -2112,7 +2112,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['white', 'gray', 'yellow'],
-      svgEggColors: ['#b6b8be', '#d0a031'],
+      svgEggColors: ['#b6b9bd', '#cda02e'],
     },
   },
 
@@ -2209,7 +2209,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['red', 'black'],
-      svgEggColors: ['#bf4755', '#653b48'],
+      svgEggColors: ['#be4751', '#683d47'],
     },
   },
 
@@ -2238,7 +2238,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'black'],
-      svgEggColors: ['#5a558d', '#2a3036'],
+      svgEggColors: ['#5a558c', '#2a2e35'],
     },
   },
 
@@ -2328,7 +2328,7 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       kinshipSkill: 'Jet Balloon',
       eggColors: ['white', 'pink'],
-      svgEggColors: ['#ed9f99', '#f0e9de'],
+      svgEggColors: ['#ef9e99', '#f4eae0'],
     },
   },
 
@@ -2459,7 +2459,7 @@
       attack: 'speed',
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'green', 'orange'],
-      svgEggColors: ['#5a7076', '#d37a4d'],
+      svgEggColors: ['#567279', '#d17a4b'],
     },
   },
 
@@ -2524,7 +2524,7 @@
       attack: 'speed',
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green', 'orange'],
-      svgEggColors: ['#33956b', '#339669'],
+      svgEggColors: ['#35956a', '#e77c42'],
     },
   },
 
@@ -2562,7 +2562,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green', 'yellow'],
-      svgEggColors: ['#568f3a', '#c4b282'],
+      svgEggColors: ['#569038', '#c2b285'],
     },
   },
 
@@ -2596,7 +2596,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'white'],
-      svgEggColors: ['#523c8a', '#bdbcbc'],
+      svgEggColors: ['#533d8a', '#bfbfb9'],
     },
   },
 
@@ -2640,7 +2640,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['black', 'blue', 'orange', 'red'],
-      svgEggColors: ['#31373a', '#d13e0a'],
+      svgEggColors: ['#2e3838', '#cf4000'],
     },
   },
 
@@ -2674,7 +2674,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'purple', 'black'],
-      svgEggColors: ['#5866d8', '#303551'],
+      svgEggColors: ['#5865d7', '#2e3555'],
     },
   },
 
@@ -2715,7 +2715,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['black', 'red'],
-      svgEggColors: ['#10110e', '#8d012e'],
+      svgEggColors: ['#262222', '#a90051'],
     },
   },
 
@@ -2826,7 +2826,7 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Scorching Slice',
       eggColors: ['white', 'yellow', 'green'],
-      svgEggColors: ['#d0c992', '#65bc1e'],
+      svgEggColors: ['#cfc895', '#62bd22'],
       elementalResistance: {
         none: 0,
         fire: +2,
@@ -2902,7 +2902,7 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Scorching Slice',
       eggColors: ['pink'],
-      svgEggColors: ['#ee7275', '#e99184'],
+      svgEggColors: ['#ee7173', '#eb9084'],
     },
   },
 
@@ -2952,7 +2952,7 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Dual Razor',
       eggColors: ['green', 'purple'],
-      svgEggColors: ['#a1b352', '#82386c'],
+      svgEggColors: ['#a0b353', '#833571'],
     },
   },
 
@@ -2976,7 +2976,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['black', 'yellow'],
-      svgEggColors: ['#4b483e', '#ddc243'],
+      svgEggColors: ['#4b4740', '#e0c242'],
     },
   },
 
@@ -3088,7 +3088,7 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Moonsault Splash',
       eggColors: ['green', 'yellow'],
-      svgEggColors: ['#879f5e', '#ebb245'],
+      svgEggColors: ['#879f5c', '#eab249'],
     },
   },
 
@@ -3114,7 +3114,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'purple'],
-      svgEggColors: ['#a6859e', '#c13579'],
+      svgEggColors: ['#bfa3b7', '#cf5395'],
     },
   },
 
@@ -3138,7 +3138,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['yellow', 'orange'],
-      svgEggColors: ['#d24825', '#d8b140'],
+      svgEggColors: ['#d44726', '#d7b142'],
     },
   },
 
@@ -3172,7 +3172,7 @@
     monstie: {
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'white', 'gray'],
-      svgEggColors: ['#3a58c8', '#c9b9ac'],
+      svgEggColors: ['#3858c8', '#c8b8a8'],
     },
   },
 
@@ -3217,7 +3217,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['yellow', 'purple'],
-      svgEggColors: ['#c99a4f', '#705a95'],
+      svgEggColors: ['#c8994b', '#715a95'],
     },
   },
 
@@ -3251,7 +3251,7 @@
     monstie: {
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue'],
-      svgEggColors: ['#58aad1', '#2d61b6'],
+      svgEggColors: ['#7ac0de', '#4b82c9'],
     },
   },
 
@@ -3290,7 +3290,7 @@
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green'],
-      svgEggColors: ['#6d8818', '#43612a'],
+      svgEggColors: ['#8ea435', '#638147'],
     },
   },
 
@@ -3337,7 +3337,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'orange'],
-      svgEggColors: ['#3d8eb5', '#d19537'],
+      svgEggColors: ['#3d8fb2', '#db9232'],
     },
   },
 
@@ -3366,7 +3366,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown', 'orange'],
-      svgEggColors: ['#565043', '#f48340'],
+      svgEggColors: ['#564f40', '#f48340'],
     },
   },
 
@@ -3385,7 +3385,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'yellow'],
-      svgEggColors: ['#365f7c', '#d5bf34'],
+      svgEggColors: ['#355f7d', '#d4be35'],
     },
   },
 
@@ -3453,7 +3453,7 @@
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       kinshipSkill: 'Kadachi Fury',
       eggColors: ['gray', 'white', 'black', 'blue'],
-      svgEggColors: ['#94b0b7', '#546b77'],
+      svgEggColors: ['#94afb5', '#566979'],
     },
   },
 
@@ -3505,7 +3505,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'blue', 'white'],
-      svgEggColors: ['#8f83d0', '#a1ddf4'],
+      svgEggColors: ['#9284d4', '#a3ddf3'],
     },
   },
 
@@ -3613,7 +3613,7 @@
       attack: 'speed',
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'orange'],
-      svgEggColors: ['#1ba2e2', '#ff5f4a'],
+      svgEggColors: ['#1ca3e1', '#ff5f49'],
     },
   },
 
@@ -3678,7 +3678,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'pink'],
-      svgEggColors: ['#4b4d7c', '#b64f9f'],
+      svgEggColors: ['#4b4b7e', '#b64f9f'],
     },
   },
 
@@ -3697,7 +3697,7 @@
     monstie: {
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'red'],
-      svgEggColors: ['#413466', '#d52a2c'],
+      svgEggColors: ['#605687', '#e24949'],
     },
   },
 
@@ -3824,7 +3824,7 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['pink', 'blue'],
-      svgEggColors: ['#e0586f', '#2189d0'],
+      svgEggColors: ['#e15a71', '#2289cf'],
     },
   },
 
@@ -3894,7 +3894,7 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['blue', 'green', 'yellow'],
-      svgEggColors: ['#4a9f9b', '#e4a24b'],
+      svgEggColors: ['#499f98', '#e4a34b'],
     },
   },
 
@@ -3982,7 +3982,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green', 'yellow'],
-      svgEggColors: ['#389587', '#d7a761'],
+      svgEggColors: ['#3b9587', '#d7a760'],
     },
   },
 
@@ -4014,7 +4014,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'white'],
-      svgEggColors: ['#35356e', '#e2d6c3'],
+      svgEggColors: ['#323569', '#e4d4c4'],
     },
   },
 
@@ -4040,7 +4040,7 @@
     monstie: {
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'yellow', 'orange'],
-      svgEggColors: ['#a2c749', '#d29b46'],
+      svgEggColors: ['#a3c547', '#d29a47'],
     },
   },
 
@@ -4051,6 +4051,7 @@
     hatchable: true,
     monstie: {
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Ground Dive'],
+      svgEggColors: ['#323232', '#9e6efd'],
     },
   },
 ]
