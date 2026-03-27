@@ -177,7 +177,7 @@
     name: 'Anjanath',
     genus: 'Brute Wyvern',
     related: [{ type: 'subspecies', monster: 'Fulgur Anjanath' }],
-    rank: 4,
+    rank: 4, // TODO 5?
     flavor: {
       DEFAULT: 'A belligerent Brute Wyvern that tries to sink its fangs into anything that moves. It is recognizable by the large membranes on its hips and the downy fur that runs along its back.',
       'Condensing Heat': 'This monster condenses heat when enraged, causing a combustible substance to collect in a throat gland. The resulting mucus can then be expelled its nose to react explosively with the air.',
@@ -185,15 +185,15 @@
     element: 'fire',
     stats: {
       base: {
-        hp: 6,
+        hp: 6, // TODO 8?
         attack: 7,
         speed: 5,
         defense: 4,
         crit: 1,
         recovery: 4,
         stamina: 10,
-        startingStamina: 70,
-        rawRecovery: 4,
+        startingStamina: 70, // TODO 30?
+        rawRecovery: 4, // TODO 12?
         wyvernfell: 44,
         rawSpeed: 10,
       },
@@ -491,7 +491,7 @@
     },
     hatchable: true,
     monstie: {
-      attack: 'technical',
+      attack: 'technical', // TODO speed?
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
       svgEggColors: ['#708b42', '#47403d'],
@@ -1515,11 +1515,11 @@
       base: {
         hp: 7,
         attack: 8,
-        defense: 3,
+        defense: 3, // TODO 4?
         stamina: 4,
-        startingStamina: 30,
+        startingStamina: 30, // TODO 50?
         recovery: 10,
-        rawRecovery: 12,
+        rawRecovery: 12, // TODO 8?
         wyvernfell: 40,
         speed: 7,
         rawSpeed: 12,
@@ -1640,7 +1640,7 @@
       { type: 'honed', monster: 'Honed Glavenus' },
       { type: 'deviant', monster: 'Hellblade Glavenus' },
     ],
-    rank: 5,
+    rank: 5, // TODO 6?
     element: 'fire',
     stats: {
       base: {
@@ -3716,7 +3716,7 @@
     stats: {
       base: {
         hp: 8,
-        attack: 6,
+        attack: 6, // TODO 5?
         defense: 4,
         stamina: 7,
         startingStamina: 50,
