@@ -63,6 +63,7 @@
     v-model:open="open"
     title="Search"
     description="Filter results and open a destination. Use arrow keys to move, Enter to select, Escape to close."
+    :ui="{ header: 'hidden', body: 'p-0 sm:p-0', footer: 'p-0 sm:p-0' }"
   >
     <div class="flex items-center gap-2">
       <div class="sm:hidden">
@@ -94,8 +95,8 @@
       </UInput>
     </div>
 
-    <template #content>
-      <LazyUCommandPalette
+    <template #body>
+      <UCommandPalette
         :groups="searchConfig.groups"
         placeholder="Search anything..."
         class="h-[85dvh] lg:h-120"
@@ -115,7 +116,24 @@
             class="size-9"
           />
         </template>
-      </LazyUCommandPalette>
+      </UCommandPalette>
+    </template>
+
+    <template #footer>
+      <div class="flex gap-4 p-2 text-toned dark:text-dimmed">
+        <span class="flex items-center gap-1">
+          <UKbd value="arrowup" variant="subtle" size="lg" class="pb-0.5 text-lg" />
+          <UKbd value="arrowdown" variant="subtle" size="lg" class="pb-0.5 text-lg" /> to navigate
+        </span>
+        <span class="flex items-center gap-1">
+          <UKbd value="enter" variant="subtle" size="lg" class="pb-1.5 text-2xl text-toned" />
+          to select
+        </span>
+        <span class="flex items-center gap-1">
+          <UKbd value="esc" variant="subtle" size="lg" class="px-1.5 text-toned" />
+          to close
+        </span>
+      </div>
     </template>
   </UModal>
 </template>

@@ -197,6 +197,22 @@ export default defineAppConfig({
       },
     },
 
+    commandPalette: {
+      variants: {
+        active: {
+          true: {
+            item: 'text-highlighted before:bg-accented dark:before:bg-elevated',
+          },
+          false: {
+            item: [
+              'text-default data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-accented/50 dark:data-highlighted:not-data-disabled:before:bg-elevated/50',
+              'transition-colors before:transition-colors',
+            ],
+          },
+        },
+      },
+    },
+
     skeleton: {
       base: 'bg-accented',
     },
