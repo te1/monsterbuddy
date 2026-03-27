@@ -28,7 +28,7 @@ const elementIcons = import.meta.glob<string>('~/assets/icon/element-*.svg', {
 export function getElementIconUrl(element?: ElementType) {
   return (
     elementIcons[`/assets/icon/element-${element}.svg`] ??
-    elementIcons['/assets/icon/type-unknown.svg']
+    elementIcons['/assets/icon/element-unknown.svg']
   );
 }
 
