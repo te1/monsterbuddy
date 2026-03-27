@@ -1,6 +1,12 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
-  import { formatState } from '~/services/3/presentation';
+  import {
+    formatState,
+    intensityToIcon,
+    intensityToOpacity,
+    intensityToTextColor,
+    intensityToTooltip,
+  } from '~/services/3/presentation';
   import useHistoryStore from '~/stores/3/historyStore';
 
   const props = defineProps<{ monster: Monster }>();
@@ -11,7 +17,9 @@
     return !isEmptyObject(props.monster.monster?.states);
   });
 
-  // TOOD elemental weakness, ailment weakness?
+  const elementalResistances = computed(() => props.monster.stats?.elementalResistance);
+
+  // TOOD ailment resistance
 
   const isPinned = computed(() => {
     return history.isMonsterPinned(props.monster.slug);
@@ -68,23 +76,31 @@
       </div>
     </div>
 
-    <!-- TODO elemental weakness, ailment weakness?
-    <div v-if="hasElementalWeakness" class="flex pt-2">
-      <h3 class="w-36 pt-0.5 text-lg font-medium">Weakness</h3>
+    <div v-if="elementalResistances" class="flex pt-2">
+      <h3 class="w-36 text-lg font-medium">Resistance</h3>
 
-      <div class="flex flex-col gap-2">
-        <div
-          v-for="(weakness, label) in elementalWeaknesses"
-          :key="weakness"
-          class="mr-4 flex items-center"
-        >
-          <ElementIcon class="mr-1 size-8" :element="weakness" />
-          <ElementLabel class="font-medium" :element="weakness" />
-          <span v-if="label !== 'DEFAULT'" class="ml-1">({{ label }})</span>
+      <div class="mt-1 flex gap-2 pt-0.5">
+        <div v-for="(value, element) in elementalResistances" :key="element">
+          <UTooltip :text="intensityToTooltip(value, element)">
+            <div class="flex flex-col items-center gap-1">
+              <ElementIcon
+                class="size-6"
+                :class="intensityToOpacity(value)"
+                :element="element"
+                noTooltip
+              />
+              <UIcon
+                :name="intensityToIcon(value)"
+                class="text-xl"
+                :class="intensityToTextColor(value)"
+              />
+            </div>
+          </UTooltip>
         </div>
       </div>
+
+      <!-- TODO ailment resistance -->
     </div>
-    -->
 
     <div class="absolute top-1 right-1">
       <ClientOnly>

@@ -6,6 +6,9 @@
     formatLocationType,
     formatMonsterInfoShort,
     formatState,
+    intensityToIcon,
+    intensityToOpacity,
+    intensityToTextColor,
   } from '~/services/3/presentation';
   import { getMonsterLocations } from '~/services/3/data';
 
@@ -27,6 +30,12 @@
 
   const combatStates = computed(() => {
     return take(Object.entries(props.monster.monster?.states ?? {}), 3);
+  });
+
+  const elementalResistances = computed(() => {
+    return Object.entries(props.monster.stats?.elementalResistance ?? {})
+      .filter(([, value]) => value != null && value < 0)
+      .sort((a, b) => (a[1] ?? 0) - (b[1] ?? 0)) as [ElementType, number][];
   });
 
   const showLocation = computed(() => props.mode === 'location');
@@ -80,6 +89,26 @@
           {{ formatState(state) }}:
 
           <AttackTypeLabel class="medium" :type="data.attack" />
+        </div>
+
+        <div v-if="elementalResistances.length > 0" class="mt-1 flex gap-2.5">
+          <span
+            v-for="[element, value] in elementalResistances"
+            :key="element"
+            class="inline-flex items-center"
+          >
+            <UIcon
+              :name="intensityToIcon(value)"
+              class="text-xl"
+              :class="intensityToTextColor(value)"
+            />
+            <ElementIcon
+              class="size-6"
+              :class="intensityToOpacity(value)"
+              :element="element"
+              noTooltip
+            />
+          </span>
         </div>
       </template>
     </div>

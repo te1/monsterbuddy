@@ -88,3 +88,82 @@ export function formatLocationType(locationType: MonsterLocationType) {
       return '';
   }
 }
+
+export function intensityToIcon(intensity: number | null) {
+  switch (intensity) {
+    case 2:
+      return 'ph:caret-double-up-bold';
+
+    case 1:
+      return 'ph:caret-up-bold';
+
+    case 0:
+      return 'ph:number-zero-bold';
+
+    case -1:
+      return 'ph:caret-down-bold';
+
+    case -2:
+      return 'ph:caret-double-down-bold';
+
+    default:
+      return null;
+  }
+}
+
+export function intensityToTextColor(intensity: number | null) {
+  switch (intensity) {
+    case -2:
+      return 'text-default';
+
+    case -1:
+      return 'text-muted';
+
+    default:
+      return 'text-dimmed';
+  }
+}
+
+export function intensityToOpacity(intensity: number | null) {
+  switch (intensity) {
+    case -2:
+      return 'opacity-100';
+
+    case -1:
+      return 'opacity-60';
+
+    default:
+      return 'opacity-40';
+  }
+}
+
+export function intensityToTooltip(intensity: number | null, element: ElementType) {
+  let modifier = '';
+
+  switch (intensity) {
+    case -2:
+      modifier = 'greatly increased';
+      break;
+
+    case -1:
+      modifier = 'increased';
+      break;
+
+    case 0:
+      modifier = 'normal';
+      break;
+
+    case 1:
+      modifier = 'reduced';
+      break;
+
+    case 2:
+      modifier = 'greatly reduced';
+      break;
+
+    default:
+      modifier = 'normal';
+  }
+
+  return `Takes ${modifier} ${formatElement(element).toLowerCase()} damage`;
+}
