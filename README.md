@@ -28,6 +28,7 @@ https://monsterbuddy.app
 - [Monster Hunter Wiki (Fandom)](https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki)
 - [MHStories](https://mhst.kiranico.com) by Kiranico
 - [MHStories 2](https://mhst.kiranico.com/mhs2) by Kiranico
+- [MHST3 Monstie Stats](https://www.reddit.com/r/MonsterHunterStories/comments/1rzobtn/i_made_a_table_documenting_every_single_monsties) by [norahike](https://www.reddit.com/user/norahike)
 
 See [data](data) for the collected data.
 

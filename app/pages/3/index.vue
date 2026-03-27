@@ -106,15 +106,21 @@
             </ProseLi>
 
             <!-- TODO more links -->
-            <!--
+
             <ProseLi>
               <AppLink
-                href="https://docs.google.com/spreadsheets/d/1QzM9X34IfACPtRa_yWq2BZUidWJqs0l2K_Gs2023bO0"
-                text="MHStories 2 data"
+                href="https://docs.google.com/spreadsheets/d/1JvLmNY7l2jOKCk7QbUYmeK87xvzQzXVUJIgFX9bYaqk"
+                text="Data Mining"
               />
-              by <AppLink href="https://www.reddit.com/user/iSharingan" text="iSharingan" />
             </ProseLi>
-            -->
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1rzobtn/i_made_a_table_documenting_every_single_monsties"
+                text="Monstie Stats"
+              />
+              by <AppLink href="https://www.reddit.com/user/norahike" text="norahike" />
+            </ProseLi>
           </ProseUl>
         </section>
 
