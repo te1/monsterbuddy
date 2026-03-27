@@ -17,6 +17,24 @@
     return !isEmptyObject(props.monster.monster?.states);
   });
 
+  const combatStatesForParts = computed(() => {
+    return Object.entries(props.monster.monster?.states ?? {})
+      .map(([stateName, stateData]) => {
+        return {
+          label: stateName,
+          value: stateName,
+          parts: stateData.parts,
+        };
+      })
+      .filter(({ parts }) => !isEmptyObject(parts));
+  });
+
+  const combatStateName = ref(combatStatesForParts.value[0]?.value);
+
+  const combatState = computed(() => {
+    return combatStatesForParts.value.find(({ value }) => value === combatStateName.value);
+  });
+
   const elementalResistances = computed(() => props.monster.stats?.elementalResistance);
 
   const ailmentResistances = computed(() => props.monster.stats?.ailmentResistance);
@@ -31,7 +49,7 @@
 </script>
 
 <template>
-  <section v-if="hasCombatStates" class="@container relative flex flex-col gap-2">
+  <section v-if="hasCombatStates" class="@container relative flex flex-col gap-3">
     <div>
       <h3 class="text-lg font-medium">Attack Patterns</h3>
 
@@ -58,31 +76,32 @@
     <div>
       <h3 class="text-lg font-medium">Parts</h3>
 
-      <!-- TODO better UI for different states -->
-      <div>
-        <div
-          v-for="(stateData, state) in monster.monster?.states"
-          :key="state"
-          class="flex flex-col gap-1"
-        >
-          {{ state }}
+      <UTabs
+        v-if="combatStatesForParts.length > 1"
+        v-model="combatStateName"
+        color="neutral"
+        variant="link"
+        class="mb-1"
+        :items="combatStatesForParts"
+        :content="false"
+        :ui="{ list: 'px-0' }"
+      />
 
-          <div v-for="(partData, part) in stateData.parts" :key="part" class="flex items-center">
-            <span class="w-36" v-text="part" />
+      <div
+        v-for="(weaponEffectiveness, part) in combatState?.parts"
+        :key="part"
+        class="flex items-center"
+      >
+        <span class="w-36" v-text="part" />
 
-            <WeaponEffectiveness :types="partData" />
-          </div>
-        </div>
+        <WeaponEffectiveness :types="weaponEffectiveness" />
       </div>
     </div>
 
-    <div
-      v-if="elementalResistances || ailmentResistances"
-      class="flex flex-col pt-0 @xs:flex-row @xs:pt-2"
-    >
+    <div v-if="elementalResistances || ailmentResistances" class="flex flex-col @xs:flex-row">
       <h3 class="w-36 text-lg font-medium">Resistance</h3>
 
-      <div class="mt-1 flex flex-col gap-4 pt-0 @xs:pt-0.5">
+      <div class="mt-1 flex flex-col gap-4 @xs:mt-1.5">
         <div class="flex gap-2">
           <div v-for="(value, element) in elementalResistances" :key="element">
             <UTooltip :text="elementalResistanceTooltip(element, value)">
