@@ -82,7 +82,7 @@
     >
       <h3 class="w-36 text-lg font-medium">Resistance</h3>
 
-      <div class="mt-1 pt-0 @xs:pt-0.5">
+      <div class="mt-1 flex flex-col gap-4 pt-0 @xs:pt-0.5">
         <div class="flex gap-2">
           <div v-for="(value, element) in elementalResistances" :key="element">
             <UTooltip :text="elementalResistanceTooltip(element, value)">
@@ -102,8 +102,7 @@
           <div v-for="(value, ailment) in ailmentResistances" :key="ailment">
             <UTooltip :text="ailmentResistanceTooltip(ailment, value)">
               <div class="flex flex-col items-center gap-1">
-                <!-- TODO add ailment icon -->
-                <AilmentIcon class="size-6" :ailment="ailment" noTooltip />
+                <S3AilmentIcon class="-my-1 h-8 w-6 object-cover" :ailment="ailment" noTooltip />
                 <UIcon
                   :name="intensityToIcon(value)"
                   class="text-xl"

@@ -1,4 +1,4 @@
-import type { Monster } from './types';
+import type { AilmentType, Monster } from './types';
 import { loadAsset } from '../assets';
 
 const monsterImages = import.meta.glob<string>('~/assets/3/monster/*.webp', {
@@ -47,4 +47,13 @@ export async function getEggIconUrlForMonster(monster?: Monster) {
 
 export async function getEggIconUrlForGenus(genus: GenusType) {
   return await loadAsset(eggIcons, `/assets/3/egg/_${genus}.svg`, '/assets/3/egg/_Unknown.svg');
+}
+
+const ailmentIcons = import.meta.glob<string>('~/assets/icon/ailment-*.webp', {
+  eager: true,
+  import: 'default',
+});
+
+export function getAilmentIconUrl(ailment: AilmentType) {
+  return ailmentIcons[`/assets/icon/ailment-${ailment}.webp`];
 }
