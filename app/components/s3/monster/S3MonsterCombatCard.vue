@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <section v-if="hasCombatStates" class="relative flex flex-col gap-2">
+  <section v-if="hasCombatStates" class="@container relative flex flex-col gap-2">
     <div>
       <h3 class="text-lg font-medium">Attack Patterns</h3>
 
@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <div v-if="elementalResistances || ailmentResistances" class="flex pt-2">
+    <div v-if="elementalResistances || ailmentResistances" class="flex flex-col pt-2 @xs:flex-row">
       <h3 class="w-36 text-lg font-medium">Resistance</h3>
 
       <div class="mt-1 pt-0.5">
