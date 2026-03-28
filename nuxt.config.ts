@@ -19,6 +19,15 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  ui: {
+    theme: {
+      colors: ['primary', 'neutral'],
+    },
+    experimental: {
+      componentDetection: true,
+    },
+  },
+
   css: ['~/assets/css/main.css'],
 
   routeRules: {
