@@ -101,7 +101,10 @@
           spotlighCcolor="primary"
           :ui="{
             container: 'relative block min-h-48 overflow-hidden lg:block',
-            root: ['ring-2 ring-accented dark:ring-default', game.enabled ? '' : 'opacity-50'],
+            root: [
+              'ring-2 ring-accented dark:ring-default',
+              game.enabled ? 'hover:ring-inverted/30 dark:hover:ring-muted' : 'opacity-50',
+            ],
             title: 'font-medium',
             description: 'text-default dark:text-toned',
             spotlight: 'bg-white/90 dark:bg-neutral-950/90',
