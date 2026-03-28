@@ -19,11 +19,18 @@
     );
   });
 
-  // TODO display raw stats
+  const hasRawStats = computed(() => {
+    return (
+      stats.value?.startingStamina != null ||
+      stats.value?.rawRecovery != null ||
+      stats.value?.wyvernfell != null ||
+      stats.value?.rawCrit != null
+    );
+  });
 </script>
 
 <template>
-  <section v-if="hasStats" class="flex flex-col gap-3">
+  <section v-if="hasStats || hasRawStats" class="flex flex-col gap-3">
     <h3 class="text-lg font-medium">Monstie Stats</h3>
 
     <div v-if="stats?.hp != null || stats?.defense != null">
@@ -56,6 +63,40 @@
         <span class="w-18">Major</span>
         <span class="flex-1">HP + Defense + Attack + Speed</span>
         <span class="text-right font-medium" v-text="stats?.total" />
+      </div>
+    </div>
+
+    <div v-if="hasRawStats" class="@container">
+      <div class="font-medium">Raw Stats</div>
+
+      <div
+        v-if="stats?.startingStamina != null || stats?.rawRecovery != null"
+        class="flex flex-col justify-between @sm:flex-row @md:justify-start @md:gap-12"
+      >
+        <div v-if="stats?.startingStamina != null" class="flex items-center gap-2">
+          <span class="w-32">Starting Stamina</span>
+          <span class="w-8 flex-1 text-right font-medium" v-text="stats?.startingStamina" />
+        </div>
+
+        <div v-if="stats?.rawRecovery != null" class="flex items-center gap-2">
+          <span class="w-32">Stamina Recovery</span>
+          <span class="w-8 flex-1 text-right font-medium" v-text="stats?.rawRecovery" />
+        </div>
+      </div>
+
+      <div
+        v-if="stats?.startingStamina != null || stats?.rawRecovery != null"
+        class="flex flex-col justify-between @sm:flex-row @md:justify-start @md:gap-12"
+      >
+        <div v-if="stats?.rawCrit != null" class="flex items-center gap-2">
+          <span class="w-32">Crit Rate</span>
+          <span class="w-8 flex-1 text-right font-medium" v-text="`${stats?.rawCrit}%`" />
+        </div>
+
+        <div v-if="stats?.wyvernfell != null" class="flex items-center gap-2">
+          <span class="w-32">Wyvernfell</span>
+          <span class="w-8 flex-1 text-right font-medium" v-text="stats?.wyvernfell" />
+        </div>
       </div>
     </div>
   </section>
