@@ -211,7 +211,7 @@
     name: 'Anjanath',
     genus: 'Brute Wyvern',
     related: [{ type: 'subspecies', monster: 'Fulgur Anjanath' }],
-    rank: 4, // TODO 5?
+    rank: 4,
     flavor: {
       DEFAULT: 'A belligerent Brute Wyvern that tries to sink its fangs into anything that moves. It is recognizable by the large membranes on its hips and the downy fur that runs along its back and tail.',
       'Back Membrane': "Membranes packed with capillaries and supported by cartilage grow from this monster's hips. These regulate temperature by absorbing heat from sunlight when cold or expelling heat when hot.",
@@ -220,7 +220,7 @@
     element: 'fire',
     stats: {
       base: {
-        hp: 6, // TODO 8?
+        hp: 6,
         attack: 7,
         speed: 5,
         defense: 4,
@@ -560,7 +560,7 @@
     },
     hatchable: true,
     monstie: {
-      attack: 'technical', // TODO speed?
+      attack: 'technical',
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
       svgEggColors: ['#708b42', '#47403d'],
@@ -593,6 +593,7 @@
         wyvernfell: 36,
         speed: 8,
         rawSpeed: 13,
+        crit: 8,
         rawCrit: 15,
       },
       elementalResistance: {
@@ -1743,7 +1744,7 @@
       base: {
         hp: 7,
         attack: 8,
-        defense: 3, // TODO 4?
+        defense: 3,
         stamina: 4,
         startingStamina: 30, // TODO 50?
         recovery: 10,
@@ -1882,7 +1883,7 @@
       { type: 'honed', monster: 'Honed Glavenus' },
       { type: 'deviant', monster: 'Hellblade Glavenus' },
     ],
-    rank: 5, // TODO 6?
+    rank: 5,
     flavor: {
       DEFAULT: 'A Brute Wyvern that brandishes its heavy blue tail like a blade. The combustible metals contained inside increase in temperature with every swing, sharpening the tail and making it red-hot.',
       Overheated: "The friction from repeated attacks raises the tail's temperature until it glows red-hot. In this state, the tail becomes sharper and drastically deadlier. Some swings even cause flames to erupt.",
@@ -3340,6 +3341,7 @@
         wyvernfell: 44,
         speed: 10,
         rawSpeed: 15,
+        crit: 8,
         rawCrit: 15,
       },
       elementalResistance: {
@@ -3399,6 +3401,7 @@
         wyvernfell: 40,
         speed: 10,
         rawSpeed: 15,
+        crit: 8,
         rawCrit: 15,
       },
       elementalResistance: {
@@ -3458,6 +3461,7 @@
         wyvernfell: 32,
         speed: 10,
         rawSpeed: 15,
+        crit: 10,
         rawCrit: 20,
       },
       elementalResistance: {
@@ -4242,7 +4246,7 @@
     stats: {
       base: {
         hp: 8,
-        attack: 6, // TODO 5?
+        attack: 6,
         defense: 4,
         stamina: 7,
         startingStamina: 50,
