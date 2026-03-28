@@ -78,6 +78,7 @@
     genus: 'Fanged Beast',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Ajarakan' }],
+    rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -144,6 +145,7 @@
     genus: 'Bird Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Aknosom' }],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -504,6 +506,7 @@
     genus: 'Fanged Beast',
     tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Arzuros' }],
+    rank: 2, // for sorting
     flavor: {
       DEFAULT: 'The mighty blows dealt by this invasive subspecies of Arzuros can shatter rock with ease. Highly intelligent as well as strong, some have been sighted leading regular Arzuros on hunts.',
       'Pack Leader': 'Particularly adept at using its excellent sense of smell to gather large amounts of food, this monster distributes collected food to the regular species to form bonds and strengthen the pack.',
@@ -885,6 +888,7 @@
       { type: 'subspecies', monster: 'Jade Barroth' },
       { type: 'honed', monster: 'Honed Barroth' },
     ],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1028,6 +1032,7 @@
       { type: 'feralOf', monster: 'Bishaten' },
       { type: 'subspecies', monster: 'Blood Orange Bishaten' },
     ],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1105,6 +1110,7 @@
     genus: 'Fanged Beast',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Blangonga' }],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1218,6 +1224,7 @@
     genus: 'Brute Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Brachydios' }],
+    rank: 6, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1406,6 +1413,7 @@
     genus: 'Amphibian',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Chatacabra' }],
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1523,6 +1531,7 @@
     genus: 'Brute Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Deviljho' }],
+    rank: 7, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -1721,6 +1730,7 @@
       { type: 'subspecies', monster: 'Black Diablos' },
       { type: 'deviant', monster: 'Bloodbath Diablos' },
     ],
+    rank: 5, // for sorting
     flavor: {
       DEFAULT: 'An invasive subspecies of Diablos with far greater lethality than the regular species. It swiftly burrows underground to surprise threats by delivering a decisive attack from below with its horns.',
       'Survival Instinct': 'This monster faced extinction due to poor thermoregulation, but survived by moving underground. When fighting aboveground, it tends to prefer places that are less open to the elements.',
@@ -1804,6 +1814,7 @@
     genus: 'Flying Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Espinas' }],
+    rank: 6, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -2004,6 +2015,7 @@
       { type: 'honed', monster: 'Honed Glavenus' },
       { type: 'deviant', monster: 'Hellblade Glavenus' },
     ],
+    rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -2260,6 +2272,7 @@
       { type: 'feralOf', monster: 'Gravios' },
       { type: 'subspecies', monster: 'Black Gravios' },
     ],
+    rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -2361,6 +2374,7 @@
     genus: 'Bird Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Great Izuchi' }],
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -2522,6 +2536,7 @@
       { type: 'feralOf', monster: 'Gypceros' },
       { type: 'subspecies', monster: 'Purple Gypceros' },
     ],
+    rank: 2, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -2664,6 +2679,7 @@
       { type: 'invasiveOf', monster: 'Khezu' },
       { type: 'subspecies', monster: 'Red Khezu' },
     ],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'This invasive variety of Khezu is the source of the "Death Shriek" legend from Glacial Caps folklore. Its resonance organ can emit a shrill cry that elicits instinctive fear responses in victims.',
       'Death Shriek': 'Characterized by a specialized throat structure and highly developed resonance organ, this monster can vibrate its exceptionally thick vocal cords to emit explosively loud screams.',
@@ -2908,6 +2924,7 @@
     genus: 'Flying Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Legiana' }],
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -3048,6 +3065,7 @@
     genus: 'Fanged Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Magnamalo' }],
+    rank: 6, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -3633,6 +3651,7 @@
       { type: 'subspecies', monster: 'Nerscylla' },
       { type: 'invasive', monster: 'Invasive Nerscylla' },
     ],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -3684,6 +3703,7 @@
       { type: 'subspecies', monster: 'Nerscylla' },
       { type: 'feral', monster: 'Feral Nerscylla' },
     ],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: "An invasive subspecies of Nerscylla that stealthily hunts any who wander into its territory. Prey is seized and immobilized by this monster's massive chelicera before being mercilessly devoured.",
       'Head Scars': "This monster's head bears scars from turf wars with territorial rivals. Although these scars are weak points, they are well hidden by the creature's large chelicera and proficiency with camouflage.",
@@ -3843,6 +3863,7 @@
       { type: 'invasiveOf', monster: 'Odogaron' },
       { type: 'subspecies', monster: 'Ebony Odogaron' },
     ],
+    rank: 5, // for sorting
     flavor: {
       DEFAULT: 'An invasive subspecies of Odogaron that seeks only to butcher any creature it sees. The flaming arms are said to have dragged many a hunter to hell, lending to its horrifying presence.',
       'Oil Slick': "This monster's body is specially built to absorb fat from carrion and then secrete that fat onto its skin. Striking the ground with its claws ignites those oils to engulf invaders in flame.",
@@ -3940,6 +3961,7 @@
     genus: 'Flying Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Paolumu' }],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -4156,6 +4178,7 @@
       { type: 'invasiveOf', monster: 'Plesioth' },
       { type: 'subspecies', monster: 'Green Plesioth' },
     ],
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: 'This invasive subspecies of Plesioth has evolved to absorb water through its skin for storage. This water can then be violently expelled from the mouth with the force of a cannon blast.',
       'Aquatic Armor': 'The cells within its scales have evolved to store vast amounts of water. When in danger, it uses these water reserves to cover its body in an aquatic armor that protects from all impacts.',
@@ -4295,6 +4318,7 @@
     genus: 'Temnoceran',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Rakna-Kadaki' }],
+    rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -5072,6 +5096,7 @@
     genus: 'Flying Wyvern',
     tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Seregios' }],
+    rank: 6, // for sorting
     flavor: {
       DEFAULT: 'The gleaming silver scales on this invasive subspecies of Seregios help differentiate it from the normal species. Flung at nearly the speed of sound, those bladescales unerringly find their mark.',
       'Secrets of Steel': "This specimen's scales are as durable as steel and hold vast amounts of iron. Moreover, an acidic fluid can be secreted to remove rust from the scales and preserve their strength.",
@@ -5169,6 +5194,7 @@
     genus: 'Carapaceon',
     tags: ['invasive'],
     related: [{ type: 'invasiveOf', monster: 'Shogun Ceanataur' }],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'Like any true warrior, this invasive subspecies of Shogun Ceanataur excels at both offense and defense. It uses large, mutated claws to eviscerate prey while its sturdy black shell wards off attacks.',
       'Lustrous Black Shell': 'This monster has been observed scraping its shell against solid rock. After years of such polishing, the shell grows as unyielding as diamond and takes on a ghastly black luster.',
@@ -5316,6 +5342,7 @@
       { type: 'feralOf', monster: 'Somnacanth' },
       { type: 'subspecies', monster: 'Aurora Somnacanth' },
     ],
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -5382,6 +5409,7 @@
     genus: 'Amphibian',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Tetranadon' }],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -5392,6 +5420,7 @@
     name: 'Thunder Serpent Narwa',
     genus: 'Elder Dragon',
     tags: ['calamitous'],
+    rank: 7, // for sorting
     flavor: {
       DEFAULT: 'This Elder Dragon is the female counterpart to Wind Serpent Ibushi. Its thunder sacs thrum with stored electric power, enabling control over lightning and giving this monster an eerie golden glow.',
       'Powerful Magnetic Field': "Thunder Serpent Narwa's floating mechanism differs from Wind Serpent Ibushi's. Its thunder sacs produce a current that generates a magnetic field with which the monster's body is held aloft.",
@@ -5651,6 +5680,7 @@
       { type: 'feralOf', monster: 'Tobi-Kadachi' },
       { type: 'honed', monster: 'Honed Tobi-Kadachi' },
     ],
+    rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -5846,6 +5876,7 @@
     genus: 'Bird Wyvern',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Velocidrome' }],
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
@@ -5869,6 +5900,7 @@
     name: 'Wind Serpent Ibushi',
     genus: 'Elder Dragon',
     tags: ['calamitous'],
+    rank: 7, // for sorting
     flavor: {
       DEFAULT: 'Exhibiting inexplicable behavior such as levitating upside down, this male Elder Dragon can ascend to the heavens by generating fierce updrafts.',
       'Floating Tricks': 'The special gas stored in its wind sacs allows this monster to float and maintain its peculiar upside-down stance. Discharging the gas from its gills grants it blustering acceleration.',
@@ -5882,6 +5914,7 @@
     genus: 'Elder Dragon',
     related: [{ type: 'feral', monster: 'Feral Yama Tsukami' }],
     tags: ['calamitous'],
+    rank: 7, // for sorting
     flavor: {
       DEFAULT: 'This floating Elder Dragon is colossal enough to have an ecosystem of flora living on it. It consumes the earth and swallows forests whole as it wanders in search of rich soil.',
       'Expelled Thunderbugs': 'Attacks foes by forcefully expelling Thunderbugs and Dracophage Bugs from its body. The expelled Thunderbugs are highly unstable and will explode at the slightest touch.',
@@ -5895,6 +5928,7 @@
     genus: 'Elder Dragon',
     tags: ['feral'],
     related: [{ type: 'feralOf', monster: 'Yama Tsukami' }],
+    rank: 7, // for sorting
     flavor: {
       DEFAULT: 'A monster feared in Sheparden as "a force of nature." Rather than wandering about, this particular specimen has long resided in the Canalta Timberland. A portion of its body is crystallized.',
     },
@@ -6017,6 +6051,7 @@
       { type: 'invasiveOf', monster: 'Yian Garuga' },
       { type: 'deviant', monster: 'Deadeye Yian Garuga' },
     ],
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: 'This invasive subspecies of Yian Garuga is far deadlier than the regular species in terms of combat and toxicity. The body markings are caused by venom seeping out from its numerous venom glands.',
       'Venom Production Process': 'The venom production process within this monster increases energy utilization, meaning neurotransmission speed and muscular strength can be enhanced by secreting greater quantities of venom.',
@@ -6225,6 +6260,7 @@
       { type: 'feralOf', monster: 'Yian Kut-Ku' },
       { type: 'subspecies', monster: 'Blue Yian Kut-Ku' },
     ],
+    rank: 2, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
