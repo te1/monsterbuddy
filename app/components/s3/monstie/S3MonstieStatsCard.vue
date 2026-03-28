@@ -30,39 +30,48 @@
 </script>
 
 <template>
-  <section v-if="hasStats || hasRawStats" class="flex flex-col gap-3">
+  <section v-if="hasStats || hasRawStats" class="@container flex flex-col gap-3">
     <h3 class="text-lg font-medium">Monstie Stats</h3>
 
-    <div v-if="stats?.hp != null || stats?.defense != null">
-      <div class="font-medium">Bulk</div>
-      <S3StatsBar :value="stats?.hp ?? undefined" label="HP" />
-      <S3StatsBar :value="stats?.defense ?? undefined" label="Defense" />
-    </div>
-
-    <div v-if="stats?.attack != null || stats?.speed != null || stats?.crit != null">
-      <div class="font-medium">Offense</div>
-      <S3StatsBar :value="stats?.attack ?? undefined" label="Attack" />
-      <S3StatsBar :value="stats?.speed ?? undefined" label="Speed" />
-      <S3StatsBar :value="stats?.crit ?? undefined" label="Crit" />
-    </div>
-
-    <div v-if="stats?.stamina != null || stats?.recovery != null">
-      <div class="font-medium">Stamina</div>
-      <S3StatsBar :value="stats?.stamina ?? undefined" label="Starting" />
-      <S3StatsBar :value="stats?.recovery ?? undefined" label="Recovery" />
-    </div>
-
-    <div v-if="stats?.bulk != null || stats?.total != null">
-      <div v-if="stats?.bulk != null" class="flex items-center gap-2">
-        <span class="w-18">Bulk</span>
-        <span class="flex-1">HP + Defense</span>
-        <span class="text-right font-medium" v-text="stats?.bulk" />
+    <div class="flex flex-col gap-3 @md:flex-row @md:gap-12">
+      <div v-if="stats?.hp != null || stats?.defense != null" class="flex-1">
+        <div class="font-medium">Bulk</div>
+        <S3StatsBar :value="stats?.hp ?? undefined" label="HP" />
+        <S3StatsBar :value="stats?.defense ?? undefined" label="Defense" />
       </div>
 
-      <div v-if="stats?.total != null" class="flex items-center gap-2">
-        <span class="w-18">Major</span>
-        <span class="flex-1">HP + Defense + Attack + Speed</span>
-        <span class="text-right font-medium" v-text="stats?.total" />
+      <div
+        v-if="stats?.attack != null || stats?.speed != null || stats?.crit != null"
+        class="flex-1"
+      >
+        <div class="font-medium">Offense</div>
+        <S3StatsBar :value="stats?.attack ?? undefined" label="Attack" />
+        <S3StatsBar :value="stats?.speed ?? undefined" label="Speed" />
+        <S3StatsBar :value="stats?.crit ?? undefined" label="Crit" />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 @md:flex-row @md:gap-12">
+      <div v-if="stats?.stamina != null || stats?.recovery != null" class="flex-1">
+        <div class="font-medium">Stamina</div>
+        <S3StatsBar :value="stats?.stamina ?? undefined" label="Starting" />
+        <S3StatsBar :value="stats?.recovery ?? undefined" label="Recovery" />
+      </div>
+
+      <div v-if="stats?.bulk != null || stats?.total != null" class="flex-1">
+        <div class="font-medium">Totals</div>
+
+        <div v-if="stats?.bulk != null" class="flex items-center gap-2">
+          <span class="w-18">Bulk</span>
+          <span class="flex-1">HP, Def</span>
+          <span class="text-right font-medium" v-text="stats?.bulk" />
+        </div>
+
+        <div v-if="stats?.total != null" class="flex items-center gap-2">
+          <span class="w-18">Major</span>
+          <span class="flex-1">Bulk, Atk, Spd</span>
+          <span class="text-right font-medium" v-text="stats?.total" />
+        </div>
       </div>
     </div>
 
@@ -70,32 +79,26 @@
       <div class="font-medium">Raw Stats</div>
 
       <div
-        v-if="stats?.startingStamina != null || stats?.rawRecovery != null"
-        class="flex flex-col justify-between @sm:flex-row @md:justify-start @md:gap-12"
+        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-4 @3xl:grid-rows-1"
       >
-        <div v-if="stats?.startingStamina != null" class="flex items-center gap-2">
-          <span class="w-32">Starting Stamina</span>
-          <span class="w-8 flex-1 text-right font-medium" v-text="stats?.startingStamina" />
+        <div v-if="stats?.startingStamina != null" class="flex items-center justify-between gap-2">
+          <span>Starting Stamina</span>
+          <span class="text-right font-medium" v-text="stats?.startingStamina" />
         </div>
 
-        <div v-if="stats?.rawRecovery != null" class="flex items-center gap-2">
-          <span class="w-32">Stamina Recovery</span>
-          <span class="w-8 flex-1 text-right font-medium" v-text="stats?.rawRecovery" />
-        </div>
-      </div>
-
-      <div
-        v-if="stats?.startingStamina != null || stats?.rawRecovery != null"
-        class="flex flex-col justify-between @sm:flex-row @md:justify-start @md:gap-12"
-      >
-        <div v-if="stats?.rawCrit != null" class="flex items-center gap-2">
-          <span class="w-32">Crit Rate</span>
-          <span class="w-8 flex-1 text-right font-medium" v-text="`${stats?.rawCrit}%`" />
+        <div v-if="stats?.rawRecovery != null" class="flex items-center justify-between gap-2">
+          <span>Stamina Recovery</span>
+          <span class="text-right font-medium" v-text="stats?.rawRecovery" />
         </div>
 
-        <div v-if="stats?.wyvernfell != null" class="flex items-center gap-2">
-          <span class="w-32">Wyvernfell</span>
-          <span class="w-8 flex-1 text-right font-medium" v-text="stats?.wyvernfell" />
+        <div v-if="stats?.rawCrit != null" class="flex items-center justify-between gap-2">
+          <span>Crit Rate</span>
+          <span class="text-right font-medium" v-text="`${stats?.rawCrit}%`" />
+        </div>
+
+        <div v-if="stats?.wyvernfell != null" class="flex items-center justify-between gap-2">
+          <span>Wyvernfell</span>
+          <span class="text-right font-medium" v-text="stats?.wyvernfell" />
         </div>
       </div>
     </div>
