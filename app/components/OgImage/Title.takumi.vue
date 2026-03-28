@@ -62,7 +62,7 @@
   </div>
 
   <img
-    :src="`/${icon}`"
+    :src="`/img/${icon}`"
     alt="Icon"
     class="absolute right-[-300px] bottom-[-300px] size-[700px] -rotate-23 opacity-60"
   />
