@@ -56,7 +56,7 @@ export interface MonsterFilterInitialState {
   ridingActionFilter?: string;
   eggColorsFilter?: EggColor[];
   hatchableFilter?: boolean;
-  deviantsFilter?: boolean;
+  deviantFilter?: boolean;
   mode: Mode;
   autoSwitchModes: Mode[];
 }
@@ -68,7 +68,7 @@ export type FilterKey =
   | 'ridingActionFilter'
   | 'eggColorsFilter'
   | 'hatchableFilter'
-  | 'deviantsFilter';
+  | 'deviantFilter';
 
 export function makeMonsterFilterStore(
   storeId: string,
@@ -89,7 +89,7 @@ export function makeMonsterFilterStore(
     const ridingActionFilter = ref(initial.ridingActionFilter);
     const eggColorsFilter = ref(initial.eggColorsFilter);
     const hatchableFilter = ref(initial.hatchableFilter);
-    const deviantsFilter = ref(initial.deviantsFilter);
+    const deviantFilter = ref(initial.deviantFilter);
 
     const mode = ref(initial.mode);
     const autoSwitchModes = ref(initial.autoSwitchModes);
@@ -132,8 +132,8 @@ export function makeMonsterFilterStore(
         result = getMonstersByHatchable(hatchableFilter.value, result);
       }
 
-      if (deviantsFilter.value != null) {
-        result = getMonstersByIsDeviant(deviantsFilter.value, result);
+      if (deviantFilter.value != null) {
+        result = getMonstersByIsDeviant(deviantFilter.value, result);
       }
 
       return result;
@@ -301,10 +301,10 @@ export function makeMonsterFilterStore(
         });
       }
 
-      if (deviantsFilter.value != null) {
+      if (deviantFilter.value != null) {
         result.push({
-          name: 'deviantsFilter',
-          value: deviantsFilter.value ? 'Deviant' : 'No Deviants',
+          name: 'deviantFilter',
+          value: deviantFilter.value ? 'Deviant' : 'No Deviants',
         });
       }
 
@@ -343,7 +343,7 @@ export function makeMonsterFilterStore(
       ridingActionFilter.value = initial.ridingActionFilter;
       eggColorsFilter.value = initial.eggColorsFilter;
       hatchableFilter.value = initial.hatchableFilter;
-      deviantsFilter.value = initial.deviantsFilter;
+      deviantFilter.value = initial.deviantFilter;
     }
 
     function resetFilterAndSort() {
@@ -363,7 +363,7 @@ export function makeMonsterFilterStore(
       ridingActionFilter,
       eggColorsFilter,
       hatchableFilter,
-      deviantsFilter,
+      deviantFilter: deviantFilter,
       mode,
 
       // -- getters

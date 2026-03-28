@@ -17,7 +17,7 @@
       showAttackElementFilter?: boolean;
       showRidingActionFilter?: boolean;
       showHatchableFilter?: boolean;
-      showDeviantsFilter?: boolean;
+      showDeviantFilter?: boolean;
       backTarget?: string;
       modalLayout?: boolean;
     }>(),
@@ -31,7 +31,7 @@
       showAttackElementFilter: false,
       showRidingActionFilter: false,
       showHatchableFilter: false,
-      showDeviantsFilter: false,
+      showDeviantFilter: false,
       backTarget: undefined,
       modalLayout: false,
     }
@@ -287,18 +287,18 @@
       </UFormField>
 
       <UFormField
-        v-if="showDeviantsFilter"
-        label="Deviants"
+        v-if="showDeviantFilter"
+        label="Deviant"
         orientation="horizontal"
         :data-modal-layout="modalLayout"
       >
         <AppFilterToggle
-          :modelValue="filter.deviantsFilter"
+          :modelValue="filter.deviantFilter"
           :texts="['Include', 'Only Deviants', 'Exclude']"
           class="w-full"
           :disabled="disabled"
           :modalLayout="modalLayout"
-          @update:modelValue="setFilter('deviantsFilter', $event)"
+          @update:modelValue="setFilter('deviantFilter', $event)"
         />
       </UFormField>
     </div>
