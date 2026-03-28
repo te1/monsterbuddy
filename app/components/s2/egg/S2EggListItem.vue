@@ -33,6 +33,7 @@
       :monster="monster"
       :eager="eager"
       noTooltip
+      small
     />
 
     <UTooltip v-if="ticket" text="Golden SR ticket required">
