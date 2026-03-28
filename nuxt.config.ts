@@ -139,6 +139,10 @@ export default defineNuxtConfig({
     },
   },
 
+  linkChecker: {
+    runOnBuild: false,
+  },
+
   llms: {
     domain: 'https://monsterbuddy.app',
     title: 'Monster Buddy - Companion App For Monster Hunter Stories',
