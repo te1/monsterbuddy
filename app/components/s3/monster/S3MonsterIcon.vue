@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import { getMonsterIconUrl } from '~/services/3/assets';
+  import { rebuildAssetPath } from '~/services/assets';
 
   const props = withDefaults(
     defineProps<{
@@ -23,12 +24,17 @@
   await updateImageUrl();
 
   watch(() => props.monster.slug, updateImageUrl);
+
+  const imageUrl2x = computed(() => {
+    return rebuildAssetPath(imageUrl.value, '/img/3/monster-icon-2x');
+  });
 </script>
 
 <template>
   <UTooltip v-if="!noTooltip" :text="monster.name">
     <img
       :src="imageUrl"
+      :srcset="`${imageUrl2x} 2x`"
       :alt="monster.name"
       width="60"
       height="60"
@@ -40,6 +46,7 @@
   <img
     v-else
     :src="imageUrl"
+    :srcset="`${imageUrl2x} 2x`"
     :alt="monster.name"
     width="60"
     height="60"

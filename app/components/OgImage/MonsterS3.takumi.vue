@@ -18,17 +18,7 @@
     query: '?inline',
   });
 
-  const monsterIcons = import.meta.glob('~/assets/3/monster-icon/*.png', {
-    eager: true,
-    import: 'default',
-    query: '?inline',
-  });
-
   const eggIcon = computed(() => eggIcons[`/assets/3/egg/${props.monster.name}.svg`] ?? undefined);
-
-  const monsterIcon = computed(
-    () => monsterIcons[`/assets/3/monster-icon/${props.monster.name}.png`] ?? undefined
-  );
 </script>
 
 <template>
@@ -49,7 +39,7 @@
     </section>
 
     <section class="hidden items-center gap-12 lg:flex">
-      <img v-if="monsterIcon" :src="monsterIcon" class="size-[240px]" />
+      <img :src="`/img/3/monster-icon-2x/${props.monster.name}.png`" class="size-[240px]" />
 
       <ul class="flex flex-col gap-6 text-5xl text-toned">
         <li class="text-dimmed">{{ formatMonsterInfoAll(monster) }}</li>

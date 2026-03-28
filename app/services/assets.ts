@@ -8,6 +8,28 @@ export async function loadAsset<T extends string>(
   return loader ? await loader() : null;
 }
 
+export function rebuildAssetPath(assetUrl: string | null, newPath: string) {
+  if (!assetUrl) {
+    return null;
+  }
+
+  // get file name from URL
+  // '_nuxt/assets/3/monster-icon/Anjanath.png' -> 'Anjanath.png'
+  const rawFileName = assetUrl.split(/[\\/]/).pop()?.split(/[?#]/)[0];
+
+  if (!rawFileName) {
+    return null;
+  }
+
+  // drop hash from file name
+  // '_nuxt/Green%20Plesioth.DCmPguMi.png' -> 'Green%20Plesioth.png'
+  const parts = rawFileName.split('.');
+  const fileName = parts.length >= 2 ? `${parts[0]}.${parts.at(-1)}` : rawFileName;
+
+  // add new file name to new path
+  return fileName ? `${newPath}/${fileName}` : null;
+}
+
 const attackTypeIcons = import.meta.glob<string>('~/assets/icon/type-*.svg', {
   eager: true,
   import: 'default',
