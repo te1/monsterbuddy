@@ -2,6 +2,8 @@
   import type { Monster } from '~/services/3/types';
 
   defineProps<{ monster: Monster }>();
+
+  // TODO handle mutation text
 </script>
 
 <template>

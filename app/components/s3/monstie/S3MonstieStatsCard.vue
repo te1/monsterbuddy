@@ -18,6 +18,8 @@
       stats.value?.stamina != null
     );
   });
+
+  // TODO display raw stats
 </script>
 
 <template>
