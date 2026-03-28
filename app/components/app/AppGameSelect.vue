@@ -10,11 +10,12 @@
   const tooltip = computed(() => gameTypeToFullName(gameType.value));
 
   const items = ref<DropdownMenuItem[]>([
-    {
-      label: gameTypeToFullLabel('mhst1'),
-      description: gameTypeToDescription('mhst1'),
-      to: '/1',
-    },
+    // TODO MHST1
+    // {
+    //   label: gameTypeToFullLabel('mhst1'),
+    //   description: gameTypeToDescription('mhst1'),
+    //   to: '/1',
+    // },
     {
       label: gameTypeToFullLabel('mhst2'),
       description: gameTypeToDescription('mhst2'),

@@ -1,10 +1,11 @@
 import type { NavigationMenuItem } from '@nuxt/ui';
 
 const mainNavItems: NavigationMenuItem[] = [
-  {
-    label: gameTypeToShortName('mhst1'),
-    to: '/1',
-  },
+  // TODO MHST1
+  // {
+  //   label: gameTypeToShortName('mhst1'),
+  //   to: '/1',
+  // },
   {
     label: gameTypeToShortName('mhst2'),
     to: '/2',
@@ -121,12 +122,13 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
     {
       label: 'More',
       children: [
-        {
-          label: 'Areas',
-          description: 'Habitat Restoration',
-          to: '/3/areas',
-          active: isActive('/3/areas'),
-        },
+        // TODO MHST3
+        // {
+        //   label: 'Areas',
+        //   description: 'Habitat Restoration',
+        //   to: '/3/areas',
+        //   active: isActive('/3/areas'),
+        // },
         {
           label: 'Riding Actions',
           to: '/3/riding-actions',
