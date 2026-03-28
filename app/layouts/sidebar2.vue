@@ -83,7 +83,11 @@
       <slot />
 
       <template #right>
-        <UPageAside class="scrollbar-hide" :ui="{ container: 'flex flex-col gap-4' }">
+        <LazyUPageAside
+          class="scrollbar-hide"
+          :ui="{ container: 'flex flex-col gap-4' }"
+          hydrateOnIdle
+        >
           <component :is="sidebarComponent" v-if="sidebarComponent" />
 
           <UTabs color="neutral" variant="link" :items="tabs">
@@ -144,7 +148,7 @@
               </div>
             </template>
           </UTabs>
-        </UPageAside>
+        </LazyUPageAside>
       </template>
     </UPage>
 

@@ -186,12 +186,13 @@
 
     <!-- TODO increase spacing, remove some options, make apply stand out more -->
     <ClientOnly>
-      <UDrawer
+      <LazyUDrawer
         v-if="!hasSidebar"
         v-model:open="showFilter"
         title="View Options"
         description=" "
         :ui="{ body: 'flex flex-col gap-3' }"
+        hydrateOnIdle
       >
         <template #body>
           <S2MonsterViewOptions :filter="eldersLairFilter" :modes="modes" hideSort modalLayout />
@@ -204,7 +205,7 @@
             backTarget="/2/elders-lair"
           />
         </template>
-      </UDrawer>
+      </LazyUDrawer>
 
       <AppFabPanel>
         <NuxtLink v-if="!showFilter" :to="fabFilterTarget" :aria-label="fabFilterTooltip">

@@ -35,7 +35,7 @@
 </script>
 
 <template>
-  <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
+  <LazyUTabs v-model="tab" color="neutral" variant="link" :items="tabs" hydrateOnIdle>
     <template #view>
       <S2MonsterViewOptions :filter="filter" :modes="modes" hideSort />
     </template>
@@ -43,5 +43,5 @@
     <template #filter>
       <S2MonsterFilter :filter="filter" showEldersLairFilter showHatchableFilter />
     </template>
-  </UTabs>
+  </LazyUTabs>
 </template>

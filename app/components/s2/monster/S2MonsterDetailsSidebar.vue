@@ -44,7 +44,7 @@
 </script>
 
 <template>
-  <UTabs color="neutral" variant="link" :items="tabs">
+  <LazyUTabs color="neutral" variant="link" :items="tabs" hydrateOnIdle>
     <template #actions>
       <div class="flex flex-col gap-0">
         <ClientOnly>
@@ -74,5 +74,5 @@
         </ClientOnly>
       </div>
     </template>
-  </UTabs>
+  </LazyUTabs>
 </template>

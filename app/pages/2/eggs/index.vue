@@ -395,12 +395,13 @@
 
     <!-- TODO increase spacing, remove some options, make apply stand out more -->
     <ClientOnly>
-      <UDrawer
+      <LazyUDrawer
         v-if="!hasSidebar"
         v-model:open="showFilter"
         title="View Options"
         description=" "
         :ui="{ body: 'flex flex-col gap-3' }"
+        hydrateOnIdle
       >
         <template #body>
           <S2MonsterViewOptions :filter="eggFilter" :modes="modes" modalLayout />
@@ -419,7 +420,7 @@
             backTarget="/2/eggs"
           />
         </template>
-      </UDrawer>
+      </LazyUDrawer>
 
       <AppFabPanel>
         <AppFab
