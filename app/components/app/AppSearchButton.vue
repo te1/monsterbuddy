@@ -64,6 +64,7 @@
     title="Search"
     description="Filter results and open a destination. Use arrow keys to move, Enter to select, Escape to close."
     :ui="{ header: 'hidden', body: 'p-0 sm:p-0', footer: 'p-0 sm:p-0' }"
+    hydrateOnIdle
   >
     <div class="flex items-center gap-2">
       <div class="sm:hidden">
@@ -96,7 +97,7 @@
     </div>
 
     <template #body>
-      <UCommandPalette
+      <LazyUCommandPalette
         :groups="searchConfig.groups"
         placeholder="Search anything..."
         class="h-[85dvh] lg:h-120"
@@ -105,6 +106,7 @@
         selectedIcon=" "
         :ui="{ item: 'items-center', itemLabelSuffix: 'hidden' }"
         :fuse="{ fuseOptions: { includeMatches: true }, resultLimit: 10 }"
+        hydrateOnIdle
         @update:open="open = $event"
         @update:modelValue="open = false"
       >
@@ -116,7 +118,7 @@
             class="size-9"
           />
         </template>
-      </UCommandPalette>
+      </LazyUCommandPalette>
     </template>
 
     <template #footer>

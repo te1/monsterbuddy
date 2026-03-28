@@ -37,7 +37,7 @@
 </script>
 
 <template>
-  <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
+  <LazyUTabs v-model="tab" color="neutral" variant="link" :items="tabs" hydrateOnIdle>
     <template #view>
       <S3MonsterViewOptions :filter="filter" :sources="sources" :modes="modes" showSortByStats />
     </template>
@@ -51,5 +51,5 @@
         showRidingActionFilter
       />
     </template>
-  </UTabs>
+  </LazyUTabs>
 </template>

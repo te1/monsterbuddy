@@ -309,12 +309,13 @@
 
     <!-- TODO increase spacing, remove some options, make apply stand out more -->
     <ClientOnly>
-      <UDrawer
+      <LazyUDrawer
         v-if="!hasSidebar"
         v-model:open="showFilter"
         title="View Options"
         description=" "
         :ui="{ body: 'flex flex-col gap-3' }"
+        hydrateOnIdle
       >
         <template #body>
           <S3MonsterViewOptions :filter="monsterFilter" :modes="modes" modalLayout />
@@ -327,7 +328,7 @@
             backTarget="/3/monsters"
           />
         </template>
-      </UDrawer>
+      </LazyUDrawer>
 
       <AppFabPanel>
         <AppFab
