@@ -151,7 +151,7 @@
     <div
       class="pointer-events-none fixed right-[calc(-154px+var(--scrollbar-width,0px))] bottom-[-154px] -z-10 size-[448px] -rotate-23 overflow-hidden opacity-5 select-none lg:right-[calc(-192px+var(--scrollbar-width,0px))] lg:bottom-[-192px] lg:opacity-25"
     >
-      <img src="~/assets/app3.png" alt="Monster Buddy" class="size-full object-cover" />
+      <img src="~/assets/app3.webp" alt="Monster Buddy" class="size-full object-cover" />
     </div>
   </UContainer>
 </template>
