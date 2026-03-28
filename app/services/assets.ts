@@ -24,10 +24,16 @@ export function rebuildAssetPath(assetUrl: string | null, newPath: string) {
   // drop hash from file name
   // '_nuxt/Green%20Plesioth.DCmPguMi.png' -> 'Green%20Plesioth.png'
   const parts = rawFileName.split('.');
-  const fileName = parts.length >= 2 ? `${parts[0]}.${parts.at(-1)}` : rawFileName;
+  let fileName = parts.length >= 2 ? `${parts[0]}.${parts.at(-1)}` : rawFileName;
+
+  try {
+    fileName = decodeURIComponent(fileName);
+  } catch {
+    // nope
+  }
 
   // add new file name to new path
-  return fileName ? `${newPath}/${fileName}` : null;
+  return fileName ? `${newPath}/${encodeURIComponent(fileName)}` : null;
 }
 
 const attackTypeIcons = import.meta.glob<string>('~/assets/icon/type-*.svg', {
