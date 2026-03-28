@@ -21,6 +21,8 @@
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
+
+  // TODO landing page
 </script>
 
 <template>
