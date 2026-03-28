@@ -35,7 +35,7 @@
       badge: 'Soon™',
       features: [
         //
-        'Eggs',
+        'Eggs, Monsters',
         'Attack Patterns',
         'Tower of Illusion',
       ],
@@ -47,7 +47,7 @@
       enabled: true,
       features: [
         //
-        'Eggs',
+        'Eggs, Monsters',
         'Attack Patterns',
         "Elder's Lair",
         'Co-Op Quests / Dens',
@@ -61,8 +61,10 @@
       badge: 'New',
       features: [
         //
-        'Eggs',
+        'Eggs, Monsters',
         'Attack Patterns',
+        // 'Habitat Restoration',
+        // 'Genes, Skills',
       ],
     },
   ];
@@ -100,7 +102,7 @@
           spotlight
           spotlighCcolor="primary"
           :ui="{
-            container: 'relative block min-h-48 overflow-hidden lg:block',
+            container: 'relative block min-h-46 overflow-hidden lg:block',
             root: [
               'ring-2 ring-accented dark:ring-default',
               game.enabled ? 'hover:ring-inverted/30 dark:hover:ring-muted' : 'opacity-50',
@@ -116,7 +118,7 @@
 
           <template #description>
             <ProseUl class="marker:text-dimmed dark:marker:text-muted">
-              <ProseLi v-for="feature in game.features" :key="feature">
+              <ProseLi v-for="feature in game.features" :key="feature" class="leading-relaxed">
                 {{ feature }}
               </ProseLi>
             </ProseUl>
