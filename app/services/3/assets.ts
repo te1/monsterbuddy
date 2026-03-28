@@ -1,20 +1,30 @@
 import type { AilmentType, Monster } from './types';
 import { loadAsset } from '../assets';
 
-const monsterImages = import.meta.glob<string>('~/assets/3/monster/*.webp', {
+const monsterImages = import.meta.glob<string>('~/assets/3/monster/*.avif', {
   import: 'default',
 });
 
-function getMonsterImageKey(monster: Monster) {
-  return `/assets/3/monster/${monster.name}.webp`;
+const smallMonsterImages = import.meta.glob<string>('~/assets/3/monster-sm/*.webp', {
+  import: 'default',
+});
+
+function getMonsterImageKey(monster: Monster, small = false) {
+  if (small) {
+    return `/assets/3/monster-sm/${monster.name}.webp`;
+  }
+  return `/assets/3/monster/${monster.name}.avif`;
 }
 
-export function hasMonsterImage(monster: Monster) {
-  return getMonsterImageKey(monster) in monsterImages;
+export function hasMonsterImage(monster: Monster, small = false) {
+  return getMonsterImageKey(monster, small) in (small ? smallMonsterImages : monsterImages);
 }
 
-export async function getMonsterImageUrl(monster: Monster) {
-  return await loadAsset(monsterImages, getMonsterImageKey(monster));
+export async function getMonsterImageUrl(monster: Monster, small = false) {
+  return await loadAsset(
+    small ? smallMonsterImages : monsterImages,
+    getMonsterImageKey(monster, small)
+  );
 }
 
 const monsterIcons = import.meta.glob<string>('~/assets/3/monster-icon/*.png', {

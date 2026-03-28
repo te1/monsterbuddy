@@ -40,6 +40,7 @@
       :eager="eager"
       hideFallback
       noTooltip
+      small
     />
   </div>
 </template>

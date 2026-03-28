@@ -31,6 +31,7 @@
       :monster="monster"
       :eager="eager"
       noTooltip
+      small
     />
   </div>
 </template>

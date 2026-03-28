@@ -8,24 +8,26 @@
       noTooltip?: boolean;
       hideFallback?: boolean;
       eager?: boolean;
+      small?: boolean;
     }>(),
     {
       noTooltip: false,
       hideFallback: false,
       eager: false,
+      small: false,
     }
   );
 
   const imageUrl = shallowRef<string | null>(null);
-  const hasImage = computed(() => hasMonsterImage(props.monster));
+  const hasImage = computed(() => hasMonsterImage(props.monster, props.small));
 
   async function updateImageUrl() {
-    imageUrl.value = hasImage.value ? await getMonsterImageUrl(props.monster) : null;
+    imageUrl.value = hasImage.value ? await getMonsterImageUrl(props.monster, props.small) : null;
   }
 
   await updateImageUrl();
 
-  watch(() => props.monster.slug, updateImageUrl);
+  watch([() => props.monster.slug, () => props.small], updateImageUrl);
 </script>
 
 <template>
