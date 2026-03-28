@@ -729,6 +729,28 @@
     },
   },
 
+  /*
+  // https://monsterhunterwiki.org/wiki/Barrel_Felyne_(MHST3)
+  {
+    name: 'Barrel Felyne',
+    genus: 'Lynian',
+    flavor: {
+      DEFAULT: "In this case, curiosity got the Felyne's head stuck in a barrel. Fearing the approach of monsters, it will run at the slightest noise, so helping out this timid creature may be rather difficult.",
+      "The Barrel's Abyss": 'Perhaps it is simply in their nature, but many a Felyne has become obsessed with barrels. Felynes drawn to barrels should heed these words: "When you gaze into the barrel, the barrel gazes back."',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Great_Barrel_Felyne_(MHST3)
+  {
+    name: 'Great Barrel Felyne',
+    genus: 'Lynian',
+    flavor: {
+      DEFAULT: "A Felyne that, due to its unusually large girth, tragically got stuck in a large barrel. While this would be impossible for Felynes of a more modest size, there's no reason to shame the poor thing.",
+      'Valuable Experience': 'Some say those who help a Great Barrel Felyne will attain profound growth. Only those who manage to destroy the sturdy barrel before the Felyne flees know the truth of such claims.',
+    },
+  },
+  */
+
   // https://monsterhunterwiki.org/wiki/Barroth_(MHST3)
   {
     name: 'Barroth',
@@ -2231,6 +2253,30 @@
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
   },
+
+  /*
+  // https://monsterhunterwiki.org/wiki/Great_Dracophage_Bug_(MHST3)
+  {
+    name: 'Great Dracophage Bug',
+    genus: 'Neopteron',
+    flavor: {
+      DEFAULT: 'Large Dracophage Bugs. Dragon energy is said to lie dormant within their bodies. These glimmering creatures still hold many secrets yet to be discovered.',
+      'Alongside Elder Dragons': 'A Dracophage Bug that grew exponentially larger after absorbing the immense energy of an Elder Dragon. Some see this as evidence that Elder Dragons lurk where Great Dracophage Bugs are found.',
+      'The Slightest Touch': 'Vast amounts of stored dragon energy make this creature highly unstable. Even a slight touch will trigger a massive explosion. The Guild considers it a greater threat than the Great Thunderbug.',
+    },
+  },
+
+  // https://monsterhunterwiki.org/wiki/Great_Thunderbug_(MHST3)
+  {
+    name: 'Great Thunderbug',
+    genus: 'Neopteron',
+    flavor: {
+      DEFAULT: 'Some think this type of Thunderbug mutated inside an Elder Dragon. While they can be seen where Elder Dragons reside, sightings have also been reported in caves and near water sources at night.',
+      'Many as One': 'What may look like a single ball of light from a distance could actually be a group comprised of dozens of Great Thunderbugs. Much about their ecology is a mystery, including why they form groups.',
+      'Fearsome Electric Discharge': 'These aggressive insectoids charge at approaching foes and discharge all their electricity at once, immobilizing anything they hit. Hunters encountering them soon find themselves on the ground.',
+    },
+  },
+  */
 
   // https://monsterhunterwiki.org/wiki/Izuchi_(MHST3)
   {
