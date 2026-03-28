@@ -4,7 +4,7 @@
 
 <template>
   <UFooter :ui="{ container: 'py-2', center: 'flex-col gap-2' }">
-    <div class="text-center text-sm text-pretty text-toned dark:text-muted">
+    <div class="max-w-4xl text-center text-sm text-pretty text-toned dark:text-muted">
       <AppNuxtLink to="/" :text="title" plain /> is a companion app for
       <AppLink href="https://www.capcom.com" text="Capcom's" plain bare />
       Monster Hunter Stories games. This project is not affiliated with or endorsed by Capcom or the
