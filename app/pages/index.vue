@@ -94,7 +94,6 @@
         <UPageCard
           v-for="game in games"
           :key="game.title"
-          :title="game.title"
           :to="game.to"
           :disabled="!game.enabled"
           variant="outline"
@@ -108,6 +107,10 @@
             spotlight: 'bg-white/90 dark:bg-neutral-950/90',
           }"
         >
+          <template #title>
+            <h3 v-text="game.title" />
+          </template>
+
           <template #description>
             <ProseUl class="marker:text-dimmed dark:marker:text-muted">
               <ProseLi v-for="feature in game.features" :key="feature">
