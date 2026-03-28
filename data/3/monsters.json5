@@ -576,6 +576,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'An Astalos Deviant especially known for unleashing electric bolts as blue as the sky. Its highly developed shockshells produce spheres of electromagnetic energy to trap its foes.',
+      MUTATION0: "Astalos's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in areas with thunderous power.',
+      MUTATION2: 'Resides in thunder elemental areas containing 3 or more thunder elemental monsters.',
     },
     element: 'thunder',
     stats: {
@@ -684,6 +687,7 @@
       DEFAULT: 'This Barioth subspecies can generate tornadoes with its powerful breath. The yellow carapace has a red tint, and its fangs are said to shine deep blue when polished.',
       'Flexible Pleura': "The Sand Barioth has a thin, flexible organ called the pleura. This nigh-unbreakable material enhances the monster's breathing ability and enables it to unleash powerful tornado breaths.",
       'Flying Wyvern in the Desert': 'This monster mainly lived in deserts before becoming endangered. As such, it has traits suited to desert life, such as a sandstorm-resistant carapace and sharp claws for quick movement on sand.',
+      MUTATION0: "Barioth's Ecosystem Rank is A",
     },
     element: 'none',
     stats: {
@@ -1661,6 +1665,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'Tales of this Diablos Deviant are passed down in a faraway desert. It is rumored to have annihilated entire battalions sent after it, leaving nothing but empty sand where once stood soldiers.',
+      MUTATION0: "Diablos or Black Diablos's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in areas with many Hunters.',
+      MUTATION2: "Resides in Diablos or Black Diablos habitats in Tarkuan's Bountiful Dunes.",
     },
     element: 'none',
     stats: {
@@ -1941,6 +1948,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'Deep within this Glavenus Deviant burns a searing heat. A single sweep of its tail is enough to lay waste to everything before it, even incinerating entire mountains.',
+      MUTATION0: "Glavenus's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where many monsters that have razor-sharp appendages reside.',
+      MUTATION2: 'Resides in habitats containing 4 or more monsters that have razor-sharp appendages, such as the Shogun Ceanataur, Seregios, Great Izuchi, and Magnamalo.',
     },
     element: 'fire',
     stats: {
@@ -2784,6 +2794,7 @@
       DEFAULT: 'A subspecies of Lagiacrus with a beautiful ivory carapace. Its blue shockspikes are far more evolved than that of the regular species and capable of storing vast amounts of electricity.',
       'Conqueror of Land and Sea': 'While Leviathans are primarily active in the water, the Ivory Lagiacrus can be said to rule two domains as it uses its ferocious strength to dominate monsters on sea and land alike.',
       'Evolution of Shockspikes': "The Ivory Lagiacrus' shockspikes feature greater conductivity and requires no cooling after discharge, allowing the monster to emit powerful electric bursts more frequently.",
+      MUTATION0: "Lagiacrus's Ecosystem Rank is A",
     },
     element: 'thunder',
     stats: {
@@ -3167,6 +3178,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'A Mizutsune Deviant that has been rendered blind by past conflicts. Such an affliction would normally spell the end for a monster, but it has adapted by using bubbles for perception.',
+      MUTATION0: "Mizutsune's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where monsters that are known as bitter rivals reside.',
+      MUTATION2: 'Resides in habitats containing 1 or more endangered monsters that charge the ground in their wake with electricity-imbued bodies and are bitter rivals of the Mizutsune.',
     },
     element: 'water',
     stats: {
@@ -3370,6 +3384,7 @@
       DEFAULT: 'The mottled green fur of this Nargacuga subspecies is speculated to have served as an excellent camouflage in its verdant habitat before it became endangered.',
       'Green Camouflage': 'Its fur and scales are optimized to blend into green environments. The irregular pattern of colors in its fur helps it hide, while the appearance of its scales varies dramatically with the light.',
       'Tail Spikes': 'The tail bears sharper spikes than that of the regular species and thus sees more extensive use. Spikes can be flung at blinding speed to pin prey to the ground while this monster hides in the foliage.',
+      MUTATION0: "Nargacuga's Ecosystem Rank is A",
     },
     element: 'none',
     stats: {
@@ -3426,6 +3441,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'A Nargacuga Deviant that is covered in distinctive silver markings. Quick swings from its tail generate slicing gusts of wind, the phenomenal sight of which earned it its name.',
+      MUTATION0: "Nargacuga or Green Nargacuga's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where many monsters that rule the winds reside.',
+      MUTATION2: 'Resides in habitats containing 2 or more monsters that control the winds, such as the Great Izuchi, Legiana, and Paolumu.',
     },
     element: 'none',
     stats: {
@@ -4357,6 +4375,7 @@
       DEFAULT: 'An azure subspecies of Rathalos. More mobile than the regular species, it swoops down from above for ferocious attacks. It has been known to hunt alongside the Pink Rathian.',
       'Overwhelming Air Superiority': 'A subspecies of Rathalos with even greater flight capabilities than those of the normal species. It rarely descends to the ground even in battle, instead staying aloft to deliver attacks from above.',
       'Combo Attacks': "When enraged, this monster's fire breath becomes more potent, its flight speed increases, and it begins linking various attacks together with impressive agility.",
+      MUTATION0: "Rathalos's Ecosystem Rank is A",
     },
     element: 'fire',
     stats: {
@@ -4432,6 +4451,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'A king among kings, this Rathalos Deviant soars through the skies on majestic black wings. All those who dare oppose its rightful rule will be incinerated by its scorching breath.',
+      MUTATION0: "Rathalos or Azure Rathalos's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where dreaded monsters that reign over the heavens reside.',
+      MUTATION2: 'Resides in habitats containing 4 or more Flying Wyverns.',
     },
     element: 'fire',
     stats: {
@@ -4700,6 +4722,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'The tail of this Rathian Deviant bears venom of the deadliest kind. When expelled, the venom forms a majestic purple cloud of miasma that suffocates any unfortunate prey.',
+      MUTATION0: "Rathian or Pink Rathian's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where many poisonous monsters reside.',
+      MUTATION2: 'Resides in habitats containing 3 or more poisonous monsters.',
     },
     element: 'fire',
     stats: {
@@ -5443,6 +5468,7 @@
       DEFAULT: 'This black-scaled subspecies of the Tigrex possesses astounding strength and extreme ferociousness. The might of its terrible roar surpasses even that of the regular species.',
       'Ear-Splitting Roar': 'The cardiopulmonary system of this subspecies is considerably more developed than that of a regular Tigrex. It inhales great amounts of air before unleashing a supersonic roar that blows threats away.',
       'The Price of Power': 'Its cardiovascular and athletic abilities far outpace the regular species at the cost of increased metabolism and energy demands. Having to seek more prey for food means it is also more ferocious.',
+      MUTATION0: "Tigrex's Ecosystem Rank is A",
     },
     element: 'none',
     stats: {
@@ -5500,6 +5526,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'For a species already known for its absolute power, this Deviant commands even more compelling strength. Its name refers to the preternaturally sharp claws with which it decimates its prey.',
+      MUTATION0: "Tigrex or Brute Tigrex's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where many powerful monsters reside.',
+      MUTATION2: 'Resides in habitats containing 4 or more Power Type monsters.',
     },
     element: 'none',
     stats: {
@@ -5937,6 +5966,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'From among the ferocious Yian Garuga species stands a Deviant with even more love for the fight. Its one remaining eye burns with the fervor of the countless life-and-death struggles it has endured.',
+      MUTATION0: "Yian Garuga's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where many ferocious monsters reside.',
+      MUTATION2: 'Resides in habitats containing 3 or more monsters of equal or greater rank than the Yian Garuga.',
     },
     element: 'fire',
     stats: {
@@ -6312,6 +6344,7 @@
       DEFAULT: 'A subspecies of Zinogre endowed with dragon-element power. Its jet-black shell and silver-white fur combine with the red glow distinctive of dragons to instill fear in all who see it.',
       'Symbiotic Relationship with Dracophage Bugs': 'Sharing a symbiotic relationship with Dragonfell Berry-eating Dracophage Bugs, this monster absorbs dragon energy from the bugs and then amplifies and returns energy back when supercharged.',
       'Dragon Shroud': 'Much like the regular species, when this monster enters an excited state, spikes along its body stand upright. However, the emission of dragon energy makes it more vulnerable to elemental attacks.',
+      MUTATION0: "Zinogre's Ecosystem Rank is A",
     },
     element: 'dragon',
     stats: {
@@ -6372,6 +6405,9 @@
     rank: 7,
     flavor: {
       DEFAULT: 'A Zinogre Deviant cloaked in dazzling, golden electricity. With its command over blinding lights and crashing bolts of lightning, the title "Thunderlord" is certainly appropriate.',
+      MUTATION0: "Zinogre or Stygian Zinogre's Ecosystem Rank is S",
+      MUTATION1: 'This mutation is said to occur in habitats where monsters that are known as bitter rivals reside.',
+      MUTATION2: 'Resides in habitats containing 1 or more endangered monsters that possess enchanting, purple fur and are bitter rivals of the Zinogre.',
     },
     element: 'thunder',
     stats: {
