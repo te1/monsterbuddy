@@ -1,28 +1,27 @@
-import { skipHydrate } from 'pinia';
-
 import type { EggColor, Monster } from '~/services/2/types';
+import { skipHydrate } from 'pinia';
 import { groupBy, orderBy } from 'es-toolkit/array';
 import { upperFirst } from 'es-toolkit/string';
 import {
+  getCatavanStands,
+  getCoopQuests,
+  getEggColors,
+  getEldersLairFloors,
   getGenera,
   getHabitats,
-  getCoopQuests,
-  getCatavanStands,
-  getEldersLairFloors,
-  getRidingActions,
-  getEggColors,
-  getMonstersByName,
+  getMonstersByCatavanStand,
+  getMonstersByCoopQuest,
+  getMonstersByEldersLairFloor,
   getMonstersByGenus,
   getMonstersByHabitat,
-  getMonstersByCoopQuest,
-  getMonstersByCatavanStand,
-  getMonstersByEldersLairFloor,
-  getMonstiesByAttackType,
-  getMonstiesByAttackElement,
-  getMonstiesByRidingAction,
-  getMonstiesByEggColors,
   getMonstersByHatchable,
   getMonstersByIsDeviant,
+  getMonstersByName,
+  getMonstiesByAttackElement,
+  getMonstiesByAttackType,
+  getMonstiesByEggColors,
+  getMonstiesByRidingAction,
+  getRidingActions,
   sortedHabitats,
 } from '~/services/2/data';
 

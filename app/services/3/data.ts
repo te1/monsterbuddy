@@ -80,11 +80,25 @@ export function getMonstiesByEggColors(
   });
 }
 
+export function getMonstersByIsEndangered(
+  mustBeEndangered: boolean,
+  monsterList: Monster[] = monsters
+): Monster[] {
+  return monsterList.filter((monster) => monster.tags.includes('endangered') === mustBeEndangered);
+}
+
+export function getMonstersByIsMutation(
+  mustBeMutation: boolean,
+  monsterList: Monster[] = monsters
+): Monster[] {
+  return monsterList.filter((monster) => monster.tags.includes('mutation') === mustBeMutation);
+}
+
 export function getMonstersByIsDeviant(
   mustBeDeviant: boolean,
   monsterList: Monster[] = monsters
 ): Monster[] {
-  return monsterList.filter((monster) => isDeviant(monster) === mustBeDeviant);
+  return monsterList.filter((monster) => monster.tags.includes('deviant') === mustBeDeviant);
 }
 
 export function getMonstersByHatchable(
@@ -94,10 +108,6 @@ export function getMonstersByHatchable(
   return monsterList.filter((monster) =>
     hatchable ? monster.hatchable === hatchable : !monster.hatchable
   );
-}
-
-export function isDeviant(monster: Monster): boolean {
-  return monster.tags.includes('deviant');
 }
 
 export type MonsterLocationType = 'permanent' | 'world';

@@ -1,5 +1,4 @@
 import type { Monster, RidingAction } from './types';
-import { isDeviant } from './data';
 
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst3')}`;
@@ -10,7 +9,7 @@ export function getMonsterSeo(monster: Monster) {
     description += 'hatchable ';
   }
 
-  if (isDeviant(monster)) {
+  if (monster.tags.includes('deviant')) {
     description += 'Deviant ';
   }
 

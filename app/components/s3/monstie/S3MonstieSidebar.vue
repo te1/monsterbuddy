@@ -49,6 +49,8 @@
         showAttackTypeFilter
         showAttackElementFilter
         showRidingActionFilter
+        showEndangeredFilter
+        showMutationFilter
       />
     </template>
   </LazyUTabs>

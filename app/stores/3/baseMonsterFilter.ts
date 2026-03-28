@@ -1,6 +1,5 @@
-import { skipHydrate } from 'pinia';
-
 import type { EggColor, Monster } from '~/services/3/types';
+import { skipHydrate } from 'pinia';
 import { groupBy, orderBy } from 'es-toolkit/array';
 import { upperFirst } from 'es-toolkit/string';
 import {
@@ -8,13 +7,15 @@ import {
   getGenera,
   getMonstersByGenus,
   getMonstersByHatchable,
-  getMonstersByName,
-  getRidingActions,
-  getMonstiesByAttackType,
-  getMonstiesByAttackElement,
-  getMonstiesByRidingAction,
-  getMonstiesByEggColors,
   getMonstersByIsDeviant,
+  getMonstersByIsEndangered,
+  getMonstersByIsMutation,
+  getMonstersByName,
+  getMonstiesByAttackElement,
+  getMonstiesByAttackType,
+  getMonstiesByEggColors,
+  getMonstiesByRidingAction,
+  getRidingActions,
 } from '~/services/3/data';
 
 export type SortKey =
@@ -56,6 +57,8 @@ export interface MonsterFilterInitialState {
   ridingActionFilter?: string;
   eggColorsFilter?: EggColor[];
   hatchableFilter?: boolean;
+  endangeredFilter?: boolean;
+  mutationFilter?: boolean;
   deviantFilter?: boolean;
   mode: Mode;
   autoSwitchModes: Mode[];
@@ -68,6 +71,8 @@ export type FilterKey =
   | 'ridingActionFilter'
   | 'eggColorsFilter'
   | 'hatchableFilter'
+  | 'endangeredFilter'
+  | 'mutationFilter'
   | 'deviantFilter';
 
 export function makeMonsterFilterStore(
@@ -89,6 +94,8 @@ export function makeMonsterFilterStore(
     const ridingActionFilter = ref(initial.ridingActionFilter);
     const eggColorsFilter = ref(initial.eggColorsFilter);
     const hatchableFilter = ref(initial.hatchableFilter);
+    const endangeredFilter = ref(initial.endangeredFilter);
+    const mutationFilter = ref(initial.mutationFilter);
     const deviantFilter = ref(initial.deviantFilter);
 
     const mode = ref(initial.mode);
@@ -130,6 +137,14 @@ export function makeMonsterFilterStore(
 
       if (hatchableFilter.value != null) {
         result = getMonstersByHatchable(hatchableFilter.value, result);
+      }
+
+      if (endangeredFilter.value != null) {
+        result = getMonstersByIsEndangered(endangeredFilter.value, result);
+      }
+
+      if (mutationFilter.value != null) {
+        result = getMonstersByIsMutation(mutationFilter.value, result);
       }
 
       if (deviantFilter.value != null) {
@@ -301,6 +316,20 @@ export function makeMonsterFilterStore(
         });
       }
 
+      if (endangeredFilter.value != null) {
+        result.push({
+          name: 'endangeredFilter',
+          value: endangeredFilter.value ? 'Endangered' : 'Not Endangered',
+        });
+      }
+
+      if (mutationFilter.value != null) {
+        result.push({
+          name: 'mutationFilter',
+          value: mutationFilter.value ? 'Mutation' : 'No Mutations',
+        });
+      }
+
       if (deviantFilter.value != null) {
         result.push({
           name: 'deviantFilter',
@@ -343,6 +372,8 @@ export function makeMonsterFilterStore(
       ridingActionFilter.value = initial.ridingActionFilter;
       eggColorsFilter.value = initial.eggColorsFilter;
       hatchableFilter.value = initial.hatchableFilter;
+      endangeredFilter.value = initial.endangeredFilter;
+      mutationFilter.value = initial.mutationFilter;
       deviantFilter.value = initial.deviantFilter;
     }
 
@@ -363,7 +394,9 @@ export function makeMonsterFilterStore(
       ridingActionFilter,
       eggColorsFilter,
       hatchableFilter,
-      deviantFilter: deviantFilter,
+      endangeredFilter,
+      mutationFilter,
+      deviantFilter,
       mode,
 
       // -- getters

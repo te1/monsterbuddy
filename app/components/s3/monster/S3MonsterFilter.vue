@@ -17,6 +17,8 @@
       showAttackElementFilter?: boolean;
       showRidingActionFilter?: boolean;
       showHatchableFilter?: boolean;
+      showEndangeredFilter?: boolean;
+      showMutationFilter?: boolean;
       showDeviantFilter?: boolean;
       backTarget?: string;
       modalLayout?: boolean;
@@ -31,6 +33,8 @@
       showAttackElementFilter: false,
       showRidingActionFilter: false,
       showHatchableFilter: false,
+      showEndangeredFilter: false,
+      showMutationFilter: false,
       showDeviantFilter: false,
       backTarget: undefined,
       modalLayout: false,
@@ -283,6 +287,38 @@
           :disabled="disabled"
           :modalLayout="modalLayout"
           @update:modelValue="setFilter('hatchableFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField
+        v-if="showEndangeredFilter"
+        label="Endangered"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
+        <AppFilterToggle
+          :modelValue="filter.endangeredFilter"
+          :texts="['Include', 'Only Endangered', 'Exclude']"
+          class="w-full"
+          :disabled="disabled"
+          :modalLayout="modalLayout"
+          @update:modelValue="setFilter('endangeredFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField
+        v-if="showMutationFilter"
+        label="Mutation"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
+        <AppFilterToggle
+          :modelValue="filter.mutationFilter"
+          :texts="['Include', 'Only Mutations', 'Exclude']"
+          class="w-full"
+          :disabled="disabled"
+          :modalLayout="modalLayout"
+          @update:modelValue="setFilter('mutationFilter', $event)"
         />
       </UFormField>
 

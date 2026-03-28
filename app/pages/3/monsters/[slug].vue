@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import S3MonsterDetailsSidebar from '~/components/s3/monster/S3MonsterDetailsSidebar.vue';
-  import { isDeviant, monstersBySlug } from '~/services/3/data';
+  import { monstersBySlug } from '~/services/3/data';
   import { getMonsterSeo } from '~/services/3/seo';
   import useHistoryStore from '~/stores/3/historyStore';
 
@@ -37,7 +37,7 @@
       result += 'hatchable ';
     }
 
-    if (isDeviant(monster)) {
+    if (monster.tags.includes('deviant')) {
       result += 'Deviant ';
     }
 
