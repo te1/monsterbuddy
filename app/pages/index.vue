@@ -103,8 +103,8 @@
       lines: ['Search', 'Sort', 'Filter'],
     },
     {
-      title: 'Comfort',
-      icon: 'ph:bookmark-simple',
+      title: 'Quick Access',
+      icon: 'ph:arrow-fat-right',
       lines: ['Bookmarks', 'Recently Viewed', 'Related Entries'],
     },
   ];
