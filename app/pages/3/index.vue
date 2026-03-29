@@ -131,14 +131,17 @@
             </ProseLi>
 
             <ProseLi>
-              <AppLink href="https://www.youtube.com/@RageGamingVideos" text="RageGamingVideos" />
+              <AppLink
+                href="https://www.youtube.com/watch?v=txLzHs-ajEg"
+                text="Advanced Monstie Guide"
+              />
               on YouTube
             </ProseLi>
 
             <ProseLi>
               <AppLink
-                href="https://www.youtube.com/watch?v=txLzHs-ajEg"
-                text="Advanced Monstie Guide"
+                href="https://www.youtube.com/watch?v=5qy9qVlQzF4&list=PLRcW-_zwHp44_ILzwNX2I0Uv2WQg-sPnU"
+                text="RageGamingVideos"
               />
               on YouTube
             </ProseLi>
