@@ -51,6 +51,7 @@
         showRidingActionFilter
         showEndangeredFilter
         showMutationFilter
+        showDeviantFilter
       />
     </template>
   </UTabs>

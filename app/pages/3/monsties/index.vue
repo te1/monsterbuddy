@@ -333,6 +333,7 @@
             showRidingActionFilter
             showEndangeredFilter
             showMutationFilter
+            showDeviantFilter
             modalLayout
             backTarget="/3/monsties"
           />
