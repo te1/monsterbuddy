@@ -64,7 +64,6 @@
     title="Search"
     description="Filter results and open a destination. Use arrow keys to move, Enter to select, Escape to close."
     :ui="{ header: 'hidden', body: 'p-0 sm:p-0', footer: 'p-0 sm:p-0' }"
-    hydrateOnIdle
   >
     <div class="flex items-center gap-2">
       <div class="sm:hidden">
