@@ -331,6 +331,8 @@
             showAttackTypeFilter
             showAttackElementFilter
             showRidingActionFilter
+            showEndangeredFilter
+            showMutationFilter
             modalLayout
             backTarget="/3/monsties"
           />
