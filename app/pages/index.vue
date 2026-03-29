@@ -112,16 +112,14 @@
 
 <template>
   <div>
-    <!-- TODO landing page -->
-
     <UPageHero
-      description="Advanced Monsterpedia to learn or remember information useful during combat and general gameplay"
+      description="A practical field guide to the monsters, locations, and mechanics across your adventures"
       orientation="horizontal"
-      class="bg-linear-to-b from-transparent to-default"
+      class="@container bg-linear-to-b from-transparent to-default"
       :ui="{
-        // title: 'text-3xl leading-[1.1] font-medium sm:text-5xl md:text-6xl lg:text-7xl',
-        // description: 'max-w-4xl',
-        container: 'lg:block',
+        container: 'pt-6 pb-3 sm:pt-12 sm:pb-3 lg:block lg:pt-24 lg:pb-3',
+        title: 'text-3xl @lg:text-4xl @xl:text-4xl @2xl:text-5xl @4xl:text-6xl',
+        description: 'text-lg @lg:text-xl @4xl:text-2xl',
       }"
     >
       <template #title>
@@ -130,8 +128,10 @@
       </template>
     </UPageHero>
 
-    <UPageSection class="bg-default" title="Select Your Game">
-      <UPageGrid class="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+    <UPageSection class="bg-default" title="Games">
+      <UPageGrid
+        class="gap-4 sm:grid-cols-1 sm:gap-6 md:grid-cols-2 md:gap-4 lg:grid-cols-2 xl:grid-cols-3"
+      >
         <UPageCard
           v-for="game in games"
           :key="game.title"
@@ -184,17 +184,26 @@
           </div>
         </UPageCard>
       </UPageGrid>
+    </UPageSection>
 
+    <UPageSection class="bg-default" title="Holy Trinity of Combat">
       <AppTrinity class="mx-auto" />
     </UPageSection>
 
-    <UPageSection class="bg-linear-to-b from-default to-transparent" title="Features">
+    <UPageSection
+      class="bg-linear-to-b from-default to-transparent"
+      title="Features"
+      :ui="{
+        features: 'gap-4 sm:gap-6 md:grid-cols-2 md:gap-4 lg:grid-cols-2 xl:grid-cols-3',
+      }"
+    >
       <template #features>
         <UPageFeature
           v-for="feature in features"
           :key="feature.title"
           :title="feature.title"
           :icon="feature.icon"
+          :ui="{ root: 'max-w-30' }"
         >
           <template #description>
             <div v-for="line in feature.lines" :key="line" class="leading-relaxed">

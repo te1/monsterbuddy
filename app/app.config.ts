@@ -103,7 +103,10 @@ export default defineAppConfig({
 
     pageSection: {
       slots: {
+        container: 'py-4 sm:py-6 lg:py-8 gap-0 sm:gap-0',
+        header: 'sr-only',
         title: 'font-medium',
+        body: 'mt-0!',
       },
     },
 
