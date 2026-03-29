@@ -124,11 +124,11 @@
     <template #footer>
       <div class="flex gap-4 p-2 text-toned dark:text-dimmed">
         <span class="flex items-center gap-1">
-          <UKbd value="arrowup" variant="subtle" size="lg" class="pb-0.5 text-lg" />
-          <UKbd value="arrowdown" variant="subtle" size="lg" class="pb-0.5 text-lg" /> to navigate
+          <UKbd value="up" variant="subtle" size="lg" class="px-1.5 text-toned" />
+          <UKbd value="down" variant="subtle" size="lg" class="px-1.5 text-toned" /> to navigate
         </span>
         <span class="flex items-center gap-1">
-          <UKbd value="enter" variant="subtle" size="lg" class="pb-1.5 text-2xl text-toned" />
+          <UKbd value="enter " variant="subtle" size="lg" class="px-1.5 text-toned" />
           to select
         </span>
         <span class="flex items-center gap-1">
