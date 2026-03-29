@@ -74,7 +74,24 @@
     </div>
 
     <div v-if="showStats">
-      <div v-if="stats?.attack || stats?.speed || stats?.crit" class="flex">
+      <div v-if="stats?.hp || stats?.defense || stats?.bulk" class="flex">
+        <span v-if="stats?.hp">
+          HP
+          <strong class="font-bold" :class="getStatClass('hp')" v-text="stats?.hp" />
+        </span>
+
+        <span v-if="stats?.defense">
+          , Defense
+          <strong class="font-bold" :class="getStatClass('defense')" v-text="stats?.defense" />
+        </span>
+
+        <span v-if="stats?.bulk">
+          , Bulk
+          <strong class="font-bold" :class="getStatClass('bulk')" v-text="stats?.bulk" />
+        </span>
+      </div>
+
+      <div v-if="stats?.attack || stats?.speed || stats?.total" class="flex">
         <span v-if="stats?.attack">
           Attack
           <strong class="font-bold" :class="getStatClass('attack')" v-text="stats?.attack" />
@@ -85,33 +102,45 @@
           <strong class="font-bold" :class="getStatClass('speed')" v-text="stats?.speed" />
         </span>
 
-        <span v-if="stats?.crit">
-          , Crit
-          <strong class="font-bold" :class="getStatClass('crit')" v-text="stats?.crit" />
-        </span>
-      </div>
-
-      <div v-if="stats?.hp || stats?.defense" class="flex">
-        <span v-if="stats?.hp">
-          HP
-          <strong class="font-bold" :class="getStatClass('hp')" v-text="stats?.hp" />
-        </span>
-
-        <span v-if="stats?.defense">
-          , Defense
-          <strong class="font-bold" :class="getStatClass('defense')" v-text="stats?.defense" />
-        </span>
-      </div>
-
-      <div v-if="stats?.bulk || stats?.total" class="flex">
-        <span v-if="stats?.bulk">
-          Bulk
-          <strong class="font-bold" :class="getStatClass('bulk')" v-text="stats?.bulk" />
-        </span>
-
         <span v-if="stats?.total">
           , Major
           <strong class="font-bold" :class="getStatClass('total')" v-text="stats?.total" />
+        </span>
+      </div>
+
+      <div v-if="stats?.crit || stats?.wyvernfell" class="flex">
+        <span v-if="stats?.crit">
+          Crit
+          <strong class="font-bold" :class="getStatClass('crit')" v-text="stats?.crit" />
+        </span>
+
+        <span v-if="stats?.wyvernfell">
+          , Wyvernfell
+          <strong
+            class="font-bold"
+            :class="getStatClass('wyvernfell')"
+            v-text="stats?.wyvernfell"
+          />
+        </span>
+      </div>
+
+      <div v-if="stats?.startingStamina || stats?.rawRecovery" class="flex">
+        <span v-if="stats?.startingStamina">
+          Starting Stamina
+          <strong
+            class="font-bold"
+            :class="getStatClass('startingStamina')"
+            v-text="stats?.startingStamina"
+          />
+        </span>
+
+        <span v-if="stats?.rawRecovery">
+          , Recovery
+          <strong
+            class="font-bold"
+            :class="getStatClass('rawRecovery')"
+            v-text="stats?.rawRecovery"
+          />
         </span>
       </div>
     </div>

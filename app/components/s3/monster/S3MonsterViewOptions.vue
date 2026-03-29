@@ -59,6 +59,12 @@
           mode: 'stats',
         },
         {
+          value: 'stats.base.bulk',
+          label: 'Bulk Stats',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
           value: 'stats.base.attack',
           label: 'Attack',
           default: 'desc',
@@ -71,20 +77,32 @@
           mode: 'stats',
         },
         {
+          value: 'stats.base.total',
+          label: 'Major Stats',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
           value: 'stats.base.crit',
           label: 'Crit',
           default: 'desc',
           mode: 'stats',
         },
         {
-          value: 'stats.base.bulk',
-          label: 'Bulk Stats',
+          value: 'stats.base.wyvernfell',
+          label: 'Wyvernfell',
           default: 'desc',
           mode: 'stats',
         },
         {
-          value: 'stats.base.total',
-          label: 'Major Stats',
+          value: 'stats.base.startingStamina',
+          label: 'Stamina',
+          default: 'desc',
+          mode: 'stats',
+        },
+        {
+          value: 'stats.base.rawRecovery',
+          label: 'Recovery',
           default: 'desc',
           mode: 'stats',
         }

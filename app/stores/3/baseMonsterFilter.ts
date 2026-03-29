@@ -27,6 +27,9 @@ export type SortKey =
   | 'stats.base.crit'
   | 'stats.base.hp'
   | 'stats.base.defense'
+  | 'stats.base.wyvernfell'
+  | 'stats.base.startingStamina'
+  | 'stats.base.rawRecovery'
   | 'stats.base.bulk'
   | 'stats.base.total';
 
@@ -39,6 +42,9 @@ const sortValueGetters = {
   'stats.base.crit': (item: Monster) => item.stats?.base?.crit,
   'stats.base.hp': (item: Monster) => item.stats?.base?.hp,
   'stats.base.defense': (item: Monster) => item.stats?.base?.defense,
+  'stats.base.wyvernfell': (item: Monster) => item.stats?.base?.wyvernfell,
+  'stats.base.startingStamina': (item: Monster) => item.stats?.base?.startingStamina,
+  'stats.base.rawRecovery': (item: Monster) => item.stats?.base?.rawRecovery,
   'stats.base.bulk': (item: Monster) => item.stats?.base?.bulk,
   'stats.base.total': (item: Monster) => item.stats?.base?.total,
 } satisfies Record<SortKey, (item: Monster) => unknown>;
@@ -251,6 +257,27 @@ export function makeMonsterFilterStore(
             name: sortKey.value,
             order: sortOrder.value,
             caption: 'Crit',
+          };
+
+        case 'stats.base.wyvernfell':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Wyvernfell',
+          };
+
+        case 'stats.base.startingStamina':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Starting Stamina',
+          };
+
+        case 'stats.base.rawRecovery':
+          return {
+            name: sortKey.value,
+            order: sortOrder.value,
+            caption: 'Stamina Recovery',
           };
 
         case 'stats.base.bulk':
