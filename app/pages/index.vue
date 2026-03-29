@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-  import mhst1Egg from '~/assets/app1.png';
-  import mhst2Egg from '~/assets/app2.png';
-  import mhst3Egg from '~/assets/app3.webp';
+  import mhst1Egg from '~/assets/1/monsterbuddy.png';
+  import mhst2Egg from '~/assets/2/monsterbuddy.png';
+  import mhst3Egg from '~/assets/3/monsterbuddy.avif';
+  import mhst3EggSm from '~/assets/3/monsterbuddy-sm.avif';
 
   const { description, title } = useAppConfig().seo;
 
@@ -56,7 +57,8 @@
     {
       title: gameTypeToShortName('mhst3'),
       to: '/3',
-      image: mhst3Egg,
+      image: mhst3EggSm,
+      srcset: `${mhst3Egg} 2x`,
       enabled: true,
       badge: 'New',
       features: [
@@ -149,7 +151,12 @@
           <div
             class="pointer-events-none absolute right-[-154px] bottom-[-154px] size-[350px] -rotate-23 opacity-80 select-none dark:opacity-60"
           >
-            <img :src="game.image" :alt="game.title" class="size-full object-cover" />
+            <img
+              :src="game.image"
+              :srcset="game.srcset"
+              :alt="game.title"
+              class="size-full object-cover"
+            />
           </div>
 
           <div v-if="game.badge" class="absolute right-2 bottom-2">
