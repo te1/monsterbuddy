@@ -49,8 +49,26 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-03-24',
 
   vite: {
-    /*
     build: {
+      assetsInlineLimit(filePath, content) {
+        // these have 2x versions that break when we inline the 1x version
+        const neverInline = [
+          '/2/monster',
+          '/2/monster-sm',
+          '/3/monster',
+          '/3/monster-sm',
+          '/3/monster-icon',
+        ];
+
+        if (neverInline.some((path) => filePath.includes(path))) {
+          return false;
+        }
+
+        // default behavior
+        return content.length < 4096;
+      },
+
+      /*
       rollupOptions: {
         output: {
           manualChunks(id) {
@@ -78,8 +96,9 @@ export default defineNuxtConfig({
           },
         },
       },
+      */
     },
-    */
+
     optimizeDeps: {
       include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string'],
     },
