@@ -183,7 +183,7 @@
         permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchiu', 'Arzuros'], // no Arzuros? no Purple Ludroth? no Great Izuchiu?
         feral: ['Feral Tobi-Kadachi'],
         invasive: ['Invasive Nerscylla', 'Invasive Arzuros'],
-        endangered: ['Nargacuga'],
+        endangered: ['Canyne', 'Nargacuga'],
         calamitous: [],
       },
       {

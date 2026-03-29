@@ -26,6 +26,8 @@ export const RelationTypeSchema = z.enum([
   'feralOf',
   'invasive',
   'invasiveOf',
+  'unlocks',
+  'unlockedBy',
   'honed',
   'honedOf',
   // 'story',
