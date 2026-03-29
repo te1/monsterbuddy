@@ -16,16 +16,16 @@
   const icon = computed(() => {
     switch (props.game) {
       case 'mhst1':
-        return 'app1.png';
+        return '1/monsterbuddy.png';
 
       case 'mhst2':
-        return 'app2.png';
+        return '2/monsterbuddy.png';
 
       case 'mhst3':
-        return 'app3.png';
+        return '3/monsterbuddy.png';
 
       default:
-        return 'app2.png';
+        return '2/monsterbuddy.png';
     }
   });
 
