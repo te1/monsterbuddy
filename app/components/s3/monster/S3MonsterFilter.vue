@@ -282,7 +282,7 @@
       >
         <AppFilterToggle
           :modelValue="filter.hatchableFilter"
-          :texts="['Include', 'Only Hatchable', 'Exclude']"
+          :texts="['Include', 'Only', 'Exclude']"
           class="w-full"
           :disabled="disabled"
           :modalLayout="modalLayout"
@@ -298,7 +298,7 @@
       >
         <AppFilterToggle
           :modelValue="filter.endangeredFilter"
-          :texts="['Include', 'Only Endangered', 'Exclude']"
+          :texts="['Include', 'Only', 'Exclude']"
           class="w-full"
           :disabled="disabled"
           :modalLayout="modalLayout"
@@ -314,7 +314,7 @@
       >
         <AppFilterToggle
           :modelValue="filter.mutationFilter"
-          :texts="['Include', 'Only Mutations', 'Exclude']"
+          :texts="['Include', 'Only', 'Exclude']"
           class="w-full"
           :disabled="disabled"
           :modalLayout="modalLayout"
@@ -330,7 +330,7 @@
       >
         <AppFilterToggle
           :modelValue="filter.deviantFilter"
-          :texts="['Include', 'Only Deviants', 'Exclude']"
+          :texts="['Include', 'Only', 'Exclude']"
           class="w-full"
           :disabled="disabled"
           :modalLayout="modalLayout"
