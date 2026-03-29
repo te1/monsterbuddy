@@ -68,6 +68,29 @@
       ],
     },
   ];
+
+  const features = [
+    { title: 'Monster List', icon: 'ph:list' },
+    { title: 'Attack Patterns', icon: 'ph:sword' },
+    { title: 'Elemental Weaknesses', icon: 'ph:fire' },
+    { title: 'Weapon Effectiveness', icon: 'ph:hammer' },
+    { title: 'Monstie List', icon: 'ph:list' },
+    { title: 'Attack Types', icon: 'ph:sword' },
+    { title: 'Retreat Conditions', icon: 'ph:balloon' },
+    { title: 'Locations', icon: 'ph:map-pin-fill' },
+    { title: 'Stats', icon: 'ph:database' },
+    { title: 'Visual Egg List', icon: 'ph:egg' },
+    { title: 'Search', icon: 'ph:magnifying-glass' },
+    { title: 'Sorting', icon: 'ph:sort-ascending' },
+    { title: 'Filtering', icon: 'ph:funnel' },
+    { title: 'Catavan Stands', icon: 'ph:airplane' },
+    { title: "Elder's Lair", icon: 'ph:castle-turret' },
+    { title: 'Co-Op Quests', icon: 'ph:question' },
+    { title: 'Dens', icon: 'ph:mountains' },
+    { title: 'Riding Actions', icon: 'ph:horse' },
+    { title: 'Recently Viewed', icon: 'ph:clock-counter-clockwise' },
+    { title: 'Bookmarks', icon: 'ph:bookmark-simple' },
+  ];
 </script>
 
 <template>
@@ -82,7 +105,6 @@
         // title: 'text-3xl leading-[1.1] font-medium sm:text-5xl md:text-6xl lg:text-7xl',
         // description: 'max-w-4xl',
         container: 'lg:block',
-        title: 'font-medium',
       }"
     >
       <template #title>
@@ -91,7 +113,7 @@
       </template>
     </UPageHero>
 
-    <UPageSection class="bg-default">
+    <UPageSection class="bg-default" title="Select Your Game">
       <UPageGrid class="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         <UPageCard
           v-for="game in games"
@@ -144,45 +166,13 @@
       <AppTrinity class="mx-auto" />
     </UPageSection>
 
-    <UPageSection class="bg-linear-to-b from-default to-transparent">
-      <template #title>Powered by Nuxt UI components</template>
-
+    <UPageSection class="bg-linear-to-b from-default to-transparent" title="Features">
       <template #features>
         <UPageFeature
-          icon="ph:palette"
-          title="100+ UI Components"
-          description="Access the complete Nuxt UI component library. From badges to modals, everything styled and accessible out of the box."
-        />
-
-        <UPageFeature
-          icon="ph:text-t"
-          title="Beautiful Typography"
-          description="Pre-styled prose components with perfect visual harmony. No need for @tailwindcss/typography - get precise control over every element."
-        />
-
-        <UPageFeature
-          icon="ph:stack"
-          title="Rich Prose Components"
-          description="Accordions, cards, callouts, tabs, steps, code blocks, and more - all provided by Nuxt UI for interactive documentation."
-        />
-
-        <UPageFeature
-          icon="ph:magnifying-glass"
-          title="Built-in Search"
-          description="Full-text search with ContentSearch component. No need for Algolia - instant, relevant results with keyboard shortcuts "
-          (⌘K).
-        />
-
-        <UPageFeature
-          icon="ph:navigation-arrow"
-          title="Smart Navigation"
-          description="Auto-generated navigation with ContentNavigation and ContentToc components. Sticky table of contents and prev/next links."
-        />
-
-        <UPageFeature
-          icon="ph:moon"
-          title="Dark Mode Ready"
-          description="Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice."
+          v-for="feature in features"
+          :key="feature.title"
+          :title="feature.title"
+          :icon="feature.icon"
         />
       </template>
     </UPageSection>

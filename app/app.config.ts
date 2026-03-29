@@ -95,6 +95,18 @@ export default defineAppConfig({
       base: 'mt-0 pb-6 space-y-0',
     },
 
+    pageHero: {
+      slots: {
+        title: 'font-medium',
+      },
+    },
+
+    pageSection: {
+      slots: {
+        title: 'font-medium',
+      },
+    },
+
     tabs: {
       variants: {
         variant: {
