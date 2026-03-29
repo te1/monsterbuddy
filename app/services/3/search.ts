@@ -34,7 +34,7 @@ function getRidingActionSuffix(ridingAction: RidingAction) {
   return result.join(' ');
 }
 
-export function buildMhst3Search(appTitle: string) {
+export function buildMhst3SearchMonsterGroup() {
   const monsterItems = monsters.map((monster) => ({
     label: monster.name,
     suffix: getMonsterSuffix(monster),
@@ -42,6 +42,15 @@ export function buildMhst3Search(appTitle: string) {
     data: monster,
   }));
 
+  return {
+    id: 'monsters',
+    slot: 'monsters',
+    label: 'Monsters',
+    items: monsterItems,
+  };
+}
+
+export function buildMhst3Search(appTitle: string) {
   const ridingActionItems = sortedRidingActions.map((ridingAction) => ({
     label: ridingAction.name,
     suffix: getRidingActionSuffix(ridingAction),
@@ -51,12 +60,7 @@ export function buildMhst3Search(appTitle: string) {
 
   return {
     groups: [
-      {
-        id: 'monsters',
-        slot: 'monsters',
-        label: 'Monsters',
-        items: monsterItems,
-      },
+      buildMhst3SearchMonsterGroup(),
       {
         id: 'ridingActions',
         label: 'Riding Actions',

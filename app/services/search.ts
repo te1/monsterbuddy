@@ -1,5 +1,7 @@
 import type { Component } from 'vue';
 import type { GameType } from '~/utils/types';
+import { buildMhst3SearchMonsterGroup } from './3/search';
+import S3MonsterIcon from '~/components/s3/monster/S3MonsterIcon.vue';
 
 export type SearchItem = {
   label: string;
@@ -54,10 +56,16 @@ export function buildSearchPageConfig(items: SearchItem[]) {
 }
 
 export function buildDefaultSearch(appTitle: string) {
-  return buildSearchPageConfig([
-    buildSearchHomePageItem(appTitle),
-    buildSearchGameRootItem('mhst1'),
-    buildSearchGameRootItem('mhst2'),
-    buildSearchGameRootItem('mhst3'),
-  ]);
+  return {
+    groups: [
+      buildSearchPagesGroup([
+        buildSearchHomePageItem(appTitle),
+        buildSearchGameRootItem('mhst1'),
+        buildSearchGameRootItem('mhst2'),
+        buildSearchGameRootItem('mhst3'),
+      ]),
+      buildMhst3SearchMonsterGroup(),
+    ],
+    monsterIconComponent: markRaw(S3MonsterIcon),
+  };
 }
