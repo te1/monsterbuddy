@@ -232,7 +232,7 @@ export default defineAppConfig({
     prose: {
       h3: { slots: { base: 'mt-0 mb-2 font-medium' } },
       p: { base: 'my-0' },
-      ul: { base: 'ps-4.5 my-0' },
+      ul: { base: 'ps-4.5 my-0 marker:text-dimmed dark:marker:text-muted' },
       li: { base: 'ps-0 my-0.5' },
     },
   },

@@ -141,7 +141,7 @@
           </template>
 
           <template #description>
-            <ProseUl class="marker:text-dimmed dark:marker:text-muted">
+            <ProseUl>
               <ProseLi v-for="feature in game.features" :key="feature" class="leading-relaxed">
                 {{ feature }}
               </ProseLi>
