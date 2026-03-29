@@ -349,7 +349,7 @@
               class="w-6 text-dimmed"
             />
 
-            <div class="font-medium" v-text="group.key" />
+            <div class="font-semibold" v-text="group.key" />
           </div>
 
           <div

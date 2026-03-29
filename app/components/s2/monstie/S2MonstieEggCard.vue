@@ -22,7 +22,7 @@
     <S2EggImage :monster="monster" class="-ml-3" />
 
     <div>
-      <h3 class="text-lg font-medium">Retreat</h3>
+      <h3 class="text-lg font-semibold">Retreat</h3>
 
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="retreat" />

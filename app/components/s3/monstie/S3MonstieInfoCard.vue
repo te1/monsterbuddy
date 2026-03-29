@@ -32,7 +32,7 @@
 <template>
   <section class="relative flex flex-col gap-2">
     <div class="flex flex-col gap-1">
-      <h3 class="text-lg font-medium">Monstie Info</h3>
+      <h3 class="text-lg font-semibold">Monstie Info</h3>
 
       <div class="flex items-center">
         <span class="w-40">Attack Type</span>
@@ -56,7 +56,7 @@
     </div>
 
     <div v-if="hasRidingActions">
-      <h3 class="text-lg font-medium">Riding Actions</h3>
+      <h3 class="text-lg font-semibold">Riding Actions</h3>
 
       <div>
         <span v-for="(action, index) in ridingActions" :key="action.name" class="inline-flex">

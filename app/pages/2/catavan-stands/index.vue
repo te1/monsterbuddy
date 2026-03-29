@@ -52,7 +52,7 @@
           >
             <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
 
-            <div class="font-medium">
+            <div class="font-semibold">
               {{ zone }}
             </div>
           </div>

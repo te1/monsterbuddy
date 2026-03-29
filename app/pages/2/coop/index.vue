@@ -52,7 +52,7 @@
           >
             <UIcon name="ph:question-mark-bold" class="w-6" />
 
-            <div class="font-medium">
+            <div class="font-semibold">
               {{ formatCoopQuestType(type) }}
             </div>
           </div>

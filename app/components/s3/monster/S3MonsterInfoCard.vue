@@ -53,7 +53,7 @@
     </div>
 
     <div v-if="hasLocations">
-      <h3 class="text-lg font-medium">Locations</h3>
+      <h3 class="text-lg font-semibold">Locations</h3>
 
       <S3MonsterLocation
         v-for="location in locations"

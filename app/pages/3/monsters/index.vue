@@ -283,7 +283,7 @@
           >
             <UIcon v-if="monsterFilter.sortKey === 'genus'" name="ph:dna" class="w-6 text-muted" />
 
-            <div class="font-medium" v-text="group.key" />
+            <div class="font-semibold" v-text="group.key" />
           </div>
 
           <div class="grid gap-3 md:grid-cols-2">

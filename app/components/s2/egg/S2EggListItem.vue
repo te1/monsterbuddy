@@ -38,7 +38,7 @@
 
     <UTooltip v-if="ticket" text="Golden SR ticket required">
       <div
-        class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-medium tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
+        class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-semibold tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
       >
         SR
       </div>

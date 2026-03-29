@@ -32,6 +32,6 @@
       noTooltip
     />
 
-    <div class="mb-2 font-medium whitespace-nowrap" v-text="text" />
+    <div class="mb-2 font-semibold whitespace-nowrap" v-text="text" />
   </div>
 </template>

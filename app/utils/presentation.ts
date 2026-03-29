@@ -144,7 +144,7 @@ export function parseSomeMarkdown(input: string): string {
   let result = stripTags(input);
 
   // **some text** -> <b>some text</b>
-  result = result.replace(/\*\*([^**]*)\*\*/g, '<strong class="font-medium">$1</strong>');
+  result = result.replace(/\*\*([^**]*)\*\*/g, '<strong class="font-semibold">$1</strong>');
 
   return result;
 }

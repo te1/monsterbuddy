@@ -19,6 +19,6 @@
       <div v-for="n in 10" :key="n" class="h-4 flex-1" :class="getColor(n)" />
     </span>
 
-    <span class="w-4 text-right font-medium" v-text="value" />
+    <span class="w-4 text-right font-semibold" v-text="value" />
   </div>
 </template>

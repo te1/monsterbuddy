@@ -133,7 +133,7 @@
       <div class="flex items-center py-1">
         <UIcon name="ph:dna" class="w-6 text-muted" />
 
-        <div class="font-medium">Learnt By</div>
+        <div class="font-semibold">Learnt By</div>
       </div>
 
       <div class="grid gap-3 md:grid-cols-2">

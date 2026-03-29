@@ -62,7 +62,7 @@
     class="@container relative flex flex-col gap-3"
   >
     <div v-if="hasCombatStates">
-      <h3 class="text-lg font-medium">Attack Patterns</h3>
+      <h3 class="text-lg font-semibold">Attack Patterns</h3>
 
       <div class="flex flex-col gap-1">
         <div
@@ -84,8 +84,8 @@
       </div>
     </div>
 
-    <div v-if="hasCombatStates">
-      <h3 class="text-lg font-medium">Parts</h3>
+    <div v-if="combatState">
+      <h3 class="text-lg font-semibold">Parts</h3>
 
       <UTabs
         v-if="combatStatesForParts.length > 1"
@@ -99,7 +99,7 @@
       />
 
       <div
-        v-for="(weaponEffectiveness, part) in combatState?.parts"
+        v-for="(weaponEffectiveness, part) in combatState.parts"
         :key="part"
         class="flex items-center"
       >
@@ -110,7 +110,7 @@
     </div>
 
     <div v-if="hasElementalResistances || hasAilmentResistances" class="flex flex-col @xs:flex-row">
-      <h3 class="w-36 text-lg font-medium">Resistance</h3>
+      <h3 class="w-36 text-lg font-semibold">Resistance</h3>
 
       <div class="mt-1 flex flex-col gap-4 @xs:mt-1.5">
         <div v-if="hasElementalResistances" class="flex gap-2">

@@ -41,7 +41,7 @@
 
 <template>
   <div class="min-w-0">
-    <div class="text-base leading-snug font-medium" v-text="monster.name" />
+    <div class="text-base leading-snug font-semibold" v-text="monster.name" />
 
     <template v-if="showLocation || showRank">
       <div>

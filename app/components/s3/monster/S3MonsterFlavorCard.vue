@@ -27,7 +27,7 @@
     class="flex flex-col gap-3 text-toned"
   >
     <div v-for="flavor in flavorTexts" :key="flavor.label">
-      <strong v-if="flavor.label !== 'DEFAULT'" class="font-medium text-default">
+      <strong v-if="flavor.label !== 'DEFAULT'" class="font-semibold text-default">
         {{ flavor.label }}:
       </strong>
 
@@ -35,7 +35,7 @@
     </div>
 
     <div v-if="mutationRequirements.length > 0">
-      <div class="font-medium">Mutation Requirements</div>
+      <div class="font-semibold">Mutation Requirements</div>
 
       <ProseUl>
         <ProseLi

@@ -197,7 +197,7 @@
           >
             <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
 
-            <div class="font-medium" v-text="group.key" />
+            <div class="font-semibold" v-text="group.key" />
           </div>
 
           <div class="grid gap-3 md:grid-cols-2">

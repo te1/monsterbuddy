@@ -45,7 +45,7 @@
 <template>
   <section v-if="hasCombatInfo" class="relative flex flex-col gap-2">
     <div v-if="hasAttackPatterns">
-      <h3 class="text-lg font-medium">Attack Patterns</h3>
+      <h3 class="text-lg font-semibold">Attack Patterns</h3>
 
       <div class="flex flex-col gap-1">
         <div
@@ -68,7 +68,7 @@
     </div>
 
     <div v-if="hasParts">
-      <h3 class="text-lg font-medium">Parts</h3>
+      <h3 class="text-lg font-semibold">Parts</h3>
 
       <div class="flex flex-col gap-1">
         <div
@@ -84,7 +84,7 @@
     </div>
 
     <div v-if="hasElementalWeakness" class="flex pt-2">
-      <h3 class="w-36 pt-0.5 text-lg font-medium">Weakness</h3>
+      <h3 class="w-36 pt-0.5 text-lg font-semibold">Weakness</h3>
 
       <div class="flex flex-col gap-2">
         <div

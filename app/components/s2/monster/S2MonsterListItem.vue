@@ -72,7 +72,7 @@
 
     <div class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap">
       <div class="leading-tight text-muted" v-text="info" />
-      <div class="text-base leading-snug font-medium" v-text="monster.name" />
+      <div class="text-base leading-snug font-semibold" v-text="monster.name" />
 
       <template v-if="showLocation || showRarity">
         <div v-text="monster.genus" />
@@ -117,7 +117,7 @@
 
     <UTooltip v-if="ticket" text="Golden SR ticket required">
       <div
-        class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-medium tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
+        class="absolute top-0 right-0 rounded-bl bg-gold/75 px-2 py-0.5 text-xs font-semibold tracking-widest text-neutral-700 dark:bg-gold/25 dark:text-gold"
       >
         SR
       </div>
