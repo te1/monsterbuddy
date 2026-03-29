@@ -177,7 +177,7 @@ export default defineAppConfig({
       slots: {
         root: 'place-items-baseline group',
         container: 'w-full overflow-hidden',
-        labelWrapper: 'w-14 xl:w-24 group-data-[modal-layout=true]:w-24',
+        labelWrapper: 'w-14 xl:w-25 group-data-[modal-layout=true]:w-25',
         label:
           'font-normal truncate select-none group-data-[modal-layout=true]:text-highlighted group-data-[modal-layout=true]:dark:text-default',
       },
