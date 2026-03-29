@@ -72,26 +72,41 @@
   ];
 
   const features = [
-    { title: 'Monster List', icon: 'ph:list' },
-    { title: 'Attack Patterns', icon: 'ph:sword' },
-    { title: 'Elemental Weaknesses', icon: 'ph:fire' },
-    { title: 'Weapon Effectiveness', icon: 'ph:hammer' },
-    { title: 'Monstie List', icon: 'ph:list' },
-    { title: 'Attack Types', icon: 'ph:sword' },
-    { title: 'Retreat Conditions', icon: 'ph:balloon' },
-    { title: 'Locations', icon: 'ph:map-pin-fill' },
-    { title: 'Stats', icon: 'ph:database' },
-    { title: 'Visual Egg List', icon: 'ph:egg' },
-    { title: 'Search', icon: 'ph:magnifying-glass' },
-    { title: 'Sorting', icon: 'ph:sort-ascending' },
-    { title: 'Filtering', icon: 'ph:funnel' },
-    { title: 'Catavan Stands', icon: 'ph:airplane' },
-    { title: "Elder's Lair", icon: 'ph:castle-turret' },
-    { title: 'Co-Op Quests', icon: 'ph:question' },
-    { title: 'Dens', icon: 'ph:mountains' },
-    { title: 'Riding Actions', icon: 'ph:horse' },
-    { title: 'Recently Viewed', icon: 'ph:clock-counter-clockwise' },
-    { title: 'Bookmarks', icon: 'ph:bookmark-simple' },
+    {
+      title: 'Monsters',
+      icon: 'ph:list-numbers',
+      lines: ['Attack Patterns', 'Elemental Weaknesses', 'Weapon Effectiveness'],
+    },
+    {
+      title: 'Monsties',
+      icon: 'ph:list-dashes',
+      lines: ['Attack Types & Elements', 'Stats', 'Riding Actions'],
+    },
+    {
+      title: 'Egg Guide',
+      icon: 'ph:egg',
+      lines: ['Egg Patterns', 'Colors', 'Egg Finder'],
+    },
+    {
+      title: 'Locations',
+      icon: 'ph:map-pin-fill',
+      lines: ['Habitats', 'Catavan Stands', 'Dens'],
+    },
+    {
+      title: 'End Game',
+      icon: 'ph:castle-turret',
+      lines: ['Tower of Illusion', 'Co-Op Quests', "Elder's Lair"],
+    },
+    {
+      title: 'Data',
+      icon: 'ph:database',
+      lines: ['Search', 'Sort', 'Filter'],
+    },
+    {
+      title: 'Comfort',
+      icon: 'ph:bookmark-simple',
+      lines: ['Bookmarks', 'Recently Viewed', 'Related Entries'],
+    },
   ];
 </script>
 
@@ -180,7 +195,13 @@
           :key="feature.title"
           :title="feature.title"
           :icon="feature.icon"
-        />
+        >
+          <template #description>
+            <div v-for="line in feature.lines" :key="line" class="leading-relaxed">
+              {{ line }}
+            </div>
+          </template>
+        </UPageFeature>
       </template>
     </UPageSection>
 
