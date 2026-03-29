@@ -24,13 +24,9 @@
 
 <template>
   <div class="flex h-[150px] flex-col items-center">
-    <S2EggImage
-      class="-mx-3 size-[120px]"
-      :monster="monster"
-      :genus="genus"
-      :eager="eager"
-      noTooltip
-    />
+    <div class="-mx-3 size-[120px]">
+      <S2EggImage class="size-[120px]" :monster="monster" :genus="genus" :eager="eager" noTooltip />
+    </div>
 
     <div class="mb-2 font-semibold whitespace-nowrap" v-text="text" />
   </div>
