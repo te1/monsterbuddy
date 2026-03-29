@@ -194,7 +194,8 @@
       class="bg-linear-to-b from-default to-transparent"
       title="Features"
       :ui="{
-        features: 'gap-4 sm:gap-6 md:grid-cols-2 md:gap-4 lg:grid-cols-2 xl:grid-cols-3',
+        features:
+          'gap-4 sm:gap-6 md:grid-cols-3 md:gap-4 lg:grid-cols-4 xl:mx-auto xl:w-fit xl:grid-cols-[repeat(4,max-content)] xl:gap-x-24',
       }"
     >
       <template #features>
@@ -203,7 +204,6 @@
           :key="feature.title"
           :title="feature.title"
           :icon="feature.icon"
-          :ui="{ root: 'max-w-30' }"
         >
           <template #description>
             <div v-for="line in feature.lines" :key="line" class="leading-relaxed">
