@@ -7,9 +7,9 @@
 </script>
 
 <template>
-  <LazyUTabs color="neutral" variant="link" :items="tabs" hydrateOnIdle>
+  <UTabs color="neutral" variant="link" :items="tabs">
     <template #view>
       <S2MonsterViewOptions :displays="displays" />
     </template>
-  </LazyUTabs>
+  </UTabs>
 </template>

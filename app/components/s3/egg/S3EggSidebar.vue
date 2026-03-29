@@ -63,7 +63,7 @@
 </script>
 
 <template>
-  <LazyUTabs v-model="tab" color="neutral" variant="link" :items="tabs" hydrateOnIdle>
+  <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
     <template #view>
       <S3MonsterViewOptions
         :displays="displays"
@@ -86,5 +86,5 @@
         showRidingActionFilter
       />
     </template>
-  </LazyUTabs>
+  </UTabs>
 </template>
