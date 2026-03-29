@@ -51,7 +51,7 @@
   useSchemaOrg([
     defineBreadcrumb({
       itemListElement: [
-        { name: 'Riding Actions', url: '/2/riding-actions' },
+        { name: 'Riding Actions', item: '/2/riding-actions' },
         { name: ridingAction.name },
       ],
     }),

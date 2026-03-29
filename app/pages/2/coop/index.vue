@@ -16,7 +16,7 @@
   useSchemaOrg([
     defineBreadcrumb({
       itemListElement: [
-        { name: gameTypeToShortLabel('mhst2'), url: '/2' },
+        { name: gameTypeToShortLabel('mhst2'), item: '/2' },
         { name: 'Co-Op Quests' },
       ],
     }),

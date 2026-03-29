@@ -50,7 +50,7 @@
     defineBreadcrumb({
       itemListElement: [
         //
-        { name: 'Monsters', url: '/2/monsters' },
+        { name: 'Monsters', item: '/2/monsters' },
         { name: monster.name },
       ],
     }),

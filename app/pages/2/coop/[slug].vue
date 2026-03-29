@@ -94,7 +94,7 @@
     defineBreadcrumb({
       itemListElement: [
         //
-        { name: 'Co-Op Quests', url: '/2/coop' },
+        { name: 'Co-Op Quests', item: '/2/coop' },
         { name: coopQuest.name },
       ],
     }),

@@ -70,7 +70,7 @@
   useSchemaOrg([
     defineBreadcrumb({
       itemListElement: [
-        { name: 'Catavan Stands', url: '/2/catavan-stands' },
+        { name: 'Catavan Stands', item: '/2/catavan-stands' },
         { name: catavanStand.name },
       ],
     }),

@@ -23,7 +23,7 @@
     defineBreadcrumb({
       itemListElement: [
         //
-        { name: gameTypeToShortLabel('mhst3'), url: '/3' },
+        { name: gameTypeToShortLabel('mhst3'), item: '/3' },
         { name: 'Eggs' },
       ],
     }),
