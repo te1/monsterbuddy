@@ -14,6 +14,17 @@
       'Crystallizing Capacity': 'After devouring battle-bound monsters during the war 200 years ago, this monster gave rise to the Crystal Encroachment. Traces of its existence have begun reappearing over the last decade.',
       'Catalyst of Devastation': "While this monster preyed on the Sacrosanctum's enemies and helped it prosper, it also sought to eliminate the battle-bound monsters used in the Rift War, leading to the Sacrosanctum's destruction.",
     },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: -1,
+        bleeding: -2,
+        darkness: -2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Ajarakan_(MHST3)
@@ -51,6 +62,15 @@
         ice: -1,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: +1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: +2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -80,6 +100,17 @@
     rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: +1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: +2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -118,6 +149,15 @@
         ice: 0,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -147,6 +187,17 @@
     rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -2,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -183,6 +234,15 @@
         thunder: 0,
         ice: -1,
         dragon: 1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +1,
       },
     },
     monster: {
@@ -320,6 +380,15 @@
         ice: -2,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -425,6 +494,15 @@
         ice: 1,
         dragon: -2,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +2,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -480,6 +558,15 @@
         ice: -1,
         dragon: 2,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -514,6 +601,17 @@
       DEFAULT: 'The mighty blows dealt by this invasive subspecies of Arzuros can shatter rock with ease. Highly intelligent as well as strong, some have been sighted leading regular Arzuros on hunts.',
       'Pack Leader': 'Particularly adept at using its excellent sense of smell to gather large amounts of food, this monster distributes collected food to the regular species to form bonds and strengthen the pack.',
       'Food Allocation': 'Because the food source is literally the lifeline of the entire species, stolen honey is stored underground to be dug up as needed. As the leader, the Invasive Arzuros decides how it is distributed.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
     },
   },
 
@@ -555,6 +653,15 @@
         thunder: 2,
         ice: -2,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -1,
+        darkness: -2,
       },
     },
     monster: {
@@ -669,6 +776,15 @@
         ice: 2,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: -2,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -726,6 +842,15 @@
         ice: -2,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: +1,
+      },
     },
     monster: {
       states: {
@@ -755,6 +880,17 @@
       DEFAULT: "In this case, curiosity got the Felyne's head stuck in a barrel. Fearing the approach of monsters, it will run at the slightest noise, so helping out this timid creature may be rather difficult.",
       "The Barrel's Abyss": 'Perhaps it is simply in their nature, but many a Felyne has become obsessed with barrels. Felynes drawn to barrels should heed these words: "When you gaze into the barrel, the barrel gazes back."',
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Barrel_Felyne_(MHST3)
@@ -765,6 +901,17 @@
     flavor: {
       DEFAULT: "A Felyne that, due to its unusually large girth, tragically got stuck in a large barrel. While this would be impossible for Felynes of a more modest size, there's no reason to shame the poor thing.",
       'Valuable Experience': 'Some say those who help a Great Barrel Felyne will attain profound growth. Only those who manage to destroy the sturdy barrel before the Felyne flees know the truth of such claims.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
     },
   },
 
@@ -806,6 +953,15 @@
         thunder: 0,
         ice: -1,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -867,6 +1023,15 @@
         ice: 2,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -900,6 +1065,17 @@
     rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -954,6 +1130,15 @@
         thunder: 0,
         ice: -2,
         dragon: 2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -1014,6 +1199,15 @@
         ice: 0,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: +2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +2,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -1047,6 +1241,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Blango_(MHST3)
@@ -1058,6 +1263,17 @@
       DEFAULT: 'A white-furred Fanged Beast found in mountainous regions. Packs are often led by a Blangonga, to whose call this monster will answer immediately.',
       'Snow-White Pelt': "This creature's protective white fur sees extensive use in cold-resistant gear. Such resilient pelts are difficult to work with but are prized for their utility.",
       'Energy Source': 'Meat from the ribs is called "Blango Bacon" in regions where people consume it. It apparently promotes good health and robust strength.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -2,
+      },
     },
   },
 
@@ -1096,6 +1312,15 @@
         ice: 2,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: -2,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -1125,6 +1350,17 @@
     rank: 3, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -1211,6 +1447,15 @@
         ice: -1,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +2,
+        bleeding: +1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -1252,13 +1497,13 @@
         dragon: null,
       },
       ailmentResistance: {
-        poison: null,
+        poison: -1,
         burn: +1,
         paralysis: -1,
         sleep: +1,
-        blastblight: null,
-        bleeding: null,
-        darkness: null,
+        blastblight: +2,
+        bleeding: +1,
+        darkness: -1,
       },
     },
     monster: {
@@ -1341,6 +1586,17 @@
       DEFAULT: 'A species of Piscine Wyvern that swims through desert sand like a fish through water. Unlike most Piscine Wyverns, it often lives in groups that can be led by a larger monster called a Cephadrome.',
       'Sand-Colored Skin': 'While this creature may appear to be the color of desert sand, its scales are actually blue. The beige color is caused by the accumulation of sand on its body as it swims through its habitat.',
       'Well-Developed Hearing': 'With its highly developed sense of hearing, this monster navigates by sound. It rarely surfaces except to hunt, but loud noises can startle it out of the ground.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -1449,7 +1705,7 @@
       ailmentResistance: {
         poison: -1,
         burn: -1,
-        paralysis: +2,
+        paralysis: +1,
         sleep: -1,
         blastblight: -1,
         bleeding: -1,
@@ -1515,6 +1771,15 @@
         ice: 1,
         dragon: -2,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -2,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -1547,6 +1812,17 @@
     rank: 7, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
   },
 
@@ -1588,6 +1864,15 @@
         thunder: 1,
         ice: -2,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -1651,6 +1936,15 @@
         thunder: 0,
         ice: -2,
         dragon: 1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -1750,6 +2044,17 @@
       'Survival Instinct': 'This monster faced extinction due to poor thermoregulation, but survived by moving underground. When fighting aboveground, it tends to prefer places that are less open to the elements.',
       'Twisted Horns': "This creature's twisted horns are an acquired characteristic. One theory posits that the horns were damaged by pressure and rotation while burrowing, and then gradually twisted as they regenerated.",
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
@@ -1788,13 +2093,13 @@
         dragon: -1,
       },
       ailmentResistance: {
-        poison: -1,
-        burn: -1,
-        paralysis: -1,
-        sleep: null,
-        blastblight: null,
-        bleeding: null,
-        darkness: null,
+        poison: +1,
+        burn: +1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -1832,6 +2137,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: +1,
+        darkness: -2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Garangolm_(MHST3)
@@ -1868,6 +2184,15 @@
         ice: -1,
         dragon: 2,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: +1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -1897,6 +2222,17 @@
       DEFAULT: 'Bird Wyverns found in plains and other flat terrain. The wings are vestigial organs that are incapable of flight. These monsters are prized as livestock for their wide variety of uses.',
       'Golden Egg': 'A timid monster that may spontaneously lay an egg when surprised from behind. Such eggs can occasionally be made of gold, but this phenomenon is not yet fully understood.',
       'Two Gargwa with One Stone': 'The saying "two Gargwa with one stone" refers to gaining two benefits from a single action or difficult task, as in throwing a stone at a single Gargwa but somehow felling two of them.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: -2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -1938,6 +2274,15 @@
         thunder: 1,
         ice: -1,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -2,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -2033,6 +2378,17 @@
     rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -2,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
   },
 
@@ -2139,6 +2495,15 @@
         ice: 2,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -2200,6 +2565,15 @@
         ice: 0,
         dragon: -1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: +2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -2259,6 +2633,15 @@
         ice: 0,
         dragon: -1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: +2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -2292,6 +2675,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +2,
+        paralysis: -1,
+        sleep: +2,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Dracophage_Bug_(MHST3)
@@ -2303,6 +2697,17 @@
       DEFAULT: 'Large Dracophage Bugs. Dragon energy is said to lie dormant within their bodies. These glimmering creatures still hold many secrets yet to be discovered.',
       'Alongside Elder Dragons': 'A Dracophage Bug that grew exponentially larger after absorbing the immense energy of an Elder Dragon. Some see this as evidence that Elder Dragons lurk where Great Dracophage Bugs are found.',
       'The Slightest Touch': 'Vast amounts of stored dragon energy make this creature highly unstable. Even a slight touch will trigger a massive explosion. The Guild considers it a greater threat than the Great Thunderbug.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -2,
+      },
     },
   },
 
@@ -2316,6 +2721,17 @@
       'Many as One': 'What may look like a single ball of light from a distance could actually be a group comprised of dozens of Great Thunderbugs. Much about their ecology is a mystery, including why they form groups.',
       'Fearsome Electric Discharge': 'These aggressive insectoids charge at approaching foes and discharge all their electricity at once, immobilizing anything they hit. Hunters encountering them soon find themselves on the ground.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: +2,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Izuchi_(MHST3)
@@ -2327,6 +2743,17 @@
       DEFAULT: 'This Bird Wyvern commonly appears in a pack led by a Great Izuchi. The distinctive sickle-shaped tail is used not only as a weapon, but to climb trees and gather fruit as well.',
       'The Next Leader': 'Pairs of elite Izuchi follow a Great Izuchi to learn how to work together. Some form of hierarchy seems to exist beyond these two elites because when one is chased away another will take its place.',
       'Vital Materials': 'Its hide is used in a variety of ways, from fashion to armor. Skins from so-called elites are particularly smooth, while the highest quality hides give off a pale orange sheen.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -2365,6 +2792,15 @@
         ice: 0,
         dragon: 2,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -2394,6 +2830,17 @@
     rank: 1, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: +1,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -2557,6 +3004,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Kelbi_(MHST3)
@@ -2568,6 +3026,17 @@
       DEFAULT: 'A dainty, small-statured herbivore. Like other herbivorous beasts, it has a gentle disposition and is easily spooked. It will quickly hop away from any perceived threats.',
       'Paired Off': 'These monsters are known to form strong mating bonds, and pairs can often be seen grazing together during mating season. Males use their horns to protect females and fend off any perceived threats.',
       'A Cure-All': 'Its horns are used in making a medicine that can supposedly cure all diseases. The most potent horns are harvested from a live monster, and it takes nearly a year for them to regenerate.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -2,
+      },
     },
   },
 
@@ -2608,6 +3077,15 @@
         thunder: 2,
         ice: 1,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +2,
       },
     },
     monster: {
@@ -2668,6 +3146,15 @@
         ice: 0,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +2,
+      },
     },
     monster: {
       states: {
@@ -2704,6 +3191,17 @@
       'Death Shriek': 'Characterized by a specialized throat structure and highly developed resonance organ, this monster can vibrate its exceptionally thick vocal cords to emit explosively loud screams.',
       'Electrifying Death Shrieks': "This monster's Death Shriek causes powerful vocal cord oscillations that create energy to stimulate its muscles and electric organs, drastically increasing this specimen's power generation capacity.",
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: -2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Kulu-Ya-Ku_(MHST3)
@@ -2739,6 +3237,15 @@
         thunder: 0,
         ice: -1,
         dragon: 2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -2798,6 +3305,15 @@
         thunder: 2,
         ice: 0,
         dragon: -1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -2859,6 +3375,15 @@
         ice: 0,
         dragon: -2,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -2917,6 +3442,15 @@
         ice: 2,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +1,
+      },
     },
     monster: {
       states: {
@@ -2950,6 +3484,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Legiana_(MHST3)
@@ -2963,6 +3508,17 @@
       DEFAULT: "In the desert, I happened across a Flying Wyvern normally found in colder regions. From its behavior, I surmised that it didn't get here by chance, but rather had been living here for a while.",
       'Peculiar Flight': 'A species of Flying Wyvern spotted flying along known aerial routes near Rococo Rocks. It makes its home within the rock formations, navigating even the trickiest of crags with ease.',
       'Truly Fascinating': "Used a Monstie's breath while investigating the Exotic Legiana, but it is still unclear what methods the note writer used to find the Legiana.",
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +1,
+      },
     },
   },
 
@@ -3000,6 +3556,15 @@
         ice: 2,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -3026,6 +3591,17 @@
     name: 'Bound Lunagaron',
     genus: 'Fanged Wyvern',
     rank: 5, // for sorting
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Magnamalo_(MHST3)
@@ -3063,6 +3639,15 @@
         ice: 0,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -3095,6 +3680,17 @@
     rank: 6, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +2,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -3132,6 +3728,15 @@
         thunder: 2,
         ice: -1,
         dragon: -2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +1,
       },
     },
     monster: {
@@ -3194,6 +3799,15 @@
         thunder: -2,
         ice: 1,
         dragon: -1,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: +1,
       },
     },
     monster: {
@@ -3330,11 +3944,11 @@
       ailmentResistance: {
         poison: -2,
         burn: -1,
-        paralysis: null,
+        paralysis: +1,
         sleep: +1,
-        blastblight: null,
-        bleeding: null,
-        darkness: null,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3402,6 +4016,15 @@
         ice: 1,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -3461,6 +4084,15 @@
         thunder: -2,
         ice: 1,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -3580,7 +4212,7 @@
       },
       ailmentResistance: {
         poison: +1,
-        burn: -1,
+        burn: -2,
         paralysis: +1,
         sleep: +2,
         blastblight: -1,
@@ -3653,6 +4285,15 @@
         ice: -1,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: +2,
+        burn: -2,
+        paralysis: +2,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -3700,11 +4341,11 @@
       ailmentResistance: {
         poison: +1,
         burn: +1,
-        paralysis: null,
+        paralysis: +1,
         sleep: +2,
-        blastblight: null,
-        bleeding: null,
-        darkness: null,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -3742,6 +4383,17 @@
       'Head Scars': "This monster's head bears scars from turf wars with territorial rivals. Although these scars are weak points, they are well hidden by the creature's large chelicera and proficiency with camouflage.",
       'Sneakiness Evolved': "Large pigmentation cells dot the surface of this monster's body. It releases darker pigments to camouflage itself better as night falls, which is why it excels at ambushing prey in the dark.",
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Nibelsnarf_(MHST3)
@@ -3753,6 +4405,17 @@
       DEFAULT: 'A Leviathan that has adapted to sandy environments. It blends in with sand dunes and locates prey aurally to then suck both the target and the surrounding sand into its maw.',
       'The Desert Gourmand': 'An immoderate glutton, this monster uses its large mouth to swallow prey and sand together. After absorbing vital nutrients, it expels the indigestible sand through gills in its neck.',
       'Dazzling Fluid': 'Its shiny and richly colored bodily fluids excel at retaining moisture. By circulating through the body, these fluids ensure constant hydration even in dry deserts.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: +1,
+      },
     },
   },
 
@@ -3767,6 +4430,17 @@
       DEFAULT: 'Upon noticing a curious spattering of round patches throughout a particular area of the Glacial Caps, I decided to investigate. As expected, a monster was lurking nearby.',
       'Subterranean Stalker': 'This monster lurks underground until the very moment it attacks its prey. I foolishly attempted to frighten it, but it whipped up a cloud of dust and snapped at me.',
       'Audiogenic Reactions': 'The Exotic Nibelsnarf resides underground and attacks prey detected by sound. A necklace was left behind at the scene of the hunt. Some brave adventurer is surely responsible for these notes.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
   },
 
@@ -3804,6 +4478,15 @@
         thunder: -1,
         ice: -2,
         dragon: 2,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: -1,
+        paralysis: -2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
       },
     },
     monster: {
@@ -3864,6 +4547,15 @@
         ice: -1,
         dragon: 2,
       },
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -3902,6 +4594,17 @@
       DEFAULT: 'An invasive subspecies of Odogaron that seeks only to butcher any creature it sees. The flaming arms are said to have dragged many a hunter to hell, lending to its horrifying presence.',
       'Oil Slick': "This monster's body is specially built to absorb fat from carrion and then secrete that fat onto its skin. Striking the ground with its claws ignites those oils to engulf invaders in flame.",
       'Unique Claws': "A unique compound in this specimen's heat-resistant claws prevents damage even when run against the hard ground. Even if they wear down, the claws soon grow back due to an unusually high metabolism.",
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
+      },
     },
   },
 
@@ -4219,6 +4922,17 @@
       'Aquatic Armor': 'The cells within its scales have evolved to store vast amounts of water. When in danger, it uses these water reserves to cover its body in an aquatic armor that protects from all impacts.',
       'Protruding Fragments': 'This specimen boasts excellent water retention thanks to tubes that connect its distinctive protrusions to water-storing organs. These allow it to absorb water directly when stores run critically low.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Pukei-Pukei_(MHST3)
@@ -4255,6 +4969,15 @@
         ice: -1,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: -1,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -4287,6 +5010,17 @@
       DEFAULT: "These juvenile Rakna-Kadaki cling to their mother's abdomen and primarily feed off scraps of regurgitated prey. Covered in silk, they can almost be mistaken for large cotton balls.",
       'Obedient Offspring': "It can spin silk as strong as its parent's right after birth. When ordered to, it will ensnare prey with silk before using those threads to draw the catch to its large, lumbering mother.",
       'Working Up an Appetite': 'The glowgut found within Rakna-Kadaki abdomens is a light-emitting organ that generates the heat necessary for incubating and hatching Rachnoids. Maintaining this heat requires a great deal of food.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -4325,6 +5059,15 @@
         ice: -2,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -4357,6 +5100,17 @@
     rank: 5, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -4399,6 +5153,15 @@
         thunder: -1,
         ice: 1,
         dragon: -2,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -4465,6 +5228,15 @@
         ice: -1,
         dragon: -2,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -4500,6 +5272,17 @@
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
     rank: 6, // for sorting
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Dreadking_Rathalos_(MHST3)
@@ -4845,6 +5628,17 @@
       'Harbinger of Disaster': 'Remobra are often found where Elder Dragons roam, scavenging the corpses of creatures defeated by the powerful monsters. When many appear in the sky, an Elder Dragon may be approaching.',
       Snakelike: "The Remobra's snakelike features include the beautiful black and red striped pattern of its hide, a material popular with particularists. High-grade hides shine like a lustrous black pearl.",
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: -1,
+        paralysis: -2,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rey_Dau_(MHST3)
@@ -4880,6 +5674,15 @@
         thunder: 2,
         ice: -2,
         dragon: 1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: -1,
+        darkness: -2,
       },
     },
     monster: {
@@ -5056,6 +5859,15 @@
         ice: 0,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: -2,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -5111,6 +5923,15 @@
         ice: -1,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: +1,
+        bleeding: +2,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -5146,6 +5967,17 @@
       'Secrets of Steel': "This specimen's scales are as durable as steel and hold vast amounts of iron. Moreover, an acidic fluid can be secreted to remove rust from the scales and preserve their strength.",
       'Heavy Bladescales': "Bladescales may be extremely hard, but they are just as heavy. This monster's muscles are well developed due to continually wielding the hefty scales, granting it exceptional physical prowess.",
     },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Seregios_(MHST3)
@@ -5161,6 +5993,17 @@
       "Canalta's Picky Eater": 'This species seems rather picky in its choice of prey as it only targets certain monsters. As expected, it appeared when I entered its territory accompanied by the monster it likes to snack on.',
       'Clever Traps': 'The Exotic Seregios places beehives throughout its territory to lure in the Arzuros it preys upon. The adventurer who noticed such traps must possess a keen eye and sharp wit.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Ceanataur_(MHST3)
@@ -5172,6 +6015,17 @@
       DEFAULT: "A small Carapaceon that uses other creatures' shells to protect itself. It mainly spends its time buried underground, but it will rise from below to ambush threats that get too close.",
       'Shogun Ceanataur Youth': "The underdeveloped claws lack the scythe-like capacity of the Shogun Ceanataur's, but they are still lethally sharp. This monster is aggressive, moves quickly, and spits venom when ambushing foes.",
       'Coveted Delicacy': 'Carapaceon brains can be harvested from the Ceanataur and other members of the class. The brains are a known delicacy, with high-quality brains being particularly valuable.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: -2,
+        sleep: -2,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -5210,6 +6064,15 @@
         ice: 0,
         dragon: 2,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: -1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -1,
+      },
     },
     monster: {
       states: {
@@ -5247,6 +6110,17 @@
       DEFAULT: 'Like any true warrior, this invasive subspecies of Shogun Ceanataur excels at both offense and defense. It uses large, mutated claws to eviscerate prey while its sturdy black shell wards off attacks.',
       'Lustrous Black Shell': 'This monster has been observed scraping its shell against solid rock. After years of such polishing, the shell grows as unyielding as diamond and takes on a ghastly black luster.',
       'Razor-Sharp Weakness': "This monster's massive pincers have extremely sharp tips, but they cannot withstand powerful impacts against hard objects. The easily broken pincers are therefore the monster's weak point.",
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: +2,
+        darkness: +2,
+      },
     },
   },
 
@@ -5299,6 +6173,15 @@
         thunder: -2,
         ice: 0,
         dragon: 1,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +2,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
       },
     },
     monster: {
@@ -5362,6 +6245,15 @@
         ice: 2,
         dragon: 0,
       },
+      ailmentResistance: {
+        poison: +1,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -5394,6 +6286,17 @@
     rank: 4, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: +1,
+        sleep: +2,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -1,
+      },
     },
   },
 
@@ -5432,6 +6335,15 @@
         ice: 0,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -5462,6 +6374,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: +2,
+        bleeding: -1,
+        darkness: -2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Thunder_Serpent_Narwa_(MHST3)
@@ -5474,6 +6397,17 @@
       DEFAULT: 'This Elder Dragon is the female counterpart to Wind Serpent Ibushi. Its thunder sacs thrum with stored electric power, enabling control over lightning and giving this monster an eerie golden glow.',
       'Powerful Magnetic Field': "Thunder Serpent Narwa's floating mechanism differs from Wind Serpent Ibushi's. Its thunder sacs produce a current that generates a magnetic field with which the monster's body is held aloft.",
       Resonance: 'It searches for suitable nest locations to await males during breeding season. After a pair meet, they take to the sky and resonate, creating a powerful storm that damages the surroundings.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: +1,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
     },
   },
 
@@ -5516,6 +6450,15 @@
         thunder: -2,
         ice: 1,
         dragon: -1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -2,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -5576,6 +6519,15 @@
         thunder: -1,
         ice: 1,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: +1,
+        paralysis: -2,
+        sleep: +1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
       },
     },
     monster: {
@@ -5734,6 +6686,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: +1,
+        darkness: -2,
+      },
+    },
   },
 
   /*
@@ -5783,6 +6746,15 @@
         thunder: -1,
         ice: 2,
         dragon: -1,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -2,
+        paralysis: +1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -1,
       },
     },
     monster: {
@@ -5935,6 +6907,17 @@
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -2,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Velocidrome_(MHST3)
@@ -5950,6 +6933,17 @@
       'Catch Me If You Can': 'It focuses so much on hunting small game that it ignores its surroundings. Even so, it is extremely hard to catch. Start your observation from the egg quartz overlooking the castle.',
       'Survival Strategy': 'As the note said, the Exotic Velocidrome has novel hunting methods. Its survival strategies lead to interesting behavioral differences. Whoever wrote the note deserves praise for catching this monster.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: -1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -2,
+        darkness: -1,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Wind_Serpent_Ibushi
@@ -5962,6 +6956,17 @@
       DEFAULT: 'Exhibiting inexplicable behavior such as levitating upside down, this male Elder Dragon can ascend to the heavens by generating fierce updrafts.',
       'Floating Tricks': 'The special gas stored in its wind sacs allows this monster to float and maintain its peculiar upside-down stance. Discharging the gas from its gills grants it blustering acceleration.',
       'Blustery Breath': 'It expels fearsome, gale-force breaths from its mouth by vigorously circulating gas throughout its wind sacs before releasing it like a cannon blast. Monsters tremble in fear at its roar.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +1,
+        burn: -2,
+        paralysis: +1,
+        sleep: +2,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -5977,6 +6982,17 @@
       'Expelled Thunderbugs': 'Attacks foes by forcefully expelling Thunderbugs and Dracophage Bugs from its body. The expelled Thunderbugs are highly unstable and will explode at the slightest touch.',
       'Secrets of Floating': 'Although wingless, Yama Tsukami can still float via internal gases. It ingests vast amounts of soil and rotted carrion, which in turn release gases that allow it to float for long periods of time.',
     },
+    stats: {
+      ailmentResistance: {
+        poison: -1,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: -1,
+        darkness: -2,
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
@@ -5988,6 +7004,17 @@
     rank: 7, // for sorting
     flavor: {
       DEFAULT: 'A monster feared in Sheparden as "a force of nature." Rather than wandering about, this particular specimen has long resided in the Canalta Timberland. A portion of its body is crystallized.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: +2,
+        burn: +2,
+        paralysis: +2,
+        sleep: +2,
+        blastblight: +2,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
@@ -6028,6 +7055,15 @@
         thunder: 1,
         ice: -1,
         dragon: 0,
+      },
+      ailmentResistance: {
+        poison: +1,
+        burn: +1,
+        paralysis: -1,
+        sleep: +1,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -1,
       },
     },
     monster: {
@@ -6130,9 +7166,9 @@
         burn: +1,
         paralysis: -1,
         sleep: +1,
-        blastblight: null,
-        bleeding: null,
-        darkness: null,
+        blastblight: -2,
+        bleeding: +1,
+        darkness: -1,
       },
     },
     monster: {
@@ -6406,6 +7442,15 @@
         ice: -2,
         dragon: 1,
       },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: +1,
+        sleep: -1,
+        blastblight: -1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
     monster: {
       states: {
@@ -6468,6 +7513,15 @@
         thunder: -2,
         ice: -1,
         dragon: 2,
+      },
+      ailmentResistance: {
+        poison: -1,
+        burn: -1,
+        paralysis: -1,
+        sleep: -1,
+        blastblight: -2,
+        bleeding: -1,
+        darkness: -2,
       },
     },
     monster: {
