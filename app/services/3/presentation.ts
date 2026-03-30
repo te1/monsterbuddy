@@ -190,28 +190,28 @@ export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number
 
   switch (intensity) {
     case -2:
-      modifier = 'greatly increased';
+      modifier = 'Greatly increased';
       break;
 
     case -1:
-      modifier = 'increased';
+      modifier = 'Increased';
       break;
 
     case 0:
-      modifier = 'normal';
+      modifier = 'Normal';
       break;
 
     case 1:
-      modifier = 'reduced';
+      modifier = 'Reduced';
       break;
 
     case 2:
-      modifier = 'greatly reduced';
+      modifier = 'Greatly reduced';
       break;
 
     default:
       modifier = '?';
   }
 
-  return `Effect of ${formatAilment(ailment).toLowerCase()} ${modifier}`;
+  return `${modifier} chance to apply ${formatAilment(ailment).toLowerCase()}`;
 }
