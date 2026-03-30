@@ -6125,6 +6125,7 @@
   },
 
   // https://monsterhunterwiki.org/wiki/Slagtoth_(MHST3)
+  // comes in green and brown with (data is for green)
   {
     name: 'Slagtoth',
     genus: 'Herbivore',
@@ -6133,6 +6134,17 @@
       DEFAULT: 'Highly territorial herbivores that live near bodies of water. They store nutrients in their thick, sagging hides.',
       'Possibly a Good Source of Oil': 'This monster is characterized by a thick, droopy hide that protects it from potentially fatal injuries. As this skin also boasts water- and heat-resistant properties, it is valued as an armor material.',
       'For Protection': 'Like most herbivores, these creatures are not aggressive by nature. However, they are very territorial, and males are known to stand their ground even in the face of Flying Wyverns.',
+    },
+    stats: {
+      ailmentResistance: {
+        poison: -2,
+        burn: +1,
+        paralysis: -1,
+        sleep: -2,
+        blastblight: +1,
+        bleeding: -1,
+        darkness: -2,
+      },
     },
   },
 
