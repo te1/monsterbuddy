@@ -1,7 +1,8 @@
 <script lang="ts" setup>
   import S3HabitatSidebar from '~/components/s3/S3HabitatSidebar.vue';
-  import { areasBySlug, monstersByName, regionsBySlug } from '~/services/3/data';
-  import { getAreaSeo } from '~/services/3/seo';
+  import { monstersByName, regionsBySlug } from '~/services/3/data';
+  import { getRegionSeo } from '~/services/3/seo';
+  import { statsTypeToText } from '~/services/3/presentation';
   import useHabitatDisplays from '~/stores/3/habitatStore';
 
   definePageMeta({
@@ -12,9 +13,9 @@
     },
     middleware: [
       (to) => {
-        const area = areasBySlug.get(to.params.areaSlug as string);
-        if (area) {
-          to.meta.mobileHeaderTitle = area.name;
+        const region = regionsBySlug.get(to.params.regionSlug as string);
+        if (region) {
+          to.meta.mobileHeaderTitle = region.name;
         }
       },
     ],
@@ -22,46 +23,52 @@
 
   const route = useRoute();
   const region = regionsBySlug.get(route.params.regionSlug as string);
-  const area = areasBySlug.get(route.params.areaSlug as string);
 
-  if (!region || !area) {
+  if (!region) {
     throw createError({ status: 404, statusText: 'Page Not Found' });
   }
 
   const displays = useHabitatDisplays();
 
   const permanent = computed(() =>
-    area.permanent
+    region.monsters.permanent
+      .map((monsterName) => monstersByName.get(monsterName))
+      .filter((monster) => monster != null)
+  );
+
+  const world = computed(() =>
+    region.monsters.world
       .map((monsterName) => monstersByName.get(monsterName))
       .filter((monster) => monster != null)
   );
 
   const feral = computed(() =>
-    area.feral
+    region.monsters.feral
       .map((monsterName) => monstersByName.get(monsterName))
       .filter((monster) => monster != null)
   );
 
   const invasive = computed(() =>
-    area.invasive
+    region.monsters.invasive
       .map((monsterName) => monstersByName.get(monsterName))
       .filter((monster) => monster != null)
   );
 
   const endangered = computed(() =>
-    area.endangered
+    region.monsters.endangered
       .map((monsterName) => monstersByName.get(monsterName))
       .filter((monster) => monster != null)
   );
 
   const calamitous = computed(() =>
-    area.calamitous
+    region.monsters.calamitous
       .map((monsterName) => monstersByName.get(monsterName))
       .filter((monster) => monster != null)
   );
 
   const monsterGroups = computed(() => [
     { key: 'Permanent', monsters: permanent.value, eager: true },
+    { key: 'World', monsters: world.value, eager: true },
     { key: 'Feral', monsters: feral.value, eager: true },
     { key: 'Invasive', monsters: invasive.value, eager: true },
     { key: 'Endangered', monsters: endangered.value, eager: true },
@@ -71,6 +78,7 @@
   const monsterCount = computed(() => {
     const all = [
       ...permanent.value,
+      ...world.value,
       ...feral.value,
       ...invasive.value,
       ...endangered.value,
@@ -80,13 +88,13 @@
     return new Set(all.map((monster) => monster.slug)).size;
   });
 
-  useSeoMeta(getAreaSeo(area, region, monsterCount.value));
+  useSeoMeta(getRegionSeo(region, monsterCount.value));
   const headline = gameTypeToFullName('mhst3');
 
   const descriptionParts = computed(() => {
-    const part1 = `This area is part of `;
-    const part2 = region.name;
-    const part3 = ` and home to ${monsterCount.value} monsters`;
+    const part1 = `This `;
+    const part2 = 'region';
+    const part3 = ` is home to ${monsterCount.value} monsters`;
 
     return [part1, part2, part3];
   });
@@ -96,8 +104,7 @@
       itemListElement: [
         //
         { name: 'Habitats', item: '/3/habitats' },
-        { name: region.name, item: `/3/habitats/${region.slug}` },
-        { name: area.name },
+        { name: region.name },
       ],
     }),
   ]);
@@ -105,13 +112,9 @@
   defineOgImage(
     'Title',
     {
-      title: area.name,
+      title: region.name,
       description: headline,
-      lines: [
-        region.name,
-        `Area Element: ${formatElement(area.element)}`,
-        `${monsterCount.value} Monsters`,
-      ],
+      lines: [`${region.areas.length} Areas`, `${monsterCount.value} Monsters`],
       game: 'mhst3',
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
@@ -168,20 +171,57 @@
 
 <template>
   <div>
-    <AppPageHeader :title="area.name" :headline="headline">
+    <AppPageHeader :title="region.name" :headline="headline">
       <template #description>
         {{ descriptionParts[0] }}
-        <AppNuxtLink :to="`/3/habitats/${region.slug}`" :text="descriptionParts[1]" />
+        <AppNuxtLink to="/3/habitats" :text="descriptionParts[1]" />
         {{ descriptionParts[2] }}
       </template>
     </AppPageHeader>
 
-    <UPageBody class="flex flex-col gap-3">
-      <section class="flex items-center gap-1">
-        <ElementIcon class="-ml-1 size-8" :element="area.element" />
-        <ElementLabel class="min-w-32 font-medium" :element="area.element" />
+    <UPageBody class="@container flex flex-col gap-3">
+      <section class="grid gap-3 @xs:grid-cols-2 @lg:grid-cols-3 @xl:w-fit @xl:gap-12">
+        <div class="flex w-fit flex-col gap-1.5">
+          <h3 class="text-lg font-medium">Egg Powers</h3>
 
-        <h2 class="font-semibold">Area Element</h2>
+          <ul class="flex flex-col gap-1">
+            <li
+              v-for="(skill, rank) in region.powers.skills"
+              :key="skill"
+              class="flex items-center gap-1.5"
+            >
+              <span
+                class="flex size-7 items-center justify-center rounded bg-default text-sm font-semibold text-muted"
+                v-text="rank"
+              />
+              <span v-text="skill" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex w-fit flex-col">
+          <h3 class="text-lg font-medium">Stat Increases</h3>
+
+          <ul class="flex flex-col gap-1">
+            <li v-for="stat in region.powers.stats" :key="stat">
+              {{ statsTypeToText(stat) }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex w-fit flex-col gap-0.5">
+          <h3 class="text-lg font-medium">Areas</h3>
+
+          <ul class="flex flex-col gap-2">
+            <li v-for="area in region.areas" :key="area.name" class="flex items-center gap-1">
+              <ElementIcon :element="area.element" class="-ml-1 size-6" />
+
+              <AppNuxtLink :to="`/3/habitats/${region.slug}/${area.slug}`" prefetchOn="interaction">
+                {{ area.name }}
+              </AppNuxtLink>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <ul class="flex flex-col gap-3">

@@ -33,6 +33,19 @@ export function getMonsterSeo(monster: Monster) {
   };
 }
 
+export function getRegionSeo(region: Region, monsterCount: number) {
+  const title = `${region.name} In ${gameTypeToFullLabel('mhst3')}`;
+
+  let description = `${region.name} is a region that contains ${region.areas.length} areas.`;
+
+  description += ` It's home to ${monsterCount} different monsters.`;
+
+  return {
+    title,
+    description,
+  };
+}
+
 export function getAreaSeo(area: RegionArea, region: Region, monsterCount: number) {
   const title = `${area.name} In ${gameTypeToFullLabel('mhst3')}`;
 
