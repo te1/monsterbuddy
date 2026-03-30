@@ -10,6 +10,22 @@
 
 ## Notes
 
+- Stats "tendencies" convert to raw stats
+  - stamina -> startingStamina
+    - 4 -> 30
+    - 7 -> 50
+    - 10 -> 70
+  - recovery -> rawRecovery
+    - 4 -> 4
+    - 7 -> 8
+    - 10 -> 12
+  - speed = rawSpeed - 5
+  - crit -> rawCrit
+    - 1 -> 0%
+    - 6 -> 10%
+    - 8 -> 15%
+    - 10 -> 20%
+
 - Ailment resistance converts to hit chance
   - +2 -> 0%
   - +1 -> 30%
