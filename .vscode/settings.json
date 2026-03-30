@@ -13,6 +13,7 @@
     ".VSCodeCounter": true,
     "**/*.svg": true,
     "**/*.webp": true,
+    "**/*.avif": true,
     "**/*.png": true,
     "**/*.ico": true
   },
