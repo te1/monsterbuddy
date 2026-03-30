@@ -101,7 +101,30 @@
     }),
   ]);
 
-  // TODO defineOgImage
+  defineOgImage(
+    'Title',
+    {
+      title: area.name,
+      description: headline,
+      lines: [
+        region.name,
+        `Area Element: ${formatElement(area.element)}`,
+        `${monsterCount.value} Monsters`,
+      ],
+      game: 'mhst3',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
+
+  const mode = computed(() => {
+    switch (displays.current) {
+      case 'monster':
+        return 'combat';
+
+      default:
+        return 'location';
+    }
+  });
 
   const fabDisplayVisible = computed(() => displays.all.length > 1);
 
@@ -177,6 +200,7 @@
                 :key="monster.slug"
                 :monster="monster"
                 :display="displays.current"
+                :mode="mode"
                 :eager="group.eager"
               />
             </div>
