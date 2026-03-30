@@ -43,7 +43,7 @@
 </script>
 
 <template>
-  <div class="relative flex min-h-[122px] items-center">
+  <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
       <S3MonsterIcon :monster="monster" :eager="eager" noTooltip />
 
@@ -57,7 +57,7 @@
       />
     </div>
 
-    <div class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap">
+    <div class="z-10 mt-3 ml-3 w-full min-w-0 self-start text-sm whitespace-nowrap">
       <div class="text-base leading-snug font-semibold" v-text="monster.name" />
 
       <template v-if="showLocation || showRank">
@@ -108,7 +108,7 @@
     </div>
 
     <S3MonsterImage
-      class="size-full max-h-[122px] overflow-hidden object-contain p-2"
+      class="size-full overflow-hidden object-contain p-2"
       style="flex-basis: 250px"
       :monster="monster"
       :eager="eager"
