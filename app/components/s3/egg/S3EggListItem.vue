@@ -20,7 +20,7 @@
     <S3EggImage class="-mx-3 size-[120px] shrink-0" :monster="monster" :eager="eager" noTooltip />
 
     <S3MonstieListItemContent
-      class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap"
+      class="z-10 mt-3 ml-3 w-full min-w-0 self-start text-sm whitespace-nowrap"
       :monster="monster"
       :mode="mode"
     />
