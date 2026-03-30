@@ -4,9 +4,9 @@
 // https://monsterhunterwiki.org/wiki/Invasive_Monsters
 
 [
-  /*
   // https://monsterhunterwiki.org/wiki/Aenshin_(MHST3)
   {
+    hidden: true,
     name: 'Aenshin',
     genus: 'Elder Dragon',
     flavor: {
@@ -15,7 +15,6 @@
       'Catalyst of Devastation': "While this monster preyed on the Sacrosanctum's enemies and helped it prosper, it also sought to eliminate the battle-bound monsters used in the Rift War, leading to the Sacrosanctum's destruction.",
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Ajarakan_(MHST3)
   {
@@ -747,9 +746,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Barrel_Felyne_(MHST3)
   {
+    hidden: true,
     name: 'Barrel Felyne',
     genus: 'Lynian',
     flavor: {
@@ -760,6 +759,7 @@
 
   // https://monsterhunterwiki.org/wiki/Great_Barrel_Felyne_(MHST3)
   {
+    hidden: true,
     name: 'Great Barrel Felyne',
     genus: 'Lynian',
     flavor: {
@@ -767,7 +767,6 @@
       'Valuable Experience': 'Some say those who help a Great Barrel Felyne will attain profound growth. Only those who manage to destroy the sturdy barrel before the Felyne flees know the truth of such claims.',
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Barroth_(MHST3)
   {
@@ -1333,9 +1332,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Cephalos_(MHST3)
   {
+    hidden: true,
     name: 'Cephalos',
     genus: 'Piscine Wyvern',
     flavor: {
@@ -1344,7 +1343,6 @@
       'Well-Developed Hearing': 'With its highly developed sense of hearing, this monster navigates by sound. It rarely surfaces except to hunt, but loud noises can startle it out of the ground.',
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Chatacabra_(MHST3)
   {
@@ -2296,9 +2294,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Great_Dracophage_Bug_(MHST3)
   {
+    hidden: true,
     name: 'Great Dracophage Bug',
     genus: 'Neopteron',
     flavor: {
@@ -2310,6 +2308,7 @@
 
   // https://monsterhunterwiki.org/wiki/Great_Thunderbug_(MHST3)
   {
+    hidden: true,
     name: 'Great Thunderbug',
     genus: 'Neopteron',
     flavor: {
@@ -2318,7 +2317,6 @@
       'Fearsome Electric Discharge': 'These aggressive insectoids charge at approaching foes and discharge all their electricity at once, immobilizing anything they hit. Hunters encountering them soon find themselves on the ground.',
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Izuchi_(MHST3)
   {
@@ -2954,9 +2952,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Exotic_Legiana_(MHST3)
   {
+    hidden: true,
     name: 'Exotic Legiana',
     genus: 'Flying Wyvern',
     tags: ['exotic'],
@@ -2967,7 +2965,6 @@
       'Truly Fascinating': "Used a Monstie's breath while investigating the Exotic Legiana, but it is still unclear what methods the note writer used to find the Legiana.",
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Lunagaron_(MHST3)
   {
@@ -3023,7 +3020,13 @@
     },
   },
 
-  // TODO Bound Lunagaron?
+  // https://monsterhunterwiki.org/wiki/Bound_Lunagaron_(MHST3)
+  {
+    hidden: true,
+    name: 'Bound Lunagaron',
+    genus: 'Fanged Wyvern',
+    rank: 5, // for sorting
+  },
 
   // https://monsterhunterwiki.org/wiki/Magnamalo_(MHST3)
   {
@@ -3753,9 +3756,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Exotic_Nibelsnarf_(MHST3)
   {
+    hidden: true,
     name: 'Exotic Nibelsnarf',
     genus: 'Leviathan',
     tags: ['exotic'],
@@ -3766,7 +3769,6 @@
       'Audiogenic Reactions': 'The Exotic Nibelsnarf resides underground and attacks prey detected by sound. A necklace was left behind at the scene of the hunt. Some brave adventurer is surely responsible for these notes.',
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Odogaron_(MHST3)
   {
@@ -4486,20 +4488,19 @@
     },
   },
 
-  /*
-  // https://monsterhunterwiki.org/wiki/Honed_Azure_Rathalos
-  // TODO is this real? Bound Azure Rathalos instead?
+  // https://monsterhunterwiki.org/wiki/Bound_Azure_Rathalos_(MHST3)
   {
-    name: 'Honed Azure Rathalos',
+    hidden: true,
+    name: 'Bound Azure Rathalos',
     genus: 'Flying Wyvern',
     related: [
-      { type: 'honedOf', monster: 'Rathalos' },
+      { type: 'boundOf', monster: 'Rathalos' },
       { type: 'subspecies', monster: 'Azure Rathalos' },
       { type: 'deviant', monster: 'Dreadking Rathalos' },
       // { type: 'story', monster: 'Skyscale Ratha' },
     ],
+    rank: 6, // for sorting
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Dreadking_Rathalos_(MHST3)
   {
@@ -4560,9 +4561,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Skyscale_Ratha
   {
+    hidden: true,
     name: 'Skyscale Ratha',
     genus: 'Flying Wyvern',
     rank: 4,
@@ -4606,15 +4607,16 @@
 
   // https://monsterhunterwiki.org/wiki/Ratha_V
   {
+    hidden: true,
     name: 'Ratha V',
     genus: 'Flying Wyvern',
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: "A Skyscale Rathalos born ten years ago from egg quartz discovered in Blightstone Woods. As twins were prophesied to bring disaster, it was sentenced to death, but it fled Azuria with Amara's help.",
       'Battle-Bound': 'Battle-bound—or "battle-honed"—in Vermeil, this monster has been trained so that highly capable Riders such as Clarissa can ride it even without forming a bond.',
       'On a Journey': "This monster crossed the Northern Meridian ten years ago with Amara and met Kris in an abandoned village. Along with Kris, it remained in Vermeil's care afterward and eventually became battle-bound.",
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Rathian_(MHST3)
   {
@@ -5147,19 +5149,19 @@
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Seregios_(MHST3)
-  /*
   {
+    hidden: true,
     name: 'Exotic Seregios',
     genus: 'Flying Wyvern',
     tags: ['exotic'],
     related: [{ type: 'exoticOf', monster: 'Seregios' }],
+    rank: 6, // for sorting
     flavor: {
       DEFAULT: 'Surrounded by sheer rocks, the only path forward led to a giant tree. What awaited me there was a cunning and deadly monster that knew how to trap its prey.',
       "Canalta's Picky Eater": 'This species seems rather picky in its choice of prey as it only targets certain monsters. As expected, it appeared when I entered its territory accompanied by the monster it likes to snack on.',
       'Clever Traps': 'The Exotic Seregios places beehives throughout its territory to lure in the Arzuros it preys upon. The adventurer who noticed such traps must possess a keen eye and sharp wit.',
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Ceanataur_(MHST3)
   {
@@ -5934,18 +5936,20 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Exotic_Velocidrome_(MHST3)
   {
+    hidden: true,
     name: 'Exotic Velocidrome',
     genus: 'Bird Wyvern',
+    tags: ['exotic'],
+    related: [{ type: 'exoticOf', monster: 'Velocidrome' }],
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'This agile and elusive monster combs through areas for bugs and small prey. It may have developed this inefficient feeding behavior as a means to avoid competition with others of its species.',
       'Catch Me If You Can': 'It focuses so much on hunting small game that it ignores its surroundings. Even so, it is extremely hard to catch. Start your observation from the egg quartz overlooking the castle.',
       'Survival Strategy': 'As the note said, the Exotic Velocidrome has novel hunting methods. Its survival strategies lead to interesting behavioral differences. Whoever wrote the note deserves praise for catching this monster.',
     },
   },
-  */
 
   // https://monsterhunterwiki.org/wiki/Wind_Serpent_Ibushi
   {
@@ -6544,9 +6548,9 @@
     },
   },
 
-  /*
   // https://monsterhunterwiki.org/wiki/Great_Poogie_(MHST3)
   {
+    hidden: true,
     name: 'Great Poogie',
     genus: '???',
     rank: 7,
@@ -6587,5 +6591,4 @@
       svgEggColors: ['#323232', '#9e6efd'],
     },
   },
-  */
 ]

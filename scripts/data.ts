@@ -314,7 +314,15 @@ function getS2MonstieDefenseStats(monster: Record<string, unknown>) {
 
 function transformS3Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
-  for (const monster of monsters) {
+  for (let index = 0; index < monsters.length; index++) {
+    const monster = monsters[index]!;
+
+    if (monster.hidden) {
+      monsters.splice(index, 1);
+      index--;
+      continue;
+    }
+
     monster.slug = makeSlug(monster.name as string);
 
     monster.tags ??= [];
