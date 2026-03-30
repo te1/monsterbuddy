@@ -1,5 +1,5 @@
 import type { MonsterLocationType } from './data';
-import type { AilmentType, Monster, MonsterTag, RidingActionType } from './types';
+import type { AilmentType, Monster, MonsterTag, RidingActionType, StatsType } from './types';
 
 export function formatMonsterInfoAll(monster: Monster) {
   return monster.tags.map(formatMonsterTag).join(', ');
@@ -214,4 +214,32 @@ export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number
   }
 
   return `${modifier} chance to apply ${formatAilment(ailment).toLowerCase()}`;
+}
+
+export function statsTypeToText(type: StatsType) {
+  switch (type) {
+    case 'hp':
+      return 'HP';
+
+    case 'attack':
+      return 'Attack';
+
+    case 'speed':
+      return 'Speed';
+
+    case 'defense':
+      return 'Defense';
+
+    case 'crit':
+      return 'Crit';
+
+    case 'recovery':
+      return 'Recovery';
+
+    case 'stamina':
+      return 'Stamina';
+
+    default:
+      return '?';
+  }
 }
