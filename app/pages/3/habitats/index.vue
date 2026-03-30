@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { regions } from '~/services/3/data';
+  import { monstersByName, regions } from '~/services/3/data';
 
   const headline = gameTypeToFullName('mhst3');
 
@@ -41,7 +41,7 @@
 
               <div class="flex items-center gap-1">
                 <span v-for="monsterName in area.permanent" :key="monsterName">
-                  <S3MonsterIcon :monster="monsterName" class="" />
+                  <S3MonsterIcon :monster="monstersByName.get(monsterName)!" class="" />
                 </span>
                 <span>Permanent</span>
               </div>
