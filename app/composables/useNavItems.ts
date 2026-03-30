@@ -122,13 +122,12 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
     {
       label: 'More',
       children: [
-        // TODO MHST3
-        // {
-        //   label: 'Areas',
-        //   description: 'Habitat Restoration',
-        //   to: '/3/areas',
-        //   active: isActive('/3/areas'),
-        // },
+        {
+          label: 'Habitat Restoration',
+          description: 'Regions & Areas',
+          to: '/3/habitats',
+          active: isActive('/3/habitats'),
+        },
         {
           label: 'Riding Actions',
           to: '/3/riding-actions',

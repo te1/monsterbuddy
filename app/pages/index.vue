@@ -65,7 +65,7 @@
         //
         'Eggs, Monsters',
         'Attack Patterns',
-        // 'Habitat Restoration',
+        'Habitat Restoration',
         // 'Genes, Skills',
       ],
     },

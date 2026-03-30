@@ -77,6 +77,11 @@
           </ProseLi>
 
           <ProseLi>
+            <AppNuxtLink to="/3/habitats" text="Habitat restoration overview" />
+            with permanent, invasive, endangered, feral and calamitous monsters
+          </ProseLi>
+
+          <ProseLi>
             <AppNuxtLink to="/3/riding-actions" text="Riding action list" />
             and which monsties will learn them
           </ProseLi>
