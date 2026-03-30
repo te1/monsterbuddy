@@ -8,6 +8,7 @@
         'Chatacabra',
         'Gypceros',
         'Purple Gypceros',
+        'Namielle',
         'Nerscylla',
         'Paolumu',
         'Plesioth',
@@ -324,7 +325,11 @@
       calamitous: ['Velkhana', 'Malzeno'], // no Malzeno?
     },
     powers: {
-      skills: {},
+      skills: {
+        S: 'Muster Forces',
+        A: 'Perseverance',
+        B: 'EX Resilience',
+      },
       stats: ['attack', 'recovery'],
     },
     areas: [
