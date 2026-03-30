@@ -12,6 +12,11 @@ export { monsters, regions, sortedRidingActions };
 export const monstersByName = keyBy(monsters, 'name');
 export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
+export const regionsBySlug = keyBy(regions, 'slug');
+export const areasBySlug = keyBy(
+  regions.flatMap((region) => region.areas),
+  'slug'
+);
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
 export const allElements: ElementType[] = [
   'none',
