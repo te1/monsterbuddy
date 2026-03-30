@@ -58,7 +58,7 @@
 
 <template>
   <section
-    v-if="hasCombatStates || hasElementalResistances"
+    v-if="hasCombatStates || hasElementalResistances || hasAilmentResistances"
     class="@container relative flex flex-col gap-3"
   >
     <div v-if="hasCombatStates">
