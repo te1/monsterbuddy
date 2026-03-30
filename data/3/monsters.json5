@@ -5925,6 +5925,7 @@
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Velocidrome_(MHST3)
+  // comes in blue and red with (data is for blue)
   {
     name: 'Feral Velocidrome',
     genus: 'Bird Wyvern',
