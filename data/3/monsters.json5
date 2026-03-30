@@ -6012,7 +6012,9 @@
         defense: 5,
         crit: 1,
         recovery: 7,
+        rawRecovery: 8,
         stamina: 7,
+        startingStamina: 50,
       },
       elementalResistance: {
         none: 0,
