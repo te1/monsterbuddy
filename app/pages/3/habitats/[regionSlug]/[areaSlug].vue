@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import S3HabitatSidebar from '~/components/s3/S3HabitatSidebar.vue';
   import { areasBySlug, monstersByName, regionsBySlug } from '~/services/3/data';
+  import { getAreaSeo } from '~/services/3/seo';
   import useHabitatDisplays from '~/stores/3/habitatStore';
 
   definePageMeta({
@@ -79,7 +80,7 @@
     return new Set(all.map((monster) => monster.slug)).size;
   });
 
-  // TODO useSeoMeta
+  useSeoMeta(getAreaSeo(area, region, monsterCount.value));
   const headline = gameTypeToFullName('mhst3');
 
   const descriptionParts = computed(() => {
