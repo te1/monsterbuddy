@@ -49,10 +49,12 @@ export function getRegionSeo(region: Region, monsterCount: number) {
 export function getAreaSeo(area: RegionArea, region: Region, monsterCount: number) {
   const title = `${area.name} In ${gameTypeToFullLabel('mhst3')}`;
 
-  let description = `${area.name} is a`;
+  let description = `${area.name} is`;
 
-  if (area.element) {
-    description += ` ${formatElement(area.element)} element`;
+  if (area.element === 'none') {
+    description += ' an';
+  } else {
+    description += ` a ${formatElement(area.element)} element`;
   }
 
   description += ` area in ${region.name}.`;
