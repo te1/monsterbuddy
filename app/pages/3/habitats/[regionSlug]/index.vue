@@ -182,7 +182,7 @@
     <UPageBody class="@container flex flex-col gap-3">
       <section class="grid gap-3 @xs:grid-cols-2 @lg:grid-cols-3 @xl:w-fit @xl:gap-12">
         <div class="flex w-fit flex-col gap-1.5">
-          <h3 class="text-lg font-medium">Egg Powers</h3>
+          <h3 class="text-lg font-semibold">Egg Powers</h3>
 
           <ul class="flex flex-col gap-1">
             <li
@@ -200,7 +200,7 @@
         </div>
 
         <div class="flex w-fit flex-col">
-          <h3 class="text-lg font-medium">Stat Increases</h3>
+          <h3 class="text-lg font-semibold">Stat Increases</h3>
 
           <ul class="flex flex-col gap-1">
             <li v-for="stat in region.powers.stats" :key="stat">
@@ -210,7 +210,7 @@
         </div>
 
         <div class="flex w-fit flex-col gap-0.5">
-          <h3 class="text-lg font-medium">Areas</h3>
+          <h3 class="text-lg font-semibold">Areas</h3>
 
           <ul class="flex flex-col gap-2">
             <li v-for="area in region.areas" :key="area.name" class="flex items-center gap-1">
