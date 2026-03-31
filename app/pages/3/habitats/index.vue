@@ -4,13 +4,33 @@
 
   const headline = gameTypeToFullName('mhst3');
 
+  // TODO seo
   useSeoMeta({
     title: `Area List And Habitat Restoration Info For ${gameTypeToFullLabel('mhst3')}`,
     description:
       'Overview of areas and list of monsters you will find there including feral and invasive monsters and endangered species',
   });
 
-  // TODO seo, breadcrumps, og image
+  useSchemaOrg([
+    defineBreadcrumb({
+      itemListElement: [
+        //
+        { name: gameTypeToShortLabel('mhst3'), item: '/3' },
+        { name: 'Habitat Restoration' },
+      ],
+    }),
+  ]);
+
+  defineOgImage(
+    'Title',
+    {
+      title: 'Habitat Restoration',
+      description: headline,
+      lines: ['Regions & Areas', 'Invasive Monsters', 'Endangered Species'],
+      game: 'mhst3',
+    },
+    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
+  );
 
   function getInvasive(region: Region) {
     return region.monsters.invasive
