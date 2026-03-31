@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import S3HabitatSidebar from '~/components/s3/S3HabitatSidebar.vue';
-  import { areasBySlug, monstersByName, regionsBySlug } from '~/services/3/data';
+  import { getAreaBySlug, monstersByName, regionsBySlug } from '~/services/3/data';
   import { getAreaSeo } from '~/services/3/seo';
   import useHabitatDisplays from '~/stores/3/habitatStore';
 
@@ -12,7 +12,7 @@
     },
     middleware: [
       (to) => {
-        const area = areasBySlug.get(to.params.areaSlug as string);
+        const area = getAreaBySlug(to.params.regionSlug as string, to.params.areaSlug as string);
         if (area) {
           to.meta.mobileHeaderTitle = area.name;
         }
@@ -22,7 +22,7 @@
 
   const route = useRoute();
   const region = regionsBySlug.get(route.params.regionSlug as string);
-  const area = areasBySlug.get(route.params.areaSlug as string);
+  const area = getAreaBySlug(route.params.regionSlug as string, route.params.areaSlug as string);
 
   if (!region || !area) {
     throw createError({ status: 404, statusText: 'Page Not Found' });
