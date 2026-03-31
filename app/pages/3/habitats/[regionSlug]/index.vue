@@ -68,7 +68,7 @@
 
   const monsterGroups = computed(() => [
     { key: 'Permanent Habitat', monsters: permanent.value, eager: true },
-    { key: 'World', monsters: world.value, eager: true },
+    { key: 'World Spawn', monsters: world.value, eager: true },
     { key: 'Feral', monsters: feral.value, eager: true },
     { key: 'Invasive', monsters: invasive.value, eager: true },
     { key: 'Endangered', monsters: endangered.value, eager: true },
