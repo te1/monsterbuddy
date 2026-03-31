@@ -17,7 +17,9 @@
 
 <template>
   <div class="relative flex h-[122px] items-center">
-    <S3EggImage class="-mx-3 size-[120px] shrink-0" :monster="monster" :eager="eager" noTooltip />
+    <div class="-mx-3 size-[120px] shrink-0">
+      <S3EggImage class="size-[120px]" :monster="monster" :eager="eager" noTooltip />
+    </div>
 
     <S3MonstieListItemContent
       class="z-10 mt-3 ml-3 w-full min-w-0 self-start text-sm whitespace-nowrap"

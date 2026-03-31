@@ -19,7 +19,9 @@
 
 <template>
   <div class="relative flex h-[122px] items-center">
-    <S2EggImage class="-mx-3 size-[120px] shrink-0" :monster="monster" :eager="eager" noTooltip />
+    <div class="-mx-3 size-[120px] shrink-0">
+      <S2EggImage class="size-[120px]" :monster="monster" :eager="eager" noTooltip />
+    </div>
 
     <S2MonstieListItemContent
       class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap"

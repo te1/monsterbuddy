@@ -25,8 +25,10 @@
       prefetchOn="interaction"
       class="flex max-w-max items-center gap-3 hover:text-default"
     >
-      <S2EggImage v-if="showEgg" :monster="monster" noTooltip class="hidden size-9 xl:block" />
-      <S2MonsterIcon v-else :monster="monster" noTooltip class="hidden size-9 xl:block" />
+      <div class="hidden size-9 xl:block">
+        <S2EggImage v-if="showEgg" :monster="monster" noTooltip class="size-9" />
+        <S2MonsterIcon v-else :monster="monster" noTooltip class="size-9" />
+      </div>
       <div class="truncate" v-text="monster.name" />
     </NuxtLink>
 
