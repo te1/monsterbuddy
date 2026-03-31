@@ -18,23 +18,14 @@
     return result;
   });
 
-  const hasLink = computed(() => false); // TODO link to region/area?
-  // const hasLink = computed(() => ['coopQuest', 'eldersLair'].includes(props.location.type));
+  const hasLink = true; // always?
 
   const target = computed(() => {
-    switch (props.location.type) {
-      // case 'coopQuest':
-      //   if (coopQuest.value) {
-      //     return `/2/coop/${coopQuest.value.slug}`;
-      //   }
-      //   return '';
-
-      //   case 'eldersLair':
-      //     return `/2/elders-lair?floor=${props.location.main.toLowerCase()}`;
-
-      default:
-        return '';
+    if (props.location.area != null) {
+      return `/3/habitats/${makeSlug(props.location.region)}/${makeSlug(props.location.area)}`;
     }
+
+    return `/3/habitats/${makeSlug(props.location.region)}`;
   });
 </script>
 
