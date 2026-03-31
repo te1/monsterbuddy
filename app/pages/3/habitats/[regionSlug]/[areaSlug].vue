@@ -62,10 +62,10 @@
 
   const monsterGroups = computed(() => [
     { key: 'Permanent Habitat', monsters: permanent.value, eager: true },
-    { key: 'Feral', monsters: feral.value, eager: true },
-    { key: 'Invasive', monsters: invasive.value, eager: true },
-    { key: 'Endangered', monsters: endangered.value, eager: true },
-    { key: 'Calamitous', monsters: calamitous.value, eager: true },
+    { key: 'Feral Monster', monsters: feral.value, eager: true },
+    { key: 'Invasive Monster', monsters: invasive.value, eager: true },
+    { key: 'Endangered Species', monsters: endangered.value, eager: true },
+    { key: 'Calamitous Elder Dragon', monsters: calamitous.value, eager: true },
   ]);
 
   const monsterCount = computed(() => {
