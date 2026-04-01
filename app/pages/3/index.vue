@@ -19,6 +19,13 @@
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
+
+  const versions = [
+    {
+      date: '2026-04-02',
+      changes: ['New pages for habitat restoration, regions and areas'],
+    },
+  ];
 </script>
 
 <template>
@@ -55,6 +62,23 @@
           combat easier, information on which monsters can become monsties, etc. If you don't want
           that information just yet proceed at your own discretion.
         </ProseP>
+      </section>
+
+      <section v-if="versions.length">
+        <ProseH3>Recent Changes</ProseH3>
+
+        <ProseUl>
+          <ProseLi v-for="version in versions" :key="version.date">
+            <div class="flex flex-col">
+              <time
+                :datetime="version.date"
+                class="text-sm text-muted lg:min-w-34"
+                v-text="formatDate(version.date)"
+              />
+              <div v-for="change in version.changes" :key="change" v-text="change" />
+            </div>
+          </ProseLi>
+        </ProseUl>
       </section>
 
       <section>
