@@ -23,6 +23,7 @@
         'Brachydios',
         'Espinas',
         'Magnamalo',
+        // 'Exotic Velocidrome',
         'Aptonoth',
         'Bnahabra',
         'Kelbi',
@@ -121,10 +122,12 @@
       world: [
         'Deviljho',
         'Tobi-Kadachi',
-        'Yama Tsukami', // ???
         'Blango',
         'Bnahabra',
         'Gargwa',
+        'Izuchi',
+        'Kelbi',
+        'Moofah',
         'Slagtoth',
       ],
       feral: [
@@ -136,7 +139,7 @@
         'Feral Great Izuchi',
         'Feral Aknosom',
         'Feral Velocidrome', // TODO not here?
-        'Feral Yama Tsukami', // TODO not here?
+        'Feral Yama Tsukami',
       ],
       invasive: ['Invasive Arzuros', 'Invasive Shogun Ceanataur', 'Invasive Nerscylla'],
       endangered: ['Canyne', 'Mizutsune', 'Nargacuga'],
@@ -226,17 +229,23 @@
       world: [
         'Anjanath', // ???
         'Chatacabra',
+        // 'Exotic Legiana',
+        'Pukei-Pukei',
+        'Seregios',
+        // 'Cephalos',
         'Nibelsnarf',
         'Bnahabra',
+        'Ceanataur',
         'Rachnoid',
         'Remobra',
+        'Slagtoth',
       ],
       feral: [
         'Feral Ajarakan',
         'Feral Barroth',
         'Feral Gravios',
         'Feral Glavenus',
-        'Feral Rakna-Kadaki', // TODO not here?
+        'Feral Rakna-Kadaki',
       ],
       invasive: ['Invasive Odogaron', 'Invasive Diablos'],
       endangered: ['Zinogre', 'Tigrex'],
@@ -318,7 +327,18 @@
         // 'Shogun Ceanataur', // TODO is this real?
         'Velkhana',
       ],
-      world: ['Seregios', 'Somacanth', 'Aurora Somnacanth', 'Blango', 'Izuchi', 'Remobra'],
+      world: [
+        'Great Izuchi',
+        'Khezu',
+        'Seregios',
+        'Somacanth',
+        'Aurora Somnacanth',
+        // 'Exotic Nibelsnarf',
+        'Blango',
+        // 'Great Dracophage Bug',
+        'Izuchi',
+        'Remobra',
+      ],
       feral: ['Feral Blangonga', 'Feral Legiana', 'Feral Magnamalo'],
       invasive: ['Invasive Khezu'],
       endangered: ['Barioth'],
