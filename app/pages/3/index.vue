@@ -78,7 +78,8 @@
 
           <ProseLi>
             <AppNuxtLink to="/3/habitats" text="Habitat restoration overview" />
-            with permanent, invasive, endangered, feral and calamitous monsters
+            with permanent, invasive, endangered, feral and calamitous monsters across all regions
+            and areas
           </ProseLi>
 
           <ProseLi>
