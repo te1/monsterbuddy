@@ -53,8 +53,10 @@ export function getAreaSeo(area: RegionArea, region: Region, monsterCount: numbe
 
   if (area.element === 'none') {
     description += ' an';
+  } else if (area.element === 'ice') {
+    description += ` an ${formatElement(area.element).toLowerCase()} element`;
   } else {
-    description += ` a ${formatElement(area.element)} element`;
+    description += ` a ${formatElement(area.element).toLowerCase()} element`;
   }
 
   description += ` area in ${region.name}.`;
