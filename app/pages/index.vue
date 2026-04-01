@@ -65,7 +65,7 @@
         //
         'Eggs, Monsters',
         'Attack Patterns',
-        // 'Habitat Restoration',
+        'Habitat Restoration',
         // 'Genes, Skills',
       ],
     },
@@ -73,7 +73,7 @@
 
   const features = [
     {
-      title: 'Monsters',
+      title: 'Monsterpedia',
       icon: 'ph:list-numbers',
       lines: ['Attack Patterns', 'Elemental Weaknesses', 'Weapon Effectiveness'],
     },

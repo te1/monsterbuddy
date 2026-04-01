@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/a11y',
+    // '@nuxt/a11y',
     // '@nuxt/hints',
     '@nuxt/image',
     '@nuxt/ui',
@@ -121,9 +121,11 @@ export default defineNuxtConfig({
     config: {},
   },
 
+  /*
   a11y: {
     logIssues: false,
   },
+  */
 
   icon: {
     clientBundle: {

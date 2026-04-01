@@ -17,7 +17,9 @@
 
 <template>
   <section class="relative flex items-center justify-center">
-    <S3EggImage :monster="monster" />
+    <div class="size-[120px] shrink-0">
+      <S3EggImage :monster="monster" />
+    </div>
 
     <div class="absolute top-1 right-1">
       <ClientOnly>

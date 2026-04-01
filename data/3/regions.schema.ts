@@ -16,6 +16,7 @@ export type StatsType = z.infer<typeof StatsTypeSchema>;
 
 const RegionAreaSchema = z.object({
   name: z.string(),
+  slug: z.string(),
   element: ElementTypeSchema,
   permanent: z.array(z.string()),
   feral: z.array(z.string()),

@@ -6143,6 +6143,7 @@
       DEFAULT: 'The vibrant pink scales of this Rathian subspecies belie a terrible ferocity. It deftly utilizes its toxic tail to corner prey, then closes in for the kill.',
       'Solid Tail': "The tail differs in composition from that of a regular Rathian's and is noticeably harder. Some hypothesize that this adaptation emerged to help it survive ferocious encounters with its enemies.",
       'Types of Tail Attacks': 'This subspecies uses its poisonous tail in a variety of ways with lethal effect. For instance, it can swing its tail during an aerial barrel roll to clear all threats in the vicinity.',
+      MUTATION0: "Rathian's Ecosystem Rank is B",
     },
     element: 'fire',
     stats: {

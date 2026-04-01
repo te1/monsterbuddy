@@ -40,7 +40,7 @@
 </script>
 
 <template>
-  <div class="min-w-0">
+  <div>
     <div class="text-base leading-snug font-semibold" v-text="monster.name" />
 
     <template v-if="showLocation || showRank">

@@ -19,7 +19,9 @@
 
 <template>
   <section class="relative flex items-start">
-    <S2EggImage :monster="monster" class="-ml-3" />
+    <div class="-ml-3 size-[120px] shrink-0">
+      <S2EggImage :monster="monster" />
+    </div>
 
     <div>
       <h3 class="text-lg font-semibold">Retreat</h3>

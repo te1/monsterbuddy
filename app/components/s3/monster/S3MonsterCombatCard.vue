@@ -120,7 +120,7 @@
                 <ElementIcon class="size-6" :element="element" noTooltip />
                 <UIcon
                   :name="intensityToIcon(value)"
-                  class="text-xl"
+                  class="h-5 text-xl"
                   :class="intensityToTextColor(value)"
                 />
               </div>
@@ -135,7 +135,7 @@
                 <S3AilmentIcon class="-my-1 h-8 w-6 object-cover" :ailment="ailment" noTooltip />
                 <UIcon
                   :name="intensityToIcon(value)"
-                  class="text-xl"
+                  class="h-5 text-xl"
                   :class="intensityToTextColor(value)"
                 />
               </div>

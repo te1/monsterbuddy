@@ -58,7 +58,9 @@
 <template>
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <S2MonsterIcon :monster="monster" :eager="eager" noTooltip />
+      <div class="size-[60px]">
+        <S2MonsterIcon :monster="monster" :eager="eager" noTooltip />
+      </div>
 
       <img
         v-if="monster.hatchable"
@@ -106,8 +108,7 @@
     </div>
 
     <S2MonsterImage
-      class="size-full max-h-[122px] overflow-hidden object-contain p-2"
-      style="flex-basis: 250px"
+      class="size-full max-h-[122px] basis-[250px] overflow-hidden object-contain p-2"
       :monster="monster"
       :eager="eager"
       hideFallback

@@ -456,7 +456,16 @@ function transformS3Regions(data: unknown) {
 
     if (region.monsters) {
       const monsters = region.monsters as Record<string, unknown>;
+
       monsters.calamitous ??= [];
+    }
+
+    if (region.areas) {
+      const areas = region.areas as Record<string, unknown>[];
+
+      for (const area of areas) {
+        area.slug = makeSlug(area.name as string);
+      }
     }
   }
 }

@@ -148,3 +148,18 @@ export function parseSomeMarkdown(input: string): string {
 
   return result;
 }
+
+export function formatDate(date: string) {
+  const parsedDate = new Date(date);
+
+  if (Number.isNaN(parsedDate.getTime())) {
+    return date;
+  }
+
+  const dateFormatter = new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'long',
+    timeZone: 'UTC',
+  });
+
+  return dateFormatter.format(parsedDate);
+}

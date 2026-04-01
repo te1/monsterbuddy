@@ -20,7 +20,9 @@
 <template>
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <S2MonsterIcon :monster="monster" :eager="eager" noTooltip />
+      <div class="size-[60px]">
+        <S2MonsterIcon :monster="monster" :eager="eager" noTooltip />
+      </div>
 
       <div class="flex items-center gap-1">
         <AttackTypeIcon class="size-8" :type="monster?.monstie?.attackType" noTooltip />
@@ -36,8 +38,7 @@
     />
 
     <S2MonsterImage
-      class="size-full overflow-hidden object-contain p-2"
-      style="flex-basis: 250px"
+      class="size-full basis-[250px] overflow-hidden object-contain p-2"
       :monster="monster"
       :eager="eager"
       hideFallback

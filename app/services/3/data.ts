@@ -1,5 +1,5 @@
 import { intersection, uniq } from 'es-toolkit/array';
-import type { EggColor, Monster, Region, RidingAction } from './types';
+import type { EggColor, Monster, Region, RegionArea, RidingAction } from './types';
 import monsters_ from '~/assets/3/monsters.json';
 import regions_ from '~/assets/3/regions.json';
 import sortedRidingActions_ from '~/assets/3/ridingActions.json';
@@ -12,6 +12,7 @@ export { monsters, regions, sortedRidingActions };
 export const monstersByName = keyBy(monsters, 'name');
 export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
+export const regionsBySlug = keyBy(regions, 'slug');
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
 export const allElements: ElementType[] = [
   'none',
@@ -115,7 +116,9 @@ export type MonsterLocationType = 'permanent' | 'world';
 export type MonsterLocation = {
   type: MonsterLocationType;
   region: string;
+  regionSlug: string;
   area?: string;
+  areaSlug?: string;
 };
 
 export function getMonsterLocations(monster: Monster): MonsterLocation[] {
@@ -131,6 +134,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
       locations.push({
         type: 'world',
         region: region.name,
+        regionSlug: region.slug,
       });
     }
 
@@ -139,7 +143,9 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
         locations.push({
           type: 'permanent',
           region: region.name,
+          regionSlug: region.slug,
           area: area.name,
+          areaSlug: area.slug,
         });
       }
 
@@ -149,7 +155,9 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
         locations.push({
           type: 'world',
           region: region.name,
+          regionSlug: region.slug,
           area: area.name,
+          areaSlug: area.slug,
         });
       }
 
@@ -159,7 +167,9 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
         locations.push({
           type: 'world',
           region: region.name,
+          regionSlug: region.slug,
           area: area.name,
+          areaSlug: area.slug,
         });
       }
 
@@ -169,7 +179,9 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
         locations.push({
           type: 'world',
           region: region.name,
+          regionSlug: region.slug,
           area: area.name,
+          areaSlug: area.slug,
         });
       }
 
@@ -179,7 +191,9 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
         locations.push({
           type: 'world',
           region: region.name,
+          regionSlug: region.slug,
           area: area.name,
+          areaSlug: area.slug,
         });
       }
     }
@@ -190,6 +204,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
       locations.push({
         type: 'world',
         region: region.name,
+        regionSlug: region.slug,
       });
     }
 
@@ -199,6 +214,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
       locations.push({
         type: 'world',
         region: region.name,
+        regionSlug: region.slug,
       });
     }
 
@@ -208,6 +224,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
       locations.push({
         type: 'world',
         region: region.name,
+        regionSlug: region.slug,
       });
     }
 
@@ -217,9 +234,20 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
       locations.push({
         type: 'world',
         region: region.name,
+        regionSlug: region.slug,
       });
     }
   }
 
   return locations;
+}
+
+export function getAreaBySlug(regionSlug: string, areaSlug: string): RegionArea | undefined {
+  const region = regionsBySlug.get(regionSlug);
+
+  if (region != null) {
+    return region.areas.find((area) => area.slug === areaSlug);
+  }
+
+  return undefined;
 }

@@ -8,6 +8,7 @@
         'Chatacabra',
         'Gypceros',
         'Purple Gypceros',
+        'Namielle',
         'Nerscylla',
         'Paolumu',
         'Plesioth',
@@ -44,9 +45,9 @@
     },
     powers: {
       skills: {
-        S: 'Egg Power: Battle Thirst',
-        A: 'Egg Power: Hardiness',
-        B: 'Egg Power: Pwr Resilience',
+        S: 'Battle Thirst',
+        A: 'Hardiness',
+        B: 'Pwr Resilience',
       },
       stats: ['hp', 'attack'],
     },
@@ -143,9 +144,9 @@
     },
     powers: {
       skills: {
-        S: 'Egg Power: Unscathed',
-        A: 'Egg Power: High Morale',
-        B: 'Egg Power: Spd Resilience',
+        S: 'Unscathed',
+        A: 'High Morale',
+        B: 'Spd Resilience',
       },
       stats: ['recovery', 'attack'],
     },
@@ -180,7 +181,7 @@
       {
         name: 'Blessing Hill',
         element: 'none',
-        permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchiu', 'Arzuros'], // no Arzuros? no Purple Ludroth? no Great Izuchiu?
+        permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchi', 'Arzuros'], // no Arzuros? no Purple Ludroth? no Great Izuchiu?
         feral: ['Feral Tobi-Kadachi'],
         invasive: ['Invasive Nerscylla', 'Invasive Arzuros'],
         endangered: ['Canyne', 'Nargacuga'],
@@ -243,9 +244,9 @@
     },
     powers: {
       skills: {
-        S: 'Egg Power: Resonance',
-        A: 'Egg Power: Best Buds',
-        B: 'Egg Power: Tech Resilience',
+        S: 'Resonance',
+        A: 'Best Buds',
+        B: 'Tech Resilience',
       },
       stats: ['hp', 'defense'],
     },
@@ -324,7 +325,11 @@
       calamitous: ['Velkhana', 'Malzeno'], // no Malzeno?
     },
     powers: {
-      skills: {},
+      skills: {
+        S: 'Muster Forces',
+        A: 'Perseverance',
+        B: 'EX Resilience',
+      },
       stats: ['attack', 'recovery'],
     },
     areas: [

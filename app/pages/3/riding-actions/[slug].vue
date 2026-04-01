@@ -131,7 +131,7 @@
 
     <UPageBody class="-mt-3 lg:mt-0">
       <div class="flex items-center py-1">
-        <UIcon name="ph:dna" class="w-6 text-muted" />
+        <UIcon name="ph:hash" class="w-6 text-muted" />
 
         <div class="font-semibold">Learnt By</div>
       </div>
