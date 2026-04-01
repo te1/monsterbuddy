@@ -4,7 +4,7 @@
 
   const headline = gameTypeToFullName('mhst3');
 
-  // TODO seo and page description
+  // TODO seo
   useSeoMeta({
     title: `Area List And Habitat Restoration Info For ${gameTypeToFullLabel('mhst3')}`,
     description:
@@ -55,7 +55,7 @@
   <div>
     <AppPageHeader
       title="Habitat Restoration"
-      description="Overview of areas and list of monsters you will find there including feral and invasive monsters and endangered species"
+      description="All regions and areas with the monsters you can find there. Defeating invasive monsters unlocks endangered species which can lead to further mutations."
       :headline="headline"
     />
 
