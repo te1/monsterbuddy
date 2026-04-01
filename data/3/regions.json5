@@ -89,7 +89,7 @@
       {
         name: 'Blightstone Woods',
         element: 'none',
-        permanent: ['Purple Gypceros', 'Nerscylla', 'Chatacabra', 'Paolumu', 'Gypceros'], // Blue Yian Kut-Ku instead of Purple Gypceros?
+        permanent: ['Blue Yian Kut-Ku', 'Nerscylla', 'Chatacabra', 'Paolumu', 'Gypceros'],
         feral: ['Feral Brachydios'],
         invasive: [],
         endangered: [],
@@ -122,6 +122,9 @@
       world: [
         'Deviljho',
         'Tobi-Kadachi',
+        // 'Yama Tsukami', // ???
+        // 'Exotic Seregios',
+        // 'Great Thunderbug',
         'Blango',
         'Bnahabra',
         'Gargwa',
@@ -175,7 +178,7 @@
       {
         name: 'Howlinyowl Forest',
         element: 'fire',
-        permanent: ['Great Izuchi', 'Aknosom', 'Yian Garuga', 'Bishaten', 'Pukei-Pukei'], // no Aknosom?
+        permanent: ['Great Izuchi', 'Aknosom', 'Yian Garuga', 'Bishaten', 'Pukei-Pukei'],
         feral: ['Feral Bishaten'],
         invasive: [],
         endangered: [],
@@ -184,7 +187,7 @@
       {
         name: 'Blessing Hill',
         element: 'none',
-        permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchi', 'Arzuros'], // no Arzuros? no Purple Ludroth? no Great Izuchiu?
+        permanent: ['Bishaten', 'Canyne', 'Purple Ludroth', 'Great Izuchi', 'Arzuros'],
         feral: ['Feral Tobi-Kadachi'],
         invasive: ['Invasive Nerscylla', 'Invasive Arzuros'],
         endangered: ['Canyne', 'Nargacuga'],
@@ -193,7 +196,7 @@
       {
         name: 'Frozen Grotto',
         element: 'ice',
-        permanent: ['Somnacanth', 'Tetranadon', 'Red Khezu', 'Aurora Somnacanth', 'Khezu'], // no Tetranadon?
+        permanent: ['Somnacanth', 'Tetranadon', 'Red Khezu', 'Aurora Somnacanth', 'Khezu'],
         feral: ['Feral Tetranadon'],
         invasive: ['Invasive Shogun Ceanataur'],
         endangered: ['Mizutsune'],
