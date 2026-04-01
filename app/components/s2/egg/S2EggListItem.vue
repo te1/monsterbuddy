@@ -30,8 +30,7 @@
     />
 
     <S2MonsterImage
-      class="size-full overflow-hidden object-contain p-2"
-      style="flex-basis: 250px"
+      class="size-full basis-[250px] overflow-hidden object-contain p-2"
       :monster="monster"
       :eager="eager"
       noTooltip

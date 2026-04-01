@@ -106,8 +106,7 @@
     </div>
 
     <S2MonsterImage
-      class="size-full max-h-[122px] overflow-hidden object-contain p-2"
-      style="flex-basis: 250px"
+      class="size-full max-h-[122px] basis-[250px] overflow-hidden object-contain p-2"
       :monster="monster"
       :eager="eager"
       hideFallback
