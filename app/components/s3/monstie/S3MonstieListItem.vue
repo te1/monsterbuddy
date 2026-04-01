@@ -18,7 +18,9 @@
 <template>
   <div class="relative flex h-[122px] items-center">
     <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <S3MonsterIcon :monster="monster" :eager="eager" noTooltip />
+      <div class="size-[60px]">
+        <S3MonsterIcon :monster="monster" :eager="eager" noTooltip />
+      </div>
 
       <div class="flex items-center gap-1">
         <AttackTypeIcon class="size-8" :type="monster?.monstie?.attack ?? undefined" noTooltip />
