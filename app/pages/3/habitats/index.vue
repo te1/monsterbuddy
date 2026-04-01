@@ -4,7 +4,7 @@
 
   const headline = gameTypeToFullName('mhst3');
 
-  // TODO seo
+  // TODO seo and page description
   useSeoMeta({
     title: `Area List And Habitat Restoration Info For ${gameTypeToFullLabel('mhst3')}`,
     description:
@@ -70,9 +70,9 @@
             </AppNuxtLink>
           </h2>
 
-          <ul class="flex flex-col gap-6">
-            <li class="flex flex-col gap-3">
-              <div class="flex flex-col gap-1.5">
+          <ul class="@container flex flex-col gap-6">
+            <li class="grid gap-3 @md:grid-cols-2 @xl:w-fit @xl:gap-12">
+              <div class="flex w-fit min-w-87 flex-col gap-1.5">
                 <div>Invasive Monster</div>
 
                 <div class="flex items-center gap-3">
@@ -87,7 +87,7 @@
                 </div>
               </div>
 
-              <div class="flex flex-col gap-1.5">
+              <div class="flex w-fit flex-col gap-1.5">
                 <div>Endangered Species</div>
 
                 <div class="mt-1 flex items-center gap-3">
@@ -103,30 +103,32 @@
               </div>
             </li>
 
-            <li v-for="area in region.areas" :key="area.name">
-              <h3 class="flex items-center gap-1 text-lg font-semibold">
-                <AppNuxtLink
-                  :to="`/3/habitats/${region.slug}/${area.slug}`"
-                  prefetchOn="interaction"
-                >
-                  {{ area.name }}
-                </AppNuxtLink>
-                <ElementIcon :element="area.element" class="size-6" />
-              </h3>
+            <div class="grid gap-6 @3xl:grid-cols-2 @5xl:w-fit @5xl:gap-12">
+              <li v-for="area in region.areas" :key="area.name" class="w-fit">
+                <h3 class="flex items-center gap-1 text-lg font-semibold">
+                  <AppNuxtLink
+                    :to="`/3/habitats/${region.slug}/${area.slug}`"
+                    prefetchOn="interaction"
+                  >
+                    {{ area.name }}
+                  </AppNuxtLink>
+                  <ElementIcon :element="area.element" class="size-6" />
+                </h3>
 
-              <div class="mt-0.5">Permanent Habitat</div>
+                <div class="mt-0.5">Permanent Habitat</div>
 
-              <div class="mt-1.5 flex items-center gap-3">
-                <NuxtLink
-                  v-for="monster in getPermanent(area)"
-                  :key="monster.slug"
-                  :to="`/3/monsters/${monster.slug}`"
-                  prefetchOn="interaction"
-                >
-                  <S3MonsterIcon :monster="monster" class="" />
-                </NuxtLink>
-              </div>
-            </li>
+                <div class="mt-1.5 flex items-center gap-3">
+                  <NuxtLink
+                    v-for="monster in getPermanent(area)"
+                    :key="monster.slug"
+                    :to="`/3/monsters/${monster.slug}`"
+                    prefetchOn="interaction"
+                  >
+                    <S3MonsterIcon :monster="monster" class="" />
+                  </NuxtLink>
+                </div>
+              </li>
+            </div>
           </ul>
         </li>
       </ul>
