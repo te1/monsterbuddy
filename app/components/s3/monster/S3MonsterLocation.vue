@@ -22,10 +22,10 @@
 
   const target = computed(() => {
     if (props.location.area != null) {
-      return `/3/habitats/${makeSlug(props.location.region)}/${makeSlug(props.location.area)}`;
+      return `/3/habitats/${props.location.regionSlug}/${props.location.areaSlug}`;
     }
 
-    return `/3/habitats/${makeSlug(props.location.region)}`;
+    return `/3/habitats/${props.location.regionSlug}`;
   });
 </script>
 
