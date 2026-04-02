@@ -325,7 +325,7 @@
         </div>
       </div>
 
-      <ul v-if="showEggFinder" class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      <ul v-show="showEggFinder" class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         <li v-for="genus in genera" :key="genus">
           <S2EggGridItem
             :genus="genus"
@@ -335,7 +335,7 @@
         </li>
       </ul>
 
-      <ul v-if="!showEggFinder" class="flex flex-col gap-3">
+      <ul v-show="!showEggFinder" class="flex flex-col gap-3">
         <li v-for="group in monsterGroups" :key="group.key">
           <div
             v-if="eggFilter.isGrouped"
