@@ -195,7 +195,7 @@
             v-if="isGrouped"
             class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
-            <UIcon name="ph:map-pin-fill" class="w-6 text-dimmed" />
+            <UIcon name="ph:hash" class="w-6 text-dimmed" />
 
             <div class="font-semibold" v-text="group.key" />
           </div>
