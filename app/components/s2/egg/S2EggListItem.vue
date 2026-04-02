@@ -18,19 +18,19 @@
 </script>
 
 <template>
-  <div class="relative flex h-[122px] items-center">
+  <div class="@container relative flex h-[122px] items-center">
     <div class="-mx-3 size-[120px] shrink-0">
       <S2EggImage class="size-[120px]" :monster="monster" :eager="eager" noTooltip />
     </div>
 
     <S2MonstieListItemContent
-      class="mt-3 ml-3 w-full self-start text-sm whitespace-nowrap"
+      class="mx-3 mt-3 w-full self-start text-sm"
       :monster="monster"
       :mode="mode"
     />
 
     <S2MonsterImage
-      class="size-full basis-[250px] overflow-hidden object-contain p-2"
+      class="hidden h-[122px] w-[250px] overflow-hidden object-contain p-2 @md:block"
       :monster="monster"
       :eager="eager"
       noTooltip
