@@ -47,7 +47,7 @@
 <template>
   <NuxtLink :to="`/2/monsters/${monster.slug}`" prefetchOn="interaction">
     <S2EggListItem
-      v-if="showEgg"
+      v-show="showEgg"
       class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
       :monster="monster"
       :mode="smartMode"
@@ -56,7 +56,7 @@
     />
 
     <S2MonstieListItem
-      v-else-if="showMonstie"
+      v-show="showMonstie"
       class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
       :monster="monster"
       :mode="smartMode"
@@ -65,7 +65,7 @@
     />
 
     <S2MonsterListItem
-      v-else
+      v-show="!showEgg && !showMonstie"
       class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
       :monster="monster"
       :mode="smartMode"
