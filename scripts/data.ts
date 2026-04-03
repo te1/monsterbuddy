@@ -209,6 +209,7 @@ function getS1MonstieDefenseStats(monster: Record<string, unknown>) {
 // -- 2 ---------------------------------------------------
 function transformS2CatavanStands(data: unknown) {
   const catavanStands = data as { name: string; slug?: string }[];
+
   for (const catavanStand of catavanStands) {
     catavanStand.slug = makeSlug(catavanStand.name);
   }
@@ -216,6 +217,7 @@ function transformS2CatavanStands(data: unknown) {
 
 function transformS2CoopQuests(data: unknown) {
   const coopQuests = data as { name: string; slug?: string }[];
+
   for (const coopQuest of coopQuests) {
     coopQuest.slug = makeSlug(coopQuest.name);
   }
@@ -227,20 +229,14 @@ function transformS2Monsters(data: unknown) {
     monster.slug = makeSlug(monster.name as string);
 
     monster.habitat ??= 'Unknown Habitat';
-    monster.related ??= [];
-
-    const monsterData = monster.monster as Record<string, unknown>;
-    monsterData.attackPatterns ??= {};
-    monsterData.parts ??= {};
-    monsterData.elementalWeakness ??= null;
-
-    monster.hatchable ??= false;
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
+
       monstie.attackElement = getS2MonstieAttackElement(monster);
 
       const stats = monstie.stats as Record<string, unknown>;
+
       stats.bestAttack = getS2MonstieBestAttack(monster);
       stats.bestDefense = getS2MonstieBestDefense(monster);
       stats.worstDefense = getS2MonstieWorstDefense(monster);
