@@ -14,6 +14,7 @@ import { RidingActionSchema as S2RidingActionSchema } from '~~/data/2/ridingActi
 import { MonsterSchema as S3MonsterSchema } from '~~/data/3/monsters.schema';
 import { RegionSchema as S3RegionSchema } from '~~/data/3/regions.schema';
 import { RidingActionSchema as S3RidingActionSchema } from '~~/data/3/ridingActions.schema';
+import { GeneSchema as S3GeneSchema } from '~~/data/3/genes.schema';
 import { makeSlug } from '~~/app/utils/data';
 
 const generateEggSvgs = false;
@@ -58,6 +59,7 @@ function generate() {
       schema: S3RidingActionSchema.array(),
       transform: transformRidingActions,
     },
+    { file: '3/genes', schema: S3GeneSchema.array(), transform: transformS3Genes },
   ];
 
   for (const job of jobs) {
@@ -96,6 +98,7 @@ function generate() {
 
 function transformRidingActions(data: unknown) {
   const ridingActions = data as { name: string; slug?: string }[];
+
   for (const ridingAction of ridingActions) {
     ridingAction.slug = makeSlug(ridingAction.name);
   }
@@ -107,6 +110,7 @@ const s1AllElements = ['fire', 'water', 'thunder', 'ice', 'dragon']; // none is 
 
 function transformS1Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
+
   for (const monster of monsters) {
     monster.slug = makeSlug(monster.name as string);
 
@@ -116,6 +120,7 @@ function transformS1Monsters(data: unknown) {
     monster.monster ??= {};
 
     const monsterData = monster.monster as Record<string, unknown>;
+
     monsterData.tendency ??= null;
     monsterData.elementalAtk ??= [];
     monsterData.elementalResistance ??= [];
@@ -125,6 +130,7 @@ function transformS1Monsters(data: unknown) {
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
+
       monstie.tendency ??= null;
       monstie.attackElement = getS1MonstieAttackElement(monster);
       monstie.growth ??= null;
@@ -134,6 +140,7 @@ function transformS1Monsters(data: unknown) {
 
       if (monstie.stats) {
         const stats = monstie.stats as Record<string, unknown>;
+
         stats.bestAttack = getS1MonstieBestAttack(monster);
         stats.bestDefense = getS1MonstieBestDefense(monster);
         stats.worstDefense = getS1MonstieWorstDefense(monster);
@@ -222,6 +229,7 @@ function getS1MonstieDefenseStats(monster: Record<string, unknown>) {
 // -- 2 ---------------------------------------------------
 function transformS2CatavanStands(data: unknown) {
   const catavanStands = data as { name: string; slug?: string }[];
+
   for (const catavanStand of catavanStands) {
     catavanStand.slug = makeSlug(catavanStand.name);
   }
@@ -229,6 +237,7 @@ function transformS2CatavanStands(data: unknown) {
 
 function transformS2CoopQuests(data: unknown) {
   const coopQuests = data as { name: string; slug?: string }[];
+
   for (const coopQuest of coopQuests) {
     coopQuest.slug = makeSlug(coopQuest.name);
   }
@@ -236,6 +245,7 @@ function transformS2CoopQuests(data: unknown) {
 
 function transformS2Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
+
   for (const monster of monsters) {
     monster.slug = makeSlug(monster.name as string);
 
@@ -243,6 +253,7 @@ function transformS2Monsters(data: unknown) {
     monster.related ??= [];
 
     const monsterData = monster.monster as Record<string, unknown>;
+
     monsterData.attackPatterns ??= {};
     monsterData.parts ??= {};
     monsterData.elementalWeakness ??= null;
@@ -251,6 +262,7 @@ function transformS2Monsters(data: unknown) {
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
+
       monstie.attackElement = getS2MonstieAttackElement(monster);
 
       const stats = monstie.stats as Record<string, unknown>;
@@ -314,6 +326,7 @@ function getS2MonstieDefenseStats(monster: Record<string, unknown>) {
 
 function transformS3Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
+
   for (let index = 0; index < monsters.length; index++) {
     const monster = monsters[index]!;
 
@@ -337,6 +350,7 @@ function transformS3Monsters(data: unknown) {
 
       if (stats.base) {
         const base = stats.base as Record<string, unknown>;
+
         base.hp ??= null;
         base.defense ??= null;
         base.attack ??= null;
@@ -355,6 +369,7 @@ function transformS3Monsters(data: unknown) {
 
       if (stats.elementalResistance) {
         const elementalResistance = stats.elementalResistance as Record<string, unknown>;
+
         elementalResistance.none ??= null;
         elementalResistance.fire ??= null;
         elementalResistance.water ??= null;
@@ -365,6 +380,7 @@ function transformS3Monsters(data: unknown) {
 
       if (stats.ailmentResistance) {
         const ailmentResistance = stats.ailmentResistance as Record<string, unknown>;
+
         ailmentResistance.poison ??= null;
         ailmentResistance.burn ??= null;
         ailmentResistance.paralysis ??= null;
@@ -374,6 +390,7 @@ function transformS3Monsters(data: unknown) {
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
+
       monstie.attack ??= null;
       monstie.ridingActions ??= [];
       monstie.kinshipSkill ??= null;
@@ -451,6 +468,7 @@ function getS3MonsterTotal(base: Record<string, unknown>) {
 
 function transformS3Regions(data: unknown) {
   const regions = data as Record<string, unknown>[];
+
   for (const region of regions) {
     region.slug = makeSlug(region.name as string);
 
@@ -467,6 +485,14 @@ function transformS3Regions(data: unknown) {
         area.slug = makeSlug(area.name as string);
       }
     }
+  }
+}
+
+function transformS3Genes(data: unknown) {
+  const genes = data as { name: string; slug?: string }[];
+
+  for (const gene of genes) {
+    gene.slug = makeSlug(gene.name);
   }
 }
 
