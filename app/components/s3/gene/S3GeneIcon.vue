@@ -21,6 +21,10 @@
 
   import rankS from '~/assets/3/gene/rank-s.avif';
 
+  defineOptions({
+    inheritAttrs: false,
+  });
+
   const props = withDefaults(
     defineProps<{
       gene: Gene;

@@ -123,7 +123,7 @@
             :is="searchConfig.geneIconComponent"
             :gene="item.data"
             noTooltip
-            class="size-9"
+            size="size-9"
           />
         </template>
       </LazyUCommandPalette>
