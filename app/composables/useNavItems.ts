@@ -133,6 +133,11 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
           to: '/3/riding-actions',
           active: isActive('/3/riding-actions'),
         },
+        {
+          label: 'Genes',
+          to: '/3/genes',
+          active: isActive('/3/genes'),
+        },
       ],
     },
   ];
