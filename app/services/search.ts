@@ -21,6 +21,7 @@ export type SearchGroup = {
 export type SearchConfig = {
   groups: SearchGroup[];
   monsterIconComponent: Component | null;
+  geneIconComponent: Component | null;
 };
 
 export function buildSearchHomePageItem(appTitle: string) {
@@ -52,6 +53,7 @@ export function buildSearchPageConfig(items: SearchItem[]) {
   return {
     groups: [buildSearchPagesGroup(items)],
     monsterIconComponent: null,
+    geneIconComponent: null,
   };
 }
 
@@ -67,5 +69,6 @@ export function buildDefaultSearch(appTitle: string) {
       buildMhst3SearchMonsterGroup(),
     ],
     monsterIconComponent: markRaw(S3MonsterIcon),
+    geneIconComponent: null,
   };
 }

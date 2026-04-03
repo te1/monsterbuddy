@@ -154,5 +154,6 @@ export function buildMhst2Search(appTitle: string) {
       ]),
     ],
     monsterIconComponent: markRaw(S2MonsterIcon),
+    geneIconComponent: null,
   };
 }

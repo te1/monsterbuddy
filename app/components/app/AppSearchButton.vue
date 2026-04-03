@@ -117,6 +117,15 @@
             class="size-9"
           />
         </template>
+
+        <template v-if="searchConfig.geneIconComponent" #genes-leading="{ item }">
+          <component
+            :is="searchConfig.geneIconComponent"
+            :gene="item.data"
+            noTooltip
+            class="size-9"
+          />
+        </template>
       </LazyUCommandPalette>
     </template>
 
