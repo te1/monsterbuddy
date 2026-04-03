@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  import { genes } from '~/services/3/genes';
+
   definePageMeta({
     mobileHeaderTitle: 'Genes',
   });
@@ -35,6 +37,14 @@
       :headline="headline"
     />
 
-    <UPageBody> CONTENT </UPageBody>
+    <UPageBody>
+      <ul class="flex flex-col gap-3">
+        <li v-for="gene in genes" :key="gene.slug">
+          <NuxtLink :to="`/3/genes/${gene.slug}`" prefetchOn="interaction">
+            {{ gene.name }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </UPageBody>
   </div>
 </template>
