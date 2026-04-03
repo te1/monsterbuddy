@@ -2,27 +2,27 @@ import type { MonsterLocationType } from './data';
 import type { AilmentType, Monster, MonsterTag, RidingActionType, StatsType } from './types';
 
 export function formatMonsterInfoAll(monster: Monster) {
-  return monster.tags.map(formatMonsterTag).join(', ');
+  return monster.tags?.map(formatMonsterTag).join(', ') ?? '';
 }
 
 export function formatMonsterInfoShort(monster: Monster) {
-  if (monster.tags.includes('calamitous')) {
+  if (monster.tags?.includes('calamitous')) {
     return formatMonsterTag('calamitous');
   }
 
-  if (monster.tags.includes('endangered')) {
+  if (monster.tags?.includes('endangered')) {
     return formatMonsterTag('endangered');
   }
 
-  if (monster.tags.includes('mutation')) {
+  if (monster.tags?.includes('mutation')) {
     return formatMonsterTag('mutation');
   }
 
-  if (monster.tags.includes('deviant')) {
+  if (monster.tags?.includes('deviant')) {
     return formatMonsterTag('deviant');
   }
 
-  if (monster.tags.includes('subspecies')) {
+  if (monster.tags?.includes('subspecies')) {
     return formatMonsterTag('subspecies');
   }
 }

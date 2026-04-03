@@ -25,7 +25,7 @@
 
   const showMonstie = computed(() => {
     if (props.display) {
-      return props.display === 'monstie' && props.monster.hatchable;
+      return props.display === 'monstie' && props.monster.hatchable === true;
     }
 
     return history.shouldShowMonstie(props.monster);
@@ -33,7 +33,7 @@
 
   const showEgg = computed(() => {
     if (props.display) {
-      return props.display === 'egg' && props.monster.hatchable;
+      return props.display === 'egg' && props.monster.hatchable === true;
     }
 
     return history.shouldShowEgg(props.monster);

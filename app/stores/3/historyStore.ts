@@ -38,11 +38,11 @@ const useHistoryStore = defineStore('s3/history', () => {
   });
 
   const shouldShowMonstie = (monster: Monster) => {
-    return lastList.value === 'monsties' && monster.hatchable;
+    return lastList.value === 'monsties' && monster.hatchable === true;
   };
 
   const shouldShowEgg = (monster: Monster) => {
-    return lastList.value === 'eggs' && monster.hatchable;
+    return lastList.value === 'eggs' && monster.hatchable === true;
   };
 
   const listModeSmart = (showMonstie: boolean, showEgg: boolean, mode?: Mode) => {

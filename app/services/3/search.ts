@@ -8,7 +8,7 @@ import { formatMonsterTag, formatRidingActionType } from './presentation';
 function getMonsterSuffix(monster: Monster) {
   const result: string[] = [];
 
-  result.push(...monster.tags.map(formatMonsterTag).filter((tag) => tag != null));
+  result.push(...(monster.tags?.map(formatMonsterTag).filter((tag) => tag != null) ?? []));
 
   if (monster.hatchable) {
     result.push('Hatchable');
