@@ -381,7 +381,7 @@ function generateEggSvg(monster: Record<string, unknown>) {
 function getS3MonsterBulk(base: Record<string, unknown>) {
   const sum = Number(base.hp ?? 0) + Number(base.defense ?? 0);
 
-  return sum > 0 ? sum : null;
+  return sum > 0 ? sum : undefined;
 }
 
 function getS3MonsterTotal(base: Record<string, unknown>) {
@@ -391,7 +391,7 @@ function getS3MonsterTotal(base: Record<string, unknown>) {
     Number(base.speed ?? 0) +
     Number(base.defense ?? 0);
 
-  return sum > 0 ? sum : null;
+  return sum > 0 ? sum : undefined;
 }
 
 function transformS3Regions(data: unknown) {

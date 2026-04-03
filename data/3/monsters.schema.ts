@@ -54,8 +54,8 @@ const MonsterStatsBaseSchema = z.object({
   wyvernfell: z.number().optional(),
   rawSpeed: z.number().optional(),
   rawCrit: z.number().optional(),
-  bulk: z.number(),
-  total: z.number(),
+  bulk: z.number().optional(),
+  total: z.number().optional(),
 });
 export type MonsterStatsBase = z.infer<typeof MonsterStatsBaseSchema>;
 
