@@ -10,52 +10,65 @@ export type GeneElement = z.infer<typeof GeneElementSchema>;
 export const GeneSizeSchema = z.enum(['none', 'S', 'M', 'L', 'XL', '+']);
 export type GeneSize = z.infer<typeof GeneSizeSchema>;
 
-export const GeneTargetSchema = z.enum([
+export const SkillTargetSchema = z.enum([
   'allAllies',
   'allEnemies',
   'randomEnemy',
   'singleEnemy',
   'user',
 ]);
-export type GeneTarget = z.infer<typeof GeneTargetSchema>;
+export type SkillTarget = z.infer<typeof SkillTargetSchema>;
 
-export const GeneStatusEffectSchema = z.enum([
-  '1HitKo',
-  'accuracyDown',
-  'attackDown',
-  'attackUp',
+export const SkillAilmentTypeSchema = z.enum([
   'blastblight',
   'bleeding',
   'burn',
-  'criticalUp',
   'darkness',
-  'defenseDown',
+  'noxiousPoison',
+  'paralysis',
+  'poison',
+  'severePoison',
+  'sleep',
+  'stun',
+]);
+export type SkillAilmentType = z.infer<typeof SkillAilmentTypeSchema>;
+
+export const SkillBuffTypeSchema = z.enum([
+  'attackUp',
+  'criticalUp',
   'defenseUp',
   'dodgeUp',
   'dragonAttackUp',
-  'dragonDefenseDown',
-  'evasionDown',
   'fireAttackUp',
   'fireDefenseUp',
   'iceAttackUp',
   'inflictRateUp',
-  'noxiousPoison',
-  'paralysis',
-  'poison',
-  'regenerate',
-  'severePoison',
-  'sleep',
-  'speedDown',
   'speedUp',
   'staminaRegenUp',
-  'stun',
   'thunderAttackUp',
-  'thunderDefenseDown',
   'waterAttackUp',
   'wyvernfellUp',
+  'regenerate',
+]);
+export type SkillBuffType = z.infer<typeof SkillBuffTypeSchema>;
+
+export const SkillDebuffTypeSchema = z.enum([
+  'accuracyDown',
+  'attackDown',
+  'defenseDown',
+  'dragonDefenseDown',
+  'evasionDown',
+  'speedDown',
+  'thunderDefenseDown',
   'wyvernsoulDefenseDown',
 ]);
-export type GeneStatusEffect = z.infer<typeof GeneStatusEffectSchema>;
+export type SkillDebuffType = z.infer<typeof SkillDebuffTypeSchema>;
+
+export const SkillEffectTypeSchema = z.enum([
+  //
+  '1HitKo',
+]);
+export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
 export const GeneSchema = z.object({
   name: z.string(),
@@ -68,10 +81,13 @@ export const GeneSchema = z.object({
   power: z.number().nullable(),
   wyvernfell: z.number().nullable(),
   description: z.string(),
-  target: GeneTargetSchema.nullable(),
+  target: SkillTargetSchema.nullable(),
   breath: z.boolean(),
   eggSkill: z.boolean(),
-  statusEffects: z.array(GeneStatusEffectSchema),
+  ailment: z.array(SkillAilmentTypeSchema),
+  buff: z.array(SkillBuffTypeSchema),
+  debuff: z.array(SkillDebuffTypeSchema),
+  effect: z.array(SkillEffectTypeSchema),
   sizes: z.array(z.string()),
 });
 export type Gene = z.infer<typeof GeneSchema>;
