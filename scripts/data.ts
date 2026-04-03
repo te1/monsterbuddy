@@ -96,6 +96,7 @@ function generate() {
 
 function transformRidingActions(data: unknown) {
   const ridingActions = data as { name: string; slug?: string }[];
+
   for (const ridingAction of ridingActions) {
     ridingAction.slug = makeSlug(ridingAction.name);
   }
@@ -107,6 +108,7 @@ const s1AllElements = ['fire', 'water', 'thunder', 'ice', 'dragon']; // none is 
 
 function transformS1Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
+
   for (const monster of monsters) {
     monster.slug = makeSlug(monster.name as string);
 
@@ -236,12 +238,14 @@ function transformS2Monsters(data: unknown) {
 
       monstie.attackElement = getS2MonstieAttackElement(monster);
 
-      const stats = monstie.stats as Record<string, unknown>;
+      if (monstie.stats) {
+        const stats = monstie.stats as Record<string, unknown>;
 
-      stats.bestAttack = getS2MonstieBestAttack(monster);
-      stats.bestDefense = getS2MonstieBestDefense(monster);
-      stats.worstDefense = getS2MonstieWorstDefense(monster);
-      stats.otherDefense = getS2MonstieOtherDefense(monster);
+        stats.bestAttack = getS2MonstieBestAttack(monster);
+        stats.bestDefense = getS2MonstieBestDefense(monster);
+        stats.worstDefense = getS2MonstieWorstDefense(monster);
+        stats.otherDefense = getS2MonstieOtherDefense(monster);
+      }
     }
   }
 }
