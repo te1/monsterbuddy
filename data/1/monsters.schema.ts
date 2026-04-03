@@ -48,15 +48,14 @@ export const MonsterRarityTypeSchema = z.union([
   z.literal(7),
   z.literal(8),
   z.literal(9),
-  z.null(),
 ]);
 export type MonsterRarityType = z.infer<typeof MonsterRarityTypeSchema>;
 
 const MonsterDataSchema = z.object({
-  tendency: AttackTypeSchema.nullable(),
-  elementalAtk: z.array(ElementTypeSchema),
-  elementalResistance: z.array(ElementTypeSchema),
-  elementalWeakness: z.array(ElementTypeSchema),
+  tendency: AttackTypeSchema,
+  elementalAtk: z.array(ElementTypeSchema).optional(),
+  elementalResistance: z.array(ElementTypeSchema).optional(),
+  elementalWeakness: z.array(ElementTypeSchema).optional(),
 });
 export type MonsterData = z.infer<typeof MonsterDataSchema>;
 
@@ -69,14 +68,14 @@ export const GrowthTypeSchema = z.enum([
 export type GrowthType = z.infer<typeof GrowthTypeSchema>;
 
 const MonstieBaseStatsSchema = z.object({
-  hp: z.number().nullable(),
-  atk: z.number().nullable(),
-  def: z.number().nullable(),
-  spd: z.number().nullable(),
+  hp: z.number(),
+  atk: z.number(),
+  def: z.number(),
+  spd: z.number(),
 });
 export type MonstieBaseStats = z.infer<typeof MonstieBaseStatsSchema>;
 
-const MonstieElementStatsSchema = z.record(z.string(), z.union([z.number(), z.null()]));
+const MonstieElementStatsSchema = z.record(z.string(), z.number());
 export type MonstieElementStats = z.infer<typeof MonstieElementStatsSchema>;
 
 const MonstieStatEntrySchema = z.object({
@@ -104,29 +103,29 @@ const RetreatSchema = z.object({
 export type Retreat = z.infer<typeof RetreatSchema>;
 
 const MonstieDataSchema = z.object({
-  tendency: AttackTypeSchema.nullable(),
-  attackElement: ElementTypeSchema.nullable(),
-  growth: GrowthTypeSchema.nullable(),
+  tendency: AttackTypeSchema.optional(),
+  attackElement: ElementTypeSchema.optional(),
+  growth: GrowthTypeSchema.optional(),
   stats: MonstieStatsSchema.optional(),
-  ridingActions: z.array(z.string()),
-  kinshipSkill: z.string().nullable(),
+  ridingActions: z.array(z.string()).optional(),
+  kinshipSkill: z.string().optional(),
   eggVariants: z.number(),
   retreat: RetreatSchema.optional(),
 });
 export type MonstieData = z.infer<typeof MonstieDataSchema>;
 
 export const MonsterSchema = z.object({
-  no: z.number().nullable(),
+  no: z.number().optional(),
   name: z.string(),
   slug: z.string(),
   genus: GenusTypeSchema,
   habitat: z.string(),
-  related: z.array(MonsterRelationSchema),
-  locations: z.array(MonsterLocationSchema),
-  rarity: MonsterRarityTypeSchema,
-  description: z.string().nullable(),
-  monster: MonsterDataSchema,
-  hatchable: z.boolean(),
+  related: z.array(MonsterRelationSchema).optional(),
+  locations: z.array(MonsterLocationSchema).optional(),
+  rarity: MonsterRarityTypeSchema.optional(),
+  description: z.string().optional(),
+  monster: MonsterDataSchema.optional(),
+  hatchable: z.boolean().optional(),
   monstie: MonstieDataSchema.optional(),
 });
 export type Monster = z.infer<typeof MonsterSchema>;

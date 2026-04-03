@@ -111,29 +111,16 @@ function transformS1Monsters(data: unknown) {
     monster.slug = makeSlug(monster.name as string);
 
     monster.habitat ??= 'Unknown Habitat';
-    monster.related ??= [];
-    monster.locations ??= [];
-    monster.monster ??= {};
-
-    const monsterData = monster.monster as Record<string, unknown>;
-    monsterData.tendency ??= null;
-    monsterData.elementalAtk ??= [];
-    monsterData.elementalResistance ??= [];
-    monsterData.elementalWeakness ??= [];
-
-    monster.hatchable ??= false;
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
-      monstie.tendency ??= null;
+
       monstie.attackElement = getS1MonstieAttackElement(monster);
-      monstie.growth ??= null;
-      monstie.ridingActions ??= [];
-      monstie.kinshipSkill ??= null;
       monstie.eggVariants ??= 4;
 
       if (monstie.stats) {
         const stats = monstie.stats as Record<string, unknown>;
+
         stats.bestAttack = getS1MonstieBestAttack(monster);
         stats.bestDefense = getS1MonstieBestDefense(monster);
         stats.worstDefense = getS1MonstieWorstDefense(monster);
@@ -143,7 +130,7 @@ function transformS1Monsters(data: unknown) {
 }
 
 function getS1MonstieAttackElement(monster: Record<string, unknown>) {
-  return getS1MonstieBestAttack(monster)?.element ?? null;
+  return getS1MonstieBestAttack(monster)?.element;
 }
 
 function getS1MonstieBestAttack(monster: Record<string, unknown>) {
