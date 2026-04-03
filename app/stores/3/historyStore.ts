@@ -1,4 +1,4 @@
-import type { Monster } from '~/services/3/types';
+import type { Gene, Monster } from '~/services/3/types';
 import type { Mode } from './baseMonsterFilter';
 import { pull } from 'es-toolkit/array';
 import { useLocalStorage } from '@vueuse/core';
@@ -7,6 +7,7 @@ import useMonsterFilter from './monsterFilter';
 import useMonstieFilter from './monstieFilter';
 import useEggFilter from './eggFilter';
 import { monsters, monstersBySlug, monsties, getMonstersByHatchable } from '~/services/3/data';
+import { genes, genesBySlug } from '~/services/3/genes';
 
 const useHistoryStore = defineStore('s3/history', () => {
   // -- state
@@ -15,6 +16,9 @@ const useHistoryStore = defineStore('s3/history', () => {
   const pinnedMonsterSlugs = useLocalStorage<string[]>('s3/history/pinnedMonsterSlugs', []);
   const pinnedMonstieSlugs = useLocalStorage<string[]>('s3/history/pinnedMonstieSlugs', []);
   const pinnedEggSlugs = useLocalStorage<string[]>('s3/history/pinnedEggSlugs', []);
+
+  const recentGeneSlugs = useLocalStorage<string[]>('s3/history/recentGeneSlugs', []);
+  const pinnedGeneSlugs = useLocalStorage<string[]>('s3/history/pinnedGeneSlugs', []);
 
   // -- getters
   const lastListStore = computed(() => {
@@ -131,6 +135,30 @@ const useHistoryStore = defineStore('s3/history', () => {
     return pinnedEggSlugs.value.includes(slug);
   };
 
+  const recentGenes = computed<Gene[]>(() => {
+    return recentGeneSlugs.value
+      .map((slug) => genesBySlug.get(slug))
+      .filter((gene): gene is Gene => gene != null);
+  });
+
+  const hasRecentGenes = computed(() => {
+    return recentGenes.value.length > 0;
+  });
+
+  const pinnedGenes = computed(() => {
+    return genes.filter((gene) => {
+      return pinnedGeneSlugs.value.includes(gene.slug);
+    });
+  });
+
+  const hasPinnedGenes = computed(() => {
+    return pinnedGenes.value.length > 0;
+  });
+
+  const isGenePinned = (slug: string) => {
+    return pinnedGeneSlugs.value.includes(slug);
+  };
+
   // -- actions
   function addRecentMonster(slug: string) {
     const maxRecentItems = 50;
@@ -168,6 +196,26 @@ const useHistoryStore = defineStore('s3/history', () => {
     }
   }
 
+  function addRecentGene(slug: string) {
+    const maxRecentItems = 50;
+
+    pull(recentGeneSlugs.value, [slug]);
+
+    while (recentGeneSlugs.value.length >= maxRecentItems) {
+      recentGeneSlugs.value.pop();
+    }
+
+    recentGeneSlugs.value.unshift(slug);
+  }
+
+  function togglePinnedGene(slug: string) {
+    if (isGenePinned(slug)) {
+      pull(pinnedGeneSlugs.value, [slug]);
+    } else {
+      pinnedGeneSlugs.value.unshift(slug);
+    }
+  }
+
   return {
     // -- state
     lastList,
@@ -175,6 +223,9 @@ const useHistoryStore = defineStore('s3/history', () => {
     pinnedMonsterSlugs: skipHydrate(pinnedMonsterSlugs),
     pinnedMonstieSlugs: skipHydrate(pinnedMonstieSlugs),
     pinnedEggSlugs: skipHydrate(pinnedEggSlugs),
+
+    recentGeneSlugs: skipHydrate(recentGeneSlugs),
+    pinnedGeneSlugs: skipHydrate(pinnedGeneSlugs),
 
     // -- getters
     lastListStore,
@@ -197,11 +248,20 @@ const useHistoryStore = defineStore('s3/history', () => {
     hasPinnedEggs,
     isEggPinned,
 
+    recentGenes,
+    hasRecentGenes,
+    pinnedGenes,
+    hasPinnedGenes,
+    isGenePinned,
+
     // -- actions
     addRecentMonster,
     togglePinnedMonster,
     togglePinnedMonstie,
     togglePinnedEgg,
+
+    addRecentGene,
+    togglePinnedGene,
   };
 });
 

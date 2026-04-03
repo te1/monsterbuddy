@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import { genesBySlug } from '~/services/3/genes';
+  import useHistoryStore from '~/stores/3/historyStore';
 
   definePageMeta({
     // sidebarComponent: S3RidingActionSidebar,
@@ -47,6 +48,12 @@
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
+
+  const history = useHistoryStore();
+
+  onMounted(() => {
+    history.addRecentGene(gene.slug);
+  });
 </script>
 
 <template>

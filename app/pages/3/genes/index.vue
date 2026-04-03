@@ -40,7 +40,12 @@
     <UPageBody>
       <ul class="flex flex-col gap-3">
         <li v-for="gene in genes" :key="gene.slug">
-          <NuxtLink :to="`/3/genes/${gene.slug}`" prefetchOn="interaction">
+          <NuxtLink
+            :to="`/3/genes/${gene.slug}`"
+            prefetchOn="interaction"
+            class="flex items-center gap-2"
+          >
+            <S3GeneIcon :gene="gene" noTooltip />
             {{ gene.name }}
           </NuxtLink>
         </li>

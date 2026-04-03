@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
+  import { createReusableTemplate } from '@vueuse/core';
 
   import sizeS from '~/assets/3/gene/size-s.avif';
   import sizeM from '~/assets/3/gene/size-m.avif';
@@ -24,11 +25,15 @@
     defineProps<{
       gene: Gene;
       noTooltip?: boolean;
+      size?: string;
     }>(),
     {
       noTooltip: false,
+      size: 'size-14',
     }
   );
+
+  const [DefineIconTemplate, ReuseIconTemplate] = createReusableTemplate();
 
   const elementSrc = computed(() => {
     switch (props.gene.element) {
@@ -95,21 +100,23 @@
 </script>
 
 <template>
-  <!-- <UTooltip v-if="!noTooltip" :text="gene.name">
-    <img :src="imageUrl" :alt="gene.name" width="60" height="60" decoding="async" />
+  <DefineIconTemplate>
+    <div class="relative" :class="size" v-bind="$attrs">
+      <img v-if="sizeSrc" :src="sizeSrc" :alt="gene.size" class="absolute inset-0" />
+      <img v-if="elementSrc" :src="elementSrc" :alt="gene.element" class="absolute inset-0" />
+      <img
+        v-if="typeSrc"
+        :src="typeSrc"
+        :alt="gene.type"
+        class="absolute inset-1.75 drop-shadow-sm drop-shadow-black"
+      />
+      <img v-if="gene.sRank" :src="rankS" alt="S" class="absolute inset-0" />
+    </div>
+  </DefineIconTemplate>
+
+  <UTooltip v-if="!noTooltip" :text="gene.name">
+    <ReuseIconTemplate />
   </UTooltip>
 
-  <img v-else :src="imageUrl" :alt="gene.name" width="60" height="60" decoding="async" /> -->
-
-  <div class="relative size-14">
-    <img v-if="sizeSrc" :src="sizeSrc" :alt="gene.size" class="absolute inset-0" />
-    <img v-if="elementSrc" :src="elementSrc" :alt="gene.element" class="absolute inset-0" />
-    <img
-      v-if="typeSrc"
-      :src="typeSrc"
-      :alt="gene.type"
-      class="absolute inset-1.75 drop-shadow-sm drop-shadow-black"
-    />
-    <img v-if="gene.sRank" :src="rankS" alt="S" class="absolute inset-0" />
-  </div>
+  <ReuseIconTemplate v-else />
 </template>
