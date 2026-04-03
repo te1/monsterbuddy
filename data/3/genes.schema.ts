@@ -7,9 +7,14 @@ export type GeneType = z.infer<typeof GeneTypeSchema>;
 export const GeneElementSchema = z.union([ElementTypeSchema, z.literal('all')]);
 export type GeneElement = z.infer<typeof GeneElementSchema>;
 
+export const GeneSizeSchema = z.enum(['none', 'S', 'M', 'L', 'XL']);
+export type GeneSize = z.infer<typeof GeneSizeSchema>;
+
 export const GeneSchema = z.object({
   name: z.string(),
   slug: z.string(),
+  size: GeneSizeSchema,
+  sRank: z.boolean(),
   type: GeneTypeSchema,
   element: GeneElementSchema,
   active: z.boolean(),
