@@ -110,7 +110,7 @@
         :alt="gene.type"
         class="absolute inset-1.75 drop-shadow-sm drop-shadow-black"
       />
-      <img v-if="gene.sRank" :src="rankS" alt="S" class="absolute inset-0" />
+      <img v-if="gene.size === '+'" :src="rankS" alt="Rank S" class="absolute inset-0" />
     </div>
   </DefineIconTemplate>
 
