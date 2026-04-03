@@ -85,21 +85,27 @@ export function getMonstersByIsEndangered(
   mustBeEndangered: boolean,
   monsterList: Monster[] = monsters
 ): Monster[] {
-  return monsterList.filter((monster) => monster.tags?.includes('endangered') === mustBeEndangered);
+  return monsterList.filter(
+    (monster) => (monster.tags?.includes('endangered') ?? false) === mustBeEndangered
+  );
 }
 
 export function getMonstersByIsMutation(
   mustBeMutation: boolean,
   monsterList: Monster[] = monsters
 ): Monster[] {
-  return monsterList.filter((monster) => monster.tags?.includes('mutation') === mustBeMutation);
+  return monsterList.filter(
+    (monster) => (monster.tags?.includes('mutation') ?? false) === mustBeMutation
+  );
 }
 
 export function getMonstersByIsDeviant(
   mustBeDeviant: boolean,
   monsterList: Monster[] = monsters
 ): Monster[] {
-  return monsterList.filter((monster) => monster.tags?.includes('deviant') === mustBeDeviant);
+  return monsterList.filter(
+    (monster) => (monster.tags?.includes('deviant') ?? false) === mustBeDeviant
+  );
 }
 
 export function getMonstersByHatchable(
