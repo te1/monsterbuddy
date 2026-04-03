@@ -42,20 +42,20 @@ const MonsterRelationSchema = z.object({
 export type MonsterRelation = z.infer<typeof MonsterRelationSchema>;
 
 const MonsterStatsBaseSchema = z.object({
-  hp: z.number().nullable(),
-  defense: z.number().nullable(),
-  attack: z.number().nullable(),
-  speed: z.number().nullable(),
-  crit: z.number().nullable(),
-  stamina: z.number().nullable(),
-  recovery: z.number().nullable(),
-  startingStamina: z.number().nullable(),
-  rawRecovery: z.number().nullable(),
-  wyvernfell: z.number().nullable(),
-  rawSpeed: z.number().nullable(),
-  rawCrit: z.number().nullable(),
-  bulk: z.number().nullable(),
-  total: z.number().nullable(),
+  hp: z.number(),
+  defense: z.number(),
+  attack: z.number(),
+  speed: z.number(),
+  crit: z.number().optional(),
+  stamina: z.number().optional(),
+  recovery: z.number().optional(),
+  startingStamina: z.number().optional(),
+  rawRecovery: z.number().optional(),
+  wyvernfell: z.number().optional(),
+  rawSpeed: z.number().optional(),
+  rawCrit: z.number().optional(),
+  bulk: z.number(),
+  total: z.number(),
 });
 export type MonsterStatsBase = z.infer<typeof MonsterStatsBaseSchema>;
 
@@ -72,8 +72,8 @@ export type AilmentType = z.infer<typeof AilmentTypeSchema>;
 
 const MonsterStatsSchema = z.object({
   base: MonsterStatsBaseSchema.optional(),
-  elementalResistance: z.record(ElementTypeSchema, z.union([z.number(), z.null()])).optional(),
-  ailmentResistance: z.record(AilmentTypeSchema, z.union([z.number(), z.null()])).optional(),
+  elementalResistance: z.record(ElementTypeSchema, z.number()).optional(),
+  ailmentResistance: z.record(AilmentTypeSchema, z.number()).optional(),
 });
 export type MonsterStats = z.infer<typeof MonsterStatsSchema>;
 
@@ -104,9 +104,9 @@ export const EggColorSchema = z.enum([
 export type EggColor = z.infer<typeof EggColorSchema>;
 
 const MonstieDataSchema = z.object({
-  attack: AttackTypeSchema.nullable(),
+  attack: AttackTypeSchema,
   ridingActions: z.array(z.string()),
-  kinshipSkill: z.string().nullable(),
+  kinshipSkill: z.string().optional(),
   eggColors: z.array(EggColorSchema).optional(),
 });
 export type MonstieData = z.infer<typeof MonstieDataSchema>;
@@ -115,14 +115,14 @@ export const MonsterSchema = z.object({
   name: z.string(),
   slug: z.string(),
   genus: GenusTypeSchema,
-  tags: z.array(MonsterTagSchema),
-  related: z.array(MonsterRelationSchema),
-  rank: z.number().nullable(),
+  tags: z.array(MonsterTagSchema).optional(),
+  related: z.array(MonsterRelationSchema).optional(),
+  rank: z.number(),
   flavor: z.record(z.string(), z.string()).optional(),
-  element: ElementTypeSchema.nullable(),
+  element: ElementTypeSchema.optional(),
   stats: MonsterStatsSchema.optional(),
-  monster: MonsterDataSchema,
-  hatchable: z.boolean(),
+  monster: MonsterDataSchema.optional(),
+  hatchable: z.boolean().optional(),
   monstie: MonstieDataSchema.optional(),
 });
 export type Monster = z.infer<typeof MonsterSchema>;

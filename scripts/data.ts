@@ -225,6 +225,7 @@ function transformS2CoopQuests(data: unknown) {
 
 function transformS2Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
+
   for (const monster of monsters) {
     monster.slug = makeSlug(monster.name as string);
 
@@ -308,58 +309,19 @@ function transformS3Monsters(data: unknown) {
 
     monster.slug = makeSlug(monster.name as string);
 
-    monster.tags ??= [];
-    monster.related ??= [];
-    monster.rank ??= null;
-    monster.element ??= null;
-    monster.monster ??= {};
-    monster.hatchable ??= false;
-
     if (monster.stats) {
       const stats = monster.stats as Record<string, unknown>;
 
       if (stats.base) {
         const base = stats.base as Record<string, unknown>;
-        base.hp ??= null;
-        base.defense ??= null;
-        base.attack ??= null;
-        base.speed ??= null;
-        base.crit ??= null;
-        base.stamina ??= null;
-        base.recovery ??= null;
-        base.startingStamina ??= null;
-        base.rawRecovery ??= null;
-        base.wyvernfell ??= null;
-        base.rawSpeed ??= null;
-        base.rawCrit ??= null;
+
         base.bulk = getS3MonsterBulk(base);
         base.total = getS3MonsterTotal(base);
-      }
-
-      if (stats.elementalResistance) {
-        const elementalResistance = stats.elementalResistance as Record<string, unknown>;
-        elementalResistance.none ??= null;
-        elementalResistance.fire ??= null;
-        elementalResistance.water ??= null;
-        elementalResistance.thunder ??= null;
-        elementalResistance.ice ??= null;
-        elementalResistance.dragon ??= null;
-      }
-
-      if (stats.ailmentResistance) {
-        const ailmentResistance = stats.ailmentResistance as Record<string, unknown>;
-        ailmentResistance.poison ??= null;
-        ailmentResistance.burn ??= null;
-        ailmentResistance.paralysis ??= null;
-        ailmentResistance.sleep ??= null;
       }
     }
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
-      monstie.attack ??= null;
-      monstie.ridingActions ??= [];
-      monstie.kinshipSkill ??= null;
 
       if (
         Array.isArray(monstie.svgEggColors) &&
@@ -434,14 +396,9 @@ function getS3MonsterTotal(base: Record<string, unknown>) {
 
 function transformS3Regions(data: unknown) {
   const regions = data as Record<string, unknown>[];
+
   for (const region of regions) {
     region.slug = makeSlug(region.name as string);
-
-    if (region.monsters) {
-      const monsters = region.monsters as Record<string, unknown>;
-
-      monsters.calamitous ??= [];
-    }
 
     if (region.areas) {
       const areas = region.areas as Record<string, unknown>[];
