@@ -118,8 +118,8 @@ export function buildMhst3Search(appTitle: string) {
           icon: 'ph:file-text',
         },
         {
-          label: 'Areas & Habitat Restoration',
-          to: '/3/areas',
+          label: 'Habitat Restoration - Regions & Areas',
+          to: '/3/habitats',
           icon: 'ph:file-text',
         },
         {
