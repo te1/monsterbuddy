@@ -5006,7 +5006,6 @@
     no: 111,
     name: 'Barrel Felyne',
     genus: 'Lynian',
-    habitat: null,
     locations: [{ type: 'eldersLair', main: 'Z1' }],
     rarity: 1,
     monster: {
@@ -5335,12 +5334,6 @@
       eggColors: ['white', 'blue'],
       retreat: 'This monster **cannot** be chased back to its den.',
       stats: {
-        base: {
-          maxHp: null,
-          speed: null,
-          recovery: null,
-          critRate: null,
-        },
         attack: {
           none: 8,
           fire: 6,
@@ -5844,7 +5837,6 @@
     no: 123,
     name: 'Rajang',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [
       { type: 'superRareDen', main: 'Alcala' },
       { type: 'superRareDen', main: 'Loloska' },
@@ -6240,7 +6232,6 @@
     no: 128,
     name: 'Kulve Taroth',
     genus: 'Elder Dragon',
-    habitat: null,
     locations: [{ type: 'coopQuest', main: 'The Goddess of Gold' }],
     rarity: 7,
     monster: {
@@ -6260,7 +6251,6 @@
         'No Mantle': 'ice',
       },
     },
-    hatchable: false,
   },
   {
     // TODO defeat, hatch
@@ -6740,7 +6730,6 @@
     no: 136,
     name: 'Palamute (Normal)',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [
       { type: 'coopQuest', main: 'Palamute Den' },
       { type: 'coopQuest', main: 'Palamute Home' },
@@ -6798,7 +6787,6 @@
     no: 137,
     name: 'Palamute (Fire)',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [{ type: 'coopQuest', main: 'Palamute Home' }],
     rarity: 5,
     related: [
@@ -6853,7 +6841,6 @@
     no: 138,
     name: 'Palamute (Water)',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [{ type: 'coopQuest', main: 'Palamute Home' }],
     rarity: 5,
     related: [
@@ -6908,7 +6895,6 @@
     no: 139,
     name: 'Palamute (Thunder)',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [{ type: 'coopQuest', main: 'Palamute Home' }],
     rarity: 5,
     related: [
@@ -6963,7 +6949,6 @@
     no: 140,
     name: 'Palamute (Ice)',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [{ type: 'coopQuest', main: 'Palamute Home' }],
     rarity: 5,
     related: [
@@ -7018,7 +7003,6 @@
     no: 141,
     name: 'Palamute (Dragon)',
     genus: 'Fanged Beast',
-    habitat: null,
     locations: [{ type: 'coopQuest', main: 'Palamute Home' }],
     rarity: 5,
     related: [
