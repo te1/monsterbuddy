@@ -12,7 +12,7 @@
 
   useSeoMeta({
     title: `Gene List In ${gameTypeToFullLabel('mhst3')}`,
-    description: 'Overview of all genes and on which monsties they can be found', // TODO seo
+    description: 'Overview of all genes, their effects and which monsties can have them',
   });
   const headline = gameTypeToFullName('mhst3');
 
@@ -233,7 +233,7 @@
   <div>
     <AppPageHeader
       title="Genes"
-      description="All the genes and where to find them"
+      description="All the genes, their effects and where to find them"
       :headline="headline"
       class="hidden lg:block"
     />
