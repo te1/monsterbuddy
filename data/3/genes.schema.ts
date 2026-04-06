@@ -29,7 +29,6 @@ export const SkillAilmentTypeSchema = z.enum([
   'poison',
   'severePoison',
   'sleep',
-  'stun',
 ]);
 export type SkillAilmentType = z.infer<typeof SkillAilmentTypeSchema>;
 
@@ -70,6 +69,7 @@ export const SkillEffectTypeSchema = z.enum([
   '1HitKo',
   'explodeBlastblight',
   'evade',
+  'stun',
 ]);
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 

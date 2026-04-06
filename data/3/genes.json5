@@ -468,7 +468,7 @@
     stamina: 40,
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -1455,7 +1455,7 @@
     wyvernfell: 60,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -2484,7 +2484,7 @@
     wyvernfell: 40,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -3543,7 +3543,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Stun.',
     target: 'singleEnemy',
-    ailment: ['stun'],
+    effect: ['stun'],
     sizes: ['Hyper Shot+'],
   },
 
@@ -3559,7 +3559,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Stun.',
     target: 'singleEnemy',
-    ailment: ['stun'],
+    effect: ['stun'],
     sizes: ['Hyper Shot'],
   },
 
@@ -5266,7 +5266,7 @@
     wyvernfell: 50,
     description: 'Deals non-elemental damage to all enemies. Chance to stun, chance to strike first.',
     target: 'allEnemies',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -5292,7 +5292,7 @@
     stamina: 20,
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -5521,7 +5521,7 @@
     stamina: 30,
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -5855,7 +5855,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Normal attacks have a tiny chance to inflict Stun.',
-    ailment: ['stun'],
+    effect: ['stun'],
     sizes: ['Slugger (S)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -5866,7 +5866,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Normal attacks have a slight chance to inflict Stun.',
-    ailment: ['stun'],
+    effect: ['stun'],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (XL)'],
   },
 
@@ -6195,7 +6195,7 @@
     wyvernfell: 50,
     description: 'Non-elemental damage to all, chance to stun, High chance to strike first.',
     target: 'allEnemies',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {
@@ -6276,7 +6276,7 @@
     wyvernfell: 50,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
-    ailment: ['stun'],
+    effect: ['stun'],
   },
 
   {

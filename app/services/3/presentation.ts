@@ -306,7 +306,7 @@ export function formatSkillTarget(target: SkillTarget): string {
       return 'All Enemies';
 
     case 'randomEnemy':
-      return 'Random Enemy';
+      return 'Random Enemies';
 
     case 'singleEnemy':
       return 'Single Enemy';
@@ -344,9 +344,6 @@ export function formatSkillAilment(ailment: SkillAilmentType): string {
 
     case 'sleep':
       return 'Sleep';
-
-    case 'stun':
-      return 'Stun';
   }
 }
 
@@ -396,6 +393,9 @@ export function formatSkillBuff(buff: SkillBuffType): string {
 
     case 'regenerate':
       return 'Regenerate';
+
+    case 'guard':
+      return 'Guard';
   }
 }
 
@@ -431,5 +431,14 @@ export function formatSkillEffect(effect: SkillEffectType): string {
   switch (effect) {
     case '1HitKo':
       return '1-Hit-KO';
+
+    case 'explodeBlastblight':
+      return 'Explode Blastblight';
+
+    case 'evade':
+      return 'Evade';
+
+    case 'stun':
+      return 'Stun';
   }
 }
