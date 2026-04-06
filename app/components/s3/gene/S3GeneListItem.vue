@@ -10,7 +10,7 @@
       eager?: boolean;
     }>(),
     {
-      mode: 'stats',
+      mode: 'description',
       eager: false,
     }
   );
@@ -18,6 +18,8 @@
   const filter = useGeneFilter();
 
   // TODO content
+
+  const showDescription = computed(() => props.mode === 'description');
 
   const showStats = computed(() => props.mode === 'stats');
 
@@ -39,6 +41,10 @@
 
     <div class="mx-3 mt-3 w-full self-start text-sm">
       <div class="text-base leading-snug font-semibold" v-text="gene.name" />
+
+      <div v-if="showDescription">
+        <div v-text="gene.description" />
+      </div>
 
       <div v-if="showStats">
         <div

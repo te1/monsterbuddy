@@ -55,12 +55,14 @@ const sortValueGetters = {
   wyvernfell: (item: Gene) => item.wyvernfell,
 } satisfies Record<SortKey, (item: Gene) => unknown>;
 
-// TODO modes
-export type Mode = 'stats';
+export type Mode = 'description' | 'stats';
 
 export type Modes = { value: Mode; label: string }[];
 
-export const modes: Modes = [{ value: 'stats', label: 'Stats' }];
+export const modes: Modes = [
+  { value: 'description', label: 'Description' },
+  { value: 'stats', label: 'Stats' },
+];
 
 export type FilterKey =
   | 'sizeFilter'
@@ -78,8 +80,8 @@ export type FilterKey =
 const initial = {
   sortKey: 'name',
   sortOrder: 'asc',
-  mode: 'stats',
-  autoSwitchModes: [],
+  mode: 'description',
+  autoSwitchModes: ['stats'],
 } as {
   sortKey: SortKey;
   sortOrder: SortOrder;
