@@ -1,5 +1,13 @@
 import type { MonsterLocationType } from './data';
-import type { AilmentType, Monster, MonsterTag, RidingActionType, StatsType } from './types';
+import type {
+  AilmentType,
+  GeneElement,
+  GeneType,
+  Monster,
+  MonsterTag,
+  RidingActionType,
+  StatsType,
+} from './types';
 
 export function formatMonsterInfoAll(monster: Monster) {
   return monster.tags.map(formatMonsterTag).join(', ');
@@ -241,5 +249,28 @@ export function statsTypeToText(type: StatsType) {
 
     default:
       return '?';
+  }
+}
+
+export function formatGeneElement(element?: GeneElement): string {
+  switch (element) {
+    case 'all':
+      return 'Rainbow';
+
+    default:
+      return formatElement(element);
+  }
+}
+
+export function formatGeneType(geneType?: GeneType): string {
+  switch (geneType) {
+    case null:
+      return 'None';
+
+    case 'all':
+      return 'Rainbow';
+
+    default:
+      return formatAttackType(geneType);
   }
 }
