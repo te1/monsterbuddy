@@ -1,9 +1,9 @@
 <script lang="ts" setup>
   import type { FilterKey, Mode } from '~/stores/3/geneFilter';
-  import { allElements, allTypes } from '~/services/3/genes';
+  import { allElements, allSizes, allTypes } from '~/services/3/genes';
   import useGeneFilter from '~/stores/3/geneFilter';
   import useGeneSources from '~/stores/3/geneSources';
-  import { formatGeneElement, formatGeneType } from '~/services/3/presentation';
+  import { formatGeneElement, formatGeneSize, formatGeneType } from '~/services/3/presentation';
 
   const props = withDefaults(
     defineProps<{
@@ -62,6 +62,21 @@
         })),
     ];
   });
+
+  const sizes = computed(() => {
+    return [
+      { label: 'All', value: 'ALL' },
+      { label: 'Max size only', value: null },
+      ...allSizes.map((size) => ({
+        label: formatGeneSize(size),
+        value: size,
+      })),
+    ];
+  });
+
+  // TODO ailment, buff, debuff, effect
+  // TODO target
+  // TODO egg skill
 </script>
 
 <template>
@@ -126,6 +141,18 @@
           :disabled="disabled"
           :modalLayout="modalLayout"
           @update:modelValue="setFilter('activeFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Size" orientation="horizontal" :data-modal-layout="modalLayout">
+        <USelect
+          :modelValue="filter.sizeFilter == undefined ? 'ALL' : filter.sizeFilter"
+          color="neutral"
+          :variant="variant"
+          :items="sizes"
+          class="w-full"
+          :disabled="disabled"
+          @update:modelValue="setFilter('sizeFilter', $event)"
         />
       </UFormField>
     </div>

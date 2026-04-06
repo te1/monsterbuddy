@@ -2,6 +2,7 @@ import type { MonsterLocationType } from './data';
 import type {
   AilmentType,
   GeneElement,
+  GeneSize,
   GeneType,
   Monster,
   MonsterTag,
@@ -272,5 +273,21 @@ export function formatGeneType(geneType?: GeneType): string {
 
     default:
       return formatAttackType(geneType);
+  }
+}
+
+export function formatGeneSize(size: GeneSize): string {
+  switch (size) {
+    case 'none':
+      return 'None';
+
+    case '-':
+      return 'Any Rank';
+
+    case '+':
+      return 'S Rank';
+
+    default:
+      return size;
   }
 }
