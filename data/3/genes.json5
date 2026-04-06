@@ -355,7 +355,7 @@
     stamina: 20,
     description: 'Grants Non-Elemental Attack Up to the user.',
     target: 'user',
-    buff: ['attackUp'],
+    buff: ['attackUp'], // TODO is this noneAttackUp instead?
   },
 
   {
@@ -370,6 +370,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy, inflicting greater damage with repeated use.',
     target: 'singleEnemy',
+    effect: ['spam'],
     sizes: ['Art of Striking+'],
   },
 
@@ -385,6 +386,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy, inflicting greater damage with repeated use.',
     target: 'singleEnemy',
+    effect: ['spam'],
     sizes: ['Art of Striking'],
   },
 
@@ -400,7 +402,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
     target: 'singleEnemy',
-    effect: ['1HitKo'],
+    effect: ['1HitKo', 'crit'],
     sizes: ['Assassin Tail+'],
   },
 
@@ -416,7 +418,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
     target: 'singleEnemy',
-    effect: ['1HitKo'],
+    effect: ['1HitKo', 'crit'],
     sizes: ['Assassin Tail'],
   },
 
@@ -431,6 +433,7 @@
     wyvernfell: 40,
     description: "Deals damage to one enemy relative to the user's remaining HP, then reduces the user's HP to 1.",
     target: 'singleEnemy',
+    effect: ['recoil'],
   },
 
   {
@@ -444,6 +447,7 @@
     target: 'user',
     buff: ['thunderAttackUp'],
     // debuff: ['defenseDown'], // TODO
+    effect: ['nextTurn'],
   },
 
   {
@@ -632,6 +636,7 @@
     stamina: 20,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
     target: 'user',
+    effect: ['nextTurn'],
     sizes: ['Blindside+'],
   },
 
@@ -644,6 +649,7 @@
     active: true,
     stamina: 15,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
+    effect: ['nextTurn'],
     sizes: ['Blindside'],
   },
 
@@ -673,6 +679,7 @@
     wyvernfell: 10,
     description: "Deals thunder damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
     sizes: ['Bolt Eater+'],
   },
 
@@ -688,6 +695,7 @@
     wyvernfell: 10,
     description: "Deals thunder damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
     sizes: ['Bolt Eater'],
   },
 
@@ -782,6 +790,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn. High chance of landing a critical hit.',
     target: 'singleEnemy',
     ailment: ['burn'],
+    effect: ['crit'],
     sizes: ['Burning Fang+'],
   },
 
@@ -798,6 +807,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn. High chance of landing a critical hit.',
     target: 'singleEnemy',
     ailment: ['burn'],
+    effect: ['crit'],
     sizes: ['Burning Fang'],
   },
 
@@ -877,6 +887,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy', 'crit'],
     sizes: ['Chata Stamp+'],
   },
 
@@ -892,6 +903,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy', 'crit'],
     sizes: ['Chata Stamp'],
   },
 
@@ -906,6 +918,7 @@
     wyvernfell: 20,
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
   },
 
   {
@@ -1084,6 +1097,7 @@
     stamina: 50,
     description: 'Evades attacks aimed at the user on the turn this skill is used.',
     target: 'user',
+    effect: ['evade'],
   },
 
   {
@@ -1234,7 +1248,6 @@
     stamina: 20,
     description: 'Grants Blood Rite to the user.',
     target: 'user',
-    // buff: ['bloodRite'], // TODO
   },
 
   {
@@ -1289,6 +1302,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to all enemies. Causes recoil damage to the user.',
     target: 'allEnemies',
+    effect: ['recoil'],
     sizes: ['Deadly Horn Jab+'],
   },
 
@@ -1304,6 +1318,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to all enemies. Causes recoil damage to the user.',
     target: 'allEnemies',
+    effect: ['recoil'],
     sizes: ['Deadly Horn Jab'],
   },
 
@@ -1362,6 +1377,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets with decreased stats take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -1375,6 +1391,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets with decreased stats take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -1388,6 +1405,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets with decreased stats take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -1455,7 +1473,7 @@
     wyvernfell: 60,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
-    effect: ['stun'],
+    effect: ['stun', 'priority'],
   },
 
   {
@@ -1470,6 +1488,7 @@
     wyvernfell: 20,
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt. Targets inflicted with Bleeding take more damage.",
     target: 'singleEnemy',
+    effect: ['leech', 'chaser'],
     sizes: ['Devour+'],
   },
 
@@ -1485,6 +1504,7 @@
     wyvernfell: 20,
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt. Targets inflicted with Bleeding take more damage.",
     target: 'singleEnemy',
+    effect: ['leech', 'chaser'],
     sizes: ['Devour'],
   },
 
@@ -1553,6 +1573,7 @@
     wyvernfell: 20,
     description: 'Deals dragon damage to one enemy, inflicting greater damage with repeated use.',
     target: 'singleEnemy',
+    effect: ['spam'],
     sizes: ['Draconic Flurry+'],
   },
 
@@ -1568,6 +1589,7 @@
     wyvernfell: 20,
     description: 'Deals dragon damage to one enemy, inflicting greater damage with repeated use.',
     target: 'singleEnemy',
+    effect: ['spam'],
     sizes: ['Draconic Flurry'],
   },
 
@@ -1732,6 +1754,7 @@
     wyvernfell: 10,
     description: "Deals dragon damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
     sizes: ['Dragon Eater+'],
   },
 
@@ -1747,6 +1770,7 @@
     wyvernfell: 10,
     description: "Deals dragon damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
     sizes: ['Dragon Eater'],
   },
 
@@ -1816,6 +1840,7 @@
     description: 'Greatly increases damage dealt by the user on the next turn.',
     target: 'user',
     eggSkill: true,
+    effect: ['nextTurn'],
   },
 
   {
@@ -2188,6 +2213,7 @@
     description: 'Deals thunder damage that ignores defense to one enemy. Chance to strike first.',
     target: 'singleEnemy',
     eggSkill: true,
+    effect: ['priority'],
   },
 
   {
@@ -2484,7 +2510,7 @@
     wyvernfell: 40,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
-    effect: ['stun'],
+    effect: ['stun', 'priority'],
   },
 
   {
@@ -2509,6 +2535,7 @@
     description: 'Grants Attack Up to the user, and attacks become capable of inflicting Blastblight.',
     target: 'user',
     buff: ['attackUp'],
+    effect: ['procBlastblight'],
   },
 
   {
@@ -2647,6 +2674,7 @@
     wyvernfell: 10,
     description: 'Deals fire damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
     sizes: ['Firebrand+'],
   },
 
@@ -2662,6 +2690,7 @@
     wyvernfell: 10,
     description: 'Deals fire damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
     sizes: ['Firebrand'],
   },
 
@@ -2675,6 +2704,7 @@
     description: 'Grants Atk up, attacks become capable of inflicting Burn.',
     target: 'user',
     buff: ['attackUp'],
+    effect: ['procBurn'],
   },
 
   {
@@ -2843,6 +2873,7 @@
     stamina: 15,
     description: 'Increases damage dealt by the user on the next turn.',
     target: 'user',
+    effect: ['nextTurn'],
   },
 
   {
@@ -2924,7 +2955,7 @@
     size: 'none',
     type: 'all',
     element: 'all',
-    description: '-',
+    description: '',
   },
 
   {
@@ -3024,6 +3055,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy, inflicting greater damage with repeated use.',
     target: 'singleEnemy',
+    effect: ['spam'],
   },
 
   {
@@ -3113,6 +3145,7 @@
     wyvernfell: 30,
     description: 'Deals fire damage to one enemy. Targets inflicted with Burn take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
     sizes: ['Great Flaming Vortex+'],
   },
 
@@ -3128,6 +3161,7 @@
     wyvernfell: 40,
     description: 'Deals fire damage to one enemy. Targets inflicted with Burn take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
     sizes: ['Great Flaming Vortex'],
   },
 
@@ -3222,6 +3256,7 @@
     target: 'singleEnemy',
     breath: true,
     ailment: ['burn'],
+    effect: ['lowAccuracy'],
   },
 
   {
@@ -3248,6 +3283,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy'],
     sizes: ['Heavy Rampage+'],
   },
 
@@ -3263,6 +3299,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy'],
     sizes: ['Heavy Rampage'],
   },
 
@@ -3278,6 +3315,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy'],
     sizes: ['Heavy Spear+'],
   },
 
@@ -3293,6 +3331,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy'],
     sizes: ['Heavy Spear'],
   },
 
@@ -3307,6 +3346,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy'],
   },
 
   {
@@ -3321,6 +3361,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to all enemies. Causes recoil.',
     target: 'allEnemies',
+    effect: ['recoil'],
     sizes: ['Hell Horn+'],
   },
 
@@ -3336,6 +3377,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to all enemies. Causes recoil.',
     target: 'allEnemies',
+    effect: ['recoil'],
     sizes: ['Hell Horn'],
   },
 
@@ -3365,7 +3407,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to all enemies. Deals increased damage to those afflicted with Blastblight, then detonates it immediately.',
     target: 'allEnemies',
-    effect: ['explodeBlastblight'],
+    effect: ['chaser', 'explodeBlastblight'],
     sizes: ['Hellfire Retribution+'],
   },
 
@@ -3381,7 +3423,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to all enemies. Deals increased damage to those afflicted with Blastblight, then detonates it immediately.',
     target: 'allEnemies',
-    effect: ['explodeBlastblight'],
+    effect: ['chaser', 'explodeBlastblight'],
     sizes: ['Hellfire Retribution'],
   },
 
@@ -4072,6 +4114,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
   },
 
   {
@@ -4085,6 +4128,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
   },
 
   {
@@ -4098,6 +4142,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
   },
 
   {
@@ -4112,6 +4157,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
     sizes: ['Killer Tail+'],
   },
 
@@ -4127,6 +4173,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
     sizes: ['Killer Tail'],
   },
 
@@ -4283,6 +4330,7 @@
     wyvernfell: 50,
     description: 'Deals non-elemental damage to all, Causes recoil.',
     target: 'allEnemies',
+    effect: ['recoil'],
   },
 
   {
@@ -4296,6 +4344,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. Causes recoil damage to the user.',
     target: 'singleEnemy',
+    effect: ['recoil'],
   },
 
   {
@@ -4310,6 +4359,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. Causes recoil damage to the user.',
     target: 'singleEnemy',
+    effect: ['recoil'],
     sizes: ['Maximum Tackle+'],
   },
 
@@ -4325,6 +4375,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Causes recoil damage to the user.',
     target: 'singleEnemy',
+    effect: ['recoil'],
     sizes: ['Maximum Tackle'],
   },
 
@@ -4475,6 +4526,7 @@
     wyvernfell: 10,
     description: "Deals dragon damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
     sizes: ['Night Parasites+'],
   },
 
@@ -4490,6 +4542,7 @@
     wyvernfell: 10,
     description: "Deals dragon damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
     target: 'singleEnemy',
+    effect: ['leech'],
     sizes: ['Night Parasites'],
   },
 
@@ -4677,6 +4730,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with an abnormal status take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -4690,6 +4744,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with an abnormal status take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -4703,6 +4758,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with decreased stats take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -4768,6 +4824,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with Poison or Paralysis take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -4891,6 +4948,7 @@
     wyvernfell: 10,
     description: 'Deals thunder damage to one enemy. High chance of a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
   },
 
   {
@@ -5180,6 +5238,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. High chance to strike first.',
     target: 'singleEnemy',
+    effect: ['priority'],
     sizes: ['Rapid Bite+'],
   },
 
@@ -5195,6 +5254,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. High chance to strike first.',
     target: 'singleEnemy',
+    effect: ['priority'],
     sizes: ['Rapid Bite'],
   },
 
@@ -5266,7 +5326,7 @@
     wyvernfell: 50,
     description: 'Deals non-elemental damage to all enemies. Chance to stun, chance to strike first.',
     target: 'allEnemies',
-    effect: ['stun'],
+    effect: ['stun', 'priority'],
   },
 
   {
@@ -5317,7 +5377,6 @@
     stamina: 30,
     description: 'Grants Guard to the user.',
     target: 'user',
-    buff: ['guard'],
   },
 
   {
@@ -5670,6 +5729,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Bleeding. High chance of landing a critical hit.',
     target: 'allEnemies',
     ailment: ['bleeding'],
+    effect: ['crit'],
     sizes: ['Shredding Scales+'],
   },
 
@@ -5686,6 +5746,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Bleeding. High chance of landing a critical hit.',
     target: 'allEnemies',
     ailment: ['bleeding'],
+    effect: ['crit'],
     sizes: ['Shredding Scales'],
   },
 
@@ -5700,6 +5761,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
   },
 
   {
@@ -5712,6 +5774,7 @@
     power: 50,
     wyvernfell: 40,
     description: 'Deals water damage to one enemy. Targets inflicted with Sleep take more damage. High chance to strike first.',
+    effect: ['priority'],
     target: 'singleEnemy',
   },
 
@@ -5726,6 +5789,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with Sleep take more damage. High chance to strike first.',
     target: 'singleEnemy',
+    effect: ['chaser', 'priority'],
   },
 
   {
@@ -6002,6 +6066,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with Burn take more damage.',
     target: 'singleEnemy',
+    effect: ['chaser'],
   },
 
   {
@@ -6031,6 +6096,7 @@
     description: 'Deals fire damage that ignores defense to all enemies. Chance to inflict Burn. Low chance to hit.',
     target: 'allEnemies',
     ailment: ['burn'],
+    effect: ['lowAccuracy'],
     sizes: ['Spreading Beam+'],
   },
 
@@ -6047,6 +6113,7 @@
     description: 'Deals fire damage that ignores defense to all enemies. Chance to inflict Burn. Low chance to hit.',
     target: 'allEnemies',
     ailment: ['burn'],
+    effect: ['lowAccuracy'],
     sizes: ['Spreading Beam'],
   },
 
@@ -6195,7 +6262,7 @@
     wyvernfell: 50,
     description: 'Non-elemental damage to all, chance to stun, High chance to strike first.',
     target: 'allEnemies',
-    effect: ['stun'],
+    effect: ['stun', 'priority'],
   },
 
   {
@@ -6276,7 +6343,7 @@
     wyvernfell: 50,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
-    effect: ['stun'],
+    effect: ['stun', 'priority'],
   },
 
   {
@@ -6291,6 +6358,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy', 'crit'],
     sizes: ['Tail Twister+'],
   },
 
@@ -6306,6 +6374,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['lowAccuracy', 'crit'],
     sizes: ['Tail Twister'],
   },
 
@@ -6413,6 +6482,7 @@
     description: 'Grants Attack Up to the user, and attacks become capable of inflicting Paralysis.',
     target: 'user',
     buff: ['attackUp'],
+    effect: ['procParalysis'],
   },
 
   {
@@ -6496,6 +6566,7 @@
     wyvernfell: 30,
     description: 'Deals thunder damage to all enemies. Targets with decreased stats take more damage.',
     target: 'allEnemies',
+    effect: ['chaser'],
     sizes: ['Thunder Explosion+'],
   },
 
@@ -6511,6 +6582,7 @@
     wyvernfell: 30,
     description: 'Deals thunder damage to all enemies. Targets with decreased stats take more damage.',
     target: 'allEnemies',
+    effect: ['chaser'],
     sizes: ['Thunder Explosion'],
   },
 
@@ -6925,6 +6997,7 @@
     target: 'user',
     buff: ['fireAttackUp'],
     // debuff: ['defenseDown'], // TODO
+    effect: ['nextTurn'],
   },
 
   {
@@ -7331,6 +7404,7 @@
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt. Grants Dragon Attack Up to the user.",
     target: 'singleEnemy',
     buff: ['dragonAttackUp'],
+    effect: ['leech'],
   },
 
   {
@@ -7359,6 +7433,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
     sizes: ['Wild Fang+'],
   },
 
@@ -7374,6 +7449,7 @@
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
     target: 'singleEnemy',
+    effect: ['crit'],
     sizes: ['Wild Fang'],
   },
 ]

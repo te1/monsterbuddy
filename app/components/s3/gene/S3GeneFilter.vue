@@ -82,7 +82,7 @@
 
   const targets = computed(() => {
     return [
-      { label: 'All', value: 'ALL' },
+      { label: "Don't care", value: 'ALL' },
       ...allTargets.map((target) => ({
         label: formatSkillTarget(target),
         value: target,
@@ -92,7 +92,7 @@
 
   const ailments = computed(() => {
     return [
-      { label: 'All', value: 'ALL' },
+      { label: "Don't care", value: 'ALL' },
       ...allAilments.map((ailment) => ({
         label: formatSkillAilment(ailment),
         value: ailment,

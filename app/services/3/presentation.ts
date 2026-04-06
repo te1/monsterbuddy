@@ -393,9 +393,6 @@ export function formatSkillBuff(buff: SkillBuffType): string {
 
     case 'regenerate':
       return 'Regenerate';
-
-    case 'guard':
-      return 'Guard';
   }
 }
 
@@ -440,5 +437,38 @@ export function formatSkillEffect(effect: SkillEffectType): string {
 
     case 'stun':
       return 'Stun';
+
+    case 'spam':
+      return 'Repeated Use';
+
+    case 'crit':
+      return 'High Crit';
+
+    case 'recoil':
+      return 'Recoil Damage';
+
+    case 'nextTurn':
+      return 'On Next Turn';
+
+    case 'leech':
+      return 'Leech';
+
+    case 'lowAccuracy':
+      return 'Low Hit Chance';
+
+    case 'chaser':
+      return 'Chaser';
+
+    case 'priority':
+      return 'Priority';
+
+    case 'procBlastblight':
+      return 'Blastblight';
+
+    case 'procBurn':
+      return 'Burn';
+
+    case 'procParalysis':
+      return 'Paralysis';
   }
 }

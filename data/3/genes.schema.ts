@@ -48,7 +48,6 @@ export const SkillBuffTypeSchema = z.enum([
   'waterAttackUp',
   'wyvernfellUp',
   'regenerate',
-  'guard',
 ]);
 export type SkillBuffType = z.infer<typeof SkillBuffTypeSchema>;
 
@@ -65,11 +64,21 @@ export const SkillDebuffTypeSchema = z.enum([
 export type SkillDebuffType = z.infer<typeof SkillDebuffTypeSchema>;
 
 export const SkillEffectTypeSchema = z.enum([
-  //
   '1HitKo',
   'explodeBlastblight',
   'evade',
   'stun',
+  'spam', // inflicting greater damage with repeated use
+  'crit', // high chance of landing a critical hit
+  'recoil', // causes recoil damage
+  'nextTurn', // increases damage dealt on the next turn
+  'leech', // recovers HP by an amount relative to damage dealt
+  'lowAccuracy', // low hit rate
+  'chaser', // targets with ... / affected by ... take more damage
+  'priority', // high chance to strike first
+  'procBlastblight', // attacks become capable of inflicting Blastblight
+  'procBurn', // attacks become capable of inflicting Burn
+  'procParalysis', // attacks become capable of inflicting Paralysis
 ]);
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
