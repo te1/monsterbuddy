@@ -4,6 +4,7 @@
     allAilments,
     allBuffs,
     allDebuffs,
+    allEffects,
     allElements,
     allSizes,
     allTargets,
@@ -18,6 +19,7 @@
     formatSkillAilment,
     formatSkillBuff,
     formatSkillDebuff,
+    formatSkillEffect,
     formatSkillTarget,
   } from '~/services/3/presentation';
 
@@ -114,7 +116,7 @@
     return [
       { label: "Don't care", value: 'ALL' },
       ...allBuffs
-        .filter((buff) => buff !== 'staminaRegenUp' && buff !== 'fireDefenseUp')
+        .filter((buff) => !['staminaRegenUp', 'fireDefenseUp'].includes(buff))
         .map((buff) => ({
           label: formatSkillBuff(buff),
           value: buff,
@@ -132,7 +134,19 @@
     ];
   });
 
-  // TODO effect
+  const effects = computed(() => {
+    return [
+      { label: "Don't care", value: 'ALL' },
+      ...allEffects
+        .filter(
+          (effect) => !['evade', 'procBlastblight', 'procBurn', 'procParalysis'].includes(effect)
+        )
+        .map((effect) => ({
+          label: formatSkillEffect(effect),
+          value: effect,
+        })),
+    ];
+  });
 </script>
 
 <template>
@@ -247,7 +261,7 @@
         />
       </UFormField>
 
-      <UFormField label="Buffs" orientation="horizontal" :data-modal-layout="modalLayout">
+      <UFormField label="Buff" orientation="horizontal" :data-modal-layout="modalLayout">
         <USelect
           :modelValue="filter.buffFilter ?? 'ALL'"
           color="neutral"
@@ -259,7 +273,7 @@
         />
       </UFormField>
 
-      <UFormField label="Debuffs" orientation="horizontal" :data-modal-layout="modalLayout">
+      <UFormField label="Debuff" orientation="horizontal" :data-modal-layout="modalLayout">
         <USelect
           :modelValue="filter.debuffFilter ?? 'ALL'"
           color="neutral"
@@ -268,6 +282,18 @@
           class="w-full"
           :disabled="disabled"
           @update:modelValue="setFilter('debuffFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Effect" orientation="horizontal" :data-modal-layout="modalLayout">
+        <USelect
+          :modelValue="filter.effectFilter ?? 'ALL'"
+          color="neutral"
+          :variant="variant"
+          :items="effects"
+          class="w-full"
+          :disabled="disabled"
+          @update:modelValue="setFilter('effectFilter', $event)"
         />
       </UFormField>
     </div>

@@ -73,10 +73,21 @@ export const allDebuffs: SkillDebuffType[] = [
   'evasionDown',
 ] as const;
 export const allEffects: SkillEffectType[] = [
-  '1HitKo',
-  'explodeBlastblight',
-  'evade',
+  'priority',
+  'crit',
+  'spam',
+  'leech',
   'stun',
+  'chaser',
+  'nextTurn',
+  'explodeBlastblight',
+  '1HitKo',
+  'recoil',
+  'lowAccuracy',
+  'evade',
+  'procBlastblight',
+  'procBurn',
+  'procParalysis',
 ] as const;
 
 export function getGenesByName(name: string, geneList: Gene[] = genes): Gene[] {
