@@ -1,12 +1,13 @@
 <script lang="ts" setup>
   import type { FilterKey, Mode } from '~/stores/3/geneFilter';
-  import { allElements, allSizes, allTargets, allTypes } from '~/services/3/genes';
+  import { allAilments, allElements, allSizes, allTargets, allTypes } from '~/services/3/genes';
   import useGeneFilter from '~/stores/3/geneFilter';
   import useGeneSources from '~/stores/3/geneSources';
   import {
     formatGeneElement,
     formatGeneSize,
     formatGeneType,
+    formatSkillAilment,
     formatSkillTarget,
   } from '~/services/3/presentation';
 
@@ -89,7 +90,17 @@
     ];
   });
 
-  // TODO ailment, buff, debuff, effect
+  const ailments = computed(() => {
+    return [
+      { label: 'All', value: 'ALL' },
+      ...allAilments.map((ailment) => ({
+        label: formatSkillAilment(ailment),
+        value: ailment,
+      })),
+    ];
+  });
+
+  // TODO buff, debuff, effect
 </script>
 
 <template>
@@ -189,6 +200,18 @@
           class="w-full"
           :disabled="disabled"
           @update:modelValue="setFilter('targetFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Ailment" orientation="horizontal" :data-modal-layout="modalLayout">
+        <USelect
+          :modelValue="filter.ailmentFilter ?? 'ALL'"
+          color="neutral"
+          :variant="variant"
+          :items="ailments"
+          class="w-full"
+          :disabled="disabled"
+          @update:modelValue="setFilter('ailmentFilter', $event)"
         />
       </UFormField>
     </div>

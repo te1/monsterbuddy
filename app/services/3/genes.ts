@@ -1,4 +1,3 @@
-import { intersection } from 'es-toolkit/array';
 import type {
   Gene,
   GeneElement,
@@ -35,6 +34,46 @@ export const allTargets: SkillTarget[] = [
   'allAllies',
   'user',
 ] as const;
+export const allAilments: SkillAilmentType[] = [
+  'poison',
+  'noxiousPoison',
+  'severePoison',
+  'burn',
+  'paralysis',
+  'sleep',
+  'blastblight',
+  'bleeding',
+  'darkness',
+  'stun',
+] as const;
+export const allBuffs: SkillBuffType[] = [
+  'attackUp',
+  'criticalUp',
+  'defenseUp',
+  'dodgeUp',
+  'dragonAttackUp',
+  'fireAttackUp',
+  'fireDefenseUp',
+  'iceAttackUp',
+  'inflictRateUp',
+  'speedUp',
+  'staminaRegenUp',
+  'thunderAttackUp',
+  'waterAttackUp',
+  'wyvernfellUp',
+  'regenerate',
+] as const;
+export const allDebuffs: SkillDebuffType[] = [
+  'accuracyDown',
+  'attackDown',
+  'defenseDown',
+  'dragonDefenseDown',
+  'evasionDown',
+  'speedDown',
+  'thunderDefenseDown',
+  'wyvernsoulDefenseDown',
+] as const;
+export const allEffects: SkillEffectType[] = ['1HitKo'] as const;
 
 export function getGenesByName(name: string, geneList: Gene[] = genes): Gene[] {
   const query = name.toLowerCase();
@@ -123,38 +162,18 @@ export function getGenesByEggSkill(mustBeEggSkill: boolean, geneList: Gene[] = g
   return geneList.filter((gene) => (gene.eggSkill ?? false) === mustBeEggSkill);
 }
 
-export function getGenesByAilment(
-  ailment: SkillAilmentType | SkillAilmentType[],
-  geneList: Gene[] = genes
-): Gene[] {
-  const ailments = Array.isArray(ailment) ? ailment : [ailment];
-
-  return geneList.filter((gene) => intersection(gene.ailment ?? [], ailments).length > 0);
+export function getGenesByAilment(ailment: SkillAilmentType, geneList: Gene[] = genes): Gene[] {
+  return geneList.filter((gene) => gene.ailment?.includes(ailment) ?? false);
 }
 
-export function getGenesByBuff(
-  buff: SkillBuffType | SkillBuffType[],
-  geneList: Gene[] = genes
-): Gene[] {
-  const buffs = Array.isArray(buff) ? buff : [buff];
-
-  return geneList.filter((gene) => intersection(gene.buff ?? [], buffs).length > 0);
+export function getGenesByBuff(buff: SkillBuffType, geneList: Gene[] = genes): Gene[] {
+  return geneList.filter((gene) => gene.buff?.includes(buff) ?? false);
 }
 
-export function getGenesByDebuff(
-  debuff: SkillDebuffType | SkillDebuffType[],
-  geneList: Gene[] = genes
-): Gene[] {
-  const debuffs = Array.isArray(debuff) ? debuff : [debuff];
-
-  return geneList.filter((gene) => intersection(gene.debuff ?? [], debuffs).length > 0);
+export function getGenesByDebuff(debuff: SkillDebuffType, geneList: Gene[] = genes): Gene[] {
+  return geneList.filter((gene) => gene.debuff?.includes(debuff) ?? false);
 }
 
-export function getGenesByEffect(
-  effect: SkillEffectType | SkillEffectType[],
-  geneList: Gene[] = genes
-): Gene[] {
-  const effects = Array.isArray(effect) ? effect : [effect];
-
-  return geneList.filter((gene) => intersection(gene.effect ?? [], effects).length > 0);
+export function getGenesByEffect(effect: SkillEffectType, geneList: Gene[] = genes): Gene[] {
+  return geneList.filter((gene) => gene.effect?.includes(effect) ?? false);
 }
