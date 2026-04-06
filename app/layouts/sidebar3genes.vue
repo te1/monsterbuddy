@@ -3,7 +3,7 @@
   import { take } from 'es-toolkit/array';
   import useHistoryStore from '~/stores/3/historyStore';
 
-  // const route = useRoute();
+  const route = useRoute();
   const history = useHistoryStore();
 
   const maxItems = 12;
@@ -18,10 +18,10 @@
     { label: 'Bookmarks', slot: 'pinned' },
   ];
 
-  // const sidebarComponent = computed(() => {
-  //   const component = route.meta.sidebarComponent;
-  //   return component ? toRaw(component) : undefined;
-  // });
+  const sidebarComponent = computed(() => {
+    const component = route.meta.sidebarComponent;
+    return component ? toRaw(component) : undefined;
+  });
 </script>
 
 <template>
@@ -35,7 +35,7 @@
           :ui="{ container: 'flex flex-col gap-4' }"
           hydrateOnIdle
         >
-          <!-- <component :is="sidebarComponent" v-if="sidebarComponent" /> -->
+          <component :is="sidebarComponent" v-if="sidebarComponent" />
 
           <UTabs color="neutral" variant="link" :items="tabs">
             <template #recent>
