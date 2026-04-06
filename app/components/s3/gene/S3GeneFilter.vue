@@ -76,7 +76,6 @@
 
   // TODO ailment, buff, debuff, effect
   // TODO target
-  // TODO egg skill
 </script>
 
 <template>
@@ -153,6 +152,17 @@
           class="w-full"
           :disabled="disabled"
           @update:modelValue="setFilter('sizeFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Egg Skill" orientation="horizontal" :data-modal-layout="modalLayout">
+        <AppFilterToggle
+          :modelValue="filter.eggSkillFilter"
+          :texts="['Include', 'Only', 'Exclude']"
+          class="w-full"
+          :disabled="disabled"
+          :modalLayout="modalLayout"
+          @update:modelValue="setFilter('eggSkillFilter', $event)"
         />
       </UFormField>
     </div>
