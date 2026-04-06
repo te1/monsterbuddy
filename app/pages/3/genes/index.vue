@@ -12,13 +12,17 @@
 
   useSeoMeta({
     title: `Gene List In ${gameTypeToFullLabel('mhst3')}`,
-    description: 'Overview of all genes and on which monsties they can be found',
+    description: 'Overview of all genes and on which monsties they can be found', // TODO seo
   });
   const headline = gameTypeToFullName('mhst3');
 
   useSchemaOrg([
     defineBreadcrumb({
-      itemListElement: [{ name: gameTypeToShortLabel('mhst3'), item: '/3' }, { name: 'Genes' }],
+      itemListElement: [
+        //
+        { name: gameTypeToShortLabel('mhst3'), item: '/3' },
+        { name: 'Genes' },
+      ],
     }),
   ]);
 
@@ -259,15 +263,32 @@
       </div>
 
       <ul class="flex flex-col gap-3">
-        <li v-for="gene in filter.sortedGenes" :key="gene.slug">
-          <NuxtLink
-            :to="`/3/genes/${gene.slug}`"
-            prefetchOn="interaction"
-            class="flex items-center gap-2"
+        <li v-for="group in groups" :key="group.key">
+          <div
+            v-if="filter.isGrouped"
+            class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
           >
-            <S3GeneIcon :gene="gene" noTooltip />
-            {{ gene.name }}
-          </NuxtLink>
+            <!-- TODO group icons -->
+            <!-- <UIcon v-if="filter.sortKey === 'genus'" name="ph:dna" class="w-6 text-muted" /> -->
+
+            <div class="font-semibold" v-text="group.key" />
+          </div>
+
+          <div class="grid gap-3 md:grid-cols-2">
+            <NuxtLink
+              v-for="item in group.genes"
+              :key="item.gene.slug"
+              :to="`/3/genes/${item.gene.slug}`"
+              prefetchOn="interaction"
+            >
+              <S3GeneListItem
+                :gene="item.gene"
+                :mode="filter.mode"
+                :eager="item.eager"
+                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
+              />
+            </NuxtLink>
+          </div>
         </li>
       </ul>
 

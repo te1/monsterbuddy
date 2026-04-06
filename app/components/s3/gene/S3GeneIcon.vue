@@ -29,10 +29,12 @@
     defineProps<{
       gene: Gene;
       noTooltip?: boolean;
+      eager?: boolean;
       size?: string;
     }>(),
     {
       noTooltip: false,
+      eager: false,
       size: 'size-14',
     }
   );
@@ -106,15 +108,38 @@
 <template>
   <DefineIconTemplate>
     <div class="relative" :class="size" v-bind="$attrs">
-      <img v-if="sizeSrc" :src="sizeSrc" :alt="gene.size" class="absolute inset-0" />
-      <img v-if="elementSrc" :src="elementSrc" :alt="gene.element" class="absolute inset-0" />
+      <img
+        v-if="sizeSrc"
+        :src="sizeSrc"
+        :alt="gene.size"
+        class="absolute inset-0"
+        :loading="eager ? 'eager' : 'lazy'"
+        decoding="async"
+      />
+      <img
+        v-if="elementSrc"
+        :src="elementSrc"
+        :alt="gene.element"
+        class="absolute inset-0"
+        :loading="eager ? 'eager' : 'lazy'"
+        decoding="async"
+      />
       <img
         v-if="typeSrc"
         :src="typeSrc"
         :alt="gene.type"
         class="absolute inset-1.75 drop-shadow-sm drop-shadow-black"
+        :loading="eager ? 'eager' : 'lazy'"
+        decoding="async"
       />
-      <img v-if="gene.size === '+'" :src="rankS" alt="Rank S" class="absolute inset-0" />
+      <img
+        v-if="gene.size === '+'"
+        :src="rankS"
+        alt="Rank S"
+        class="absolute inset-0"
+        :loading="eager ? 'eager' : 'lazy'"
+        decoding="async"
+      />
     </div>
   </DefineIconTemplate>
 

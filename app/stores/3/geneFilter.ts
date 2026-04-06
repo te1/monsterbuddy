@@ -194,6 +194,8 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
   const groupedGenes = computed<Record<string, Gene[]>>(() => {
     const sorted = sortedGenes.value;
 
+    // TODO grouping
+
     switch (sortKey.value) {
       case 'size':
         return groupBy(sorted, (item) => item.size);
@@ -213,6 +215,8 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
     if (preserveSourceOrder.value) {
       return null;
     }
+
+    // TODO pills
 
     switch (sortKey.value) {
       case 'name':
@@ -259,6 +263,8 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
 
   const activeFilters = computed(() => {
     const result: { name: FilterKey; value: string }[] = [];
+
+    // TODO pills
 
     if (sizeFilter.value != null) {
       result.push({ name: 'sizeFilter', value: sizeFilter.value });
