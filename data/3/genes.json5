@@ -343,6 +343,7 @@
     stamina: 20,
     description: 'Grants Regenerate to all allies.',
     target: 'allAllies',
+    buff: ['regenerate'],
   },
 
   {
@@ -414,6 +415,8 @@
     power: 90,
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
+    target: 'singleEnemy',
+    effect: ['1HitKo'],
     sizes: ['Assassin Tail'],
   },
 
@@ -440,6 +443,7 @@
     description: 'Grants Thunder Attack Up to the user, but also lowers defense. Greatly increases damage dealt by the user on the next turn.',
     target: 'user',
     buff: ['thunderAttackUp'],
+    // debuff: ['defenseDown'], // TODO
   },
 
   {
@@ -509,6 +513,7 @@
     description: 'Grants Attack Up and Speed Up to all allies, but also reduces Defense and Evasion.',
     target: 'allAllies',
     buff: ['attackUp', 'speedUp'],
+    // debuff: ['defenseDown', 'evasionDown'], // TODO
   },
 
   {
@@ -548,7 +553,7 @@
     stamina: 25,
     description: 'Grants Dragon Attack Up and Wyvernfell Up to the user.',
     target: 'user',
-    buff: ['attackUp'],
+    buff: ['dragonAttackUp', 'wyvernfellUp'],
   },
 
   {
@@ -573,7 +578,7 @@
     active: true,
     stamina: 20,
     description: 'Grants Fire Attack Up and Fire Defense Up to all allies.',
-    target: 'allEnemies',
+    target: 'allAllies',
     buff: ['fireAttackUp', 'fireDefenseUp'],
   },
 
@@ -682,6 +687,7 @@
     power: 100,
     wyvernfell: 10,
     description: "Deals thunder damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
+    target: 'singleEnemy',
     sizes: ['Bolt Eater'],
   },
 
@@ -697,7 +703,7 @@
   },
 
   {
-    name: 'Bombardier ((S))',
+    name: 'Bombardier (S)',
     baseName: 'Bombardier',
     size: 'S',
     type: 'speed',
@@ -713,7 +719,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Increases damage dealt by Blastblight and explosives.',
-    sizes: ['Bombardier ((S))', 'Bombardier (L)', 'Bombardier (XL)'],
+    sizes: ['Bombardier (S)', 'Bombardier (L)', 'Bombardier (XL)'],
   },
 
   {
@@ -723,7 +729,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Greatly increases damage dealt by Blastblight and explosives.',
-    sizes: ['Bombardier ((S))', 'Bombardier (M)', 'Bombardier (XL)'],
+    sizes: ['Bombardier (S)', 'Bombardier (M)', 'Bombardier (XL)'],
   },
 
   {
@@ -733,7 +739,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Significantly increases damage dealt by Blastblight and explosives.',
-    sizes: ['Bombardier ((S))', 'Bombardier (M)', 'Bombardier (L)'],
+    sizes: ['Bombardier (S)', 'Bombardier (M)', 'Bombardier (L)'],
   },
 
   {
@@ -745,7 +751,7 @@
     stamina: 25,
     description: 'Grants Water Attack Up, Dodge Up, and Regenerate to the user.',
     target: 'user',
-    buff: ['waterAttackUp'],
+    buff: ['waterAttackUp', 'dodgeUp', 'regenerate'],
   },
 
   {
@@ -821,6 +827,7 @@
     power: 90,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy.',
+    target: 'singleEnemy',
     sizes: ['Cannonball Slam'],
   },
 
@@ -852,6 +859,9 @@
     power: 100,
     wyvernfell: 30,
     description: 'Deals fire damage that ignores defense to all enemies at end of turn. Chance to burn.',
+    target: 'allEnemies',
+    breath: true,
+    ailment: ['burn'],
     sizes: ['Charged Spread Beam'],
   },
 
@@ -881,6 +891,7 @@
     power: 70,
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
+    target: 'singleEnemy',
     sizes: ['Chata Stamp'],
   },
 
@@ -980,6 +991,7 @@
     power: 120,
     wyvernfell: 20,
     description: 'Deals ice damage to one enemy.',
+    target: 'singleEnemy',
     sizes: ['Crescent Strike'],
   },
 
@@ -1168,6 +1180,8 @@
     power: 120,
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
+    target: 'singleEnemy',
+    ailment: ['severePoison'],
     sizes: ['Cunning Blow'],
   },
 
@@ -1220,6 +1234,7 @@
     stamina: 20,
     description: 'Grants Blood Rite to the user.',
     target: 'user',
+    // buff: ['bloodRite'], // TODO
   },
 
   {
@@ -1288,6 +1303,7 @@
     power: 120,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to all enemies. Causes recoil damage to the user.',
+    target: 'allEnemies',
     sizes: ['Deadly Horn Jab'],
   },
 
@@ -1438,6 +1454,8 @@
     power: 180,
     wyvernfell: 60,
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
+    target: 'singleEnemy',
+    ailment: ['stun'],
   },
 
   {
@@ -1466,6 +1484,7 @@
     power: 80,
     wyvernfell: 20,
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt. Targets inflicted with Bleeding take more damage.",
+    target: 'singleEnemy',
     sizes: ['Devour'],
   },
 
@@ -1727,6 +1746,7 @@
     power: 100,
     wyvernfell: 10,
     description: "Deals dragon damage to one enemy, then recovers the user's HP by an amount relative to damage dealt.",
+    target: 'singleEnemy',
     sizes: ['Dragon Eater'],
   },
 
@@ -1860,6 +1880,7 @@
     description: 'Grants Wyvernfell Up to all allies. Each use increases the effect.',
     target: 'allAllies',
     eggSkill: true,
+    buff: ['wyvernfellUp'],
   },
 
   {
@@ -2008,6 +2029,7 @@
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
     eggSkill: true,
+    debuff: ['speedDown'],
   },
 
   {
@@ -2112,7 +2134,7 @@
     description: 'Grants Critical Up, Dodge Up, and Speed Up to the user.',
     target: 'user',
     eggSkill: true,
-    buff: ['criticalUp'],
+    buff: ['criticalUp', 'dodgeUp', 'speedUp'],
   },
 
   {
@@ -2303,6 +2325,8 @@
     power: 100,
     wyvernfell: 50,
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
+    target: 'allEnemies',
+    ailment: ['burn'],
     sizes: ['Encompassing Flames'],
   },
 
@@ -2428,6 +2452,9 @@
     power: 100,
     wyvernfell: 40,
     description: 'Deals fire damage to all enemies. Chance to inflict Blastblight.',
+    breath: true,
+    target: 'allEnemies',
+    ailment: ['blastblight'],
     sizes: ['Explosive Blast'],
   },
 
@@ -2634,6 +2661,7 @@
     power: 120,
     wyvernfell: 10,
     description: 'Deals fire damage to one enemy. High chance of landing a critical hit.',
+    target: 'singleEnemy',
     sizes: ['Firebrand'],
   },
 
@@ -2645,6 +2673,7 @@
     active: true,
     stamina: 25,
     description: 'Grants Atk up, attacks become capable of inflicting Burn.',
+    target: 'user',
     buff: ['attackUp'],
   },
 
@@ -2675,6 +2704,8 @@
     power: 80,
     wyvernfell: 30,
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
+    target: 'singleEnemy',
+    ailment: ['burn'],
     sizes: ['Flame Chakram'],
   },
 
@@ -2706,6 +2737,9 @@
     power: 100,
     wyvernfell: 40,
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
+    target: 'allEnemies',
+    breath: true,
+    ailment: ['burn'],
     sizes: ['Flame Tempest'],
   },
 
@@ -2753,6 +2787,7 @@
     wyvernfell: 50,
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
+    breath: true,
     ailment: ['burn'],
     sizes: ['Flare Cluster'],
   },
@@ -2862,6 +2897,7 @@
     wyvernfell: 20,
     description: 'Deals water damage to one enemy and inflicts Accuracy Down. Chance to inflict Burn.',
     target: 'singleEnemy',
+    ailment: ['burn'],
     debuff: ['accuracyDown'],
     sizes: ['Foxflame Bubbles+'],
   },
@@ -2877,6 +2913,9 @@
     power: 70,
     wyvernfell: 20,
     description: 'Deals water damage to one enemy and inflicts Accuracy Down. Chance to inflict Burn.',
+    target: 'singleEnemy',
+    ailment: ['burn'],
+    debuff: ['accuracyDown'],
     sizes: ['Foxflame Bubbles'],
   },
 
@@ -2914,6 +2953,7 @@
     power: 90,
     wyvernfell: 50,
     description: 'Deals ice damage to all enemies.',
+    target: 'allEnemies',
     sizes: ['Freezing Burst'],
   },
 
@@ -2969,6 +3009,7 @@
     power: 120,
     wyvernfell: 10,
     description: 'Deals ice damage to one enemy.',
+    target: 'singleEnemy',
     sizes: ['Frosty Furrow'],
   },
 
@@ -3012,6 +3053,8 @@
     power: 180,
     wyvernfell: 70,
     description: 'Deals non-elemental damage to random enemies. Chance to inflict Poison, Paralysis, and Darkness.',
+    target: 'randomEnemy',
+    ailment: ['poison', 'paralysis', 'darkness'],
     sizes: ['Fruit Frenzy'],
   },
 
@@ -3026,7 +3069,6 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy.',
     target: 'singleEnemy',
-    ailment: ['poison', 'paralysis', 'darkness'],
   },
 
   {
@@ -3055,6 +3097,7 @@
     power: 30,
     wyvernfell: 70,
     description: 'Deals non-elemental damage to all enemies, then sets a trap that continuously deals non-elemental damage.',
+    target: 'allEnemies',
     sizes: ['Gale Trap'],
   },
 
@@ -3084,6 +3127,7 @@
     power: 80,
     wyvernfell: 40,
     description: 'Deals fire damage to one enemy. Targets inflicted with Burn take more damage.',
+    target: 'singleEnemy',
     sizes: ['Great Flaming Vortex'],
   },
 
@@ -3248,6 +3292,7 @@
     power: 100,
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
+    target: 'singleEnemy',
     sizes: ['Heavy Spear'],
   },
 
@@ -3290,6 +3335,7 @@
     power: 160,
     wyvernfell: 20,
     description: 'Deals non-elemental damage to all enemies. Causes recoil.',
+    target: 'allEnemies',
     sizes: ['Hell Horn'],
   },
 
@@ -3319,6 +3365,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to all enemies. Deals increased damage to those afflicted with Blastblight, then detonates it immediately.',
     target: 'allEnemies',
+    effect: ['explodeBlastblight'],
     sizes: ['Hellfire Retribution+'],
   },
 
@@ -3333,6 +3380,8 @@
     power: 100,
     wyvernfell: 30,
     description: 'Deals non-elemental damage to all enemies. Deals increased damage to those afflicted with Blastblight, then detonates it immediately.',
+    target: 'allEnemies',
+    effect: ['explodeBlastblight'],
     sizes: ['Hellfire Retribution'],
   },
 
@@ -3399,7 +3448,7 @@
     stamina: 20,
     description: 'Grants Thunder Attack Up to the user.',
     target: 'user',
-    buff: ['attackUp'],
+    buff: ['thunderAttackUp'],
   },
 
   {
@@ -3411,6 +3460,7 @@
     stamina: 10,
     description: 'Grants Regenerate to the user.',
     target: 'user',
+    buff: ['regenerate'],
   },
 
   {
@@ -3539,6 +3589,7 @@
     power: 80,
     wyvernfell: 50,
     description: 'Deals non-elemental damage to all enemies.',
+    target: 'allEnemies',
     sizes: ['Hyperspace Tackle'],
   },
 
@@ -3553,6 +3604,7 @@
     description: 'Grants Wyvernfell Up and Defense Up to the user, but also reduces Speed.',
     target: 'user',
     buff: ['wyvernfellUp', 'defenseUp'],
+    // debuff: ['speedDown'], // TODO
     sizes: ['Ice Armor+'],
   },
 
@@ -3565,6 +3617,9 @@
     active: true,
     stamina: 20,
     description: 'Grants Wyvernfell Up and Defense Up to the user, but also reduces Speed.',
+    target: 'user',
+    buff: ['wyvernfellUp', 'defenseUp'],
+    // debuff: ['speedDown'], // TODO
     sizes: ['Ice Armor'],
   },
 
@@ -3718,6 +3773,9 @@
     power: 70,
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Defense Down.',
+    target: 'singleEnemy',
+    // breath: true, // TODO
+    debuff: ['defenseDown'],
     sizes: ['Icicle Breath+'],
   },
 
@@ -3732,6 +3790,9 @@
     power: 70,
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Defense Down.',
+    target: 'singleEnemy',
+    // breath: true, // TODO
+    debuff: ['defenseDown'],
     sizes: ['Icicle Breath'],
   },
 
@@ -3745,6 +3806,8 @@
     power: 240,
     wyvernfell: 50,
     description: 'Deals ice damage to random enemies and inflicts Accuracy Down.',
+    target: 'randomEnemy',
+    debuff: ['accuracyDown'],
   },
 
   {
@@ -3758,6 +3821,7 @@
     wyvernfell: 10,
     description: 'Deals fire damage to one enemy. Detonates Blastblight on targets.',
     target: 'singleEnemy',
+    effect: ['explodeBlastblight'],
   },
 
   {
@@ -3801,6 +3865,8 @@
     power: 90,
     wyvernfell: 50,
     description: 'Deals fire damage to all enemies. Chance to inflict Noxious Poison and Paralysis.',
+    target: 'allEnemies',
+    ailment: ['noxiousPoison', 'paralysis'],
     sizes: ['Infernal Flames'],
   },
 
@@ -4154,6 +4220,7 @@
     wyvernfell: 50,
     description: 'Deals fire damage to all enemies. Detonates Blastblight on targets.',
     target: 'allEnemies',
+    effect: ['explodeBlastblight'],
     sizes: ['Magma Counter+'],
   },
 
@@ -4168,6 +4235,8 @@
     power: 80,
     wyvernfell: 60,
     description: 'Deals fire damage to all enemies. Detonates Blastblight on targets.',
+    target: 'allEnemies',
+    effect: ['explodeBlastblight'],
     sizes: ['Magma Counter'],
   },
 
@@ -4198,6 +4267,8 @@
     power: 90,
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy, but also inflicts Defense Down on the user.',
+    target: 'singleEnemy',
+    debuff: ['defenseDown'],
     sizes: ['Maximum Claw Slash'],
   },
 
@@ -4253,6 +4324,7 @@
     power: 100,
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Causes recoil damage to the user.',
+    target: 'singleEnemy',
     sizes: ['Maximum Tackle'],
   },
 
@@ -4289,6 +4361,7 @@
     description: 'Grants Attack Up and Defense Up to the user, but also reduces Speed.',
     target: 'user',
     buff: ['attackUp', 'defenseUp'],
+    // debuff: ['speedDown'], // TODO
     sizes: ['Mud Armor+'],
   },
 
@@ -4301,6 +4374,9 @@
     active: true,
     stamina: 20,
     description: 'Grants Attack Up and Defense Up to the user, but also reduces Speed.',
+    target: 'user',
+    buff: ['attackUp', 'defenseUp'],
+    // debuff: ['speedDown'], // TODO
     sizes: ['Mud Armor'],
   },
 
@@ -4369,6 +4445,7 @@
     power: 70,
     wyvernfell: 50,
     description: 'Deals water damage to all enemies, then sets a trap that continuously deals water damage.',
+    target: 'allEnemies',
     sizes: ['Muddy Hell'],
   },
 
@@ -4382,6 +4459,8 @@
     power: 90,
     wyvernfell: 10,
     description: 'Deals water damage to one enemy and inflicts Thunder Defense Down and Speed Down.',
+    target: 'singleEnemy',
+    debuff: ['thunderDefenseDown', 'speedDown'],
   },
 
   {
@@ -4547,6 +4626,9 @@
     power: 90,
     wyvernfell: 20,
     description: 'Deals water damage to one enemy. Chance to inflict Noxious Poison.',
+    target: 'singleEnemy',
+    breath: true,
+    ailment: ['noxiousPoison'],
     sizes: ['Noxious Spit'],
   },
 
@@ -4578,6 +4660,9 @@
     power: 70,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Noxious Poison.',
+    target: 'singleEnemy',
+    breath: true,
+    ailment: ['noxiousPoison'],
     sizes: ['Noxious Venom'],
   },
 
@@ -4604,6 +4689,7 @@
     power: 70,
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Targets inflicted with an abnormal status take more damage.',
+    target: 'singleEnemy',
   },
 
   {
@@ -4924,6 +5010,8 @@
     power: 90,
     wyvernfell: 20,
     description: 'Non-elemental damage to one, chance to poison',
+    target: 'singleEnemy',
+    ailment: ['poison'],
     sizes: ['Poison Tail'],
   },
 
@@ -4993,6 +5081,7 @@
     power: 70,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Guaranteed to hit.',
+    target: 'singleEnemy',
     sizes: ['Prancing Back Kick'],
   },
 
@@ -5075,6 +5164,7 @@
     power: 150,
     wyvernfell: 10,
     description: 'Deals thunder damage to one enemy.',
+    target: 'singleEnemy',
     sizes: ['Railgun'],
   },
 
@@ -5104,6 +5194,7 @@
     power: 70,
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. High chance to strike first.',
+    target: 'singleEnemy',
     sizes: ['Rapid Bite'],
   },
 
@@ -5226,6 +5317,7 @@
     stamina: 30,
     description: 'Grants Guard to the user.',
     target: 'user',
+    buff: ['guard'],
   },
 
   {
@@ -5295,6 +5387,7 @@
     active: true,
     stamina: 50,
     description: 'Inflicts Attack Down on all enemies.',
+    target: 'allEnemies',
     debuff: ['attackDown'],
     sizes: ['Royal Decree+'],
   },
@@ -5308,6 +5401,8 @@
     active: true,
     stamina: 45,
     description: 'Inflicts Attack Down on all enemies.',
+    target: 'allEnemies',
+    debuff: ['attackDown'],
     sizes: ['Royal Decree'],
   },
 
@@ -5379,6 +5474,9 @@
     power: 100,
     wyvernfell: 20,
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
+    target: 'singleEnemy',
+    breath: true,
+    ailment: ['burn'],
     sizes: ['Savage Fireball'],
   },
 
@@ -5586,6 +5684,8 @@
     power: 100,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Bleeding. High chance of landing a critical hit.',
+    target: 'allEnemies',
+    ailment: ['bleeding'],
     sizes: ['Shredding Scales'],
   },
 
@@ -5733,6 +5833,8 @@
     power: 70,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
+    target: 'singleEnemy',
+    ailment: ['blastblight'],
     sizes: ['Slime Stomp'],
   },
 
@@ -5831,6 +5933,8 @@
     power: 80,
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
+    target: 'singleEnemy',
+    debuff: ['speedDown'],
     sizes: ['Snowball Attack'],
   },
 
@@ -5941,6 +6045,8 @@
     power: 90,
     wyvernfell: 50,
     description: 'Deals fire damage that ignores defense to all enemies. Chance to inflict Burn. Low chance to hit.',
+    target: 'allEnemies',
+    ailment: ['burn'],
     sizes: ['Spreading Beam'],
   },
 
@@ -6050,6 +6156,7 @@
     power: 100,
     wyvernfell: 40,
     description: 'Deals water damage to all enemies.',
+    target: 'allEnemies',
     sizes: ['Steam Break'],
   },
 
@@ -6198,6 +6305,7 @@
     power: 70,
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
+    target: 'singleEnemy',
     sizes: ['Tail Twister'],
   },
 
@@ -6402,6 +6510,7 @@
     power: 100,
     wyvernfell: 30,
     description: 'Deals thunder damage to all enemies. Targets with decreased stats take more damage.',
+    target: 'allEnemies',
     sizes: ['Thunder Explosion'],
   },
 
@@ -6429,7 +6538,7 @@
     power: 90,
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
-    target: 'singleEnemy',
+    target: 'allEnemies',
     sizes: ['Thunder Rampage+'],
   },
 
@@ -6444,6 +6553,7 @@
     power: 100,
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
+    target: 'allEnemies',
     sizes: ['Thunder Rampage'],
   },
 
@@ -6474,6 +6584,8 @@
     power: 100,
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies and inflicts Thunder Defense Down.',
+    target: 'allEnemies',
+    debuff: ['thunderDefenseDown'],
     sizes: ['Thunder Smash'],
   },
 
@@ -6503,6 +6615,7 @@
     power: 40,
     wyvernfell: 60,
     description: 'Deals thunder damage to all enemies, then sets a trap that continuously deals thunder damage.',
+    target: 'allEnemies',
     sizes: ['Thunder Trap'],
   },
 
@@ -6577,6 +6690,8 @@
     power: 90,
     wyvernfell: 10,
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
+    target: 'singleEnemy',
+    ailment: ['paralysis'],
     sizes: ['Thunderbug Blitz'],
   },
 
@@ -6677,6 +6792,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison and 1-Hit KO.',
     target: 'singleEnemy',
     ailment: ['poison'],
+    effect: ['1HitKo'],
     sizes: ['Toxic Needle+'],
   },
 
@@ -6691,6 +6807,9 @@
     power: 90,
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison and 1-Hit KO.',
+    target: 'singleEnemy',
+    ailment: ['poison'],
+    effect: ['1HitKo'],
     sizes: ['Toxic Needle'],
   },
 
@@ -6705,7 +6824,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Noxious Poison.',
     target: 'allEnemies',
-    ailment: ['poison'],
+    ailment: ['noxiousPoison'],
   },
 
   {
@@ -6730,7 +6849,7 @@
     stamina: 30,
     description: 'Grants Thunder Attack Up to the user.',
     target: 'user',
-    buff: ['attackUp'],
+    buff: ['thunderAttackUp'],
   },
 
   {
@@ -6790,6 +6909,8 @@
     power: 120,
     wyvernfell: 30,
     description: 'Non-elemental damage to all, chance to bleed.',
+    target: 'allEnemies',
+    ailment: ['bleeding'],
     sizes: ['Vacuum Blast'],
   },
 
@@ -6803,6 +6924,7 @@
     description: 'Grants Fire Attack Up to the user, but also lowers defense. Increases damage dealt by the user on the next turn.',
     target: 'user',
     buff: ['fireAttackUp'],
+    // debuff: ['defenseDown'], // TODO
   },
 
   {
@@ -6844,6 +6966,7 @@
     power: 70,
     wyvernfell: 40,
     description: "Non-elemental damage to one, more damage the lower the user's HP is.",
+    target: 'singleEnemy',
     sizes: ['Vengeful Tackle'],
   },
 
@@ -6887,6 +7010,7 @@
     wyvernfell: 50,
     description: 'Deals non-elemental damage to all enemies and inflicts Poison.',
     target: 'allEnemies',
+    ailment: ['poison'],
     sizes: ['Venom Blast+'],
   },
 
@@ -6901,6 +7025,8 @@
     power: 80,
     wyvernfell: 50,
     description: 'Deals non-elemental damage to all enemies and inflicts Poison.',
+    target: 'allEnemies',
+    ailment: ['poison'],
     sizes: ['Venom Blast'],
   },
 
@@ -7177,6 +7303,7 @@
     stamina: 80,
     description: 'Evades attacks this and next turn.',
     target: 'user',
+    effect: ['evade'],
   },
 
   {
@@ -7189,6 +7316,7 @@
     power: 150,
     wyvernfell: 10,
     description: 'Deals ice damage to one enemy.',
+    target: 'singleEnemy',
   },
 
   {
@@ -7202,7 +7330,7 @@
     wyvernfell: 20,
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt. Grants Dragon Attack Up to the user.",
     target: 'singleEnemy',
-    buff: ['attackUp'],
+    buff: ['dragonAttackUp'],
   },
 
   {
@@ -7245,6 +7373,7 @@
     power: 90,
     wyvernfell: 10,
     description: 'Deals non-elemental damage to one enemy. High chance of landing a critical hit.',
+    target: 'singleEnemy',
     sizes: ['Wild Fang'],
   },
 ]

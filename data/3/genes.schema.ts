@@ -49,6 +49,7 @@ export const SkillBuffTypeSchema = z.enum([
   'waterAttackUp',
   'wyvernfellUp',
   'regenerate',
+  'guard',
 ]);
 export type SkillBuffType = z.infer<typeof SkillBuffTypeSchema>;
 
@@ -67,6 +68,8 @@ export type SkillDebuffType = z.infer<typeof SkillDebuffTypeSchema>;
 export const SkillEffectTypeSchema = z.enum([
   //
   '1HitKo',
+  'explodeBlastblight',
+  'evade',
 ]);
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
