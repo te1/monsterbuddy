@@ -362,16 +362,16 @@ export function formatSkillBuff(buff: SkillBuffType): string {
       return 'Dodge Up';
 
     case 'dragonAttackUp':
-      return 'Dragon Attack Up';
+      return 'Dragon Atk Up';
 
     case 'fireAttackUp':
-      return 'Fire Attack Up';
+      return 'Fire Atk Up';
 
     case 'fireDefenseUp':
-      return 'Fire Defense Up';
+      return 'Fire Def Up';
 
     case 'iceAttackUp':
-      return 'Ice Attack Up';
+      return 'Ice Atk Up';
 
     case 'inflictRateUp':
       return 'Inflict Rate Up';
@@ -383,10 +383,10 @@ export function formatSkillBuff(buff: SkillBuffType): string {
       return 'Stamina Regen Up';
 
     case 'thunderAttackUp':
-      return 'Thunder Attack Up';
+      return 'Thunder Atk Up';
 
     case 'waterAttackUp':
-      return 'Water Attack Up';
+      return 'Water Atk Up';
 
     case 'wyvernfellUp':
       return 'Wyvernfell Up';

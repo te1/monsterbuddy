@@ -47,18 +47,18 @@ export const allAilments: SkillAilmentType[] = [
 ] as const;
 export const allBuffs: SkillBuffType[] = [
   'attackUp',
-  'criticalUp',
-  'defenseUp',
-  'dodgeUp',
-  'dragonAttackUp',
   'fireAttackUp',
-  'fireDefenseUp',
-  'iceAttackUp',
-  'inflictRateUp',
-  'speedUp',
-  'staminaRegenUp',
-  'thunderAttackUp',
   'waterAttackUp',
+  'thunderAttackUp',
+  'iceAttackUp',
+  'dragonAttackUp',
+  'criticalUp',
+  'speedUp',
+  'defenseUp',
+  'fireDefenseUp',
+  'dodgeUp',
+  'inflictRateUp',
+  'staminaRegenUp',
   'wyvernfellUp',
   'regenerate',
 ] as const;
@@ -72,7 +72,12 @@ export const allDebuffs: SkillDebuffType[] = [
   'thunderDefenseDown',
   'wyvernsoulDefenseDown',
 ] as const;
-export const allEffects: SkillEffectType[] = ['1HitKo', 'explodeBlastblight', 'evade', 'stun'] as const;
+export const allEffects: SkillEffectType[] = [
+  '1HitKo',
+  'explodeBlastblight',
+  'evade',
+  'stun',
+] as const;
 
 export function getGenesByName(name: string, geneList: Gene[] = genes): Gene[] {
   const query = name.toLowerCase();

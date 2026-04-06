@@ -1,6 +1,13 @@
 <script lang="ts" setup>
   import type { FilterKey, Mode } from '~/stores/3/geneFilter';
-  import { allAilments, allElements, allSizes, allTargets, allTypes } from '~/services/3/genes';
+  import {
+    allAilments,
+    allBuffs,
+    allElements,
+    allSizes,
+    allTargets,
+    allTypes,
+  } from '~/services/3/genes';
   import useGeneFilter from '~/stores/3/geneFilter';
   import useGeneSources from '~/stores/3/geneSources';
   import {
@@ -8,6 +15,7 @@
     formatGeneSize,
     formatGeneType,
     formatSkillAilment,
+    formatSkillBuff,
     formatSkillTarget,
   } from '~/services/3/presentation';
 
@@ -100,7 +108,19 @@
     ];
   });
 
-  // TODO buff, debuff, effect
+  const buffs = computed(() => {
+    return [
+      { label: "Don't care", value: 'ALL' },
+      ...allBuffs
+        .filter((buff) => buff !== 'staminaRegenUp' && buff !== 'fireDefenseUp')
+        .map((buff) => ({
+          label: formatSkillBuff(buff),
+          value: buff,
+        })),
+    ];
+  });
+
+  // TODO debuff, effect
 </script>
 
 <template>
@@ -212,6 +232,18 @@
           class="w-full"
           :disabled="disabled"
           @update:modelValue="setFilter('ailmentFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Buffs" orientation="horizontal" :data-modal-layout="modalLayout">
+        <USelect
+          :modelValue="filter.buffFilter ?? 'ALL'"
+          color="neutral"
+          :variant="variant"
+          :items="buffs"
+          class="w-full"
+          :disabled="disabled"
+          @update:modelValue="setFilter('buffFilter', $event)"
         />
       </UFormField>
     </div>
