@@ -214,7 +214,7 @@
     }
   });
 
-  const eagerCardsCount = 14;
+  const eagerCardsCount = 22;
 
   const groups = computed(() => {
     let index = 0;
@@ -284,7 +284,7 @@
                 :gene="item.gene"
                 :mode="filter.mode"
                 :eager="item.eager"
-                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:122px] [content-visibility:auto]"
+                class="box box-link overflow-hidden px-1 [contain-intrinsic-size:74px] [content-visibility:auto]"
               />
             </NuxtLink>
           </div>

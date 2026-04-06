@@ -17,11 +17,11 @@
 
   const filter = useGeneFilter();
 
-  // TODO content
+  const showDescription = computed(
+    () => props.mode === 'description' || props.gene.active !== true
+  );
 
-  const showDescription = computed(() => props.mode === 'description');
-
-  const showStats = computed(() => props.mode === 'stats');
+  const showStats = computed(() => props.mode === 'stats' && props.gene.active);
 
   function getStatClass(...statKeys: string[]) {
     if (statKeys.includes(filter.sortKey ?? '')) {
@@ -32,19 +32,15 @@
 </script>
 
 <template>
-  <div class="@container flex h-[122px] items-center">
-    <div class="-mx-3 flex size-[120px] shrink-0 flex-col items-center justify-center gap-2">
-      <div class="size-[60px]">
-        <S3GeneIcon :gene="gene" :eager="eager" noTooltip />
-      </div>
+  <div class="@container flex h-[74px] items-center gap-1">
+    <div class="m-1.5 size-14 shrink-0">
+      <S3GeneIcon :gene="gene" :eager="eager" noTooltip />
     </div>
 
-    <div class="mx-3 mt-3 w-full self-start text-sm">
+    <div class="my-1.5 mr-1.5 self-start text-sm">
       <div class="text-base leading-snug font-semibold" v-text="gene.name" />
 
-      <div v-if="showDescription">
-        <div v-text="gene.description" />
-      </div>
+      <div v-if="showDescription" class="line-clamp-2" v-text="gene.description" />
 
       <div v-if="showStats">
         <div
@@ -71,20 +67,6 @@
           </span>
         </div>
       </div>
-
-      <!--
-      <template v-if="showLocation || showRank">
-        <div>
-          <span v-text="monster.genus" />
-          <span v-if="info" class="text-muted">, {{ info }}</span>
-        </div>
-
-        <div v-if="showRank">
-          Rank
-          <span class="font-bold" v-text="monster.rank ?? '?'" />
-        </div>
-      </template>
-      -->
     </div>
   </div>
 </template>
