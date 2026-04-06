@@ -1,10 +1,10 @@
 <script lang="ts" setup>
   import mhst3Egg from '~/assets/3/monsterbuddy.avif';
   import { take } from 'es-toolkit/array';
-  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
+  import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
 
   const route = useRoute();
-  const history = useMonsterHistoryStore();
+  const history = useGeneHistoryStore();
 
   const maxItems = 12;
   const topRecent = computed(() => take(history.recentGenes, maxItems));

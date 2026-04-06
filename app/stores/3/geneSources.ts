@@ -1,4 +1,4 @@
-import useMonsterHistoryStore from './monsterHistoryStore';
+import useGeneHistoryStore from './geneHistoryStore';
 
 export type Source = 'default' | 'recent' | 'pinned';
 
@@ -29,7 +29,7 @@ const useGeneSources = defineStore('s3/geneSources', {
 
   getters: {
     all(): Source[] {
-      const history = useMonsterHistoryStore();
+      const history = useGeneHistoryStore();
 
       const results: Source[] = ['default'];
 
