@@ -31,10 +31,6 @@ export function getRidingActions(monsterList: Monster[] = monsties): string[] {
   return uniq(monsterList.flatMap((monster) => monster.monstie?.ridingActions ?? [])).sort();
 }
 
-export function getEggColors(monsterList: Monster[] = monsties): EggColor[] {
-  return uniq(monsterList.flatMap((monster) => monster.monstie?.eggColors ?? [])).sort();
-}
-
 export function getMonstersByName(name: string, monsterList: Monster[] = monsters): Monster[] {
   const query = name.toLowerCase();
 
