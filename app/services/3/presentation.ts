@@ -408,7 +408,7 @@ export function formatSkillDebuff(debuff: SkillDebuffType): string {
       return 'Defense Down';
 
     case 'dragonDefenseDown':
-      return 'Dragon Defense Down';
+      return 'Dragon Def Down';
 
     case 'evasionDown':
       return 'Evasion Down';
@@ -417,10 +417,10 @@ export function formatSkillDebuff(debuff: SkillDebuffType): string {
       return 'Speed Down';
 
     case 'thunderDefenseDown':
-      return 'Thunder Defense Down';
+      return 'Thunder Def Down';
 
     case 'wyvernsoulDefenseDown':
-      return 'Wyvernsoul Defense Down';
+      return 'Wyvernsoul Def Down';
   }
 }
 

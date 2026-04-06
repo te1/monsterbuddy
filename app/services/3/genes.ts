@@ -63,14 +63,14 @@ export const allBuffs: SkillBuffType[] = [
   'regenerate',
 ] as const;
 export const allDebuffs: SkillDebuffType[] = [
-  'accuracyDown',
-  'attackDown',
   'defenseDown',
-  'dragonDefenseDown',
-  'evasionDown',
-  'speedDown',
   'thunderDefenseDown',
+  'dragonDefenseDown',
   'wyvernsoulDefenseDown',
+  'attackDown',
+  'accuracyDown',
+  'speedDown',
+  'evasionDown',
 ] as const;
 export const allEffects: SkillEffectType[] = [
   '1HitKo',

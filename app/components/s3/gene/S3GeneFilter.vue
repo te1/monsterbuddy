@@ -3,6 +3,7 @@
   import {
     allAilments,
     allBuffs,
+    allDebuffs,
     allElements,
     allSizes,
     allTargets,
@@ -16,6 +17,7 @@
     formatGeneType,
     formatSkillAilment,
     formatSkillBuff,
+    formatSkillDebuff,
     formatSkillTarget,
   } from '~/services/3/presentation';
 
@@ -120,7 +122,17 @@
     ];
   });
 
-  // TODO debuff, effect
+  const debuffs = computed(() => {
+    return [
+      { label: "Don't care", value: 'ALL' },
+      ...allDebuffs.map((debuff) => ({
+        label: formatSkillDebuff(debuff),
+        value: debuff,
+      })),
+    ];
+  });
+
+  // TODO effect
 </script>
 
 <template>
@@ -244,6 +256,18 @@
           class="w-full"
           :disabled="disabled"
           @update:modelValue="setFilter('buffFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Debuffs" orientation="horizontal" :data-modal-layout="modalLayout">
+        <USelect
+          :modelValue="filter.debuffFilter ?? 'ALL'"
+          color="neutral"
+          :variant="variant"
+          :items="debuffs"
+          class="w-full"
+          :disabled="disabled"
+          @update:modelValue="setFilter('debuffFilter', $event)"
         />
       </UFormField>
     </div>
