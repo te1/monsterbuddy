@@ -284,7 +284,7 @@ export function formatGeneType(geneType?: GeneType): string {
 export function formatGeneSize(size: GeneSize): string {
   switch (size) {
     case 'none':
-      return 'None';
+      return 'No size';
 
     case '-':
       return 'Any Rank';

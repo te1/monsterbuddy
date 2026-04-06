@@ -200,7 +200,7 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
 
     switch (sortKey.value) {
       case 'size':
-        return groupBy(sorted, (item) => item.size);
+        return groupBy(sorted, (item) => formatGeneSize(item.size));
 
       default:
         return { all: sorted };
@@ -218,21 +218,12 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
       return null;
     }
 
-    // TODO pills
-
     switch (sortKey.value) {
       case 'name':
         return {
           name: sortKey.value,
           order: sortOrder.value,
           caption: 'Name',
-        };
-
-      case 'size':
-        return {
-          name: sortKey.value,
-          order: sortOrder.value,
-          caption: 'Size',
         };
 
       case 'stamina':
