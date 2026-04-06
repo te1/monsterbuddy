@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { FilterKey, Mode } from '~/stores/3/geneFilter';
+  import type { SourcesStore } from '~/stores/3/geneSources';
   import {
     allAilments,
     allBuffs,
@@ -11,7 +12,6 @@
     allTypes,
   } from '~/services/3/genes';
   import useGeneFilter from '~/stores/3/geneFilter';
-  import useGeneSources from '~/stores/3/geneSources';
   import {
     formatGeneElement,
     formatGeneSize,
@@ -25,12 +25,14 @@
 
   const props = withDefaults(
     defineProps<{
+      sources?: SourcesStore;
       disabled?: boolean;
       hideSearch?: boolean;
       backTarget?: string;
       modalLayout?: boolean;
     }>(),
     {
+      sources: undefined,
       disabled: false,
       hideSearch: false,
       backTarget: undefined,
@@ -39,7 +41,6 @@
   );
 
   const filter = useGeneFilter();
-  const sources = useGeneSources();
 
   const variant = computed(() => {
     return props.modalLayout ? 'soft-filter-modal' : 'soft-filter';
@@ -151,7 +152,7 @@
 
 <template>
   <div class="flex flex-col gap-3">
-    <ClientOnly>
+    <ClientOnly v-if="sources != null">
       <URadioGroup
         color="neutral"
         variant="table"

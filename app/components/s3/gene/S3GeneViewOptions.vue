@@ -1,16 +1,18 @@
 <script lang="ts" setup>
   import type { Mode, SortKey } from '~/stores/3/geneFilter';
-  import useGeneSources from '~/stores/3/geneSources';
+  import type { SourcesStore } from '~/stores/3/geneSources';
   import useGeneFilter, { modes } from '~/stores/3/geneFilter';
 
   const props = withDefaults(
     defineProps<{
+      sources?: SourcesStore;
       disabled?: boolean;
       hideSearch?: boolean;
       hideSort?: boolean;
       modalLayout?: boolean;
     }>(),
     {
+      sources: undefined,
       disabled: false,
       hideSearch: false,
       hideSort: false,
@@ -18,7 +20,6 @@
     }
   );
 
-  const sources = useGeneSources();
   const filter = useGeneFilter();
 
   const variant = computed(() => {
@@ -59,7 +60,7 @@
 
 <template>
   <div class="flex flex-col gap-3">
-    <ClientOnly>
+    <ClientOnly v-if="sources != null">
       <URadioGroup
         color="neutral"
         variant="table"

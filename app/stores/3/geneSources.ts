@@ -70,3 +70,5 @@ const useGeneSources = defineStore('s3/geneSources', {
 });
 
 export default useGeneSources;
+
+export type SourcesStore = ReturnType<typeof useGeneSources>;
