@@ -7,7 +7,7 @@ export type GeneType = z.infer<typeof GeneTypeSchema>;
 export const GeneElementSchema = z.union([ElementTypeSchema, z.literal('all')]);
 export type GeneElement = z.infer<typeof GeneElementSchema>;
 
-export const GeneSizeSchema = z.enum(['none', 'S', 'M', 'L', 'XL', '+']);
+export const GeneSizeSchema = z.enum(['none', 'S', 'M', 'L', 'XL', '-', '+']);
 export type GeneSize = z.infer<typeof GeneSizeSchema>;
 
 export const SkillTargetSchema = z.enum([
