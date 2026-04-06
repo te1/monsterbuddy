@@ -1,4 +1,3 @@
-import type { Component } from 'vue';
 import type { GameType } from '~/utils/types';
 import { buildMhst3SearchMonsterGroup } from './3/search';
 import S3MonsterIcon from '~/components/s3/monster/S3MonsterIcon.vue';
