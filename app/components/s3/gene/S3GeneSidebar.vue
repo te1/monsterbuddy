@@ -1,7 +1,11 @@
 <script lang="ts" setup>
+  import useGeneSources from '~/stores/3/geneSources';
+
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();
+
+  const sources = useGeneSources();
 
   const tab = ref<'view' | 'filter'>('view');
 
@@ -33,11 +37,11 @@
 <template>
   <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
     <template #view>
-      <S3GeneViewOptions />
+      <S3GeneViewOptions :sources="sources" />
     </template>
 
     <template #filter>
-      <S3GeneFilter />
+      <S3GeneFilter :sources="sources" />
     </template>
   </UTabs>
 </template>
