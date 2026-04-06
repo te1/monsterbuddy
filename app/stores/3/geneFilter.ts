@@ -38,7 +38,7 @@ import {
   formatSkillTarget,
 } from '~/services/3/presentation';
 
-export type SortKey = 'name' | 'size' | 'stamina' | 'power' | 'wyvernfell';
+export type SortKey = 'name' | 'element' | 'type' | 'size' | 'stamina' | 'power' | 'wyvernfell';
 
 const sortValueGetters = {
   name: (item: Gene) => {
@@ -47,6 +47,8 @@ const sortValueGetters = {
     }
     return item.name;
   },
+  element: (item: Gene) => formatGeneElement(item.element),
+  type: (item: Gene) => formatGeneType(item.type),
   size: (item: Gene) => getGeneSizeAsNumber(item.size),
   stamina: (item: Gene) => item.stamina,
   power: (item: Gene) => item.power,
@@ -196,9 +198,13 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
   const groupedGenes = computed<Record<string, Gene[]>>(() => {
     const sorted = sortedGenes.value;
 
-    // TODO grouping
-
     switch (sortKey.value) {
+      case 'element':
+        return groupBy(sorted, (item) => formatGeneElement(item.element));
+
+      case 'type':
+        return groupBy(sorted, (item) => formatGeneType(item.type));
+
       case 'size':
         return groupBy(sorted, (item) => formatGeneSize(item.size));
 
@@ -211,7 +217,7 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
 
   const isEmpty = computed(() => sortedGenes.value.length <= 0);
 
-  const isGrouped = computed(() => ['size'].includes(sortKey.value));
+  const isGrouped = computed(() => ['element', 'type', 'size'].includes(sortKey.value));
 
   const activeSort = computed(() => {
     if (preserveSourceOrder.value) {

@@ -34,6 +34,8 @@
       mode?: Mode;
     }[] = [
       { value: 'name', label: 'Name' },
+      { value: 'element', label: 'Element', default: 'asc' },
+      { value: 'type', label: 'Type', default: 'asc' },
       { value: 'size', label: 'Size', default: 'desc' },
       { value: 'stamina', label: 'Stamina', default: 'asc' },
       { value: 'power', label: 'Power', default: 'desc' },
