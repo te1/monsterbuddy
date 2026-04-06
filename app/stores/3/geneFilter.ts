@@ -29,11 +29,13 @@ import {
 } from '~/services/3/genes';
 import {
   formatGeneElement,
+  formatGeneSize,
   formatGeneType,
   formatSkillAilment,
   formatSkillBuff,
   formatSkillDebuff,
   formatSkillEffect,
+  formatSkillTarget,
 } from '~/services/3/presentation';
 
 export type SortKey = 'name' | 'size' | 'stamina' | 'power' | 'wyvernfell';
@@ -264,19 +266,6 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
   const activeFilters = computed(() => {
     const result: { name: FilterKey; value: string }[] = [];
 
-    // TODO pills
-
-    if (sizeFilter.value != null) {
-      result.push({ name: 'sizeFilter', value: sizeFilter.value });
-    }
-
-    if (typeFilter.value != null) {
-      result.push({
-        name: 'typeFilter',
-        value: formatGeneType(typeFilter.value),
-      });
-    }
-
     if (elementFilter.value != null) {
       result.push({
         name: 'elementFilter',
@@ -284,31 +273,38 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
       });
     }
 
+    if (typeFilter.value !== undefined) {
+      result.push({
+        name: 'typeFilter',
+        value: formatGeneType(typeFilter.value),
+      });
+    }
+
     if (activeFilter.value != null) {
       result.push({
         name: 'activeFilter',
-        value: activeFilter.value ? 'Active' : 'Inactive',
+        value: activeFilter.value ? 'Active' : 'Passive',
       });
     }
 
-    if (targetFilter.value != null) {
+    if (sizeFilter.value !== undefined) {
       result.push({
-        name: 'targetFilter',
-        value: targetFilter.value,
-      });
-    }
-
-    if (breathFilter.value != null) {
-      result.push({
-        name: 'breathFilter',
-        value: breathFilter.value ? 'Breath' : 'No Breath',
+        name: 'sizeFilter',
+        value: sizeFilter.value ? formatGeneSize(sizeFilter.value) : 'Max size only',
       });
     }
 
     if (eggSkillFilter.value != null) {
       result.push({
         name: 'eggSkillFilter',
-        value: eggSkillFilter.value ? 'Egg Skill' : 'No Egg Skill',
+        value: eggSkillFilter.value ? 'Egg Skill' : 'No Egg Skills',
+      });
+    }
+
+    if (targetFilter.value != null) {
+      result.push({
+        name: 'targetFilter',
+        value: formatSkillTarget(targetFilter.value),
       });
     }
 
@@ -337,6 +333,13 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
       result.push({
         name: 'effectFilter',
         value: formatSkillEffect(effectFilter.value),
+      });
+    }
+
+    if (breathFilter.value != null) {
+      result.push({
+        name: 'breathFilter',
+        value: breathFilter.value ? 'Breath' : 'Not Breath',
       });
     }
 
