@@ -37,11 +37,6 @@
       { value: 'stamina', label: 'Stamina', default: 'asc' },
       { value: 'power', label: 'Power', default: 'desc' },
       { value: 'wyvernfell', label: 'Wyvernfell', default: 'desc' },
-
-      // TODO ailment, buff, debuff, effect
-      // TODO target
-      // TODO egg skill
-      // TODO size
     ];
 
     return result;
