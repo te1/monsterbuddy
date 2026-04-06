@@ -33,7 +33,7 @@
       mode?: Mode;
     }[] = [
       { value: 'name', label: 'Name' },
-      { value: 'size', label: 'Size', default: 'asc' },
+      { value: 'size', label: 'Size', default: 'desc' },
       { value: 'stamina', label: 'Stamina', default: 'asc' },
       { value: 'power', label: 'Power', default: 'desc' },
       { value: 'wyvernfell', label: 'Wyvernfell', default: 'desc' },

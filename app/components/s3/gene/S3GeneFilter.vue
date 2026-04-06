@@ -146,7 +146,7 @@
 
       <UFormField label="Size" orientation="horizontal" :data-modal-layout="modalLayout">
         <USelect
-          :modelValue="filter.sizeFilter == undefined ? 'ALL' : filter.sizeFilter"
+          :modelValue="filter.sizeFilter === undefined ? 'ALL' : filter.sizeFilter"
           color="neutral"
           :variant="variant"
           :items="sizes"
