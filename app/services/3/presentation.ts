@@ -7,6 +7,7 @@ import type {
   Monster,
   MonsterTag,
   RidingActionType,
+  SkillTarget,
   StatsType,
 } from './types';
 
@@ -289,5 +290,24 @@ export function formatGeneSize(size: GeneSize): string {
 
     default:
       return size;
+  }
+}
+
+export function formatSkillTarget(target: SkillTarget): string {
+  switch (target) {
+    case 'allAllies':
+      return 'All Allies';
+
+    case 'allEnemies':
+      return 'All Enemies';
+
+    case 'randomEnemy':
+      return 'Random Enemy';
+
+    case 'singleEnemy':
+      return 'Single Enemy';
+
+    case 'user':
+      return 'User';
   }
 }

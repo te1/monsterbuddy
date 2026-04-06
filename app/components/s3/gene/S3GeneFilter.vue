@@ -1,9 +1,14 @@
 <script lang="ts" setup>
   import type { FilterKey, Mode } from '~/stores/3/geneFilter';
-  import { allElements, allSizes, allTypes } from '~/services/3/genes';
+  import { allElements, allSizes, allTargets, allTypes } from '~/services/3/genes';
   import useGeneFilter from '~/stores/3/geneFilter';
   import useGeneSources from '~/stores/3/geneSources';
-  import { formatGeneElement, formatGeneSize, formatGeneType } from '~/services/3/presentation';
+  import {
+    formatGeneElement,
+    formatGeneSize,
+    formatGeneType,
+    formatSkillTarget,
+  } from '~/services/3/presentation';
 
   const props = withDefaults(
     defineProps<{
@@ -74,8 +79,17 @@
     ];
   });
 
+  const targets = computed(() => {
+    return [
+      { label: 'All', value: 'ALL' },
+      ...allTargets.map((target) => ({
+        label: formatSkillTarget(target),
+        value: target,
+      })),
+    ];
+  });
+
   // TODO ailment, buff, debuff, effect
-  // TODO target
 </script>
 
 <template>
@@ -163,6 +177,18 @@
           :disabled="disabled"
           :modalLayout="modalLayout"
           @update:modelValue="setFilter('eggSkillFilter', $event)"
+        />
+      </UFormField>
+
+      <UFormField label="Target" orientation="horizontal" :data-modal-layout="modalLayout">
+        <USelect
+          :modelValue="filter.targetFilter ?? 'ALL'"
+          color="neutral"
+          :variant="variant"
+          :items="targets"
+          class="w-full"
+          :disabled="disabled"
+          @update:modelValue="setFilter('targetFilter', $event)"
         />
       </UFormField>
     </div>
