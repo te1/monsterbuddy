@@ -1,6 +1,7 @@
 [
   {
     name: 'All-Elem Def Boost (S)',
+    baseName: 'All-Elem Def Boost',
     size: 'S',
     type: 'technical',
     element: 'none',
@@ -10,6 +11,7 @@
 
   {
     name: 'All-Elem Def Boost (M)',
+    baseName: 'All-Elem Def Boost',
     size: 'M',
     type: 'technical',
     element: 'none',
@@ -19,6 +21,7 @@
 
   {
     name: 'All-Elem Def Boost (L)',
+    baseName: 'All-Elem Def Boost',
     size: 'L',
     type: 'technical',
     element: 'none',
@@ -28,6 +31,7 @@
 
   {
     name: 'All-Elem Def Boost (XL)',
+    baseName: 'All-Elem Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'none',
@@ -37,6 +41,7 @@
 
   {
     name: 'All-Out (S)',
+    baseName: 'All-Out',
     size: 'S',
     type: 'power',
     element: 'dragon',
@@ -46,6 +51,7 @@
 
   {
     name: 'All-Out (M)',
+    baseName: 'All-Out',
     size: 'M',
     type: 'power',
     element: 'dragon',
@@ -55,6 +61,7 @@
 
   {
     name: 'All-Out (L)',
+    baseName: 'All-Out',
     size: 'L',
     type: 'power',
     element: 'dragon',
@@ -64,6 +71,7 @@
 
   {
     name: 'All-Out (XL)',
+    baseName: 'All-Out',
     size: 'XL',
     type: 'power',
     element: 'dragon',
@@ -73,6 +81,7 @@
 
   {
     name: 'Anti 1-Hit KO (S)',
+    baseName: 'Anti 1-Hit KO',
     size: 'S',
     type: 'technical',
     element: 'dragon',
@@ -82,6 +91,7 @@
 
   {
     name: 'Anti 1-Hit KO (M)',
+    baseName: 'Anti 1-Hit KO',
     size: 'M',
     type: 'technical',
     element: 'dragon',
@@ -91,6 +101,7 @@
 
   {
     name: 'Anti 1-Hit KO (L)',
+    baseName: 'Anti 1-Hit KO',
     size: 'L',
     type: 'technical',
     element: 'dragon',
@@ -100,6 +111,7 @@
 
   {
     name: 'Anti 1-Hit KO (XL)',
+    baseName: 'Anti 1-Hit KO',
     size: 'XL',
     type: 'technical',
     element: 'dragon',
@@ -109,6 +121,7 @@
 
   {
     name: 'Antibleed (S)',
+    baseName: 'Antibleed',
     size: 'S',
     type: 'speed',
     element: 'dragon',
@@ -118,6 +131,7 @@
 
   {
     name: 'Antibleed (M)',
+    baseName: 'Antibleed',
     size: 'M',
     type: 'speed',
     element: 'dragon',
@@ -127,6 +141,7 @@
 
   {
     name: 'Antibleed (L)',
+    baseName: 'Antibleed',
     size: 'L',
     type: 'speed',
     element: 'dragon',
@@ -136,6 +151,7 @@
 
   {
     name: 'Antibleed (XL)',
+    baseName: 'Antibleed',
     size: 'XL',
     type: 'speed',
     element: 'dragon',
@@ -145,6 +161,7 @@
 
   {
     name: 'Antiburn (S)',
+    baseName: 'Antiburn',
     size: 'S',
     type: 'speed',
     element: 'fire',
@@ -154,6 +171,7 @@
 
   {
     name: 'Antiburn (M)',
+    baseName: 'Antiburn',
     size: 'M',
     type: 'speed',
     element: 'fire',
@@ -163,6 +181,7 @@
 
   {
     name: 'Antiburn (L)',
+    baseName: 'Antiburn',
     size: 'L',
     type: 'speed',
     element: 'fire',
@@ -172,6 +191,7 @@
 
   {
     name: 'Antiburn (XL)',
+    baseName: 'Antiburn',
     size: 'XL',
     type: 'speed',
     element: 'fire',
@@ -181,6 +201,7 @@
 
   {
     name: 'Antiparalysis (S)',
+    baseName: 'Antiparalysis',
     size: 'S',
     type: 'speed',
     element: 'thunder',
@@ -190,6 +211,7 @@
 
   {
     name: 'Antiparalysis (M)',
+    baseName: 'Antiparalysis',
     size: 'M',
     type: 'speed',
     element: 'thunder',
@@ -199,6 +221,7 @@
 
   {
     name: 'Antiparalysis (L)',
+    baseName: 'Antiparalysis',
     size: 'L',
     type: 'speed',
     element: 'thunder',
@@ -208,6 +231,7 @@
 
   {
     name: 'Antiparalysis (XL)',
+    baseName: 'Antiparalysis',
     size: 'XL',
     type: 'speed',
     element: 'thunder',
@@ -217,6 +241,7 @@
 
   {
     name: 'Antivenom (S)',
+    baseName: 'Antivenom',
     size: 'S',
     type: 'technical',
     element: 'none',
@@ -226,6 +251,7 @@
 
   {
     name: 'Antivenom (M)',
+    baseName: 'Antivenom',
     size: 'M',
     type: 'technical',
     element: 'none',
@@ -235,6 +261,7 @@
 
   {
     name: 'Antivenom (L)',
+    baseName: 'Antivenom',
     size: 'L',
     type: 'technical',
     element: 'none',
@@ -244,6 +271,7 @@
 
   {
     name: 'Antivenom (XL)',
+    baseName: 'Antivenom',
     size: 'XL',
     type: 'technical',
     element: 'none',
@@ -331,6 +359,7 @@
 
   {
     name: 'Art of Striking',
+    baseName: 'Art of Striking',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -345,6 +374,7 @@
 
   {
     name: 'Art of Striking+',
+    baseName: 'Art of Striking',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -359,6 +389,7 @@
 
   {
     name: 'Assassin Tail',
+    baseName: 'Assassin Tail',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -374,6 +405,7 @@
 
   {
     name: 'Assassin Tail+',
+    baseName: 'Assassin Tail',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -437,6 +469,7 @@
 
   {
     name: 'Berserk Slide',
+    baseName: 'Berserk Slide',
     size: '-',
     type: 'technical',
     element: 'dragon',
@@ -452,6 +485,7 @@
 
   {
     name: 'Berserk Slide+',
+    baseName: 'Berserk Slide',
     size: '+',
     type: 'technical',
     element: 'dragon',
@@ -545,6 +579,7 @@
 
   {
     name: 'Blightproof (S)',
+    baseName: 'Blightproof',
     size: 'S',
     type: 'power',
     element: 'fire',
@@ -554,6 +589,7 @@
 
   {
     name: 'Blightproof (M)',
+    baseName: 'Blightproof',
     size: 'M',
     type: 'power',
     element: 'fire',
@@ -563,6 +599,7 @@
 
   {
     name: 'Blightproof (L)',
+    baseName: 'Blightproof',
     size: 'L',
     type: 'power',
     element: 'fire',
@@ -572,6 +609,7 @@
 
   {
     name: 'Blightproof (XL)',
+    baseName: 'Blightproof',
     size: 'XL',
     type: 'power',
     element: 'fire',
@@ -581,6 +619,7 @@
 
   {
     name: 'Blindside',
+    baseName: 'Blindside',
     size: '-',
     type: null,
     element: 'none',
@@ -593,6 +632,7 @@
 
   {
     name: 'Blindside+',
+    baseName: 'Blindside',
     size: '+',
     type: null,
     element: 'none',
@@ -618,6 +658,7 @@
 
   {
     name: 'Bolt Eater',
+    baseName: 'Bolt Eater',
     size: '-',
     type: 'technical',
     element: 'thunder',
@@ -632,6 +673,7 @@
 
   {
     name: 'Bolt Eater+',
+    baseName: 'Bolt Eater',
     size: '+',
     type: 'technical',
     element: 'thunder',
@@ -656,6 +698,7 @@
 
   {
     name: 'Bombardier ((S))',
+    baseName: 'Bombardier',
     size: 'S',
     type: 'speed',
     element: 'fire',
@@ -665,6 +708,7 @@
 
   {
     name: 'Bombardier (M)',
+    baseName: 'Bombardier',
     size: 'M',
     type: 'speed',
     element: 'fire',
@@ -674,6 +718,7 @@
 
   {
     name: 'Bombardier (L)',
+    baseName: 'Bombardier',
     size: 'L',
     type: 'speed',
     element: 'fire',
@@ -683,6 +728,7 @@
 
   {
     name: 'Bombardier (XL)',
+    baseName: 'Bombardier',
     size: 'XL',
     type: 'speed',
     element: 'fire',
@@ -719,6 +765,7 @@
 
   {
     name: 'Burning Fang',
+    baseName: 'Burning Fang',
     size: '-',
     type: 'power',
     element: 'fire',
@@ -734,6 +781,7 @@
 
   {
     name: 'Burning Fang+',
+    baseName: 'Burning Fang',
     size: '+',
     type: 'power',
     element: 'fire',
@@ -749,6 +797,7 @@
 
   {
     name: 'Cannonball Slam',
+    baseName: 'Cannonball Slam',
     size: '-',
     type: 'power',
     element: 'none',
@@ -763,6 +812,7 @@
 
   {
     name: 'Cannonball Slam+',
+    baseName: 'Cannonball Slam',
     size: '+',
     type: 'power',
     element: 'none',
@@ -776,6 +826,7 @@
 
   {
     name: 'Charged Spread Beam',
+    baseName: 'Charged Spread Beam',
     size: '-',
     type: null,
     element: 'fire',
@@ -792,6 +843,7 @@
 
   {
     name: 'Charged Spread Beam+',
+    baseName: 'Charged Spread Beam',
     size: '+',
     type: null,
     element: 'fire',
@@ -805,6 +857,7 @@
 
   {
     name: 'Chata Stamp',
+    baseName: 'Chata Stamp',
     size: '-',
     type: 'power',
     element: 'none',
@@ -819,6 +872,7 @@
 
   {
     name: 'Chata Stamp+',
+    baseName: 'Chata Stamp',
     size: '+',
     type: 'power',
     element: 'none',
@@ -845,6 +899,7 @@
 
   {
     name: 'Chilling Charge',
+    baseName: 'Chilling Charge',
     size: '-',
     type: 'technical',
     element: 'ice',
@@ -860,6 +915,7 @@
 
   {
     name: 'Chilling Charge+',
+    baseName: 'Chilling Charge',
     size: '+',
     type: 'technical',
     element: 'ice',
@@ -900,6 +956,7 @@
 
   {
     name: 'Crescent Strike',
+    baseName: 'Crescent Strike',
     size: '-',
     type: 'speed',
     element: 'ice',
@@ -914,6 +971,7 @@
 
   {
     name: 'Crescent Strike+',
+    baseName: 'Crescent Strike',
     size: '+',
     type: 'speed',
     element: 'ice',
@@ -927,6 +985,7 @@
 
   {
     name: 'Crit-Heal (S)',
+    baseName: 'Crit-Heal',
     size: 'S',
     type: null,
     element: 'dragon',
@@ -936,6 +995,7 @@
 
   {
     name: 'Crit-Heal (M)',
+    baseName: 'Crit-Heal',
     size: 'M',
     type: null,
     element: 'dragon',
@@ -945,6 +1005,7 @@
 
   {
     name: 'Crit-Heal (L)',
+    baseName: 'Crit-Heal',
     size: 'L',
     type: null,
     element: 'dragon',
@@ -954,6 +1015,7 @@
 
   {
     name: 'Crit-Heal (XL)',
+    baseName: 'Crit-Heal',
     size: 'XL',
     type: null,
     element: 'dragon',
@@ -963,6 +1025,7 @@
 
   {
     name: 'Critical (S)',
+    baseName: 'Critical',
     size: 'S',
     type: 'speed',
     element: 'dragon',
@@ -972,6 +1035,7 @@
 
   {
     name: 'Critical (M)',
+    baseName: 'Critical',
     size: 'M',
     type: 'speed',
     element: 'dragon',
@@ -981,6 +1045,7 @@
 
   {
     name: 'Critical (L)',
+    baseName: 'Critical',
     size: 'L',
     type: 'speed',
     element: 'dragon',
@@ -990,6 +1055,7 @@
 
   {
     name: 'Critical (XL)',
+    baseName: 'Critical',
     size: 'XL',
     type: 'speed',
     element: 'dragon',
@@ -1010,6 +1076,7 @@
 
   {
     name: 'Critical Kinship (S)',
+    baseName: 'Critical Kinship',
     size: 'S',
     type: null,
     element: 'thunder',
@@ -1019,6 +1086,7 @@
 
   {
     name: 'Critical Kinship (M)',
+    baseName: 'Critical Kinship',
     size: 'M',
     type: null,
     element: 'thunder',
@@ -1028,6 +1096,7 @@
 
   {
     name: 'Critical Kinship (L)',
+    baseName: 'Critical Kinship',
     size: 'L',
     type: null,
     element: 'thunder',
@@ -1037,6 +1106,7 @@
 
   {
     name: 'Critical Kinship (XL)',
+    baseName: 'Critical Kinship',
     size: 'XL',
     type: null,
     element: 'thunder',
@@ -1073,6 +1143,7 @@
 
   {
     name: 'Cunning Blow',
+    baseName: 'Cunning Blow',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -1088,6 +1159,7 @@
 
   {
     name: 'Cunning Blow+',
+    baseName: 'Cunning Blow',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -1101,6 +1173,7 @@
 
   {
     name: 'Dancer (S)',
+    baseName: 'Dancer',
     size: 'S',
     type: 'speed',
     element: 'water',
@@ -1110,6 +1183,7 @@
 
   {
     name: 'Dancer (M)',
+    baseName: 'Dancer',
     size: 'M',
     type: 'speed',
     element: 'water',
@@ -1119,6 +1193,7 @@
 
   {
     name: 'Dancer (L)',
+    baseName: 'Dancer',
     size: 'L',
     type: 'speed',
     element: 'water',
@@ -1128,6 +1203,7 @@
 
   {
     name: 'Dancer (XL)',
+    baseName: 'Dancer',
     size: 'XL',
     type: 'speed',
     element: 'water',
@@ -1148,6 +1224,7 @@
 
   {
     name: 'Darkness Resistance (S)',
+    baseName: 'Darkness Resistance',
     size: 'S',
     type: 'technical',
     element: 'none',
@@ -1157,6 +1234,7 @@
 
   {
     name: 'Darkness Resistance (M)',
+    baseName: 'Darkness Resistance',
     size: 'M',
     type: 'technical',
     element: 'none',
@@ -1166,6 +1244,7 @@
 
   {
     name: 'Darkness Resistance (L)',
+    baseName: 'Darkness Resistance',
     size: 'L',
     type: 'technical',
     element: 'none',
@@ -1175,6 +1254,7 @@
 
   {
     name: 'Darkness Resistance (XL)',
+    baseName: 'Darkness Resistance',
     size: 'XL',
     type: 'technical',
     element: 'none',
@@ -1184,6 +1264,7 @@
 
   {
     name: 'Deadly Horn Jab',
+    baseName: 'Deadly Horn Jab',
     size: '-',
     type: 'power',
     element: 'none',
@@ -1198,6 +1279,7 @@
 
   {
     name: 'Deadly Horn Jab+',
+    baseName: 'Deadly Horn Jab',
     size: '+',
     type: 'power',
     element: 'none',
@@ -1211,6 +1293,7 @@
 
   {
     name: 'Death Scythe',
+    baseName: 'Death Scythe',
     size: '-',
     type: 'speed',
     element: 'water',
@@ -1226,6 +1309,7 @@
 
   {
     name: 'Death Scythe+',
+    baseName: 'Death Scythe',
     size: '+',
     type: 'speed',
     element: 'water',
@@ -1292,6 +1376,7 @@
 
   {
     name: 'Den Protector (S)',
+    baseName: 'Den Protector',
     size: 'S',
     type: null,
     element: 'ice',
@@ -1301,6 +1386,7 @@
 
   {
     name: 'Den Protector (M)',
+    baseName: 'Den Protector',
     size: 'M',
     type: null,
     element: 'ice',
@@ -1310,6 +1396,7 @@
 
   {
     name: 'Den Protector (L)',
+    baseName: 'Den Protector',
     size: 'L',
     type: null,
     element: 'ice',
@@ -1319,6 +1406,7 @@
 
   {
     name: 'Den Protector (XL)',
+    baseName: 'Den Protector',
     size: 'XL',
     type: null,
     element: 'ice',
@@ -1354,6 +1442,7 @@
 
   {
     name: 'Devour',
+    baseName: 'Devour',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -1368,6 +1457,7 @@
 
   {
     name: 'Devour+',
+    baseName: 'Devour',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -1394,6 +1484,7 @@
 
   {
     name: 'Divine Blessing (S)',
+    baseName: 'Divine Blessing',
     size: 'S',
     type: null,
     element: 'none',
@@ -1403,6 +1494,7 @@
 
   {
     name: 'Divine Blessing (M)',
+    baseName: 'Divine Blessing',
     size: 'M',
     type: null,
     element: 'none',
@@ -1412,6 +1504,7 @@
 
   {
     name: 'Divine Blessing (L)',
+    baseName: 'Divine Blessing',
     size: 'L',
     type: null,
     element: 'none',
@@ -1421,6 +1514,7 @@
 
   {
     name: 'Divine Blessing (XL)',
+    baseName: 'Divine Blessing',
     size: 'XL',
     type: null,
     element: 'none',
@@ -1430,6 +1524,7 @@
 
   {
     name: 'Draconic Flurry',
+    baseName: 'Draconic Flurry',
     size: '-',
     type: 'speed',
     element: 'dragon',
@@ -1444,6 +1539,7 @@
 
   {
     name: 'Draconic Flurry+',
+    baseName: 'Draconic Flurry',
     size: '+',
     type: 'speed',
     element: 'dragon',
@@ -1472,6 +1568,7 @@
 
   {
     name: 'Dragon Atk Boost (S)',
+    baseName: 'Dragon Atk Boost',
     size: 'S',
     type: 'power',
     element: 'dragon',
@@ -1481,6 +1578,7 @@
 
   {
     name: 'Dragon Atk Boost (M)',
+    baseName: 'Dragon Atk Boost',
     size: 'M',
     type: 'power',
     element: 'dragon',
@@ -1490,6 +1588,7 @@
 
   {
     name: 'Dragon Atk Boost (L)',
+    baseName: 'Dragon Atk Boost',
     size: 'L',
     type: 'power',
     element: 'dragon',
@@ -1499,6 +1598,7 @@
 
   {
     name: 'Dragon Atk Boost (XL)',
+    baseName: 'Dragon Atk Boost',
     size: 'XL',
     type: 'power',
     element: 'dragon',
@@ -1523,6 +1623,7 @@
 
   {
     name: 'Dragon Buster (S)',
+    baseName: 'Dragon Buster',
     size: 'S',
     type: 'technical',
     element: 'dragon',
@@ -1532,6 +1633,7 @@
 
   {
     name: 'Dragon Buster (M)',
+    baseName: 'Dragon Buster',
     size: 'M',
     type: 'technical',
     element: 'dragon',
@@ -1541,6 +1643,7 @@
 
   {
     name: 'Dragon Buster (L)',
+    baseName: 'Dragon Buster',
     size: 'L',
     type: 'technical',
     element: 'dragon',
@@ -1550,6 +1653,7 @@
 
   {
     name: 'Dragon Buster (XL)',
+    baseName: 'Dragon Buster',
     size: 'XL',
     type: 'technical',
     element: 'dragon',
@@ -1559,6 +1663,7 @@
 
   {
     name: 'Dragon Def Boost (S)',
+    baseName: 'Dragon Def Boost',
     size: 'S',
     type: 'technical',
     element: 'dragon',
@@ -1568,6 +1673,7 @@
 
   {
     name: 'Dragon Def Boost (M)',
+    baseName: 'Dragon Def Boost',
     size: 'M',
     type: 'technical',
     element: 'dragon',
@@ -1577,6 +1683,7 @@
 
   {
     name: 'Dragon Def Boost (L)',
+    baseName: 'Dragon Def Boost',
     size: 'L',
     type: 'technical',
     element: 'dragon',
@@ -1586,6 +1693,7 @@
 
   {
     name: 'Dragon Def Boost (XL)',
+    baseName: 'Dragon Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'dragon',
@@ -1595,6 +1703,7 @@
 
   {
     name: 'Dragon Eater',
+    baseName: 'Dragon Eater',
     size: '-',
     type: 'power',
     element: 'dragon',
@@ -1609,6 +1718,7 @@
 
   {
     name: 'Dragon Eater+',
+    baseName: 'Dragon Eater',
     size: '+',
     type: 'power',
     element: 'dragon',
@@ -1634,6 +1744,7 @@
 
   {
     name: 'Dragonfist',
+    baseName: 'Dragonfist',
     size: '-',
     type: 'technical',
     element: 'dragon',
@@ -1648,6 +1759,7 @@
 
   {
     name: 'Dragonfist+',
+    baseName: 'Dragonfist',
     size: '+',
     type: 'technical',
     element: 'dragon',
@@ -2086,6 +2198,7 @@
 
   {
     name: 'Elemental Assault (S)',
+    baseName: 'Elemental Assault',
     size: 'S',
     type: 'speed',
     element: 'ice',
@@ -2095,6 +2208,7 @@
 
   {
     name: 'Elemental Assault (M)',
+    baseName: 'Elemental Assault',
     size: 'M',
     type: 'speed',
     element: 'ice',
@@ -2104,6 +2218,7 @@
 
   {
     name: 'Elemental Assault (L)',
+    baseName: 'Elemental Assault',
     size: 'L',
     type: 'speed',
     element: 'ice',
@@ -2113,6 +2228,7 @@
 
   {
     name: 'Elemental Assault (XL)',
+    baseName: 'Elemental Assault',
     size: 'XL',
     type: 'speed',
     element: 'ice',
@@ -2122,6 +2238,7 @@
 
   {
     name: 'Elemental Breaker (S)',
+    baseName: 'Elemental Breaker',
     size: 'S',
     type: 'technical',
     element: 'thunder',
@@ -2131,6 +2248,7 @@
 
   {
     name: 'Elemental Breaker (M)',
+    baseName: 'Elemental Breaker',
     size: 'M',
     type: 'technical',
     element: 'thunder',
@@ -2140,6 +2258,7 @@
 
   {
     name: 'Elemental Breaker (L)',
+    baseName: 'Elemental Breaker',
     size: 'L',
     type: 'technical',
     element: 'thunder',
@@ -2149,6 +2268,7 @@
 
   {
     name: 'Elemental Breaker (XL)',
+    baseName: 'Elemental Breaker',
     size: 'XL',
     type: 'technical',
     element: 'thunder',
@@ -2158,6 +2278,7 @@
 
   {
     name: 'Encompassing Flames',
+    baseName: 'Encompassing Flames',
     size: '-',
     type: 'technical',
     element: 'fire',
@@ -2173,6 +2294,7 @@
 
   {
     name: 'Encompassing Flames+',
+    baseName: 'Encompassing Flames',
     size: '+',
     type: 'technical',
     element: 'fire',
@@ -2200,6 +2322,7 @@
 
   {
     name: 'Evasion Ability (S)',
+    baseName: 'Evasion Ability',
     size: 'S',
     type: 'speed',
     element: 'water',
@@ -2209,6 +2332,7 @@
 
   {
     name: 'Evasion Ability (M)',
+    baseName: 'Evasion Ability',
     size: 'M',
     type: 'speed',
     element: 'water',
@@ -2218,6 +2342,7 @@
 
   {
     name: 'Evasion Ability (L)',
+    baseName: 'Evasion Ability',
     size: 'L',
     type: 'speed',
     element: 'water',
@@ -2227,6 +2352,7 @@
 
   {
     name: 'Evasion Ability (XL)',
+    baseName: 'Evasion Ability',
     size: 'XL',
     type: 'speed',
     element: 'water',
@@ -2236,6 +2362,7 @@
 
   {
     name: 'Evasion Instinct (S)',
+    baseName: 'Evasion Instinct',
     size: 'S',
     type: 'speed',
     element: 'water',
@@ -2245,6 +2372,7 @@
 
   {
     name: 'Evasion Instinct (M)',
+    baseName: 'Evasion Instinct',
     size: 'M',
     type: 'speed',
     element: 'water',
@@ -2254,6 +2382,7 @@
 
   {
     name: 'Evasion Instinct (L)',
+    baseName: 'Evasion Instinct',
     size: 'L',
     type: 'speed',
     element: 'water',
@@ -2263,6 +2392,7 @@
 
   {
     name: 'Evasion Instinct (XL)',
+    baseName: 'Evasion Instinct',
     size: 'XL',
     type: 'speed',
     element: 'water',
@@ -2272,6 +2402,7 @@
 
   {
     name: 'Explosive Blast',
+    baseName: 'Explosive Blast',
     size: '-',
     type: 'power',
     element: 'fire',
@@ -2288,6 +2419,7 @@
 
   {
     name: 'Explosive Blast+',
+    baseName: 'Explosive Blast',
     size: '+',
     type: 'power',
     element: 'fire',
@@ -2354,6 +2486,7 @@
 
   {
     name: 'Fire Atk Boost (S)',
+    baseName: 'Fire Atk Boost',
     size: 'S',
     type: 'power',
     element: 'fire',
@@ -2363,6 +2496,7 @@
 
   {
     name: 'Fire Atk Boost (M)',
+    baseName: 'Fire Atk Boost',
     size: 'M',
     type: 'power',
     element: 'fire',
@@ -2372,6 +2506,7 @@
 
   {
     name: 'Fire Atk Boost (L)',
+    baseName: 'Fire Atk Boost',
     size: 'L',
     type: 'power',
     element: 'fire',
@@ -2381,6 +2516,7 @@
 
   {
     name: 'Fire Atk Boost (XL)',
+    baseName: 'Fire Atk Boost',
     size: 'XL',
     type: 'power',
     element: 'fire',
@@ -2405,6 +2541,7 @@
 
   {
     name: 'Fire Def Boost (S)',
+    baseName: 'Fire Def Boost',
     size: 'S',
     type: 'technical',
     element: 'fire',
@@ -2414,6 +2551,7 @@
 
   {
     name: 'Fire Def Boost (M)',
+    baseName: 'Fire Def Boost',
     size: 'M',
     type: 'technical',
     element: 'fire',
@@ -2423,6 +2561,7 @@
 
   {
     name: 'Fire Def Boost (L)',
+    baseName: 'Fire Def Boost',
     size: 'L',
     type: 'technical',
     element: 'fire',
@@ -2432,6 +2571,7 @@
 
   {
     name: 'Fire Def Boost (XL)',
+    baseName: 'Fire Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'fire',
@@ -2470,6 +2610,7 @@
 
   {
     name: 'Firebrand',
+    baseName: 'Firebrand',
     size: '-',
     type: 'speed',
     element: 'fire',
@@ -2484,6 +2625,7 @@
 
   {
     name: 'Firebrand+',
+    baseName: 'Firebrand',
     size: '+',
     type: 'speed',
     element: 'fire',
@@ -2508,6 +2650,7 @@
 
   {
     name: 'Flame Chakram',
+    baseName: 'Flame Chakram',
     size: '-',
     type: 'speed',
     element: 'fire',
@@ -2523,6 +2666,7 @@
 
   {
     name: 'Flame Chakram+',
+    baseName: 'Flame Chakram',
     size: '+',
     type: 'speed',
     element: 'fire',
@@ -2536,6 +2680,7 @@
 
   {
     name: 'Flame Tempest',
+    baseName: 'Flame Tempest',
     size: '-',
     type: 'speed',
     element: 'fire',
@@ -2552,6 +2697,7 @@
 
   {
     name: 'Flame Tempest+',
+    baseName: 'Flame Tempest',
     size: '+',
     type: 'speed',
     element: 'fire',
@@ -2580,6 +2726,7 @@
 
   {
     name: 'Flare Cluster',
+    baseName: 'Flare Cluster',
     size: '-',
     type: 'technical',
     element: 'fire',
@@ -2596,6 +2743,7 @@
 
   {
     name: 'Flare Cluster+',
+    baseName: 'Flare Cluster',
     size: '+',
     type: 'technical',
     element: 'fire',
@@ -2623,6 +2771,7 @@
 
   {
     name: 'Fleeting Effervescence',
+    baseName: 'Fleeting Effervescence',
     size: '-',
     type: 'technical',
     element: 'water',
@@ -2637,6 +2786,7 @@
 
   {
     name: 'Fleeting Effervescence+',
+    baseName: 'Fleeting Effervescence',
     size: '+',
     type: 'technical',
     element: 'water',
@@ -2662,6 +2812,7 @@
 
   {
     name: 'Fortify (S)',
+    baseName: 'Fortify',
     size: 'S',
     type: 'technical',
     element: 'water',
@@ -2671,6 +2822,7 @@
 
   {
     name: 'Fortify (M)',
+    baseName: 'Fortify',
     size: 'M',
     type: 'technical',
     element: 'water',
@@ -2680,6 +2832,7 @@
 
   {
     name: 'Fortify (L)',
+    baseName: 'Fortify',
     size: 'L',
     type: 'technical',
     element: 'water',
@@ -2689,6 +2842,7 @@
 
   {
     name: 'Fortify (XL)',
+    baseName: 'Fortify',
     size: 'XL',
     type: 'technical',
     element: 'water',
@@ -2698,6 +2852,7 @@
 
   {
     name: 'Foxflame Bubbles',
+    baseName: 'Foxflame Bubbles',
     size: '-',
     type: 'speed',
     element: 'water',
@@ -2713,6 +2868,7 @@
 
   {
     name: 'Foxflame Bubbles+',
+    baseName: 'Foxflame Bubbles',
     size: '+',
     type: 'speed',
     element: 'water',
@@ -2734,6 +2890,7 @@
 
   {
     name: 'Freezing Burst',
+    baseName: 'Freezing Burst',
     size: '-',
     type: 'speed',
     element: 'ice',
@@ -2748,6 +2905,7 @@
 
   {
     name: 'Freezing Burst+',
+    baseName: 'Freezing Burst',
     size: '+',
     type: 'speed',
     element: 'ice',
@@ -2787,6 +2945,7 @@
 
   {
     name: 'Frosty Furrow',
+    baseName: 'Frosty Furrow',
     size: '-',
     type: 'power',
     element: 'ice',
@@ -2801,6 +2960,7 @@
 
   {
     name: 'Frosty Furrow+',
+    baseName: 'Frosty Furrow',
     size: '+',
     type: 'power',
     element: 'ice',
@@ -2827,6 +2987,7 @@
 
   {
     name: 'Fruit Frenzy',
+    baseName: 'Fruit Frenzy',
     size: '-',
     type: null,
     element: 'none',
@@ -2842,6 +3003,7 @@
 
   {
     name: 'Fruit Frenzy+',
+    baseName: 'Fruit Frenzy',
     size: '+',
     type: null,
     element: 'none',
@@ -2869,6 +3031,7 @@
 
   {
     name: 'Gale Trap',
+    baseName: 'Gale Trap',
     size: '-',
     type: null,
     element: 'none',
@@ -2883,6 +3046,7 @@
 
   {
     name: 'Gale Trap+',
+    baseName: 'Gale Trap',
     size: '+',
     type: null,
     element: 'none',
@@ -2896,6 +3060,7 @@
 
   {
     name: 'Great Flaming Vortex',
+    baseName: 'Great Flaming Vortex',
     size: '-',
     type: 'speed',
     element: 'fire',
@@ -2910,6 +3075,7 @@
 
   {
     name: 'Great Flaming Vortex+',
+    baseName: 'Great Flaming Vortex',
     size: '+',
     type: 'speed',
     element: 'fire',
@@ -2961,6 +3127,7 @@
 
   {
     name: 'Health Boost (S)',
+    baseName: 'Health Boost',
     size: 'S',
     type: 'power',
     element: 'none',
@@ -2970,6 +3137,7 @@
 
   {
     name: 'Health Boost (M)',
+    baseName: 'Health Boost',
     size: 'M',
     type: 'power',
     element: 'none',
@@ -2979,6 +3147,7 @@
 
   {
     name: 'Health Boost (L)',
+    baseName: 'Health Boost',
     size: 'L',
     type: 'power',
     element: 'none',
@@ -2988,6 +3157,7 @@
 
   {
     name: 'Health Boost (XL)',
+    baseName: 'Health Boost',
     size: 'XL',
     type: 'power',
     element: 'none',
@@ -3024,6 +3194,7 @@
 
   {
     name: 'Heavy Rampage',
+    baseName: 'Heavy Rampage',
     size: '-',
     type: null,
     element: 'none',
@@ -3038,6 +3209,7 @@
 
   {
     name: 'Heavy Rampage+',
+    baseName: 'Heavy Rampage',
     size: '+',
     type: null,
     element: 'none',
@@ -3052,6 +3224,7 @@
 
   {
     name: 'Heavy Spear',
+    baseName: 'Heavy Spear',
     size: '-',
     type: null,
     element: 'none',
@@ -3066,6 +3239,7 @@
 
   {
     name: 'Heavy Spear+',
+    baseName: 'Heavy Spear',
     size: '+',
     type: null,
     element: 'none',
@@ -3092,6 +3266,7 @@
 
   {
     name: 'Hell Horn',
+    baseName: 'Hell Horn',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -3106,6 +3281,7 @@
 
   {
     name: 'Hell Horn+',
+    baseName: 'Hell Horn',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -3133,6 +3309,7 @@
 
   {
     name: 'Hellfire Retribution',
+    baseName: 'Hellfire Retribution',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -3147,6 +3324,7 @@
 
   {
     name: 'Hellfire Retribution+',
+    baseName: 'Hellfire Retribution',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -3174,6 +3352,7 @@
 
   {
     name: 'Heroics (S)',
+    baseName: 'Heroics',
     size: 'S',
     type: 'power',
     element: 'fire',
@@ -3183,6 +3362,7 @@
 
   {
     name: 'Heroics (M)',
+    baseName: 'Heroics',
     size: 'M',
     type: 'power',
     element: 'fire',
@@ -3192,6 +3372,7 @@
 
   {
     name: 'Heroics (L)',
+    baseName: 'Heroics',
     size: 'L',
     type: 'power',
     element: 'fire',
@@ -3201,6 +3382,7 @@
 
   {
     name: 'Heroics (XL)',
+    baseName: 'Heroics',
     size: 'XL',
     type: 'power',
     element: 'fire',
@@ -3233,6 +3415,7 @@
 
   {
     name: 'HtH Master (S)',
+    baseName: 'HtH Master',
     size: 'S',
     type: 'technical',
     element: 'ice',
@@ -3242,6 +3425,7 @@
 
   {
     name: 'HtH Master (M)',
+    baseName: 'HtH Master',
     size: 'M',
     type: 'technical',
     element: 'ice',
@@ -3251,6 +3435,7 @@
 
   {
     name: 'HtH Master (L)',
+    baseName: 'HtH Master',
     size: 'L',
     type: 'technical',
     element: 'ice',
@@ -3260,6 +3445,7 @@
 
   {
     name: 'HtH Master (XL)',
+    baseName: 'HtH Master',
     size: 'XL',
     type: 'technical',
     element: 'ice',
@@ -3297,6 +3483,7 @@
 
   {
     name: 'Hyper Shot',
+    baseName: 'Hyper Shot',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -3312,6 +3499,7 @@
 
   {
     name: 'Hyper Shot+',
+    baseName: 'Hyper Shot',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -3327,6 +3515,7 @@
 
   {
     name: 'Hyperspace Tackle',
+    baseName: 'Hyperspace Tackle',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -3341,6 +3530,7 @@
 
   {
     name: 'Hyperspace Tackle+',
+    baseName: 'Hyperspace Tackle',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -3354,6 +3544,7 @@
 
   {
     name: 'Ice Armor',
+    baseName: 'Ice Armor',
     size: '-',
     type: null,
     element: 'ice',
@@ -3367,6 +3558,7 @@
 
   {
     name: 'Ice Armor+',
+    baseName: 'Ice Armor',
     size: '+',
     type: null,
     element: 'ice',
@@ -3378,6 +3570,7 @@
 
   {
     name: 'Ice Atk Boost (S)',
+    baseName: 'Ice Atk Boost',
     size: 'S',
     type: 'power',
     element: 'ice',
@@ -3387,6 +3580,7 @@
 
   {
     name: 'Ice Atk Boost (M)',
+    baseName: 'Ice Atk Boost',
     size: 'M',
     type: 'power',
     element: 'ice',
@@ -3396,6 +3590,7 @@
 
   {
     name: 'Ice Atk Boost (L)',
+    baseName: 'Ice Atk Boost',
     size: 'L',
     type: 'power',
     element: 'ice',
@@ -3405,6 +3600,7 @@
 
   {
     name: 'Ice Atk Boost (XL)',
+    baseName: 'Ice Atk Boost',
     size: 'XL',
     type: 'power',
     element: 'ice',
@@ -3414,6 +3610,7 @@
 
   {
     name: 'Ice Burst',
+    baseName: 'Ice Burst',
     size: '-',
     type: 'technical',
     element: 'ice',
@@ -3429,6 +3626,7 @@
 
   {
     name: 'Ice Burst+',
+    baseName: 'Ice Burst',
     size: '+',
     type: 'technical',
     element: 'ice',
@@ -3444,6 +3642,7 @@
 
   {
     name: 'Ice Def Boost (S)',
+    baseName: 'Ice Def Boost',
     size: 'S',
     type: 'technical',
     element: 'ice',
@@ -3453,6 +3652,7 @@
 
   {
     name: 'Ice Def Boost (M)',
+    baseName: 'Ice Def Boost',
     size: 'M',
     type: 'technical',
     element: 'ice',
@@ -3462,6 +3662,7 @@
 
   {
     name: 'Ice Def Boost (L)',
+    baseName: 'Ice Def Boost',
     size: 'L',
     type: 'technical',
     element: 'ice',
@@ -3471,6 +3672,7 @@
 
   {
     name: 'Ice Def Boost (XL)',
+    baseName: 'Ice Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'ice',
@@ -3507,6 +3709,7 @@
 
   {
     name: 'Icicle Breath',
+    baseName: 'Icicle Breath',
     size: '-',
     type: 'technical',
     element: 'ice',
@@ -3520,6 +3723,7 @@
 
   {
     name: 'Icicle Breath+',
+    baseName: 'Icicle Breath',
     size: '+',
     type: 'technical',
     element: 'ice',
@@ -3572,6 +3776,7 @@
 
   {
     name: 'Infernal Flames',
+    baseName: 'Infernal Flames',
     size: '-',
     type: 'power',
     element: 'fire',
@@ -3587,6 +3792,7 @@
 
   {
     name: 'Infernal Flames+',
+    baseName: 'Infernal Flames',
     size: '+',
     type: 'power',
     element: 'fire',
@@ -3600,6 +3806,7 @@
 
   {
     name: 'Inflict Rate Up (S)',
+    baseName: 'Inflict Rate Up',
     size: 'S',
     type: null,
     element: 'none',
@@ -3609,6 +3816,7 @@
 
   {
     name: 'Inflict Rate Up (M)',
+    baseName: 'Inflict Rate Up',
     size: 'M',
     type: null,
     element: 'none',
@@ -3618,6 +3826,7 @@
 
   {
     name: 'Inflict Rate Up (L)',
+    baseName: 'Inflict Rate Up',
     size: 'L',
     type: null,
     element: 'none',
@@ -3627,6 +3836,7 @@
 
   {
     name: 'Inflict Rate Up (XL)',
+    baseName: 'Inflict Rate Up',
     size: 'XL',
     type: null,
     element: 'none',
@@ -3651,6 +3861,7 @@
 
   {
     name: 'Insomniac (S)',
+    baseName: 'Insomniac',
     size: 'S',
     type: 'technical',
     element: 'water',
@@ -3660,6 +3871,7 @@
 
   {
     name: 'Insomniac (M)',
+    baseName: 'Insomniac',
     size: 'M',
     type: 'technical',
     element: 'water',
@@ -3669,6 +3881,7 @@
 
   {
     name: 'Insomniac (L)',
+    baseName: 'Insomniac',
     size: 'L',
     type: 'technical',
     element: 'water',
@@ -3678,6 +3891,7 @@
 
   {
     name: 'Insomniac (XL)',
+    baseName: 'Insomniac',
     size: 'XL',
     type: 'technical',
     element: 'water',
@@ -3687,6 +3901,7 @@
 
   {
     name: 'Instigator (S)',
+    baseName: 'Instigator',
     size: 'S',
     type: 'technical',
     element: 'fire',
@@ -3696,6 +3911,7 @@
 
   {
     name: 'Instigator (M)',
+    baseName: 'Instigator',
     size: 'M',
     type: 'technical',
     element: 'fire',
@@ -3705,6 +3921,7 @@
 
   {
     name: 'Instigator (L)',
+    baseName: 'Instigator',
     size: 'L',
     type: 'technical',
     element: 'fire',
@@ -3714,6 +3931,7 @@
 
   {
     name: 'Instigator (XL)',
+    baseName: 'Instigator',
     size: 'XL',
     type: 'technical',
     element: 'fire',
@@ -3723,6 +3941,7 @@
 
   {
     name: 'Inundate',
+    baseName: 'Inundate',
     size: '-',
     type: 'power',
     element: 'water',
@@ -3738,6 +3957,7 @@
 
   {
     name: 'Inundate+',
+    baseName: 'Inundate',
     size: '+',
     type: 'power',
     element: 'water',
@@ -3816,6 +4036,7 @@
 
   {
     name: 'Killer Tail',
+    baseName: 'Killer Tail',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -3830,6 +4051,7 @@
 
   {
     name: 'Killer Tail+',
+    baseName: 'Killer Tail',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -3844,6 +4066,7 @@
 
   {
     name: 'Kinship Skill+ (S)',
+    baseName: 'Kinship Skill+',
     size: 'S',
     type: 'speed',
     element: 'ice',
@@ -3853,6 +4076,7 @@
 
   {
     name: 'Kinship Skill+ (M)',
+    baseName: 'Kinship Skill+',
     size: 'M',
     type: 'speed',
     element: 'ice',
@@ -3862,6 +4086,7 @@
 
   {
     name: 'Kinship Skill+ (L)',
+    baseName: 'Kinship Skill+',
     size: 'L',
     type: 'speed',
     element: 'ice',
@@ -3871,6 +4096,7 @@
 
   {
     name: 'Kinship Skill+ (XL)',
+    baseName: 'Kinship Skill+',
     size: 'XL',
     type: 'speed',
     element: 'ice',
@@ -3918,6 +4144,7 @@
 
   {
     name: 'Magma Counter',
+    baseName: 'Magma Counter',
     size: '-',
     type: 'technical',
     element: 'fire',
@@ -3932,6 +4159,7 @@
 
   {
     name: 'Magma Counter+',
+    baseName: 'Magma Counter',
     size: '+',
     type: 'technical',
     element: 'fire',
@@ -3945,6 +4173,7 @@
 
   {
     name: 'Maximum Claw Slash',
+    baseName: 'Maximum Claw Slash',
     size: '-',
     type: 'power',
     element: 'none',
@@ -3960,6 +4189,7 @@
 
   {
     name: 'Maximum Claw Slash+',
+    baseName: 'Maximum Claw Slash',
     size: '+',
     type: 'power',
     element: 'none',
@@ -3999,6 +4229,7 @@
 
   {
     name: 'Maximum Tackle',
+    baseName: 'Maximum Tackle',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -4013,6 +4244,7 @@
 
   {
     name: 'Maximum Tackle+',
+    baseName: 'Maximum Tackle',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -4048,6 +4280,7 @@
 
   {
     name: 'Mud Armor',
+    baseName: 'Mud Armor',
     size: '-',
     type: null,
     element: 'water',
@@ -4061,6 +4294,7 @@
 
   {
     name: 'Mud Armor+',
+    baseName: 'Mud Armor',
     size: '+',
     type: null,
     element: 'water',
@@ -4111,6 +4345,7 @@
 
   {
     name: 'Muddy Hell',
+    baseName: 'Muddy Hell',
     size: '-',
     type: 'power',
     element: 'water',
@@ -4125,6 +4360,7 @@
 
   {
     name: 'Muddy Hell+',
+    baseName: 'Muddy Hell',
     size: '+',
     type: 'power',
     element: 'water',
@@ -4150,6 +4386,7 @@
 
   {
     name: 'Night Parasites',
+    baseName: 'Night Parasites',
     size: '-',
     type: 'speed',
     element: 'dragon',
@@ -4164,6 +4401,7 @@
 
   {
     name: 'Night Parasites+',
+    baseName: 'Night Parasites',
     size: '+',
     type: 'speed',
     element: 'dragon',
@@ -4192,6 +4430,7 @@
 
   {
     name: 'Non-Elem Atk Boost (S)',
+    baseName: 'Non-Elem Atk Boost',
     size: 'S',
     type: 'power',
     element: 'none',
@@ -4201,6 +4440,7 @@
 
   {
     name: 'Non-Elem Atk Boost (M)',
+    baseName: 'Non-Elem Atk Boost',
     size: 'M',
     type: 'power',
     element: 'none',
@@ -4210,6 +4450,7 @@
 
   {
     name: 'Non-Elem Atk Boost (L)',
+    baseName: 'Non-Elem Atk Boost',
     size: 'L',
     type: 'power',
     element: 'none',
@@ -4219,6 +4460,7 @@
 
   {
     name: 'Non-Elem Atk Boost (XL)',
+    baseName: 'Non-Elem Atk Boost',
     size: 'XL',
     type: 'power',
     element: 'none',
@@ -4228,6 +4470,7 @@
 
   {
     name: 'Non-Elem Def Boost (S)',
+    baseName: 'Non-Elem Def Boost',
     size: 'S',
     type: 'technical',
     element: 'none',
@@ -4237,6 +4480,7 @@
 
   {
     name: 'Non-Elem Def Boost (M)',
+    baseName: 'Non-Elem Def Boost',
     size: 'M',
     type: 'technical',
     element: 'none',
@@ -4246,6 +4490,7 @@
 
   {
     name: 'Non-Elem Def Boost (L)',
+    baseName: 'Non-Elem Def Boost',
     size: 'L',
     type: 'technical',
     element: 'none',
@@ -4255,6 +4500,7 @@
 
   {
     name: 'Non-Elem Def Boost (XL)',
+    baseName: 'Non-Elem Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'none',
@@ -4275,6 +4521,7 @@
 
   {
     name: 'Noxious Spit',
+    baseName: 'Noxious Spit',
     size: '-',
     type: 'power',
     element: 'water',
@@ -4291,6 +4538,7 @@
 
   {
     name: 'Noxious Spit+',
+    baseName: 'Noxious Spit',
     size: '+',
     type: 'power',
     element: 'water',
@@ -4304,6 +4552,7 @@
 
   {
     name: 'Noxious Venom',
+    baseName: 'Noxious Venom',
     size: '-',
     type: 'power',
     element: 'none',
@@ -4320,6 +4569,7 @@
 
   {
     name: 'Noxious Venom+',
+    baseName: 'Noxious Venom',
     size: '+',
     type: 'power',
     element: 'none',
@@ -4383,6 +4633,7 @@
 
   {
     name: 'Panacea (S)',
+    baseName: 'Panacea',
     size: 'S',
     type: 'power',
     element: 'dragon',
@@ -4392,6 +4643,7 @@
 
   {
     name: 'Panacea (M)',
+    baseName: 'Panacea',
     size: 'M',
     type: 'power',
     element: 'dragon',
@@ -4401,6 +4653,7 @@
 
   {
     name: 'Panacea (L)',
+    baseName: 'Panacea',
     size: 'L',
     type: 'power',
     element: 'dragon',
@@ -4410,6 +4663,7 @@
 
   {
     name: 'Panacea (XL)',
+    baseName: 'Panacea',
     size: 'XL',
     type: 'power',
     element: 'dragon',
@@ -4432,6 +4686,7 @@
 
   {
     name: 'Partner (S)',
+    baseName: 'Partner',
     size: 'S',
     type: 'speed',
     element: 'thunder',
@@ -4441,6 +4696,7 @@
 
   {
     name: 'Partner (M)',
+    baseName: 'Partner',
     size: 'M',
     type: 'speed',
     element: 'thunder',
@@ -4450,6 +4706,7 @@
 
   {
     name: 'Partner (L)',
+    baseName: 'Partner',
     size: 'L',
     type: 'speed',
     element: 'thunder',
@@ -4459,6 +4716,7 @@
 
   {
     name: 'Partner (XL)',
+    baseName: 'Partner',
     size: 'XL',
     type: 'speed',
     element: 'thunder',
@@ -4551,6 +4809,7 @@
 
   {
     name: 'Plesioth Dash',
+    baseName: 'Plesioth Dash',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -4565,6 +4824,7 @@
 
   {
     name: 'Plesioth Dash+',
+    baseName: 'Plesioth Dash',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -4592,6 +4852,7 @@
 
   {
     name: 'Poison Spike',
+    baseName: 'Poison Spike',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -4607,6 +4868,7 @@
 
   {
     name: 'Poison Spike+',
+    baseName: 'Poison Spike',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -4637,6 +4899,7 @@
 
   {
     name: 'Poison Tail',
+    baseName: 'Poison Tail',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -4652,6 +4915,7 @@
 
   {
     name: 'Poison Tail+',
+    baseName: 'Poison Tail',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -4665,6 +4929,7 @@
 
   {
     name: 'Potential (S)',
+    baseName: 'Potential',
     size: 'S',
     type: 'power',
     element: 'thunder',
@@ -4674,6 +4939,7 @@
 
   {
     name: 'Potential (M)',
+    baseName: 'Potential',
     size: 'M',
     type: 'power',
     element: 'thunder',
@@ -4683,6 +4949,7 @@
 
   {
     name: 'Potential (L)',
+    baseName: 'Potential',
     size: 'L',
     type: 'power',
     element: 'thunder',
@@ -4692,6 +4959,7 @@
 
   {
     name: 'Potential (XL)',
+    baseName: 'Potential',
     size: 'XL',
     type: 'power',
     element: 'thunder',
@@ -4701,6 +4969,7 @@
 
   {
     name: 'Prancing Back Kick',
+    baseName: 'Prancing Back Kick',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -4715,6 +4984,7 @@
 
   {
     name: 'Prancing Back Kick+',
+    baseName: 'Prancing Back Kick',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -4741,6 +5011,7 @@
 
   {
     name: 'Quick (S)',
+    baseName: 'Quick',
     size: 'S',
     type: 'speed',
     element: 'water',
@@ -4750,6 +5021,7 @@
 
   {
     name: 'Quick (M)',
+    baseName: 'Quick',
     size: 'M',
     type: 'speed',
     element: 'water',
@@ -4759,6 +5031,7 @@
 
   {
     name: 'Quick (L)',
+    baseName: 'Quick',
     size: 'L',
     type: 'speed',
     element: 'water',
@@ -4768,6 +5041,7 @@
 
   {
     name: 'Quick (XL)',
+    baseName: 'Quick',
     size: 'XL',
     type: 'speed',
     element: 'water',
@@ -4777,6 +5051,7 @@
 
   {
     name: 'Railgun',
+    baseName: 'Railgun',
     size: '-',
     type: 'power',
     element: 'thunder',
@@ -4791,6 +5066,7 @@
 
   {
     name: 'Railgun+',
+    baseName: 'Railgun',
     size: '+',
     type: 'power',
     element: 'thunder',
@@ -4804,6 +5080,7 @@
 
   {
     name: 'Rapid Bite',
+    baseName: 'Rapid Bite',
     size: '-',
     type: null,
     element: 'none',
@@ -4818,6 +5095,7 @@
 
   {
     name: 'Rapid Bite+',
+    baseName: 'Rapid Bite',
     size: '+',
     type: null,
     element: 'none',
@@ -4845,6 +5123,7 @@
 
   {
     name: 'Ray Blade',
+    baseName: 'Ray Blade',
     size: '-',
     type: 'technical',
     element: 'thunder',
@@ -4860,6 +5139,7 @@
 
   {
     name: 'Ray Blade+',
+    baseName: 'Ray Blade',
     size: '+',
     type: 'technical',
     element: 'thunder',
@@ -4976,6 +5256,7 @@
 
   {
     name: 'Rock Stampede',
+    baseName: 'Rock Stampede',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -4991,6 +5272,7 @@
 
   {
     name: 'Rock Stampede+',
+    baseName: 'Rock Stampede',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -5006,6 +5288,7 @@
 
   {
     name: 'Royal Decree',
+    baseName: 'Royal Decree',
     size: '-',
     type: null,
     element: 'dragon',
@@ -5018,6 +5301,7 @@
 
   {
     name: 'Royal Decree+',
+    baseName: 'Royal Decree',
     size: '+',
     type: null,
     element: 'dragon',
@@ -5029,6 +5313,7 @@
 
   {
     name: 'Salt in Wound (S)',
+    baseName: 'Salt in Wound',
     size: 'S',
     type: 'power',
     element: 'none',
@@ -5038,6 +5323,7 @@
 
   {
     name: 'Salt in Wound (M)',
+    baseName: 'Salt in Wound',
     size: 'M',
     type: 'power',
     element: 'none',
@@ -5047,6 +5333,7 @@
 
   {
     name: 'Salt in Wound (L)',
+    baseName: 'Salt in Wound',
     size: 'L',
     type: 'power',
     element: 'none',
@@ -5056,6 +5343,7 @@
 
   {
     name: 'Salt in Wound (XL)',
+    baseName: 'Salt in Wound',
     size: 'XL',
     type: 'power',
     element: 'none',
@@ -5065,6 +5353,7 @@
 
   {
     name: 'Savage Fireball',
+    baseName: 'Savage Fireball',
     size: '-',
     type: 'power',
     element: 'fire',
@@ -5081,6 +5370,7 @@
 
   {
     name: 'Savage Fireball+',
+    baseName: 'Savage Fireball',
     size: '+',
     type: 'power',
     element: 'fire',
@@ -5094,6 +5384,7 @@
 
   {
     name: 'Savage Fist',
+    baseName: 'Savage Fist',
     size: '-',
     type: 'power',
     element: 'none',
@@ -5109,6 +5400,7 @@
 
   {
     name: 'Savage Fist+',
+    baseName: 'Savage Fist',
     size: '+',
     type: 'power',
     element: 'none',
@@ -5163,6 +5455,7 @@
 
   {
     name: 'Sealbreaker (S)',
+    baseName: 'Sealbreaker',
     size: 'S',
     type: 'speed',
     element: 'ice',
@@ -5172,6 +5465,7 @@
 
   {
     name: 'Sealbreaker (M)',
+    baseName: 'Sealbreaker',
     size: 'M',
     type: 'speed',
     element: 'ice',
@@ -5181,6 +5475,7 @@
 
   {
     name: 'Sealbreaker (L)',
+    baseName: 'Sealbreaker',
     size: 'L',
     type: 'speed',
     element: 'ice',
@@ -5190,6 +5485,7 @@
 
   {
     name: 'Sealbreaker (XL)',
+    baseName: 'Sealbreaker',
     size: 'XL',
     type: 'speed',
     element: 'ice',
@@ -5213,6 +5509,7 @@
 
   {
     name: 'Self-Heal (S)',
+    baseName: 'Self-Heal',
     size: 'S',
     type: 'speed',
     element: 'fire',
@@ -5222,6 +5519,7 @@
 
   {
     name: 'Self-Heal (M)',
+    baseName: 'Self-Heal',
     size: 'M',
     type: 'speed',
     element: 'fire',
@@ -5231,6 +5529,7 @@
 
   {
     name: 'Self-Heal (L)',
+    baseName: 'Self-Heal',
     size: 'L',
     type: 'speed',
     element: 'fire',
@@ -5240,6 +5539,7 @@
 
   {
     name: 'Self-Heal (XL)',
+    baseName: 'Self-Heal',
     size: 'XL',
     type: 'speed',
     element: 'fire',
@@ -5261,6 +5561,7 @@
 
   {
     name: 'Shredding Scales',
+    baseName: 'Shredding Scales',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -5276,6 +5577,7 @@
 
   {
     name: 'Shredding Scales+',
+    baseName: 'Shredding Scales',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -5342,6 +5644,7 @@
 
   {
     name: 'Sleep Needle',
+    baseName: 'Sleep Needle',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -5357,6 +5660,7 @@
 
   {
     name: 'Sleep Needle+',
+    baseName: 'Sleep Needle',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -5372,6 +5676,7 @@
 
   {
     name: 'Sleep Powder',
+    baseName: 'Sleep Powder',
     size: '-',
     type: 'technical',
     element: 'water',
@@ -5387,6 +5692,7 @@
 
   {
     name: 'Sleep Powder+',
+    baseName: 'Sleep Powder',
     size: '+',
     type: 'technical',
     element: 'water',
@@ -5402,6 +5708,7 @@
 
   {
     name: 'Slime Stomp',
+    baseName: 'Slime Stomp',
     size: '-',
     type: 'power',
     element: 'none',
@@ -5417,6 +5724,7 @@
 
   {
     name: 'Slime Stomp+',
+    baseName: 'Slime Stomp',
     size: '+',
     type: 'power',
     element: 'none',
@@ -5430,6 +5738,7 @@
 
   {
     name: 'Slugger (S)',
+    baseName: 'Slugger',
     size: 'S',
     type: 'technical',
     element: 'fire',
@@ -5439,6 +5748,7 @@
 
   {
     name: 'Slugger (M)',
+    baseName: 'Slugger',
     size: 'M',
     type: 'technical',
     element: 'fire',
@@ -5449,6 +5759,7 @@
 
   {
     name: 'Slugger (L)',
+    baseName: 'Slugger',
     size: 'L',
     type: 'technical',
     element: 'fire',
@@ -5459,6 +5770,7 @@
 
   {
     name: 'Slugger (XL)',
+    baseName: 'Slugger',
     size: 'XL',
     type: 'technical',
     element: 'fire',
@@ -5494,6 +5806,7 @@
 
   {
     name: 'Snowball Attack',
+    baseName: 'Snowball Attack',
     size: '-',
     type: 'power',
     element: 'ice',
@@ -5509,6 +5822,7 @@
 
   {
     name: 'Snowball Attack+',
+    baseName: 'Snowball Attack',
     size: '+',
     type: 'power',
     element: 'ice',
@@ -5522,6 +5836,7 @@
 
   {
     name: 'Soul Kinship (S)',
+    baseName: 'Soul Kinship',
     size: 'S',
     type: 'speed',
     element: 'none',
@@ -5531,6 +5846,7 @@
 
   {
     name: 'Soul Kinship (M)',
+    baseName: 'Soul Kinship',
     size: 'M',
     type: 'speed',
     element: 'none',
@@ -5540,6 +5856,7 @@
 
   {
     name: 'Soul Kinship (L)',
+    baseName: 'Soul Kinship',
     size: 'L',
     type: 'speed',
     element: 'none',
@@ -5549,6 +5866,7 @@
 
   {
     name: 'Soul Kinship (XL)',
+    baseName: 'Soul Kinship',
     size: 'XL',
     type: 'speed',
     element: 'none',
@@ -5598,6 +5916,7 @@
 
   {
     name: 'Spreading Beam',
+    baseName: 'Spreading Beam',
     size: '-',
     type: 'power',
     element: 'fire',
@@ -5613,6 +5932,7 @@
 
   {
     name: 'Spreading Beam+',
+    baseName: 'Spreading Beam',
     size: '+',
     type: 'power',
     element: 'fire',
@@ -5626,6 +5946,7 @@
 
   {
     name: 'Stamina Boost (S)',
+    baseName: 'Stamina Boost',
     size: 'S',
     type: 'power',
     element: 'water',
@@ -5635,6 +5956,7 @@
 
   {
     name: 'Stamina Boost (M)',
+    baseName: 'Stamina Boost',
     size: 'M',
     type: 'power',
     element: 'water',
@@ -5644,6 +5966,7 @@
 
   {
     name: 'Stamina Boost (L)',
+    baseName: 'Stamina Boost',
     size: 'L',
     type: 'power',
     element: 'water',
@@ -5653,6 +5976,7 @@
 
   {
     name: 'Stamina Boost (XL)',
+    baseName: 'Stamina Boost',
     size: 'XL',
     type: 'power',
     element: 'water',
@@ -5662,6 +5986,7 @@
 
   {
     name: 'Stamina Surge (S)',
+    baseName: 'Stamina Surge',
     size: 'S',
     type: 'speed',
     element: 'thunder',
@@ -5671,6 +5996,7 @@
 
   {
     name: 'Stamina Surge (M)',
+    baseName: 'Stamina Surge',
     size: 'M',
     type: 'speed',
     element: 'thunder',
@@ -5680,6 +6006,7 @@
 
   {
     name: 'Stamina Surge (L)',
+    baseName: 'Stamina Surge',
     size: 'L',
     type: 'speed',
     element: 'thunder',
@@ -5689,6 +6016,7 @@
 
   {
     name: 'Stamina Surge (XL)',
+    baseName: 'Stamina Surge',
     size: 'XL',
     type: 'speed',
     element: 'thunder',
@@ -5698,6 +6026,7 @@
 
   {
     name: 'Steam Break',
+    baseName: 'Steam Break',
     size: '-',
     type: 'power',
     element: 'water',
@@ -5712,6 +6041,7 @@
 
   {
     name: 'Steam Break+',
+    baseName: 'Steam Break',
     size: '+',
     type: 'power',
     element: 'water',
@@ -5777,6 +6107,7 @@
 
   {
     name: 'Synchronize (S)',
+    baseName: 'Synchronize',
     size: 'S',
     type: 'technical',
     element: 'thunder',
@@ -5786,6 +6117,7 @@
 
   {
     name: 'Synchronize (M)',
+    baseName: 'Synchronize',
     size: 'M',
     type: 'technical',
     element: 'thunder',
@@ -5795,6 +6127,7 @@
 
   {
     name: 'Synchronize (L)',
+    baseName: 'Synchronize',
     size: 'L',
     type: 'technical',
     element: 'thunder',
@@ -5804,6 +6137,7 @@
 
   {
     name: 'Synchronize (XL)',
+    baseName: 'Synchronize',
     size: 'XL',
     type: 'technical',
     element: 'thunder',
@@ -5840,6 +6174,7 @@
 
   {
     name: 'Tail Twister',
+    baseName: 'Tail Twister',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -5854,6 +6189,7 @@
 
   {
     name: 'Tail Twister+',
+    baseName: 'Tail Twister',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -5867,6 +6203,7 @@
 
   {
     name: 'Tenacity (S)',
+    baseName: 'Tenacity',
     size: 'S',
     type: 'power',
     element: 'ice',
@@ -5876,6 +6213,7 @@
 
   {
     name: 'Tenacity (M)',
+    baseName: 'Tenacity',
     size: 'M',
     type: 'power',
     element: 'ice',
@@ -5885,6 +6223,7 @@
 
   {
     name: 'Tenacity (L)',
+    baseName: 'Tenacity',
     size: 'L',
     type: 'power',
     element: 'ice',
@@ -5894,6 +6233,7 @@
 
   {
     name: 'Tenacity (XL)',
+    baseName: 'Tenacity',
     size: 'XL',
     type: 'power',
     element: 'ice',
@@ -5917,6 +6257,7 @@
 
   {
     name: 'Thunder Atk Boost (S)',
+    baseName: 'Thunder Atk Boost',
     size: 'S',
     type: 'power',
     element: 'thunder',
@@ -5926,6 +6267,7 @@
 
   {
     name: 'Thunder Atk Boost (M)',
+    baseName: 'Thunder Atk Boost',
     size: 'M',
     type: 'power',
     element: 'thunder',
@@ -5935,6 +6277,7 @@
 
   {
     name: 'Thunder Atk Boost (L)',
+    baseName: 'Thunder Atk Boost',
     size: 'L',
     type: 'power',
     element: 'thunder',
@@ -5944,6 +6287,7 @@
 
   {
     name: 'Thunder Atk Boost (XL)',
+    baseName: 'Thunder Atk Boost',
     size: 'XL',
     type: 'power',
     element: 'thunder',
@@ -5980,6 +6324,7 @@
 
   {
     name: 'Thunder Def Boost (S)',
+    baseName: 'Thunder Def Boost',
     size: 'S',
     type: 'technical',
     element: 'thunder',
@@ -5989,6 +6334,7 @@
 
   {
     name: 'Thunder Def Boost (M)',
+    baseName: 'Thunder Def Boost',
     size: 'M',
     type: 'technical',
     element: 'thunder',
@@ -5998,6 +6344,7 @@
 
   {
     name: 'Thunder Def Boost (L)',
+    baseName: 'Thunder Def Boost',
     size: 'L',
     type: 'technical',
     element: 'thunder',
@@ -6007,6 +6354,7 @@
 
   {
     name: 'Thunder Def Boost (XL)',
+    baseName: 'Thunder Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'thunder',
@@ -6030,6 +6378,7 @@
 
   {
     name: 'Thunder Explosion',
+    baseName: 'Thunder Explosion',
     size: '-',
     type: null,
     element: 'thunder',
@@ -6044,6 +6393,7 @@
 
   {
     name: 'Thunder Explosion+',
+    baseName: 'Thunder Explosion',
     size: '+',
     type: null,
     element: 'thunder',
@@ -6070,6 +6420,7 @@
 
   {
     name: 'Thunder Rampage',
+    baseName: 'Thunder Rampage',
     size: '-',
     type: 'power',
     element: 'thunder',
@@ -6084,6 +6435,7 @@
 
   {
     name: 'Thunder Rampage+',
+    baseName: 'Thunder Rampage',
     size: '+',
     type: 'power',
     element: 'thunder',
@@ -6097,6 +6449,7 @@
 
   {
     name: 'Thunder Smash',
+    baseName: 'Thunder Smash',
     size: '-',
     type: 'technical',
     element: 'thunder',
@@ -6112,6 +6465,7 @@
 
   {
     name: 'Thunder Smash+',
+    baseName: 'Thunder Smash',
     size: '+',
     type: 'technical',
     element: 'thunder',
@@ -6125,6 +6479,7 @@
 
   {
     name: 'Thunder Trap',
+    baseName: 'Thunder Trap',
     size: '-',
     type: null,
     element: 'thunder',
@@ -6139,6 +6494,7 @@
 
   {
     name: 'Thunder Trap+',
+    baseName: 'Thunder Trap',
     size: '+',
     type: null,
     element: 'thunder',
@@ -6166,6 +6522,7 @@
 
   {
     name: 'Thunderball',
+    baseName: 'Thunderball',
     size: '-',
     type: 'speed',
     element: 'thunder',
@@ -6180,6 +6537,7 @@
 
   {
     name: 'Thunderball+',
+    baseName: 'Thunderball',
     size: '+',
     type: 'speed',
     element: 'thunder',
@@ -6194,6 +6552,7 @@
 
   {
     name: 'Thunderbug Blitz',
+    baseName: 'Thunderbug Blitz',
     size: '-',
     type: 'power',
     element: 'thunder',
@@ -6209,6 +6568,7 @@
 
   {
     name: 'Thunderbug Blitz+',
+    baseName: 'Thunderbug Blitz',
     size: '+',
     type: 'power',
     element: 'thunder',
@@ -6249,6 +6609,7 @@
 
   {
     name: 'Thunderfist',
+    baseName: 'Thunderfist',
     size: '-',
     type: 'speed',
     element: 'thunder',
@@ -6263,6 +6624,7 @@
 
   {
     name: 'Thunderfist+',
+    baseName: 'Thunderfist',
     size: '+',
     type: 'speed',
     element: 'thunder',
@@ -6304,6 +6666,7 @@
 
   {
     name: 'Toxic Needle',
+    baseName: 'Toxic Needle',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -6319,6 +6682,7 @@
 
   {
     name: 'Toxic Needle+',
+    baseName: 'Toxic Needle',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -6371,6 +6735,7 @@
 
   {
     name: 'Unstoppable',
+    baseName: 'Unstoppable',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -6385,6 +6750,7 @@
 
   {
     name: 'Unstoppable+',
+    baseName: 'Unstoppable',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -6399,6 +6765,7 @@
 
   {
     name: 'Vacuum Blast',
+    baseName: 'Vacuum Blast',
     size: '-',
     type: null,
     element: 'none',
@@ -6414,6 +6781,7 @@
 
   {
     name: 'Vacuum Blast+',
+    baseName: 'Vacuum Blast',
     size: '+',
     type: null,
     element: 'none',
@@ -6452,6 +6820,7 @@
 
   {
     name: 'Vengeful Tackle',
+    baseName: 'Vengeful Tackle',
     size: '-',
     type: 'power',
     element: 'none',
@@ -6466,6 +6835,7 @@
 
   {
     name: 'Vengeful Tackle+',
+    baseName: 'Vengeful Tackle',
     size: '+',
     type: 'power',
     element: 'none',
@@ -6507,6 +6877,7 @@
 
   {
     name: 'Venom Blast',
+    baseName: 'Venom Blast',
     size: '-',
     type: 'technical',
     element: 'none',
@@ -6521,6 +6892,7 @@
 
   {
     name: 'Venom Blast+',
+    baseName: 'Venom Blast',
     size: '+',
     type: 'technical',
     element: 'none',
@@ -6549,6 +6921,7 @@
 
   {
     name: 'Venom Queen',
+    baseName: 'Venom Queen',
     size: '-',
     type: 'speed',
     element: 'none',
@@ -6564,6 +6937,7 @@
 
   {
     name: 'Venom Queen+',
+    baseName: 'Venom Queen',
     size: '+',
     type: 'speed',
     element: 'none',
@@ -6621,6 +6995,7 @@
 
   {
     name: 'Vicious (S)',
+    baseName: 'Vicious',
     size: 'S',
     type: 'power',
     element: 'dragon',
@@ -6630,6 +7005,7 @@
 
   {
     name: 'Vicious (M)',
+    baseName: 'Vicious',
     size: 'M',
     type: 'power',
     element: 'dragon',
@@ -6639,6 +7015,7 @@
 
   {
     name: 'Vicious (L)',
+    baseName: 'Vicious',
     size: 'L',
     type: 'power',
     element: 'dragon',
@@ -6648,6 +7025,7 @@
 
   {
     name: 'Vicious (XL)',
+    baseName: 'Vicious',
     size: 'XL',
     type: 'power',
     element: 'dragon',
@@ -6657,6 +7035,7 @@
 
   {
     name: 'Vigilance (S)',
+    baseName: 'Vigilance',
     size: 'S',
     type: 'technical',
     element: 'ice',
@@ -6666,6 +7045,7 @@
 
   {
     name: 'Vigilance (M)',
+    baseName: 'Vigilance',
     size: 'M',
     type: 'technical',
     element: 'ice',
@@ -6675,6 +7055,7 @@
 
   {
     name: 'Vigilance (L)',
+    baseName: 'Vigilance',
     size: 'L',
     type: 'technical',
     element: 'ice',
@@ -6684,6 +7065,7 @@
 
   {
     name: 'Vigilance (XL)',
+    baseName: 'Vigilance',
     size: 'XL',
     type: 'technical',
     element: 'ice',
@@ -6693,6 +7075,7 @@
 
   {
     name: 'Water Atk Boost (S)',
+    baseName: 'Water Atk Boost',
     size: 'S',
     type: 'power',
     element: 'water',
@@ -6702,6 +7085,7 @@
 
   {
     name: 'Water Atk Boost (M)',
+    baseName: 'Water Atk Boost',
     size: 'M',
     type: 'power',
     element: 'water',
@@ -6711,6 +7095,7 @@
 
   {
     name: 'Water Atk Boost (L)',
+    baseName: 'Water Atk Boost',
     size: 'L',
     type: 'power',
     element: 'water',
@@ -6720,6 +7105,7 @@
 
   {
     name: 'Water Atk Boost (XL)',
+    baseName: 'Water Atk Boost',
     size: 'XL',
     type: 'power',
     element: 'water',
@@ -6729,6 +7115,7 @@
 
   {
     name: 'Water Def Boost (S)',
+    baseName: 'Water Def Boost',
     size: 'S',
     type: 'technical',
     element: 'water',
@@ -6738,6 +7125,7 @@
 
   {
     name: 'Water Def Boost (M)',
+    baseName: 'Water Def Boost',
     size: 'M',
     type: 'technical',
     element: 'water',
@@ -6747,6 +7135,7 @@
 
   {
     name: 'Water Def Boost (L)',
+    baseName: 'Water Def Boost',
     size: 'L',
     type: 'technical',
     element: 'water',
@@ -6756,6 +7145,7 @@
 
   {
     name: 'Water Def Boost (XL)',
+    baseName: 'Water Def Boost',
     size: 'XL',
     type: 'technical',
     element: 'water',
@@ -6831,6 +7221,7 @@
 
   {
     name: 'Wild Fang',
+    baseName: 'Wild Fang',
     size: '-',
     type: 'power',
     element: 'none',
@@ -6845,6 +7236,7 @@
 
   {
     name: 'Wild Fang+',
+    baseName: 'Wild Fang',
     size: '+',
     type: 'power',
     element: 'none',

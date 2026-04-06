@@ -72,6 +72,7 @@ export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
 export const GeneSchema = z.object({
   name: z.string(),
+  baseName: z.string().optional(),
   slug: z.string(),
   size: GeneSizeSchema,
   type: GeneTypeSchema,
