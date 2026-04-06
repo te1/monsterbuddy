@@ -7,6 +7,10 @@ import type {
   Monster,
   MonsterTag,
   RidingActionType,
+  SkillAilmentType,
+  SkillBuffType,
+  SkillDebuffType,
+  SkillEffectType,
   SkillTarget,
   StatsType,
 } from './types';
@@ -309,5 +313,123 @@ export function formatSkillTarget(target: SkillTarget): string {
 
     case 'user':
       return 'User';
+  }
+}
+
+export function formatSkillAilment(ailment: SkillAilmentType): string {
+  switch (ailment) {
+    case 'blastblight':
+      return 'Blastblight';
+
+    case 'bleeding':
+      return 'Bleeding';
+
+    case 'burn':
+      return 'Burn';
+
+    case 'darkness':
+      return 'Darkness';
+
+    case 'noxiousPoison':
+      return 'Noxious Poison';
+
+    case 'paralysis':
+      return 'Paralysis';
+
+    case 'poison':
+      return 'Poison';
+
+    case 'severePoison':
+      return 'Severe Poison';
+
+    case 'sleep':
+      return 'Sleep';
+
+    case 'stun':
+      return 'Stun';
+  }
+}
+
+export function formatSkillBuff(buff: SkillBuffType): string {
+  switch (buff) {
+    case 'attackUp':
+      return 'Attack Up';
+
+    case 'criticalUp':
+      return 'Critical Up';
+
+    case 'defenseUp':
+      return 'Defense Up';
+
+    case 'dodgeUp':
+      return 'Dodge Up';
+
+    case 'dragonAttackUp':
+      return 'Dragon Attack Up';
+
+    case 'fireAttackUp':
+      return 'Fire Attack Up';
+
+    case 'fireDefenseUp':
+      return 'Fire Defense Up';
+
+    case 'iceAttackUp':
+      return 'Ice Attack Up';
+
+    case 'inflictRateUp':
+      return 'Inflict Rate Up';
+
+    case 'speedUp':
+      return 'Speed Up';
+
+    case 'staminaRegenUp':
+      return 'Stamina Regen Up';
+
+    case 'thunderAttackUp':
+      return 'Thunder Attack Up';
+
+    case 'waterAttackUp':
+      return 'Water Attack Up';
+
+    case 'wyvernfellUp':
+      return 'Wyvernfell Up';
+
+    case 'regenerate':
+      return 'Regenerate';
+  }
+}
+
+export function formatSkillDebuff(debuff: SkillDebuffType): string {
+  switch (debuff) {
+    case 'accuracyDown':
+      return 'Accuracy Down';
+
+    case 'attackDown':
+      return 'Attack Down';
+
+    case 'defenseDown':
+      return 'Defense Down';
+
+    case 'dragonDefenseDown':
+      return 'Dragon Defense Down';
+
+    case 'evasionDown':
+      return 'Evasion Down';
+
+    case 'speedDown':
+      return 'Speed Down';
+
+    case 'thunderDefenseDown':
+      return 'Thunder Defense Down';
+
+    case 'wyvernsoulDefenseDown':
+      return 'Wyvernsoul Defense Down';
+  }
+}
+
+export function formatSkillEffect(effect: SkillEffectType): string {
+  switch (effect) {
+    case '1HitKo':
+      return '1-Hit-KO';
   }
 }
