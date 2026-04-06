@@ -3,7 +3,7 @@
   import S3MonstieSidebar from '~/components/s3/monstie/S3MonstieSidebar.vue';
   import { monsties } from '~/services/3/data';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
   import useMonstieFilter, { modes } from '~/stores/3/monstieFilter';
   import useMonstieSources from '~/stores/3/monstieSources';
 
@@ -43,7 +43,7 @@
   const route = useRoute();
   const hasSidebar = useHasSidebar();
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
   const monstieFilter = useMonstieFilter();
   provide(filterStoreKey, monstieFilter);
   const sources = useMonstieSources();

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   const props = defineProps<{ monster: Monster }>();
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   const showMonstie = computed(() => {
     return history.shouldShowMonstie(props.monster);

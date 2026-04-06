@@ -3,7 +3,7 @@
   import S3MonsterSidebar from '~/components/s3/monster/S3MonsterSidebar.vue';
   import { monsters } from '~/services/3/data';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
   import useMonsterFilter, { modes } from '~/stores/3/monsterFilter';
   import useMonsterSources from '~/stores/3/monsterSources';
 
@@ -43,7 +43,7 @@
   const route = useRoute();
   const hasSidebar = useHasSidebar();
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
   const monsterFilter = useMonsterFilter();
   provide(filterStoreKey, monsterFilter);
   const sources = useMonsterSources();

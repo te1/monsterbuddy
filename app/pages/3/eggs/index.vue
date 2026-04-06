@@ -2,7 +2,7 @@
   import type { Source } from '~/stores/3/eggSources';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
   import S3EggSidebar from '~/components/s3/egg/S3EggSidebar.vue';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
   import useEggFilter, { modes } from '~/stores/3/eggFilter';
   import useEggSources from '~/stores/3/eggSources';
   import useEggsDisplay from '~/stores/3/eggDisplays';
@@ -44,7 +44,7 @@
   const route = useRoute();
   const hasSidebar = useHasSidebar();
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
   const eggFilter = useEggFilter();
   provide(filterStoreKey, eggFilter);
   const sources = useEggSources();

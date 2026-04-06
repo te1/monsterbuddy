@@ -1,11 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import { sortedRidingActions } from '~/services/3/data';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   const props = defineProps<{ monster: Monster }>();
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   const hasRidingActions = computed(() => {
     return !!props.monster?.monstie?.ridingActions?.length;

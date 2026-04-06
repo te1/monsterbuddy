@@ -1,8 +1,8 @@
 <script lang="ts" setup>
   import { monstersBySlug } from '~/services/3/data';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   const route = useRoute();
 

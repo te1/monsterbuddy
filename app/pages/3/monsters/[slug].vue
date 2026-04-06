@@ -2,7 +2,7 @@
   import S3MonsterDetailsSidebar from '~/components/s3/monster/S3MonsterDetailsSidebar.vue';
   import { monstersBySlug } from '~/services/3/data';
   import { getMonsterSeo } from '~/services/3/seo';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   definePageMeta({
     sidebarComponent: S3MonsterDetailsSidebar,
@@ -73,7 +73,7 @@
     { key: 'whatsapp', width: 800, height: 800 },
   ]);
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   onMounted(() => {
     history.addRecentMonster(monster.slug);

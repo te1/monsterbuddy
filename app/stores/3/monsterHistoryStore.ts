@@ -9,7 +9,7 @@ import useEggFilter from './eggFilter';
 import { monsters, monstersBySlug, monsties, getMonstersByHatchable } from '~/services/3/data';
 import { genes, genesBySlug } from '~/services/3/genes';
 
-const useHistoryStore = defineStore('s3/history', () => {
+const useMonsterHistoryStore = defineStore('s3/monsterHistory', () => {
   // -- state
   const lastList = ref<'monsters' | 'monsties' | 'eggs' | null>(null);
   const recentMonsterSlugs = useLocalStorage<string[]>('s3/history/recentMonsterSlugs', []);
@@ -265,4 +265,4 @@ const useHistoryStore = defineStore('s3/history', () => {
   };
 });
 
-export default useHistoryStore;
+export default useMonsterHistoryStore;
