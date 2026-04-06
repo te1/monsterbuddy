@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
   import type { Mode } from '~/stores/3/geneFilter';
+  import useGeneFilter from '~/stores/3/geneFilter';
 
   const props = withDefaults(
     defineProps<{
@@ -9,16 +10,23 @@
       eager?: boolean;
     }>(),
     {
-      mode: 'location',
+      mode: 'stats',
       eager: false,
     }
   );
 
+  const filter = useGeneFilter();
+
   // TODO content
 
-  const showLocation = computed(() => props.mode === 'location');
-  const showCombat = computed(() => props.mode === 'combat');
-  const showRank = computed(() => props.mode === 'rank');
+  const showStats = computed(() => props.mode === 'stats');
+
+  function getStatClass(...statKeys: string[]) {
+    if (statKeys.includes(filter.sortKey ?? '')) {
+      return ['text-primary-600', 'dark:text-primary-400'];
+    }
+    return undefined;
+  }
 </script>
 
 <template>
@@ -31,6 +39,32 @@
 
     <div class="mx-3 mt-3 w-full self-start text-sm">
       <div class="text-base leading-snug font-semibold" v-text="gene.name" />
+
+      <div v-if="showStats">
+        <div
+          v-if="gene.stamina != null || gene.power != null || gene.wyvernfell != null"
+          class="flex"
+        >
+          <span v-if="gene.stamina != null">
+            Stamina
+            <strong class="font-bold" :class="getStatClass('stamina')" v-text="gene.stamina" />
+          </span>
+
+          <span v-if="gene.power != null">
+            , Power:
+            <strong class="font-bold" :class="getStatClass('power')" v-text="gene.power" />
+          </span>
+
+          <span v-if="gene.wyvernfell != null">
+            , Wyvernfell
+            <strong
+              class="font-bold"
+              :class="getStatClass('wyvernfell')"
+              v-text="gene.wyvernfell"
+            />
+          </span>
+        </div>
+      </div>
 
       <!--
       <template v-if="showLocation || showRank">

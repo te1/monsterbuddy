@@ -56,15 +56,11 @@ const sortValueGetters = {
 } satisfies Record<SortKey, (item: Gene) => unknown>;
 
 // TODO modes
-export type Mode = 'combat' | 'compact' | 'location' | 'rank' | 'ridingActions' | 'stats';
+export type Mode = 'stats';
 
 export type Modes = { value: Mode; label: string }[];
 
-export const modes: Modes = [
-  { value: 'location', label: 'Location' },
-  { value: 'combat', label: 'Attack Pattern' },
-  { value: 'rank', label: 'Rank' },
-];
+export const modes: Modes = [{ value: 'stats', label: 'Stats' }];
 
 export type FilterKey =
   | 'sizeFilter'
@@ -82,8 +78,8 @@ export type FilterKey =
 const initial = {
   sortKey: 'name',
   sortOrder: 'asc',
-  mode: 'location',
-  autoSwitchModes: ['location', 'combat', 'rank'],
+  mode: 'stats',
+  autoSwitchModes: [],
 } as {
   sortKey: SortKey;
   sortOrder: SortOrder;
@@ -184,7 +180,7 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
         (item: Gene) => {
           const value = getSortValue(item);
 
-          if (value == null || value === '?') {
+          if (value == null) {
             return sortOrder.value === 'asc' ? Infinity : -Infinity;
           }
 
