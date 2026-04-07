@@ -53,7 +53,7 @@
           </span>
 
           <span v-if="gene.power != null">
-            , Power:
+            , Power
             <strong class="font-bold" :class="getStatClass('power')" v-text="gene.power" />
           </span>
 
