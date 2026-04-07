@@ -37,21 +37,21 @@
       result += 'hatchable ';
     }
 
-    if (monster.tags.includes('deviant')) {
+    if (monster.tags?.includes('deviant')) {
       result += 'Deviant ';
     }
 
-    if (monster.tags.includes('endangered')) {
+    if (monster.tags?.includes('endangered')) {
       result += 'endangered ';
     }
 
-    if (monster.tags.includes('calamitous')) {
+    if (monster.tags?.includes('calamitous')) {
       result += 'Calamitous ';
     }
 
     result += `${monster.genus}`;
 
-    if (monster.tags.includes('mutation')) {
+    if (monster.tags?.includes('mutation')) {
       result += ' (Mutation)';
     }
 

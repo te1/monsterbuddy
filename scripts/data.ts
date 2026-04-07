@@ -115,27 +115,11 @@ function transformS1Monsters(data: unknown) {
     monster.slug = makeSlug(monster.name as string);
 
     monster.habitat ??= 'Unknown Habitat';
-    monster.related ??= [];
-    monster.locations ??= [];
-    monster.monster ??= {};
-
-    const monsterData = monster.monster as Record<string, unknown>;
-
-    monsterData.tendency ??= null;
-    monsterData.elementalAtk ??= [];
-    monsterData.elementalResistance ??= [];
-    monsterData.elementalWeakness ??= [];
-
-    monster.hatchable ??= false;
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
 
-      monstie.tendency ??= null;
       monstie.attackElement = getS1MonstieAttackElement(monster);
-      monstie.growth ??= null;
-      monstie.ridingActions ??= [];
-      monstie.kinshipSkill ??= null;
       monstie.eggVariants ??= 4;
 
       if (monstie.stats) {
@@ -150,7 +134,7 @@ function transformS1Monsters(data: unknown) {
 }
 
 function getS1MonstieAttackElement(monster: Record<string, unknown>) {
-  return getS1MonstieBestAttack(monster)?.element ?? null;
+  return getS1MonstieBestAttack(monster)?.element;
 }
 
 function getS1MonstieBestAttack(monster: Record<string, unknown>) {
@@ -250,26 +234,20 @@ function transformS2Monsters(data: unknown) {
     monster.slug = makeSlug(monster.name as string);
 
     monster.habitat ??= 'Unknown Habitat';
-    monster.related ??= [];
-
-    const monsterData = monster.monster as Record<string, unknown>;
-
-    monsterData.attackPatterns ??= {};
-    monsterData.parts ??= {};
-    monsterData.elementalWeakness ??= null;
-
-    monster.hatchable ??= false;
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
 
       monstie.attackElement = getS2MonstieAttackElement(monster);
 
-      const stats = monstie.stats as Record<string, unknown>;
-      stats.bestAttack = getS2MonstieBestAttack(monster);
-      stats.bestDefense = getS2MonstieBestDefense(monster);
-      stats.worstDefense = getS2MonstieWorstDefense(monster);
-      stats.otherDefense = getS2MonstieOtherDefense(monster);
+      if (monstie.stats) {
+        const stats = monstie.stats as Record<string, unknown>;
+
+        stats.bestAttack = getS2MonstieBestAttack(monster);
+        stats.bestDefense = getS2MonstieBestDefense(monster);
+        stats.worstDefense = getS2MonstieWorstDefense(monster);
+        stats.otherDefense = getS2MonstieOtherDefense(monster);
+      }
     }
   }
 }
@@ -338,62 +316,19 @@ function transformS3Monsters(data: unknown) {
 
     monster.slug = makeSlug(monster.name as string);
 
-    monster.tags ??= [];
-    monster.related ??= [];
-    monster.rank ??= null;
-    monster.element ??= null;
-    monster.monster ??= {};
-    monster.hatchable ??= false;
-
     if (monster.stats) {
       const stats = monster.stats as Record<string, unknown>;
 
       if (stats.base) {
         const base = stats.base as Record<string, unknown>;
 
-        base.hp ??= null;
-        base.defense ??= null;
-        base.attack ??= null;
-        base.speed ??= null;
-        base.crit ??= null;
-        base.stamina ??= null;
-        base.recovery ??= null;
-        base.startingStamina ??= null;
-        base.rawRecovery ??= null;
-        base.wyvernfell ??= null;
-        base.rawSpeed ??= null;
-        base.rawCrit ??= null;
         base.bulk = getS3MonsterBulk(base);
         base.total = getS3MonsterTotal(base);
-      }
-
-      if (stats.elementalResistance) {
-        const elementalResistance = stats.elementalResistance as Record<string, unknown>;
-
-        elementalResistance.none ??= null;
-        elementalResistance.fire ??= null;
-        elementalResistance.water ??= null;
-        elementalResistance.thunder ??= null;
-        elementalResistance.ice ??= null;
-        elementalResistance.dragon ??= null;
-      }
-
-      if (stats.ailmentResistance) {
-        const ailmentResistance = stats.ailmentResistance as Record<string, unknown>;
-
-        ailmentResistance.poison ??= null;
-        ailmentResistance.burn ??= null;
-        ailmentResistance.paralysis ??= null;
-        ailmentResistance.sleep ??= null;
       }
     }
 
     if (monster.hatchable && monster.monstie) {
       const monstie = monster.monstie as Record<string, unknown>;
-
-      monstie.attack ??= null;
-      monstie.ridingActions ??= [];
-      monstie.kinshipSkill ??= null;
 
       if (
         Array.isArray(monstie.svgEggColors) &&
@@ -453,7 +388,7 @@ function generateEggSvg(monster: Record<string, unknown>) {
 function getS3MonsterBulk(base: Record<string, unknown>) {
   const sum = Number(base.hp ?? 0) + Number(base.defense ?? 0);
 
-  return sum > 0 ? sum : null;
+  return sum > 0 ? sum : undefined;
 }
 
 function getS3MonsterTotal(base: Record<string, unknown>) {
@@ -463,7 +398,7 @@ function getS3MonsterTotal(base: Record<string, unknown>) {
     Number(base.speed ?? 0) +
     Number(base.defense ?? 0);
 
-  return sum > 0 ? sum : null;
+  return sum > 0 ? sum : undefined;
 }
 
 function transformS3Regions(data: unknown) {
@@ -471,12 +406,6 @@ function transformS3Regions(data: unknown) {
 
   for (const region of regions) {
     region.slug = makeSlug(region.name as string);
-
-    if (region.monsters) {
-      const monsters = region.monsters as Record<string, unknown>;
-
-      monsters.calamitous ??= [];
-    }
 
     if (region.areas) {
       const areas = region.areas as Record<string, unknown>[];

@@ -10,21 +10,21 @@ export function getMonsterSeo(monster: Monster) {
     description += 'hatchable ';
   }
 
-  if (monster.tags.includes('deviant')) {
+  if (monster.tags?.includes('deviant')) {
     description += 'Deviant ';
   }
 
-  if (monster.tags.includes('endangered')) {
+  if (monster.tags?.includes('endangered')) {
     description += 'endangered ';
   }
 
-  if (monster.tags.includes('calamitous')) {
+  if (monster.tags?.includes('calamitous')) {
     description += 'Calamitous ';
   }
 
   description += `${monster.genus}`;
 
-  if (monster.tags.includes('mutation')) {
+  if (monster.tags?.includes('mutation')) {
     description += ' (Mutation)';
   }
 
