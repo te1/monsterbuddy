@@ -1,6 +1,13 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
-  import { formatGeneElement, formatGeneType, formatSkillTarget } from '~/services/3/presentation';
+  import {
+    formatGeneElement,
+    formatGeneType,
+    formatSkillBuff,
+    formatSkillDebuff,
+    formatSkillEffect,
+    formatSkillTarget,
+  } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
@@ -24,7 +31,15 @@
     return result.join(', ');
   });
 
-  // TODO  Ailment, Buff, Debuff, Effect
+  const effects = computed(() => {
+    return (
+      props.gene.effect?.filter(
+        (effect) => !['procBlastblight', 'procBurn', 'procParalysis'].includes(effect)
+      ) ?? []
+    );
+  });
+
+  // TODO  Ailment
 </script>
 
 <template>
@@ -38,24 +53,6 @@
         <div class="mb-1 text-2xl font-medium" v-text="gene.name" />
 
         <div v-text="gene.description" />
-
-        <!--
-        <div class="flex items-center gap-1">
-          <UTooltip text="Genus">
-            <UIcon name="ph:dna" class="text-muted" />
-          </UTooltip>
-
-          <span v-text="monster.genus" />
-        </div>
-
-        <div class="flex items-center gap-1">
-          <UTooltip text="Rank">
-            <UIcon name="ph:star-fill" class="text-dimmed" />
-          </UTooltip>
-
-          <span v-text="monster.rank ?? '?'" />
-        </div>
-        -->
       </div>
 
       <S3GeneIcon class="shrink-0" :gene="gene" />
@@ -64,9 +61,7 @@
     <div v-if="gene.active" class="@container">
       <div class="text-lg font-semibold">Stats</div>
 
-      <div
-        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-3 @3xl:grid-rows-1"
-      >
+      <div class="grid @sm:grid-cols-2 @sm:gap-x-12 @3xl:grid-cols-3">
         <div v-if="gene.stamina != null" class="flex items-center justify-between gap-2">
           <span>Stamina Cost</span>
           <span class="text-right font-semibold" v-text="gene.stamina" />
@@ -87,9 +82,7 @@
     <div v-if="gene.target != null || gene.breath" class="@container">
       <div class="text-lg font-semibold">Characteristics</div>
 
-      <div
-        class="grid @md:grid-cols-2 @md:grid-rows-2 @md:gap-x-12 @3xl:grid-cols-3 @3xl:grid-rows-1"
-      >
+      <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
         <div v-if="gene.target != null" class="flex items-center justify-between gap-2">
           <div>Target</div>
           <div v-text="formatSkillTarget(gene.target)" />
@@ -101,16 +94,22 @@
       </div>
     </div>
 
-    <!--
-    <div v-if="hasLocations">
-      <h3 class="text-lg font-semibold">Locations</h3>
+    <div v-if="gene.buff && gene.buff.length > 0">
+      <div class="text-lg font-semibold">Buffs</div>
 
-      <S3MonsterLocation
-        v-for="location in locations"
-        :key="`${location.type}_${location.region}_${location.area}`"
-        :location="location"
-      />
+      <div v-text="gene.buff?.map(formatSkillBuff).join(', ')" />
     </div>
-    -->
+
+    <div v-if="gene.debuff && gene.debuff.length > 0">
+      <div class="text-lg font-semibold">Debuffs</div>
+
+      <div v-text="gene.debuff?.map(formatSkillDebuff).join(', ')" />
+    </div>
+
+    <div v-if="effects.length > 0">
+      <div class="text-lg font-semibold">Effects</div>
+
+      <div v-text="effects.map(formatSkillEffect).join(', ')" />
+    </div>
   </section>
 </template>
