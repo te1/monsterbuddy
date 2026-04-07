@@ -23,7 +23,7 @@
       <div v-if="0 > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
       <div class="box-link">
-        <NuxtLink to="/3/monsters/rathalos`" prefetchOn="interaction">
+        <NuxtLink to="/3/monsters/rathalos" prefetchOn="interaction">
           <!-- <S3GeneListItem :gene="related" mode="stats" class="pl-2.5" /> -->
         </NuxtLink>
       </div>
