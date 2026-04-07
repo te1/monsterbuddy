@@ -1,4 +1,5 @@
-import type { Monster, Region, RegionArea, RidingAction } from './types';
+import type { Gene, Monster, Region, RegionArea, RidingAction } from './types';
+import { formatGeneElement, formatGeneType } from './presentation';
 
 export function getMonsterSeo(monster: Monster) {
   const title = `${monster.name} In ${gameTypeToFullLabel('mhst3')}`;
@@ -91,6 +92,29 @@ export function getRidingActionSeo(ridingAction: RidingAction, monsterCount: num
     case 'combat':
       description += ' It helps with combat in the open world.';
   }
+
+  return {
+    title,
+    description,
+  };
+}
+
+export function getGeneSeo(gene: Gene) {
+  const title = `${gene.name} In ${gameTypeToFullLabel('mhst3')}`;
+
+  let description = `${gene.name} is a ${formatGeneElement(gene.element).toLowerCase()}`;
+
+  if (gene.type != null && gene.type !== 'all') {
+    description += `, ${formatGeneType(gene.type).toLowerCase()}`;
+  }
+
+  if (gene.active) {
+    description += ', active';
+  } else {
+    description += ', passive';
+  }
+
+  description += ' gene';
 
   return {
     title,

@@ -1,9 +1,12 @@
 <script lang="ts" setup>
+  import S3GeneDetailsSidebar from '~/components/s3/gene/S3GeneDetailsSidebar.vue';
   import { genesBySlug } from '~/services/3/genes';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import { formatGeneElement, formatGeneType } from '~/services/3/presentation';
+  import { getGeneSeo } from '~/services/3/seo';
+  import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
 
   definePageMeta({
-    // sidebarComponent: S3RidingActionSidebar,
+    sidebarComponent: S3GeneDetailsSidebar,
     back: {
       show: true,
       fallback: '/3/genes',
@@ -25,8 +28,18 @@
     throw createError({ status: 404, statusText: 'Page Not Found' });
   }
 
-  // useSeoMeta(getRidingActionSeo(ridingAction, monsters.value.length));
+  const monsterCount = 99; // TODO
+
+  useSeoMeta(getGeneSeo(gene));
   const headline = gameTypeToFullName('mhst3');
+
+  const descriptionParts = computed(() => {
+    const part1 = 'This ';
+    const part2 = 'gene';
+    const part3 = ` can be found on ${monsterCount} monsties`;
+
+    return [part1, part2, part3];
+  });
 
   useSchemaOrg([
     defineBreadcrumb({
@@ -43,13 +56,16 @@
     {
       title: gene.name,
       description: headline,
-      lines: ['Gene'],
+      lines: [
+        `${formatGeneElement(gene.element)} Gene`,
+        gene.type == null || gene.type === 'all' ? '' : formatGeneType(gene.type),
+      ],
       game: 'mhst3',
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
 
-  const history = useHistoryStore();
+  const history = useGeneHistoryStore();
 
   onMounted(() => {
     history.addRecentGene(gene.slug);
@@ -58,13 +74,17 @@
 
 <template>
   <div>
-    <AppPageHeader
-      :title="gene.name"
-      :headline="headline"
-      class="hidden lg:block"
-      :description="gene.description"
-    />
+    <AppPageHeader :title="gene.name" :headline="headline" class="hidden lg:block">
+      <template #description>
+        {{ descriptionParts[0] }}
+        <AppNuxtLink to="/3/genes" :text="descriptionParts[1]" />
+        {{ descriptionParts[2] }}
+      </template>
+    </AppPageHeader>
 
-    <UPageBody> CONTENT </UPageBody>
+    <UPageBody>
+      <S3GeneIcon :gene="gene" noTooltip />
+      {{ gene.element }} {{ gene.type }} {{ gene.size }}
+    </UPageBody>
   </div>
 </template>
