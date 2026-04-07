@@ -84,7 +84,6 @@
 
     <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
       <S3GeneInfoCard :gene="gene" class="box px-4 py-2" />
-      <!-- TODO stats -->
       <!-- TODO bookmark -->
       <!-- TODO ailments, buffs, debuffs, effects? -->
       <!-- TODO related sizes -->

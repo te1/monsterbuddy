@@ -1,13 +1,34 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
+  import { formatGeneElement, formatGeneType, formatSkillTarget } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
-  const info = computed(() => (props.gene.active ? 'Active' : 'Passive'));
+  const info = computed(() => {
+    const result: string[] = [];
+
+    if (props.gene.element != null) {
+      result.push(formatGeneElement(props.gene.element));
+    }
+
+    if (props.gene.type != null && props.gene.type !== 'all') {
+      result.push(formatGeneType(props.gene.type));
+    }
+
+    if (props.gene.active) {
+      result.push('Active');
+    } else {
+      result.push('Passive');
+    }
+
+    return result.join(', ');
+  });
+
+  // TODO  Ailment, Buff, Debuff, Effect
 </script>
 
 <template>
-  <section class="flex flex-col gap-2">
+  <section class="flex flex-col gap-3">
     <div class="flex justify-between">
       <div>
         <h3 class="sr-only">General Gene Info</h3>
@@ -38,6 +59,46 @@
       </div>
 
       <S3GeneIcon class="shrink-0" :gene="gene" />
+    </div>
+
+    <div v-if="gene.active" class="@container">
+      <div class="text-lg font-semibold">Stats</div>
+
+      <div
+        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-4 @3xl:grid-rows-1"
+      >
+        <div v-if="gene.stamina != null" class="flex items-center justify-between gap-2">
+          <span>Stamina Cost</span>
+          <span class="text-right font-semibold" v-text="gene.stamina" />
+        </div>
+
+        <div v-if="gene.power != null" class="flex items-center justify-between gap-2">
+          <span>Power</span>
+          <span class="text-right font-semibold" v-text="gene.power" />
+        </div>
+
+        <div v-if="gene.wyvernfell != null" class="flex items-center justify-between gap-2">
+          <span>Wyvernfell</span>
+          <span class="text-right font-semibold" v-text="gene.wyvernfell" />
+        </div>
+      </div>
+    </div>
+
+    <div v-if="gene.target != null || gene.breath" class="@container">
+      <div class="text-lg font-semibold">Characteristics</div>
+
+      <div
+        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-4 @3xl:grid-rows-1"
+      >
+        <div v-if="gene.target != null" class="flex items-center justify-between gap-2">
+          <div>Target</div>
+          <div v-text="formatSkillTarget(gene.target)" />
+        </div>
+
+        <div v-if="gene.breath">
+          Grants <AppNuxtLink to="/3/riding-actions/breath" text="Breath" /> Riding Action
+        </div>
+      </div>
     </div>
 
     <!--
