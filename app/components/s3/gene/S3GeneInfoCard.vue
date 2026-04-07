@@ -3,6 +3,7 @@
   import {
     formatGeneElement,
     formatGeneType,
+    formatSkillAilment,
     formatSkillBuff,
     formatSkillDebuff,
     formatSkillEffect,
@@ -38,8 +39,6 @@
       ) ?? []
     );
   });
-
-  // TODO  Ailment
 </script>
 
 <template>
@@ -91,6 +90,20 @@
         <div v-if="gene.breath">
           Grants <AppNuxtLink to="/3/riding-actions/breath" text="Breath" /> Riding Action
         </div>
+      </div>
+    </div>
+
+    <div v-if="gene.ailment && gene.ailment.length > 0" class="flex flex-col gap-1">
+      <div class="text-lg font-semibold">Ailments</div>
+
+      <div class="flex gap-2">
+        <UTooltip
+          v-for="ailment in gene.ailment"
+          :key="ailment"
+          :text="formatSkillAilment(ailment)"
+        >
+          <S3AilmentIcon class="-my-1 h-8 w-6 object-cover" :ailment="ailment" noTooltip />
+        </UTooltip>
       </div>
     </div>
 

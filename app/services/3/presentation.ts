@@ -318,32 +318,14 @@ export function formatSkillTarget(target: SkillTarget): string {
 
 export function formatSkillAilment(ailment: SkillAilmentType): string {
   switch (ailment) {
-    case 'blastblight':
-      return 'Blastblight';
-
-    case 'bleeding':
-      return 'Bleeding';
-
-    case 'burn':
-      return 'Burn';
-
-    case 'darkness':
-      return 'Darkness';
-
     case 'noxiousPoison':
       return 'Noxious Poison';
-
-    case 'paralysis':
-      return 'Paralysis';
-
-    case 'poison':
-      return 'Poison';
 
     case 'severePoison':
       return 'Severe Poison';
 
-    case 'sleep':
-      return 'Sleep';
+    default:
+      return formatAilment(ailment);
   }
 }
 

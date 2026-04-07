@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import type { AilmentType } from '~/services/3/types';
-  import { formatAilment } from '~/services/3/presentation';
+  import type { SkillAilmentType } from '~/services/3/types';
+  import { formatSkillAilment } from '~/services/3/presentation';
   import { getAilmentIconUrl } from '~/services/3/assets';
 
   const props = withDefaults(
     defineProps<{
-      ailment: AilmentType;
+      ailment: SkillAilmentType;
       noTooltip?: boolean;
     }>(),
     {
@@ -13,7 +13,7 @@
     }
   );
 
-  const caption = computed(() => formatAilment(props.ailment));
+  const caption = computed(() => formatSkillAilment(props.ailment));
   const imageUrl = computed(() => getAilmentIconUrl(props.ailment));
 </script>
 
