@@ -54,7 +54,7 @@
         <div v-text="gene.description" />
       </div>
 
-      <S3GeneIcon class="shrink-0" :gene="gene" />
+      <S3GeneIcon class="shrink-0" size="size-18" :gene="gene" />
     </div>
 
     <div v-if="gene.active" class="@container">
