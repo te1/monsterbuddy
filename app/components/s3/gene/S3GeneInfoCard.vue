@@ -9,8 +9,11 @@
     formatSkillEffect,
     formatSkillTarget,
   } from '~/services/3/presentation';
+  import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
 
   const props = defineProps<{ gene: Gene }>();
+
+  const history = useGeneHistoryStore();
 
   const info = computed(() => {
     const result: string[] = [];
@@ -39,10 +42,18 @@
       ) ?? []
     );
   });
+
+  const isPinned = computed(() => {
+    return history.isGenePinned(props.gene.slug);
+  });
+
+  function togglePin() {
+    history.togglePinnedGene(props.gene.slug);
+  }
 </script>
 
 <template>
-  <section class="flex flex-col gap-3">
+  <section class="relative flex flex-col gap-3">
     <div class="flex justify-between">
       <div>
         <h3 class="sr-only">General Gene Info</h3>
@@ -123,6 +134,17 @@
       <div class="text-lg font-semibold">Effects</div>
 
       <div v-text="effects.map(formatSkillEffect).join(', ')" />
+    </div>
+
+    <div class="absolute right-1 bottom-1">
+      <ClientOnly>
+        <AppPinToggle
+          :modelValue="isPinned"
+          subject="gene"
+          noLabel
+          @update:modelValue="togglePin"
+        />
+      </ClientOnly>
     </div>
   </section>
 </template>
