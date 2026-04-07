@@ -65,7 +65,7 @@
       <div class="text-lg font-semibold">Stats</div>
 
       <div
-        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-4 @3xl:grid-rows-1"
+        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-3 @3xl:grid-rows-1"
       >
         <div v-if="gene.stamina != null" class="flex items-center justify-between gap-2">
           <span>Stamina Cost</span>
@@ -88,7 +88,7 @@
       <div class="text-lg font-semibold">Characteristics</div>
 
       <div
-        class="grid @sm:grid-cols-2 @sm:grid-rows-2 @sm:gap-x-12 @3xl:grid-cols-4 @3xl:grid-rows-1"
+        class="grid @md:grid-cols-2 @md:grid-rows-2 @md:gap-x-12 @3xl:grid-cols-3 @3xl:grid-rows-1"
       >
         <div v-if="gene.target != null" class="flex items-center justify-between gap-2">
           <div>Target</div>
