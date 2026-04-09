@@ -3,7 +3,15 @@
   import { formatMonsterInfoAll } from '~/services/3/presentation';
   import { getMonsterLocations } from '~/services/3/data';
 
-  const props = defineProps<{ monster: Monster }>();
+  const props = withDefaults(
+    defineProps<{
+      monster: Monster;
+      linkName?: boolean;
+    }>(),
+    {
+      linkName: false,
+    }
+  );
 
   const info = computed(() => formatMonsterInfoAll(props.monster));
   const locations = computed(() => getMonsterLocations(props.monster));
@@ -18,7 +26,15 @@
 
         <div class="-mb-1 text-muted" v-text="info" />
 
-        <div class="mb-1 text-2xl font-medium" v-text="monster.name" />
+        <div class="mb-1 text-2xl font-medium">
+          <AppNuxtLink
+            v-if="linkName"
+            :to="`/3/monsters/${monster.slug}`"
+            prefetchOn="interaction"
+            :text="monster.name"
+          />
+          <span v-else v-text="monster.name" />
+        </div>
 
         <div class="flex items-center gap-1">
           <UTooltip text="Genus">

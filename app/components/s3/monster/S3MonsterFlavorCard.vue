@@ -1,7 +1,15 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
 
-  const props = defineProps<{ monster: Monster }>();
+  const props = withDefaults(
+    defineProps<{
+      monster: Monster;
+      mutationOnly?: boolean;
+    }>(),
+    {
+      mutationOnly: false,
+    }
+  );
 
   const flavors = computed(() => {
     return Object.entries(props.monster.flavor ?? {}).map(([label, text]) => {
@@ -23,16 +31,18 @@
 
 <template>
   <section
-    v-if="flavorTexts.length > 0 || mutationRequirements.length > 0"
+    v-if="(flavorTexts.length > 0 && !mutationOnly) || mutationRequirements.length > 0"
     class="flex flex-col gap-3 text-toned"
   >
-    <div v-for="flavor in flavorTexts" :key="flavor.label">
-      <strong v-if="flavor.label !== 'DEFAULT'" class="font-semibold text-default">
-        {{ flavor.label }}:
-      </strong>
+    <template v-if="!mutationOnly">
+      <div v-for="flavor in flavorTexts" :key="flavor.label">
+        <strong v-if="flavor.label !== 'DEFAULT'" class="font-semibold text-default">
+          {{ flavor.label }}:
+        </strong>
 
-      {{ flavor.text }}
-    </div>
+        {{ flavor.text }}
+      </div>
+    </template>
 
     <div v-if="mutationRequirements.length > 0">
       <div class="font-semibold">Mutation Requirements</div>

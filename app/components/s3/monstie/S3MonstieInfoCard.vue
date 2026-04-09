@@ -3,7 +3,15 @@
   import { sortedRidingActions } from '~/services/3/data';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
-  const props = defineProps<{ monster: Monster }>();
+  const props = withDefaults(
+    defineProps<{
+      monster: Monster;
+      linkGenes?: boolean;
+    }>(),
+    {
+      linkGenes: false,
+    }
+  );
 
   const history = useMonsterHistoryStore();
 
@@ -64,6 +72,16 @@
           <span v-if="index + 1 < (ridingActions?.length ?? 0)">,&nbsp;</span>
         </span>
       </div>
+    </div>
+
+    <div v-if="linkGenes">
+      <h3 class="text-lg font-semibold">
+        <AppNuxtLink
+          :to="`/3/monsters/${monster.slug}/genes`"
+          prefetchOn="interaction"
+          text="Genes"
+        />
+      </h3>
     </div>
 
     <div class="absolute top-1 right-1">

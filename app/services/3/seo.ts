@@ -34,6 +34,33 @@ export function getMonsterSeo(monster: Monster) {
   };
 }
 
+export function getMonstieGenesSeo(monster: Monster, geneCount: number) {
+  const title = `${monster.name} Genes In ${gameTypeToFullLabel('mhst3')}`;
+
+  let description = `${monster.name} is a rank ${monster.rank ?? '?'} `;
+
+  if (monster.tags?.includes('deviant')) {
+    description += 'Deviant ';
+  }
+
+  if (monster.tags?.includes('endangered')) {
+    description += 'endangered ';
+  }
+
+  description += `${monster.genus}`;
+
+  if (monster.tags?.includes('mutation')) {
+    description += ' (Mutation)';
+  }
+
+  description += ` which can carry ${geneCount} different genes`;
+
+  return {
+    title,
+    description,
+  };
+}
+
 export function getRegionSeo(region: Region, monsterCount: number) {
   const title = `${region.name} In ${gameTypeToFullLabel('mhst3')}`;
 

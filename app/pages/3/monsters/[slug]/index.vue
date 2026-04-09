@@ -108,6 +108,7 @@
       <S3MonstieInfoCard
         v-if="monster.hatchable"
         :monster="monster"
+        linkGenes
         class="box order-5 px-4 py-2 md:order-4 lg:order-5 xl:order-4"
       />
 
