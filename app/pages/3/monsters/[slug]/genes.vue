@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import S3MonsterDetailsSidebar from '~/components/s3/monster/S3MonsterDetailsSidebar.vue';
-  // import { hasMonsterImage } from '~/services/3/assets';
+  import { hasMonsterImage } from '~/services/3/assets';
   import { monstersBySlug } from '~/services/3/data';
   import { getMonstieGenesSeo } from '~/services/3/seo';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
@@ -52,7 +52,7 @@
 
   const history = useMonsterHistoryStore();
 
-  // const hasImage = computed(() => hasMonsterImage(monster));
+  const hasImage = computed(() => hasMonsterImage(monster));
 
   onMounted(() => {
     history.addRecentMonster(monster.slug);
@@ -64,19 +64,24 @@
     <AppPageHeader :title="`${monster.name} Genes`" :headline="headline" />
 
     <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-      <S3MonsterInfoCard :monster="monster" linkName class="box px-4 py-2" />
+      <div class="grid gap-3 md:col-1 lg:col-auto xl:col-1">
+        <S3MonsterInfoCard :monster="monster" linkName class="box px-4 py-2" />
+      </div>
 
-      <S3MonstieGenesCard :monster="monster" class="box overflow-hidden" />
+      <S3MonstieGenesCard
+        :monster="monster"
+        class="box overflow-hidden md:col-2 md:row-[1/span_2] lg:col-auto lg:row-auto xl:col-2 xl:row-[1/span_2]"
+      />
 
-      <S3MonstieEggCard :monster="monster" class="box px-4 py-2" />
+      <div class="grid gap-3 md:col-1 lg:col-auto xl:col-1">
+        <S3MonstieInfoCard :monster="monster" class="box px-4 py-2" />
 
-      <!-- TODO add image?
-      <S3MonsterImageCard v-if="hasImage" :monster="monster" class="box px-4 py-2" />
-      -->
+        <S3MonsterFlavorCard :monster="monster" mutationOnly class="box px-4 py-2" />
 
-      <S3MonstieInfoCard :monster="monster" class="box px-4 py-2" />
+        <S3MonstieEggCard :monster="monster" class="box px-4 py-2" />
 
-      <S3MonsterFlavorCard :monster="monster" mutationOnly class="box px-4 py-2" />
+        <S3MonsterImageCard v-if="hasImage" :monster="monster" class="box px-4 py-2" />
+      </div>
     </UPageBody>
   </div>
 </template>
