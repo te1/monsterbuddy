@@ -105,6 +105,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown', 'orange'],
       svgEggColors: ['#7c493b', '#e14b26'],
+      genes: {
+        innate: ['Magma Counter', 'Lava Cascade', 'Sweeping Flames'],
+        sRank: 'Magma Counter+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -209,6 +215,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'gray', 'orange'],
       svgEggColors: ['#b8b2a6', '#e0380d'],
+      genes: {
+        innate: ['Prancing Back Kick', 'Fireball', 'Fireball Frolic'],
+        sRank: 'Prancing Back Kick+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg011',
+      },
     },
   },
 
@@ -315,6 +327,12 @@
       ridingActions: ['Swim', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['black', 'gray', 'orange'],
       svgEggColors: ['#494d53', '#b8694f'],
+      genes: {
+        innate: ['Muddy Hell', 'Mud Torrent', 'Mud Supply'],
+        sRank: 'Muddy Hell+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg022',
+      },
     },
   },
 
@@ -392,6 +410,12 @@
       kinshipSkill: 'Anja Assault',
       eggColors: ['pink', 'black'],
       svgEggColors: ['#da7776', '#5c4755'],
+      genes: {
+        innate: ['Burning Fang', 'Burning Blast', 'Heat Up'],
+        sRank: 'Burning Fang+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg001',
+      },
     },
   },
 
@@ -460,6 +484,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['gray', 'white', 'orange'],
       svgEggColors: ['#aab6bb', '#ae662e'],
+      genes: {
+        innate: ['Thunder Rampage', 'Wild Fang', 'Plasma Jet'],
+        sRank: 'Thunder Rampage+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg003',
+      },
     },
   },
 
@@ -574,6 +604,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['gray', 'white'],
       svgEggColors: ['#bababa', '#a0a0a0'],
+      genes: {
+        innate: ['Berserk Slide', 'Blade Rush', 'Kaiser Blade'],
+        sRank: 'Berserk Slide+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg086',
+      },
     },
   },
 
@@ -638,6 +674,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green'],
       svgEggColors: ['#5888c9', '#56de78'],
+      genes: {
+        innate: ['Maximum Claw Slash', 'Honey Power', 'Wild Breaker'],
+        sRank: 'Maximum Claw Slash+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -751,6 +793,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
       svgEggColors: ['#708b42', '#47403d'],
+      genes: {
+        innate: ['Thunder Smash', 'Plasma Cannon', 'Vengeful Thunder'],
+        sRank: 'Thunder Smash+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg003',
+      },
     },
   },
 
@@ -805,6 +853,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
       svgEggColors: ['#0dcd76', '#453b38'],
+      genes: {
+        innate: ['Ray Blade', 'Blue Plasma', 'Azure Voltage'],
+        sRank: 'Ray Blade+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg003',
+      },
     },
   },
 
@@ -873,6 +927,12 @@
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'gray', 'orange'],
       svgEggColors: ['#c28645', '#c1c2bb'],
+      genes: {
+        innate: ['Ice Burst', 'Snow Spray', 'Diamond Raid'],
+        sRank: 'Ice Burst+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg034',
+      },
     },
   },
 
@@ -939,6 +999,12 @@
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['orange', 'red'],
       svgEggColors: ['#e45a42', '#ff9600'],
+      genes: {
+        innate: ['Gale Trap', 'Omni Chaser S', 'Desert Spray'],
+        sRank: 'Gale Trap+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg030',
+      },
     },
   },
 
@@ -1085,6 +1151,12 @@
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['brown', 'yellow'],
       svgEggColors: ['#976540', '#d7a255'],
+      genes: {
+        innate: ['Mud Armor', 'Debuff Chaser S', 'Mud Splash'],
+        sRank: 'Mud Armor+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -1154,6 +1226,12 @@
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'green'],
       svgEggColors: ['#009d9f', '#40e1e1'],
+      genes: {
+        innate: ['Ice Armor', 'Debuff Chaser P', 'Ice Spray'],
+        sRank: 'Ice Armor+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg034',
+      },
     },
   },
 
@@ -1279,6 +1357,12 @@
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green'],
       svgEggColors: ['#40658f', '#2e8371'],
+      genes: {
+        innate: ['Fruit Frenzy', 'Furious Spin', 'Jumbofruit'],
+        sRank: 'Fruit Frenzy+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -1347,6 +1431,12 @@
       ridingActions: ['Fly', 'Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown', 'orange'],
       svgEggColors: ['#534b49', '#c2604b'],
+      genes: {
+        innate: ['Great Flaming Vortex', 'Bishaten Embers', 'Nourishing Pinecones'],
+        sRank: 'Great Flaming Vortex+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -1494,6 +1584,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'red', 'orange'],
       svgEggColors: ['#9fc7b9', '#ff2600'],
+      genes: {
+        innate: ['Snowball Attack', 'Refresh', 'White Breath'],
+        sRank: 'Snowball Attack+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg034',
+      },
     },
   },
 
@@ -1646,6 +1742,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green'],
       svgEggColors: ['#3b4d94', '#7aec56'],
+      genes: {
+        innate: ['Slime Stomp', 'Incendiary Bomb', 'Fiery Aura'],
+        sRank: 'Slime Stomp+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg030',
+      },
     },
   },
 
@@ -1756,6 +1858,12 @@
       ridingActions: ['Wall Climb', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'white', 'yellow'],
       svgEggColors: ['#6971da', '#f6e3cb'],
+      genes: {
+        innate: ['Art of Striking', 'Art of Raw Power', 'Art of Friendship'],
+        sRank: 'Art of Striking+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -1872,6 +1980,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'black'],
       svgEggColors: ['#4b8a8e', '#495d55'],
+      genes: {
+        innate: ['Chata Stamp', 'Chata Tackle', 'Lasso Tongue'],
+        sRank: 'Chata Stamp+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg000',
+      },
     },
   },
 
@@ -2002,6 +2116,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green', 'orange'],
       svgEggColors: ['#5c6638', '#e15f2e'],
+      genes: {
+        innate: ['Dragon Eater', 'Pump Up', 'Dragon Blast'],
+        sRank: 'Dragon Eater+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg035',
+      },
     },
   },
 
@@ -2113,6 +2233,12 @@
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown'],
       svgEggColors: ['#a17a51', '#b39e85'],
+      genes: {
+        innate: ['Vengeful Tackle', 'Maximum Horn Jab', 'Focus Power'],
+        sRank: 'Vengeful Tackle+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -2185,6 +2311,12 @@
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['black', 'gray'],
       svgEggColors: ['#454d49', '#757669'],
+      genes: {
+        innate: ['Deadly Horn Jab', 'Focus Power', 'Savage Roar'],
+        sRank: 'Deadly Horn Jab+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -2243,6 +2375,12 @@
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'gray'],
       svgEggColors: ['#495684', '#8a7f79'],
+      genes: {
+        innate: ['Hell Horn', 'Hellbreaker', 'Beastly Roar'],
+        sRank: 'Hell Horn+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -2360,6 +2498,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['red', 'pink', 'green'],
       svgEggColors: ['#bc4056', '#94a54f'],
+      genes: {
+        innate: ['Infernal Flames', 'Omni Chaser P', 'Venom Flame'],
+        sRank: 'Infernal Flames+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -2463,6 +2607,12 @@
       svgEggColors: ['#946d49', '#a8b149'],
       attack: 'power',
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
+      genes: {
+        innate: ['Steam Break', 'Pump Up', 'Aqua Dunk'],
+        sRank: 'Steam Break+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -2574,6 +2724,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'red'],
       svgEggColors: ['#3d557d', '#c73b35'],
+      genes: {
+        innate: ['Flame Chakram', 'Fierce Heat', 'Scorching Blade'],
+        sRank: 'Flame Chakram+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -2632,6 +2788,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['black', 'red'],
       svgEggColors: ['#32323b', '#db221c'],
+      genes: {
+        innate: ['Firebrand', 'Scorching Blade', 'Searing Blade'],
+        sRank: 'Firebrand+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -2814,6 +2976,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'black', 'gray'],
       svgEggColors: ['#5898b3', '#3d3d38'],
+      genes: {
+        innate: ['Frosty Furrow', 'Frozen Flurry', 'Devil\'s Hammer'],
+        sRank: 'Frosty Furrow+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg034',
+      },
     },
   },
 
@@ -2881,6 +3049,12 @@
       ridingActions: ['Fly', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['brown', 'white', 'gray'],
       svgEggColors: ['#886342', '#b5a3a3'],
+      genes: {
+        innate: ['Spreading Beam', 'Killer Tackle', 'Sleep Gas'],
+        sRank: 'Spreading Beam+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -2949,6 +3123,12 @@
       ridingActions: ['Fly', 'Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['orange', 'gray'],
       svgEggColors: ['#ac472a', '#7e7673'],
+      genes: {
+        innate: ['Charged Spread Beam', 'Heat Beam', 'Rock Shield'],
+        sRank: 'Charged Spread Beam+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -3176,6 +3356,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['orange', 'brown', 'yellow', 'white'],
       svgEggColors: ['#c27635', '#d7cda3'],
+      genes: {
+        innate: ['Tail Twister', 'Piercing Roar', 'Sickle Tail'],
+        sRank: 'Tail Twister+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -3289,6 +3475,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'pink'],
       svgEggColors: ['#557aac', '#cd6d70'],
+      genes: {
+        innate: ['Blindside', 'Venom', 'Flash'],
+        sRank: 'Blindside+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg000',
+      },
     },
   },
 
@@ -3363,6 +3555,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'green'],
       svgEggColors: ['#883d7c', '#47e232'],
+      genes: {
+        innate: ['Noxious Venom', 'Flash', 'Tail Stun'],
+        sRank: 'Noxious Venom+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg000',
+      },
     },
   },
 
@@ -3513,6 +3711,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'white', 'pink'],
       svgEggColors: ['#eb899a', '#90b8bd'],
+      genes: {
+        innate: ['Bolt Eater', 'Thunder Breath', 'Roar'],
+        sRank: 'Bolt Eater+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg013',
+      },
     },
   },
 
@@ -3581,6 +3785,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'red'],
       svgEggColors: ['#de6060', '#dd0d0d'],
+      genes: {
+        innate: ['Thunder Trap', 'Thunder Fang', 'Thunder Zone'],
+        sRank: 'Thunder Trap+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg013',
+      },
     },
   },
 
@@ -3690,6 +3900,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['gray', 'white', 'orange'],
       svgEggColors: ['#ccc2af', '#d0715c'],
+      genes: {
+        innate: ['Rock Stampede', 'Rock Launcher', 'Stone Shield'],
+        sRank: 'Rock Stampede+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -3761,6 +3977,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'orange'],
       svgEggColors: ['#51a0ce', '#de562e'],
+      genes: {
+        innate: ['Wild Fang', 'Electro Breath', 'Thunder Aura'],
+        sRank: 'Wild Fang+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg003',
+      },
     },
   },
 
@@ -3830,6 +4052,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'blue'],
       svgEggColors: ['#cfcaba', '#3d6699'],
+      genes: {
+        innate: ['Royal Decree', 'Plasma Blast', 'Plasma Pressure'],
+        sRank: 'Royal Decree+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg003',
+      },
     },
   },
 
@@ -3897,6 +4125,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['yellow', 'white', 'blue'],
       svgEggColors: ['#eee0a7', '#265fab'],
+      genes: {
+        innate: ['Freezing Burst', 'Ice Drill', 'Freezing Wave'],
+        sRank: 'Freezing Burst+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg034',
+      },
     },
   },
 
@@ -4042,6 +4276,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue'],
       svgEggColors: ['#4766a0', '#3895dc'],
+      genes: {
+        innate: ['Crescent Strike', 'Frost Veil', 'Inhibiting Breath'],
+        sRank: 'Crescent Strike+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg034',
+      },
     },
   },
 
@@ -4145,6 +4385,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'red'],
       svgEggColors: ['#4f4268', '#ae4258'],
+      genes: {
+        innate: ['Hellfire Retribution', 'Hellfire Shot', 'Spiral Tail Stab'],
+        sRank: 'Hellfire Retribution+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg030',
+      },
     },
   },
 
@@ -4252,6 +4498,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'red', 'white', 'gray'],
       svgEggColors: ['#c63268', '#dcd5d3'],
+      genes: {
+        innate: ['Night Parasites', 'Dark Lord', 'Nightmare Cradle'],
+        sRank: 'Night Parasites+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg076',
+      },
     },
   },
 
@@ -4323,6 +4575,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'white', 'gray', 'yellow'],
       svgEggColors: ['#c85a8f', '#e2ceae'],
+      genes: {
+        innate: ['Fleeting Effervescence', 'Bubbly Dance', 'Hydroshot'],
+        sRank: 'Fleeting Effervescence+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg012',
+      },
     },
   },
 
@@ -4377,6 +4635,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['white', 'pink', 'purple'],
       svgEggColors: ['#b12e72', '#dcd5db'],
+      genes: {
+        innate: ['Foxflame Bubbles', 'Spiral Chaser', 'Groom'],
+        sRank: 'Foxflame Bubbles+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg012',
+      },
     },
   },
 
@@ -4467,6 +4731,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'orange'],
       svgEggColors: ['#655a90', '#dc6232'],
+      genes: {
+        innate: ['Thunder Explosion', 'Nami Torrent', 'Storm Veil'],
+        sRank: 'Thunder Explosion+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg056',
+      },
     },
   },
 
@@ -4536,6 +4806,12 @@
       ridingActions: ['Wall Climb', 'Stealth', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['pink', 'purple', 'blue'],
       svgEggColors: ['#c23d7c', '#385576'],
+      genes: {
+        innate: ['Killer Tail', 'Spike Bomb', 'Sharpen Blades'],
+        sRank: 'Killer Tail+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -4605,6 +4881,12 @@
       ridingActions: ['Wall Climb', 'Stealth', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'yellow'],
       svgEggColors: ['#51bd4b', '#bee000'],
+      genes: {
+        innate: ['Assassin Tail', 'Stun Spike Bomb', 'Sneak'],
+        sRank: 'Assassin Tail+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -4662,6 +4944,12 @@
       ridingActions: ['Wall Climb', 'Stealth', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['white', 'blue'],
       svgEggColors: ['#bdc4b7', '#40566a'],
+      genes: {
+        innate: ['Vacuum Blast', 'Guided Spike Bomb', 'White Shadow'],
+        sRank: 'Vacuum Blast+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -4736,6 +5024,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'orange'],
       svgEggColors: ['#554d7c', '#de753d'],
+      genes: {
+        innate: ['Sleep Needle', 'Vengeful Attack', 'Sleep Chaser'],
+        sRank: 'Sleep Needle+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg000',
+      },
     },
   },
 
@@ -4805,6 +5099,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['white', 'gray', 'yellow'],
       svgEggColors: ['#b6b9bd', '#cda02e'],
+      genes: {
+        innate: ['Toxic Needle', 'Arachnophobia', 'Parapoison Chaser'],
+        sRank: 'Toxic Needle+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -5062,6 +5362,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['red', 'black'],
       svgEggColors: ['#be4751', '#683d47'],
+      genes: {
+        innate: ['Devour', 'Twisting Kick', 'Cruel Claw'],
+        sRank: 'Devour+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -5130,6 +5436,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'black'],
       svgEggColors: ['#5a558c', '#2a2e35'],
+      genes: {
+        innate: ['Draconic Flurry', 'Wicked Feast', 'Ravaging Growl'],
+        sRank: 'Draconic Flurry+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg025',
+      },
     },
   },
 
@@ -5260,6 +5572,12 @@
       kinshipSkill: 'Jet Balloon',
       eggColors: ['white', 'pink'],
       svgEggColors: ['#ef9e99', '#f4eae0'],
+      genes: {
+        innate: ['Hyper Shot', 'Vengeful Attack', 'Killer Crush'],
+        sRank: 'Hyper Shot+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg000',
+      },
     },
   },
 
@@ -5403,6 +5721,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'green', 'orange'],
       svgEggColors: ['#567279', '#d17a4b'],
+      genes: {
+        innate: ['Plesioth Dash', 'Drowsy Fang', 'Aqua Jet'],
+        sRank: 'Plesioth Dash+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg002',
+      },
     },
   },
 
@@ -5477,6 +5801,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green', 'orange'],
       svgEggColors: ['#35956a', '#e77c42'],
+      genes: {
+        innate: ['Hyperspace Tackle', 'Plesioth Rush', 'Hydro Blast'],
+        sRank: 'Hyperspace Tackle+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg002',
+      },
     },
   },
 
@@ -5589,6 +5919,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green', 'yellow'],
       svgEggColors: ['#569038', '#c2b285'],
+      genes: {
+        innate: ['Venom Blast', 'Tail Spin', 'Venom Shot'],
+        sRank: 'Venom Blast+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -5696,6 +6032,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'white'],
       svgEggColors: ['#533d8a', '#bfbfb9'],
+      genes: {
+        innate: ['Encompassing Flames', 'Debuff Chaser T', 'Entangling Threads'],
+        sRank: 'Encompassing Flames+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg021',
+      },
     },
   },
 
@@ -5808,6 +6150,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['black', 'blue', 'orange', 'red'],
       svgEggColors: ['#2e3838', '#cf4000'],
+      genes: {
+        innate: ['Savage Fireball', 'Venom Strike', 'Critical Eye'],
+        sRank: 'Savage Fireball+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg031',
+      },
     },
   },
 
@@ -5882,6 +6230,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'purple', 'black'],
       svgEggColors: ['#5865d7', '#2e3555'],
+      genes: {
+        innate: ['Flame Tempest', 'Fire Breath', 'Flame Aura'],
+        sRank: 'Flame Tempest+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg031',
+      },
     },
   },
 
@@ -5983,6 +6337,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['black', 'red'],
       svgEggColors: ['#262222', '#a90051'],
+      genes: {
+        innate: ['Explosive Blast', 'Ignition Kick', 'Explosive Breath'],
+        sRank: 'Explosive Blast+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg031',
+      },
     },
   },
 
@@ -6126,6 +6486,12 @@
         ice: +1,
         dragon: -1,
       },
+      genes: {
+        innate: ['Poison Spike', 'Flare Blast', 'Blazing Howl'],
+        sRank: 'Poison Spike+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg001',
+      },
     },
   },
 
@@ -6202,6 +6568,12 @@
       kinshipSkill: 'Scorching Slice',
       eggColors: ['pink'],
       svgEggColors: ['#ee7173', '#eb9084'],
+      genes: {
+        innate: ['Flare Cluster', 'Venom Sweep', 'Valiant Flare'],
+        sRank: 'Flare Cluster+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg001',
+      },
     },
   },
 
@@ -6260,6 +6632,12 @@
       kinshipSkill: 'Dual Razor',
       eggColors: ['green', 'purple'],
       svgEggColors: ['#a0b353', '#833571'],
+      genes: {
+        innate: ['Venom Queen', 'Toxic Sweep', 'Flame Tempest'],
+        sRank: 'Venom Queen+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg001',
+      },
     },
   },
 
@@ -6363,6 +6741,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['black', 'yellow'],
       svgEggColors: ['#4b4740', '#e0c242'],
+      genes: {
+        innate: ['Railgun', 'Boltcall', 'Rising Shot'],
+        sRank: 'Railgun+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg023',
+      },
     },
   },
 
@@ -6485,6 +6869,12 @@
       kinshipSkill: 'Moonsault Splash',
       eggColors: ['green', 'yellow'],
       svgEggColors: ['#879f5c', '#eab249'],
+      genes: {
+        innate: ['Inundate', 'Maximum Rollout', 'Aqua Shot'],
+        sRank: 'Inundate+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg002',
+      },
     },
   },
 
@@ -6550,6 +6940,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['pink', 'purple'],
       svgEggColors: ['#bfa3b7', '#cf5395'],
+      genes: {
+        innate: ['Noxious Spit', 'Toxic Hazard', 'Poison Spit'],
+        sRank: 'Noxious Spit+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg012',
+      },
     },
   },
 
@@ -6614,6 +7010,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['yellow', 'orange'],
       svgEggColors: ['#d44726', '#d7b142'],
+      genes: {
+        innate: ['Shredding Scales', 'Merciless Roar', 'Thousand Blades'],
+        sRank: 'Shredding Scales+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg010',
+      },
     },
   },
 
@@ -6809,6 +7211,12 @@
       ridingActions: ['Ground Dive', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue', 'white', 'gray'],
       svgEggColors: ['#3858c8', '#c8b8a8'],
+      genes: {
+        innate: ['Death Scythe', 'Scissor Hold', 'Torrent Flash'],
+        sRank: 'Death Scythe+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg022',
+      },
     },
   },
 
@@ -6956,6 +7364,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['yellow', 'purple'],
       svgEggColors: ['#c8994b', '#715a95'],
+      genes: {
+        innate: ['Sleep Powder', 'Siren\'s Temptation', 'Debilitating Lilt'],
+        sRank: 'Sleep Powder+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg012',
+      },
     },
   },
 
@@ -7024,6 +7438,12 @@
       ridingActions: ['Swim', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['blue'],
       svgEggColors: ['#7ac0de', '#4b82c9'],
+      genes: {
+        innate: ['Chilling Charge', 'Chilling Spin', 'Chilling Paean'],
+        sRank: 'Chilling Charge+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg014',
+      },
     },
   },
 
@@ -7131,6 +7551,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['green'],
       svgEggColors: ['#8ea435', '#638147'],
+      genes: {
+        innate: ['Cannonball Slam', 'Aqua Shot', 'Felyne Frazzle'],
+        sRank: 'Cannonball Slam+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg012',
+      },
     },
   },
 
@@ -7281,6 +7707,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'orange'],
       svgEggColors: ['#3d8fb2', '#db9232'],
+      genes: {
+        innate: ['Heavy Spear', 'Lock-On', 'Rock Shooter'],
+        sRank: 'Heavy Spear+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -7350,6 +7782,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['brown', 'orange'],
       svgEggColors: ['#564f40', '#f48340'],
+      genes: {
+        innate: ['Savage Fist', 'Heavy Strike', 'Reverberating Roar'],
+        sRank: 'Savage Fist+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -7400,6 +7838,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'yellow'],
       svgEggColors: ['#355f7d', '#d4be35'],
+      genes: {
+        innate: ['Heavy Rampage', 'Rock Slugger', 'Ground Crusher'],
+        sRank: 'Heavy Rampage+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg020',
+      },
     },
   },
 
@@ -7474,6 +7918,12 @@
       kinshipSkill: 'Kadachi Fury',
       eggColors: ['gray', 'white', 'black', 'blue'],
       svgEggColors: ['#94afb5', '#566979'],
+      genes: {
+        innate: ['Thunderball', 'High Voltage', 'Thunder Drop'],
+        sRank: 'Thunderball+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg003',
+      },
     },
   },
 
@@ -7597,6 +8047,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'blue', 'white'],
       svgEggColors: ['#9284d4', '#a3ddf3'],
+      genes: {
+        innate: ['Icicle Breath', 'Icicle Storm', 'Whiteout'],
+        sRank: 'Icicle Breath+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg066',
+      },
     },
   },
 
@@ -7717,6 +8173,12 @@
       ridingActions: ['Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'orange'],
       svgEggColors: ['#1ca3e1', '#ff5f49'],
+      genes: {
+        innate: ['Rapid Bite', 'Overpower', 'Killer Strike'],
+        sRank: 'Rapid Bite+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg000',
+      },
     },
   },
 
@@ -7991,6 +8453,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'pink'],
       svgEggColors: ['#4b4b7e', '#b64f9f'],
+      genes: {
+        innate: ['Poison Tail', 'Flare Blast', 'Omni Chaser T'],
+        sRank: 'Poison Tail+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg011',
+      },
     },
   },
 
@@ -8041,6 +8509,12 @@
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       eggColors: ['purple', 'red'],
       svgEggColors: ['#605687', '#e24949'],
+      genes: {
+        innate: ['Cunning Blow', 'Black Wind', 'Pickaxe Beak'],
+        sRank: 'Cunning Blow+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg011',
+      },
     },
   },
 
@@ -8185,6 +8659,12 @@
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['pink', 'blue'],
       svgEggColors: ['#e15a71', '#2289cf'],
+      genes: {
+        innate: ['Unstoppable', 'Beak Drill', 'Fireball'],
+        sRank: 'Unstoppable+',
+        eggSkillGroup: 'esg1',
+        passiveGroup: 'gg001',
+      },
     },
   },
 
@@ -8260,6 +8740,12 @@
       kinshipSkill: 'Fireball Expulsion',
       eggColors: ['blue', 'green', 'yellow'],
       svgEggColors: ['#499f98', '#e4a34b'],
+      genes: {
+        innate: ['Maximum Tackle', 'Crushing Beak', 'Blazeball'],
+        sRank: 'Maximum Tackle+',
+        eggSkillGroup: 'esg2',
+        passiveGroup: 'gg001',
+      },
     },
   },
 
@@ -8392,6 +8878,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['blue', 'green', 'yellow'],
       svgEggColors: ['#3b9587', '#d7a760'],
+      genes: {
+        innate: ['Thunderfist', 'High Voltage', 'Thunderbug Strike'],
+        sRank: 'Thunderfist+',
+        eggSkillGroup: 'esg3',
+        passiveGroup: 'gg023',
+      },
     },
   },
 
@@ -8464,6 +8956,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['purple', 'white'],
       svgEggColors: ['#323569', '#e4d4c4'],
+      genes: {
+        innate: ['Dragonfist', 'Dracophage Shot', 'Dragon Surge'],
+        sRank: 'Dragonfist+',
+        eggSkillGroup: 'esg4',
+        passiveGroup: 'gg025',
+      },
     },
   },
 
@@ -8521,6 +9019,12 @@
       ridingActions: ['Wall Climb', 'Jump', 'Roar', 'Melee Attack'],
       eggColors: ['green', 'yellow', 'orange'],
       svgEggColors: ['#a3c547', '#d29a47'],
+      genes: {
+        innate: ['Thunderbug Blitz', 'Ultra Voltage', 'Thundercall'],
+        sRank: 'Thunderbug Blitz+',
+        eggSkillGroup: 'esg5',
+        passiveGroup: 'gg023',
+      },
     },
   },
 
