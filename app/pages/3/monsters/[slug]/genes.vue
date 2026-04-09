@@ -84,6 +84,8 @@
         <S3MonstieEggCard :monster="monster" class="box px-4 py-2" />
 
         <S3MonsterImageCard v-if="hasImage" :monster="monster" class="box px-4 py-2" />
+
+        <S3MonsterRelatedCard :monster="monster" linkGenes class="box overflow-hidden" />
       </div>
     </UPageBody>
   </div>

@@ -2,7 +2,15 @@
   import type { Monster } from '~/services/3/types';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
-  const props = defineProps<{ monster: Monster }>();
+  const props = withDefaults(
+    defineProps<{
+      monster: Monster;
+      linkGenes?: boolean;
+    }>(),
+    {
+      linkGenes: false,
+    }
+  );
 
   const history = useMonsterHistoryStore();
 
@@ -17,10 +25,16 @@
   const mode = computed(() => {
     return history.lastListModeSmart(props.monster);
   });
+
+  const target = computed(() => {
+    return props.linkGenes && props.monster.hatchable
+      ? `/3/monsters/${props.monster.slug}/genes`
+      : `/3/monsters/${props.monster.slug}`;
+  });
 </script>
 
 <template>
-  <NuxtLink :to="`/3/monsters/${monster.slug}`" prefetchOn="interaction">
+  <NuxtLink :to="target" prefetchOn="interaction">
     <S3EggListItem v-if="showEgg" class="ml-2" :monster="monster" :mode="mode" />
 
     <S3MonstieListItem v-else-if="showMonstie" :monster="monster" :mode="mode" />

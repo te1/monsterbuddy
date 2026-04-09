@@ -15,7 +15,7 @@
 
 <template>
   <section v-if="hasRelated">
-    <h3 class="px-4 pt-2 text-lg font-semibold">Related</h3>
+    <h3 class="px-4 pt-2 pb-1 text-lg font-semibold">Related</h3>
 
     <div v-for="(related, index) in relatedSizes" :key="related.name">
       <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
