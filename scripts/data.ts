@@ -15,6 +15,7 @@ import { MonsterSchema as S3MonsterSchema } from '~~/data/3/monsters.schema';
 import { RegionSchema as S3RegionSchema } from '~~/data/3/regions.schema';
 import { RidingActionSchema as S3RidingActionSchema } from '~~/data/3/ridingActions.schema';
 import { GeneSchema as S3GeneSchema } from '~~/data/3/genes.schema';
+import { GeneSourcesSchema as S3GeneSourcesSchema } from '~~/data/3/geneSources.schema';
 import { makeSlug } from '~~/app/utils/data';
 
 const generateEggSvgs = false;
@@ -60,6 +61,7 @@ function generate() {
       transform: transformRidingActions,
     },
     { file: '3/genes', schema: S3GeneSchema.array(), transform: transformS3Genes },
+    { file: '3/geneSources', schema: S3GeneSourcesSchema },
   ];
 
   for (const job of jobs) {
