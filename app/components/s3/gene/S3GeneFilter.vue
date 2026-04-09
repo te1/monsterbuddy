@@ -95,7 +95,7 @@
 
   const targets = computed(() => {
     return [
-      { label: "Don't care", value: 'ALL' },
+      { label: 'Any / None', value: 'ALL' },
       ...allTargets.map((target) => ({
         label: formatSkillTarget(target),
         value: target,
@@ -105,7 +105,7 @@
 
   const ailments = computed(() => {
     return [
-      { label: "Don't care", value: 'ALL' },
+      { label: 'Any / None', value: 'ALL' },
       ...allAilments.map((ailment) => ({
         label: formatSkillAilment(ailment),
         value: ailment,
@@ -115,7 +115,7 @@
 
   const buffs = computed(() => {
     return [
-      { label: "Don't care", value: 'ALL' },
+      { label: 'Any / None', value: 'ALL' },
       ...allBuffs
         .filter((buff) => !['staminaRegenUp', 'fireDefenseUp'].includes(buff))
         .map((buff) => ({
@@ -127,7 +127,7 @@
 
   const debuffs = computed(() => {
     return [
-      { label: "Don't care", value: 'ALL' },
+      { label: 'Any / None', value: 'ALL' },
       ...allDebuffs.map((debuff) => ({
         label: formatSkillDebuff(debuff),
         value: debuff,
@@ -137,7 +137,7 @@
 
   const effects = computed(() => {
     return [
-      { label: "Don't care", value: 'ALL' },
+      { label: 'Any / None', value: 'ALL' },
       ...allEffects
         .filter(
           (effect) => !['evade', 'procBlastblight', 'procBurn', 'procParalysis'].includes(effect)
