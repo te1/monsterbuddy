@@ -66,6 +66,8 @@
     <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
       <S3MonsterInfoCard :monster="monster" linkName class="box px-4 py-2" />
 
+      <S3MonstieGenesCard :monster="monster" class="box overflow-hidden" />
+
       <S3MonstieEggCard :monster="monster" class="box px-4 py-2" />
 
       <!-- TODO add image?
