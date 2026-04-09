@@ -64,7 +64,7 @@
 
 <template>
   <div>
-    <AppPageHeader :title="`${monster.name} Genes`" :headline="headline" />
+    <AppPageHeader :title="`${monster.name} Genes`" :headline="headline" :hideDescription="true" />
 
     <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
       <div class="grid gap-3 md:col-1 lg:col-auto xl:col-1">

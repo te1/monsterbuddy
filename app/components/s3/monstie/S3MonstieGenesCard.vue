@@ -1,11 +1,11 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
-  import { getMonstieInateGenes, getMonstieSRankGene } from '~/services/3/genes';
+  import { getMonstieInnateGenes, getMonstieSRankGene } from '~/services/3/genes';
 
   const props = defineProps<{ monster: Monster }>();
 
   const innateGenes = computed(() => {
-    return getMonstieInateGenes(props.monster);
+    return getMonstieInnateGenes(props.monster);
   });
 
   const sRankGene = computed(() => getMonstieSRankGene(props.monster));

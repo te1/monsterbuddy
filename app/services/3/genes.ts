@@ -1,3 +1,4 @@
+import { monsters } from './data';
 import type {
   Gene,
   GeneElement,
@@ -194,7 +195,7 @@ export function getGenesByEffect(effect: SkillEffectType, geneList: Gene[] = gen
   return geneList.filter((gene) => gene.effect?.includes(effect) ?? false);
 }
 
-export function getMonstieInateGenes(monster: Monster): Gene[] {
+export function getMonstieInnateGenes(monster: Monster): Gene[] {
   return (monster.monstie?.genes?.innate ?? [])
     .map((gene) => {
       return genesByName.get(gene);
@@ -210,5 +211,13 @@ export function getMonstieGeneCount(monster: Monster): number {
   // TODO egg skill genes
   // TODO random passive genes
 
-  return getMonstieInateGenes(monster).length + (getMonstieSRankGene(monster) ? 1 : 0);
+  return getMonstieInnateGenes(monster).length + (getMonstieSRankGene(monster) ? 1 : 0);
+}
+
+export function getInnateGeneSources(gene: Gene): Monster[] {
+  return monsters.filter((monster) => monster.monstie?.genes?.innate?.includes(gene.name));
+}
+
+export function getSRankGeneSources(gene: Gene): Monster[] {
+  return monsters.filter((monster) => monster.monstie?.genes?.sRank === gene.name);
 }
