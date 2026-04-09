@@ -3,6 +3,7 @@ import type {
   GeneElement,
   GeneSize,
   GeneType,
+  Monster,
   SkillAilmentType,
   SkillBuffType,
   SkillDebuffType,
@@ -191,4 +192,23 @@ export function getGenesByDebuff(debuff: SkillDebuffType, geneList: Gene[] = gen
 
 export function getGenesByEffect(effect: SkillEffectType, geneList: Gene[] = genes): Gene[] {
   return geneList.filter((gene) => gene.effect?.includes(effect) ?? false);
+}
+
+export function getMonstieInateGenes(monster: Monster): Gene[] {
+  return (monster.monstie?.genes?.innate ?? [])
+    .map((gene) => {
+      return genesByName.get(gene);
+    })
+    .filter((gene): gene is Gene => gene != null);
+}
+
+export function getMonstieSRankGene(monster: Monster): Gene | undefined {
+  return genesByName.get(monster.monstie?.genes?.sRank ?? '');
+}
+
+export function getMonstieGeneCount(monster: Monster): number {
+  // TODO egg skill genes
+  // TODO random passive genes
+
+  return getMonstieInateGenes(monster).length + (getMonstieSRankGene(monster) ? 1 : 0);
 }

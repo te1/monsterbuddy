@@ -2,6 +2,7 @@
   import S3MonstieGenesSidebar from '~/components/s3/monstie/S3MonstieGenesSidebar.vue';
   import { hasMonsterImage } from '~/services/3/assets';
   import { monstersBySlug } from '~/services/3/data';
+  import { getMonstieGeneCount } from '~/services/3/genes';
   import { getMonstieGenesSeo } from '~/services/3/seo';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
@@ -24,15 +25,17 @@
   const route = useRoute();
   const monster = monstersBySlug.get(route.params.slug as string);
 
-  // TODO check for gene count instead
-  if (!monster || !monster.monstie) {
+  if (!monster) {
     throw createError({ status: 404, statusText: 'Page Not Found' });
   }
 
-  // TODO get gene count
-  const geneCount = 23;
+  const geneCount = computed(() => getMonstieGeneCount(monster));
 
-  useSeoMeta(getMonstieGenesSeo(monster, geneCount));
+  if (geneCount.value === 0) {
+    throw createError({ status: 404, statusText: 'Page Not Found' });
+  }
+
+  useSeoMeta(getMonstieGenesSeo(monster, geneCount.value));
   const headline = gameTypeToFullName('mhst3');
 
   useSchemaOrg([

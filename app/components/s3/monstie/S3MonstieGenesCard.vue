@@ -1,18 +1,14 @@
 <script lang="ts" setup>
-  import type { Gene, Monster } from '~/services/3/types';
-  import { genesByName } from '~/services/3/genes';
+  import type { Monster } from '~/services/3/types';
+  import { getMonstieInateGenes, getMonstieSRankGene } from '~/services/3/genes';
 
   const props = defineProps<{ monster: Monster }>();
 
   const innateGenes = computed(() => {
-    return (props.monster.monstie?.genes?.innate ?? [])
-      .map((gene) => {
-        return genesByName.get(gene);
-      })
-      .filter((gene): gene is Gene => gene != null);
+    return getMonstieInateGenes(props.monster);
   });
 
-  const sRankGene = computed(() => genesByName.get(props.monster.monstie?.genes?.sRank ?? ''));
+  const sRankGene = computed(() => getMonstieSRankGene(props.monster));
 
   // TODO egg skill genes
   // TODO random passive genes
