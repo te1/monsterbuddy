@@ -102,8 +102,15 @@ function buildMhst2NavItems(path: string): NavigationMenuItem[] {
 
 function buildMhst3NavItems(path: string): NavigationMenuItem[] {
   const isActive = (to: string) => path.startsWith(to);
+  const hasWiderNav = useHasWiderNav();
 
-  return [
+  const genes: NavigationMenuItem = {
+    label: 'Genes',
+    to: '/3/genes',
+    active: isActive('/3/genes'),
+  };
+
+  const items: NavigationMenuItem[] = [
     {
       label: 'Monsters',
       to: '/3/monsters',
@@ -119,28 +126,36 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
       to: '/3/eggs',
       active: isActive('/3/eggs'),
     },
-    {
-      label: 'More',
-      children: [
-        {
-          label: 'Habitat Restoration',
-          description: 'Regions & Areas',
-          to: '/3/habitats',
-          active: isActive('/3/habitats'),
-        },
-        {
-          label: 'Riding Actions',
-          to: '/3/riding-actions',
-          active: isActive('/3/riding-actions'),
-        },
-        {
-          label: 'Genes',
-          to: '/3/genes',
-          active: isActive('/3/genes'),
-        },
-      ],
-    },
   ];
+
+  if (hasWiderNav.value) {
+    items.push(genes);
+  }
+
+  const more: NavigationMenuItem = {
+    label: 'More',
+    children: [
+      {
+        label: 'Habitat Restoration',
+        description: 'Regions & Areas',
+        to: '/3/habitats',
+        active: isActive('/3/habitats'),
+      },
+      {
+        label: 'Riding Actions',
+        to: '/3/riding-actions',
+        active: isActive('/3/riding-actions'),
+      },
+    ],
+  };
+
+  if (!hasWiderNav.value) {
+    more.children?.push(genes);
+  }
+
+  items.push(more);
+
+  return items;
 }
 
 export function useNavItems() {
