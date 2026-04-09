@@ -7,10 +7,12 @@
     defineProps<{
       gene: Gene;
       mode?: Mode;
+      showAll?: boolean;
       eager?: boolean;
     }>(),
     {
       mode: 'description',
+      showAll: true,
       eager: false,
     }
   );
@@ -37,8 +39,31 @@
       <S3GeneIcon :gene="gene" :eager="eager" noTooltip />
     </div>
 
-    <div class="my-1.5 mr-1.5 self-start text-sm">
-      <div class="text-base leading-snug font-semibold" v-text="gene.name" />
+    <div class="my-1.5 mr-1.5 flex-1 self-start text-sm">
+      <div class="flex items-center justify-between">
+        <div class="text-base leading-snug font-semibold" v-text="gene.name" />
+
+        <div v-if="showAll && gene.active" class="hidden text-muted @md:flex">
+          <span v-if="gene.stamina != null">
+            Stam
+            <strong class="font-bold" :class="getStatClass('stamina')" v-text="gene.stamina" />
+          </span>
+
+          <span v-if="gene.power != null">
+            , Pwr
+            <strong class="font-bold" :class="getStatClass('power')" v-text="gene.power" />
+          </span>
+
+          <span v-if="gene.wyvernfell != null">
+            , Wyvf
+            <strong
+              class="font-bold"
+              :class="getStatClass('wyvernfell')"
+              v-text="gene.wyvernfell"
+            />
+          </span>
+        </div>
+      </div>
 
       <div v-if="showDescription" class="line-clamp-2" v-text="gene.description" />
 
