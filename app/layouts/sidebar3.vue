@@ -6,13 +6,20 @@
   const route = useRoute();
   const history = useMonsterHistoryStore();
 
+  const wantsGenes = computed(() => {
+    const path = route.path;
+
+    return path.match(/^\/3\/monsters\/[a-zA-Z0-9-]+\/genes/) != null;
+  });
+
   const wantsMonsties = computed(() => {
     const path = route.path;
 
     const onlyWantsMonsties =
       path.startsWith('/3/monsties') ||
       path.startsWith('/3/eggs') ||
-      path.startsWith('/3/riding-actions');
+      path.startsWith('/3/riding-actions') ||
+      wantsGenes.value;
 
     const sometimesWantsMonsties =
       path.startsWith('/3/monsters/') &&
@@ -102,6 +109,7 @@
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
+                    :linkGenes="wantsGenes"
                   />
 
                   <NuxtLink
@@ -133,6 +141,7 @@
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
+                    :linkGenes="wantsGenes"
                     removeable
                     @remove="removePinned(monster.slug)"
                   />

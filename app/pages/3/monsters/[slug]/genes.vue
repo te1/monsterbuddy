@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-  import S3MonsterDetailsSidebar from '~/components/s3/monster/S3MonsterDetailsSidebar.vue';
+  import S3MonstieGenesSidebar from '~/components/s3/monstie/S3MonstieGenesSidebar.vue';
   import { hasMonsterImage } from '~/services/3/assets';
   import { monstersBySlug } from '~/services/3/data';
   import { getMonstieGenesSeo } from '~/services/3/seo';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   definePageMeta({
-    sidebarComponent: S3MonsterDetailsSidebar,
+    sidebarComponent: S3MonstieGenesSidebar,
     back: {
       show: true,
       fallback: '/3/monsters',

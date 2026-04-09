@@ -5,10 +5,12 @@
     defineProps<{
       monster: Monster;
       showEgg?: boolean;
+      linkGenes?: boolean;
       removeable?: boolean;
     }>(),
     {
       showEgg: false,
+      linkGenes: false,
       removeable: false,
     }
   );
@@ -21,7 +23,7 @@
 <template>
   <div class="group relative">
     <NuxtLink
-      :to="`/3/monsters/${monster.slug}`"
+      :to="linkGenes ? `/3/monsters/${monster.slug}/genes` : `/3/monsters/${monster.slug}`"
       prefetchOn="interaction"
       class="flex max-w-max items-center gap-3 hover:text-default"
     >
