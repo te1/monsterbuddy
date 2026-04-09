@@ -77,7 +77,7 @@
       />
 
       <div class="grid gap-3 md:col-1 lg:col-auto xl:col-1">
-        <S3MonstieInfoCard :monster="monster" class="box px-4 py-2" />
+        <S3MonstieInfoCard :monster="monster" essentialsOnly class="box px-4 py-2" />
 
         <S3MonsterFlavorCard :monster="monster" mutationOnly class="box px-4 py-2" />
 

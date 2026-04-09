@@ -6,9 +6,11 @@
   const props = withDefaults(
     defineProps<{
       monster: Monster;
+      essentialsOnly?: boolean;
       linkGenes?: boolean;
     }>(),
     {
+      essentialsOnly: false,
       linkGenes: false,
     }
   );
@@ -56,14 +58,14 @@
         <ElementLabel class="font-medium" :element="monster?.element ?? undefined" />
       </div>
 
-      <div v-if="monster?.monstie?.kinshipSkill" class="flex items-center">
+      <div v-if="monster?.monstie?.kinshipSkill && !essentialsOnly" class="flex items-center">
         <span class="mr-1.5 w-40">Kinship Skill</span>
 
         <div class="pl-8 font-medium dark:brightness-150" v-text="monster?.monstie?.kinshipSkill" />
       </div>
     </div>
 
-    <div v-if="hasRidingActions">
+    <div v-if="hasRidingActions && !essentialsOnly">
       <h3 class="text-lg font-semibold">Riding Actions</h3>
 
       <div>

@@ -16,6 +16,9 @@
   const info = computed(() => formatMonsterInfoAll(props.monster));
   const locations = computed(() => getMonsterLocations(props.monster));
   const hasLocations = computed(() => locations.value.length > 0);
+  const isMutation = computed(() => {
+    return (props.monster.hatchable && props.monster.tags?.includes('mutation')) ?? false;
+  });
 </script>
 
 <template>
@@ -68,7 +71,7 @@
       </div>
     </div>
 
-    <div v-if="hasLocations">
+    <div v-if="hasLocations || isMutation">
       <h3 class="text-lg font-semibold">Locations</h3>
 
       <S3MonsterLocation
@@ -76,6 +79,8 @@
         :key="`${location.type}_${location.region}_${location.area}`"
         :location="location"
       />
+
+      <div v-if="!hasLocations && isMutation">Introduced through Habitat Restoration</div>
     </div>
   </section>
 </template>
