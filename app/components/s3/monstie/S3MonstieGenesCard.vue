@@ -1,6 +1,10 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
-  import { getMonstieInnateGenes, getMonstieSRankGene } from '~/services/3/genes';
+  import {
+    getMonstieInnateGenes,
+    getMonstiePassiveGenes,
+    getMonstieSRankGene,
+  } from '~/services/3/genes';
 
   const props = defineProps<{ monster: Monster }>();
 
@@ -11,7 +15,10 @@
   const sRankGene = computed(() => getMonstieSRankGene(props.monster));
 
   // TODO egg skill genes
-  // TODO random passive genes
+
+  const passiveGenes = computed(() => {
+    return getMonstiePassiveGenes(props.monster);
+  });
 </script>
 
 <template>
@@ -41,6 +48,25 @@
         <NuxtLink :to="`/3/genes/${sRankGene.slug}`" prefetchOn="interaction">
           <S3GeneListItem :gene="sRankGene" showAll class="px-2.5" />
         </NuxtLink>
+      </div>
+    </div>
+
+    <div v-if="passiveGenes.length > 0">
+      <h3 class="px-4 pt-2 text-lg font-semibold">Passive Genes</h3>
+
+      <div class="px-4 pb-1">
+        These genes are randomly selected. Shiny eggs and higher Ecosystem Rank increase the chances
+        of getting better / larger genes.
+      </div>
+
+      <div v-for="(gene, index) in passiveGenes" :key="gene.slug">
+        <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
+
+        <div class="box-link">
+          <NuxtLink :to="`/3/genes/${gene.slug}`" prefetchOn="interaction">
+            <S3GeneListItem :gene="gene" showAll class="px-2.5" />
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </section>

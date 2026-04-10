@@ -66,17 +66,22 @@
   <div>
     <AppPageHeader :title="`${monster.name} Genes`" :headline="headline" :hideDescription="true" />
 
-    <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-      <div class="grid gap-3 md:col-1 lg:col-auto xl:col-1">
-        <S3MonsterInfoCard :monster="monster" linkName class="box px-4 py-2" />
-      </div>
-
-      <S3MonstieGenesCard
+    <UPageBody class="flex flex-col gap-3 md:flex-row-reverse lg:flex-col xl:flex-row-reverse">
+      <S3MonsterInfoCard
         :monster="monster"
-        class="box overflow-hidden md:col-2 md:row-[1/span_2] lg:col-auto lg:row-auto xl:col-2 xl:row-[1/span_2]"
+        linkName
+        class="box px-4 py-2 md:hidden lg:block xl:hidden"
       />
 
-      <div class="grid gap-3 md:col-1 lg:col-auto xl:col-1">
+      <S3MonstieGenesCard :monster="monster" class="box flex-1 overflow-hidden" />
+
+      <div class="flex flex-1 flex-col gap-3">
+        <S3MonsterInfoCard
+          :monster="monster"
+          linkName
+          class="box hidden px-4 py-2 md:block lg:hidden xl:block"
+        />
+
         <S3MonstieInfoCard :monster="monster" essentialsOnly class="box px-4 py-2" />
 
         <S3MonsterFlavorCard :monster="monster" mutationOnly class="box px-4 py-2" />

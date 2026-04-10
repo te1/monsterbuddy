@@ -1,3 +1,4 @@
+import { uniq } from 'es-toolkit/array';
 import { monsters } from './data';
 import type {
   Gene,
@@ -10,12 +11,15 @@ import type {
   SkillDebuffType,
   SkillEffectType,
   SkillTarget,
+  GeneSources,
 } from './types';
 import genes_ from '~/assets/3/genes.json';
+import geneSources_ from '~/assets/3/geneSources.json';
 
 const genes = genes_ as unknown as Gene[];
+const geneSources = geneSources_ as unknown as GeneSources;
 
-export { genes };
+export { genes, geneSources };
 export const genesByName = keyBy(genes, 'name');
 export const genesBySlug = keyBy(genes, 'slug');
 export const allElements: GeneElement[] = [
@@ -207,11 +211,31 @@ export function getMonstieSRankGene(monster: Monster): Gene | undefined {
   return genesByName.get(monster.monstie?.genes?.sRank ?? '');
 }
 
+export function getMonstiePassiveGenes(monster: Monster): Gene[] {
+  const group = geneSources.geneGroups[monster.monstie?.genes?.passiveGroup ?? ''];
+
+  if (group == null) {
+    return [];
+  }
+
+  const genes = uniq(
+    group
+      .map((set) => geneSources.geneSets[set])
+      .filter((set) => set != null)
+      .flat()
+  );
+
+  return genes.map((gene) => genesByName.get(gene)).filter((gene): gene is Gene => gene != null);
+}
+
 export function getMonstieGeneCount(monster: Monster): number {
   // TODO egg skill genes
-  // TODO random passive genes
 
-  return getMonstieInnateGenes(monster).length + (getMonstieSRankGene(monster) ? 1 : 0);
+  return (
+    getMonstieInnateGenes(monster).length +
+    (getMonstieSRankGene(monster) ? 1 : 0) +
+    getMonstiePassiveGenes(monster).length
+  );
 }
 
 export function getInnateGeneSources(gene: Gene): Monster[] {

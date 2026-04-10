@@ -18,3 +18,4 @@ export type {
   SkillEffectType,
   SkillTarget,
 } from '~~/data/3/genes.schema';
+export type { GeneSources } from '~~/data/3/geneSources.schema';
