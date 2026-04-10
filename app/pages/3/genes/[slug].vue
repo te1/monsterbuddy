@@ -82,10 +82,14 @@
       </template>
     </AppPageHeader>
 
-    <UPageBody class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-      <S3GeneInfoCard :gene="gene" class="box px-4 py-2" />
-      <S3GeneRelatedCard :gene="gene" class="box overflow-hidden" />
-      <S3GeneSourcesCard :gene="gene" class="box overflow-hidden" />
+    <UPageBody class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
+      <div class="flex flex-1 flex-col gap-3">
+        <S3GeneInfoCard :gene="gene" class="box px-4 py-2" />
+
+        <S3GeneRelatedCard :gene="gene" class="box overflow-hidden" />
+      </div>
+
+      <S3GeneSourcesCard :gene="gene" class="box flex-1 overflow-hidden" />
     </UPageBody>
   </div>
 </template>
