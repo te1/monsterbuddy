@@ -139,7 +139,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/oo8fpi/monster_attacktype_chart"
-                text="Monster Attack-Type Chart"
+                text="Attack-Type Chart"
               />
               by
               <AppLink href="https://www.reddit.com/user/RPGwannabe" text="RPGwannabe" />
@@ -148,7 +148,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/p8h25d/all_high_rank_monsters_in_each_zone_of_the_elder"
-                text="All High Rank Monsters in Elder's Lair"
+                text="High Rank Monsters in Elder's Lair"
               />
               by
               <AppLink href="https://www.reddit.com/user/PetePeterson53" text="PetePeterson53" />
