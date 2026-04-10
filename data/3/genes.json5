@@ -3901,7 +3901,7 @@
     wyvernfell: 50,
     description: 'Deals ice damage to random enemies and inflicts Accuracy Down.',
     target: 'randomEnemy',
-    debuff: [{ type: 'Accuracy Down', size: 'L', target: 'randomEnemies' }],
+    debuff: [{ type: 'Accuracy Down', size: 'L', target: 'randomEnemy' }],
   },
 
   {
