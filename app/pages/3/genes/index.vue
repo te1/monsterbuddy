@@ -307,7 +307,15 @@
         <template #body>
           <S3GeneViewOptions modalLayout />
 
-          <S3GeneFilter :filter="filter" hideSearch modalLayout backTarget="/3/genes" />
+          <S3GeneFilter
+            :filter="filter"
+            hideSearch
+            hideBuffs
+            hideDebuffs
+            hideEffects
+            modalLayout
+            backTarget="/3/genes"
+          />
         </template>
       </LazyUDrawer>
 

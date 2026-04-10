@@ -28,6 +28,9 @@
       sources?: SourcesStore;
       disabled?: boolean;
       hideSearch?: boolean;
+      hideBuffs?: boolean;
+      hideDebuffs?: boolean;
+      hideEffects?: boolean;
       backTarget?: string;
       modalLayout?: boolean;
     }>(),
@@ -35,6 +38,9 @@
       sources: undefined,
       disabled: false,
       hideSearch: false,
+      hideBuffs: false,
+      hideDebuffs: false,
+      hideEffects: false,
       backTarget: undefined,
       modalLayout: false,
     }
@@ -262,7 +268,12 @@
         />
       </UFormField>
 
-      <UFormField label="Buff" orientation="horizontal" :data-modal-layout="modalLayout">
+      <UFormField
+        v-if="!hideBuffs"
+        label="Buff"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.buffFilter ?? 'ALL'"
           color="neutral"
@@ -274,7 +285,12 @@
         />
       </UFormField>
 
-      <UFormField label="Debuff" orientation="horizontal" :data-modal-layout="modalLayout">
+      <UFormField
+        v-if="!hideDebuffs"
+        label="Debuff"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.debuffFilter ?? 'ALL'"
           color="neutral"
@@ -286,7 +302,12 @@
         />
       </UFormField>
 
-      <UFormField label="Effect" orientation="horizontal" :data-modal-layout="modalLayout">
+      <UFormField
+        v-if="!hideEffects"
+        label="Effect"
+        orientation="horizontal"
+        :data-modal-layout="modalLayout"
+      >
         <USelect
           :modelValue="filter.effectFilter ?? 'ALL'"
           color="neutral"
