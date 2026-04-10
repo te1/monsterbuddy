@@ -14,6 +14,7 @@ export type {
   GeneType,
   SkillAilmentType,
   SkillBuffType,
+  SkillBuffSize,
   SkillDebuffType,
   SkillEffectType,
   SkillTarget,

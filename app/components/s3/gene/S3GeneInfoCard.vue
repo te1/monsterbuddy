@@ -128,7 +128,7 @@
 
       <div v-for="buff in gene.buff" :key="buff.type" class="flex gap-1">
         <span v-text="buff.type" />
-        <span v-if="buff.size != null" class="font-semibold">({{ buff.size }})</span>
+        <S3BuffSize :size="buff.size" />
         <span class="text-muted">on {{ formatSkillTarget(buff.target) }}</span>
       </div>
     </div>
@@ -138,7 +138,7 @@
 
       <div v-for="debuff in gene.debuff" :key="debuff.type" class="flex gap-1">
         <span v-text="debuff.type" />
-        <span v-if="debuff.size != null" class="font-semibold">({{ debuff.size }})</span>
+        <S3BuffSize :size="debuff.size" />
         <span class="text-muted">on {{ formatSkillTarget(debuff.target) }}</span>
       </div>
     </div>
