@@ -165,7 +165,7 @@
           indicator="hidden"
           :ui="{ item: 'grow select-none' }"
           :modelValue="sources.items[0]?.value"
-          :items="[sources.items[0]!]"
+          :items="[sources.items[0] ?? { value: 'default', label: 'All' }]"
         />
       </template>
     </ClientOnly>

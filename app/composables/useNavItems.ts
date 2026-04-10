@@ -103,6 +103,15 @@ function buildMhst2NavItems(path: string): NavigationMenuItem[] {
 function buildMhst3NavItems(path: string): NavigationMenuItem[] {
   const isActive = (to: string) => path.startsWith(to);
 
+  const genes = (classes: string): NavigationMenuItem => {
+    return {
+      label: 'Genes',
+      to: '/3/genes',
+      active: isActive('/3/genes'),
+      class: classes,
+    };
+  };
+
   return [
     {
       label: 'Monsters',
@@ -119,6 +128,7 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
       to: '/3/eggs',
       active: isActive('/3/eggs'),
     },
+    genes('hidden xs:flex'),
     {
       label: 'More',
       children: [
@@ -133,6 +143,7 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
           to: '/3/riding-actions',
           active: isActive('/3/riding-actions'),
         },
+        genes('flex xs:hidden'),
       ],
     },
   ];

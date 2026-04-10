@@ -1,5 +1,19 @@
 import type { MonsterLocationType } from './data';
-import type { AilmentType, Monster, MonsterTag, RidingActionType, StatsType } from './types';
+import type {
+  AilmentType,
+  GeneElement,
+  GeneSize,
+  GeneType,
+  Monster,
+  MonsterTag,
+  RidingActionType,
+  SkillAilmentType,
+  SkillBuffType,
+  SkillDebuffType,
+  SkillEffectType,
+  SkillTarget,
+  StatsType,
+} from './types';
 
 export function formatMonsterInfoAll(monster: Monster) {
   return monster.tags?.map(formatMonsterTag).join(', ') ?? '';
@@ -241,5 +255,202 @@ export function statsTypeToText(type: StatsType) {
 
     default:
       return '?';
+  }
+}
+
+export function formatGeneElement(element?: GeneElement): string {
+  switch (element) {
+    case 'all':
+      return 'Rainbow';
+
+    default:
+      return formatElement(element);
+  }
+}
+
+export function formatGeneType(geneType?: GeneType): string {
+  switch (geneType) {
+    case null:
+      return 'None';
+
+    case 'all':
+      return 'Rainbow';
+
+    default:
+      return formatAttackType(geneType);
+  }
+}
+
+export function formatGeneSize(size: GeneSize): string {
+  switch (size) {
+    case 'none':
+      return 'No size';
+
+    case '-':
+      return 'Any Rank';
+
+    case '+':
+      return 'S Rank';
+
+    default:
+      return size;
+  }
+}
+
+export function formatSkillTarget(target: SkillTarget): string {
+  switch (target) {
+    case 'allAllies':
+      return 'All Allies';
+
+    case 'allEnemies':
+      return 'All Enemies';
+
+    case 'randomEnemy':
+      return 'Random Enemies';
+
+    case 'singleEnemy':
+      return 'Single Enemy';
+
+    case 'user':
+      return 'User';
+  }
+}
+
+export function formatSkillAilment(ailment: SkillAilmentType): string {
+  switch (ailment) {
+    case 'noxiousPoison':
+      return 'Noxious Poison';
+
+    case 'severePoison':
+      return 'Severe Poison';
+
+    default:
+      return formatAilment(ailment);
+  }
+}
+
+export function formatSkillBuff(buff: SkillBuffType): string {
+  switch (buff) {
+    case 'attackUp':
+      return 'Attack Up';
+
+    case 'criticalUp':
+      return 'Critical Up';
+
+    case 'defenseUp':
+      return 'Defense Up';
+
+    case 'dodgeUp':
+      return 'Dodge Up';
+
+    case 'dragonAttackUp':
+      return 'Dragon Atk Up';
+
+    case 'fireAttackUp':
+      return 'Fire Atk Up';
+
+    case 'fireDefenseUp':
+      return 'Fire Def Up';
+
+    case 'iceAttackUp':
+      return 'Ice Atk Up';
+
+    case 'inflictRateUp':
+      return 'Inflict Rate Up';
+
+    case 'speedUp':
+      return 'Speed Up';
+
+    case 'staminaRegenUp':
+      return 'Stamina Regen Up';
+
+    case 'thunderAttackUp':
+      return 'Thunder Atk Up';
+
+    case 'waterAttackUp':
+      return 'Water Atk Up';
+
+    case 'wyvernfellUp':
+      return 'Wyvernfell Up';
+
+    case 'regenerate':
+      return 'Regenerate';
+  }
+}
+
+export function formatSkillDebuff(debuff: SkillDebuffType): string {
+  switch (debuff) {
+    case 'accuracyDown':
+      return 'Accuracy Down';
+
+    case 'attackDown':
+      return 'Attack Down';
+
+    case 'defenseDown':
+      return 'Defense Down';
+
+    case 'dragonDefenseDown':
+      return 'Dragon Def Down';
+
+    case 'evasionDown':
+      return 'Evasion Down';
+
+    case 'speedDown':
+      return 'Speed Down';
+
+    case 'thunderDefenseDown':
+      return 'Thunder Def Down';
+
+    case 'wyvernsoulDefenseDown':
+      return 'Wyvernsoul Def Down';
+  }
+}
+
+export function formatSkillEffect(effect: SkillEffectType): string {
+  switch (effect) {
+    case '1HitKo':
+      return '1-Hit-KO';
+
+    case 'explodeBlastblight':
+      return 'Explode Blastblight';
+
+    case 'evade':
+      return 'Evade';
+
+    case 'stun':
+      return 'Stun';
+
+    case 'spam':
+      return 'Repeated Use';
+
+    case 'crit':
+      return 'High Crit';
+
+    case 'recoil':
+      return 'Recoil Damage';
+
+    case 'nextTurn':
+      return 'On Next Turn';
+
+    case 'leech':
+      return 'Leech';
+
+    case 'lowAccuracy':
+      return 'Low Hit Chance';
+
+    case 'chaser':
+      return 'Chaser';
+
+    case 'priority':
+      return 'Priority';
+
+    case 'procBlastblight':
+      return 'Blastblight';
+
+    case 'procBurn':
+      return 'Burn';
+
+    case 'procParalysis':
+      return 'Paralysis';
   }
 }

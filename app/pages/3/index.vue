@@ -22,6 +22,10 @@
 
   const versions = [
     {
+      date: '2026-04-10',
+      changes: ['New pages for genes'],
+    },
+    {
       date: '2026-04-02',
       changes: ['New pages for habitat restoration, regions and areas'],
     },
@@ -112,6 +116,11 @@
           </ProseLi>
 
           <ProseLi>
+            <AppNuxtLink to="/3/genes" text="Gene list" />
+            with types, effects and monstie sources
+          </ProseLi>
+
+          <ProseLi>
             Keeps track of your recently viewed monsters, monsties and eggs for fast and easy
             navigation
           </ProseLi>
@@ -148,6 +157,14 @@
                 text="Monstie Stats"
               />
               by <AppLink href="https://www.reddit.com/user/norahike" text="norahike" />
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1s7lq5l/monster_hunter_stories_3_monstie_list_gene_list"
+                text="Monstie List, Gene List and Monstie Builder Sheet"
+              />
+              by <AppLink href="https://www.reddit.com/user/AzuClone" text="AzuClone" />
             </ProseLi>
           </ProseUl>
         </section>

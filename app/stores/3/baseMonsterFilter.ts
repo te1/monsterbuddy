@@ -3,7 +3,6 @@ import { skipHydrate } from 'pinia';
 import { groupBy, orderBy } from 'es-toolkit/array';
 import { upperFirst } from 'es-toolkit/string';
 import {
-  getEggColors,
   getGenera,
   getMonstersByGenus,
   getMonstersByHatchable,
@@ -111,8 +110,6 @@ export function makeMonsterFilterStore(
     const allGenera = computed(() => getGenera(monsters.value));
 
     const allRidingActions = computed(() => getRidingActions(monsters.value));
-
-    const allEggColors = computed(() => getEggColors(monsters.value));
 
     const filteredMonsters = computed(() => {
       let result = monsters.value;
@@ -430,7 +427,6 @@ export function makeMonsterFilterStore(
       autoSwitchModes,
       allGenera,
       allRidingActions,
-      allEggColors,
       filteredMonsters,
       sortedMonsters,
       groupedMonsters,

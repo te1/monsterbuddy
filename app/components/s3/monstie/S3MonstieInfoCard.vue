@@ -1,11 +1,21 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import { sortedRidingActions } from '~/services/3/data';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
-  const props = defineProps<{ monster: Monster }>();
+  const props = withDefaults(
+    defineProps<{
+      monster: Monster;
+      essentialsOnly?: boolean;
+      linkGenes?: boolean;
+    }>(),
+    {
+      essentialsOnly: false,
+      linkGenes: false,
+    }
+  );
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   const hasRidingActions = computed(() => {
     return !!props.monster?.monstie?.ridingActions?.length;
@@ -48,14 +58,14 @@
         <ElementLabel class="font-medium" :element="monster?.element ?? undefined" />
       </div>
 
-      <div v-if="monster?.monstie?.kinshipSkill" class="flex items-center">
+      <div v-if="monster?.monstie?.kinshipSkill && !essentialsOnly" class="flex items-center">
         <span class="mr-1.5 w-40">Kinship Skill</span>
 
         <div class="pl-8 font-medium dark:brightness-150" v-text="monster?.monstie?.kinshipSkill" />
       </div>
     </div>
 
-    <div v-if="hasRidingActions">
+    <div v-if="hasRidingActions && !essentialsOnly">
       <h3 class="text-lg font-semibold">Riding Actions</h3>
 
       <div>
@@ -64,6 +74,16 @@
           <span v-if="index + 1 < (ridingActions?.length ?? 0)">,&nbsp;</span>
         </span>
       </div>
+    </div>
+
+    <div v-if="linkGenes">
+      <h3 class="text-lg font-semibold">
+        <AppNuxtLink
+          :to="`/3/monsters/${monster.slug}/genes`"
+          prefetchOn="interaction"
+          text="Genes"
+        />
+      </h3>
     </div>
 
     <div class="absolute top-1 right-1">

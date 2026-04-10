@@ -29,14 +29,14 @@ export const catavanStands = getCatavanStandsWithDetails();
 export const catavanStandsBySlug = keyBy(catavanStands, 'slug');
 export const coopQuestsBySlug = keyBy(coopQuests, 'slug');
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
-export const allElements: ElementType[] = [
+export const allElements: readonly ElementType[] = [
   'none',
   'fire',
   'water',
   'thunder',
   'ice',
   'dragon',
-] as const;
+];
 
 export function getGenera(monsterList: Monster[] = monsters): GenusType[] {
   return uniq(monsterList.map((monster) => monster.genus)).sort();
@@ -104,10 +104,6 @@ export function getEldersLairFloors(monsterList: Monster[] = monsters): string[]
 
 export function getRidingActions(monsterList: Monster[] = monsties): string[] {
   return uniq(monsterList.flatMap((monster) => monster.monstie?.ridingActions ?? [])).sort();
-}
-
-export function getEggColors(monsterList: Monster[] = monsties): EggColor[] {
-  return uniq(monsterList.flatMap((monster) => monster.monstie?.eggColors ?? [])).sort();
 }
 
 export function getMonstersByName(name: string, monsterList: Monster[] = monsters): Monster[] {

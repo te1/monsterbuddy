@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { Monster } from '~/services/3/types';
+  import type { GeneElement, Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
   import { formatLocationType, formatMonsterInfoShort } from '~/services/3/presentation';
   import useMonstieFilter from '~/stores/3/monstieFilter';
@@ -10,9 +10,11 @@
     defineProps<{
       monster: Monster;
       mode?: Mode;
+      areaElement?: GeneElement;
     }>(),
     {
       mode: 'location',
+      areaElement: undefined,
     }
   );
 
@@ -20,7 +22,25 @@
 
   const info = computed(() => formatMonsterInfoShort(props.monster));
 
-  const locations = computed(() => take(getMonsterLocations(props.monster), 3));
+  const locations = computed(() => {
+    const locations = getMonsterLocations(props.monster);
+
+    if (props.areaElement != null) {
+      // put matching areas first so they are not cut off
+      locations.sort((a, b) => {
+        return (
+          Number(b.areaElement === props.areaElement) - Number(a.areaElement === props.areaElement)
+        );
+      });
+    }
+
+    return take(locations, 3);
+  });
+
+  const hasLocations = computed(() => locations.value.length > 0);
+  const isMutation = computed(() => {
+    return (props.monster.hatchable && props.monster.tags?.includes('mutation')) ?? false;
+  });
 
   const stats = computed(() => props.monster?.stats?.base);
 
@@ -53,11 +73,12 @@
         <div
           v-for="location in locations"
           :key="`${location.type}_${location.region}_${location.area}`"
+          :class="{ 'text-dimmed': areaElement != null && location.areaElement !== areaElement }"
         >
           {{ formatLocationType(location.type) }}: {{ location.area ?? location.region }}
         </div>
 
-        <!-- <div v-if="monster.tags.includes('mutation')" v-text="formatMonsterTag('mutation')" /> -->
+        <div v-if="!hasLocations && isMutation">Introduced through Habitat Restoration</div>
       </template>
 
       <div v-if="showRank">

@@ -66,7 +66,7 @@
         'Eggs, Monsters',
         'Attack Patterns',
         'Habitat Restoration',
-        // 'Genes, Skills',
+        'Genes', // ', Skills'
       ],
     },
   ];
@@ -106,6 +106,11 @@
       title: 'Quick Access',
       icon: 'ph:arrow-fat-right',
       lines: ['Bookmarks', 'Recently Viewed', 'Related Entries'],
+    },
+    {
+      title: 'Genes',
+      icon: 'ph:dna',
+      lines: ['Types', 'Effects', 'Sources'],
     },
   ];
 </script>

@@ -6,9 +6,11 @@
     defineProps<{
       monster: Monster;
       description?: string;
+      genes?: boolean;
     }>(),
     {
       description: '',
+      genes: false,
     }
   );
 
@@ -30,7 +32,7 @@
   >
     <section class="flex flex-col gap-6 font-medium text-pretty lg:gap-3">
       <h1 class="text-[110px] leading-tight lg:text-[80px]">
-        {{ monster.name }}
+        {{ genes ? `${monster.name} Genes` : monster.name }}
       </h1>
 
       <p v-if="description" class="hidden text-5xl leading-tight text-primary lg:block">

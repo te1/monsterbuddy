@@ -1,35 +1,11 @@
 <script setup lang="ts">
-  import type { SearchConfig } from '~/services/search';
   import { createReusableTemplate } from '@vueuse/core';
-  import { buildDefaultSearch } from '~/services/search';
-  import { buildMhst1Search } from '~/services/1/search';
-  import { buildMhst2Search } from '~/services/2/search';
-  import { buildMhst3Search } from '~/services/3/search';
 
   const appConfig = useAppConfig();
-  const route = useRoute();
 
   const [DefineButtonTemplate, ReuseButtonTemplate] = createReusableTemplate();
 
   const open = ref(false);
-
-  const gameType = computed(() => routePathToGameType(route.path));
-
-  const searchConfig = computed<SearchConfig>(() => {
-    switch (gameType.value) {
-      case 'mhst1':
-        return buildMhst1Search(appConfig.seo.title);
-
-      case 'mhst2':
-        return buildMhst2Search(appConfig.seo.title);
-
-      case 'mhst3':
-        return buildMhst3Search(appConfig.seo.title);
-
-      default:
-        return buildDefaultSearch(appConfig.seo.title);
-    }
-  });
 
   defineShortcuts({
     meta_k: {
@@ -37,16 +13,6 @@
       usingInput: true,
     },
   });
-
-  // restore normal handling of home/end keys in UInput
-  function onKeydownCapture(e: KeyboardEvent) {
-    if (e.key === 'Home' || e.key === 'End') {
-      e.stopImmediatePropagation();
-    }
-  }
-
-  // type gymnastics so we can pass event listeners to UInput
-  const input = { onKeydownCapture } as Record<string, unknown>;
 </script>
 
 <template>
@@ -96,28 +62,9 @@
     </div>
 
     <template #body>
-      <LazyUCommandPalette
-        :groups="searchConfig.groups"
-        placeholder="Search anything..."
-        class="h-[85dvh] lg:h-120"
-        :input="input"
-        close
-        selectedIcon=" "
-        :ui="{ item: 'items-center', itemLabelSuffix: 'hidden' }"
-        :fuse="{ fuseOptions: { includeMatches: true }, resultLimit: 10 }"
-        hydrateOnIdle
-        @update:open="open = $event"
-        @update:modelValue="open = false"
-      >
-        <template v-if="searchConfig.monsterIconComponent" #monsters-leading="{ item }">
-          <component
-            :is="searchConfig.monsterIconComponent"
-            :monster="item.data"
-            noTooltip
-            class="size-9"
-          />
-        </template>
-      </LazyUCommandPalette>
+      <div class="h-[85dvh] lg:h-120">
+        <LazyAppSearchCommandPalette v-model="open" />
+      </div>
     </template>
 
     <template #footer>

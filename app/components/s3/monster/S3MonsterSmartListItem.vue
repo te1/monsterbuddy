@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   export type Display = 'monster' | 'monstie' | 'egg';
 
@@ -19,7 +19,7 @@
     }
   );
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   const showMonstie = computed(() => {
     if (props.display) {

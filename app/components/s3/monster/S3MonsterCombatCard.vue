@@ -7,11 +7,11 @@
     intensityToIcon,
     intensityToTextColor,
   } from '~/services/3/presentation';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   const props = defineProps<{ monster: Monster }>();
 
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
 
   const hasCombatStates = computed(() => {
     return !isEmptyObject(props.monster.monster?.states);

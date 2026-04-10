@@ -84,7 +84,7 @@
   const headline = gameTypeToFullName('mhst3');
 
   const descriptionParts = computed(() => {
-    const part1 = `This area is part of `;
+    const part1 = 'This area is part of ';
     const part2 = region.name;
     const part3 = ` and home to ${monsterCount.value} monsters`;
 

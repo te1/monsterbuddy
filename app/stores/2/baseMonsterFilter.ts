@@ -5,7 +5,6 @@ import { upperFirst } from 'es-toolkit/string';
 import {
   getCatavanStands,
   getCoopQuests,
-  getEggColors,
   getEldersLairFloors,
   getGenera,
   getHabitats,
@@ -143,8 +142,6 @@ export function makeMonsterFilterStore(
     const allEldersLairFloors = computed(() => getEldersLairFloors(monsters.value));
 
     const allRidingActions = computed(() => getRidingActions(monsters.value));
-
-    const allEggColors = computed(() => getEggColors(monsters.value));
 
     const filteredMonsters = computed(() => {
       let result = monsters.value;
@@ -469,7 +466,6 @@ export function makeMonsterFilterStore(
       allCatavanStands,
       allEldersLairFloors,
       allRidingActions,
-      allEggColors,
       filteredMonsters,
       sortedMonsters,
       groupedMonsters,

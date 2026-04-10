@@ -14,14 +14,14 @@ export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
 export const regionsBySlug = keyBy(regions, 'slug');
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
-export const allElements: ElementType[] = [
+export const allElements: readonly ElementType[] = [
   'none',
   'fire',
   'water',
   'thunder',
   'ice',
   'dragon',
-] as const;
+];
 
 export function getGenera(monsterList: Monster[] = monsters): GenusType[] {
   return uniq(monsterList.map((monster) => monster.genus)).sort();
@@ -29,10 +29,6 @@ export function getGenera(monsterList: Monster[] = monsters): GenusType[] {
 
 export function getRidingActions(monsterList: Monster[] = monsties): string[] {
   return uniq(monsterList.flatMap((monster) => monster.monstie?.ridingActions ?? [])).sort();
-}
-
-export function getEggColors(monsterList: Monster[] = monsties): EggColor[] {
-  return uniq(monsterList.flatMap((monster) => monster.monstie?.eggColors ?? [])).sort();
 }
 
 export function getMonstersByName(name: string, monsterList: Monster[] = monsters): Monster[] {
@@ -125,6 +121,7 @@ export type MonsterLocation = {
   regionSlug: string;
   area?: string;
   areaSlug?: string;
+  areaElement?: ElementType;
 };
 
 export function getMonsterLocations(monster: Monster): MonsterLocation[] {
@@ -152,6 +149,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -164,6 +162,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -176,6 +175,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -188,6 +188,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -200,6 +201,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
     }
@@ -256,4 +258,10 @@ export function getAreaBySlug(regionSlug: string, areaSlug: string): RegionArea 
   }
 
   return undefined;
+}
+
+export function getAreasByElement(element: ElementType): { region: Region; area: RegionArea }[] {
+  return regions.flatMap((region) =>
+    region.areas.filter((area) => area.element === element).map((area) => ({ region, area }))
+  );
 }

@@ -103,11 +103,20 @@ export const EggColorSchema = z.enum([
 ]);
 export type EggColor = z.infer<typeof EggColorSchema>;
 
+export const MonstieGenesSchema = z.object({
+  innate: z.array(z.string()),
+  sRank: z.string(),
+  eggSkillGroup: z.string(),
+  passiveGroup: z.string(),
+});
+export type MonstieGenes = z.infer<typeof MonstieGenesSchema>;
+
 const MonstieDataSchema = z.object({
   attack: AttackTypeSchema,
   ridingActions: z.array(z.string()),
   kinshipSkill: z.string().optional(),
   eggColors: z.array(EggColorSchema).optional(),
+  genes: MonstieGenesSchema.optional(),
 });
 export type MonstieData = z.infer<typeof MonstieDataSchema>;
 

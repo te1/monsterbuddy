@@ -1,4 +1,3 @@
-import type { Component } from 'vue';
 import type { GameType } from '~/utils/types';
 import { buildMhst3SearchMonsterGroup } from './3/search';
 import S3MonsterIcon from '~/components/s3/monster/S3MonsterIcon.vue';
@@ -21,6 +20,7 @@ export type SearchGroup = {
 export type SearchConfig = {
   groups: SearchGroup[];
   monsterIconComponent: Component | null;
+  geneIconComponent: Component | null;
 };
 
 export function buildSearchHomePageItem(appTitle: string) {
@@ -52,6 +52,7 @@ export function buildSearchPageConfig(items: SearchItem[]) {
   return {
     groups: [buildSearchPagesGroup(items)],
     monsterIconComponent: null,
+    geneIconComponent: null,
   };
 }
 
@@ -67,5 +68,6 @@ export function buildDefaultSearch(appTitle: string) {
       buildMhst3SearchMonsterGroup(),
     ],
     monsterIconComponent: markRaw(S3MonsterIcon),
+    geneIconComponent: null,
   };
 }

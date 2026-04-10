@@ -1,5 +1,5 @@
 import { makeMonsterSourcesStore } from './baseMonsterSources';
-import useHistoryStore from './historyStore';
+import useMonsterHistoryStore from './monsterHistoryStore';
 
 export type Source = 'default' | 'recent' | 'pinned';
 
@@ -20,7 +20,7 @@ const useMonstieSources = makeMonsterSourcesStore<Source>(
     }
   },
   (): Source[] => {
-    const history = useHistoryStore();
+    const history = useMonsterHistoryStore();
 
     const results: Source[] = ['default'];
 

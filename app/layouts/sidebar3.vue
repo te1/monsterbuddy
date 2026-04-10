@@ -1,10 +1,16 @@
 <script lang="ts" setup>
   import mhst3Egg from '~/assets/3/monsterbuddy.avif';
   import { take } from 'es-toolkit/array';
-  import useHistoryStore from '~/stores/3/historyStore';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
   const route = useRoute();
-  const history = useHistoryStore();
+  const history = useMonsterHistoryStore();
+
+  const wantsGenes = computed(() => {
+    const path = route.path;
+
+    return /^\/3\/monsters\/[^/]+\/genes\/?$/.test(path);
+  });
 
   const wantsMonsties = computed(() => {
     const path = route.path;
@@ -12,7 +18,8 @@
     const onlyWantsMonsties =
       path.startsWith('/3/monsties') ||
       path.startsWith('/3/eggs') ||
-      path.startsWith('/3/riding-actions');
+      path.startsWith('/3/riding-actions') ||
+      wantsGenes.value;
 
     const sometimesWantsMonsties =
       path.startsWith('/3/monsters/') &&
@@ -102,6 +109,7 @@
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
+                    :linkGenes="wantsGenes"
                   />
 
                   <NuxtLink
@@ -133,6 +141,7 @@
                     :key="monster.slug"
                     :monster="monster"
                     :showEgg="wantsEggs"
+                    :linkGenes="wantsGenes"
                     removeable
                     @remove="removePinned(monster.slug)"
                   />

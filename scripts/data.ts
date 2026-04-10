@@ -14,6 +14,8 @@ import { RidingActionSchema as S2RidingActionSchema } from '~~/data/2/ridingActi
 import { MonsterSchema as S3MonsterSchema } from '~~/data/3/monsters.schema';
 import { RegionSchema as S3RegionSchema } from '~~/data/3/regions.schema';
 import { RidingActionSchema as S3RidingActionSchema } from '~~/data/3/ridingActions.schema';
+import { GeneSchema as S3GeneSchema } from '~~/data/3/genes.schema';
+import { GeneSourcesSchema as S3GeneSourcesSchema } from '~~/data/3/geneSources.schema';
 import { makeSlug } from '~~/app/utils/data';
 
 const generateEggSvgs = false;
@@ -58,6 +60,8 @@ function generate() {
       schema: S3RidingActionSchema.array(),
       transform: transformRidingActions,
     },
+    { file: '3/genes', schema: S3GeneSchema.array(), transform: transformS3Genes },
+    { file: '3/geneSources', schema: S3GeneSourcesSchema },
   ];
 
   for (const job of jobs) {
@@ -302,6 +306,7 @@ function getS2MonstieDefenseStats(monster: Record<string, unknown>) {
 
 function transformS3Monsters(data: unknown) {
   const monsters = data as Record<string, unknown>[];
+
   for (let index = 0; index < monsters.length; index++) {
     const monster = monsters[index]!;
 
@@ -410,6 +415,24 @@ function transformS3Regions(data: unknown) {
       for (const area of areas) {
         area.slug = makeSlug(area.name as string);
       }
+    }
+  }
+}
+
+function transformS3Genes(data: unknown) {
+  const genes = data as { name: string; slug?: string }[];
+
+  for (const gene of genes) {
+    gene.slug = makeSlug(gene.name);
+
+    const details = gene as Record<string, unknown>;
+
+    if (typeof details.power === 'number' && typeof details.stamina === 'number') {
+      details.pps = Number((details.power / details.stamina).toFixed(2));
+    }
+
+    if (typeof details.wyvernfell === 'number' && typeof details.stamina === 'number') {
+      details.wps = Number((details.wyvernfell / details.stamina).toFixed(2));
     }
   }
 }

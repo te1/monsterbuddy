@@ -1,4 +1,4 @@
-import type { AilmentType, Monster } from './types';
+import type { Monster, SkillAilmentType } from './types';
 import { loadAsset } from '../assets';
 
 const monsterImages = import.meta.glob<string>('~/assets/3/monster/*.avif', {
@@ -64,6 +64,6 @@ const ailmentIcons = import.meta.glob<string>('~/assets/icon/ailment-*.webp', {
   import: 'default',
 });
 
-export function getAilmentIconUrl(ailment: AilmentType) {
+export function getAilmentIconUrl(ailment: SkillAilmentType) {
   return ailmentIcons[`/assets/icon/ailment-${ailment}.webp`];
 }

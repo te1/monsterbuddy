@@ -1,8 +1,10 @@
 import { markRaw } from 'vue';
-import type { Monster, RidingAction } from './types';
+import type { Gene, Monster, RidingAction } from './types';
 import { buildSearchGameRootItem, buildSearchHomePageItem, buildSearchPagesGroup } from '../search';
 import S3MonsterIcon from '~/components/s3/monster/S3MonsterIcon.vue';
+import S3GeneIcon from '~/components/s3/gene/S3GeneIcon.vue';
 import { monsters, sortedRidingActions } from './data';
+import { genes } from './genes';
 import { formatMonsterTag, formatRidingActionType } from './presentation';
 
 function getMonsterSuffix(monster: Monster) {
@@ -34,6 +36,20 @@ function getRidingActionSuffix(ridingAction: RidingAction) {
   return result.join(' ');
 }
 
+function getGeneSuffix(gene: Gene) {
+  const result: string[] = [];
+
+  if (gene.active) {
+    result.push('Active');
+  } else {
+    result.push('Passive');
+  }
+
+  result.push('Gene');
+
+  return result.join(' ');
+}
+
 export function buildMhst3SearchMonsterGroup() {
   const monsterItems = monsters.map((monster) => ({
     label: monster.name,
@@ -47,6 +63,22 @@ export function buildMhst3SearchMonsterGroup() {
     slot: 'monsters',
     label: 'Monsters',
     items: monsterItems,
+  };
+}
+
+export function buildMhst3SearchGeneGroup() {
+  const geneItems = genes.map((gene) => ({
+    label: gene.name,
+    suffix: getGeneSuffix(gene),
+    to: `/3/genes/${gene.slug}`,
+    data: gene,
+  }));
+
+  return {
+    id: 'genes',
+    slot: 'genes',
+    label: 'Genes',
+    items: geneItems,
   };
 }
 
@@ -66,6 +98,7 @@ export function buildMhst3Search(appTitle: string) {
         label: 'Riding Actions',
         items: ridingActionItems,
       },
+      buildMhst3SearchGeneGroup(),
       buildSearchPagesGroup([
         buildSearchHomePageItem(appTitle),
         buildSearchGameRootItem('mhst3'),
@@ -85,8 +118,8 @@ export function buildMhst3Search(appTitle: string) {
           icon: 'ph:file-text',
         },
         {
-          label: 'Areas & Habitat Restoration',
-          to: '/3/areas',
+          label: 'Habitat Restoration - Regions & Areas',
+          to: '/3/habitats',
           icon: 'ph:file-text',
         },
         {
@@ -99,5 +132,6 @@ export function buildMhst3Search(appTitle: string) {
       ]),
     ],
     monsterIconComponent: markRaw(S3MonsterIcon),
+    geneIconComponent: markRaw(S3GeneIcon),
   };
 }
