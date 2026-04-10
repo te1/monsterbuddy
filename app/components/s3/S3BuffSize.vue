@@ -5,15 +5,11 @@
 </script>
 
 <template>
-  <UTooltip
+  <AppTooltip
     v-if="size === 'stacking'"
-    text="Starts at size S. Repeated applications increase the size and refresh the duration."
-  >
-    <span
-      class="font-semibold underline decoration-neutral-600 decoration-dotted underline-offset-4 dark:decoration-neutral-400"
-      v-text="size"
-    />
-  </UTooltip>
+    :text="size"
+    tooltip="Starts at size S. Repeated applications increase the size and refresh the duration."
+  />
 
   <span v-else-if="size != null" class="font-semibold" v-text="size" />
 </template>
