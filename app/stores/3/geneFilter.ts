@@ -262,6 +262,20 @@ const useGeneFilter = defineStore('s3/geneFilter', () => {
           caption: 'Wyvernfell',
         };
 
+      case 'pps':
+        return {
+          name: sortKey.value,
+          order: sortOrder.value,
+          caption: 'Pwr Eff.',
+        };
+
+      case 'wps':
+        return {
+          name: sortKey.value,
+          order: sortOrder.value,
+          caption: 'Wyvf Eff.',
+        };
+
       default:
         return null;
     }
