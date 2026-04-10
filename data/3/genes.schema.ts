@@ -93,6 +93,8 @@ export const GeneSchema = z.object({
   stamina: z.number().optional(),
   power: z.number().optional(),
   wyvernfell: z.number().optional(),
+  pps: z.number().optional(), // power per stamina
+  wps: z.number().optional(), // wyvernfell per stamina
   description: z.string(),
   target: SkillTargetSchema.optional(),
   breath: z.boolean().optional(),

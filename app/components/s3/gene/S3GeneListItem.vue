@@ -91,6 +91,18 @@
             />
           </span>
         </div>
+
+        <div v-if="gene.pps != null || gene.wps != null">
+          <span v-if="gene.pps != null">
+            <strong class="font-bold" :class="getStatClass('pps')" v-text="gene.pps" />
+            Pwr / Stam{{ gene.wps ? ', ' : '' }}
+          </span>
+
+          <span v-if="gene.wps != null">
+            <strong class="font-bold" :class="getStatClass('wps')" v-text="gene.wps" />
+            Wyvf / Stam
+          </span>
+        </div>
       </div>
     </div>
   </div>

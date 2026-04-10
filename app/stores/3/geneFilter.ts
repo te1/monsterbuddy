@@ -38,7 +38,16 @@ import {
   formatSkillTarget,
 } from '~/services/3/presentation';
 
-export type SortKey = 'name' | 'element' | 'type' | 'size' | 'stamina' | 'power' | 'wyvernfell';
+export type SortKey =
+  | 'name'
+  | 'element'
+  | 'type'
+  | 'size'
+  | 'stamina'
+  | 'power'
+  | 'wyvernfell'
+  | 'pps'
+  | 'wps';
 
 const sortValueGetters = {
   name: (item: Gene) => {
@@ -53,6 +62,8 @@ const sortValueGetters = {
   stamina: (item: Gene) => item.stamina,
   power: (item: Gene) => item.power,
   wyvernfell: (item: Gene) => item.wyvernfell,
+  pps: (item: Gene) => item.pps,
+  wps: (item: Gene) => item.wps,
 } satisfies Record<SortKey, (item: Gene) => unknown>;
 
 export type Mode = 'description' | 'stats';

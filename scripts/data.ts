@@ -424,6 +424,16 @@ function transformS3Genes(data: unknown) {
 
   for (const gene of genes) {
     gene.slug = makeSlug(gene.name);
+
+    const details = gene as Record<string, unknown>;
+
+    if (typeof details.power === 'number' && typeof details.stamina === 'number') {
+      details.pps = Number((details.power / details.stamina).toFixed(2));
+    }
+
+    if (typeof details.wyvernfell === 'number' && typeof details.stamina === 'number') {
+      details.wps = Number((details.wyvernfell / details.stamina).toFixed(2));
+    }
   }
 }
 

@@ -66,14 +66,29 @@
           <span class="text-right font-semibold" v-text="gene.stamina" />
         </div>
 
+        <div
+          v-if="gene.power != null || gene.wyvernfell != null"
+          class="hidden @sm:block @3xl:hidden"
+        />
+
         <div v-if="gene.power != null" class="flex items-center justify-between gap-2">
           <span>Power</span>
           <span class="text-right font-semibold" v-text="gene.power" />
         </div>
 
+        <div v-if="gene.pps != null" class="flex items-center justify-between gap-2">
+          <span>Power / Stam</span>
+          <span class="text-right font-semibold" v-text="gene.pps" />
+        </div>
+
         <div v-if="gene.wyvernfell != null" class="flex items-center justify-between gap-2">
           <span>Wyvernfell</span>
           <span class="text-right font-semibold" v-text="gene.wyvernfell" />
+        </div>
+
+        <div v-if="gene.wps != null" class="flex items-center justify-between gap-2">
+          <span>Wyvernfell / Stam</span>
+          <span class="text-right font-semibold" v-text="gene.wps" />
         </div>
       </div>
     </div>

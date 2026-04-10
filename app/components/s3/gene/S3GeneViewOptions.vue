@@ -40,6 +40,8 @@
       { value: 'stamina', label: 'Stamina', default: 'asc', mode: 'stats' },
       { value: 'power', label: 'Power', default: 'desc', mode: 'stats' },
       { value: 'wyvernfell', label: 'Wyvernfell', default: 'desc', mode: 'stats' },
+      { value: 'pps', label: 'Pwr Eff.', default: 'desc', mode: 'stats' },
+      { value: 'wps', label: 'Wyvf Eff.', default: 'desc', mode: 'stats' },
     ];
 
     return result;
