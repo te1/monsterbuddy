@@ -27,6 +27,11 @@
 
   const locations = computed(() => take(getMonsterLocations(props.monster), 3));
 
+  const hasLocations = computed(() => locations.value.length > 0);
+  const isMutation = computed(() => {
+    return (props.monster.hatchable && props.monster.tags?.includes('mutation')) ?? false;
+  });
+
   const combatStates = computed(() => {
     return take(Object.entries(props.monster.monster?.states ?? {}), 3);
   });
@@ -76,7 +81,7 @@
             {{ formatLocationType(location.type) }}: {{ location.area ?? location.region }}
           </div>
 
-          <!-- <div v-if="monster.tags.includes('mutation')" v-text="formatMonsterTag('mutation')" /> -->
+          <div v-if="!hasLocations && isMutation">Introduced through Habitat Restoration</div>
         </template>
 
         <div v-if="showRank">
