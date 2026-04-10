@@ -62,7 +62,6 @@
       selectedIcon=" "
       :ui="{ item: 'items-center', itemLabelSuffix: 'hidden' }"
       :fuse="{ fuseOptions: { includeMatches: true }, resultLimit: 10 }"
-      hydrateOnIdle
       @update:open="open = $event"
       @update:modelValue="open = false"
     >
