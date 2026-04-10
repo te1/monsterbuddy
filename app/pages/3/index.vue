@@ -196,6 +196,14 @@
 
             <ProseLi>
               <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1shua27/building_the_perfect_monstie_a_complete_guide"
+                text="Building the perfect Monstie, a complete guide"
+              />
+              by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
                 href="https://www.youtube.com/watch?v=5qy9qVlQzF4&list=PLRcW-_zwHp44_ILzwNX2I0Uv2WQg-sPnU"
                 text="RageGamingVideos"
               />
