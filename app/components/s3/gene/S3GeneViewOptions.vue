@@ -26,33 +26,29 @@
     return props.modalLayout ? 'soft-filter-modal' : 'soft-filter';
   });
 
-  const sortConfig = computed(() => {
-    const result: {
-      value: SortKey;
-      label: string;
-      default?: SortOrder;
-      mode?: Mode;
-    }[] = [
-      { value: 'name', label: 'Name' },
-      { value: 'element', label: 'Element', default: 'asc' },
-      { value: 'type', label: 'Type', default: 'asc' },
-      { value: 'size', label: 'Size', default: 'desc' },
-      { value: 'stamina', label: 'Stamina', default: 'asc', mode: 'stats' },
-      { value: 'power', label: 'Power', default: 'desc', mode: 'stats' },
-      { value: 'wyvernfell', label: 'Wyvernfell', default: 'desc', mode: 'stats' },
-      { value: 'pps', label: 'Pwr Eff.', default: 'desc', mode: 'stats' },
-      { value: 'wps', label: 'Wyvf Eff.', default: 'desc', mode: 'stats' },
-    ];
-
-    return result;
-  });
+  const sortConfig: {
+    value: SortKey;
+    label: string;
+    default?: SortOrder;
+    mode?: Mode;
+  }[] = [
+    { value: 'name', label: 'Name' },
+    { value: 'element', label: 'Element', default: 'asc' },
+    { value: 'type', label: 'Type', default: 'asc' },
+    { value: 'size', label: 'Size', default: 'desc' },
+    { value: 'stamina', label: 'Stamina', default: 'asc', mode: 'stats' },
+    { value: 'power', label: 'Power', default: 'desc', mode: 'stats' },
+    { value: 'wyvernfell', label: 'Wyvernfell', default: 'desc', mode: 'stats' },
+    { value: 'pps', label: 'Pwr Eff.', default: 'desc', mode: 'stats' },
+    { value: 'wps', label: 'Wyvf Eff.', default: 'desc', mode: 'stats' },
+  ];
 
   function setSortKey(value: SortKey) {
     if (value === filter.sortKey) {
       return;
     }
 
-    const config = sortConfig.value.find((entry) => entry.value === value);
+    const config = sortConfig.find((entry) => entry.value === value);
 
     filter.setSort(value, config?.default ?? 'asc');
 
