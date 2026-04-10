@@ -259,3 +259,9 @@ export function getAreaBySlug(regionSlug: string, areaSlug: string): RegionArea 
 
   return undefined;
 }
+
+export function getAreasByElement(element: ElementType): { region: Region; area: RegionArea }[] {
+  return regions.flatMap((region) =>
+    region.areas.filter((area) => area.element === element).map((area) => ({ region, area }))
+  );
+}

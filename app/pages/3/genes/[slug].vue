@@ -90,6 +90,8 @@
         <S3GeneInfoCard :gene="gene" class="box px-4 py-2" />
 
         <S3GeneRelatedCard :gene="gene" class="box overflow-hidden" />
+
+        <S3GeneEggSkillAreasCard :gene="gene" class="box px-4 py-2" />
       </div>
 
       <S3GeneSourcesCard :gene="gene" class="box flex-1 overflow-hidden" />
