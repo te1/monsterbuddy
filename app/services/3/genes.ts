@@ -271,12 +271,42 @@ export function getPassiveGeneSources(gene: Gene): Monster[] {
   );
 }
 
+let geneMonstieCounts: Map<string, number> | undefined;
+
+function buildGeneMonstieCoounts() {
+  geneMonstieCounts = new Map<string, number>();
+
+  for (const monster of monsters) {
+    const genes = new Set<string>();
+
+    for (const gene of getMonstieInnateGenes(monster)) {
+      genes.add(gene.name);
+    }
+
+    const sRankGene = getMonstieSRankGene(monster);
+
+    if (sRankGene != null) {
+      genes.add(sRankGene.name);
+    }
+
+    for (const eggSkill of getMonstieEggSkills(monster)) {
+      genes.add(eggSkill.gene.name);
+    }
+
+    for (const gene of getMonstiePassiveGenes(monster)) {
+      genes.add(gene.name);
+    }
+
+    for (const gene of genes) {
+      geneMonstieCounts.set(gene, (geneMonstieCounts.get(gene) ?? 0) + 1);
+    }
+  }
+}
+
 export function getGeneMonstieCount(gene: Gene): number {
-  return monsters.filter(
-    (monster) =>
-      getMonstieInnateGenes(monster).some((g) => g.name === gene.name) ||
-      getMonstieSRankGene(monster)?.name === gene.name ||
-      getMonstieEggSkills(monster).some((g) => g.gene.name === gene.name) ||
-      getMonstiePassiveGenes(monster).some((g) => g.name === gene.name)
-  ).length;
+  if (geneMonstieCounts == null) {
+    buildGeneMonstieCoounts();
+  }
+
+  return geneMonstieCounts?.get(gene.name) ?? 0;
 }
