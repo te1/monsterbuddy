@@ -9,7 +9,7 @@
   const wantsGenes = computed(() => {
     const path = route.path;
 
-    return path.match(/^\/3\/monsters\/[a-zA-Z0-9-]+\/genes/) != null;
+    return /^\/3\/monsters\/[^/]+\/genes\/?$/.test(path);
   });
 
   const wantsMonsties = computed(() => {
