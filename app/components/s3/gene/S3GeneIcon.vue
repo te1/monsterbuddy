@@ -107,11 +107,12 @@
 
 <template>
   <DefineIconTemplate>
-    <div class="relative" :class="size" v-bind="$attrs">
+    <div class="relative" :class="size" role="img" :aria-label="gene.name" v-bind="$attrs">
       <img
         v-if="sizeSrc"
         :src="sizeSrc"
-        :alt="gene.size"
+        alt=""
+        aria-hidden="true"
         class="absolute inset-0"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
@@ -119,7 +120,8 @@
       <img
         v-if="elementSrc"
         :src="elementSrc"
-        :alt="gene.element"
+        alt=""
+        aria-hidden="true"
         class="absolute inset-0"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
@@ -127,7 +129,8 @@
       <img
         v-if="typeSrc"
         :src="typeSrc"
-        :alt="gene.type"
+        alt=""
+        aria-hidden="true"
         class="absolute inset-1.75 drop-shadow-sm drop-shadow-black"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
@@ -135,7 +138,8 @@
       <img
         v-if="gene.size === '+'"
         :src="rankS"
-        alt="Rank S"
+        alt=""
+        aria-hidden="true"
         class="absolute inset-0"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
