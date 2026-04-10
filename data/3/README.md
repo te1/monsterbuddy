@@ -39,5 +39,5 @@
   - Boltcall's Power Charge lasts 2 turns
   - Bishaten Embers extends debuff duration by 2 turns
 
-- "stacking" buffs start at S
+- "stacking" buffs / debuffs start at S
   - Repeated applications increase the size (S -> M, M -> L) and refresh the duration
