@@ -29,14 +29,14 @@ export const catavanStands = getCatavanStandsWithDetails();
 export const catavanStandsBySlug = keyBy(catavanStands, 'slug');
 export const coopQuestsBySlug = keyBy(coopQuests, 'slug');
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
-export const allElements: ElementType[] = [
+export const allElements: readonly ElementType[] = [
   'none',
   'fire',
   'water',
   'thunder',
   'ice',
   'dragon',
-] as const;
+];
 
 export function getGenera(monsterList: Monster[] = monsters): GenusType[] {
   return uniq(monsterList.map((monster) => monster.genus)).sort();

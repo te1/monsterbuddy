@@ -22,7 +22,7 @@ const geneSources = geneSources_ as unknown as GeneSources;
 export { genes, geneSources };
 export const genesByName = keyBy(genes, 'name');
 export const genesBySlug = keyBy(genes, 'slug');
-export const allElements: GeneElement[] = [
+export const allElements: readonly GeneElement[] = [
   'none',
   'fire',
   'water',
@@ -30,17 +30,17 @@ export const allElements: GeneElement[] = [
   'ice',
   'dragon',
   'all',
-] as const;
-export const allTypes: GeneType[] = [null, 'power', 'speed', 'technical', 'all'] as const;
-export const allSizes: GeneSize[] = ['none', 'S', 'M', 'L', 'XL', '-', '+'] as const;
-export const allTargets: SkillTarget[] = [
+];
+export const allTypes: readonly GeneType[] = [null, 'power', 'speed', 'technical', 'all'];
+export const allSizes: readonly GeneSize[] = ['none', 'S', 'M', 'L', 'XL', '-', '+'];
+export const allTargets: readonly SkillTarget[] = [
   'singleEnemy',
   'allEnemies',
   'randomEnemy',
   'allAllies',
   'user',
-] as const;
-export const allAilments: SkillAilmentType[] = [
+];
+export const allAilments: readonly SkillAilmentType[] = [
   'poison',
   'noxiousPoison',
   'severePoison',
@@ -50,8 +50,8 @@ export const allAilments: SkillAilmentType[] = [
   'blastblight',
   'bleeding',
   'darkness',
-] as const;
-export const allBuffs: SkillBuffType[] = [
+];
+export const allBuffs: readonly SkillBuffType[] = [
   'attackUp',
   'fireAttackUp',
   'waterAttackUp',
@@ -67,8 +67,8 @@ export const allBuffs: SkillBuffType[] = [
   'staminaRegenUp',
   'wyvernfellUp',
   'regenerate',
-] as const;
-export const allDebuffs: SkillDebuffType[] = [
+];
+export const allDebuffs: readonly SkillDebuffType[] = [
   'defenseDown',
   'thunderDefenseDown',
   'dragonDefenseDown',
@@ -77,8 +77,8 @@ export const allDebuffs: SkillDebuffType[] = [
   'accuracyDown',
   'speedDown',
   'evasionDown',
-] as const;
-export const allEffects: SkillEffectType[] = [
+];
+export const allEffects: readonly SkillEffectType[] = [
   'priority',
   'crit',
   'spam',
@@ -94,7 +94,7 @@ export const allEffects: SkillEffectType[] = [
   'procBlastblight',
   'procBurn',
   'procParalysis',
-] as const;
+];
 
 export function getGenesByName(name: string, geneList: Gene[] = genes): Gene[] {
   const query = name.toLowerCase();

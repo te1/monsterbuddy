@@ -14,14 +14,14 @@ export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
 export const regionsBySlug = keyBy(regions, 'slug');
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
-export const allElements: ElementType[] = [
+export const allElements: readonly ElementType[] = [
   'none',
   'fire',
   'water',
   'thunder',
   'ice',
   'dragon',
-] as const;
+];
 
 export function getGenera(monsterList: Monster[] = monsters): GenusType[] {
   return uniq(monsterList.map((monster) => monster.genus)).sort();
