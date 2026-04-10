@@ -300,7 +300,7 @@ export function formatGeneSize(size: GeneSize): string {
 export function formatSkillTarget(target: SkillTarget): string {
   switch (target) {
     case 'allAllies':
-      return 'All Allies';
+      return 'Party';
 
     case 'allEnemies':
       return 'All Enemies';
@@ -312,7 +312,7 @@ export function formatSkillTarget(target: SkillTarget): string {
       return 'Single Enemy';
 
     case 'user':
-      return 'User';
+      return 'Self';
   }
 }
 

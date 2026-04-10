@@ -125,13 +125,21 @@
     <div v-if="gene.buff && gene.buff.length > 0">
       <div class="text-lg font-semibold">Buffs</div>
 
-      <div v-text="gene.buff?.map(formatSkillBuff).join(', ')" />
+      <div v-for="buff in gene.buff" :key="buff.type" class="flex gap-1">
+        <span v-text="buff.type" />
+        <span v-if="buff.size != null" class="font-semibold">({{ buff.size }})</span>
+        <span class="text-muted">on {{ formatSkillTarget(buff.target) }}</span>
+      </div>
     </div>
 
     <div v-if="gene.debuff && gene.debuff.length > 0">
       <div class="text-lg font-semibold">Debuffs</div>
 
-      <div v-text="gene.debuff?.map(formatSkillDebuff).join(', ')" />
+      <div v-for="debuff in gene.debuff" :key="debuff.type" class="flex gap-1">
+        <span v-text="debuff.type" />
+        <span v-if="debuff.size != null" class="font-semibold">({{ debuff.size }})</span>
+        <span class="text-muted">on {{ formatSkillTarget(debuff.target) }}</span>
+      </div>
     </div>
 
     <div v-if="effects.length > 0">
