@@ -4,8 +4,6 @@
     formatGeneElement,
     formatGeneType,
     formatSkillAilment,
-    formatSkillBuff,
-    formatSkillDebuff,
     formatSkillEffect,
     formatSkillTarget,
   } from '~/services/3/presentation';
@@ -33,11 +31,14 @@
   });
 
   const effects = computed(() => {
-    return (
-      props.gene.effect?.filter(
-        (effect) => !['procBlastblight', 'procBurn', 'procParalysis'].includes(effect)
-      ) ?? []
-    );
+    const ignored = [
+      //
+      'procBlastblight',
+      'procBurn',
+      'procParalysis',
+    ];
+
+    return props.gene.effect?.filter((effect) => !ignored.includes(effect)) ?? [];
   });
 </script>
 
@@ -125,13 +126,21 @@
     <div v-if="gene.buff && gene.buff.length > 0">
       <div class="text-lg font-semibold">Buffs</div>
 
-      <div v-text="gene.buff?.map(formatSkillBuff).join(', ')" />
+      <div v-for="buff in gene.buff" :key="buff.type" class="flex gap-1">
+        <span v-text="buff.type" />
+        <S3BuffSize :size="buff.size" />
+        <span class="text-muted">on {{ formatSkillTarget(buff.target) }}</span>
+      </div>
     </div>
 
     <div v-if="gene.debuff && gene.debuff.length > 0">
       <div class="text-lg font-semibold">Debuffs</div>
 
-      <div v-text="gene.debuff?.map(formatSkillDebuff).join(', ')" />
+      <div v-for="debuff in gene.debuff" :key="debuff.type" class="flex gap-1">
+        <span v-text="debuff.type" />
+        <S3BuffSize :size="debuff.size" />
+        <span class="text-muted">on {{ formatSkillTarget(debuff.target) }}</span>
+      </div>
     </div>
 
     <div v-if="effects.length > 0">

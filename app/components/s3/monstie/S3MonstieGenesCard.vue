@@ -4,6 +4,7 @@
     getMonstieEggSkills,
     getMonstieInnateGenes,
     getMonstiePassiveGenes,
+    getMonstieSpecialGenes,
     getMonstieSRankGene,
   } from '~/services/3/genes';
 
@@ -11,6 +12,7 @@
 
   const innateGenes = computed(() => getMonstieInnateGenes(props.monster));
   const sRankGene = computed(() => getMonstieSRankGene(props.monster));
+  const specialGenes = computed(() => getMonstieSpecialGenes(props.monster));
   const eggSkills = computed(() => getMonstieEggSkills(props.monster));
   const passiveGenes = computed(() => getMonstiePassiveGenes(props.monster));
 </script>
@@ -42,6 +44,22 @@
         <NuxtLink :to="`/3/genes/${sRankGene.slug}`" prefetchOn="interaction">
           <S3GeneListItem :gene="sRankGene" showAll class="px-2.5" />
         </NuxtLink>
+      </div>
+    </div>
+
+    <div v-if="specialGenes.length > 0">
+      <h3 class="px-4 pt-2 text-lg font-semibold">Unlockable Genes</h3>
+
+      <div class="px-4 pb-1">These genes have special requirements.</div>
+
+      <div v-for="(gene, index) in specialGenes" :key="gene.slug">
+        <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
+
+        <div class="box-link">
+          <NuxtLink :to="`/3/genes/${gene.slug}`" prefetchOn="interaction">
+            <S3GeneListItem :gene="gene" showAll class="px-2.5" />
+          </NuxtLink>
+        </div>
       </div>
     </div>
 

@@ -33,35 +33,65 @@ export const SkillAilmentTypeSchema = z.enum([
 export type SkillAilmentType = z.infer<typeof SkillAilmentTypeSchema>;
 
 export const SkillBuffTypeSchema = z.enum([
-  'attackUp',
-  'criticalUp',
-  'defenseUp',
-  'dodgeUp',
-  'dragonAttackUp',
-  'fireAttackUp',
-  'fireDefenseUp',
-  'iceAttackUp',
-  'inflictRateUp',
-  'speedUp',
-  'staminaRegenUp',
-  'thunderAttackUp',
-  'waterAttackUp',
-  'wyvernfellUp',
-  'regenerate',
+  'Attack Up',
+  'Non-Elemental Attack Up',
+  'Fire Attack Up',
+  'Water Attack Up',
+  'Thunder Attack Up',
+  'Ice Attack Up',
+  'Dragon Attack Up',
+  'Power Charge',
+  'Speed Up',
+  'Critical Up',
+  'Wyvernfell Up',
+  'Ailment Inflict Rate Up',
+  'Defense Up',
+  'Fire Defense Up',
+  'Dodge Up',
+  'Guard',
+  'Regenerate',
+  'Stamina Regen Up',
+  'Burn Effect',
+  'Blast Effect',
+  'Paralysis Effect',
 ]);
 export type SkillBuffType = z.infer<typeof SkillBuffTypeSchema>;
 
+export const SkillBuffSizeSchema = z.enum([
+  //
+  'S',
+  'M',
+  'L',
+  'stacking',
+]);
+export type SkillBuffSize = z.infer<typeof SkillBuffSizeSchema>;
+
+export const SkillBuffSchema = z.object({
+  type: SkillBuffTypeSchema,
+  size: SkillBuffSizeSchema.optional(),
+  target: SkillTargetSchema,
+});
+export type SkillBuff = z.infer<typeof SkillBuffSchema>;
+
 export const SkillDebuffTypeSchema = z.enum([
-  'accuracyDown',
-  'attackDown',
-  'defenseDown',
-  'dragonDefenseDown',
-  'evasionDown',
-  'speedDown',
-  'thunderDefenseDown',
-  'wyvernsoulDefenseDown',
+  'Defense Down',
+  'Thunder Defense Down',
+  'Dragon Defense Down',
+  'Wyvernsoul Defense Down',
+  'Dodge Down',
+  'Evasion Down',
+  'Attack Down',
+  'Accuracy Down',
+  'Speed Down',
 ]);
 export type SkillDebuffType = z.infer<typeof SkillDebuffTypeSchema>;
+
+export const SkillDebuffSchema = z.object({
+  type: SkillDebuffTypeSchema,
+  size: SkillBuffSizeSchema.optional(),
+  target: SkillTargetSchema,
+});
+export type SkillDebuff = z.infer<typeof SkillDebuffSchema>;
 
 export const SkillEffectTypeSchema = z.enum([
   '1HitKo',
@@ -100,8 +130,8 @@ export const GeneSchema = z.object({
   breath: z.boolean().optional(),
   eggSkill: z.boolean().optional(),
   ailment: z.array(SkillAilmentTypeSchema).optional(),
-  buff: z.array(SkillBuffTypeSchema).optional(),
-  debuff: z.array(SkillDebuffTypeSchema).optional(),
+  buff: z.array(SkillBuffSchema).optional(),
+  debuff: z.array(SkillDebuffSchema).optional(),
   effect: z.array(SkillEffectTypeSchema).optional(),
   sizes: z.array(z.string()).optional(),
 });

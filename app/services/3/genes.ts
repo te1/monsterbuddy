@@ -52,31 +52,38 @@ export const allAilments: readonly SkillAilmentType[] = [
   'darkness',
 ];
 export const allBuffs: readonly SkillBuffType[] = [
-  'attackUp',
-  'fireAttackUp',
-  'waterAttackUp',
-  'thunderAttackUp',
-  'iceAttackUp',
-  'dragonAttackUp',
-  'criticalUp',
-  'speedUp',
-  'defenseUp',
-  'fireDefenseUp',
-  'dodgeUp',
-  'inflictRateUp',
-  'staminaRegenUp',
-  'wyvernfellUp',
-  'regenerate',
+  'Attack Up',
+  'Non-Elemental Attack Up',
+  'Fire Attack Up',
+  'Water Attack Up',
+  'Thunder Attack Up',
+  'Ice Attack Up',
+  'Dragon Attack Up',
+  'Power Charge',
+  'Speed Up',
+  'Critical Up',
+  'Wyvernfell Up',
+  'Ailment Inflict Rate Up',
+  'Defense Up',
+  'Fire Defense Up',
+  'Dodge Up',
+  'Guard',
+  'Regenerate',
+  'Stamina Regen Up',
+  'Burn Effect',
+  'Blast Effect',
+  'Paralysis Effect',
 ];
 export const allDebuffs: readonly SkillDebuffType[] = [
-  'defenseDown',
-  'thunderDefenseDown',
-  'dragonDefenseDown',
-  'wyvernsoulDefenseDown',
-  'attackDown',
-  'accuracyDown',
-  'speedDown',
-  'evasionDown',
+  'Defense Down',
+  'Thunder Defense Down',
+  'Dragon Defense Down',
+  'Wyvernsoul Defense Down',
+  'Dodge Down',
+  'Evasion Down',
+  'Attack Down',
+  'Accuracy Down',
+  'Speed Down',
 ];
 export const allEffects: readonly SkillEffectType[] = [
   'priority',
@@ -188,11 +195,11 @@ export function getGenesByAilment(ailment: SkillAilmentType, geneList: Gene[] = 
 }
 
 export function getGenesByBuff(buff: SkillBuffType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.buff?.includes(buff) ?? false);
+  return geneList.filter((gene) => gene.buff?.some((entry) => entry.type === buff) ?? false);
 }
 
 export function getGenesByDebuff(debuff: SkillDebuffType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.debuff?.includes(debuff) ?? false);
+  return geneList.filter((gene) => gene.debuff?.some((entry) => entry.type === debuff) ?? false);
 }
 
 export function getGenesByEffect(effect: SkillEffectType, geneList: Gene[] = genes): Gene[] {
@@ -209,6 +216,14 @@ export function getMonstieInnateGenes(monster: Monster): Gene[] {
 
 export function getMonstieSRankGene(monster: Monster): Gene | undefined {
   return genesByName.get(monster.monstie?.genes?.sRank ?? '');
+}
+
+export function getMonstieSpecialGenes(monster: Monster): Gene[] {
+  return (monster.monstie?.genes?.special ?? [])
+    .map((gene) => {
+      return genesByName.get(gene);
+    })
+    .filter((gene): gene is Gene => gene != null);
 }
 
 export function getMonstieEggSkills(monster: Monster): { gene: Gene; element: ElementType }[] {
@@ -246,6 +261,7 @@ export function getMonstieGeneCount(monster: Monster): number {
   return (
     getMonstieInnateGenes(monster).length +
     (getMonstieSRankGene(monster) ? 1 : 0) +
+    getMonstieSpecialGenes(monster).length +
     getMonstiePassiveGenes(monster).length +
     getMonstieEggSkills(monster).length
   );
@@ -257,6 +273,10 @@ export function getInnateGeneSources(gene: Gene): Monster[] {
 
 export function getSRankGeneSources(gene: Gene): Monster[] {
   return monsters.filter((monster) => monster.monstie?.genes?.sRank === gene.name);
+}
+
+export function getSpecialGeneSources(gene: Gene): Monster[] {
+  return monsters.filter((monster) => monster.monstie?.genes?.special?.includes(gene.name));
 }
 
 export function getEggSkillSources(gene: Gene): Monster[] {
@@ -287,6 +307,10 @@ function buildGeneMonstieCounts() {
 
     if (sRankGene != null) {
       genes.add(sRankGene.name);
+    }
+
+    for (const gene of getMonstieSpecialGenes(monster)) {
+      genes.add(gene.name);
     }
 
     for (const eggSkill of getMonstieEggSkills(monster)) {

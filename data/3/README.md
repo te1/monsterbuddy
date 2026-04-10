@@ -7,6 +7,7 @@
 - [Data Mining](https://docs.google.com/spreadsheets/d/1JvLmNY7l2jOKCk7QbUYmeK87xvzQzXVUJIgFX9bYaqk)
 - [Monstie Stats](https://www.reddit.com/r/MonsterHunterStories/comments/1rzobtn/i_made_a_table_documenting_every_single_monsties) by [norahike](https://www.reddit.com/user/norahike)
 - [Monstie List, Gene List and Monstie Builder Sheet](https://www.reddit.com/r/MonsterHunterStories/comments/1s7lq5l/monster_hunter_stories_3_monstie_list_gene_list) by [AzuClone](https://www.reddit.com/user/AzuClone)
+- [Guide to buff/debuff strengths of various moves](https://www.reddit.com/r/MonsterHunterStories/comments/1s753dy/wip_guide_to_buffdebuff_strengths_of_various_moves) by [DarkestSamus](https://www.reddit.com/user/DarkestSamus)
 - [Egg Skills, Egg Powers, Monsties](https://www.reddit.com/r/MonsterHunterStories/comments/1rw0tkb/a_comprehensive_list_for_egg_skills_and_egg) by [Fit-Variation-1875](https://www.reddit.com/user/Fit-Variation-1875)
 
 ## Notes
@@ -32,3 +33,11 @@
   - +1 -> 30%
   - -1 -> 70%
   - -2 -> 100%
+
+- Buffs / debuffs usually last 3 turns
+  - Guard and Power Charge last 1 turn
+  - Boltcall's Power Charge lasts 2 turns
+  - Bishaten Embers extends debuff duration by 2 turns
+
+- "stacking" buffs / debuffs start at S
+  - Repeated applications increase the size (S -> M, M -> L) and refresh the duration

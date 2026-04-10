@@ -53,7 +53,7 @@ export function getMonstieGenesSeo(monster: Monster, geneCount: number) {
     description += ' (Mutation)';
   }
 
-  description += ` which can carry ${geneCount} different genes`;
+  description += ` that can carry ${geneCount} different genes`;
 
   return {
     title,

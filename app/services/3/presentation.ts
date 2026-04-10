@@ -300,7 +300,7 @@ export function formatGeneSize(size: GeneSize): string {
 export function formatSkillTarget(target: SkillTarget): string {
   switch (target) {
     case 'allAllies':
-      return 'All Allies';
+      return 'Party';
 
     case 'allEnemies':
       return 'All Enemies';
@@ -312,7 +312,7 @@ export function formatSkillTarget(target: SkillTarget): string {
       return 'Single Enemy';
 
     case 'user':
-      return 'User';
+      return 'Self';
   }
 }
 
@@ -331,78 +331,42 @@ export function formatSkillAilment(ailment: SkillAilmentType): string {
 
 export function formatSkillBuff(buff: SkillBuffType): string {
   switch (buff) {
-    case 'attackUp':
-      return 'Attack Up';
-
-    case 'criticalUp':
-      return 'Critical Up';
-
-    case 'defenseUp':
-      return 'Defense Up';
-
-    case 'dodgeUp':
-      return 'Dodge Up';
-
-    case 'dragonAttackUp':
-      return 'Dragon Atk Up';
-
-    case 'fireAttackUp':
-      return 'Fire Atk Up';
-
-    case 'fireDefenseUp':
-      return 'Fire Def Up';
-
-    case 'iceAttackUp':
-      return 'Ice Atk Up';
-
-    case 'inflictRateUp':
+    case 'Ailment Inflict Rate Up':
       return 'Inflict Rate Up';
 
-    case 'speedUp':
-      return 'Speed Up';
+    case 'Dragon Attack Up':
+      return 'Dragon Atk Up';
 
-    case 'staminaRegenUp':
-      return 'Stamina Regen Up';
+    case 'Fire Attack Up':
+      return 'Fire Atk Up';
 
-    case 'thunderAttackUp':
+    case 'Ice Attack Up':
+      return 'Ice Atk Up';
+
+    case 'Thunder Attack Up':
       return 'Thunder Atk Up';
 
-    case 'waterAttackUp':
+    case 'Water Attack Up':
       return 'Water Atk Up';
 
-    case 'wyvernfellUp':
-      return 'Wyvernfell Up';
-
-    case 'regenerate':
-      return 'Regenerate';
+    default:
+      return buff;
   }
 }
 
 export function formatSkillDebuff(debuff: SkillDebuffType): string {
   switch (debuff) {
-    case 'accuracyDown':
-      return 'Accuracy Down';
-
-    case 'attackDown':
-      return 'Attack Down';
-
-    case 'defenseDown':
-      return 'Defense Down';
-
-    case 'dragonDefenseDown':
+    case 'Dragon Defense Down':
       return 'Dragon Def Down';
 
-    case 'evasionDown':
-      return 'Evasion Down';
-
-    case 'speedDown':
-      return 'Speed Down';
-
-    case 'thunderDefenseDown':
+    case 'Thunder Defense Down':
       return 'Thunder Def Down';
 
-    case 'wyvernsoulDefenseDown':
+    case 'Wyvernsoul Defense Down':
       return 'Wyvernsoul Def Down';
+
+    default:
+      return debuff;
   }
 }
 
