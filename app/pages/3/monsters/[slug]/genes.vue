@@ -70,7 +70,7 @@
       <S3MonsterInfoCard
         :monster="monster"
         linkName
-        class="box px-4 py-2 md:hidden lg:block xl:hidden"
+        class="box px-4 py-2 md:hidden lg:flex xl:hidden"
       />
 
       <S3MonstieGenesCard :monster="monster" class="box flex-1 overflow-hidden" />
@@ -79,7 +79,7 @@
         <S3MonsterInfoCard
           :monster="monster"
           linkName
-          class="box hidden px-4 py-2 md:block lg:hidden xl:block"
+          class="box hidden px-4 py-2 md:flex lg:hidden xl:flex"
         />
 
         <S3MonstieInfoCard :monster="monster" essentialsOnly class="box px-4 py-2" />
