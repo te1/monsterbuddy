@@ -31,11 +31,14 @@
   });
 
   const effects = computed(() => {
-    return (
-      props.gene.effect?.filter(
-        (effect) => !['procBlastblight', 'procBurn', 'procParalysis'].includes(effect)
-      ) ?? []
-    );
+    const ignored = [
+      //
+      'procBlastblight',
+      'procBurn',
+      'procParalysis',
+    ];
+
+    return props.gene.effect?.filter((effect) => !ignored.includes(effect)) ?? [];
   });
 </script>
 
