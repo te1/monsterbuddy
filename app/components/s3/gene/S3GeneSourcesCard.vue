@@ -75,7 +75,12 @@
 
         <div class="box-link">
           <NuxtLink :to="`/3/monsters/${monster.slug}/genes`" prefetchOn="interaction">
-            <S3MonstieListItem :monster="monster" mode="location" class="px-2.5" />
+            <S3MonstieListItem
+              :monster="monster"
+              mode="location"
+              :areaElement="gene.element"
+              class="px-2.5"
+            />
           </NuxtLink>
         </div>
       </div>

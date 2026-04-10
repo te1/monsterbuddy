@@ -1,15 +1,17 @@
 <script lang="ts" setup>
-  import type { Monster } from '~/services/3/types';
+  import type { GeneElement, Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
 
   withDefaults(
     defineProps<{
       monster: Monster;
       mode?: Mode;
+      areaElement?: GeneElement;
       eager?: boolean;
     }>(),
     {
       mode: 'location',
+      areaElement: undefined,
       eager: false,
     }
   );
@@ -33,6 +35,7 @@
       class="mx-3 mt-3 w-full self-start text-sm"
       :monster="monster"
       :mode="mode"
+      :areaElement="areaElement"
     />
 
     <S3MonsterImage

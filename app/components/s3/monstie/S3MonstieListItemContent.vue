@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { Monster } from '~/services/3/types';
+  import type { GeneElement, Monster } from '~/services/3/types';
   import type { Mode } from '~/stores/3/baseMonsterFilter';
   import { formatLocationType, formatMonsterInfoShort } from '~/services/3/presentation';
   import useMonstieFilter from '~/stores/3/monstieFilter';
@@ -10,9 +10,11 @@
     defineProps<{
       monster: Monster;
       mode?: Mode;
+      areaElement?: GeneElement;
     }>(),
     {
       mode: 'location',
+      areaElement: undefined,
     }
   );
 
@@ -53,6 +55,7 @@
         <div
           v-for="location in locations"
           :key="`${location.type}_${location.region}_${location.area}`"
+          :class="{ 'text-dimmed': areaElement != null && location.areaElement !== areaElement }"
         >
           {{ formatLocationType(location.type) }}: {{ location.area ?? location.region }}
         </div>

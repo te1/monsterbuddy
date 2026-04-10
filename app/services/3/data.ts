@@ -121,6 +121,7 @@ export type MonsterLocation = {
   regionSlug: string;
   area?: string;
   areaSlug?: string;
+  areaElement?: ElementType;
 };
 
 export function getMonsterLocations(monster: Monster): MonsterLocation[] {
@@ -148,6 +149,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -160,6 +162,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -172,6 +175,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -184,6 +188,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
 
@@ -196,6 +201,7 @@ export function getMonsterLocations(monster: Monster): MonsterLocation[] {
           regionSlug: region.slug,
           area: area.name,
           areaSlug: area.slug,
+          areaElement: area.element,
         });
       }
     }
