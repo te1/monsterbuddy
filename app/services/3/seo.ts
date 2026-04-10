@@ -126,7 +126,7 @@ export function getRidingActionSeo(ridingAction: RidingAction, monsterCount: num
   };
 }
 
-export function getGeneSeo(gene: Gene) {
+export function getGeneSeo(gene: Gene, monsterCount: number) {
   const title = `${gene.name} In ${gameTypeToFullLabel('mhst3')}`;
 
   let description = `${gene.name} is a ${formatGeneElement(gene.element).toLowerCase()}`;
@@ -142,6 +142,12 @@ export function getGeneSeo(gene: Gene) {
   }
 
   description += ' gene';
+
+  if (monsterCount === 1) {
+    description += ` that can be found on 1 monstie`;
+  } else {
+    description += ` that can be found on ${monsterCount} monsties`;
+  }
 
   return {
     title,

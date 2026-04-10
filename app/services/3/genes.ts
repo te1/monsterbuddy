@@ -229,7 +229,7 @@ export function getMonstiePassiveGenes(monster: Monster): Gene[] {
 }
 
 export function getMonstieGeneCount(monster: Monster): number {
-  // TODO egg skill genes
+  // TODO egg skills
 
   return (
     getMonstieInnateGenes(monster).length +
@@ -250,4 +250,15 @@ export function getPassiveGeneSources(gene: Gene): Monster[] {
   return monsters.filter((monster) =>
     getMonstiePassiveGenes(monster).some((g) => g.name === gene.name)
   );
+}
+
+export function getGeneMonstieCount(gene: Gene): number {
+  // TODO egg skills
+
+  return monsters.filter(
+    (monster) =>
+      getMonstieInnateGenes(monster).some((g) => g.name === gene.name) ||
+      getMonstieSRankGene(monster)?.name === gene.name ||
+      getMonstiePassiveGenes(monster).some((g) => g.name === gene.name)
+  ).length;
 }

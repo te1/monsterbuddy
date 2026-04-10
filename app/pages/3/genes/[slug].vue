@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import S3GeneDetailsSidebar from '~/components/s3/gene/S3GeneDetailsSidebar.vue';
-  import { genesBySlug } from '~/services/3/genes';
+  import { genesBySlug, getGeneMonstieCount } from '~/services/3/genes';
   import { formatGeneElement, formatGeneType } from '~/services/3/presentation';
   import { getGeneSeo } from '~/services/3/seo';
   import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
@@ -28,15 +28,18 @@
     throw createError({ status: 404, statusText: 'Page Not Found' });
   }
 
-  const monsterCount = 99; // TODO
+  const monsterCount = computed(() => getGeneMonstieCount(gene));
 
-  useSeoMeta(getGeneSeo(gene));
+  useSeoMeta(getGeneSeo(gene, monsterCount.value));
   const headline = gameTypeToFullName('mhst3');
 
   const descriptionParts = computed(() => {
     const part1 = 'This ';
     const part2 = 'gene';
-    const part3 = ` can be found on ${monsterCount} monsties`;
+    const part3 =
+      monsterCount.value === 1
+        ? ` can be found on 1 monstie`
+        : ` can be found on ${monsterCount.value} monsties`;
 
     return [part1, part2, part3];
   });
