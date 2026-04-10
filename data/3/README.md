@@ -33,3 +33,11 @@
   - +1 -> 30%
   - -1 -> 70%
   - -2 -> 100%
+
+- Buffs / debuffs usually last 3 turns
+  - Guard and Power Charge last 1 turn
+  - Boltcall's Power Charge lasts 2 turns
+  - Bishaten Embers extends debuff duration by 2 turns
+
+- "stacking" buffs start at S
+  - Repeated applications increase the size (S -> M, M -> L) and refresh the duration

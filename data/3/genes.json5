@@ -490,7 +490,7 @@
     wyvernfell: 20,
     description: 'Deals dragon damage to one enemy and inflicts Wyvernsoul Defense Down.',
     target: 'singleEnemy',
-    debuff: ['wyvernsoulDefenseDown'],
+    debuff: [{ type: 'Wyvernsoul Defense Down', size: 'S', target: 'singleEnemy' }],
     sizes: ['Berserk Slide+'],
   },
 
@@ -506,7 +506,7 @@
     wyvernfell: 20,
     description: 'Deals dragon damage to one enemy and inflicts Wyvernsoul Defense Down.',
     target: 'singleEnemy',
-    debuff: ['wyvernsoulDefenseDown'],
+    debuff: [{ type: 'Wyvernsoul Defense Down', size: 'S', target: 'singleEnemy' }],
     sizes: ['Berserk Slide'],
   },
 
@@ -541,6 +541,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn. Extends the duration of inflicted debuffs.',
     target: 'singleEnemy',
     breath: true,
+    // probably debuff extension by 2 turns
     ailment: ['burn'],
   },
 
@@ -953,7 +954,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'M', target: 'singleEnemy' }],
     sizes: ['Chilling Charge+'],
   },
 
@@ -969,7 +970,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'M', target: 'singleEnemy' }],
     sizes: ['Chilling Charge'],
   },
 
@@ -1624,7 +1625,7 @@
     wyvernfell: 30,
     description: 'Deals dragon damage to one enemy and inflicts Wyvernsoul Defense Down.',
     target: 'singleEnemy',
-    debuff: ['wyvernsoulDefenseDown'],
+    debuff: [{ type: 'Wyvernsoul Defense Down', size: 'S', target: 'singleEnemy' }],
   },
 
   {
@@ -1679,7 +1680,7 @@
     description: 'Deals dragon damage to all enemies and inflicts Wyvernsoul Defense Down.',
     target: 'allEnemies',
     breath: true,
-    debuff: ['wyvernsoulDefenseDown'],
+    debuff: [{ type: 'Wyvernsoul Defense Down', size: 'S', target: 'allEnemies' }],
   },
 
   {
@@ -1996,7 +1997,10 @@
     description: 'Inflicts Attack Down and Defense Down on all enemies. Each use increases the effect.',
     target: 'allEnemies',
     eggSkill: true,
-    debuff: ['attackDown', 'defenseDown'],
+    debuff: [
+      { type: 'Attack Down', size: 'stacking', target: 'allEnemies' },
+      { type: 'Defense Down', size: 'stacking', target: 'allEnemies' },
+    ],
   },
 
   {
@@ -2051,7 +2055,7 @@
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
     eggSkill: true,
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'L', target: 'singleEnemy' }],
   },
 
   {
@@ -2079,7 +2083,7 @@
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
     eggSkill: true,
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'S', target: 'singleEnemy' }],
   },
 
   {
@@ -2227,7 +2231,7 @@
     description: 'Deals water damage to one enemy and inflicts Wyvernsoul Defense Down.',
     target: 'singleEnemy',
     eggSkill: true,
-    debuff: ['wyvernsoulDefenseDown'],
+    debuff: [{ type: 'Wyvernsoul Defense Down', size: 'S', target: 'singleEnemy' }],
   },
 
   {
@@ -2396,7 +2400,7 @@
     wyvernfell: 60,
     description: 'Deals non-elemental damage to all enemies and inflicts Speed Down.',
     target: 'allEnemies',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'L', target: 'allEnemies' }],
   },
 
   {
@@ -2965,7 +2969,7 @@
     description: 'Deals water damage to one enemy and inflicts Accuracy Down. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailment: ['burn'],
-    debuff: ['accuracyDown'],
+    debuff: [{ type: 'Accuracy Down', size: 'L', target: 'singleEnemy' }],
     sizes: ['Foxflame Bubbles+'],
   },
 
@@ -2982,7 +2986,7 @@
     description: 'Deals water damage to one enemy and inflicts Accuracy Down. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailment: ['burn'],
-    debuff: ['accuracyDown'],
+    debuff: [{ type: 'Accuracy Down', size: 'L', target: 'singleEnemy' }],
     sizes: ['Foxflame Bubbles'],
   },
 
@@ -3035,7 +3039,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'M', target: 'singleEnemy' }],
   },
 
   {
@@ -3434,7 +3438,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy and inflicts Defense Down.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'M', target: 'singleEnemy' }],
   },
 
   {
@@ -3765,7 +3769,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to all enemies and inflicts Evasion Down.',
     target: 'allEnemies',
-    debuff: ['evasionDown'],
+    debuff: [{ type: 'Evasion Down', size: 'L', target: 'allEnemies' }],
     sizes: ['Ice Burst+'],
   },
 
@@ -3781,7 +3785,7 @@
     wyvernfell: 40,
     description: 'Deals ice damage to all enemies and inflicts Evasion Down.',
     target: 'allEnemies',
-    debuff: ['evasionDown'],
+    debuff: [{ type: 'Evasion Down', size: 'L', target: 'allEnemies' }],
     sizes: ['Ice Burst'],
   },
 
@@ -3849,7 +3853,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to all enemies and inflicts Evasion Down.',
     target: 'allEnemies',
-    debuff: ['evasionDown'],
+    debuff: [{ type: 'Evasion Down', size: 'M', target: 'allEnemies' }],
   },
 
   {
@@ -3865,7 +3869,7 @@
     description: 'Deals ice damage to one enemy and inflicts Defense Down.',
     target: 'singleEnemy',
     // breath: true, // TODO
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'singleEnemy' }],
     sizes: ['Icicle Breath+'],
   },
 
@@ -3882,7 +3886,7 @@
     description: 'Deals ice damage to one enemy and inflicts Defense Down.',
     target: 'singleEnemy',
     // breath: true, // TODO
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'singleEnemy' }],
     sizes: ['Icicle Breath'],
   },
 
@@ -3897,7 +3901,7 @@
     wyvernfell: 50,
     description: 'Deals ice damage to random enemies and inflicts Accuracy Down.',
     target: 'randomEnemy',
-    debuff: ['accuracyDown'],
+    debuff: [{ type: 'Accuracy Down', size: 'L', target: 'randomEnemies' }],
   },
 
   {
@@ -4012,7 +4016,7 @@
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
     breath: true,
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'M', target: 'singleEnemy' }],
   },
 
   {
@@ -4107,7 +4111,10 @@
     wyvernfell: 40,
     description: 'Deals water damage to one enemy and inflicts Thunder Defense Down and Speed Down.',
     target: 'singleEnemy',
-    debuff: ['thunderDefenseDown', 'speedDown'],
+    debuff: [
+      { type: 'Thunder Defense Down', size: 'S', target: 'singleEnemy' },
+      { type: 'Speed Down', size: 'S', target: 'singleEnemy' },
+    ],
     sizes: ['Inundate+'],
   },
 
@@ -4123,7 +4130,10 @@
     wyvernfell: 40,
     description: 'Deals water damage to one enemy and inflicts Thunder Defense Down and Speed Down.',
     target: 'singleEnemy',
-    debuff: ['thunderDefenseDown', 'speedDown'],
+    debuff: [
+      { type: 'Thunder Defense Down', size: 'S', target: 'singleEnemy' },
+      { type: 'Speed Down', size: 'S', target: 'singleEnemy' },
+    ],
     sizes: ['Inundate'],
   },
 
@@ -4347,7 +4357,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy, but also inflicts Defense Down on the user.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', target: 'singleEnemy' }], // TODO size
     sizes: ['Maximum Claw Slash+'],
   },
 
@@ -4363,7 +4373,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy, but also inflicts Defense Down on the user.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', target: 'singleEnemy' }], // TODO size
     sizes: ['Maximum Claw Slash'],
   },
 
@@ -4496,7 +4506,7 @@
     wyvernfell: 50,
     description: 'Deals water damage to all enemies and inflicts Evasion Down.',
     target: 'allEnemies',
-    debuff: ['evasionDown'],
+    debuff: [{ type: 'Evasion Down', size: 'M', target: 'allEnemies' }],
   },
 
   {
@@ -4565,7 +4575,10 @@
     wyvernfell: 10,
     description: 'Deals water damage to one enemy and inflicts Thunder Defense Down and Speed Down.',
     target: 'singleEnemy',
-    debuff: ['thunderDefenseDown', 'speedDown'],
+    debuff: [
+      { type: 'Thunder Defense Down', size: 'L', target: 'singleEnemy' },
+      { type: 'Speed Down', target: 'singleEnemy' }, // TODO size
+    ],
   },
 
   {
@@ -4611,7 +4624,7 @@
     wyvernfell: 30,
     description: 'Deals dragon damage to all enemies and inflicts Attack Down.',
     target: 'allEnemies',
-    debuff: ['attackDown'],
+    debuff: [{ type: 'Attack Down', size: 'M', target: 'allEnemies' }],
   },
 
   {
@@ -4824,7 +4837,7 @@
     stamina: 15,
     description: 'Inflicts Attack Down on all enemies.',
     target: 'allEnemies',
-    debuff: ['attackDown'],
+    debuff: [{ type: 'Attack Down', size: 'S', target: 'allEnemies' }],
   },
 
   {
@@ -4932,7 +4945,7 @@
     wyvernfell: 40,
     description: 'Deals dragon damage to one enemy and inflicts Wyvernsoul Defense Down.',
     target: 'singleEnemy',
-    debuff: ['wyvernsoulDefenseDown'],
+    debuff: [{ type: 'Wyvernsoul Defense Down', size: 'stacking', target: 'singleEnemy' }],
   },
 
   {
@@ -5326,7 +5339,7 @@
     wyvernfell: 10,
     description: 'Deals dragon damage to one enemy and inflicts Dragon Defense Down.',
     target: 'singleEnemy',
-    debuff: ['dragonDefenseDown'],
+    debuff: [{ type: 'Dragon Defense Down', size: 'M', target: 'singleEnemy' }],
   },
 
   {
@@ -5475,7 +5488,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy and inflicts Defense Down.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'M', target: 'singleEnemy' }],
     sizes: ['Rock Stampede+'],
   },
 
@@ -5491,7 +5504,7 @@
     wyvernfell: 40,
     description: 'Deals non-elemental damage to one enemy and inflicts Defense Down.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'M', target: 'singleEnemy' }],
     sizes: ['Rock Stampede'],
   },
 
@@ -5505,7 +5518,7 @@
     stamina: 50,
     description: 'Inflicts Attack Down on all enemies.',
     target: 'allEnemies',
-    debuff: ['attackDown'],
+    debuff: [{ type: 'Attack Down', size: 'L', target: 'allEnemies' }],
     sizes: ['Royal Decree+'],
   },
 
@@ -5519,7 +5532,7 @@
     stamina: 45,
     description: 'Inflicts Attack Down on all enemies.',
     target: 'allEnemies',
-    debuff: ['attackDown'],
+    debuff: [{ type: 'Attack Down', size: 'L', target: 'allEnemies' }],
     sizes: ['Royal Decree'],
   },
 
@@ -5609,7 +5622,7 @@
     wyvernfell: 30,
     description: 'Non-elemental damage to one, inflicts def down.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'singleEnemy' }],
     sizes: ['Savage Fist+'],
   },
 
@@ -5625,7 +5638,7 @@
     wyvernfell: 30,
     description: 'Non-elemental damage to one, inflicts def down.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'singleEnemy' }],
     sizes: ['Savage Fist'],
   },
 
@@ -6025,7 +6038,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'S', target: 'singleEnemy' }],
   },
 
   {
@@ -6040,7 +6053,7 @@
     wyvernfell: 20,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'S', target: 'singleEnemy' }],
     sizes: ['Snowball Attack+'],
   },
 
@@ -6056,7 +6069,7 @@
     wyvernfell: 30,
     description: 'Deals ice damage to one enemy and inflicts Speed Down.',
     target: 'singleEnemy',
-    debuff: ['speedDown'],
+    debuff: [{ type: 'Speed Down', size: 'S', target: 'singleEnemy' }],
     sizes: ['Snowball Attack'],
   },
 
@@ -6707,7 +6720,7 @@
     wyvernfell: 30,
     description: 'Deals thunder damage to all enemies and inflicts Thunder Defense Down.',
     target: 'allEnemies',
-    debuff: ['thunderDefenseDown'],
+    debuff: [{ type: 'Thunder Defense Down', size: 'L', target: 'allEnemies' }],
     sizes: ['Thunder Smash+'],
   },
 
@@ -6723,7 +6736,7 @@
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies and inflicts Thunder Defense Down.',
     target: 'allEnemies',
-    debuff: ['thunderDefenseDown'],
+    debuff: [{ type: 'Thunder Defense Down', size: 'L', target: 'allEnemies' }],
     sizes: ['Thunder Smash'],
   },
 
@@ -7433,7 +7446,7 @@
     description: 'Deals ice damage to one enemy and inflicts Accuracy Down.',
     target: 'singleEnemy',
     breath: true,
-    debuff: ['accuracyDown'],
+    debuff: [{ type: 'Accuracy Down', size: 'M', target: 'singleEnemy' }],
   },
 
   {
@@ -7487,7 +7500,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy and inflicts Defense Down.',
     target: 'singleEnemy',
-    debuff: ['defenseDown'],
+    debuff: [{ type: 'Defense Down', size: 'S', target: 'singleEnemy' }],
   },
 
   {
