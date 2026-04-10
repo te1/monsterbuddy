@@ -211,6 +211,14 @@ export function getMonstieSRankGene(monster: Monster): Gene | undefined {
   return genesByName.get(monster.monstie?.genes?.sRank ?? '');
 }
 
+export function getMonstieSpecialGenes(monster: Monster): Gene[] {
+  return (monster.monstie?.genes?.special ?? [])
+    .map((gene) => {
+      return genesByName.get(gene);
+    })
+    .filter((gene): gene is Gene => gene != null);
+}
+
 export function getMonstieEggSkills(monster: Monster): { gene: Gene; element: ElementType }[] {
   const group = geneSources.eggSkillGroups[monster.monstie?.genes?.eggSkillGroup ?? ''];
 
@@ -246,6 +254,7 @@ export function getMonstieGeneCount(monster: Monster): number {
   return (
     getMonstieInnateGenes(monster).length +
     (getMonstieSRankGene(monster) ? 1 : 0) +
+    getMonstieSpecialGenes(monster).length +
     getMonstiePassiveGenes(monster).length +
     getMonstieEggSkills(monster).length
   );
@@ -257,6 +266,10 @@ export function getInnateGeneSources(gene: Gene): Monster[] {
 
 export function getSRankGeneSources(gene: Gene): Monster[] {
   return monsters.filter((monster) => monster.monstie?.genes?.sRank === gene.name);
+}
+
+export function getSpecialGeneSources(gene: Gene): Monster[] {
+  return monsters.filter((monster) => monster.monstie?.genes?.special?.includes(gene.name));
 }
 
 export function getEggSkillSources(gene: Gene): Monster[] {
@@ -287,6 +300,10 @@ function buildGeneMonstieCounts() {
 
     if (sRankGene != null) {
       genes.add(sRankGene.name);
+    }
+
+    for (const gene of getMonstieSpecialGenes(monster)) {
+      genes.add(gene.name);
     }
 
     for (const eggSkill of getMonstieEggSkills(monster)) {

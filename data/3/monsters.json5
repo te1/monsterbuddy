@@ -2977,7 +2977,7 @@
       eggColors: ['blue', 'black', 'gray'],
       svgEggColors: ['#5898b3', '#3d3d38'],
       genes: {
-        innate: ['Frosty Furrow', 'Frozen Flurry', 'Devil\'s Hammer'],
+        innate: ['Frosty Furrow', 'Frozen Flurry', "Devil's Hammer"],
         sRank: 'Frosty Furrow+',
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg034',
@@ -3359,6 +3359,7 @@
       genes: {
         innate: ['Tail Twister', 'Piercing Roar', 'Sickle Tail'],
         sRank: 'Tail Twister+',
+        special: ['Best Hoof Forward'],
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg010',
       },
@@ -6872,6 +6873,7 @@
       genes: {
         innate: ['Inundate', 'Maximum Rollout', 'Aqua Shot'],
         sRank: 'Inundate+',
+        special: ['Best Hoof Forward'],
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg002',
       },
@@ -7365,7 +7367,7 @@
       eggColors: ['yellow', 'purple'],
       svgEggColors: ['#c8994b', '#715a95'],
       genes: {
-        innate: ['Sleep Powder', 'Siren\'s Temptation', 'Debilitating Lilt'],
+        innate: ['Sleep Powder', "Siren's Temptation", 'Debilitating Lilt'],
         sRank: 'Sleep Powder+',
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg012',
@@ -9069,6 +9071,9 @@
       attack: 'power',
       ridingActions: ['Jump', 'Roar', 'Melee Attack', 'Ground Dive'],
       svgEggColors: ['#323232', '#9e6efd'],
+      genes: {
+        special: ['Best Hoof Forward'],
+      },
     },
   },
 ]
