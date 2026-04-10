@@ -106,6 +106,7 @@ export type EggColor = z.infer<typeof EggColorSchema>;
 export const MonstieGenesSchema = z.object({
   innate: z.array(z.string()),
   sRank: z.string(),
+  special: z.array(z.string()).optional(),
   eggSkillGroup: z.string(),
   passiveGroup: z.string(),
 });
