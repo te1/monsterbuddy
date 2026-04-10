@@ -4,8 +4,6 @@
     formatGeneElement,
     formatGeneType,
     formatSkillAilment,
-    formatSkillBuff,
-    formatSkillDebuff,
     formatSkillEffect,
     formatSkillTarget,
   } from '~/services/3/presentation';
