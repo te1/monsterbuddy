@@ -37,7 +37,7 @@
     <div v-if="innateSources.length > 0">
       <h3 class="px-4 pt-2 text-lg font-semibold">Innate Genes</h3>
 
-      <div class="px-4 pb-1">These genes are always present but may have level requirements</div>
+      <div class="px-4 pb-1">These genes are always present but may have level requirements.</div>
 
       <div v-for="(monster, index) in innateSources" :key="monster.slug">
         <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
@@ -53,7 +53,9 @@
     <div v-if="sRankSources.length > 0">
       <h3 class="px-4 pt-2 text-lg font-semibold">S Rank Genes</h3>
 
-      <div class="px-4 pb-1">These genes are only present if the monstie's Ecosystem Rank is S</div>
+      <div class="px-4 pb-1">
+        These genes are only present if the monstie's Ecosystem Rank is S.
+      </div>
 
       <div v-for="(monster, index) in sRankSources" :key="monster.slug">
         <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />

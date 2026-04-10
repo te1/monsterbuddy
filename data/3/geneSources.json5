@@ -1,5 +1,46 @@
 {
-  eggSkillPresets: {},
+  eggSkillGroups: {
+    esg1: [
+      { gene: 'Egg Skill: Circle Stance', element: 'none' },
+      { gene: 'Egg Skill: Heat Shimmer', element: 'fire' },
+      { gene: 'Egg Skill: Surface Break', element: 'water' },
+      { gene: 'Egg Skill: Charge Up', element: 'thunder' },
+      { gene: 'Egg Skill: Icebind', element: 'ice' },
+      { gene: 'Egg Skill: Dragon Gate', element: 'dragon' },
+    ],
+    esg2: [
+      { gene: 'Egg Skill: Spirit Charge', element: 'none' },
+      { gene: 'Egg Skill: Red Mastery', element: 'fire' },
+      { gene: 'Egg Skill: Composure', element: 'water' },
+      { gene: 'Egg Skill: Volt Arms', element: 'thunder' },
+      { gene: 'Egg Skill: Icebreaker', element: 'ice' },
+      { gene: 'Egg Skill: Finish Fang', element: 'dragon' },
+    ],
+    esg3: [
+      { gene: 'Egg Skill: Nature Heal', element: 'none' },
+      { gene: 'Egg Skill: Fireform', element: 'fire' },
+      { gene: 'Egg Skill: Raging Rapid', element: 'water' },
+      { gene: 'Egg Skill: Bolt Flash', element: 'thunder' },
+      { gene: 'Egg Skill: Rime Wind', element: 'ice' },
+      { gene: 'Egg Skill: Dragon Roar', element: 'dragon' },
+    ],
+    esg4: [
+      { gene: 'Egg Skill: Ardor Shard', element: 'none' },
+      { gene: 'Egg Skill: Flame Star', element: 'fire' },
+      { gene: 'Egg Skill: Crash Wave', element: 'water' },
+      { gene: 'Egg Skill: Thunderclap', element: 'thunder' },
+      { gene: 'Egg Skill: Frozen Clump', element: 'ice' },
+      { gene: 'Egg Skill: Dragon Feller', element: 'dragon' },
+    ],
+    esg5: [
+      { gene: 'Egg Skill: Solar Cry', element: 'none' },
+      { gene: 'Egg Skill: Royal Decree', element: 'fire' },
+      { gene: 'Egg Skill: Lunar Cry', element: 'water' },
+      { gene: 'Egg Skill: Adamant Rage', element: 'thunder' },
+      { gene: 'Egg Skill: Snow Mantle', element: 'ice' },
+      { gene: 'Egg Skill: E. Dominance', element: 'dragon' },
+    ],
+  },
 
   geneGroups: {
     gg000: [
