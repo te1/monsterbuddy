@@ -130,6 +130,19 @@
     }
   });
 
+  function statsTooltip(index: number) {
+    switch (index) {
+      case 0:
+        return 'Unlock camps in the region by defeating feral monsters to increase this bonus';
+
+      case 1:
+        return 'Repel or defeat Calamitous Elder Dragons in the region to unlock and increase this bonus';
+
+      default:
+        return '';
+    }
+  }
+
   const fabDisplayVisible = computed(() => displays.all.length > 1);
 
   const fabDisplayTooltip = computed(() => {
@@ -203,8 +216,8 @@
           <h3 class="text-lg font-semibold">Stat Increases</h3>
 
           <ul class="flex flex-col gap-1">
-            <li v-for="stat in region.powers.stats" :key="stat">
-              {{ statsTypeToText(stat) }}
+            <li v-for="(stat, index) in region.powers.stats" :key="index">
+              <AppTooltip :text="statsTypeToText(stat)" :tooltip="statsTooltip(index)" />
             </li>
           </ul>
         </div>
