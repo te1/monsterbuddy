@@ -273,7 +273,7 @@ export function getPassiveGeneSources(gene: Gene): Monster[] {
 
 let geneMonstieCounts: Map<string, number> | undefined;
 
-function buildGeneMonstieCoounts() {
+function buildGeneMonstieCounts() {
   geneMonstieCounts = new Map<string, number>();
 
   for (const monster of monsters) {
@@ -305,7 +305,7 @@ function buildGeneMonstieCoounts() {
 
 export function getGeneMonstieCount(gene: Gene): number {
   if (geneMonstieCounts == null) {
-    buildGeneMonstieCoounts();
+    buildGeneMonstieCounts();
   }
 
   return geneMonstieCounts?.get(gene.name) ?? 0;
