@@ -11,7 +11,10 @@
   <UTooltip
     v-model:open="open"
     :text="tooltip"
-    :ui="{ content: 'h-fit max-w-[95dvw]', text: 'whitespace-normal' }"
+    :ui="{
+      content: 'h-fit max-w-[95dvw] text-base sm:text-sm lg:text-xs',
+      text: 'whitespace-normal',
+    }"
   >
     <span
       class="underline decoration-neutral-600 decoration-dotted underline-offset-4 dark:decoration-neutral-400"
