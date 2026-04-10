@@ -39,7 +39,7 @@
 
   const hasLocations = computed(() => locations.value.length > 0);
   const isMutation = computed(() => {
-    return props.monster.tags?.includes('mutation') ?? false;
+    return (props.monster.hatchable && props.monster.tags?.includes('mutation')) ?? false;
   });
 
   const stats = computed(() => props.monster?.stats?.base);
