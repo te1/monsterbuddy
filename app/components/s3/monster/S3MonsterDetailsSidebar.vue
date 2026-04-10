@@ -17,15 +17,15 @@
   });
 
   const isMonsterPinned = computed(() => {
-    return history.isMonsterPinned(monster.value?.slug ?? '');
+    return monster.value ? history.isMonsterPinned(monster.value.slug) : false;
   });
 
   const isMonstiePinned = computed(() => {
-    return history.isMonstiePinned(monster.value?.slug ?? '');
+    return monster.value ? history.isMonstiePinned(monster.value.slug) : false;
   });
 
   const isEggPinned = computed(() => {
-    return history.isEggPinned(monster.value?.slug ?? '');
+    return monster.value ? history.isEggPinned(monster.value.slug) : false;
   });
 
   function toggleMonsterPin() {
@@ -35,11 +35,15 @@
   }
 
   function toggleMonstiePin() {
-    history.togglePinnedMonstie(monster.value?.slug ?? '');
+    if (monster.value) {
+      history.togglePinnedMonstie(monster.value.slug);
+    }
   }
 
   function toggleEggPin() {
-    history.togglePinnedEgg(monster.value?.slug ?? '');
+    if (monster.value) {
+      history.togglePinnedEgg(monster.value.slug);
+    }
   }
 
   const tabs = [{ label: 'Actions', slot: 'actions' }];
@@ -52,6 +56,7 @@
         <ClientOnly>
           <AppPinToggle
             :modelValue="isMonsterPinned"
+            :disabled="!monster"
             subject="monster"
             @update:modelValue="toggleMonsterPin"
           />
@@ -59,12 +64,14 @@
           <template v-if="monster?.hatchable">
             <AppPinToggle
               :modelValue="isMonstiePinned"
+              :disabled="!monster"
               subject="monstie"
               @update:modelValue="toggleMonstiePin"
             />
 
             <AppPinToggle
               :modelValue="isEggPinned"
+              :disabled="!monster"
               subject="egg"
               @update:modelValue="toggleEggPin"
             />

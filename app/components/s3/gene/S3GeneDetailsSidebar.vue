@@ -17,7 +17,7 @@
   });
 
   const isGenePinned = computed(() => {
-    return history.isGenePinned(gene.value?.slug ?? '');
+    return gene.value ? history.isGenePinned(gene.value.slug) : false;
   });
 
   function toggleGenePin() {
@@ -36,6 +36,7 @@
         <ClientOnly>
           <AppPinToggle
             :modelValue="isGenePinned"
+            :disabled="!gene"
             subject="gene"
             @update:modelValue="toggleGenePin"
           />

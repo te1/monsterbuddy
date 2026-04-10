@@ -3,10 +3,12 @@
     defineProps<{
       subject?: string;
       noLabel?: boolean;
+      disabled?: boolean;
     }>(),
     {
       subject: undefined,
       noLabel: false,
+      disabled: false,
     }
   );
 
@@ -49,6 +51,7 @@
       :color="pinned ? 'primary' : 'neutral'"
       variant="link"
       :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
+      :disabled="disabled"
       @click="pinned = !pinned"
     />
   </UTooltip>
@@ -60,6 +63,7 @@
     :label="label"
     :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
     :ui="{ base: 'px-0 font-normal' }"
+    :disabled="disabled"
     @click="pinned = !pinned"
   />
 </template>
