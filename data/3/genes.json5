@@ -652,6 +652,7 @@
     stamina: 20,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
     target: 'user',
+    // TODO buff
     effect: ['nextTurn'],
     sizes: ['Blindside+'],
   },
@@ -665,6 +666,7 @@
     active: true,
     stamina: 15,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
+    // TODO buff
     effect: ['nextTurn'],
     sizes: ['Blindside'],
   },
