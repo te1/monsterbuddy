@@ -22,8 +22,8 @@
 
   const versions = [
     {
-      date: '2026-04-07', // TODO real date
-      changes: ['New page for genes'],
+      date: '2026-04-10',
+      changes: ['New pages for genes'],
     },
     {
       date: '2026-04-02',
