@@ -25,19 +25,16 @@
   const locations = computed(() => {
     const locations = getMonsterLocations(props.monster);
 
-    if (props.areaElement == null) {
-      return take(locations, 3);
-    }
-
-    // put matching areas first so they are not cut off
-    return take(
-      [...locations].sort((a, b) => {
+    if (props.areaElement != null) {
+      // put matching areas first so they are not cut off
+      locations.sort((a, b) => {
         return (
           Number(b.areaElement === props.areaElement) - Number(a.areaElement === props.areaElement)
         );
-      }),
-      3
-    );
+      });
+    }
+
+    return take(locations, 3);
   });
 
   const hasLocations = computed(() => locations.value.length > 0);
