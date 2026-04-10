@@ -259,6 +259,12 @@ export function getSRankGeneSources(gene: Gene): Monster[] {
   return monsters.filter((monster) => monster.monstie?.genes?.sRank === gene.name);
 }
 
+export function getEggSkillSources(gene: Gene): Monster[] {
+  return monsters.filter((monster) =>
+    getMonstieEggSkills(monster).some((g) => g.gene.name === gene.name)
+  );
+}
+
 export function getPassiveGeneSources(gene: Gene): Monster[] {
   return monsters.filter((monster) =>
     getMonstiePassiveGenes(monster).some((g) => g.name === gene.name)
@@ -266,12 +272,11 @@ export function getPassiveGeneSources(gene: Gene): Monster[] {
 }
 
 export function getGeneMonstieCount(gene: Gene): number {
-  // TODO egg skills
-
   return monsters.filter(
     (monster) =>
       getMonstieInnateGenes(monster).some((g) => g.name === gene.name) ||
       getMonstieSRankGene(monster)?.name === gene.name ||
+      getMonstieEggSkills(monster).some((g) => g.gene.name === gene.name) ||
       getMonstiePassiveGenes(monster).some((g) => g.name === gene.name)
   ).length;
 }
