@@ -120,10 +120,22 @@
   });
 
   const buffs = computed(() => {
+    const ignored = [
+      'Non-Elemental Attack Up',
+      'Speed Up',
+      'Critical Up',
+      'Fire Defense Up',
+      'Guard',
+      'Stamina Regen Up',
+      'Burn Effect',
+      'Blast Effect',
+      'Paralysis Effect',
+    ];
+
     return [
       { label: 'Any / None', value: 'ALL' },
       ...allBuffs
-        .filter((buff) => !['staminaRegenUp', 'fireDefenseUp'].includes(buff))
+        .filter((buff) => !ignored.includes(buff))
         .map((buff) => ({
           label: formatSkillBuff(buff),
           value: buff,
@@ -132,12 +144,21 @@
   });
 
   const debuffs = computed(() => {
+    const ignored = [
+      //
+      'Dodge Down',
+      'Evasion Down',
+      'Speed Down',
+    ];
+
     return [
       { label: 'Any / None', value: 'ALL' },
-      ...allDebuffs.map((debuff) => ({
-        label: formatSkillDebuff(debuff),
-        value: debuff,
-      })),
+      ...allDebuffs
+        .filter((debuff) => !ignored.includes(debuff))
+        .map((debuff) => ({
+          label: formatSkillDebuff(debuff),
+          value: debuff,
+        })),
     ];
   });
 
