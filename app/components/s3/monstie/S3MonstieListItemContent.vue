@@ -22,7 +22,23 @@
 
   const info = computed(() => formatMonsterInfoShort(props.monster));
 
-  const locations = computed(() => take(getMonsterLocations(props.monster), 3));
+  const locations = computed(() => {
+    const locations = getMonsterLocations(props.monster);
+
+    if (props.areaElement == null) {
+      return take(locations, 3);
+    }
+
+    // put matching areas first so they are not cut off
+    return take(
+      [...locations].sort((a, b) => {
+        return (
+          Number(b.areaElement === props.areaElement) - Number(a.areaElement === props.areaElement)
+        );
+      }),
+      3
+    );
+  });
 
   const stats = computed(() => props.monster?.stats?.base);
 
