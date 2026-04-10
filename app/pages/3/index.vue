@@ -6,7 +6,8 @@
   useSeoMeta({
     titleTemplate: '',
     title: `${title} - ${subtitle}`,
-    description: 'Includes monster attack types and weaknesses, egg patterns and monstie locations',
+    description:
+      'Includes monster attack types and weaknesses, egg patterns, monstie locations and genes',
   });
 
   defineOgImage(
@@ -14,7 +15,7 @@
     {
       title,
       description: subtitle,
-      lines: ['Eggs', 'Monsters', 'Attack Patterns'],
+      lines: ['Eggs, Monsters', 'Attack Patterns', 'Genes'],
       game: 'mhst3',
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
