@@ -1,6 +1,10 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
-  import { getInnateGeneSources, getSRankGeneSources } from '~/services/3/genes';
+  import {
+    getInnateGeneSources,
+    getPassiveGeneSources,
+    getSRankGeneSources,
+  } from '~/services/3/genes';
   import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
 
   const props = defineProps<{ gene: Gene }>();
@@ -13,6 +17,10 @@
 
   const sRankSources = computed(() => {
     return getSRankGeneSources(props.gene);
+  });
+
+  const passiveSources = computed(() => {
+    return getPassiveGeneSources(props.gene);
   });
 
   const isPinned = computed(() => {
@@ -48,6 +56,25 @@
       <div class="px-4 pb-1">These genes are only present if the monstie's Ecosystem Rank is S</div>
 
       <div v-for="(monster, index) in sRankSources" :key="monster.slug">
+        <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
+
+        <div class="box-link">
+          <NuxtLink :to="`/3/monsters/${monster.slug}/genes`" prefetchOn="interaction">
+            <S3MonstieListItem :monster="monster" mode="location" class="px-2.5" />
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="passiveSources.length > 0">
+      <h3 class="px-4 pt-2 text-lg font-semibold">Passive Genes</h3>
+
+      <div class="px-4 pb-1">
+        These genes are randomly selected. Shiny eggs and higher Ecosystem Rank increase the chances
+        of getting better / larger genes.
+      </div>
+
+      <div v-for="(monster, index) in passiveSources" :key="monster.slug">
         <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
         <div class="box-link">

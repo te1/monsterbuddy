@@ -245,3 +245,9 @@ export function getInnateGeneSources(gene: Gene): Monster[] {
 export function getSRankGeneSources(gene: Gene): Monster[] {
   return monsters.filter((monster) => monster.monstie?.genes?.sRank === gene.name);
 }
+
+export function getPassiveGeneSources(gene: Gene): Monster[] {
+  return monsters.filter((monster) =>
+    getMonstiePassiveGenes(monster).some((g) => g.name === gene.name)
+  );
+}
