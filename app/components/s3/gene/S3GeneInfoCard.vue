@@ -100,7 +100,7 @@
       <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
         <div v-if="gene.target != null" class="flex items-center justify-between gap-2">
           <div>Target</div>
-          <div v-text="formatSkillTarget(gene.target)" />
+          <div><S3SkillTarget :target="gene.target" /></div>
         </div>
 
         <div v-if="gene.breath">
@@ -129,7 +129,7 @@
       <div v-for="buff in gene.buff" :key="buff.type" class="flex gap-1">
         <span v-text="buff.type" />
         <S3BuffSize :size="buff.size" />
-        <span class="text-muted">on {{ formatSkillTarget(buff.target) }}</span>
+        <span class="text-muted">on <S3SkillTarget :target="buff.target" /></span>
       </div>
     </div>
 
@@ -139,7 +139,7 @@
       <div v-for="debuff in gene.debuff" :key="debuff.type" class="flex gap-1">
         <span v-text="debuff.type" />
         <S3BuffSize :size="debuff.size" />
-        <span class="text-muted">on {{ formatSkillTarget(debuff.target) }}</span>
+        <span class="text-muted">on <S3SkillTarget :target="debuff.target" /></span>
       </div>
     </div>
 
