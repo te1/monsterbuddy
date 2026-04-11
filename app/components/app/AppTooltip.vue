@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   defineProps<{
-    text: string;
+    text?: string;
     tooltip: string;
   }>();
 
@@ -19,7 +19,10 @@
     <span
       class="underline decoration-neutral-600 decoration-dotted underline-offset-4 dark:decoration-neutral-400"
       @click="open = !open"
-      v-text="text"
-    />
+    >
+      <slot>
+        {{ text }}
+      </slot>
+    </span>
   </UTooltip>
 </template>
