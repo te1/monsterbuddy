@@ -5,7 +5,6 @@
     formatGeneType,
     formatSkillAilment,
     formatSkillEffect,
-    formatSkillTarget,
   } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
