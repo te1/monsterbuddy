@@ -1,11 +1,6 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
-  import {
-    formatGeneElement,
-    formatGeneType,
-    formatSkillAilment,
-    formatSkillEffect,
-  } from '~/services/3/presentation';
+  import { formatGeneElement, formatGeneType, formatSkillEffect } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
@@ -112,13 +107,12 @@
       <div class="text-lg font-semibold">Ailments</div>
 
       <div class="flex gap-2">
-        <UTooltip
+        <S3AilmentIcon
           v-for="ailment in gene.ailment"
           :key="ailment"
-          :text="formatSkillAilment(ailment)"
-        >
-          <S3AilmentIcon class="-my-1 h-8 w-6 object-cover" :ailment="ailment" noTooltip />
-        </UTooltip>
+          :ailment="ailment"
+          class="-my-1 h-8 w-6 object-cover"
+        />
       </div>
     </div>
 

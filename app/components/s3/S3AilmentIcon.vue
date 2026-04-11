@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <UTooltip :text="noTooltip ? undefined : caption" :content="{ side: 'top' }">
+  <AppTooltip :tooltip="noTooltip ? undefined : caption" :content="{ side: 'top' }">
     <img :src="imageUrl" :alt="caption" width="30" height="30" />
-  </UTooltip>
+  </AppTooltip>
 </template>
