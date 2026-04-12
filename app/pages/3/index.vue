@@ -175,6 +175,14 @@
               />
               by <AppLink href="https://www.reddit.com/user/DarkestSamus" text="DarkestSamus" />
             </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/monstie_damage_calc_google_sheets"
+                text="Monstie Damage Calc"
+              />
+              by <AppLink href="https://www.reddit.com/user/rmosley753" text="rmosley753" />
+            </ProseLi>
           </ProseUl>
         </section>
 
