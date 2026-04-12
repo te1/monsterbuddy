@@ -5,6 +5,7 @@
     formatGeneType,
     formatSkillBuffTurns,
     formatSkillEffect,
+    formatSkillEffectDetails,
   } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
@@ -154,7 +155,14 @@
     <div v-if="effects.length > 0">
       <div class="text-lg font-semibold">Effects</div>
 
-      <div v-text="effects.map(formatSkillEffect).join(', ')" />
+      <div>
+        <template v-for="(effect, index) in effects" :key="index">
+          <AppTooltip :tooltip="formatSkillEffectDetails(effect)">
+            <span v-text="formatSkillEffect(effect)" />
+          </AppTooltip>
+          <span v-if="index < effects.length - 1">, </span>
+        </template>
+      </div>
     </div>
   </section>
 </template>
