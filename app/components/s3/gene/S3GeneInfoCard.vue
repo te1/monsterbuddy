@@ -108,7 +108,7 @@
         </div>
 
         <template v-if="gene.details && gene.details.length > 0">
-          <S3GeneDetail v-for="detail in gene.details" :key="detail.type" :detail="detail" />
+          <S3SkillDetail v-for="detail in gene.details" :key="detail.type" :detail="detail" />
         </template>
       </div>
     </div>
