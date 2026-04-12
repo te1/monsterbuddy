@@ -37,7 +37,7 @@
       'procParalysis',
     ];
 
-    return props.gene.effect?.filter((effect) => !ignored.includes(effect)) ?? [];
+    return props.gene.effects?.filter((effect) => !ignored.includes(effect)) ?? [];
   });
 </script>
 
@@ -112,12 +112,12 @@
       </div>
     </div>
 
-    <div v-if="gene.ailment && gene.ailment.length > 0" class="flex flex-col gap-1">
+    <div v-if="gene.ailments && gene.ailments.length > 0" class="flex flex-col gap-1">
       <div class="text-lg font-semibold">Ailments</div>
 
       <div class="flex gap-2">
         <S3AilmentIcon
-          v-for="ailment in gene.ailment"
+          v-for="ailment in gene.ailments"
           :key="ailment"
           :ailment="ailment"
           class="-my-1 h-8 w-6 object-cover"
@@ -125,10 +125,10 @@
       </div>
     </div>
 
-    <div v-if="gene.buff && gene.buff.length > 0">
+    <div v-if="gene.buffs && gene.buffs.length > 0">
       <div class="text-lg font-semibold">Buffs</div>
 
-      <div v-for="buff in gene.buff" :key="buff.type" class="flex gap-1">
+      <div v-for="buff in gene.buffs" :key="buff.type" class="flex gap-1">
         <span v-text="buff.type" />
         <S3BuffSize :size="buff.size" />
         <span class="text-muted">on <S3SkillTarget :target="buff.target" /></span>
@@ -138,10 +138,10 @@
       </div>
     </div>
 
-    <div v-if="gene.debuff && gene.debuff.length > 0">
+    <div v-if="gene.debuffs && gene.debuffs.length > 0">
       <div class="text-lg font-semibold">Debuffs</div>
 
-      <div v-for="debuff in gene.debuff" :key="debuff.type" class="flex gap-1">
+      <div v-for="debuff in gene.debuffs" :key="debuff.type" class="flex gap-1">
         <span v-text="debuff.type" />
         <S3BuffSize :size="debuff.size" />
         <span class="text-muted">on <S3SkillTarget :target="debuff.target" /></span>

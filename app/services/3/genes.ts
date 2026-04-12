@@ -191,19 +191,19 @@ export function getGenesByEggSkill(mustBeEggSkill: boolean, geneList: Gene[] = g
 }
 
 export function getGenesByAilment(ailment: SkillAilmentType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.ailment?.includes(ailment) ?? false);
+  return geneList.filter((gene) => gene.ailments?.includes(ailment) ?? false);
 }
 
 export function getGenesByBuff(buff: SkillBuffType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.buff?.some((entry) => entry.type === buff) ?? false);
+  return geneList.filter((gene) => gene.buffs?.some((entry) => entry.type === buff) ?? false);
 }
 
 export function getGenesByDebuff(debuff: SkillDebuffType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.debuff?.some((entry) => entry.type === debuff) ?? false);
+  return geneList.filter((gene) => gene.debuffs?.some((entry) => entry.type === debuff) ?? false);
 }
 
 export function getGenesByEffect(effect: SkillEffectType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.effect?.includes(effect) ?? false);
+  return geneList.filter((gene) => gene.effects?.includes(effect) ?? false);
 }
 
 export function getMonstieInnateGenes(monster: Monster): Gene[] {
