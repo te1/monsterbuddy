@@ -97,27 +97,27 @@
     {
       type: 'Defense Down',
       details: [
-        { size: 'S', type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
-        { size: 'M', type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
-        { size: 'L', type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
+        { size: 'S', type: 'damageTaken', element: 'all', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'all', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'all', value: 0.3, op: 'additive' },
       ],
     },
 
     {
       type: 'Thunder Defense Down',
       details: [
-        { size: 'S', type: 'damageDone', element: 'thunder', value: 0.1, op: 'additive' },
-        { size: 'M', type: 'damageDone', element: 'thunder', value: 0.2, op: 'additive' },
-        { size: 'L', type: 'damageDone', element: 'thunder', value: 0.3, op: 'additive' },
+        { size: 'S', type: 'damageTaken', element: 'thunder', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'thunder', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'thunder', value: 0.3, op: 'additive' },
       ],
     },
 
     {
       type: 'Dragon Defense Down',
       details: [
-        { size: 'S', type: 'damageDone', element: 'dragon', value: 0.1, op: 'additive' },
-        { size: 'M', type: 'damageDone', element: 'dragon', value: 0.2, op: 'additive' },
-        { size: 'L', type: 'damageDone', element: 'dragon', value: 0.3, op: 'additive' },
+        { size: 'S', type: 'damageTaken', element: 'dragon', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'dragon', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'dragon', value: 0.3, op: 'additive' },
       ],
     },
   ],

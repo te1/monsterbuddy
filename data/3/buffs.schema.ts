@@ -8,7 +8,7 @@ import {
 
 export const BuffDetailSchema = z.object({
   size: SkillBuffSizeSchema.exclude(['stacking']).optional(),
-  type: z.enum(['damageDone', 'critRate', 'maxHpRecovery']),
+  type: z.enum(['damageDone', 'damageTaken', 'critRate', 'maxHpRecovery']),
   element: GeneElementSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']).optional(),

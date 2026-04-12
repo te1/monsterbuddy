@@ -3,7 +3,6 @@
   import {
     formatGeneElement,
     formatGeneType,
-    formatSkillBuffTurns,
     formatSkillEffect,
     formatSkillEffectDetails,
   } from '~/services/3/presentation';
@@ -137,13 +136,8 @@
     <div v-if="gene.debuffs && gene.debuffs.length > 0">
       <div class="text-lg font-semibold">Debuffs</div>
 
-      <div v-for="debuff in gene.debuffs" :key="debuff.type" class="flex gap-1">
-        <span v-text="debuff.type" />
-        <S3BuffSize :size="debuff.size" />
-        <span class="text-muted">on <S3SkillTarget :target="debuff.target" /></span>
-        <span v-if="debuff.turns != null" class="text-muted">
-          ({{ formatSkillBuffTurns(debuff.turns) }})
-        </span>
+      <div class="flex flex-col gap-1">
+        <S3GeneDebuffDetails v-for="debuff in gene.debuffs" :key="debuff.type" :debuff="debuff" />
       </div>
     </div>
 

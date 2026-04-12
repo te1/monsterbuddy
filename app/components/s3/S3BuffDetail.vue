@@ -23,6 +23,15 @@
         }
         return `${formatGeneElement(props.detail.element)} damage done`;
 
+      case 'damageTaken':
+        if (props.detail.element == null) {
+          return 'Damage taken';
+        }
+        if (props.detail.element === 'all') {
+          return 'All damage taken';
+        }
+        return `${formatGeneElement(props.detail.element)} damage taken`;
+
       case 'critRate':
         return 'Crit rate';
 
@@ -74,6 +83,7 @@
   const value = computed(() => {
     switch (props.detail.type) {
       case 'damageDone':
+      case 'damageTaken':
         return `${op.value}${valueForOp.value}`;
 
       case 'critRate':

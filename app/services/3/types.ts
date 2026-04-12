@@ -17,6 +17,7 @@ export type {
   SkillBuffSize,
   SkillBuffTurns,
   SkillBuffType,
+  SkillDebuff,
   SkillDebuffType,
   SkillDetail,
   SkillEffectType,
