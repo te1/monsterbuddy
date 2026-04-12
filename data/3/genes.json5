@@ -5554,7 +5554,7 @@
     stamina: 30,
     description: 'Grants Guard to the user.',
     target: 'user',
-    buffs: [{ type: 'Guard', size: 'M', target: 'user' }],
+    buffs: [{ type: 'Guard', size: 'M', target: 'user', turns: '1' }],
   },
 
   {
