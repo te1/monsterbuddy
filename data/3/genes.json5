@@ -6,6 +6,7 @@
     type: 'technical',
     element: 'none',
     description: 'Slightly reduces damage taken from all attacks.',
+    // details: [{ type: 'damageTaken', element: 'all', value: -0.03, op: 'additive' }], // TODO no source
     sizes: ['All-Elem Def Boost (M)', 'All-Elem Def Boost (L)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -16,6 +17,7 @@
     type: 'technical',
     element: 'none',
     description: 'Reduces damage taken from all attacks.',
+    // details: [{ type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' }], // TODO no source
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (L)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -26,6 +28,7 @@
     type: 'technical',
     element: 'none',
     description: 'Greatly reduces damage taken from all attacks.',
+    // details: [{ type: 'damageTaken', element: 'all', value: -0.07, op: 'additive' }], // TODO no source
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (M)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -36,6 +39,7 @@
     type: 'technical',
     element: 'none',
     description: 'Significantly reduces damage taken from all attacks.',
+    details: [{ type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' }],
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (M)', 'All-Elem Def Boost (L)'],
   },
 
@@ -46,6 +50,10 @@
     type: 'power',
     element: 'dragon',
     description: 'Slightly increases damage dealt by skills in exchange for a higher Stamina cost.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.12, op: 'additive' }, // TODO no source
+      { type: 'staminaCost', value: 1.2, op: 'multiplier' },
+    ],
     sizes: ['All-Out (M)', 'All-Out (L)', 'All-Out (XL)'],
   },
 
@@ -56,6 +64,10 @@
     type: 'power',
     element: 'dragon',
     description: 'Increases damage dealt by skills in exchange for a higher Stamina cost.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.18, op: 'additive' }, // TODO no source
+      { type: 'staminaCost', value: 1.2, op: 'multiplier' },
+    ],
     sizes: ['All-Out (S)', 'All-Out (L)', 'All-Out (XL)'],
   },
 
@@ -66,6 +78,10 @@
     type: 'power',
     element: 'dragon',
     description: 'Greatly increases damage dealt by skills in exchange for a higher Stamina cost.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.24, op: 'additive' },
+      { type: 'staminaCost', value: 1.2, op: 'multiplier' },
+    ],
     sizes: ['All-Out (S)', 'All-Out (M)', 'All-Out (XL)'],
   },
 
@@ -76,6 +92,10 @@
     type: 'power',
     element: 'dragon',
     description: 'Significantly increases damage dealt by skills in exchange for a higher Stamina cost.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }, // TODO 0.4?
+      { type: 'staminaCost', value: 1.2, op: 'multiplier' },
+    ],
     sizes: ['All-Out (S)', 'All-Out (M)', 'All-Out (L)'],
   },
 
@@ -1079,6 +1099,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Slightly increases Crit Rate.',
+    // details: [{ type: 'critRate', value: 6 }], // TODO no source
     sizes: ['Critical (M)', 'Critical (L)', 'Critical (XL)'],
   },
 
@@ -1089,6 +1110,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Increases Crit Rate.',
+    // details: [{ type: 'critRate', value: 9 }], // TODO no source
     sizes: ['Critical (S)', 'Critical (L)', 'Critical (XL)'],
   },
 
@@ -1099,6 +1121,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Greatly increases Crit Rate.',
+    // details: [{ type: 'critRate', value: 12 }], // TODO no source
     sizes: ['Critical (S)', 'Critical (M)', 'Critical (XL)'],
   },
 
@@ -1109,6 +1132,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Significantly increases Crit Rate.',
+    details: [{ type: 'critRate', value: 15 }],
     sizes: ['Critical (S)', 'Critical (M)', 'Critical (L)'],
   },
 
@@ -1230,6 +1254,10 @@
     type: 'speed',
     element: 'water',
     description: 'Enables nimble movements when HP is full, slightly increasing attack and defense.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.05, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' },
+    ],
     sizes: ['Dancer (M)', 'Dancer (L)', 'Dancer (XL)'],
   },
 
@@ -1240,6 +1268,10 @@
     type: 'speed',
     element: 'water',
     description: 'Enables nimble movements when HP is full, increasing attack and defense.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' },
+    ],
     sizes: ['Dancer (S)', 'Dancer (L)', 'Dancer (XL)'],
   },
 
@@ -1250,6 +1282,10 @@
     type: 'speed',
     element: 'water',
     description: 'Enables nimble movements when HP is full, greatly increasing attack and defense.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.15, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.15, op: 'additive' },
+    ],
     sizes: ['Dancer (S)', 'Dancer (M)', 'Dancer (XL)'],
   },
 
@@ -1260,6 +1296,10 @@
     type: 'speed',
     element: 'water',
     description: 'Enables nimble movements when HP is full, significantly increasing attack and defense.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.2, op: 'additive' },
+    ],
     sizes: ['Dancer (S)', 'Dancer (M)', 'Dancer (L)'],
   },
 
@@ -1638,6 +1678,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Slightly increases damage dealt by dragon attacks.',
+    details: [{ type: 'damageDone', element: 'dragon', value: 1.05, op: 'multiplier' }],
     sizes: ['Dragon Atk Boost (M)', 'Dragon Atk Boost (L)', 'Dragon Atk Boost (XL)'],
   },
 
@@ -1648,6 +1689,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Increases damage dealt by dragon attacks.',
+    details: [{ type: 'damageDone', element: 'dragon', value: 1.1, op: 'multiplier' }],
     sizes: ['Dragon Atk Boost (S)', 'Dragon Atk Boost (L)', 'Dragon Atk Boost (XL)'],
   },
 
@@ -1658,6 +1700,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Greatly increases damage dealt by dragon attacks.',
+    details: [{ type: 'damageDone', element: 'dragon', value: 1.15, op: 'multiplier' }],
     sizes: ['Dragon Atk Boost (S)', 'Dragon Atk Boost (M)', 'Dragon Atk Boost (XL)'],
   },
 
@@ -1668,6 +1711,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Significantly increases damage dealt by dragon attacks.',
+    details: [{ type: 'damageDone', element: 'dragon', value: 1.2, op: 'multiplier' }],
     sizes: ['Dragon Atk Boost (S)', 'Dragon Atk Boost (M)', 'Dragon Atk Boost (L)'],
   },
 
@@ -1733,6 +1777,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Slightly reduces damage taken from dragon attacks.',
+    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.15, op: 'additive' }], // TODO no source
     sizes: ['Dragon Def Boost (M)', 'Dragon Def Boost (L)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1743,6 +1788,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Reduces damage taken from dragon attacks.',
+    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (L)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1753,6 +1799,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases dragon resistance, reducing damage taken from dragon attacks.',
+    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.25, op: 'additive' }], // TODO no source
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (M)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1763,6 +1810,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases dragon resistance, greatly reducing damage taken from dragon attacks.',
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.3, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (M)', 'Dragon Def Boost (L)'],
   },
 
@@ -2584,6 +2632,7 @@
     type: 'power',
     element: 'fire',
     description: 'Slightly increases damage dealt by fire attacks.',
+    details: [{ type: 'damageDone', element: 'fire', value: 1.05, op: 'multiplier' }],
     sizes: ['Fire Atk Boost (M)', 'Fire Atk Boost (L)', 'Fire Atk Boost (XL)'],
   },
 
@@ -2594,6 +2643,7 @@
     type: 'power',
     element: 'fire',
     description: 'Increases damage dealt by fire attacks.',
+    details: [{ type: 'damageDone', element: 'fire', value: 1.1, op: 'multiplier' }],
     sizes: ['Fire Atk Boost (S)', 'Fire Atk Boost (L)', 'Fire Atk Boost (XL)'],
   },
 
@@ -2604,6 +2654,7 @@
     type: 'power',
     element: 'fire',
     description: 'Greatly increases damage dealt by fire attacks.',
+    details: [{ type: 'damageDone', element: 'fire', value: 1.15, op: 'multiplier' }],
     sizes: ['Fire Atk Boost (S)', 'Fire Atk Boost (M)', 'Fire Atk Boost (XL)'],
   },
 
@@ -2614,6 +2665,7 @@
     type: 'power',
     element: 'fire',
     description: 'Significantly increases damage dealt by fire attacks.',
+    details: [{ type: 'damageDone', element: 'fire', value: 1.2, op: 'multiplier' }],
     sizes: ['Fire Atk Boost (S)', 'Fire Atk Boost (M)', 'Fire Atk Boost (L)'],
   },
 
@@ -2639,6 +2691,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Slightly reduces damage taken from fire attacks.',
+    // details: [{ type: 'damageTaken', element: 'fire', value: -0.15, op: 'additive' }], // TODO no source
     sizes: ['Fire Def Boost (M)', 'Fire Def Boost (L)', 'Fire Def Boost (XL)'],
   },
 
@@ -2649,6 +2702,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Reduces damage taken from fire attacks.',
+    // details: [{ type: 'damageTaken', element: 'fire', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (L)', 'Fire Def Boost (XL)'],
   },
 
@@ -2659,6 +2713,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Increases fire resistance, reducing damage taken from fire attacks.',
+    // details: [{ type: 'damageTaken', element: 'fire', value: -0.25, op: 'additive' }], // TODO no source
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (M)', 'Fire Def Boost (XL)'],
   },
 
@@ -2669,6 +2724,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Increases fire resistance, greatly reducing damage taken from fire attacks.',
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.3, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (M)', 'Fire Def Boost (L)'],
   },
 
@@ -3259,6 +3315,7 @@
     type: 'power',
     element: 'none',
     description: 'Slightly increases maximum HP.',
+    details: [{ type: 'hp', value: 1.05, op: 'multiplier' }],
     sizes: ['Health Boost (M)', 'Health Boost (L)', 'Health Boost (XL)'],
   },
 
@@ -3269,6 +3326,7 @@
     type: 'power',
     element: 'none',
     description: 'Increases maximum HP.',
+    details: [{ type: 'hp', value: 1.1, op: 'multiplier' }],
     sizes: ['Health Boost (S)', 'Health Boost (L)', 'Health Boost (XL)'],
   },
 
@@ -3279,6 +3337,7 @@
     type: 'power',
     element: 'none',
     description: 'Greatly increases maximum HP.',
+    details: [{ type: 'hp', value: 1.15, op: 'multiplier' }],
     sizes: ['Health Boost (S)', 'Health Boost (M)', 'Health Boost (XL)'],
   },
 
@@ -3289,6 +3348,7 @@
     type: 'power',
     element: 'none',
     description: 'Significantly increases maximum HP.',
+    details: [{ type: 'hp', value: 1.2, op: 'multiplier' }],
     sizes: ['Health Boost (S)', 'Health Boost (M)', 'Health Boost (L)'],
   },
 
@@ -3497,6 +3557,7 @@
     type: 'power',
     element: 'fire',
     description: 'Slightly increases damage dealt at 50% HP or less.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.05, op: 'additive' }],
     sizes: ['Heroics (M)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3507,6 +3568,7 @@
     type: 'power',
     element: 'fire',
     description: 'Increases damage dealt at 50% HP or less.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
     sizes: ['Heroics (S)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3517,6 +3579,7 @@
     type: 'power',
     element: 'fire',
     description: 'Greatly increases damage dealt at 50% HP or less.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.15, op: 'additive' }],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (XL)'],
   },
 
@@ -3527,6 +3590,7 @@
     type: 'power',
     element: 'fire',
     description: 'Significantly increases damage dealt at 50% HP or less.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.25?
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (L)'],
   },
 
@@ -3727,6 +3791,7 @@
     type: 'power',
     element: 'ice',
     description: 'Slightly increases damage dealt by ice attacks.',
+    details: [{ type: 'damageDone', element: 'ice', value: 1.05, op: 'multiplier' }],
     sizes: ['Ice Atk Boost (M)', 'Ice Atk Boost (L)', 'Ice Atk Boost (XL)'],
   },
 
@@ -3737,6 +3802,7 @@
     type: 'power',
     element: 'ice',
     description: 'Increases damage dealt by ice attacks.',
+    details: [{ type: 'damageDone', element: 'ice', value: 1.1, op: 'multiplier' }],
     sizes: ['Ice Atk Boost (S)', 'Ice Atk Boost (L)', 'Ice Atk Boost (XL)'],
   },
 
@@ -3747,6 +3813,7 @@
     type: 'power',
     element: 'ice',
     description: 'Greatly increases damage dealt by ice attacks.',
+    details: [{ type: 'damageDone', element: 'ice', value: 1.15, op: 'multiplier' }],
     sizes: ['Ice Atk Boost (S)', 'Ice Atk Boost (M)', 'Ice Atk Boost (XL)'],
   },
 
@@ -3757,6 +3824,7 @@
     type: 'power',
     element: 'ice',
     description: 'Significantly increases damage dealt by ice attacks.',
+    details: [{ type: 'damageDone', element: 'ice', value: 1.2, op: 'multiplier' }],
     sizes: ['Ice Atk Boost (S)', 'Ice Atk Boost (M)', 'Ice Atk Boost (L)'],
   },
 
@@ -3799,6 +3867,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly reduces damage taken from ice attacks.',
+    // details: [{ type: 'damageTaken', element: 'ice', value: -0.15, op: 'additive' }], // TODO no source
     sizes: ['Ice Def Boost (M)', 'Ice Def Boost (L)', 'Ice Def Boost (XL)'],
   },
 
@@ -3809,6 +3878,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Reduces damage taken from ice attacks.',
+    // details: [{ type: 'damageTaken', element: 'ice', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (L)', 'Ice Def Boost (XL)'],
   },
 
@@ -3819,6 +3889,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases ice resistance, reducing damage taken from ice attacks.',
+    // details: [{ type: 'damageTaken', element: 'ice', value: -0.25, op: 'additive' }], // TODO no source
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (M)', 'Ice Def Boost (XL)'],
   },
 
@@ -3829,6 +3900,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases ice resistance, greatly reducing damage taken from ice attacks.',
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.3, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (M)', 'Ice Def Boost (L)'],
   },
 
@@ -4637,6 +4709,7 @@
     type: 'power',
     element: 'none',
     description: 'Slightly increases damage dealt by non-elemental attacks.',
+    details: [{ type: 'damageDone', element: 'none', value: 1.05, op: 'multiplier' }],
     sizes: ['Non-Elem Atk Boost (M)', 'Non-Elem Atk Boost (L)', 'Non-Elem Atk Boost (XL)'],
   },
 
@@ -4647,6 +4720,7 @@
     type: 'power',
     element: 'none',
     description: 'Increases damage dealt by non-elemental attacks.',
+    details: [{ type: 'damageDone', element: 'none', value: 1.1, op: 'multiplier' }],
     sizes: ['Non-Elem Atk Boost (S)', 'Non-Elem Atk Boost (L)', 'Non-Elem Atk Boost (XL)'],
   },
 
@@ -4657,6 +4731,7 @@
     type: 'power',
     element: 'none',
     description: 'Greatly increases damage dealt by non-elemental attacks.',
+    details: [{ type: 'damageDone', element: 'none', value: 1.15, op: 'multiplier' }],
     sizes: ['Non-Elem Atk Boost (S)', 'Non-Elem Atk Boost (M)', 'Non-Elem Atk Boost (XL)'],
   },
 
@@ -4667,6 +4742,7 @@
     type: 'power',
     element: 'none',
     description: 'Significantly increases damage dealt by non-elemental attacks.',
+    details: [{ type: 'damageDone', element: 'none', value: 1.2, op: 'multiplier' }],
     sizes: ['Non-Elem Atk Boost (S)', 'Non-Elem Atk Boost (M)', 'Non-Elem Atk Boost (L)'],
   },
 
@@ -4677,6 +4753,7 @@
     type: 'technical',
     element: 'none',
     description: 'Slightly reduces damage taken from non-elemental attacks.',
+    // details: [{ type: 'damageTaken', element: 'none', value: -0.15, op: 'additive' }], // TODO no source
     sizes: ['Non-Elem Def Boost (M)', 'Non-Elem Def Boost (L)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4687,6 +4764,7 @@
     type: 'technical',
     element: 'none',
     description: 'Reduces damage taken from non-elemental attacks.',
+    // details: [{ type: 'damageTaken', element: 'none', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (L)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4697,6 +4775,7 @@
     type: 'technical',
     element: 'none',
     description: 'Increases non-elemental resistance, reducing damage taken from non-elemental attacks.',
+    // details: [{ type: 'damageTaken', element: 'none', value: -0.25, op: 'additive' }], // TODO no source
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (M)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4707,6 +4786,7 @@
     type: 'technical',
     element: 'none',
     description: 'Increases non-elemental resistance, greatly reducing damage taken from non-elemental attacks.',
+    details: [{ type: 'damageTaken', element: 'none', value: -0.3, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (M)', 'Non-Elem Def Boost (L)'],
   },
 
@@ -5546,6 +5626,7 @@
     type: 'power',
     element: 'none',
     description: 'Slightly increases damage dealt to enemies with abnormal statuses.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.05, op: 'additive' }],
     sizes: ['Salt in Wound (M)', 'Salt in Wound (L)', 'Salt in Wound (XL)'],
   },
 
@@ -5556,6 +5637,7 @@
     type: 'power',
     element: 'none',
     description: 'Increases damage dealt to enemies with abnormal statuses.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (L)', 'Salt in Wound (XL)'],
   },
 
@@ -5566,6 +5648,7 @@
     type: 'power',
     element: 'none',
     description: 'Greatly increases damage dealt to enemies with abnormal statuses.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.15, op: 'additive' }],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (XL)'],
   },
 
@@ -5576,6 +5659,7 @@
     type: 'power',
     element: 'none',
     description: 'Significantly increases damage dealt to enemies with abnormal statuses.',
+    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.1?
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (L)'],
   },
 
@@ -6198,6 +6282,7 @@
     type: 'power',
     element: 'water',
     description: 'Slightly increases starting Stamina.',
+    // details: [{ type: 'startingStamina', value: 5 }], // TODO no source
     sizes: ['Stamina Boost (M)', 'Stamina Boost (L)', 'Stamina Boost (XL)'],
   },
 
@@ -6208,6 +6293,7 @@
     type: 'power',
     element: 'water',
     description: 'Increases starting Stamina.',
+    // details: [{ type: 'startingStamina', value: 10 }], // TODO no source
     sizes: ['Stamina Boost (S)', 'Stamina Boost (L)', 'Stamina Boost (XL)'],
   },
 
@@ -6218,6 +6304,7 @@
     type: 'power',
     element: 'water',
     description: 'Greatly increases starting Stamina.',
+    // details: [{ type: 'startingStamina', value: 15 }], // TODO no source
     sizes: ['Stamina Boost (S)', 'Stamina Boost (M)', 'Stamina Boost (XL)'],
   },
 
@@ -6228,6 +6315,7 @@
     type: 'power',
     element: 'water',
     description: 'Significantly increases starting Stamina.',
+    details: [{ type: 'startingStamina', value: 20 }],
     sizes: ['Stamina Boost (S)', 'Stamina Boost (M)', 'Stamina Boost (L)'],
   },
 
@@ -6238,6 +6326,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Slightly increases Stamine regeneration.',
+    // details: [{ type: 'staminaRecovery', value: 3 }], // TODO no source
     sizes: ['Stamina Surge (M)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6248,6 +6337,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Increases Stamine regeneration.',
+    // details: [{ type: 'staminaRecovery', value: 4 }], // TODO no source
     sizes: ['Stamina Surge (S)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6258,6 +6348,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Greatly increases Stamine regeneration.',
+    // details: [{ type: 'staminaRecovery', value: 5 }], // TODO no source
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (XL)'],
   },
 
@@ -6268,6 +6359,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Significantly increases Stamine regeneration.',
+    details: [{ type: 'staminaRecovery', value: 6 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (L)'],
   },
 
@@ -6518,6 +6610,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Slightly increases damage dealt by thunder attacks.',
+    details: [{ type: 'damageDone', element: 'thunder', value: 1.05, op: 'multiplier' }],
     sizes: ['Thunder Atk Boost (M)', 'Thunder Atk Boost (L)', 'Thunder Atk Boost (XL)'],
   },
 
@@ -6528,6 +6621,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Increases damage dealt by thunder attacks.',
+    details: [{ type: 'damageDone', element: 'thunder', value: 1.1, op: 'multiplier' }],
     sizes: ['Thunder Atk Boost (S)', 'Thunder Atk Boost (L)', 'Thunder Atk Boost (XL)'],
   },
 
@@ -6538,6 +6632,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Greatly increases damage dealt by thunder attacks.',
+    details: [{ type: 'damageDone', element: 'thunder', value: 1.15, op: 'multiplier' }],
     sizes: ['Thunder Atk Boost (S)', 'Thunder Atk Boost (M)', 'Thunder Atk Boost (XL)'],
   },
 
@@ -6548,6 +6643,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Significantly increases damage dealt by thunder attacks.',
+    details: [{ type: 'damageDone', element: 'thunder', value: 1.2, op: 'multiplier' }],
     sizes: ['Thunder Atk Boost (S)', 'Thunder Atk Boost (M)', 'Thunder Atk Boost (L)'],
   },
 
@@ -6589,6 +6685,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Slightly reduces damage taken from thunder attacks.',
+    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.15, op: 'additive' }], // TODO no source
     sizes: ['Thunder Def Boost (M)', 'Thunder Def Boost (L)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6599,6 +6696,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Reduces damage taken from thunder attacks.',
+    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (L)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6609,6 +6707,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases thunder resistance, reducing damage taken from thunder attacks.',
+    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.25, op: 'additive' }], // TODO no source
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (M)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6619,6 +6718,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases thunder resistance, greatly reducing damage taken from thunder attacks.',
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.3, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (M)', 'Thunder Def Boost (L)'],
   },
 
@@ -7404,6 +7504,7 @@
     type: 'technical',
     element: 'water',
     description: 'Slightly reduces damage taken from water attacks.',
+    // details: [{ type: 'damageTaken', element: 'water', value: -0.15, op: 'additive' }], // TODO no source
     sizes: ['Water Def Boost (M)', 'Water Def Boost (L)', 'Water Def Boost (XL)'],
   },
 
@@ -7414,6 +7515,7 @@
     type: 'technical',
     element: 'water',
     description: 'Reduces damage taken from water attacks.',
+    // details: [{ type: 'damageTaken', element: 'water', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Water Def Boost (S)', 'Water Def Boost (L)', 'Water Def Boost (XL)'],
   },
 
@@ -7424,6 +7526,7 @@
     type: 'technical',
     element: 'water',
     description: 'Increases water resistance, reducing damage taken from water attacks.',
+    // details: [{ type: 'damageTaken', element: 'water', value: -0.25, op: 'additive' }], // TODO no source
     sizes: ['Water Def Boost (S)', 'Water Def Boost (M)', 'Water Def Boost (XL)'],
   },
 
@@ -7434,6 +7537,7 @@
     type: 'technical',
     element: 'water',
     description: 'Increases water resistance, greatly reducing damage taken from water attacks.',
+    details: [{ type: 'damageTaken', element: 'water', value: -0.3, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (M)', 'Water Def Boost (L)'],
   },
 

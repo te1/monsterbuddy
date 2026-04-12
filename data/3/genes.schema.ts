@@ -112,6 +112,26 @@ export const SkillEffectTypeSchema = z.enum([
 ]);
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
+export const SkillDetailValueSchema = z.object({
+  type: z.enum(['critRate', 'staminaRecovery', 'startingStamina']),
+  value: z.number(),
+});
+export type SkillDetailValue = z.infer<typeof SkillDetailValueSchema>;
+
+export const SkillDetailFactorSchema = z.object({
+  type: z.enum(['damageDone', 'damageTaken', 'staminaCost', 'hp']),
+  element: GeneElementSchema.optional(),
+  value: z.number(),
+  op: z.enum(['multiplier', 'additive']),
+});
+export type SkillDetailFactor = z.infer<typeof SkillDetailFactorSchema>;
+
+export const SkillDetailSchema = z.discriminatedUnion('type', [
+  SkillDetailValueSchema,
+  SkillDetailFactorSchema,
+]);
+export type SkillDetail = z.infer<typeof SkillDetailSchema>;
+
 export const GeneSchema = z.object({
   name: z.string(),
   baseName: z.string().optional(),
@@ -133,6 +153,7 @@ export const GeneSchema = z.object({
   buff: z.array(SkillBuffSchema).optional(),
   debuff: z.array(SkillDebuffSchema).optional(),
   effect: z.array(SkillEffectTypeSchema).optional(),
+  details: z.array(SkillDetailSchema).optional(),
   sizes: z.array(z.string()).optional(),
 });
 export type Gene = z.infer<typeof GeneSchema>;
