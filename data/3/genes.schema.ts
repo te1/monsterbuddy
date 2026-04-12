@@ -44,6 +44,8 @@ export const SkillBuffTypeSchema = z.enum([
   'Speed Up',
   'Critical Up',
   'Wyvernfell Up',
+  'Blood Rite',
+  'Lock-On',
   'Ailment Inflict Rate Up',
   'Defense Up',
   'Fire Defense Up',
