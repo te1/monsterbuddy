@@ -28,7 +28,8 @@
     }"
   >
     <span
-      class="underline decoration-neutral-600 decoration-dotted underline-offset-4 dark:decoration-neutral-400"
+      class="decoration-neutral-600 decoration-dotted underline-offset-4 dark:decoration-neutral-400"
+      :class="{ underline: !!tooltip }"
       @click="toggle"
     >
       <slot>

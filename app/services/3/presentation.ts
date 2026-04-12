@@ -441,3 +441,13 @@ export function formatSkillEffect(effect: SkillEffectType): string {
       return 'Paralysis';
   }
 }
+
+export function formatSkillEffectDetails(effect: SkillEffectType): string {
+  switch (effect) {
+    case 'stun':
+      return 'Target is unable to act this turn';
+
+    default:
+      return '';
+  }
+}
