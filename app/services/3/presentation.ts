@@ -8,6 +8,7 @@ import type {
   MonsterTag,
   RidingActionType,
   SkillAilmentType,
+  SkillBuffTurns,
   SkillBuffType,
   SkillDebuffType,
   SkillEffectType,
@@ -367,6 +368,28 @@ export function formatSkillDebuff(debuff: SkillDebuffType): string {
 
     default:
       return debuff;
+  }
+}
+
+export function formatSkillBuffTurns(turns: SkillBuffTurns): string {
+  switch (turns) {
+    case '1':
+      return '1 turn';
+
+    case '2':
+      return '2 turns';
+
+    case '3':
+      return '3 turns';
+
+    case 'thisTurn':
+      return 'this turn';
+
+    case 'nextTurn':
+      return 'next turn';
+
+    case 'next2Turn':
+      return 'next 2 turns';
   }
 }
 

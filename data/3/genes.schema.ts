@@ -68,10 +68,22 @@ export const SkillBuffSizeSchema = z.enum([
 ]);
 export type SkillBuffSize = z.infer<typeof SkillBuffSizeSchema>;
 
+export const SkillBuffTurnsSchema = z.enum([
+  //
+  '1',
+  '2',
+  '3',
+  'thisTurn',
+  'nextTurn',
+  'next2Turn',
+]);
+export type SkillBuffTurns = z.infer<typeof SkillBuffTurnsSchema>;
+
 export const SkillBuffSchema = z.object({
   type: SkillBuffTypeSchema,
   size: SkillBuffSizeSchema.optional(),
   target: SkillTargetSchema,
+  turns: SkillBuffTurnsSchema.optional(),
 });
 export type SkillBuff = z.infer<typeof SkillBuffSchema>;
 
@@ -92,6 +104,7 @@ export const SkillDebuffSchema = z.object({
   type: SkillDebuffTypeSchema,
   size: SkillBuffSizeSchema.optional(),
   target: SkillTargetSchema,
+  turns: SkillBuffTurnsSchema.optional(),
 });
 export type SkillDebuff = z.infer<typeof SkillDebuffSchema>;
 

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
-  import { formatGeneElement, formatGeneType, formatSkillEffect } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
@@ -123,6 +122,9 @@
         <span v-text="buff.type" />
         <S3BuffSize :size="buff.size" />
         <span class="text-muted">on <S3SkillTarget :target="buff.target" /></span>
+        <span v-if="buff.turns != null" class="text-muted">
+          ({{ formatSkillBuffTurns(buff.turns) }})
+        </span>
       </div>
     </div>
 
@@ -133,6 +135,9 @@
         <span v-text="debuff.type" />
         <S3BuffSize :size="debuff.size" />
         <span class="text-muted">on <S3SkillTarget :target="debuff.target" /></span>
+        <span v-if="debuff.turns != null" class="text-muted">
+          ({{ formatSkillBuffTurns(debuff.turns) }})
+        </span>
       </div>
     </div>
 
