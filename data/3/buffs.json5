@@ -1,0 +1,97 @@
+{
+  buffs: [
+    {
+      name: 'Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Non-Elemental Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'none', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'none', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'none', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Fire Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'fire', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'fire', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'fire', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Water Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'water', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'water', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'water', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Thunder Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'thunder', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'thunder', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'thunder', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Ice Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'ice', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'ice', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'ice', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Dragon Attack Up',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'dragon', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'dragon', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'dragon', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Power Charge',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'all', value: 1.45, op: 'multiplier' }, // TODO 1.66?
+        { size: 'M', type: 'damageDone', element: 'all', value: 1.55, op: 'multiplier' }, // TODO 1.94?
+        { size: 'L', type: 'damageDone', element: 'all', value: 2, op: 'multiplier' }, // TODO 2.41?
+      ],
+    },
+
+    {
+      name: 'Critical Up',
+      sizes: [
+        { size: 'S', type: 'critRate', value: 10 },
+        { size: 'M', type: 'critRate', value: 15 },
+        { size: 'L', type: 'critRate', value: 20 },
+      ],
+    },
+
+    {
+      name: 'Blood Rite',
+      description: 'Lose some health at the end of every turn. Damage done is increased and all attacks steal health.',
+      sizes: [{ type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }],
+    },
+
+    {
+      name: 'Regenerate',
+      sizes: [{ type: 'maxHpRecovery', value: 0.1 }],
+    },
+  ],
+
+  debuffs: [],
+}
