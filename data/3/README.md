@@ -30,6 +30,8 @@
     - 8 -> 15%
     - 10 -> 20%
 
+- 'STAB' is 10%, e.g. a fire monster (or dual element fire) will deal 10% increased fire damage
+
 - Ailment resistance converts to hit chance
   - +2 -> 0%
   - +1 -> 30%
