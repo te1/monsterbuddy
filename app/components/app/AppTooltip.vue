@@ -10,7 +10,7 @@
   const open = ref(false);
 
   function toggle() {
-    if (props.tooltip == null) {
+    if (!props.tooltip) {
       return;
     }
     open.value = !open.value;
