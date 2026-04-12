@@ -145,23 +145,23 @@ export function elementalResistanceTooltip(element: ElementType, intensity: numb
 
   switch (intensity) {
     case -2:
-      modifier = 'greatly increased';
+      modifier = 'greatly increased (×1.5)';
       break;
 
     case -1:
-      modifier = 'increased';
+      modifier = 'increased (×1.25)';
       break;
 
     case 0:
-      modifier = 'normal';
+      modifier = 'normal (×1.0)';
       break;
 
     case 1:
-      modifier = 'reduced';
+      modifier = 'reduced (×0.9)';
       break;
 
     case 2:
-      modifier = 'greatly reduced';
+      modifier = 'greatly reduced (×0.7)';
       break;
 
     default:
