@@ -17,6 +17,7 @@ export type {
   SkillBuffTurns,
   SkillBuffType,
   SkillDebuffType,
+  SkillDetail,
   SkillEffectType,
   SkillTarget,
 } from '~~/data/3/genes.schema';

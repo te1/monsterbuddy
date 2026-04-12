@@ -1,5 +1,11 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
+  import {
+    formatGeneElement,
+    formatGeneType,
+    formatSkillBuffTurns,
+    formatSkillEffect,
+  } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
@@ -87,7 +93,7 @@
       </div>
     </div>
 
-    <div v-if="gene.target != null || gene.breath" class="@container">
+    <div v-if="gene.target != null || gene.breath || gene.details" class="@container">
       <div class="text-lg font-semibold">Characteristics</div>
 
       <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
@@ -99,6 +105,10 @@
         <div v-if="gene.breath">
           Grants <AppNuxtLink to="/3/riding-actions/breath" text="Breath" /> Riding Action
         </div>
+
+        <template v-if="gene.details && gene.details.length > 0">
+          <S3GeneDetail v-for="detail in gene.details" :key="detail.type" :detail="detail" />
+        </template>
       </div>
     </div>
 
