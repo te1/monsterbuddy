@@ -113,13 +113,13 @@ export const SkillEffectTypeSchema = z.enum([
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
 export const SkillDetailValueSchema = z.object({
-  type: z.enum(['critRate', 'staminaRecovery', 'startingStamina']),
+  type: z.enum(['critRate', 'staminaRecovery', 'startingStamina', 'maxHpRecovery', 'kinship']),
   value: z.number(),
 });
 export type SkillDetailValue = z.infer<typeof SkillDetailValueSchema>;
 
 export const SkillDetailFactorSchema = z.object({
-  type: z.enum(['damageDone', 'damageTaken', 'staminaCost', 'hp']),
+  type: z.enum(['damageDone', 'damageTaken', 'staminaCost', 'maxHp', 'kinshipGeneration']),
   element: GeneElementSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']),
