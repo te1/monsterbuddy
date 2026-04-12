@@ -129,13 +129,8 @@
     <div v-if="gene.buffs && gene.buffs.length > 0">
       <div class="text-lg font-semibold">Buffs</div>
 
-      <div v-for="buff in gene.buffs" :key="buff.type" class="flex gap-1">
-        <span v-text="buff.type" />
-        <S3BuffSize :size="buff.size" />
-        <span class="text-muted">on <S3SkillTarget :target="buff.target" /></span>
-        <span v-if="buff.turns != null" class="text-muted">
-          ({{ formatSkillBuffTurns(buff.turns) }})
-        </span>
+      <div class="flex flex-col gap-1">
+        <S3GeneBuffDetails v-for="buff in gene.buffs" :key="buff.type" :buff="buff" />
       </div>
     </div>
 

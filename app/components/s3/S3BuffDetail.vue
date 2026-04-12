@@ -1,41 +1,33 @@
 <script lang="ts" setup>
-  import type { SkillDetail } from '~/services/3/types';
+  import type { BuffDetail } from '~/services/3/types';
+  import { formatGeneElement } from '~/services/3/presentation';
 
-  const props = defineProps<{ detail: SkillDetail }>();
+  const props = withDefaults(
+    defineProps<{
+      detail: BuffDetail;
+      showSize?: boolean;
+    }>(),
+    {
+      showSize: false,
+    }
+  );
 
   const label = computed(() => {
     switch (props.detail.type) {
-      // -- SkillDetailValue
+      case 'damageDone':
+        if (props.detail.element == null) {
+          return 'Damage done';
+        }
+        if (props.detail.element === 'all') {
+          return 'All damage done';
+        }
+        return `${formatGeneElement(props.detail.element)} damage done`;
+
       case 'critRate':
-        return 'Crit Rate';
-
-      case 'staminaRecovery':
-        return 'Stamina Recovery';
-
-      case 'startingStamina':
-        return 'Starting Stamina';
+        return 'Crit rate';
 
       case 'maxHpRecovery':
-        return 'Max HP Recovery';
-
-      case 'kinship':
-        return 'Kinship';
-
-      // -- SkillDetailFactor
-      case 'damageDone':
-        return 'Damage Done';
-
-      case 'damageTaken':
-        return 'Damage Taken';
-
-      case 'staminaCost':
-        return 'Stamina Cost';
-
-      case 'maxHp':
-        return 'Max HP';
-
-      case 'kinshipGeneration':
-        return 'Kinship Generation';
+        return 'Max HP recovery per turn';
 
       default:
         return undefined;
@@ -81,20 +73,14 @@
 
   const value = computed(() => {
     switch (props.detail.type) {
-      // -- SkillDetailValue
+      case 'damageDone':
+        return `${op.value}${valueForOp.value}`;
+
       case 'critRate':
         return `+${props.detail.value}%`;
 
       case 'maxHpRecovery':
         return `${props.detail.value * 100}%`;
-
-      // -- SkillDetailFactor
-      case 'damageDone':
-      case 'damageTaken':
-      case 'staminaCost':
-      case 'maxHp':
-      case 'kinshipGeneration':
-        return `${op.value}${valueForOp.value}`;
 
       default:
         return props.detail.value;
@@ -103,8 +89,9 @@
 </script>
 
 <template>
-  <div class="flex items-center justify-between gap-2">
-    <div v-text="label" />
-    <div class="font-semibold" v-text="value" />
+  <div class="space-x-1">
+    <span v-if="showSize" class="inline-block min-w-5 font-semibold" v-text="detail.size" />
+    <span v-text="label" />
+    <span class="font-semibold" v-text="value" />
   </div>
 </template>
