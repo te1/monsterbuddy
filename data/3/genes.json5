@@ -4996,6 +4996,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills slightly faster at 50% HP or less.',
+    // details: [{ type: 'kinshipGeneration', value: 1.25, op: 'multiplier' }], // TODO no source
     sizes: ['Partner (M)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5006,6 +5007,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills faster at 50% HP or less.',
+    // details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }], // TODO no source
     sizes: ['Partner (S)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5016,6 +5018,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills much faster at 50% HP or less.',
+    // details: [{ type: 'kinshipGeneration', value: 1.75, op: 'multiplier' }], // TODO no source
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (XL)'],
   },
 
@@ -5026,6 +5029,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills significantly faster at 50% HP or less.',
+    details: [{ type: 'kinshipGeneration', value: 2, op: 'multiplier' }],
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (L)'],
   },
 
@@ -7444,6 +7448,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly increases Crit Rate at 50% HP or less.',
+    // details: [{ type: 'critRate', value: 10 }], // TODO no source
     sizes: ['Vigilance (M)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7454,6 +7459,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases Crit Rate at 50% HP or less.',
+    // details: [{ type: 'critRate', value: 20 }], // TODO no source
     sizes: ['Vigilance (S)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7464,6 +7470,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Greatly increases Crit Rate at 50% HP or less.',
+    // details: [{ type: 'critRate', value: 30 }], // TODO no source
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (XL)'],
   },
 
@@ -7474,6 +7481,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Significantly increases Crit Rate at 50% HP or less.',
+    details: [{ type: 'critRate', value: 40 }], // TODO is that real?
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (L)'],
   },
 
