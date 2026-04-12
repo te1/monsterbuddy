@@ -200,34 +200,34 @@ export function formatAilment(ailment: AilmentType) {
 }
 
 export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number | null) {
-  let modifier = '';
+  let chance = '';
 
   switch (intensity) {
     case -2:
-      modifier = 'Greatly increased';
+      chance = 'Greatly increased chance (100%)';
       break;
 
     case -1:
-      modifier = 'Increased';
+      chance = 'Increased chance (70%)';
       break;
 
     case 0:
-      modifier = 'Normal';
+      chance = 'Normal chance (50%)';
       break;
 
     case 1:
-      modifier = 'Reduced';
+      chance = 'Reduced chance (30%)';
       break;
 
     case 2:
-      modifier = 'Greatly reduced';
+      chance = 'Greatly reduced chance (0%)';
       break;
 
     default:
-      modifier = '?';
+      chance = '?';
   }
 
-  return `${modifier} chance to apply ${formatAilment(ailment).toLowerCase()}`;
+  return `${chance} to apply ${formatAilment(ailment).toLowerCase()}`;
 }
 
 export function statsTypeToText(type: StatsType) {
