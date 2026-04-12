@@ -93,5 +93,32 @@
     },
   ],
 
-  debuffs: [],
+  debuffs: [
+    {
+      name: 'Defense Down',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Thunder Defense Down',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'thunder', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'thunder', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'thunder', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      name: 'Dragon Defense Down',
+      sizes: [
+        { size: 'S', type: 'damageDone', element: 'dragon', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'dragon', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'dragon', value: 0.3, op: 'additive' },
+      ],
+    },
+  ],
 }
