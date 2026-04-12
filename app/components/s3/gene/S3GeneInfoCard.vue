@@ -1,33 +1,14 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
   import {
-    formatGeneElement,
-    formatGeneType,
+    formatGeneInfo,
     formatSkillEffect,
     formatSkillEffectDetails,
   } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
-  const info = computed(() => {
-    const result: string[] = [];
-
-    if (props.gene.element != null) {
-      result.push(formatGeneElement(props.gene.element));
-    }
-
-    if (props.gene.type != null && props.gene.type !== 'all') {
-      result.push(formatGeneType(props.gene.type));
-    }
-
-    if (props.gene.active) {
-      result.push('Active');
-    } else {
-      result.push('Passive');
-    }
-
-    return result.join(', ');
-  });
+  const info = computed(() => formatGeneInfo(props.gene));
 
   const effects = computed(() => {
     const ignored = [

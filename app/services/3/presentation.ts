@@ -1,6 +1,7 @@
 import type { MonsterLocationType } from './data';
 import type {
   AilmentType,
+  Gene,
   GeneElement,
   GeneSize,
   GeneType,
@@ -296,6 +297,26 @@ export function formatGeneSize(size: GeneSize): string {
     default:
       return size;
   }
+}
+
+export function formatGeneInfo(gene: Gene): string {
+  const result: string[] = [];
+
+  if (gene.element != null) {
+    result.push(formatGeneElement(gene.element));
+  }
+
+  if (gene.type != null && gene.type !== 'all') {
+    result.push(formatGeneType(gene.type));
+  }
+
+  if (gene.active) {
+    result.push('Active');
+  } else {
+    result.push('Passive');
+  }
+
+  return result.join(', ');
 }
 
 export function formatSkillTarget(target: SkillTarget): string {
