@@ -53,14 +53,10 @@
     }),
   ]);
 
-  defineOgImage(
-    'GeneS3',
-    {
-      gene,
-      description: headline,
-    },
-    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
-  );
+  defineOgImage('GeneS3', { gene, description: headline }, [
+    { key: 'og' },
+    { key: 'whatsapp', width: 800, height: 800 },
+  ]);
 
   const history = useGeneHistoryStore();
 
