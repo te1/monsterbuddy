@@ -375,7 +375,7 @@
     stamina: 20,
     description: 'Grants Non-Elemental Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Non-Elemental Attack Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Non-Elemental Attack Up', size: 'M', target: 'user', turns: 3 }],
   },
 
   {
@@ -466,10 +466,10 @@
     description: 'Grants Thunder Attack Up to the user, but also lowers defense. Greatly increases damage dealt by the user on the next turn.',
     target: 'user',
     buff: [
-      { type: 'Thunder Attack Up', size: 'L', target: 'user' },
-      { type: 'Power Charge', size: 'M', target: 'user' },
+      { type: 'Thunder Attack Up', size: 'L', target: 'user', turns: 3 }, // TODO 1?
+      { type: 'Power Charge', size: 'M', target: 'user', turns: 'nextTurn' },
     ],
-    debuff: [{ type: 'Defense Down', size: 'L', target: 'user' }],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'user', turns: 3 }], // TODO 1?
     effect: ['nextTurn'],
   },
 
@@ -540,12 +540,12 @@
     description: 'Grants Attack Up and Speed Up to all allies, but also reduces Defense and Evasion.',
     target: 'allAllies',
     buff: [
-      { type: 'Attack Up', size: 'L', target: 'allAllies' },
-      { type: 'Speed Up', size: 'L', target: 'allAllies' },
+      { type: 'Attack Up', size: 'L', target: 'allAllies', turns: 3 },
+      { type: 'Speed Up', size: 'L', target: 'allAllies', turns: 3 },
     ],
     debuff: [
-      { type: 'Defense Down', size: 'L', target: 'allAllies' },
-      { type: 'Dodge Down', size: 'L', target: 'allAllies' },
+      { type: 'Defense Down', size: 'L', target: 'allAllies', turns: 3 },
+      { type: 'Dodge Down', size: 'L', target: 'allAllies', turns: 3 },
     ],
   },
 
@@ -588,8 +588,8 @@
     description: 'Grants Dragon Attack Up and Wyvernfell Up to the user.',
     target: 'user',
     buff: [
-      { type: 'Dragon Attack Up', size: 'M', target: 'user' },
-      { type: 'Wyvernfell Up', size: 'M', target: 'user' },
+      { type: 'Dragon Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Wyvernfell Up', size: 'M', target: 'user', turns: 3 },
     ],
   },
 
@@ -617,8 +617,8 @@
     description: 'Grants Fire Attack Up and Fire Defense Up to all allies.',
     target: 'allAllies',
     buff: [
-      { type: 'Fire Attack Up', size: 'S', target: 'allAllies' },
-      { type: 'Fire Defense Up', size: 'S', target: 'allAllies' },
+      { type: 'Fire Attack Up', size: 'S', target: 'allAllies', turns: 3 },
+      { type: 'Fire Defense Up', size: 'S', target: 'allAllies', turns: 3 },
     ],
   },
 
@@ -672,7 +672,10 @@
     stamina: 20,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
     target: 'user',
-    buff: [{ type: 'Power Charge', size: 'S', target: 'user' }],
+    buff: [
+      { type: 'Power Charge', size: 'S', target: 'user', turns: 'nextTurn' },
+      { type: 'Lock-On', target: 'user', turns: 'nextTurn' },
+    ],
     effect: ['nextTurn'],
     sizes: ['Blindside+'],
   },
@@ -687,7 +690,10 @@
     stamina: 15,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
     target: 'user',
-    buff: [{ type: 'Power Charge', size: 'S', target: 'user' }],
+    buff: [
+      { type: 'Power Charge', size: 'S', target: 'user', turns: 'nextTurn' },
+      { type: 'Lock-On', target: 'user', turns: 'nextTurn' },
+    ],
     effect: ['nextTurn'],
     sizes: ['Blindside'],
   },
@@ -747,7 +753,7 @@
     stamina: 30,
     description: 'Increases damage dealt by the user for 2 turns.',
     target: 'user',
-    buff: [{ type: 'Power Charge', size: 'S', target: 'user' }],
+    buff: [{ type: 'Power Charge', size: 'S', target: 'user', turns: 'next2Turn' }],
   },
 
   {
@@ -800,9 +806,9 @@
     description: 'Grants Water Attack Up, Dodge Up, and Regenerate to the user.',
     target: 'user',
     buff: [
-      { type: 'Water Attack Up', size: 'M', target: 'user' },
-      { type: 'Dodge Up', size: 'M', target: 'user' },
-      { type: 'Regenerate', target: 'user' },
+      { type: 'Water Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Dodge Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Regenerate', target: 'user', turns: 3 },
     ],
   },
 
@@ -1006,7 +1012,7 @@
     stamina: 20,
     description: 'Grants Ice Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Ice Attack Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Ice Attack Up', size: 'M', target: 'user', turns: 3 }],
   },
 
   {
@@ -1320,6 +1326,7 @@
     stamina: 20,
     description: 'Grants Blood Rite to the user.',
     target: 'user',
+    buff: [{ type: 'Blood Rite', target: 'user' }], // TODO turns?
   },
 
   {
@@ -1863,7 +1870,7 @@
     stamina: 30,
     description: 'Grants Dragon Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Dragon Attack Up', size: 'L', target: 'user' }],
+    buff: [{ type: 'Dragon Attack Up', size: 'L', target: 'user', turns: 3 }],
   },
 
   {
@@ -1920,7 +1927,7 @@
     description: 'Greatly increases damage dealt by the user on the next turn.',
     target: 'user',
     eggSkill: true,
-    buff: [{ type: 'Power Charge', size: 'L', target: 'user' }],
+    buff: [{ type: 'Power Charge', size: 'L', target: 'user', turns: 'nextTurn' }],
     effect: ['nextTurn'],
   },
 
@@ -2086,7 +2093,7 @@
     description: 'Grants Attack Up to all allies. Each use increases the effect.',
     target: 'allAllies',
     eggSkill: true,
-    buff: [{ type: 'Attack Up', size: 'stacking', target: 'allAllies' }],
+    buff: [{ type: 'Attack Up', size: 'stacking', target: 'allAllies', turns: 3 }],
   },
 
   {
@@ -2099,7 +2106,7 @@
     description: 'Increases damage dealt by all allies on the turn this skill is used, but the user does not attack.',
     target: 'allAllies',
     eggSkill: true,
-    buff: [{ type: 'Power Charge', size: 'S', target: 'allAllies' }],
+    buff: [{ type: 'Power Charge', size: 'S', target: 'allAllies', turns: 'thisTurn' }],
   },
 
   {
@@ -2206,7 +2213,7 @@
     description: 'Grants Critical Up to all allies. Each use increases the effect.',
     target: 'allAllies',
     eggSkill: true,
-    buff: [{ type: 'Critical Up', size: 'stacking', target: 'allAllies' }],
+    buff: [{ type: 'Critical Up', size: 'stacking', target: 'allAllies', turns: 3 }],
   },
 
   {
@@ -2614,7 +2621,7 @@
     stamina: 30,
     description: 'Grants Fire Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Fire Attack Up', size: 'L', target: 'user' }],
+    buff: [{ type: 'Fire Attack Up', size: 'L', target: 'user', turns: 3 }],
   },
 
   {
@@ -2627,8 +2634,8 @@
     description: 'Grants Attack Up to the user, and attacks become capable of inflicting Blastblight.',
     target: 'user',
     buff: [
-      { type: 'Attack Up', size: 'M', target: 'user' },
-      { type: 'Blast Effect', target: 'user' },
+      { type: 'Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Blast Effect', target: 'user', turns: 3 },
     ],
     effect: ['procBlastblight'],
   },
@@ -2807,8 +2814,8 @@
     description: 'Grants Atk up, attacks become capable of inflicting Burn.',
     target: 'user',
     buff: [
-      { type: 'Attack Up', size: 'M', target: 'user' },
-      { type: 'Burn Effect', target: 'user' },
+      { type: 'Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Burn Effect', target: 'user', turns: 3 },
     ],
     effect: ['procBurn'],
   },
@@ -2979,7 +2986,7 @@
     stamina: 15,
     description: 'Increases damage dealt by the user on the next turn.',
     target: 'user',
-    buff: [{ type: 'Power Charge', size: 'M', target: 'user' }],
+    buff: [{ type: 'Power Charge', size: 'M', target: 'user', turns: 'nextTurn' }],
     effect: ['nextTurn'],
   },
 
@@ -3119,8 +3126,8 @@
     description: 'Grants Ice Attack Up and Speed Up to the user.',
     target: 'user',
     buff: [
-      { type: 'Ice Attack Up', size: 'L', target: 'user' },
-      { type: 'Speed Up', size: 'L', target: 'user' },
+      { type: 'Ice Attack Up', size: 'L', target: 'user', turns: 3 },
+      { type: 'Speed Up', size: 'L', target: 'user', turns: 3 },
     ],
   },
 
@@ -3285,8 +3292,8 @@
     description: 'Grants Ailment Inflict Rate Up and Water Attack Up to the user.',
     target: 'user',
     buff: [
-      { type: 'Ailment Inflict Rate Up', target: 'user' },
-      { type: 'Water Attack Up', size: 'L', target: 'user' },
+      { type: 'Ailment Inflict Rate Up', target: 'user', turns: 2 }, // TODO 3?
+      { type: 'Water Attack Up', size: 'L', target: 'user', turns: 2 }, // TODO 3?
     ],
   },
 
@@ -3385,7 +3392,7 @@
     stamina: 20,
     description: 'Grants Fire Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Fire Attack Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Fire Attack Up', size: 'M', target: 'user', turns: 3 }],
   },
 
   {
@@ -3611,7 +3618,7 @@
     stamina: 20,
     description: 'Grants Thunder Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Thunder Attack Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Thunder Attack Up', size: 'M', target: 'user', turns: 3 }],
   },
 
   {
@@ -4398,6 +4405,7 @@
     stamina: 20,
     description: 'For several turns, guarantees attacks by user will hit.',
     target: 'user',
+    buff: [{ type: 'Lock-On', target: 'user' }], // TODO turns?
   },
 
   {
@@ -4533,7 +4541,7 @@
     stamina: 35,
     description: 'Grants Attack Up to all allies.',
     target: 'allAllies',
-    buff: [{ type: 'Attack Up', size: 'L', target: 'allAllies' }],
+    buff: [{ type: 'Attack Up', size: 'L', target: 'allAllies', turns: 3 }],
   },
 
   {
@@ -4557,10 +4565,10 @@
     description: 'Grants Attack Up and Defense Up to the user, but also reduces Speed.',
     target: 'user',
     buff: [
-      { type: 'Attack Up', size: 'M', target: 'user' },
-      { type: 'Defense Up', size: 'M', target: 'user' },
+      { type: 'Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Defense Up', size: 'M', target: 'user', turns: 3 },
     ],
-    debuff: [{ type: 'Speed Down', size: 'L', target: 'user' }],
+    debuff: [{ type: 'Speed Down', size: 'L', target: 'user', turns: 3 }],
     sizes: ['Mud Armor+'],
   },
 
@@ -4575,10 +4583,10 @@
     description: 'Grants Attack Up and Defense Up to the user, but also reduces Speed.',
     target: 'user',
     buff: [
-      { type: 'Attack Up', size: 'M', target: 'user' },
-      { type: 'Defense Up', size: 'M', target: 'user' },
+      { type: 'Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Defense Up', size: 'M', target: 'user', turns: 3 },
     ],
-    debuff: [{ type: 'Speed Down', size: 'L', target: 'user' }],
+    debuff: [{ type: 'Speed Down', size: 'L', target: 'user', turns: 3 }],
     sizes: ['Mud Armor'],
   },
 
@@ -4605,7 +4613,7 @@
     stamina: 20,
     description: 'Grants Water Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Water Attack Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Water Attack Up', size: 'M', target: 'user', turns: 3 }],
   },
 
   {
@@ -5056,7 +5064,7 @@
     stamina: 25,
     description: 'Grants Critical Up to all allies.',
     target: 'allAllies',
-    buff: [{ type: 'Critical Up', size: 'M', target: 'allAllies' }],
+    buff: [{ type: 'Critical Up', size: 'M', target: 'allAllies', turns: 2 }], // TODO 3?
   },
 
   {
@@ -5319,10 +5327,10 @@
     description: 'Grants Attack Up and Wyvernfell Up to the user, but also inflicts Defense Down.',
     target: 'user',
     buff: [
-      { type: 'Attack Up', size: 'L', target: 'user' },
-      { type: 'Wyvernfell Up', size: 'L', target: 'user' },
+      { type: 'Attack Up', size: 'L', target: 'user', turns: 3 },
+      { type: 'Wyvernfell Up', size: 'L', target: 'user', turns: 3 },
     ],
-    debuff: [{ type: 'Defense Down', size: 'L', target: 'user' }],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'user', turns: 3 }],
   },
 
   {
@@ -5891,7 +5899,7 @@
     stamina: 20,
     description: 'Grants Critical Up to the user.',
     target: 'user',
-    buff: [{ type: 'Critical Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Critical Up', size: 'M', target: 'user', turns: 3 }],
   },
 
   {
@@ -6350,7 +6358,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Slightly increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 3 }], // TODO no source
+    // details: [{ type: 'staminaRecovery', value: 1 }], // TODO no source
     sizes: ['Stamina Surge (M)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6361,7 +6369,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 4 }], // TODO no source
+    // details: [{ type: 'staminaRecovery', value: 2 }], // TODO no source
     sizes: ['Stamina Surge (S)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6372,7 +6380,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Greatly increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 5 }], // TODO no source
+    // details: [{ type: 'staminaRecovery', value: 4 }], // TODO no source
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (XL)'],
   },
 
@@ -6439,10 +6447,10 @@
     description: 'Grants Water Attack Up, Thunder Attack Up, Wyvernfell Up, and Defense Up to the user.',
     target: 'user',
     buff: [
-      { type: 'Water Attack Up', size: 'M', target: 'user' },
-      { type: 'Thunder Attack Up', size: 'M', target: 'user' },
-      { type: 'Wyvernfell Up', size: 'L', target: 'user' },
-      { type: 'Defense Up', size: 'M', target: 'user' },
+      { type: 'Water Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Thunder Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Wyvernfell Up', size: 'L', target: 'user', turns: 3 },
+      { type: 'Defense Up', size: 'M', target: 'user', turns: 3 },
     ],
   },
 
@@ -6681,8 +6689,8 @@
     description: 'Grants Attack Up to the user, and attacks become capable of inflicting Paralysis.',
     target: 'user',
     buff: [
-      { type: 'Attack Up', size: 'M', target: 'user' },
-      { type: 'Paralysis Effect', target: 'user' },
+      { type: 'Attack Up', size: 'M', target: 'user', turns: 3 },
+      { type: 'Paralysis Effect', target: 'user', turns: 3 },
     ],
     effect: ['procParalysis'],
   },
@@ -7127,7 +7135,7 @@
     stamina: 30,
     description: 'Grants Thunder Attack Up to the user.',
     target: 'user',
-    buff: [{ type: 'Thunder Attack Up', size: 'L', target: 'user' }],
+    buff: [{ type: 'Thunder Attack Up', size: 'L', target: 'user', turns: 3 }],
   },
 
   {
@@ -7202,10 +7210,10 @@
     description: 'Grants Fire Attack Up to the user, but also lowers defense. Increases damage dealt by the user on the next turn.',
     target: 'user',
     buff: [
-      { type: 'Fire Attack Up', size: 'L', target: 'user' },
-      { type: 'Power Charge', size: 'M', target: 'user' },
+      { type: 'Fire Attack Up', size: 'L', target: 'user', turns: 3 }, // TODO 1?
+      { type: 'Power Charge', size: 'M', target: 'user', turns: 'nextTurn' },
     ],
-    debuff: [{ type: 'Defense Down', size: 'L', target: 'user' }],
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'user', turns: 3 }], // TODO 1?
     effect: ['nextTurn'],
   },
 
@@ -7620,7 +7628,7 @@
     wyvernfell: 20,
     description: "Deals non-elemental damage to one enemy, then recovers the user's HP by an amount relative to damage dealt. Grants Dragon Attack Up to the user.",
     target: 'singleEnemy',
-    buff: [{ type: 'Dragon Attack Up', size: 'M', target: 'user' }],
+    buff: [{ type: 'Dragon Attack Up', size: 'M', target: 'user', turns: 3 }],
     effect: ['leech'],
   },
 
