@@ -652,7 +652,7 @@
     stamina: 20,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
     target: 'user',
-    // TODO buff
+    buff: [{ type: 'Power Charge', size: 'S', target: 'user' }],
     effect: ['nextTurn'],
     sizes: ['Blindside+'],
   },
@@ -667,7 +667,7 @@
     stamina: 15,
     description: 'Increases damage dealt by the user on the next turn. Attacks are guaranteed to hit.',
     target: 'user',
-    // TODO buff
+    buff: [{ type: 'Power Charge', size: 'S', target: 'user' }],
     effect: ['nextTurn'],
     sizes: ['Blindside'],
   },
@@ -4360,7 +4360,7 @@
     wyvernfell: 20,
     description: 'Deals non-elemental damage to one enemy, but also inflicts Defense Down on the user.',
     target: 'singleEnemy',
-    debuff: [{ type: 'Defense Down', target: 'user' }], // TODO size
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'user' }],
     sizes: ['Maximum Claw Slash+'],
   },
 
@@ -4376,7 +4376,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy, but also inflicts Defense Down on the user.',
     target: 'singleEnemy',
-    debuff: [{ type: 'Defense Down', target: 'user' }], // TODO size
+    debuff: [{ type: 'Defense Down', size: 'L', target: 'user' }],
     sizes: ['Maximum Claw Slash'],
   },
 
