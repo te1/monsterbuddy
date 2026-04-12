@@ -124,6 +124,8 @@
       'Non-Elemental Attack Up',
       'Speed Up',
       'Critical Up',
+      'Blood Rite',
+      'Lock-On',
       'Fire Defense Up',
       'Guard',
       'Stamina Regen Up',

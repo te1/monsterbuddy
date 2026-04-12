@@ -93,7 +93,10 @@
       </div>
     </div>
 
-    <div v-if="gene.target != null || gene.breath || gene.details" class="@container">
+    <div
+      v-if="gene.target != null || gene.breath || (gene.details && gene.details.length > 0)"
+      class="@container"
+    >
       <div class="text-lg font-semibold">Characteristics</div>
 
       <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">

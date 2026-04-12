@@ -70,6 +70,8 @@ export const allBuffs: readonly SkillBuffType[] = [
   'Speed Up',
   'Critical Up',
   'Wyvernfell Up',
+  'Blood Rite',
+  'Lock-On',
   'Ailment Inflict Rate Up',
   'Defense Up',
   'Fire Defense Up',
