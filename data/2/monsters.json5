@@ -4891,7 +4891,7 @@
       attackPatterns: {
         DEFAULT: 'technical',
         Enraged: 'speed',
-        // "Charged": "power" // TODO is there a charged phase?
+        Charged: 'power',
       },
       parts: {
         DEFAULT: ['pierce'],
@@ -5035,8 +5035,9 @@
     monster: {
       attackPatterns: {
         DEFAULT: 'power',
-        // "Enraged": "technical", // TODO is there enraged?
+        Enraged: 'power',
         Flying: 'speed',
+        'Enraged + Flying': 'technical',
       },
       parts: {
         Head: ['blunt'],
@@ -5108,8 +5109,9 @@
     monster: {
       attackPatterns: {
         DEFAULT: 'power',
-        // "Enraged": "technical", // TODO is there enraged?
+        Enraged: 'power',
         Flying: 'speed',
+        'Enraged + Flying': 'technical',
       },
       parts: {
         Head: ['blunt'],
@@ -5620,8 +5622,8 @@
       },
       parts: {
         Head: ['slash', 'blunt'],
-        Stomach: ['slash'], // TODO blunt?
-        Tail: ['slash'], // TODO blunt?
+        Stomach: ['slash', 'blunt'],
+        Tail: ['slash', 'blunt'],
         Back: ['slash', 'blunt'],
       },
       elementalWeakness: 'dragon',
