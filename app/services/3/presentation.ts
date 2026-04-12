@@ -330,6 +330,38 @@ export function formatSkillAilment(ailment: SkillAilmentType): string {
   }
 }
 
+export function formatSkillAilmentDetails(ailment: SkillAilmentType): string {
+  const name = formatSkillAilment(ailment);
+
+  switch (ailment) {
+    case 'poison':
+    case 'noxiousPoison':
+    case 'severePoison':
+      return `${name}: deals a percentage of max HP as damage each turn`;
+
+    case 'burn':
+      return `${name}: deals damage each turn and increases damage taken by +20%`;
+
+    case 'paralysis':
+      return `${name}: on every turn there is a chance the target will be unable to act`;
+
+    case 'sleep':
+      return `${name}: unable to act until damaged and next hit is a critical hit`;
+
+    case 'blastblight':
+      return `${name}: deals damage after a number of turns`;
+
+    case 'bleeding':
+      return `${name}: ×2 damage taken on next hit`;
+
+    case 'darkness':
+      return `${name}: chance to miss attacks`;
+
+    default:
+      return name;
+  }
+}
+
 export function formatSkillBuff(buff: SkillBuffType): string {
   switch (buff) {
     case 'Ailment Inflict Rate Up':

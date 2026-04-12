@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { SkillAilmentType } from '~/services/3/types';
-  import { formatSkillAilment } from '~/services/3/presentation';
+  import { formatSkillAilmentDetails } from '~/services/3/presentation';
   import { getAilmentIconUrl } from '~/services/3/assets';
 
   const props = withDefaults(
@@ -13,7 +13,7 @@
     }
   );
 
-  const caption = computed(() => formatSkillAilment(props.ailment));
+  const caption = computed(() => formatSkillAilmentDetails(props.ailment));
   const imageUrl = computed(() => getAilmentIconUrl(props.ailment));
 </script>
 
