@@ -136,7 +136,7 @@
         return 'Unlock camps in the region by defeating feral monsters to increase this bonus';
 
       case 1:
-        return 'Repel or defeat Calamitous Elder Dragons in the region to unlock and increase this bonus';
+        return 'Defeat Calamitous Elder Dragons in the region to unlock this bonus';
 
       default:
         return '';

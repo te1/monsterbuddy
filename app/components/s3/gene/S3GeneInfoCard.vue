@@ -1,34 +1,14 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
   import {
-    formatGeneElement,
-    formatGeneType,
-    formatSkillAilment,
+    formatGeneInfo,
     formatSkillEffect,
-    formatSkillTarget,
+    formatSkillEffectDetails,
   } from '~/services/3/presentation';
 
   const props = defineProps<{ gene: Gene }>();
 
-  const info = computed(() => {
-    const result: string[] = [];
-
-    if (props.gene.element != null) {
-      result.push(formatGeneElement(props.gene.element));
-    }
-
-    if (props.gene.type != null && props.gene.type !== 'all') {
-      result.push(formatGeneType(props.gene.type));
-    }
-
-    if (props.gene.active) {
-      result.push('Active');
-    } else {
-      result.push('Passive');
-    }
-
-    return result.join(', ');
-  });
+  const info = computed(() => formatGeneInfo(props.gene));
 
   const effects = computed(() => {
     const ignored = [
@@ -38,7 +18,7 @@
       'procParalysis',
     ];
 
-    return props.gene.effect?.filter((effect) => !ignored.includes(effect)) ?? [];
+    return props.gene.effects?.filter((effect) => !ignored.includes(effect)) ?? [];
   });
 </script>
 
@@ -94,59 +74,68 @@
       </div>
     </div>
 
-    <div v-if="gene.target != null || gene.breath" class="@container">
+    <div
+      v-if="gene.target != null || gene.breath || (gene.details && gene.details.length > 0)"
+      class="@container"
+    >
       <div class="text-lg font-semibold">Characteristics</div>
 
       <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
         <div v-if="gene.target != null" class="flex items-center justify-between gap-2">
           <div>Target</div>
-          <div v-text="formatSkillTarget(gene.target)" />
+          <div><S3SkillTarget :target="gene.target" /></div>
         </div>
 
         <div v-if="gene.breath">
           Grants <AppNuxtLink to="/3/riding-actions/breath" text="Breath" /> Riding Action
         </div>
+
+        <template v-if="gene.details && gene.details.length > 0">
+          <S3SkillDetail v-for="detail in gene.details" :key="detail.type" :detail="detail" />
+        </template>
       </div>
     </div>
 
-    <div v-if="gene.ailment && gene.ailment.length > 0" class="flex flex-col gap-1">
+    <div v-if="gene.ailments && gene.ailments.length > 0" class="flex flex-col gap-1">
       <div class="text-lg font-semibold">Ailments</div>
 
       <div class="flex gap-2">
-        <UTooltip
-          v-for="ailment in gene.ailment"
+        <S3AilmentIcon
+          v-for="ailment in gene.ailments"
           :key="ailment"
-          :text="formatSkillAilment(ailment)"
-        >
-          <S3AilmentIcon class="-my-1 h-8 w-6 object-cover" :ailment="ailment" noTooltip />
-        </UTooltip>
+          :ailment="ailment"
+          class="-my-1 h-8 w-6 object-cover"
+        />
       </div>
     </div>
 
-    <div v-if="gene.buff && gene.buff.length > 0">
+    <div v-if="gene.buffs && gene.buffs.length > 0">
       <div class="text-lg font-semibold">Buffs</div>
 
-      <div v-for="buff in gene.buff" :key="buff.type" class="flex gap-1">
-        <span v-text="buff.type" />
-        <S3BuffSize :size="buff.size" />
-        <span class="text-muted">on {{ formatSkillTarget(buff.target) }}</span>
+      <div class="flex flex-col gap-1">
+        <S3GeneBuffDetails v-for="buff in gene.buffs" :key="buff.type" :buff="buff" />
       </div>
     </div>
 
-    <div v-if="gene.debuff && gene.debuff.length > 0">
+    <div v-if="gene.debuffs && gene.debuffs.length > 0">
       <div class="text-lg font-semibold">Debuffs</div>
 
-      <div v-for="debuff in gene.debuff" :key="debuff.type" class="flex gap-1">
-        <span v-text="debuff.type" />
-        <S3BuffSize :size="debuff.size" />
-        <span class="text-muted">on {{ formatSkillTarget(debuff.target) }}</span>
+      <div class="flex flex-col gap-1">
+        <S3GeneDebuffDetails v-for="debuff in gene.debuffs" :key="debuff.type" :debuff="debuff" />
       </div>
     </div>
 
     <div v-if="effects.length > 0">
       <div class="text-lg font-semibold">Effects</div>
 
-      <div v-text="effects.map(formatSkillEffect).join(', ')" />
+      <div>
+        <template v-for="(effect, index) in effects" :key="index">
+          <AppTooltip :tooltip="formatSkillEffectDetails(effect)">
+            <span v-text="formatSkillEffect(effect)" />
+          </AppTooltip>
+          <span v-if="index < effects.length - 1">, </span>
+        </template>
+      </div>
     </div>
   </section>
 </template>

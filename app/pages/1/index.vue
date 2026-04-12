@@ -170,7 +170,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/m17vcj/every_monster_in_stories_1_and_how_well_they/"
-                text="Every monster and how well they perform"
+                text="Monster performance"
               />
               by
               <AppLink href="https://www.reddit.com/user/DreadAndDonuts" text="DreadAndDonuts" />

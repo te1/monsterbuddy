@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import S3GeneDetailsSidebar from '~/components/s3/gene/S3GeneDetailsSidebar.vue';
   import { genesBySlug, getGeneMonstieCount } from '~/services/3/genes';
-  import { formatGeneElement, formatGeneType } from '~/services/3/presentation';
   import { getGeneSeo } from '~/services/3/seo';
   import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
 
@@ -54,19 +53,10 @@
     }),
   ]);
 
-  defineOgImage(
-    'Title',
-    {
-      title: gene.name,
-      description: headline,
-      lines: [
-        `${formatGeneElement(gene.element)} Gene`,
-        gene.type == null || gene.type === 'all' ? '' : formatGeneType(gene.type),
-      ],
-      game: 'mhst3',
-    },
-    [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
-  );
+  defineOgImage('GeneS3', { gene, description: headline }, [
+    { key: 'og' },
+    { key: 'whatsapp', width: 800, height: 800 },
+  ]);
 
   const history = useGeneHistoryStore();
 

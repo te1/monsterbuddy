@@ -1,6 +1,7 @@
 [
   {
     name: 'Fly',
+    description: 'Glide from high altitudes to traverse over obstacles.',
     type: 'utility',
   },
   {
@@ -9,6 +10,7 @@
   },
   {
     name: 'Roar',
+    description: 'Intimidate nearby monsters so they will flee instead of attack.',
     type: 'utility',
   },
   {
@@ -17,6 +19,7 @@
   },
   {
     name: 'Wall Climb',
+    description: 'Allows you to climb some walls to explore new areas.',
     type: 'explore',
   },
   {
@@ -29,10 +32,12 @@
   },
   {
     name: 'Melee Attack',
+    description: 'Hit a monster to start battle at an advantage. Slay low level monsters outright. Can also break some walls and gather items.',
     type: 'combat',
   },
   {
     name: 'Breath',
+    description: 'Ranged attack that can knock down flying monsters. Can also break some walls and gather items.',
     type: 'combat',
   },
 ]

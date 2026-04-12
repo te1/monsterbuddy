@@ -1,6 +1,7 @@
 import type { MonsterLocationType } from './data';
 import type {
   AilmentType,
+  Gene,
   GeneElement,
   GeneSize,
   GeneType,
@@ -8,6 +9,7 @@ import type {
   MonsterTag,
   RidingActionType,
   SkillAilmentType,
+  SkillBuffTurns,
   SkillBuffType,
   SkillDebuffType,
   SkillEffectType,
@@ -145,23 +147,23 @@ export function elementalResistanceTooltip(element: ElementType, intensity: numb
 
   switch (intensity) {
     case -2:
-      modifier = 'greatly increased';
+      modifier = 'greatly increased (×1.5)';
       break;
 
     case -1:
-      modifier = 'increased';
+      modifier = 'increased (×1.25)';
       break;
 
     case 0:
-      modifier = 'normal';
+      modifier = 'normal (×1.0)';
       break;
 
     case 1:
-      modifier = 'reduced';
+      modifier = 'reduced (×0.9)';
       break;
 
     case 2:
-      modifier = 'greatly reduced';
+      modifier = 'greatly reduced (×0.7)';
       break;
 
     default:
@@ -200,34 +202,34 @@ export function formatAilment(ailment: AilmentType) {
 }
 
 export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number | null) {
-  let modifier = '';
+  let chance = '';
 
   switch (intensity) {
     case -2:
-      modifier = 'Greatly increased';
+      chance = 'Greatly increased chance (100%)';
       break;
 
     case -1:
-      modifier = 'Increased';
+      chance = 'Increased chance (70%)';
       break;
 
     case 0:
-      modifier = 'Normal';
+      chance = 'Normal chance (50%)';
       break;
 
     case 1:
-      modifier = 'Reduced';
+      chance = 'Reduced chance (30%)';
       break;
 
     case 2:
-      modifier = 'Greatly reduced';
+      chance = 'Greatly reduced chance (0%)';
       break;
 
     default:
-      modifier = '?';
+      chance = '?';
   }
 
-  return `${modifier} chance to apply ${formatAilment(ailment).toLowerCase()}`;
+  return `${chance} to apply ${formatAilment(ailment).toLowerCase()}`;
 }
 
 export function statsTypeToText(type: StatsType) {
@@ -297,6 +299,26 @@ export function formatGeneSize(size: GeneSize): string {
   }
 }
 
+export function formatGeneInfo(gene: Gene): string {
+  const result: string[] = [];
+
+  if (gene.element != null) {
+    result.push(formatGeneElement(gene.element));
+  }
+
+  if (gene.type != null && gene.type !== 'all') {
+    result.push(formatGeneType(gene.type));
+  }
+
+  if (gene.active) {
+    result.push('Active');
+  } else {
+    result.push('Passive');
+  }
+
+  return result.join(', ');
+}
+
 export function formatSkillTarget(target: SkillTarget): string {
   switch (target) {
     case 'allAllies':
@@ -326,6 +348,38 @@ export function formatSkillAilment(ailment: SkillAilmentType): string {
 
     default:
       return formatAilment(ailment);
+  }
+}
+
+export function formatSkillAilmentDetails(ailment: SkillAilmentType): string {
+  const name = formatSkillAilment(ailment);
+
+  switch (ailment) {
+    case 'poison':
+    case 'noxiousPoison':
+    case 'severePoison':
+      return `${name}: deals a percentage of max HP as damage each turn`;
+
+    case 'burn':
+      return `${name}: deals damage each turn and increases damage taken by +20%`;
+
+    case 'paralysis':
+      return `${name}: on every turn there is a chance the target will be unable to act`;
+
+    case 'sleep':
+      return `${name}: unable to act until damaged and next hit is a critical hit`;
+
+    case 'blastblight':
+      return `${name}: deals damage after a number of turns`;
+
+    case 'bleeding':
+      return `${name}: ×2 damage taken on next hit`;
+
+    case 'darkness':
+      return `${name}: chance to miss attacks`;
+
+    default:
+      return name;
   }
 }
 
@@ -367,6 +421,28 @@ export function formatSkillDebuff(debuff: SkillDebuffType): string {
 
     default:
       return debuff;
+  }
+}
+
+export function formatSkillBuffTurns(turns: SkillBuffTurns): string {
+  switch (turns) {
+    case '1':
+      return '1 turn';
+
+    case '2':
+      return '2 turns';
+
+    case '3':
+      return '3 turns';
+
+    case 'thisTurn':
+      return 'this turn';
+
+    case 'nextTurn':
+      return 'next turn';
+
+    case 'next2Turn':
+      return 'next 2 turns';
   }
 }
 
@@ -416,5 +492,15 @@ export function formatSkillEffect(effect: SkillEffectType): string {
 
     case 'procParalysis':
       return 'Paralysis';
+  }
+}
+
+export function formatSkillEffectDetails(effect: SkillEffectType): string {
+  switch (effect) {
+    case 'stun':
+      return 'Target is unable to act this turn';
+
+    default:
+      return '';
   }
 }

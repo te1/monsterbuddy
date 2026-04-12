@@ -1,0 +1,124 @@
+{
+  buffs: [
+    {
+      type: 'Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Non-Elemental Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'none', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'none', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'none', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Fire Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'fire', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'fire', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'fire', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Water Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'water', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'water', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'water', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Thunder Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'thunder', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'thunder', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'thunder', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Ice Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'ice', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'ice', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'ice', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Dragon Attack Up',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'dragon', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'dragon', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'dragon', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Power Charge',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'all', value: 1.45, op: 'multiplier' }, // TODO 1.66?
+        { size: 'M', type: 'damageDone', element: 'all', value: 1.55, op: 'multiplier' }, // TODO 1.94?
+        { size: 'L', type: 'damageDone', element: 'all', value: 2, op: 'multiplier' }, // TODO 2.41?
+      ],
+    },
+
+    {
+      type: 'Critical Up',
+      details: [
+        { size: 'S', type: 'critRate', value: 10 },
+        { size: 'M', type: 'critRate', value: 15 },
+        { size: 'L', type: 'critRate', value: 20 },
+      ],
+    },
+
+    {
+      type: 'Blood Rite',
+      description: 'Lose some health at the end of every turn. Damage done is increased and all attacks steal health.',
+      details: [{ type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }],
+    },
+
+    {
+      type: 'Regenerate',
+      details: [{ type: 'maxHpRecovery', value: 0.1 }],
+    },
+  ],
+
+  debuffs: [
+    {
+      type: 'Defense Down',
+      details: [
+        { size: 'S', type: 'damageTaken', element: 'all', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'all', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'all', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Thunder Defense Down',
+      details: [
+        { size: 'S', type: 'damageTaken', element: 'thunder', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'thunder', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'thunder', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Dragon Defense Down',
+      details: [
+        { size: 'S', type: 'damageTaken', element: 'dragon', value: 0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'dragon', value: 0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'dragon', value: 0.3, op: 'additive' },
+      ],
+    },
+  ],
+}

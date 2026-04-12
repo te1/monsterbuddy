@@ -61,7 +61,7 @@
       close
       selectedIcon=" "
       :ui="{ item: 'items-center', itemLabelSuffix: 'hidden' }"
-      :fuse="{ fuseOptions: { includeMatches: true }, resultLimit: 10 }"
+      :fuse="{ fuseOptions: { includeMatches: true, threshold: 0.3 }, resultLimit: 12 }"
       @update:open="open = $event"
       @update:modelValue="open = false"
     >

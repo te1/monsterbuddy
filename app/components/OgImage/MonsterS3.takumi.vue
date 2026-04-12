@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-  import { formatMonsterInfoAll } from '~/services/3/presentation';
   import type { Monster } from '~/services/3/types';
+  import { formatMonsterInfoAll } from '~/services/3/presentation';
 
   const props = withDefaults(
     defineProps<{

@@ -1,25 +1,32 @@
 import { uniq } from 'es-toolkit/array';
 import { monsters } from './data';
 import type {
+  Buff,
+  BuffDetail,
+  BuffsAndDebuffs,
+  Debuff,
   Gene,
   GeneElement,
   GeneSize,
+  GeneSources,
   GeneType,
   Monster,
   SkillAilmentType,
+  SkillBuffSize,
   SkillBuffType,
   SkillDebuffType,
   SkillEffectType,
   SkillTarget,
-  GeneSources,
 } from './types';
 import genes_ from '~/assets/3/genes.json';
 import geneSources_ from '~/assets/3/geneSources.json';
+import buffs_ from '~/assets/3/buffs.json';
 
 const genes = genes_ as unknown as Gene[];
 const geneSources = geneSources_ as unknown as GeneSources;
+const buffs = buffs_ as unknown as BuffsAndDebuffs;
 
-export { genes, geneSources };
+export { genes, geneSources, buffs };
 export const genesByName = keyBy(genes, 'name');
 export const genesBySlug = keyBy(genes, 'slug');
 export const allElements: readonly GeneElement[] = [
@@ -63,6 +70,8 @@ export const allBuffs: readonly SkillBuffType[] = [
   'Speed Up',
   'Critical Up',
   'Wyvernfell Up',
+  'Blood Rite',
+  'Lock-On',
   'Ailment Inflict Rate Up',
   'Defense Up',
   'Fire Defense Up',
@@ -191,19 +200,19 @@ export function getGenesByEggSkill(mustBeEggSkill: boolean, geneList: Gene[] = g
 }
 
 export function getGenesByAilment(ailment: SkillAilmentType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.ailment?.includes(ailment) ?? false);
+  return geneList.filter((gene) => gene.ailments?.includes(ailment) ?? false);
 }
 
 export function getGenesByBuff(buff: SkillBuffType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.buff?.some((entry) => entry.type === buff) ?? false);
+  return geneList.filter((gene) => gene.buffs?.some((entry) => entry.type === buff) ?? false);
 }
 
 export function getGenesByDebuff(debuff: SkillDebuffType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.debuff?.some((entry) => entry.type === debuff) ?? false);
+  return geneList.filter((gene) => gene.debuffs?.some((entry) => entry.type === debuff) ?? false);
 }
 
 export function getGenesByEffect(effect: SkillEffectType, geneList: Gene[] = genes): Gene[] {
-  return geneList.filter((gene) => gene.effect?.includes(effect) ?? false);
+  return geneList.filter((gene) => gene.effects?.includes(effect) ?? false);
 }
 
 export function getMonstieInnateGenes(monster: Monster): Gene[] {
@@ -333,4 +342,32 @@ export function getGeneMonstieCount(gene: Gene): number {
   }
 
   return geneMonstieCounts?.get(gene.name) ?? 0;
+}
+
+export function getBuff(buff: SkillBuffType): Buff | undefined {
+  return buffs.buffs.find((b) => b.type === buff);
+}
+
+export function getBuffDetails(buff: SkillBuffType, size?: SkillBuffSize): BuffDetail[] {
+  let results = getBuff(buff)?.details ?? [];
+
+  if (size) {
+    results = results.filter((d) => d.size === size);
+  }
+
+  return results;
+}
+
+export function getDebuff(debuff: SkillDebuffType): Debuff | undefined {
+  return buffs.debuffs.find((b) => b.type === debuff);
+}
+
+export function getDebuffDetails(debuff: SkillDebuffType, size?: SkillBuffSize): BuffDetail[] {
+  let results = getDebuff(debuff)?.details ?? [];
+
+  if (size) {
+    results = results.filter((d) => d.size === size);
+  }
+
+  return results;
 }

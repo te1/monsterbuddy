@@ -119,11 +119,17 @@
 
 <template>
   <div>
-    <AppPageHeader :title="ridingAction.name" :headline="headline" class="hidden lg:block">
+    <AppPageHeader
+      :title="ridingAction.name"
+      :headline="headline"
+      :class="{ 'hidden lg:block': !ridingAction.description }"
+    >
       <template #description>
-        <div>
+        <div v-if="ridingAction.description" v-text="ridingAction.description" />
+
+        <div class="hidden lg:block">
           {{ descriptionParts[0] }}
-          <AppNuxtLink to="/2/riding-actions" :text="descriptionParts[1]" />
+          <AppNuxtLink to="/3/riding-actions" :text="descriptionParts[1]" />
           {{ descriptionParts[2] }}
         </div>
       </template>

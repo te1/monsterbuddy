@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div v-if="passiveSources.length > 0">
+    <div v-if="passiveSources.length > 0 || gene.element === 'all'">
       <h3 class="px-4 pt-2 text-lg font-semibold">Passive Genes</h3>
 
       <div class="px-4 pb-1">

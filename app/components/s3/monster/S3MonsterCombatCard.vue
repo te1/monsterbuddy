@@ -115,7 +115,10 @@
       <div class="mt-1 flex flex-col gap-4 @xs:mt-1.5">
         <div v-if="hasElementalResistances" class="flex gap-2">
           <div v-for="(value, element) in elementalResistances" :key="element">
-            <UTooltip :text="elementalResistanceTooltip(element, value)">
+            <AppTooltip
+              :tooltip="elementalResistanceTooltip(element, value)"
+              :content="{ side: 'top' }"
+            >
               <div class="flex flex-col items-center gap-1">
                 <ElementIcon class="size-6" :element="element" noTooltip />
                 <UIcon
@@ -124,13 +127,16 @@
                   :class="intensityToTextColor(value)"
                 />
               </div>
-            </UTooltip>
+            </AppTooltip>
           </div>
         </div>
 
         <div v-if="hasAilmentResistances" class="flex gap-2">
           <div v-for="(value, ailment) in ailmentResistances" :key="ailment">
-            <UTooltip :text="ailmentResistanceTooltip(ailment, value)">
+            <AppTooltip
+              :tooltip="ailmentResistanceTooltip(ailment, value)"
+              :content="{ side: 'top' }"
+            >
               <div class="flex flex-col items-center gap-1">
                 <S3AilmentIcon class="-my-1 h-8 w-6 object-cover" :ailment="ailment" noTooltip />
                 <UIcon
@@ -139,7 +145,7 @@
                   :class="intensityToTextColor(value)"
                 />
               </div>
-            </UTooltip>
+            </AppTooltip>
           </div>
         </div>
       </div>

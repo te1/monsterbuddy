@@ -44,6 +44,8 @@ export const SkillBuffTypeSchema = z.enum([
   'Speed Up',
   'Critical Up',
   'Wyvernfell Up',
+  'Blood Rite',
+  'Lock-On',
   'Ailment Inflict Rate Up',
   'Defense Up',
   'Fire Defense Up',
@@ -66,10 +68,22 @@ export const SkillBuffSizeSchema = z.enum([
 ]);
 export type SkillBuffSize = z.infer<typeof SkillBuffSizeSchema>;
 
+export const SkillBuffTurnsSchema = z.enum([
+  //
+  '1',
+  '2',
+  '3',
+  'thisTurn',
+  'nextTurn',
+  'next2Turn',
+]);
+export type SkillBuffTurns = z.infer<typeof SkillBuffTurnsSchema>;
+
 export const SkillBuffSchema = z.object({
   type: SkillBuffTypeSchema,
   size: SkillBuffSizeSchema.optional(),
   target: SkillTargetSchema,
+  turns: SkillBuffTurnsSchema.optional(),
 });
 export type SkillBuff = z.infer<typeof SkillBuffSchema>;
 
@@ -90,6 +104,7 @@ export const SkillDebuffSchema = z.object({
   type: SkillDebuffTypeSchema,
   size: SkillBuffSizeSchema.optional(),
   target: SkillTargetSchema,
+  turns: SkillBuffTurnsSchema.optional(),
 });
 export type SkillDebuff = z.infer<typeof SkillDebuffSchema>;
 
@@ -112,6 +127,26 @@ export const SkillEffectTypeSchema = z.enum([
 ]);
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
+export const SkillDetailValueSchema = z.object({
+  type: z.enum(['critRate', 'staminaRecovery', 'startingStamina', 'maxHpRecovery', 'kinship']),
+  value: z.number(),
+});
+export type SkillDetailValue = z.infer<typeof SkillDetailValueSchema>;
+
+export const SkillDetailFactorSchema = z.object({
+  type: z.enum(['damageDone', 'damageTaken', 'staminaCost', 'maxHp', 'kinshipGeneration']),
+  element: GeneElementSchema.optional(),
+  value: z.number(),
+  op: z.enum(['multiplier', 'additive']),
+});
+export type SkillDetailFactor = z.infer<typeof SkillDetailFactorSchema>;
+
+export const SkillDetailSchema = z.discriminatedUnion('type', [
+  SkillDetailValueSchema,
+  SkillDetailFactorSchema,
+]);
+export type SkillDetail = z.infer<typeof SkillDetailSchema>;
+
 export const GeneSchema = z.object({
   name: z.string(),
   baseName: z.string().optional(),
@@ -129,10 +164,11 @@ export const GeneSchema = z.object({
   target: SkillTargetSchema.optional(),
   breath: z.boolean().optional(),
   eggSkill: z.boolean().optional(),
-  ailment: z.array(SkillAilmentTypeSchema).optional(),
-  buff: z.array(SkillBuffSchema).optional(),
-  debuff: z.array(SkillDebuffSchema).optional(),
-  effect: z.array(SkillEffectTypeSchema).optional(),
+  ailments: z.array(SkillAilmentTypeSchema).optional(),
+  buffs: z.array(SkillBuffSchema).optional(),
+  debuffs: z.array(SkillDebuffSchema).optional(),
+  effects: z.array(SkillEffectTypeSchema).optional(),
+  details: z.array(SkillDetailSchema).optional(),
   sizes: z.array(z.string()).optional(),
 });
 export type Gene = z.infer<typeof GeneSchema>;

@@ -23,6 +23,10 @@
 
   const versions = [
     {
+      date: '2026-04-13',
+      changes: ['Update gene details with numbers for effects, buffs and debuffs'],
+    },
+    {
       date: '2026-04-10',
       changes: ['New pages for genes'],
     },
@@ -118,7 +122,7 @@
 
           <ProseLi>
             <AppNuxtLink to="/3/genes" text="Gene list" />
-            with types, effects and monstie sources
+            with types, monstie sources and effects (including some numbers)
           </ProseLi>
 
           <ProseLi>
@@ -163,7 +167,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/1s7lq5l/monster_hunter_stories_3_monstie_list_gene_list"
-                text="Monstie List, Gene List and Monstie Builder Sheet"
+                text="Monsties, Genes and Builder Sheet"
               />
               by <AppLink href="https://www.reddit.com/user/AzuClone" text="AzuClone" />
             </ProseLi>
@@ -171,9 +175,17 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/1s753dy/wip_guide_to_buffdebuff_strengths_of_various_moves"
-                text="Guide to buff/debuff strengths of various moves"
+                text="Guide to buff/debuff strengths"
               />
               by <AppLink href="https://www.reddit.com/user/DarkestSamus" text="DarkestSamus" />
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/monstie_damage_calc_google_sheets"
+                text="Monstie Damage Calc"
+              />
+              by <AppLink href="https://www.reddit.com/user/rmosley753" text="rmosley753" />
             </ProseLi>
           </ProseUl>
         </section>
@@ -192,6 +204,14 @@
                 text="Advanced Monstie Guide"
               />
               on YouTube
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1shua27/building_the_perfect_monstie_a_complete_guide"
+                text="Building the perfect Monstie"
+              />
+              by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
             </ProseLi>
 
             <ProseLi>
