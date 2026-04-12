@@ -3069,7 +3069,7 @@
     size: 'none',
     type: 'all',
     element: 'all',
-    description: '',
+    description: 'Counts as all elements and types.',
   },
 
   {
