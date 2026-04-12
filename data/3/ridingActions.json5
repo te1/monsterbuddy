@@ -19,7 +19,7 @@
   },
   {
     name: 'Wall Climb',
-    description: 'Alllows you to climb some walls to explore new areas.',
+    description: 'Allows you to climb some walls to explore new areas.',
     type: 'explore',
   },
   {
