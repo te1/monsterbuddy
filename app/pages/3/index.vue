@@ -208,7 +208,7 @@
 
             <ProseLi>
               <AppLink
-                href="https://www.reddit.com/r/MonsterHunterStories/comments/1shua27/building_the_perfect_monstie_a_complete_guide"
+                href="https://lescarnetsdelawycademie.fr/building-the-perfect-monstie"
                 text="Building the perfect Monstie"
               />
               by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
