@@ -167,7 +167,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/1s7lq5l/monster_hunter_stories_3_monstie_list_gene_list"
-                text="Monsties, Genes and Builder Sheet"
+                text="Monsties, Genes, Builder Sheet"
               />
               by <AppLink href="https://www.reddit.com/user/AzuClone" text="AzuClone" />
             </ProseLi>
@@ -175,7 +175,7 @@
             <ProseLi>
               <AppLink
                 href="https://www.reddit.com/r/MonsterHunterStories/comments/1s753dy/wip_guide_to_buffdebuff_strengths_of_various_moves"
-                text="Guide to buff/debuff strengths"
+                text="Buff/debuff strengths"
               />
               by <AppLink href="https://www.reddit.com/user/DarkestSamus" text="DarkestSamus" />
             </ProseLi>
