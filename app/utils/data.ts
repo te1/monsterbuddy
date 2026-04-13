@@ -1,6 +1,7 @@
 export function makeSlug(text: string): string {
   return text
     .replace(/( |\/)/g, '-')
+    .replace(/\+/g, '-plus')
     .replace(/[().:']/g, '')
     .replace(/-&/, '')
     .replace(/-+/g, '-')
