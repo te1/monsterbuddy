@@ -83,7 +83,7 @@
 
     {
       type: 'Blood Rite',
-      description: 'Damage done is increased and all attacks steal health. Lose a percentage of max health every turn.',
+      description: 'Damage done is increased and all attacks steal health. Take a percentage of max health as damage every turn.',
       details: [
         { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
         { type: 'leech', value: 0.3 },
