@@ -561,7 +561,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn. Extends the duration of inflicted debuffs.',
     target: 'singleEnemy',
     breath: true,
-    // probably debuff extension by 3 turns, TODO show in UI
+    details: [{ type: 'debuffExtension', value: 3 }],
     ailments: ['burn'],
   },
 

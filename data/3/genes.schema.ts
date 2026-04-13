@@ -135,6 +135,7 @@ export const SkillDetailValueSchema = z.object({
     'maxHpRecovery',
     'kinship',
     'wyvernfell',
+    'debuffExtension',
   ]),
   value: z.number(),
 });

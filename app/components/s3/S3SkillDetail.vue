@@ -24,6 +24,9 @@
       case 'wyvernfell':
         return 'Wyvernfell';
 
+      case 'debuffExtension':
+        return 'Debuff Extension';
+
       // -- SkillDetailFactor
       case 'damageDone':
         return 'Damage Done';
@@ -93,6 +96,9 @@
 
       case 'maxHpRecovery':
         return `${props.detail.value * 100}%`;
+
+      case 'debuffExtension':
+        return `${props.detail.value} turns`;
 
       // -- SkillDetailFactor
       case 'damageDone':
