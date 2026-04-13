@@ -21,6 +21,9 @@
       case 'kinship':
         return 'Kinship';
 
+      case 'wyvernfell':
+        return 'Wyvernfell';
+
       // -- SkillDetailFactor
       case 'damageDone':
         return 'Damage Done';
@@ -36,6 +39,9 @@
 
       case 'kinshipGeneration':
         return 'Kinship Generation';
+
+      case 'wyvernsoulDamage':
+        return 'Wyvernsoul Damage';
 
       default:
         return undefined;
@@ -94,6 +100,7 @@
       case 'staminaCost':
       case 'maxHp':
       case 'kinshipGeneration':
+      case 'wyvernsoulDamage':
         return `${op.value}${valueForOp.value}`;
 
       default:
