@@ -66,9 +66,9 @@
     {
       type: 'Power Charge',
       details: [
-        { size: 'S', type: 'damageDone', element: 'all', value: 1.45, op: 'multiplier' }, // TODO 1.66?
-        { size: 'M', type: 'damageDone', element: 'all', value: 1.55, op: 'multiplier' }, // TODO 1.94?
-        { size: 'L', type: 'damageDone', element: 'all', value: 2, op: 'multiplier' }, // TODO 2.41?
+        { size: 'S', type: 'damageDone', element: 'all', value: 0.75, op: 'additive' }, // TODO 0.66?
+        { size: 'M', type: 'damageDone', element: 'all', value: 1, op: 'additive' }, // TODO 0.95?
+        { size: 'L', type: 'damageDone', element: 'all', value: 1.5, op: 'additive' }, // TODO 1.45?
       ],
     },
 
@@ -83,8 +83,12 @@
 
     {
       type: 'Blood Rite',
-      description: 'Lose some health at the end of every turn. Damage done is increased and all attacks steal health.',
-      details: [{ type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }],
+      description: 'Damage done is increased and all attacks steal health. Lose a percentage of max health every turn.',
+      details: [
+        { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
+        { type: 'leech', value: 0.3 },
+        { type: 'maxHpRecovery', value: -0.2 },
+      ],
     },
 
     {

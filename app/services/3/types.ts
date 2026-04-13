@@ -24,4 +24,10 @@ export type {
   SkillTarget,
 } from '~~/data/3/genes.schema';
 export type { GeneSources } from '~~/data/3/geneSources.schema';
-export type { Buff, BuffDetail, BuffsAndDebuffs, Debuff } from '~~/data/3/buffs.schema';
+export type {
+  Buff,
+  BuffDetail,
+  BuffDetailType,
+  BuffsAndDebuffs,
+  Debuff,
+} from '~~/data/3/buffs.schema';

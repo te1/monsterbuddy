@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { BuffDetail } from '~/services/3/types';
-  import { formatGeneElement } from '~/services/3/presentation';
+  import { formatBuffDetailType, formatGeneElement } from '~/services/3/presentation';
 
   const props = withDefaults(
     defineProps<{
@@ -36,7 +36,13 @@
         return 'Crit rate';
 
       case 'maxHpRecovery':
+        if (props.detail.value < 0) {
+          return 'Max HP damage per turn';
+        }
         return 'Max HP recovery per turn';
+
+      case 'leech':
+        return 'Leech';
 
       default:
         return undefined;
@@ -90,6 +96,7 @@
         return `+${props.detail.value}%`;
 
       case 'maxHpRecovery':
+      case 'leech':
         return `${props.detail.value * 100}%`;
 
       default:
@@ -101,7 +108,9 @@
 <template>
   <div class="space-x-1">
     <span v-if="showSize" class="inline-block min-w-5 font-semibold" v-text="detail.size" />
-    <span v-text="label" />
+    <AppTooltip :tooltip="formatBuffDetailType(detail.type)">
+      <span v-text="label" />
+    </AppTooltip>
     <span class="font-semibold" v-text="value" />
   </div>
 </template>

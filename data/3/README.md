@@ -32,6 +32,8 @@
 
 - 'STAB' is 10%, e.g. a fire monster (or dual element fire) will deal 10% increased fire damage
 
+- Crit damage modifier is x1.5
+
 - Ailment resistance converts to hit chance
   - +2 -> 0%
   - +1 -> 30%

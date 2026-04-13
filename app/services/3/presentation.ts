@@ -1,6 +1,7 @@
 import type { MonsterLocationType } from './data';
 import type {
   AilmentType,
+  BuffDetailType,
   Gene,
   GeneElement,
   GeneSize,
@@ -499,6 +500,19 @@ export function formatSkillEffectDetails(effect: SkillEffectType): string {
   switch (effect) {
     case 'stun':
       return 'Target is unable to act this turn';
+
+    case 'leech':
+      return 'Heals for a percentage of damage done';
+
+    default:
+      return '';
+  }
+}
+
+export function formatBuffDetailType(type: BuffDetailType): string {
+  switch (type) {
+    case 'leech':
+      return 'Heals for a percentage of damage done';
 
     default:
       return '';

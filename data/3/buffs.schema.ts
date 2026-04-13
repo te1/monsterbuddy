@@ -6,9 +6,19 @@ import {
   SkillDebuffTypeSchema,
 } from './genes.schema';
 
+export const BuffDetailTypeSchema = z.enum([
+  //
+  'damageDone',
+  'damageTaken',
+  'critRate',
+  'maxHpRecovery',
+  'leech',
+]);
+export type BuffDetailType = z.infer<typeof BuffDetailTypeSchema>;
+
 export const BuffDetailSchema = z.object({
   size: SkillBuffSizeSchema.exclude(['stacking']).optional(),
-  type: z.enum(['damageDone', 'damageTaken', 'critRate', 'maxHpRecovery']),
+  type: BuffDetailTypeSchema,
   element: GeneElementSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']).optional(),
