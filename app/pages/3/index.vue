@@ -215,6 +215,11 @@
             </ProseLi>
 
             <ProseLi>
+              <AppLink href="https://lescarnetsdelawycademie.fr/wyvernfell" text="Wyvernfell" />
+              by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
+            </ProseLi>
+
+            <ProseLi>
               <AppLink
                 href="https://www.youtube.com/watch?v=5qy9qVlQzF4&list=PLRcW-_zwHp44_ILzwNX2I0Uv2WQg-sPnU"
                 text="RageGamingVideos"

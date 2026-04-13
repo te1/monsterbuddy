@@ -9,6 +9,7 @@
 - [Monstie List, Gene List and Monstie Builder Sheet](https://www.reddit.com/r/MonsterHunterStories/comments/1s7lq5l/monster_hunter_stories_3_monstie_list_gene_list) by [AzuClone](https://www.reddit.com/user/AzuClone)
 - [Guide to buff/debuff strengths of various moves](https://www.reddit.com/r/MonsterHunterStories/comments/1s753dy/wip_guide_to_buffdebuff_strengths_of_various_moves) by [DarkestSamus](https://www.reddit.com/user/DarkestSamus)
 - [Building the perfect Monstie, a complete guide](https://www.reddit.com/r/MonsterHunterStories/comments/1shua27/building_the_perfect_monstie_a_complete_guide) by [Masuku68](https://www.reddit.com/user/Masuku68)
+- [Wyvernfell](https://lescarnetsdelawycademie.fr/wyvernfell) by [Masuku68](https://www.reddit.com/user/Masuku68)
 - [Monstie Damage Calc (Google Sheets)](https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/monstie_damage_calc_google_sheets) by [rmosley753](https://www.reddit.com/user/rmosley753)
 - [Egg Skills, Egg Powers, Monsties](https://www.reddit.com/r/MonsterHunterStories/comments/1rw0tkb/a_comprehensive_list_for_egg_skills_and_egg) by [Fit-Variation-1875](https://www.reddit.com/user/Fit-Variation-1875)
 
