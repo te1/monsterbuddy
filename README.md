@@ -30,6 +30,7 @@ https://monsterbuddy.app
 - [MHStories 2](https://mhst.kiranico.com/mhs2) by Kiranico
 - [MHST3 Monstie Stats](https://www.reddit.com/r/MonsterHunterStories/comments/1rzobtn/i_made_a_table_documenting_every_single_monsties) by [norahike](https://www.reddit.com/user/norahike)
 - [MHST3 Monstie List, Gene List and Monstie Builder Sheet](https://www.reddit.com/r/MonsterHunterStories/comments/1s7lq5l/monster_hunter_stories_3_monstie_list_gene_list) by [AzuClone](https://www.reddit.com/user/AzuClone)
+- [MHST3: Building the perfect Monstie, a complete guide](https://www.reddit.com/r/MonsterHunterStories/comments/1shua27/building_the_perfect_monstie_a_complete_guide) by [Masuku68](https://www.reddit.com/user/Masuku68)
 
 See [data](data) for the collected data.
 
