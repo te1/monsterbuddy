@@ -17,6 +17,7 @@ import { RidingActionSchema as S3RidingActionSchema } from '~~/data/3/ridingActi
 import { GeneSchema as S3GeneSchema } from '~~/data/3/genes.schema';
 import { GeneSourcesSchema as S3GeneSourcesSchema } from '~~/data/3/geneSources.schema';
 import { BuffsAndDebuffsSchema as S3BuffsAndDebuffsSchema } from '~~/data/3/buffs.schema';
+import { EggPowerSchema as S3EggPowerSchema } from '~~/data/3/eggPowers.schema';
 import { makeSlug } from '~~/app/utils/data';
 
 const generateEggSvgs = false;
@@ -32,38 +33,39 @@ const root = join(process.cwd());
 function generate() {
   const jobs: Job[] = [
     // -- 1 -------------------------------------------------
-    { file: '1/habitats', schema: S1HabitatSchema.array() },
-    { file: '1/monsters', schema: S1MonsterSchema.array(), transform: transformS1Monsters },
+    { file: '1/habitats', schema: z.array(S1HabitatSchema) },
+    { file: '1/monsters', schema: z.array(S1MonsterSchema), transform: transformS1Monsters },
     {
       file: '1/ridingActions',
-      schema: S1RidingActionSchema.array(),
+      schema: z.array(S1RidingActionSchema),
       transform: transformRidingActions,
     },
     // -- 2 -------------------------------------------------
     {
       file: '2/catavanStands',
-      schema: S2CatavanStandSchema.array(),
+      schema: z.array(S2CatavanStandSchema),
       transform: transformS2CatavanStands,
     },
-    { file: '2/coopQuests', schema: S2CoopQuestSchema.array(), transform: transformS2CoopQuests },
-    { file: '2/habitats', schema: S2HabitatSchema.array() },
-    { file: '2/monsters', schema: S2MonsterSchema.array(), transform: transformS2Monsters },
+    { file: '2/coopQuests', schema: z.array(S2CoopQuestSchema), transform: transformS2CoopQuests },
+    { file: '2/habitats', schema: z.array(S2HabitatSchema) },
+    { file: '2/monsters', schema: z.array(S2MonsterSchema), transform: transformS2Monsters },
     {
       file: '2/ridingActions',
-      schema: S2RidingActionSchema.array(),
+      schema: z.array(S2RidingActionSchema),
       transform: transformRidingActions,
     },
     // -- 3 -------------------------------------------------
-    { file: '3/monsters', schema: S3MonsterSchema.array(), transform: transformS3Monsters },
-    { file: '3/regions', schema: S3RegionSchema.array(), transform: transformS3Regions },
+    { file: '3/monsters', schema: z.array(S3MonsterSchema), transform: transformS3Monsters },
+    { file: '3/regions', schema: z.array(S3RegionSchema), transform: transformS3Regions },
     {
       file: '3/ridingActions',
-      schema: S3RidingActionSchema.array(),
+      schema: z.array(S3RidingActionSchema),
       transform: transformRidingActions,
     },
-    { file: '3/genes', schema: S3GeneSchema.array(), transform: transformS3Genes },
+    { file: '3/genes', schema: z.array(S3GeneSchema), transform: transformS3Genes },
     { file: '3/geneSources', schema: S3GeneSourcesSchema },
     { file: '3/buffs', schema: S3BuffsAndDebuffsSchema },
+    { file: '3/eggPowers', schema: z.array(S3EggPowerSchema), transform: transformS3EggPowers },
   ];
 
   for (const job of jobs) {
@@ -436,6 +438,14 @@ function transformS3Genes(data: unknown) {
     if (typeof details.wyvernfell === 'number' && typeof details.stamina === 'number') {
       details.wps = Number((details.wyvernfell / details.stamina).toFixed(2));
     }
+  }
+}
+
+function transformS3EggPowers(data: unknown) {
+  const eggPowers = data as { name: string; slug?: string }[];
+
+  for (const eggPower of eggPowers) {
+    eggPower.slug = makeSlug(eggPower.name);
   }
 }
 

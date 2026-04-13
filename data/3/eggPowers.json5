@@ -1,0 +1,233 @@
+[
+  // -- Azuria
+  {
+    name: 'Battle Thirst',
+    region: 'Azuria',
+    rank: 'S',
+    details: [
+      {
+        name: 'Battle Thirst',
+        description: 'Recovers Stamina after winning a Head-to-Head or performing a Double Attack.',
+        size: '-',
+      },
+      {
+        name: 'Battle Thirst+',
+        description: 'Greatly recovers Stamina after winning a Head-to-Head or performing a Double Attack.',
+        size: '+',
+        requirements: [{ type: 'speed' }, { type: 'power' }, { element: 'fire' }],
+      },
+    ],
+  },
+
+  {
+    name: 'Hardiness',
+    region: 'Azuria',
+    rank: 'A',
+    details: [
+      {
+        name: 'Hardiness',
+        description: 'Slightly recovers Stamina after taking damage.',
+        size: '-',
+      },
+      {
+        name: 'Hardiness+',
+        description: 'Recovers Stamina after taking damage.',
+        size: '+',
+        requirements: [{ type: 'technical' }, { element: 'thunder' }],
+      },
+    ],
+  },
+
+  {
+    name: 'Pwr Resilience',
+    region: 'Azuria',
+    rank: 'B',
+    details: [
+      {
+        name: 'Pwr Resilience',
+        description: 'Slightly reduces Power Type damage taken.',
+        size: '-',
+      },
+      {
+        name: 'Pwr Resilience+',
+        description: 'Reduces Power Type damage taken.',
+        size: '+',
+        requirements: [{ type: 'speed' }],
+      },
+    ],
+  },
+
+  // -- Canalta Timberland
+  {
+    name: 'Unscathed',
+    region: 'Canalta Timberland',
+    rank: 'S',
+    details: [
+      {
+        name: 'Unscathed',
+        description: 'Negates damage after winning a Head-to-Head and increases damage dealt to enemies.',
+        size: '-',
+      },
+      {
+        name: 'Unscathed+',
+        description: 'Negates damage after winning a Head-to-Head and greatly increases damage dealt to enemies.',
+        size: '+',
+        requirements: [{ type: 'technical' }, { element: 'water' }, { element: 'ice' }],
+      },
+    ],
+  },
+
+  {
+    name: 'High Morale',
+    region: 'Canalta Timberland',
+    rank: 'A',
+    details: [
+      {
+        name: 'High Morale',
+        description: 'Slightly extends the duration of buffs when applied by own skills.',
+        size: '-',
+      },
+      {
+        name: 'High Morale+',
+        description: 'Extends the duration of buffs when applied by own skills.',
+        size: '+',
+        requirements: [{ type: 'speed' }, { element: 'fire' }],
+      },
+    ],
+  },
+
+  {
+    name: 'Spd Resilience',
+    region: 'Canalta Timberland',
+    rank: 'B',
+    details: [
+      {
+        name: 'Spd Resilience',
+        description: 'Slightly reduces Speed Type damage taken.',
+        size: '-',
+      },
+      {
+        name: 'Spd Resilience+',
+        description: 'Reduces Speed Type damage taken.',
+        size: '+',
+        requirements: [{ type: 'technical' }],
+      },
+    ],
+  },
+
+  // -- Tarkuan
+  {
+    name: 'Resonance',
+    region: 'Tarkuan',
+    rank: 'S',
+    details: [
+      {
+        name: 'Resonance',
+        description: 'Increases Kinship Gauge at the start of battle.',
+        size: '-',
+      },
+      {
+        name: 'Resonance+',
+        description: 'Greatly increases Kinship Gauge at the start of battle.',
+        size: '+',
+        requirements: [{ type: 'power' }, { type: 'technical' }, { element: 'thunder' }],
+      },
+    ],
+  },
+
+  {
+    name: 'Best Buds',
+    region: 'Tarkuan',
+    rank: 'A',
+    details: [
+      {
+        name: 'Best Buds',
+        description: 'Riding Kinship Gauge fills slightly faster.',
+        size: '-',
+      },
+      {
+        name: 'Best Buds+',
+        description: 'Riding Kinship Gauge fills faster.',
+        size: '+',
+        requirements: [{ type: 'speed' }, { element: 'none' }],
+      },
+    ],
+  },
+
+  {
+    name: 'Tech Resilience',
+    region: 'Tarkuan',
+    rank: 'B',
+    details: [
+      {
+        name: 'Tech Resilience',
+        description: 'Slightly reduces Technical Type damage taken.',
+        size: '-',
+      },
+      {
+        name: 'Tech Resilience+',
+        description: 'Reduces Technical Type damage taken.',
+        size: '+',
+        requirements: [{ type: 'power' }],
+      },
+    ],
+  },
+
+  // -- Serathis
+  {
+    name: 'Muster Forces',
+    region: 'Serathis',
+    rank: 'S',
+    details: [
+      {
+        name: 'Muster Forces',
+        description: 'Increases Kinship Gauge once when losing a Heart.',
+        size: '-',
+      },
+      {
+        name: 'Muster Forces+',
+        description: 'Boosts Kinship Gauge to the maximum one time when losing a Heart.',
+        size: '+',
+        requirements: [{ type: 'power' }, { element: 'fire' }, { element: 'ice' }],
+      },
+    ],
+  },
+
+  {
+    name: 'Perseverance',
+    region: 'Serathis',
+    rank: 'A',
+    details: [
+      {
+        name: 'Perseverance',
+        description: 'Revives with newly applied buffs once upon losing a Heart.',
+        size: '-',
+      },
+      {
+        name: 'Perseverance+',
+        description: 'Revives with newly applied buffs upon losing a Heart up to two times.',
+        size: '+',
+        requirements: [{ element: 'dragon' }, { element: 'water' }],
+      },
+    ],
+  },
+
+  {
+    name: 'EX Resilience',
+    region: 'Serathis',
+    rank: 'B',
+    details: [
+      {
+        name: 'EX Resilience',
+        description: 'Slightly reduces No Type damage taken.',
+        size: '-',
+      },
+      {
+        name: 'EX Resilience+',
+        description: 'Reduces No Type damage taken.',
+        size: '+',
+        requirements: [{ element: 'none' }],
+      },
+    ],
+  },
+]

@@ -199,15 +199,15 @@
 
           <ul class="flex flex-col gap-1">
             <li
-              v-for="(skill, rank) in region.powers.skills"
-              :key="skill"
+              v-for="eggPower in region.powers.eggPowers"
+              :key="eggPower.rank"
               class="flex items-center gap-1.5"
             >
               <span
                 class="flex size-7 items-center justify-center rounded bg-default text-sm font-semibold text-muted"
-                v-text="rank"
+                v-text="eggPower.rank"
               />
-              <span v-text="skill" />
+              <span v-text="eggPower.name" />
             </li>
           </ul>
         </div>
