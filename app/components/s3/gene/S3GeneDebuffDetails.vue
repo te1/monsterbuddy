@@ -28,9 +28,11 @@
       <span v-text="debuff.type" />
       <S3BuffSize :size="debuff.size" />
       <span class="text-muted">on <S3SkillTarget :target="debuff.target" /></span>
-      <span v-if="debuff.turns != null" class="text-muted">
-        ({{ formatSkillBuffTurns(debuff.turns) }})
-      </span>
+      <span
+        v-if="debuff.turns != null"
+        class="text-muted"
+        v-text="`(${formatSkillBuffTurns(debuff.turns)})`"
+      />
     </div>
 
     <div v-if="description" class="ml-3 text-muted" v-text="description" />
