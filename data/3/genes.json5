@@ -3613,7 +3613,7 @@
     type: 'power',
     element: 'fire',
     description: 'Significantly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.25?
+    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.3?
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (L)'],
   },
 
