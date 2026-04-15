@@ -11,8 +11,16 @@ export const BuffDetailTypeSchema = z.enum([
   'damageDone',
   'damageTaken',
   'critRate',
+  'evasionRate',
+  'accuracyRate',
   'maxHpRecovery',
+  'rawSpeed',
+  'rawStaminaRegen',
+  'wyvernfell',
+  'wyvernsoulDamageTaken',
   'leech',
+  'ailmentInflictRate',
+  'effectChance',
 ]);
 export type BuffDetailType = z.infer<typeof BuffDetailTypeSchema>;
 
