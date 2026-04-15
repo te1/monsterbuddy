@@ -93,7 +93,7 @@
     element: 'dragon',
     description: 'Significantly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }, // TODO 0.4?
+      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (M)', 'All-Out (L)'],
@@ -2524,6 +2524,7 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Evasion at 50% HP or less.',
+    // details: [{ type: 'evasionRate', value: 10 }], // TODO no source
     sizes: ['Evasion Instinct (M)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2534,6 +2535,7 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Evasion at 50% HP or less.',
+    // details: [{ type: 'evasionRate', value: 20 }], // TODO no source
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2544,6 +2546,7 @@
     type: 'speed',
     element: 'water',
     description: 'Greatly increases Evasion at 50% HP or less.',
+    // details: [{ type: 'evasionRate', value: 30 }], // TODO no source
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (XL)'],
   },
 
@@ -2554,6 +2557,7 @@
     type: 'speed',
     element: 'water',
     description: 'Significantly increases Evasion at 50% HP or less.',
+    details: [{ type: 'evasionRate', value: 40 }], // TODO is this real?
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (L)'],
   },
 
@@ -3580,7 +3584,7 @@
     type: 'power',
     element: 'fire',
     description: 'Slightly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.05, op: 'additive' }],
+    details: [{ type: 'damageDone', element: 'all', value: 0.12, op: 'additive' }],
     sizes: ['Heroics (M)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3591,7 +3595,7 @@
     type: 'power',
     element: 'fire',
     description: 'Increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
+    details: [{ type: 'damageDone', element: 'all', value: 0.18, op: 'additive' }],
     sizes: ['Heroics (S)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3602,7 +3606,7 @@
     type: 'power',
     element: 'fire',
     description: 'Greatly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.15, op: 'additive' }],
+    details: [{ type: 'damageDone', element: 'all', value: 0.24, op: 'additive' }],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (XL)'],
   },
 
@@ -3613,7 +3617,7 @@
     type: 'power',
     element: 'fire',
     description: 'Significantly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.25?
+    details: [{ type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (L)'],
   },
 
@@ -5264,6 +5268,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Slightly reduces damage taken at 50% HP or less.',
+    // details: [{ type: 'damageTaken', value: -0.2, op: 'additive' }], // TODO no source
     sizes: ['Potential (M)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5274,6 +5279,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Reduces damage taken at 50% HP or less.',
+    // details: [{ type: 'damageTaken', value: -0.3, op: 'additive' }], // TODO no source
     sizes: ['Potential (S)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5284,6 +5290,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Greatly reduces damage taken at 50% HP or less.',
+    // details: [{ type: 'damageTaken', value: -0.4, op: 'additive' }], // TODO no source
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (XL)'],
   },
 
@@ -5294,6 +5301,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Significantly reduces damage taken at 50% HP or less.',
+    details: [{ type: 'damageTaken', value: -0.5, op: 'additive' }], // TODO is this real?
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (L)'],
   },
 
@@ -5693,7 +5701,7 @@
     type: 'power',
     element: 'none',
     description: 'Significantly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.1?
+    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (L)'],
   },
 
@@ -6459,7 +6467,7 @@
     buffs: [
       { type: 'Water Attack Up', size: 'M', target: 'user', turns: '3' },
       { type: 'Thunder Attack Up', size: 'M', target: 'user', turns: '3' },
-      { type: 'Wyvernfell Up', size: 'L', target: 'user', turns: '3' }, // TODO M?
+      { type: 'Wyvernfell Up', size: 'L', target: 'user', turns: '3' },
       { type: 'Defense Up', size: 'M', target: 'user', turns: '3' },
     ],
   },
@@ -7499,7 +7507,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Significantly increases Crit Rate at 50% HP or less.',
-    details: [{ type: 'critRate', value: 40 }], // TODO is that real?
+    details: [{ type: 'critRate', value: 30 }],
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (L)'],
   },
 

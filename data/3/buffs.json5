@@ -75,9 +75,9 @@
     {
       type: 'Critical Up',
       details: [
-        { size: 'S', type: 'critRate', value: 10 },
-        { size: 'M', type: 'critRate', value: 15 },
-        { size: 'L', type: 'critRate', value: 20 },
+        { size: 'S', type: 'critRate', value: 5 },
+        { size: 'M', type: 'critRate', value: 10 },
+        { size: 'L', type: 'critRate', value: 15 },
       ],
     },
 
