@@ -130,12 +130,16 @@ export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 export const SkillDetailValueSchema = z.object({
   type: z.enum([
     'critRate',
+    'evasionRate',
     'staminaRecovery',
     'startingStamina',
     'maxHpRecovery',
     'kinship',
     'wyvernfell',
+    'accuracy',
+    'ailmentChance',
     'debuffExtension',
+    'effectChance',
   ]),
   value: z.number(),
 });

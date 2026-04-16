@@ -9,6 +9,9 @@
       case 'critRate':
         return 'Crit Rate';
 
+      case 'evasionRate':
+        return 'Evasion';
+
       case 'staminaRecovery':
         return 'Stamina Recovery';
 
@@ -24,8 +27,17 @@
       case 'wyvernfell':
         return 'Wyvernfell';
 
+      case 'accuracy':
+        return 'Accuracy';
+
+      case 'ailmentChance':
+        return 'Ailment Chance';
+
       case 'debuffExtension':
         return 'Debuff Extension';
+
+      case 'effectChance':
+        return 'Effect Chance';
 
       // -- SkillDetailFactor
       case 'damageDone':
@@ -92,9 +104,13 @@
     switch (props.detail.type) {
       // -- SkillDetailValue
       case 'critRate':
+      case 'evasionRate':
         return `+${props.detail.value}%`;
 
       case 'maxHpRecovery':
+      case 'accuracy':
+      case 'ailmentChance':
+      case 'effectChance':
         return `${props.detail.value * 100}%`;
 
       case 'debuffExtension':
