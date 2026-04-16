@@ -30,6 +30,7 @@ export const BuffDetailSchema = z.object({
   element: GeneElementSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']).optional(),
+  label: z.string().optional(),
 });
 export type BuffDetail = z.infer<typeof BuffDetailSchema>;
 

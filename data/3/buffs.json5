@@ -106,17 +106,17 @@
 
     {
       type: 'Burn Effect',
-      details: [{ type: 'effectChance', value: 0.2 }],
+      details: [{ type: 'effectChance', value: 0.2, label: 'Burn' }],
     },
 
     {
       type: 'Paralysis Effect',
-      details: [{ type: 'effectChance', value: 0.2 }],
+      details: [{ type: 'effectChance', value: 0.2, label: 'Paralysis' }],
     },
 
     {
       type: 'Blast Effect',
-      details: [{ type: 'effectChance', value: 0.2 }],
+      details: [{ type: 'effectChance', value: 0.2, label: 'Blastblight' }],
     },
 
     {

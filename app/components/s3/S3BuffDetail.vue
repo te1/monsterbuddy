@@ -66,6 +66,9 @@
         return 'Ailment inflict rate';
 
       case 'effectChance':
+        if (props.detail.label) {
+          return `${props.detail.label} chance`;
+        }
         return 'Effect chance';
 
       default:

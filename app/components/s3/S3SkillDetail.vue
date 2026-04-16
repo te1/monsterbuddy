@@ -37,6 +37,9 @@
         return 'Debuff Extension';
 
       case 'effectChance':
+        if (props.detail.label) {
+          return `${props.detail.label} Chance`;
+        }
         return 'Effect Chance';
 
       // -- SkillDetailFactor

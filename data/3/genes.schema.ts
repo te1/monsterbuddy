@@ -142,6 +142,7 @@ export const SkillDetailValueSchema = z.object({
     'effectChance',
   ]),
   value: z.number(),
+  label: z.string().optional(),
 });
 export type SkillDetailValue = z.infer<typeof SkillDetailValueSchema>;
 
