@@ -605,6 +605,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -2246,6 +2247,7 @@
     target: 'singleEnemy',
     eggSkill: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -2275,6 +2277,7 @@
     description: 'Fills the Kinship Gauge.',
     target: 'user',
     eggSkill: true,
+    details: [{ type: 'kinship', value: 30 }],
   },
 
   {
@@ -2709,6 +2712,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -2768,6 +2772,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -2878,6 +2883,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Flame Tempest+'],
   },
 
@@ -2895,6 +2901,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Flame Tempest'],
   },
 
@@ -2911,6 +2918,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -2927,6 +2935,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Flare Cluster+'],
   },
 
@@ -2944,6 +2953,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Flare Cluster'],
   },
 
@@ -2957,6 +2967,7 @@
     description: 'Chance to inflict Darkness on all enemies. Has the same effect as a Flash Bomb.',
     target: 'allEnemies',
     ailments: ['darkness'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -4881,6 +4892,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Noxious Venom+'],
   },
 
@@ -4898,6 +4910,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Noxious Venom'],
   },
 
@@ -5548,6 +5561,7 @@
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.4, label: 'Stun' }],
   },
 
   {
@@ -5719,6 +5733,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Savage Fireball+'],
   },
 
@@ -5736,6 +5751,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Savage Fireball'],
   },
 
@@ -6008,6 +6024,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Sleep.',
     target: 'allEnemies',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -6305,6 +6322,10 @@
     target: 'allEnemies',
     ailments: ['burn'],
     effects: ['lowAccuracy'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'accuracy', value: 0.7 },
+    ],
     sizes: ['Spreading Beam+'],
   },
 
@@ -6322,6 +6343,10 @@
     target: 'allEnemies',
     ailments: ['burn'],
     effects: ['lowAccuracy'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'accuracy', value: 0.7 },
+    ],
     sizes: ['Spreading Beam'],
   },
 
@@ -6565,6 +6590,7 @@
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.5, label: 'Stun' }],
   },
 
   {
@@ -6726,6 +6752,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -6935,6 +6962,7 @@
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -7129,6 +7157,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Noxious Poison.',
     target: 'allEnemies',
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
   },
 
   {
@@ -7304,6 +7333,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -7366,6 +7396,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Venom Queen+'],
   },
 
@@ -7382,6 +7413,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Venom Queen'],
   },
 
@@ -7411,6 +7443,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -7425,6 +7458,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Poison.',
     target: 'allEnemies',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
   },
 
   {
