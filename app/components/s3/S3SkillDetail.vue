@@ -33,6 +33,9 @@
       case 'ailmentChance':
         return 'Ailment Chance';
 
+      case 'blastblightTurns':
+        return 'Blastblight Turns';
+
       case 'debuffExtension':
         return 'Debuff Extension';
 

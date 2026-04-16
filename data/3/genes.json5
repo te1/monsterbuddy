@@ -423,6 +423,7 @@
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
     target: 'singleEnemy',
     effects: ['1HitKo', 'crit'],
+    details: [{ type: 'effectChance', value: 0.1, label: '1-Hit-KO' }],
     sizes: ['Assassin Tail+'],
   },
 
@@ -439,6 +440,7 @@
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
     target: 'singleEnemy',
     effects: ['1HitKo', 'crit'],
+    details: [{ type: 'effectChance', value: 0.1, label: '1-Hit-KO' }],
     sizes: ['Assassin Tail'],
   },
 
@@ -496,6 +498,7 @@
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.8, label: 'Stun' }],
   },
 
   {
@@ -561,7 +564,10 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn. Extends the duration of inflicted debuffs.',
     target: 'singleEnemy',
     breath: true,
-    details: [{ type: 'debuffExtension', value: 3 }],
+    details: [
+      { type: 'ailmentChance', value: 0.4 },
+      { type: 'debuffExtension', value: 3 },
+    ],
     ailments: ['burn'],
   },
 
@@ -826,6 +832,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -842,6 +849,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Burning Fang+'],
   },
 
@@ -859,6 +867,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Burning Fang'],
   },
 
@@ -906,6 +915,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Charged Spread Beam+'],
   },
 
@@ -923,6 +933,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Charged Spread Beam'],
   },
 
@@ -939,6 +950,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Chata Stamp+'],
   },
 
@@ -955,6 +967,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Chata Stamp'],
   },
 
@@ -1243,6 +1256,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Cunning Blow+'],
   },
 
@@ -1259,6 +1273,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Cunning Blow'],
   },
 
@@ -1415,6 +1430,7 @@
     description: 'Deals water damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Death Scythe+'],
   },
 
@@ -1431,6 +1447,7 @@
     description: 'Deals water damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Death Scythe'],
   },
 
@@ -1919,6 +1936,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Sleep.',
     target: 'singleEnemy',
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     ailments: ['sleep'],
   },
 
@@ -2578,6 +2596,10 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 3 },
+    ],
     sizes: ['Explosive Blast+'],
   },
 
@@ -2595,6 +2617,10 @@
     breath: true,
     target: 'allEnemies',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 3 },
+    ],
     sizes: ['Explosive Blast'],
   },
 
@@ -2611,6 +2637,10 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.4 },
+      { type: 'blastblightTurns', value: 3 },
+    ],
   },
 
   {
@@ -2850,6 +2880,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Flame Chakram+'],
   },
 
@@ -2866,6 +2897,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Flame Chakram'],
   },
 
@@ -3404,6 +3436,10 @@
     breath: true,
     ailments: ['burn'],
     effects: ['lowAccuracy'],
+    details: [
+      { type: 'ailmentChance', value: 0.4 },
+      { type: 'accuracy', value: 0.7 },
+    ],
   },
 
   {
@@ -3431,6 +3467,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Rampage+'],
   },
 
@@ -3447,6 +3484,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Rampage'],
   },
 
@@ -3463,6 +3501,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Spear+'],
   },
 
@@ -3479,6 +3518,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Spear'],
   },
 
@@ -3494,6 +3534,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
   },
 
   {
@@ -3741,6 +3782,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Stun.',
     target: 'singleEnemy',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.3, label: 'Stun' }],
     sizes: ['Hyper Shot+'],
   },
 
@@ -3757,6 +3799,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Stun.',
     target: 'singleEnemy',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.3, label: 'Stun' }],
     sizes: ['Hyper Shot'],
   },
 
@@ -4047,6 +4090,10 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Blastblight.',
     target: 'allEnemies',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 5 },
+    ],
   },
 
   {
@@ -4062,6 +4109,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Noxious Poison and Paralysis.',
     target: 'allEnemies',
     ailments: ['noxiousPoison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Infernal Flames+'],
   },
 
@@ -4078,6 +4126,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Noxious Poison and Paralysis.',
     target: 'allEnemies',
     ailments: ['noxiousPoison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Infernal Flames'],
   },
 
@@ -5255,6 +5304,7 @@
     description: 'Non-elemental damage to one, chance to poison',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Poison Tail+'],
   },
 
@@ -5271,6 +5321,7 @@
     description: 'Non-elemental damage to one, chance to poison',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Poison Tail'],
   },
 
@@ -5535,6 +5586,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to stun, chance to strike first.',
     target: 'allEnemies',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.4, label: 'Stun' }],
   },
 
   {
@@ -5797,6 +5849,7 @@
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.6, label: 'Stun' }],
   },
 
   {
@@ -5824,6 +5877,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -6040,6 +6094,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Sleep.',
     target: 'singleEnemy',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Sleep Needle+'],
   },
 
@@ -6056,6 +6111,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Sleep.',
     target: 'singleEnemy',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Sleep Needle'],
   },
 
@@ -6104,6 +6160,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 1 }, // TODO is this real?
+      { type: 'blastblightTurns', value: 5 },
+    ],
     sizes: ['Slime Stomp+'],
   },
 
@@ -6120,6 +6180,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 1 }, // TODO is this real?
+      { type: 'blastblightTurns', value: 5 },
+    ],
     sizes: ['Slime Stomp'],
   },
 
@@ -6509,6 +6573,7 @@
     description: 'Non-elemental damage to all, chance to stun, High chance to strike first.',
     target: 'allEnemies',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.5, label: 'Stun' }],
   },
 
   {
@@ -6811,6 +6876,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -7349,6 +7415,7 @@
     description: 'Deals non-elemental damage to all enemies and inflicts Poison.',
     target: 'allEnemies',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Venom Blast+'],
   },
 
@@ -7365,6 +7432,7 @@
     description: 'Deals non-elemental damage to all enemies and inflicts Poison.',
     target: 'allEnemies',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Venom Blast'],
   },
 
@@ -7381,6 +7449,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -7429,6 +7498,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 1 }],
   },
 
   {

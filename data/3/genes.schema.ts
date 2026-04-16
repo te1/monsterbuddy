@@ -138,6 +138,7 @@ export const SkillDetailValueSchema = z.object({
     'wyvernfell',
     'accuracy',
     'ailmentChance',
+    'blastblightTurns',
     'debuffExtension',
     'effectChance',
   ]),
