@@ -187,6 +187,14 @@
               />
               by <AppLink href="https://www.reddit.com/user/rmosley753" text="rmosley753" />
             </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/comment/oged0ql"
+                text="Numbers for skills and buffs"
+              />
+              by <AppLink href="https://www.reddit.com/user/VertVentus" text="VertVentus" />
+            </ProseLi>
           </ProseUl>
         </section>
 

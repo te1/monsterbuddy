@@ -11,6 +11,7 @@
 - [Building the perfect Monstie, a complete guide](https://www.reddit.com/r/MonsterHunterStories/comments/1shua27/building_the_perfect_monstie_a_complete_guide) by [Masuku68](https://www.reddit.com/user/Masuku68)
 - [Wyvernfell](https://lescarnetsdelawycademie.fr/wyvernfell) by [Masuku68](https://www.reddit.com/user/Masuku68)
 - [Monstie Damage Calc (Google Sheets)](https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/monstie_damage_calc_google_sheets) by [rmosley753](https://www.reddit.com/user/rmosley753)
+- [Numbers for skills and buffs](https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/comment/oged0ql) by [VertVentus](https://www.reddit.com/user/VertVentus)
 - [Egg Skills, Egg Powers, Monsties](https://www.reddit.com/r/MonsterHunterStories/comments/1rw0tkb/a_comprehensive_list_for_egg_skills_and_egg) by [Fit-Variation-1875](https://www.reddit.com/user/Fit-Variation-1875)
 
 ## Notes
