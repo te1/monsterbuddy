@@ -20,6 +20,8 @@ https://monsterbuddy.app
 - Tower of Illusion with list of monsters by floor
 - Co-Op quests with list of eggs by den
 - Riding action list and related monsties
+- Habitat restoration, regions and areas
+- Genes, buffs, effects (with numbers) and monstie sources
 
 ## Sources for data and images
 

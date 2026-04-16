@@ -23,6 +23,10 @@
 
   const versions = [
     {
+      date: '2026-04-18',
+      changes: ['Update gene details with a lot more numbers for effects, buffs and debuffs'],
+    },
+    {
       date: '2026-04-13',
       changes: ['Update gene details with numbers for effects, buffs and debuffs'],
     },
@@ -122,7 +126,7 @@
 
           <ProseLi>
             <AppNuxtLink to="/3/genes" text="Gene list" />
-            with types, monstie sources and effects (including some numbers)
+            with types, monstie sources and effects (including numbers)
           </ProseLi>
 
           <ProseLi>
