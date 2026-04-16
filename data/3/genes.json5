@@ -352,6 +352,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison and Paralysis.',
     target: 'singleEnemy',
     ailments: ['poison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -717,6 +718,7 @@
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -1228,6 +1230,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.8 }],
   },
 
   {
@@ -1557,6 +1560,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Darkness.',
     target: 'singleEnemy',
     ailments: ['darkness'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -1571,6 +1575,7 @@
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.7, label: 'Stun' }],
   },
 
   {
@@ -2366,6 +2371,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -2465,6 +2471,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Encompassing Flames+'],
   },
 
@@ -2481,6 +2488,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Encompassing Flames'],
   },
 
@@ -2655,6 +2663,7 @@
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.8, label: 'Stun' }],
   },
 
   {
@@ -2817,6 +2826,7 @@
     description: 'Deals fire damage to random enemies. Chance to inflict Burn.',
     target: 'randomEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -3099,6 +3109,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     debuffs: [{ type: 'Accuracy Down', size: 'L', target: 'singleEnemy' }],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Foxflame Bubbles+'],
   },
 
@@ -3116,6 +3127,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     debuffs: [{ type: 'Accuracy Down', size: 'L', target: 'singleEnemy' }],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Foxflame Bubbles'],
   },
 
@@ -3243,6 +3255,7 @@
     description: 'Deals non-elemental damage to random enemies. Chance to inflict Poison, Paralysis, and Darkness.',
     target: 'randomEnemy',
     ailments: ['poison', 'paralysis', 'darkness'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Fruit Frenzy+'],
   },
 
@@ -3259,6 +3272,7 @@
     description: 'Deals non-elemental damage to random enemies. Chance to inflict Poison, Paralysis, and Darkness.',
     target: 'randomEnemy',
     ailments: ['poison', 'paralysis', 'darkness'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Fruit Frenzy'],
   },
 
@@ -3627,6 +3641,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.8 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -4466,6 +4484,10 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -4907,6 +4929,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Noxious Spit+'],
   },
 
@@ -4924,6 +4947,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Noxious Spit'],
   },
 
@@ -5156,6 +5180,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -5171,6 +5196,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -5185,6 +5211,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -5289,6 +5316,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -5544,6 +5572,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Ray Blade+'],
   },
 
@@ -5560,6 +5589,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Ray Blade'],
   },
 
@@ -5601,6 +5631,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -5932,6 +5963,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -6004,6 +6036,7 @@
     target: 'allEnemies',
     ailments: ['bleeding'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Shredding Scales+'],
   },
 
@@ -6021,6 +6054,7 @@
     target: 'allEnemies',
     ailments: ['bleeding'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Shredding Scales'],
   },
 
@@ -6128,6 +6162,7 @@
     description: 'Deals water damage to all enemies. Chance to inflict Sleep.',
     target: 'allEnemies',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Sleep Powder+'],
   },
 
@@ -6144,6 +6179,7 @@
     description: 'Deals water damage to all enemies. Chance to inflict Sleep.',
     target: 'allEnemies',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Sleep Powder'],
   },
 
@@ -6370,6 +6406,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.3 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -6588,6 +6628,10 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.3 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -6671,6 +6715,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Tail Twister+'],
   },
 
@@ -6687,6 +6732,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Tail Twister'],
   },
 
@@ -6742,6 +6788,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -6936,6 +6983,7 @@
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Thunder Rampage+'],
   },
 
@@ -6951,6 +6999,7 @@
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Thunder Rampage'],
   },
 
@@ -7074,6 +7123,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Thunderbug Blitz+'],
   },
 
@@ -7090,6 +7140,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Thunderbug Blitz'],
   },
 
@@ -7105,6 +7156,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -7175,6 +7227,7 @@
     description: 'Deals water damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 1 }],
   },
 
   {
@@ -7191,6 +7244,10 @@
     target: 'singleEnemy',
     ailments: ['poison'],
     effects: ['1HitKo'],
+    details: [
+      { type: 'ailmentChance', value: 0.7 },
+      { type: 'effectChance', value: 0.1, label: '1-Hit-KO' },
+    ],
     sizes: ['Toxic Needle+'],
   },
 
@@ -7208,6 +7265,10 @@
     target: 'singleEnemy',
     ailments: ['poison'],
     effects: ['1HitKo'],
+    details: [
+      { type: 'ailmentChance', value: 0.7 },
+      { type: 'effectChance', value: 0.1, label: '1-Hit-KO' },
+    ],
     sizes: ['Toxic Needle'],
   },
 
@@ -7294,6 +7355,7 @@
     description: 'Non-elemental damage to all, chance to bleed.',
     target: 'allEnemies',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Vacuum Blast+'],
   },
 
@@ -7310,6 +7372,7 @@
     description: 'Non-elemental damage to all, chance to bleed.',
     target: 'allEnemies',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Vacuum Blast'],
   },
 
