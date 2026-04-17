@@ -21,6 +21,9 @@
       case 'maxHpRecovery':
         return 'Max HP Recovery';
 
+      case 'rawSpeed':
+        return 'Speed';
+
       case 'kinship':
         return 'Kinship';
 
@@ -30,8 +33,14 @@
       case 'accuracy':
         return 'Accuracy';
 
+      case 'priorityOverride':
+        return 'Priority Chance';
+
       case 'ailmentChance':
         return 'Ailment Chance';
+
+      case 'ailmentInflictRate':
+        return 'Ailment Inflict Rate';
 
       case 'blastblightTurns':
         return 'Blastblight Turns';
@@ -99,7 +108,7 @@
         return props.detail.value;
 
       case 'additive':
-        return `${props.detail.value * 100}%`;
+        return `${formatNumber(props.detail.value * 100, 2)}%`;
 
       default:
         return props.detail.value;
@@ -111,13 +120,18 @@
       // -- SkillDetailValue
       case 'critRate':
       case 'evasionRate':
+      case 'ailmentInflictRate':
         return `+${props.detail.value}%`;
 
       case 'maxHpRecovery':
       case 'accuracy':
+      case 'priorityOverride':
       case 'ailmentChance':
       case 'effectChance':
         return `${props.detail.value * 100}%`;
+
+      case 'rawSpeed':
+        return `+${props.detail.value}`;
 
       case 'debuffExtension':
         return `${props.detail.value} turns`;

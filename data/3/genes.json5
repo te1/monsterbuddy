@@ -6,7 +6,7 @@
     type: 'technical',
     element: 'none',
     description: 'Slightly reduces damage taken from all attacks.',
-    // details: [{ type: 'damageTaken', element: 'all', value: -0.03, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'all', value: -0.02, op: 'additive' }],
     sizes: ['All-Elem Def Boost (M)', 'All-Elem Def Boost (L)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -17,7 +17,7 @@
     type: 'technical',
     element: 'none',
     description: 'Reduces damage taken from all attacks.',
-    // details: [{ type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'all', value: -0.04, op: 'additive' }],
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (L)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -28,7 +28,7 @@
     type: 'technical',
     element: 'none',
     description: 'Greatly reduces damage taken from all attacks.',
-    // details: [{ type: 'damageTaken', element: 'all', value: -0.07, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'all', value: -0.07, op: 'additive' }],
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (M)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -772,6 +772,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Slightly increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.2, op: 'additive' }],
     sizes: ['Bombardier (M)', 'Bombardier (L)', 'Bombardier (XL)'],
   },
 
@@ -782,6 +783,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.3, op: 'additive' }],
     sizes: ['Bombardier (S)', 'Bombardier (L)', 'Bombardier (XL)'],
   },
 
@@ -792,6 +794,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Greatly increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.4, op: 'additive' }],
     sizes: ['Bombardier (S)', 'Bombardier (M)', 'Bombardier (XL)'],
   },
 
@@ -802,6 +805,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Significantly increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.5, op: 'additive' }],
     sizes: ['Bombardier (S)', 'Bombardier (M)', 'Bombardier (L)'],
   },
 
@@ -1081,7 +1085,7 @@
     type: null,
     element: 'dragon',
     description: "Recovers a slight amount of the user's HP on a critical hit.",
-    // details: [{ type: 'maxHpRecovery', value: 0.15 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.1 }],
     sizes: ['Crit-Heal (M)', 'Crit-Heal (L)', 'Crit-Heal (XL)'],
   },
 
@@ -1092,7 +1096,7 @@
     type: null,
     element: 'dragon',
     description: "Recovers a small amount of the user's HP on a critical hit.",
-    // details: [{ type: 'maxHpRecovery', value: 0.2 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.17 }],
     sizes: ['Crit-Heal (S)', 'Crit-Heal (L)', 'Crit-Heal (XL)'],
   },
 
@@ -1103,7 +1107,7 @@
     type: null,
     element: 'dragon',
     description: "Recovers a decent amount of the user's HP on a critical hit.",
-    // details: [{ type: 'maxHpRecovery', value: 0.25 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.24 }],
     sizes: ['Crit-Heal (S)', 'Crit-Heal (M)', 'Crit-Heal (XL)'],
   },
 
@@ -1125,7 +1129,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Slightly increases Crit Rate.',
-    // details: [{ type: 'critRate', value: 6 }], // TODO no source
+    details: [{ type: 'critRate', value: 5 }],
     sizes: ['Critical (M)', 'Critical (L)', 'Critical (XL)'],
   },
 
@@ -1136,7 +1140,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Increases Crit Rate.',
-    // details: [{ type: 'critRate', value: 9 }], // TODO no source
+    details: [{ type: 'critRate', value: 8 }],
     sizes: ['Critical (S)', 'Critical (L)', 'Critical (XL)'],
   },
 
@@ -1147,7 +1151,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Greatly increases Crit Rate.',
-    // details: [{ type: 'critRate', value: 12 }], // TODO no source
+    details: [{ type: 'critRate', value: 12 }],
     sizes: ['Critical (S)', 'Critical (M)', 'Critical (XL)'],
   },
 
@@ -1181,7 +1185,7 @@
     type: null,
     element: 'thunder',
     description: 'Slightly fills the Kinship Gauge on a critical hit.',
-    // details: [{ type: 'kinship', value: 6 }], // TODO no source
+    details: [{ type: 'kinship', value: 3 }],
     sizes: ['Critical Kinship (M)', 'Critical Kinship (L)', 'Critical Kinship (XL)'],
   },
 
@@ -1192,7 +1196,7 @@
     type: null,
     element: 'thunder',
     description: 'Fills the Kinship Gauge on a critical hit.',
-    // details: [{ type: 'kinship', value: 9 }], // TODO no source
+    details: [{ type: 'kinship', value: 5 }],
     sizes: ['Critical Kinship (S)', 'Critical Kinship (L)', 'Critical Kinship (XL)'],
   },
 
@@ -1203,7 +1207,7 @@
     type: null,
     element: 'thunder',
     description: 'Greatly fills the Kinship Gauge on a critical hit.',
-    // details: [{ type: 'kinship', value: 12 }], // TODO no source
+    details: [{ type: 'kinship', value: 7 }],
     sizes: ['Critical Kinship (S)', 'Critical Kinship (M)', 'Critical Kinship (XL)'],
   },
 
@@ -1214,7 +1218,7 @@
     type: null,
     element: 'thunder',
     description: 'Significantly fills the Kinship Gauge on a critical hit.',
-    details: [{ type: 'kinship', value: 15 }],
+    details: [{ type: 'kinship', value: 10 }],
     sizes: ['Critical Kinship (S)', 'Critical Kinship (M)', 'Critical Kinship (L)'],
   },
 
@@ -1630,6 +1634,7 @@
     type: null,
     element: 'none',
     description: 'Minuscule chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Divine Blessing (M)', 'Divine Blessing (L)', 'Divine Blessing (XL)'],
   },
 
@@ -1640,6 +1645,7 @@
     type: null,
     element: 'none',
     description: 'Slight chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.17 }],
     sizes: ['Divine Blessing (S)', 'Divine Blessing (L)', 'Divine Blessing (XL)'],
   },
 
@@ -1650,6 +1656,7 @@
     type: null,
     element: 'none',
     description: 'Low chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.24 }],
     sizes: ['Divine Blessing (S)', 'Divine Blessing (M)', 'Divine Blessing (XL)'],
   },
 
@@ -1660,6 +1667,7 @@
     type: null,
     element: 'none',
     description: 'Medium chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Divine Blessing (S)', 'Divine Blessing (M)', 'Divine Blessing (L)'],
   },
 
@@ -2553,7 +2561,7 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Evasion at 50% HP or less.',
-    // details: [{ type: 'evasionRate', value: 10 }], // TODO no source
+    details: [{ type: 'evasionRate', value: 20 }],
     sizes: ['Evasion Instinct (M)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2564,7 +2572,7 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Evasion at 50% HP or less.',
-    // details: [{ type: 'evasionRate', value: 20 }], // TODO no source
+    details: [{ type: 'evasionRate', value: 27 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2575,7 +2583,7 @@
     type: 'speed',
     element: 'water',
     description: 'Greatly increases Evasion at 50% HP or less.',
-    // details: [{ type: 'evasionRate', value: 30 }], // TODO no source
+    details: [{ type: 'evasionRate', value: 34 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (XL)'],
   },
 
@@ -2586,7 +2594,7 @@
     type: 'speed',
     element: 'water',
     description: 'Significantly increases Evasion at 50% HP or less.',
-    details: [{ type: 'evasionRate', value: 40 }], // TODO is this real?
+    details: [{ type: 'evasionRate', value: 40 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (L)'],
   },
 
@@ -3654,7 +3662,7 @@
     type: 'power',
     element: 'fire',
     description: 'Slightly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.12, op: 'additive' }],
+    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
     sizes: ['Heroics (M)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3665,7 +3673,7 @@
     type: 'power',
     element: 'fire',
     description: 'Increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.18, op: 'additive' }],
+    details: [{ type: 'damageDone', element: 'all', value: 0.17, op: 'additive' }],
     sizes: ['Heroics (S)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -4155,6 +4163,7 @@
     type: null,
     element: 'none',
     description: 'Slightly increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 10 }],
     sizes: ['Inflict Rate Up (M)', 'Inflict Rate Up (L)', 'Inflict Rate Up (XL)'],
   },
 
@@ -4165,6 +4174,7 @@
     type: null,
     element: 'none',
     description: 'Increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 17 }],
     sizes: ['Inflict Rate Up (S)', 'Inflict Rate Up (L)', 'Inflict Rate Up (XL)'],
   },
 
@@ -4175,6 +4185,7 @@
     type: null,
     element: 'none',
     description: 'Greatly increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 24 }],
     sizes: ['Inflict Rate Up (S)', 'Inflict Rate Up (M)', 'Inflict Rate Up (XL)'],
   },
 
@@ -4185,6 +4196,7 @@
     type: null,
     element: 'none',
     description: 'Significantly increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 30 }],
     sizes: ['Inflict Rate Up (S)', 'Inflict Rate Up (M)', 'Inflict Rate Up (L)'],
   },
 
@@ -5102,7 +5114,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills slightly faster at 50% HP or less.',
-    // details: [{ type: 'kinshipGeneration', value: 1.25, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }],
     sizes: ['Partner (M)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5113,7 +5125,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills faster at 50% HP or less.',
-    // details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.65, op: 'multiplier' }],
     sizes: ['Partner (S)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5124,7 +5136,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills much faster at 50% HP or less.',
-    // details: [{ type: 'kinshipGeneration', value: 1.75, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.8, op: 'multiplier' }],
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (XL)'],
   },
 
@@ -5360,7 +5372,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Slightly reduces damage taken at 50% HP or less.',
-    // details: [{ type: 'damageTaken', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', value: -0.3, op: 'additive' }],
     sizes: ['Potential (M)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5371,7 +5383,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Reduces damage taken at 50% HP or less.',
-    // details: [{ type: 'damageTaken', value: -0.3, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', value: -0.37, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5382,7 +5394,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Greatly reduces damage taken at 50% HP or less.',
-    // details: [{ type: 'damageTaken', value: -0.4, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', value: -0.43, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (XL)'],
   },
 
@@ -5393,7 +5405,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Significantly reduces damage taken at 50% HP or less.',
-    details: [{ type: 'damageTaken', value: -0.5, op: 'additive' }], // TODO is this real?
+    details: [{ type: 'damageTaken', value: -0.5, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (L)'],
   },
 
@@ -5450,6 +5462,10 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Speed. Low chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 1 },
+      { type: 'priorityOverride', value: 0.2 },
+    ],
     sizes: ['Quick (M)', 'Quick (L)', 'Quick (XL)'],
   },
 
@@ -5460,6 +5476,10 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Speed. Medium chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 1 },
+      { type: 'priorityOverride', value: 0.3 },
+    ],
     sizes: ['Quick (S)', 'Quick (L)', 'Quick (XL)'],
   },
 
@@ -5470,6 +5490,10 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Speed. Medium chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 2 },
+      { type: 'priorityOverride', value: 0.4 },
+    ],
     sizes: ['Quick (S)', 'Quick (M)', 'Quick (XL)'],
   },
 
@@ -5480,6 +5504,10 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Speed. High chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 2 },
+      { type: 'priorityOverride', value: 0.5 },
+    ],
     sizes: ['Quick (S)', 'Quick (M)', 'Quick (L)'],
   },
 
@@ -6641,6 +6669,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Slightly increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.1, op: 'additive' }],
     sizes: ['Synchronize (M)', 'Synchronize (L)', 'Synchronize (XL)'],
   },
 
@@ -6651,6 +6680,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.17, op: 'additive' }],
     sizes: ['Synchronize (S)', 'Synchronize (L)', 'Synchronize (XL)'],
   },
 
@@ -6661,6 +6691,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Greatly increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.24, op: 'additive' }],
     sizes: ['Synchronize (S)', 'Synchronize (M)', 'Synchronize (XL)'],
   },
 
@@ -6671,6 +6702,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Significantly increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.3, op: 'additive' }],
     sizes: ['Synchronize (S)', 'Synchronize (M)', 'Synchronize (L)'],
   },
 
@@ -7641,7 +7673,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly increases Crit Rate at 50% HP or less.',
-    // details: [{ type: 'critRate', value: 10 }], // TODO no source
+    details: [{ type: 'critRate', value: 10 }],
     sizes: ['Vigilance (M)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7652,7 +7684,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases Crit Rate at 50% HP or less.',
-    // details: [{ type: 'critRate', value: 20 }], // TODO no source
+    details: [{ type: 'critRate', value: 17 }],
     sizes: ['Vigilance (S)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7663,7 +7695,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Greatly increases Crit Rate at 50% HP or less.',
-    // details: [{ type: 'critRate', value: 30 }], // TODO no source
+    details: [{ type: 'critRate', value: 24 }],
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (XL)'],
   },
 
