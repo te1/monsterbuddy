@@ -331,6 +331,9 @@ export function formatSkillTarget(target: SkillTarget): string {
     case 'randomEnemy':
       return 'Random Enemies';
 
+    case 'singleAlly':
+      return 'Single Ally';
+
     case 'singleEnemy':
       return 'Single Enemy';
 

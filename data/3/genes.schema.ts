@@ -14,6 +14,7 @@ export const SkillTargetSchema = z.enum([
   'allAllies',
   'allEnemies',
   'randomEnemy',
+  'singleAlly',
   'singleEnemy',
   'user',
 ]);

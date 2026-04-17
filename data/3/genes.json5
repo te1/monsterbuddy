@@ -2007,7 +2007,7 @@
     active: true,
     stamina: 100,
     description: 'Restores a single Heart to one ally.',
-    target: 'singleEnemy',
+    target: 'singleAlly',
     eggSkill: true,
   },
 
