@@ -569,7 +569,7 @@
     ],
     debuffs: [
       { type: 'Defense Down', size: 'L', target: 'allAllies', turns: '3' },
-      { type: 'Dodge Down', size: 'L', target: 'allAllies', turns: '3' },
+      { type: 'Evasion Down', size: 'L', target: 'allAllies', turns: '3' },
     ],
   },
 

@@ -131,7 +131,7 @@
       case 'priorityOverride':
       case 'ailmentChance':
       case 'effectChance':
-        return `${props.detail.value * 100}%`;
+        return `${formatNumber(props.detail.value * 100, 2)}%`;
 
       case 'rawSpeed':
         return `+${props.detail.value}`;

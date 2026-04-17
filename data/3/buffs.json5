@@ -159,9 +159,9 @@
     {
       type: 'Guard',
       details: [
-        { size: 'S', type: 'damageTaken', element: 'all', value: -0.4, op: 'multiplier' },
-        { size: 'M', type: 'damageTaken', element: 'all', value: -0.6, op: 'multiplier' },
-        { size: 'L', type: 'damageTaken', element: 'all', value: -0.8, op: 'multiplier' },
+        { size: 'S', type: 'damageTaken', element: 'all', value: -0.4, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'all', value: -0.6, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'all', value: -0.8, op: 'additive' },
       ],
     },
 
@@ -241,7 +241,7 @@
     },
 
     {
-      type: 'Dodge Down',
+      type: 'Evasion Down',
       details: [
         { size: 'S', type: 'evasionRate', value: -10 },
         { size: 'M', type: 'evasionRate', value: -20 },
