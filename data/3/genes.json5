@@ -150,6 +150,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Low chance to negate Bleeding.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antibleed (M)', 'Antibleed (L)', 'Antibleed (XL)'],
   },
 
@@ -160,6 +161,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Chance to negate Bleeding.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antibleed (S)', 'Antibleed (L)', 'Antibleed (XL)'],
   },
 
@@ -170,6 +172,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'High chance to negate Bleeding.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antibleed (S)', 'Antibleed (M)', 'Antibleed (XL)'],
   },
 
@@ -180,6 +183,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Negates Bleeding.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antibleed (S)', 'Antibleed (M)', 'Antibleed (L)'],
   },
 
@@ -190,6 +194,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Low chance to negate Burn.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antiburn (M)', 'Antiburn (L)', 'Antiburn (XL)'],
   },
 
@@ -200,6 +205,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Chance to negate Burn.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antiburn (S)', 'Antiburn (L)', 'Antiburn (XL)'],
   },
 
@@ -210,6 +216,7 @@
     type: 'speed',
     element: 'fire',
     description: 'High chance to negate Burn.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antiburn (S)', 'Antiburn (M)', 'Antiburn (XL)'],
   },
 
@@ -220,6 +227,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Negates Burn.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antiburn (S)', 'Antiburn (M)', 'Antiburn (L)'],
   },
 
@@ -230,6 +238,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Low chance to negate Paralysis.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antiparalysis (M)', 'Antiparalysis (L)', 'Antiparalysis (XL)'],
   },
 
@@ -240,6 +249,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Chance to negate Paralysis.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antiparalysis (S)', 'Antiparalysis (L)', 'Antiparalysis (XL)'],
   },
 
@@ -250,6 +260,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'High chance to negate Paralysis.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antiparalysis (S)', 'Antiparalysis (M)', 'Antiparalysis (XL)'],
   },
 
@@ -260,6 +271,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Negates Paralysis.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antiparalysis (S)', 'Antiparalysis (M)', 'Antiparalysis (L)'],
   },
 
@@ -270,6 +282,7 @@
     type: 'technical',
     element: 'none',
     description: 'Low chance to negate Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antivenom (M)', 'Antivenom (L)', 'Antivenom (XL)'],
   },
 
@@ -280,6 +293,7 @@
     type: 'technical',
     element: 'none',
     description: 'Chance to negate Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antivenom (S)', 'Antivenom (L)', 'Antivenom (XL)'],
   },
 
@@ -290,6 +304,7 @@
     type: 'technical',
     element: 'none',
     description: 'High chance to negate Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antivenom (S)', 'Antivenom (M)', 'Antivenom (XL)'],
   },
 
@@ -300,6 +315,7 @@
     type: 'technical',
     element: 'none',
     description: 'Negates Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antivenom (S)', 'Antivenom (M)', 'Antivenom (L)'],
   },
 
@@ -641,6 +657,7 @@
     type: 'power',
     element: 'fire',
     description: 'Low chance to negate Blastblight.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Blightproof (M)', 'Blightproof (L)', 'Blightproof (XL)'],
   },
 
@@ -651,6 +668,7 @@
     type: 'power',
     element: 'fire',
     description: 'Chance to negate Blastblight.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Blightproof (S)', 'Blightproof (L)', 'Blightproof (XL)'],
   },
 
@@ -661,6 +679,7 @@
     type: 'power',
     element: 'fire',
     description: 'High chance to negate Blastblight.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Blightproof (S)', 'Blightproof (M)', 'Blightproof (XL)'],
   },
 
@@ -671,6 +690,7 @@
     type: 'power',
     element: 'fire',
     description: 'Negates Blastblight.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Blightproof (S)', 'Blightproof (M)', 'Blightproof (L)'],
   },
 
@@ -1363,6 +1383,7 @@
     type: 'technical',
     element: 'none',
     description: 'Low chance to negate Darkness.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Darkness Resistance (M)', 'Darkness Resistance (L)', 'Darkness Resistance (XL)'],
   },
 
@@ -1373,6 +1394,7 @@
     type: 'technical',
     element: 'none',
     description: 'Chance to negate Darkness.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Darkness Resistance (S)', 'Darkness Resistance (L)', 'Darkness Resistance (XL)'],
   },
 
@@ -1383,6 +1405,7 @@
     type: 'technical',
     element: 'none',
     description: 'High chance to negate Darkness.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Darkness Resistance (S)', 'Darkness Resistance (M)', 'Darkness Resistance (XL)'],
   },
 
@@ -1393,6 +1416,7 @@
     type: 'technical',
     element: 'none',
     description: 'Negates Darkness.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Darkness Resistance (S)', 'Darkness Resistance (M)', 'Darkness Resistance (L)'],
   },
 
@@ -4254,6 +4278,7 @@
     type: 'technical',
     element: 'water',
     description: 'Low chance to negate Sleep.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Insomniac (M)', 'Insomniac (L)', 'Insomniac (XL)'],
   },
 
@@ -4264,6 +4289,7 @@
     type: 'technical',
     element: 'water',
     description: 'Chance to negate Sleep.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Insomniac (S)', 'Insomniac (L)', 'Insomniac (XL)'],
   },
 
@@ -4274,6 +4300,7 @@
     type: 'technical',
     element: 'water',
     description: 'High chance to negate Sleep.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Insomniac (S)', 'Insomniac (M)', 'Insomniac (XL)'],
   },
 
@@ -4284,6 +4311,7 @@
     type: 'technical',
     element: 'water',
     description: 'Negates Sleep.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Insomniac (S)', 'Insomniac (M)', 'Insomniac (L)'],
   },
 
@@ -5986,6 +6014,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Low chance to negate Skillseal.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Sealbreaker (M)', 'Sealbreaker (L)', 'Sealbreaker (XL)'],
   },
 
@@ -5996,6 +6025,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Chance to negate Skillseal.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Sealbreaker (S)', 'Sealbreaker (L)', 'Sealbreaker (XL)'],
   },
 
@@ -6006,6 +6036,7 @@
     type: 'speed',
     element: 'ice',
     description: 'High chance to negate Skillseal.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Sealbreaker (S)', 'Sealbreaker (M)', 'Sealbreaker (XL)'],
   },
 
@@ -6016,6 +6047,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Negates Skillseal.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Sealbreaker (S)', 'Sealbreaker (M)', 'Sealbreaker (L)'],
   },
 
