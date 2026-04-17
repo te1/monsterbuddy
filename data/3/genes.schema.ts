@@ -134,6 +134,7 @@ export const SkillDetailValueSchema = z.object({
     'staminaRecovery',
     'startingStamina',
     'maxHpRecovery',
+    'remainingHp',
     'rawSpeed',
     'kinship',
     'wyvernfell',
@@ -160,7 +161,7 @@ export const SkillDetailFactorSchema = z.object({
     'wyvernsoulDamage',
   ]),
   element: GeneElementSchema.optional(),
-  condition: z.enum(['blastblight', 'doubleAttack']).optional(),
+  condition: z.enum(['blastblight', 'doubleAttack', 'kinship', 'elementalWeakness']).optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']),
 });

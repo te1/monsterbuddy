@@ -51,7 +51,7 @@
     element: 'dragon',
     description: 'Slightly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.12, op: 'additive' }, // TODO no source
+      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (M)', 'All-Out (L)', 'All-Out (XL)'],
@@ -65,7 +65,7 @@
     element: 'dragon',
     description: 'Increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.18, op: 'additive' }, // TODO no source
+      { type: 'damageDone', element: 'all', value: 0.17, op: 'additive' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (L)', 'All-Out (XL)'],
@@ -106,6 +106,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Low chance to survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Anti 1-Hit KO (M)', 'Anti 1-Hit KO (L)', 'Anti 1-Hit KO (XL)'],
   },
 
@@ -116,6 +117,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Chance to survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Anti 1-Hit KO (S)', 'Anti 1-Hit KO (L)', 'Anti 1-Hit KO (XL)'],
   },
 
@@ -126,6 +128,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'High chance to survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Anti 1-Hit KO (S)', 'Anti 1-Hit KO (M)', 'Anti 1-Hit KO (XL)'],
   },
 
@@ -136,6 +139,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Anti 1-Hit KO (S)', 'Anti 1-Hit KO (M)', 'Anti 1-Hit KO (L)'],
   },
 
@@ -1519,6 +1523,7 @@
     type: null,
     element: 'ice',
     description: 'Slightly increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Den Protector (M)', 'Den Protector (L)', 'Den Protector (XL)'],
   },
 
@@ -1529,6 +1534,7 @@
     type: null,
     element: 'ice',
     description: 'Increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.17 }],
     sizes: ['Den Protector (S)', 'Den Protector (L)', 'Den Protector (XL)'],
   },
 
@@ -1539,6 +1545,7 @@
     type: null,
     element: 'ice',
     description: 'Greatly increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.24 }],
     sizes: ['Den Protector (S)', 'Den Protector (M)', 'Den Protector (XL)'],
   },
 
@@ -1549,6 +1556,7 @@
     type: null,
     element: 'ice',
     description: 'Significantly increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Den Protector (S)', 'Den Protector (M)', 'Den Protector (L)'],
   },
 
@@ -1827,7 +1835,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Slightly reduces damage taken from dragon attacks.',
-    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.05, op: 'additive' }],
     sizes: ['Dragon Def Boost (M)', 'Dragon Def Boost (L)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1838,7 +1846,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Reduces damage taken from dragon attacks.',
-    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.1, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (L)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1849,7 +1857,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases dragon resistance, reducing damage taken from dragon attacks.',
-    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.15, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (M)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1860,7 +1868,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases dragon resistance, greatly reducing damage taken from dragon attacks.',
-    details: [{ type: 'damageTaken', element: 'dragon', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.2, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (M)', 'Dragon Def Boost (L)'],
   },
 
@@ -2389,7 +2397,7 @@
     type: 'speed',
     element: 'ice',
     description: "Slightly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    // details: [{ type: 'wyvernsoulDamage', value: 1.2, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'wyvernsoulDamage', value: 1.2, op: 'multiplier' }],
     sizes: ['Elemental Assault (M)', 'Elemental Assault (L)', 'Elemental Assault (XL)'],
   },
 
@@ -2400,7 +2408,7 @@
     type: 'speed',
     element: 'ice',
     description: "Increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    // details: [{ type: 'wyvernsoulDamage', value: 1.3, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'wyvernsoulDamage', value: 1.3, op: 'multiplier' }],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (L)', 'Elemental Assault (XL)'],
   },
 
@@ -2411,7 +2419,7 @@
     type: 'speed',
     element: 'ice',
     description: "Greatly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    // details: [{ type: 'wyvernsoulDamage', value: 1.4, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'wyvernsoulDamage', value: 1.4, op: 'multiplier' }],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (M)', 'Elemental Assault (XL)'],
   },
 
@@ -2433,6 +2441,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Slightly increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.05, op: 'additive' }],
     sizes: ['Elemental Breaker (M)', 'Elemental Breaker (L)', 'Elemental Breaker (XL)'],
   },
 
@@ -2443,6 +2452,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.1, op: 'additive' }],
     sizes: ['Elemental Breaker (S)', 'Elemental Breaker (L)', 'Elemental Breaker (XL)'],
   },
 
@@ -2453,6 +2463,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Greatly increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.15, op: 'additive' }],
     sizes: ['Elemental Breaker (S)', 'Elemental Breaker (M)', 'Elemental Breaker (XL)'],
   },
 
@@ -2463,6 +2474,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Significantly increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.2, op: 'additive' }],
     sizes: ['Elemental Breaker (S)', 'Elemental Breaker (M)', 'Elemental Breaker (L)'],
   },
 
@@ -2521,6 +2533,7 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Evasion.',
+    details: [{ type: 'evasionRate', value: 5 }],
     sizes: ['Evasion Ability (M)', 'Evasion Ability (L)', 'Evasion Ability (XL)'],
   },
 
@@ -2531,6 +2544,7 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Evasion.',
+    details: [{ type: 'evasionRate', value: 10 }],
     sizes: ['Evasion Ability (S)', 'Evasion Ability (L)', 'Evasion Ability (XL)'],
   },
 
@@ -2541,6 +2555,7 @@
     type: 'speed',
     element: 'water',
     description: 'Greatly increases Evasion.',
+    details: [{ type: 'evasionRate', value: 15 }],
     sizes: ['Evasion Ability (S)', 'Evasion Ability (M)', 'Evasion Ability (XL)'],
   },
 
@@ -2551,6 +2566,7 @@
     type: 'speed',
     element: 'water',
     description: 'Significantly increases Evasion.',
+    details: [{ type: 'evasionRate', value: 20 }],
     sizes: ['Evasion Ability (S)', 'Evasion Ability (M)', 'Evasion Ability (L)'],
   },
 
@@ -2769,7 +2785,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Slightly reduces damage taken from fire attacks.',
-    // details: [{ type: 'damageTaken', element: 'fire', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.05, op: 'additive' }],
     sizes: ['Fire Def Boost (M)', 'Fire Def Boost (L)', 'Fire Def Boost (XL)'],
   },
 
@@ -2780,7 +2796,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Reduces damage taken from fire attacks.',
-    // details: [{ type: 'damageTaken', element: 'fire', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.1, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (L)', 'Fire Def Boost (XL)'],
   },
 
@@ -2791,7 +2807,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Increases fire resistance, reducing damage taken from fire attacks.',
-    // details: [{ type: 'damageTaken', element: 'fire', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.15, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (M)', 'Fire Def Boost (XL)'],
   },
 
@@ -2802,7 +2818,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Increases fire resistance, greatly reducing damage taken from fire attacks.',
-    details: [{ type: 'damageTaken', element: 'fire', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.2, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (M)', 'Fire Def Boost (L)'],
   },
 
@@ -3070,6 +3086,10 @@
     type: 'technical',
     element: 'water',
     description: 'Slightly increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.05, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' },
+    ],
     sizes: ['Fortify (M)', 'Fortify (L)', 'Fortify (XL)'],
   },
 
@@ -3080,6 +3100,10 @@
     type: 'technical',
     element: 'water',
     description: 'Increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' },
+    ],
     sizes: ['Fortify (S)', 'Fortify (L)', 'Fortify (XL)'],
   },
 
@@ -3090,6 +3114,10 @@
     type: 'technical',
     element: 'water',
     description: 'Greatly increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.15, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.15, op: 'additive' },
+    ],
     sizes: ['Fortify (S)', 'Fortify (M)', 'Fortify (XL)'],
   },
 
@@ -3100,6 +3128,10 @@
     type: 'technical',
     element: 'water',
     description: 'Significantly increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
+      { type: 'damageTaken', element: 'all', value: -0.2, op: 'additive' },
+    ],
     sizes: ['Fortify (S)', 'Fortify (M)', 'Fortify (L)'],
   },
 
@@ -3978,7 +4010,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly reduces damage taken from ice attacks.',
-    // details: [{ type: 'damageTaken', element: 'ice', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.05, op: 'additive' }],
     sizes: ['Ice Def Boost (M)', 'Ice Def Boost (L)', 'Ice Def Boost (XL)'],
   },
 
@@ -3989,7 +4021,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Reduces damage taken from ice attacks.',
-    // details: [{ type: 'damageTaken', element: 'ice', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.1, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (L)', 'Ice Def Boost (XL)'],
   },
 
@@ -4000,7 +4032,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases ice resistance, reducing damage taken from ice attacks.',
-    // details: [{ type: 'damageTaken', element: 'ice', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.15, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (M)', 'Ice Def Boost (XL)'],
   },
 
@@ -4011,7 +4043,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases ice resistance, greatly reducing damage taken from ice attacks.',
-    details: [{ type: 'damageTaken', element: 'ice', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.2, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (M)', 'Ice Def Boost (L)'],
   },
 
@@ -4438,6 +4470,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Slightly increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.1, op: 'additive' }],
     sizes: ['Kinship Skill+ (M)', 'Kinship Skill+ (L)', 'Kinship Skill+ (XL)'],
   },
 
@@ -4448,6 +4481,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.17, op: 'additive' }],
     sizes: ['Kinship Skill+ (S)', 'Kinship Skill+ (L)', 'Kinship Skill+ (XL)'],
   },
 
@@ -4458,6 +4492,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Greatly increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.24, op: 'additive' }],
     sizes: ['Kinship Skill+ (S)', 'Kinship Skill+ (M)', 'Kinship Skill+ (XL)'],
   },
 
@@ -4468,6 +4503,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Significantly increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.3, op: 'additive' }],
     sizes: ['Kinship Skill+ (S)', 'Kinship Skill+ (M)', 'Kinship Skill+ (L)'],
   },
 
@@ -4879,7 +4915,7 @@
     type: 'technical',
     element: 'none',
     description: 'Slightly reduces damage taken from non-elemental attacks.',
-    // details: [{ type: 'damageTaken', element: 'none', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'none', value: -0.05, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (M)', 'Non-Elem Def Boost (L)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4890,7 +4926,7 @@
     type: 'technical',
     element: 'none',
     description: 'Reduces damage taken from non-elemental attacks.',
-    // details: [{ type: 'damageTaken', element: 'none', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'none', value: -0.1, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (L)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4901,7 +4937,7 @@
     type: 'technical',
     element: 'none',
     description: 'Increases non-elemental resistance, reducing damage taken from non-elemental attacks.',
-    // details: [{ type: 'damageTaken', element: 'none', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'none', value: -0.15, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (M)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4912,7 +4948,7 @@
     type: 'technical',
     element: 'none',
     description: 'Increases non-elemental resistance, greatly reducing damage taken from non-elemental attacks.',
-    details: [{ type: 'damageTaken', element: 'none', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'none', value: -0.2, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (M)', 'Non-Elem Def Boost (L)'],
   },
 
@@ -6001,7 +6037,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Recovers a slight amount of HP at the end of each turn.',
-    // details: [{ type: 'maxHpRecovery', value: 0.05 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.1 }],
     sizes: ['Self-Heal (M)', 'Self-Heal (L)', 'Self-Heal (XL)'],
   },
 
@@ -6012,7 +6048,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Recovers a small amount of HP at the end of each turn.',
-    // details: [{ type: 'maxHpRecovery', value: 0.1 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.13 }],
     sizes: ['Self-Heal (S)', 'Self-Heal (L)', 'Self-Heal (XL)'],
   },
 
@@ -6023,7 +6059,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Recovers a decent amount of HP at the end of each turn.',
-    // details: [{ type: 'maxHpRecovery', value: 0.15 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.17 }],
     sizes: ['Self-Heal (S)', 'Self-Heal (M)', 'Self-Heal (XL)'],
   },
 
@@ -6358,7 +6394,7 @@
     type: 'speed',
     element: 'none',
     description: 'Kinship Gauge fills slightly faster.',
-    // details: [{ type: 'kinshipGeneration', value: 1.1, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.1, op: 'multiplier' }],
     sizes: ['Soul Kinship (M)', 'Soul Kinship (L)', 'Soul Kinship (XL)'],
   },
 
@@ -6369,7 +6405,7 @@
     type: 'speed',
     element: 'none',
     description: 'Kinship Gauge fills faster.',
-    // details: [{ type: 'kinshipGeneration', value: 1.2, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.2, op: 'multiplier' }],
     sizes: ['Soul Kinship (S)', 'Soul Kinship (L)', 'Soul Kinship (XL)'],
   },
 
@@ -6380,7 +6416,7 @@
     type: 'speed',
     element: 'none',
     description: 'Kinship Gauge fills much faster.',
-    // details: [{ type: 'kinshipGeneration', value: 1.3, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.3, op: 'multiplier' }],
     sizes: ['Soul Kinship (S)', 'Soul Kinship (M)', 'Soul Kinship (XL)'],
   },
 
@@ -6775,6 +6811,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more.',
+    details: [{ type: 'remainingHp', value: 1 }],
     sizes: ['Tenacity (M)', 'Tenacity (L)', 'Tenacity (XL)'],
   },
 
@@ -6785,6 +6822,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more. A slight amount of HP will remain.',
+    details: [{ type: 'remainingHp', value: 50 }],
     sizes: ['Tenacity (S)', 'Tenacity (L)', 'Tenacity (XL)'],
   },
 
@@ -6795,6 +6833,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more. A decent amount of HP will remain.',
+    details: [{ type: 'remainingHp', value: 100 }],
     sizes: ['Tenacity (S)', 'Tenacity (M)', 'Tenacity (XL)'],
   },
 
@@ -6805,6 +6844,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more. A large amount of HP will remain.',
+    details: [{ type: 'remainingHp', value: 150 }],
     sizes: ['Tenacity (S)', 'Tenacity (M)', 'Tenacity (L)'],
   },
 
@@ -6906,7 +6946,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Slightly reduces damage taken from thunder attacks.',
-    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.05, op: 'additive' }],
     sizes: ['Thunder Def Boost (M)', 'Thunder Def Boost (L)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6917,7 +6957,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Reduces damage taken from thunder attacks.',
-    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.1, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (L)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6928,7 +6968,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases thunder resistance, reducing damage taken from thunder attacks.',
-    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.15, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (M)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6939,7 +6979,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases thunder resistance, greatly reducing damage taken from thunder attacks.',
-    details: [{ type: 'damageTaken', element: 'thunder', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.2, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (M)', 'Thunder Def Boost (L)'],
   },
 
@@ -7717,6 +7757,7 @@
     type: 'power',
     element: 'water',
     description: 'Slightly increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.05, op: 'multiplier' }],
     sizes: ['Water Atk Boost (M)', 'Water Atk Boost (L)', 'Water Atk Boost (XL)'],
   },
 
@@ -7727,6 +7768,7 @@
     type: 'power',
     element: 'water',
     description: 'Increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.1, op: 'multiplier' }],
     sizes: ['Water Atk Boost (S)', 'Water Atk Boost (L)', 'Water Atk Boost (XL)'],
   },
 
@@ -7737,6 +7779,7 @@
     type: 'power',
     element: 'water',
     description: 'Greatly increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.15, op: 'multiplier' }],
     sizes: ['Water Atk Boost (S)', 'Water Atk Boost (M)', 'Water Atk Boost (XL)'],
   },
 
@@ -7747,6 +7790,7 @@
     type: 'power',
     element: 'water',
     description: 'Significantly increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.2, op: 'multiplier' }],
     sizes: ['Water Atk Boost (S)', 'Water Atk Boost (M)', 'Water Atk Boost (L)'],
   },
 
@@ -7757,7 +7801,7 @@
     type: 'technical',
     element: 'water',
     description: 'Slightly reduces damage taken from water attacks.',
-    // details: [{ type: 'damageTaken', element: 'water', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'water', value: -0.05, op: 'additive' }],
     sizes: ['Water Def Boost (M)', 'Water Def Boost (L)', 'Water Def Boost (XL)'],
   },
 
@@ -7768,7 +7812,7 @@
     type: 'technical',
     element: 'water',
     description: 'Reduces damage taken from water attacks.',
-    // details: [{ type: 'damageTaken', element: 'water', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'water', value: -0.1, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (L)', 'Water Def Boost (XL)'],
   },
 
@@ -7779,7 +7823,7 @@
     type: 'technical',
     element: 'water',
     description: 'Increases water resistance, reducing damage taken from water attacks.',
-    // details: [{ type: 'damageTaken', element: 'water', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'water', value: -0.15, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (M)', 'Water Def Boost (XL)'],
   },
 
@@ -7790,7 +7834,7 @@
     type: 'technical',
     element: 'water',
     description: 'Increases water resistance, greatly reducing damage taken from water attacks.',
-    details: [{ type: 'damageTaken', element: 'water', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'water', value: -0.2, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (M)', 'Water Def Boost (L)'],
   },
 

@@ -21,6 +21,9 @@
       case 'maxHpRecovery':
         return 'Max HP Recovery';
 
+      case 'remainingHp':
+        return 'Remaining HP';
+
       case 'rawSpeed':
         return 'Speed';
 
