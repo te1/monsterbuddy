@@ -1791,7 +1791,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Slightly increases Wyvernfell power.',
-    // details: [{ type: 'wyvernfell', value: 10 }], // TODO no source
+    details: [{ type: 'wyvernfell', value: 10 }],
     sizes: ['Dragon Buster (M)', 'Dragon Buster (L)', 'Dragon Buster (XL)'],
   },
 
@@ -1802,7 +1802,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases Wyvernfell power.',
-    // details: [{ type: 'wyvernfell', value: 15 }], // TODO no source
+    details: [{ type: 'wyvernfell', value: 15 }],
     sizes: ['Dragon Buster (S)', 'Dragon Buster (L)', 'Dragon Buster (XL)'],
   },
 
@@ -1813,7 +1813,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Greatly increases Wyvernfell power.',
-    // details: [{ type: 'wyvernfell', value: 20 }], // TODO no source
+    details: [{ type: 'wyvernfell', value: 20 }],
     sizes: ['Dragon Buster (S)', 'Dragon Buster (M)', 'Dragon Buster (XL)'],
   },
 
@@ -3762,7 +3762,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill slightly faster.',
-    // details: [{ type: 'kinship', value: 6 }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.2, op: 'multiplier' }],
     sizes: ['HtH Master (M)', 'HtH Master (L)', 'HtH Master (XL)'],
   },
 
@@ -3773,7 +3773,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill faster.',
-    // details: [{ type: 'kinship', value: 8 }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.3, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (L)', 'HtH Master (XL)'],
   },
 
@@ -3784,7 +3784,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill much faster.',
-    // details: [{ type: 'kinship', value: 10 }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.4, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (M)', 'HtH Master (XL)'],
   },
 
@@ -3795,7 +3795,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill significantly faster.',
-    details: [{ type: 'kinship', value: 12 }],
+    details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (M)', 'HtH Master (L)'],
   },
 
@@ -5096,6 +5096,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Minuscule chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Panacea (M)', 'Panacea (L)', 'Panacea (XL)'],
   },
 
@@ -5106,6 +5107,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Slight chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.2 }],
     sizes: ['Panacea (S)', 'Panacea (L)', 'Panacea (XL)'],
   },
 
@@ -5116,6 +5118,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Low chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Panacea (S)', 'Panacea (M)', 'Panacea (XL)'],
   },
 
@@ -5126,6 +5129,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Medium chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.4 }],
     sizes: ['Panacea (S)', 'Panacea (M)', 'Panacea (L)'],
   },
 
@@ -6294,6 +6298,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Normal attacks have an extremely low chance to inflict Stun.',
+    details: [{ type: 'effectChance', value: 0.05 }],
     sizes: ['Slugger (M)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -6305,6 +6310,7 @@
     element: 'fire',
     description: 'Normal attacks have a tiny chance to inflict Stun.',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.07 }],
     sizes: ['Slugger (S)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -6316,6 +6322,7 @@
     element: 'fire',
     description: 'Normal attacks have a slight chance to inflict Stun.',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (XL)'],
   },
 
@@ -6326,6 +6333,8 @@
     type: 'technical',
     element: 'fire',
     description: 'Normal attacks have a low chance to inflict Stun.',
+    effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.12 }],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (L)'],
   },
 
@@ -6525,7 +6534,7 @@
     type: 'power',
     element: 'water',
     description: 'Slightly increases starting Stamina.',
-    // details: [{ type: 'startingStamina', value: 5 }], // TODO no source
+    details: [{ type: 'startingStamina', value: 5 }],
     sizes: ['Stamina Boost (M)', 'Stamina Boost (L)', 'Stamina Boost (XL)'],
   },
 
@@ -6536,7 +6545,7 @@
     type: 'power',
     element: 'water',
     description: 'Increases starting Stamina.',
-    // details: [{ type: 'startingStamina', value: 10 }], // TODO no source
+    details: [{ type: 'startingStamina', value: 10 }],
     sizes: ['Stamina Boost (S)', 'Stamina Boost (L)', 'Stamina Boost (XL)'],
   },
 
@@ -6547,7 +6556,7 @@
     type: 'power',
     element: 'water',
     description: 'Greatly increases starting Stamina.',
-    // details: [{ type: 'startingStamina', value: 15 }], // TODO no source
+    details: [{ type: 'startingStamina', value: 15 }],
     sizes: ['Stamina Boost (S)', 'Stamina Boost (M)', 'Stamina Boost (XL)'],
   },
 
@@ -6569,7 +6578,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Slightly increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 1 }], // TODO no source
+    details: [{ type: 'staminaRecovery', value: 1 }],
     sizes: ['Stamina Surge (M)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6580,7 +6589,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 2 }], // TODO no source
+    details: [{ type: 'staminaRecovery', value: 2 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6591,7 +6600,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Greatly increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 4 }], // TODO no source
+    details: [{ type: 'staminaRecovery', value: 4 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (XL)'],
   },
 
@@ -7673,6 +7682,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Slightly increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.1, op: 'additive' }],
     sizes: ['Vicious (M)', 'Vicious (L)', 'Vicious (XL)'],
   },
 
@@ -7683,6 +7693,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.17, op: 'additive' }],
     sizes: ['Vicious (S)', 'Vicious (L)', 'Vicious (XL)'],
   },
 
@@ -7693,6 +7704,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Greatly increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.24, op: 'additive' }],
     sizes: ['Vicious (S)', 'Vicious (M)', 'Vicious (XL)'],
   },
 
@@ -7703,6 +7715,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Significantly increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.3, op: 'additive' }],
     sizes: ['Vicious (S)', 'Vicious (M)', 'Vicious (L)'],
   },
 

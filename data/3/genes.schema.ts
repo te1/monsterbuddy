@@ -161,7 +161,9 @@ export const SkillDetailFactorSchema = z.object({
     'wyvernsoulDamage',
   ]),
   element: GeneElementSchema.optional(),
-  condition: z.enum(['blastblight', 'doubleAttack', 'kinship', 'elementalWeakness']).optional(),
+  condition: z
+    .enum(['blastblight', 'doubleAttack', 'headToHead', 'kinship', 'elementalWeakness'])
+    .optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']),
 });
