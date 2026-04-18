@@ -14,6 +14,7 @@ export { monsters, regions, eggPowers, sortedRidingActions };
 export const monstersByName = keyBy(monsters, 'name');
 export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
+export const regionsByName = keyBy(regions, 'name');
 export const regionsBySlug = keyBy(regions, 'slug');
 export const eggPowersByName = keyBy(eggPowers, 'name');
 export const eggPowersBySlug = keyBy(eggPowers, 'slug');

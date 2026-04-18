@@ -139,11 +139,16 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
           active: isActive('/3/habitats'),
         },
         {
+          label: 'Egg Powers',
+          to: '/3/egg-powers',
+          active: isActive('/3/egg-powers'),
+        },
+        genes('flex xs:hidden'),
+        {
           label: 'Riding Actions',
           to: '/3/riding-actions',
           active: isActive('/3/riding-actions'),
         },
-        genes('flex xs:hidden'),
       ],
     },
   ];

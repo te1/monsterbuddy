@@ -1,4 +1,4 @@
-import type { Gene, Monster, Region, RegionArea, RidingAction } from './types';
+import type { EggPower, Gene, Monster, Region, RegionArea, RidingAction } from './types';
 import { formatGeneElement, formatGeneType } from './presentation';
 
 export function getMonsterSeo(monster: Monster) {
@@ -89,6 +89,17 @@ export function getAreaSeo(area: RegionArea, region: Region, monsterCount: numbe
 
   description += ` area in ${region.name}.`;
   description += ` It's home to ${monsterCount} different monsters.`;
+
+  return {
+    title,
+    description,
+  };
+}
+
+export function getEggPowerSeo(eggPower: EggPower) {
+  const title = `Egg Power: ${eggPower.name} In ${gameTypeToFullLabel('mhst3')}`;
+
+  const description = `This ${eggPower.rank} rank egg power can be found in ${eggPower.region}.`;
 
   return {
     title,
