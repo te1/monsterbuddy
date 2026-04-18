@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import S3HabitatSidebar from '~/components/s3/S3HabitatSidebar.vue';
-  import { monstersByName, regionsBySlug } from '~/services/3/data';
+  import { eggPowersByName, monstersByName, regionsBySlug } from '~/services/3/data';
   import { getRegionSeo } from '~/services/3/seo';
   import { statsTypeToText } from '~/services/3/presentation';
   import useHabitatDisplays from '~/stores/3/habitatStore';
@@ -120,6 +120,12 @@
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
 
+  const eggPowers = computed(() =>
+    region.powers.eggPowers
+      .map((eggPowerName) => eggPowersByName.get(eggPowerName))
+      .filter((eggPower) => eggPower != null)
+  );
+
   const mode = computed(() => {
     switch (displays.current) {
       case 'monster':
@@ -199,7 +205,7 @@
 
           <ul class="flex flex-col gap-1">
             <li
-              v-for="eggPower in region.powers.eggPowers"
+              v-for="eggPower in eggPowers"
               :key="eggPower.rank"
               class="flex items-center gap-1.5"
             >
@@ -207,7 +213,11 @@
                 class="flex size-7 items-center justify-center rounded bg-default text-sm font-semibold text-muted"
                 v-text="eggPower.rank"
               />
-              <span v-text="eggPower.name" />
+              <AppNuxtLink
+                :to="`/3/egg-powers/${eggPower.slug}`"
+                prefetchOn="interaction"
+                :text="eggPower.name"
+              />
             </li>
           </ul>
         </div>

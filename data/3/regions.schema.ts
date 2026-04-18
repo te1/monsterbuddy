@@ -20,11 +20,8 @@ const RegionMonstersSchema = z.object({
 });
 export type RegionMonsters = z.infer<typeof RegionMonstersSchema>;
 
-export const EggPowerRankSchema = z.enum(['S', 'A', 'B']);
-export type EggPowerRank = z.infer<typeof EggPowerRankSchema>;
-
-const StatsTypeSchema = z.enum(['hp', 'attack', 'speed', 'defense', 'crit', 'recovery', 'stamina']);
-export type StatsType = z.infer<typeof StatsTypeSchema>;
+const RegionStatsTypeSchema = z.enum(['hp', 'attack', 'defense', 'recovery']);
+export type RegionStatsType = z.infer<typeof RegionStatsTypeSchema>;
 
 const RegionAreaSchema = z.object({
   name: z.string(),
@@ -43,13 +40,8 @@ export const RegionSchema = z.object({
   slug: z.string(),
   monsters: RegionMonstersSchema,
   powers: z.object({
-    eggPowers: z.array(
-      z.object({
-        rank: EggPowerRankSchema,
-        name: z.string(),
-      })
-    ),
-    stats: z.array(StatsTypeSchema),
+    eggPowers: z.array(z.string()),
+    stats: z.array(RegionStatsTypeSchema),
   }),
   areas: z.array(RegionAreaSchema),
 });

@@ -1,6 +1,9 @@
 import { z } from 'zod';
 import { AttackTypeSchema, ElementTypeSchema } from '../shared.schema';
-import { EggPowerRankSchema, RegionNameSchema } from './regions.schema';
+import { RegionNameSchema } from './regions.schema';
+
+export const EggPowerRankSchema = z.enum(['S', 'A', 'B']);
+export type EggPowerRank = z.infer<typeof EggPowerRankSchema>;
 
 export const EggPowerSizeSchema = z.enum(['-', '+']);
 export type EggPowerSize = z.infer<typeof EggPowerSizeSchema>;

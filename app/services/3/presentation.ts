@@ -8,6 +8,7 @@ import type {
   GeneType,
   Monster,
   MonsterTag,
+  RegionStatsType,
   RidingActionType,
   SkillAilmentType,
   SkillBuffTurns,
@@ -15,7 +16,6 @@ import type {
   SkillDebuffType,
   SkillEffectType,
   SkillTarget,
-  StatsType,
 } from './types';
 
 export function formatMonsterInfoAll(monster: Monster) {
@@ -233,7 +233,7 @@ export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number
   return `${chance} to apply ${formatAilment(ailment).toLowerCase()}`;
 }
 
-export function statsTypeToText(type: StatsType) {
+export function statsTypeToText(type: RegionStatsType) {
   switch (type) {
     case 'hp':
       return 'HP';
@@ -241,20 +241,11 @@ export function statsTypeToText(type: StatsType) {
     case 'attack':
       return 'Attack';
 
-    case 'speed':
-      return 'Speed';
-
     case 'defense':
       return 'Defense';
 
-    case 'crit':
-      return 'Crit';
-
     case 'recovery':
       return 'Recovery';
-
-    case 'stamina':
-      return 'Stamina';
 
     default:
       return '?';
