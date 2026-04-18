@@ -163,7 +163,17 @@ export const SkillDetailFactorSchema = z.object({
   ]),
   element: GeneElementSchema.optional(),
   condition: z
-    .enum(['blastblight', 'doubleAttack', 'headToHead', 'kinship', 'elementalWeakness'])
+    .enum([
+      'blastblight', // only applies to blastblight damage
+      'doubleAttack', // only applies to double attacks
+      'headToHead', // only applies to head to head attacks
+      'kinship', // only applies to kinship skills
+      'elementalWeakness', // only applies when exploiting an elemental weakness
+      'hp100percent', // only applies at full hp
+      'hp50percent', // only applies at 50% hp or less
+      'hearts1', // only applies when only 1 heart remains
+      'debuffed', // only applies when the target has abnormal status effects
+    ])
     .optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']),

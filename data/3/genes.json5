@@ -1316,8 +1316,20 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, slightly increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.05, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' },
+      {
+        type: 'damageDone',
+        element: 'all',
+        condition: 'hp100percent',
+        value: 0.05,
+        op: 'additive',
+      },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.05,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (M)', 'Dancer (L)', 'Dancer (XL)'],
   },
@@ -1330,8 +1342,14 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hp100percent', value: 0.1, op: 'additive' },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.1,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (S)', 'Dancer (L)', 'Dancer (XL)'],
   },
@@ -1344,8 +1362,20 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, greatly increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.15, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.15, op: 'additive' },
+      {
+        type: 'damageDone',
+        element: 'all',
+        condition: 'hp100percent',
+        value: 0.15,
+        op: 'additive',
+      },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.15,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (S)', 'Dancer (M)', 'Dancer (XL)'],
   },
@@ -1358,8 +1388,14 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, significantly increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.2, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hp100percent', value: 0.2, op: 'additive' },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.2,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (S)', 'Dancer (M)', 'Dancer (L)'],
   },
@@ -2421,7 +2457,9 @@
     type: 'speed',
     element: 'ice',
     description: "Slightly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    details: [{ type: 'wyvernsoulDamage', value: 1.2, op: 'multiplier' }],
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.2, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (M)', 'Elemental Assault (L)', 'Elemental Assault (XL)'],
   },
 
@@ -2432,7 +2470,9 @@
     type: 'speed',
     element: 'ice',
     description: "Increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    details: [{ type: 'wyvernsoulDamage', value: 1.3, op: 'multiplier' }],
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.3, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (L)', 'Elemental Assault (XL)'],
   },
 
@@ -2443,7 +2483,9 @@
     type: 'speed',
     element: 'ice',
     description: "Greatly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    details: [{ type: 'wyvernsoulDamage', value: 1.4, op: 'multiplier' }],
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.4, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (M)', 'Elemental Assault (XL)'],
   },
 
@@ -2454,7 +2496,9 @@
     type: 'speed',
     element: 'ice',
     description: "Significantly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    details: [{ type: 'wyvernsoulDamage', value: 1.5, op: 'multiplier' }],
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.5, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (M)', 'Elemental Assault (L)'],
   },
 
@@ -2601,7 +2645,7 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Evasion at 50% HP or less.',
-    details: [{ type: 'evasionRate', value: 20 }],
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 20 }],
     sizes: ['Evasion Instinct (M)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2612,7 +2656,7 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Evasion at 50% HP or less.',
-    details: [{ type: 'evasionRate', value: 27 }],
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 27 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2623,7 +2667,7 @@
     type: 'speed',
     element: 'water',
     description: 'Greatly increases Evasion at 50% HP or less.',
-    details: [{ type: 'evasionRate', value: 34 }],
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 34 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (XL)'],
   },
 
@@ -2634,7 +2678,7 @@
     type: 'speed',
     element: 'water',
     description: 'Significantly increases Evasion at 50% HP or less.',
-    details: [{ type: 'evasionRate', value: 40 }],
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 40 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (L)'],
   },
 
@@ -3111,8 +3155,8 @@
     element: 'water',
     description: 'Slightly increases attack and defense when only 1 Heart remains.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.05, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.05, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.05, op: 'additive' },
     ],
     sizes: ['Fortify (M)', 'Fortify (L)', 'Fortify (XL)'],
   },
@@ -3125,8 +3169,8 @@
     element: 'water',
     description: 'Increases attack and defense when only 1 Heart remains.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.1, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.1, op: 'additive' },
     ],
     sizes: ['Fortify (S)', 'Fortify (L)', 'Fortify (XL)'],
   },
@@ -3139,8 +3183,8 @@
     element: 'water',
     description: 'Greatly increases attack and defense when only 1 Heart remains.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.15, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.15, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.15, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.15, op: 'additive' },
     ],
     sizes: ['Fortify (S)', 'Fortify (M)', 'Fortify (XL)'],
   },
@@ -3153,8 +3197,8 @@
     element: 'water',
     description: 'Significantly increases attack and defense when only 1 Heart remains.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.2, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.2, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.2, op: 'additive' },
     ],
     sizes: ['Fortify (S)', 'Fortify (M)', 'Fortify (L)'],
   },
@@ -3718,7 +3762,9 @@
     type: 'power',
     element: 'fire',
     description: 'Slightly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.1, op: 'additive' },
+    ],
     sizes: ['Heroics (M)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3729,7 +3775,9 @@
     type: 'power',
     element: 'fire',
     description: 'Increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.17, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.17, op: 'additive' },
+    ],
     sizes: ['Heroics (S)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3740,7 +3788,9 @@
     type: 'power',
     element: 'fire',
     description: 'Greatly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.24, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.24, op: 'additive' },
+    ],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (XL)'],
   },
 
@@ -3751,7 +3801,9 @@
     type: 'power',
     element: 'fire',
     description: 'Significantly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.3, op: 'additive' },
+    ],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (L)'],
   },
 
@@ -5182,7 +5234,9 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills slightly faster at 50% HP or less.',
-    details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }],
+    details: [
+      { type: 'kinshipGeneration', condition: 'hp50percent', value: 1.5, op: 'multiplier' },
+    ],
     sizes: ['Partner (M)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5193,7 +5247,9 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills faster at 50% HP or less.',
-    details: [{ type: 'kinshipGeneration', value: 1.65, op: 'multiplier' }],
+    details: [
+      { type: 'kinshipGeneration', condition: 'hp50percent', value: 1.65, op: 'multiplier' },
+    ],
     sizes: ['Partner (S)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5204,7 +5260,9 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills much faster at 50% HP or less.',
-    details: [{ type: 'kinshipGeneration', value: 1.8, op: 'multiplier' }],
+    details: [
+      { type: 'kinshipGeneration', condition: 'hp50percent', value: 1.8, op: 'multiplier' },
+    ],
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (XL)'],
   },
 
@@ -5215,7 +5273,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills significantly faster at 50% HP or less.',
-    details: [{ type: 'kinshipGeneration', value: 2, op: 'multiplier' }],
+    details: [{ type: 'kinshipGeneration', condition: 'hp50percent', value: 2, op: 'multiplier' }],
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (L)'],
   },
 
@@ -5440,7 +5498,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Slightly reduces damage taken at 50% HP or less.',
-    details: [{ type: 'damageTaken', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.3, op: 'additive' }],
     sizes: ['Potential (M)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5451,7 +5509,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Reduces damage taken at 50% HP or less.',
-    details: [{ type: 'damageTaken', value: -0.37, op: 'additive' }],
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.37, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5462,7 +5520,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Greatly reduces damage taken at 50% HP or less.',
-    details: [{ type: 'damageTaken', value: -0.43, op: 'additive' }],
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.43, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (XL)'],
   },
 
@@ -5473,7 +5531,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Significantly reduces damage taken at 50% HP or less.',
-    details: [{ type: 'damageTaken', value: -0.5, op: 'additive' }],
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.5, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (L)'],
   },
 
@@ -5861,7 +5919,9 @@
     type: 'power',
     element: 'none',
     description: 'Slightly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.05, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.05, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (M)', 'Salt in Wound (L)', 'Salt in Wound (XL)'],
   },
 
@@ -5872,7 +5932,9 @@
     type: 'power',
     element: 'none',
     description: 'Increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.1, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (L)', 'Salt in Wound (XL)'],
   },
 
@@ -5883,7 +5945,9 @@
     type: 'power',
     element: 'none',
     description: 'Greatly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.15, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.15, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (XL)'],
   },
 
@@ -5894,7 +5958,9 @@
     type: 'power',
     element: 'none',
     description: 'Significantly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.2, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (L)'],
   },
 
@@ -6331,7 +6397,7 @@
     element: 'fire',
     description: 'Normal attacks have an extremely low chance to inflict Stun.',
     effects: ['stun'],
-    details: [{ type: 'effectChance', value: 0.05 }],
+    details: [{ type: 'effectChance', value: 0.05, label: 'Stun' }],
     sizes: ['Slugger (M)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -6343,7 +6409,7 @@
     element: 'fire',
     description: 'Normal attacks have a tiny chance to inflict Stun.',
     effects: ['stun'],
-    details: [{ type: 'effectChance', value: 0.07 }],
+    details: [{ type: 'effectChance', value: 0.07, label: 'Stun' }],
     sizes: ['Slugger (S)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -6355,7 +6421,7 @@
     element: 'fire',
     description: 'Normal attacks have a slight chance to inflict Stun.',
     effects: ['stun'],
-    details: [{ type: 'effectChance', value: 0.1 }],
+    details: [{ type: 'effectChance', value: 0.1, label: 'Stun' }],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (XL)'],
   },
 
@@ -6367,7 +6433,7 @@
     element: 'fire',
     description: 'Normal attacks have a low chance to inflict Stun.',
     effects: ['stun'],
-    details: [{ type: 'effectChance', value: 0.12 }],
+    details: [{ type: 'effectChance', value: 0.12, label: 'Stun' }],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (L)'],
   },
 
@@ -7761,7 +7827,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly increases Crit Rate at 50% HP or less.',
-    details: [{ type: 'critRate', value: 10 }],
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 10 }],
     sizes: ['Vigilance (M)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7772,7 +7838,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases Crit Rate at 50% HP or less.',
-    details: [{ type: 'critRate', value: 17 }],
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 17 }],
     sizes: ['Vigilance (S)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7783,7 +7849,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Greatly increases Crit Rate at 50% HP or less.',
-    details: [{ type: 'critRate', value: 24 }],
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 24 }],
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (XL)'],
   },
 
@@ -7794,7 +7860,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Significantly increases Crit Rate at 50% HP or less.',
-    details: [{ type: 'critRate', value: 30 }],
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 30 }],
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (L)'],
   },
 
