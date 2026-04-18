@@ -46,16 +46,14 @@
       <div class="text-lg font-semibold">Characteristics</div>
 
       <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
-        <template v-if="variant.details && variant.details.length > 0">
-          <S3EggPowerDetail v-for="detail in variant.details" :key="detail.type" :detail="detail" />
-        </template>
+        <S3EggPowerDetail v-for="detail in variant.details" :key="detail.type" :detail="detail" />
       </div>
     </div>
 
     <div v-if="variant.requirements && variant.requirements.length > 0" class="@container">
       <div class="text-lg font-semibold">Gene Requirements</div>
 
-      <div class="mb-2">
+      <div class="mb-1">
         This stronger effect will only be available if you have genes that match these requirements.
       </div>
 

@@ -69,7 +69,8 @@
         {{ descriptionParts[0] }}
         <AppNuxtLink to="/3/egg-powers" :text="descriptionParts[1]" />
         {{ descriptionParts[2] }}
-        <AppNuxtLink :to="`/3/habitats/${region?.slug ?? ''}`" :text="descriptionParts[3]" />
+        <AppNuxtLink v-if="region" :to="`/3/habitats/${region.slug}`" :text="descriptionParts[3]" />
+        <template v-else>{{ descriptionParts[3] }}</template>
       </template>
     </AppPageHeader>
 

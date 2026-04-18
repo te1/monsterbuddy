@@ -206,7 +206,7 @@
           <ul class="flex flex-col gap-1">
             <li
               v-for="eggPower in eggPowers"
-              :key="eggPower.rank"
+              :key="eggPower.slug"
               class="flex items-center gap-1.5"
             >
               <S3EggPowerIcon :eggPower="eggPower" />
