@@ -7,7 +7,6 @@ import {
 } from './genes.schema';
 
 export const BuffDetailTypeSchema = z.enum([
-  //
   'damageDone',
   'damageTaken',
   'critRate',

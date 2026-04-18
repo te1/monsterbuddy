@@ -45,11 +45,7 @@
       calamitous: ['Namielle'],
     },
     powers: {
-      skills: {
-        S: 'Battle Thirst',
-        A: 'Hardiness',
-        B: 'Pwr Resilience',
-      },
+      eggPowers: ['Battle Thirst', 'Hardiness', 'Pwr Resilience'],
       stats: ['hp', 'attack'],
     },
     areas: [
@@ -149,11 +145,7 @@
       calamitous: ['Thunder Serpent Narwa', 'Wind Serpent Ibushi'],
     },
     powers: {
-      skills: {
-        S: 'Unscathed',
-        A: 'High Morale',
-        B: 'Spd Resilience',
-      },
+      eggPowers: ['Unscathed', 'High Morale', 'Spd Resilience'],
       stats: ['recovery', 'attack'],
     },
     areas: [
@@ -255,11 +247,7 @@
       calamitous: ['Yama Tsukami'],
     },
     powers: {
-      skills: {
-        S: 'Resonance',
-        A: 'Best Buds',
-        B: 'Tech Resilience',
-      },
+      eggPowers: ['Resonance', 'Best Buds', 'Tech Resilience'],
       stats: ['hp', 'defense'],
     },
     areas: [
@@ -348,11 +336,7 @@
       calamitous: ['Velkhana', 'Malzeno'], // no Malzeno?
     },
     powers: {
-      skills: {
-        S: 'Muster Forces',
-        A: 'Perseverance',
-        B: 'EX Resilience',
-      },
+      eggPowers: ['Muster Forces', 'Perseverance', 'EX Resilience'],
       stats: ['attack', 'recovery'],
     },
     areas: [

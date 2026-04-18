@@ -1,6 +1,15 @@
 import { z } from 'zod';
 import { ElementTypeSchema } from '~~/data/shared.schema';
 
+export const RegionNameSchema = z.enum([
+  //
+  'Azuria',
+  'Canalta Timberland',
+  'Tarkuan',
+  'Serathis',
+]);
+export type RegionName = z.infer<typeof RegionNameSchema>;
+
 const RegionMonstersSchema = z.object({
   permanent: z.array(z.string()),
   world: z.array(z.string()),
@@ -11,8 +20,8 @@ const RegionMonstersSchema = z.object({
 });
 export type RegionMonsters = z.infer<typeof RegionMonstersSchema>;
 
-const StatsTypeSchema = z.enum(['hp', 'attack', 'speed', 'defense', 'crit', 'recovery', 'stamina']);
-export type StatsType = z.infer<typeof StatsTypeSchema>;
+const RegionStatsTypeSchema = z.enum(['hp', 'attack', 'defense', 'recovery']);
+export type RegionStatsType = z.infer<typeof RegionStatsTypeSchema>;
 
 const RegionAreaSchema = z.object({
   name: z.string(),
@@ -27,12 +36,12 @@ const RegionAreaSchema = z.object({
 export type RegionArea = z.infer<typeof RegionAreaSchema>;
 
 export const RegionSchema = z.object({
-  name: z.string(),
+  name: RegionNameSchema,
   slug: z.string(),
   monsters: RegionMonstersSchema,
   powers: z.object({
-    skills: z.record(z.string(), z.string()),
-    stats: z.array(StatsTypeSchema),
+    eggPowers: z.array(z.string()),
+    stats: z.array(RegionStatsTypeSchema),
   }),
   areas: z.array(RegionAreaSchema),
 });

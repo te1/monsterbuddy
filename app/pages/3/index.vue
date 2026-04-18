@@ -24,7 +24,10 @@
   const versions = [
     {
       date: '2026-04-18',
-      changes: ['Update gene details with a lot more numbers for effects, buffs and debuffs'],
+      changes: [
+        'Update gene details with a lot more numbers for effects, buffs and debuffs',
+        'New pages for egg powers',
+      ],
     },
     {
       date: '2026-04-13',
@@ -120,13 +123,18 @@
           </ProseLi>
 
           <ProseLi>
-            <AppNuxtLink to="/3/riding-actions" text="Riding action list" />
-            and which monsties will learn them
+            <AppNuxtLink to="/3/egg-powers" text="Egg powers" />
+            with ranks, effects and regions where you can find them
           </ProseLi>
 
           <ProseLi>
             <AppNuxtLink to="/3/genes" text="Gene list" />
             with types, monstie sources and effects (including numbers)
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/3/riding-actions" text="Riding action list" />
+            and which monsties will learn them
           </ProseLi>
 
           <ProseLi>
@@ -229,6 +237,14 @@
             <ProseLi>
               <AppLink href="https://lescarnetsdelawycademie.fr/wyvernfell" text="Wyvernfell" />
               by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1sobnlk/guideresource_a_basic_stamina_guide_for_mhs3"
+                text="Stamina Guide"
+              />
+              by <AppLink href="https://www.reddit.com/user/TheMobDylan" text="TheMobDylan" />
             </ProseLi>
 
             <ProseLi>

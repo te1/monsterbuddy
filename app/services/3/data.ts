@@ -1,18 +1,23 @@
 import { intersection, uniq } from 'es-toolkit/array';
-import type { EggColor, Monster, Region, RegionArea, RidingAction } from './types';
+import type { EggColor, EggPower, Monster, Region, RegionArea, RidingAction } from './types';
 import monsters_ from '~/assets/3/monsters.json';
 import regions_ from '~/assets/3/regions.json';
+import eggPowers_ from '~/assets/3/eggPowers.json';
 import sortedRidingActions_ from '~/assets/3/ridingActions.json';
 
 const monsters = monsters_ as unknown as Monster[];
 const regions = regions_ as unknown as Region[];
+const eggPowers = eggPowers_ as unknown as EggPower[];
 const sortedRidingActions = sortedRidingActions_ as RidingAction[];
 
-export { monsters, regions, sortedRidingActions };
+export { monsters, regions, eggPowers, sortedRidingActions };
 export const monstersByName = keyBy(monsters, 'name');
 export const monstersBySlug = keyBy(monsters, 'slug');
 export const monsties = getMonstersByHatchable(true);
+export const regionsByName = keyBy(regions, 'name');
 export const regionsBySlug = keyBy(regions, 'slug');
+export const eggPowersByName = keyBy(eggPowers, 'name');
+export const eggPowersBySlug = keyBy(eggPowers, 'slug');
 export const ridingActionsBySlug = keyBy(sortedRidingActions, 'slug');
 export const allElements: readonly ElementType[] = [
   'none',
