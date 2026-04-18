@@ -12,13 +12,13 @@
     if (props.awakened) {
       switch (props.eggPower.rank) {
         case 'S':
-          return 'bg-fuchsia-500/25 dark:bg-fuchsia-400/15';
+          return 'bg-fuchsia-500/30 dark:bg-fuchsia-400/20';
 
         case 'A':
-          return 'bg-emerald-500/25 dark:bg-emerald-400/15';
+          return 'bg-emerald-500/30 dark:bg-emerald-400/20';
 
         case 'B':
-          return 'bg-sky-500/25 dark:bg-sky-400/15';
+          return 'bg-sky-500/30 dark:bg-sky-400/20';
       }
     }
 
@@ -28,16 +28,20 @@
   const textColor = computed(() => {
     switch (props.eggPower.rank) {
       case 'S':
-        return props.awakened ? 'text-fuchsia-600 dark:text-fuchsia-200' : 'text-fuchsia-400';
+        return props.awakened
+          ? 'text-fuchsia-700 dark:text-fuchsia-100'
+          : 'text-fuchsia-500 dark:text-fuchsia-400';
 
       case 'A':
-        return props.awakened ? 'text-emerald-600 dark:text-emerald-200' : 'text-emerald-400';
+        return props.awakened
+          ? 'text-emerald-700 dark:text-emerald-100'
+          : 'text-emerald-500 dark:text-emerald-400';
 
       case 'B':
         if (!props.contrast) {
           return 'text-muted';
         }
-        return props.awakened ? 'text-sky-600 dark:text-sky-200' : 'text-sky-400';
+        return props.awakened ? 'text-sky-700 dark:text-sky-100' : 'text-sky-500 dark:text-sky-400';
     }
 
     return 'text-muted';
