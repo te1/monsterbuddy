@@ -163,3 +163,7 @@ export function formatDate(date: string) {
 
   return dateFormatter.format(parsedDate);
 }
+
+export function formatNumber(value: number, maxDecimals: number = 0): string {
+  return Number(value.toFixed(maxDecimals)).toString();
+}

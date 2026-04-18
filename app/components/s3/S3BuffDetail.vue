@@ -35,14 +35,41 @@
       case 'critRate':
         return 'Crit rate';
 
+      case 'evasionRate':
+        return 'Evasion';
+
+      case 'accuracyRate':
+        return 'Accuracy';
+
       case 'maxHpRecovery':
         if (props.detail.value < 0) {
           return 'Max HP damage per turn';
         }
         return 'Max HP recovery per turn';
 
+      case 'rawSpeed':
+        return 'Speed';
+
+      case 'rawStaminaRegen':
+        return 'Stamina regeneration';
+
+      case 'wyvernfell':
+        return 'Wyvernfell damage done';
+
+      case 'wyvernsoulDamageTaken':
+        return 'Wyvernsoul damage taken';
+
       case 'leech':
         return 'Leech';
+
+      case 'ailmentInflictRate':
+        return 'Ailment inflict rate';
+
+      case 'effectChance':
+        if (props.detail.label) {
+          return `${props.detail.label} chance`;
+        }
+        return 'Effect chance';
 
       default:
         return undefined;
@@ -87,17 +114,31 @@
   });
 
   const value = computed(() => {
+    const sign = props.detail.value < 0 ? '' : '+';
+
     switch (props.detail.type) {
       case 'damageDone':
       case 'damageTaken':
         return `${op.value}${valueForOp.value}`;
 
       case 'critRate':
-        return `+${props.detail.value}%`;
+      case 'evasionRate':
+      case 'accuracyRate':
+      case 'ailmentInflictRate':
+        return `${sign}${props.detail.value}%`;
+
+      case 'rawSpeed':
+      case 'rawStaminaRegen':
+        return `${sign}${props.detail.value}`;
 
       case 'maxHpRecovery':
       case 'leech':
+      case 'effectChance':
         return `${props.detail.value * 100}%`;
+
+      case 'wyvernfell':
+      case 'wyvernsoulDamageTaken':
+        return `${sign}${props.detail.value * 100}%`;
 
       default:
         return props.detail.value;

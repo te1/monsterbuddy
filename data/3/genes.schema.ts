@@ -14,6 +14,7 @@ export const SkillTargetSchema = z.enum([
   'allAllies',
   'allEnemies',
   'randomEnemy',
+  'singleAlly',
   'singleEnemy',
   'user',
 ]);
@@ -127,17 +128,41 @@ export const SkillEffectTypeSchema = z.enum([
 ]);
 export type SkillEffectType = z.infer<typeof SkillEffectTypeSchema>;
 
+export const SkillEffectConditionSchema = z.enum([
+  'blastblight', // only applies to blastblight damage
+  'doubleAttack', // only applies to double attacks
+  'headToHead', // only applies to head to head attacks
+  'kinship', // only applies to kinship skills
+  'elementalWeakness', // only applies when exploiting an elemental weakness
+  'hp100percent', // only applies at full hp
+  'hp50percent', // only applies at 50% hp or less
+  'hearts1', // only applies when only 1 heart remains
+  'debuffed', // only applies when the target has abnormal status effects
+]);
+export type SkillEffectCondition = z.infer<typeof SkillEffectConditionSchema>;
+
 export const SkillDetailValueSchema = z.object({
   type: z.enum([
     'critRate',
+    'evasionRate',
     'staminaRecovery',
     'startingStamina',
     'maxHpRecovery',
+    'remainingHp',
+    'rawSpeed',
     'kinship',
     'wyvernfell',
+    'accuracy',
+    'priorityOverride',
+    'ailmentChance',
+    'ailmentInflictRate',
+    'blastblightTurns',
     'debuffExtension',
+    'effectChance',
   ]),
+  condition: SkillEffectConditionSchema.optional(),
   value: z.number(),
+  label: z.string().optional(),
 });
 export type SkillDetailValue = z.infer<typeof SkillDetailValueSchema>;
 
@@ -151,6 +176,7 @@ export const SkillDetailFactorSchema = z.object({
     'wyvernsoulDamage',
   ]),
   element: GeneElementSchema.optional(),
+  condition: SkillEffectConditionSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']),
 });

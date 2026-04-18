@@ -11,8 +11,16 @@ export const BuffDetailTypeSchema = z.enum([
   'damageDone',
   'damageTaken',
   'critRate',
+  'evasionRate',
+  'accuracyRate',
   'maxHpRecovery',
+  'rawSpeed',
+  'rawStaminaRegen',
+  'wyvernfell',
+  'wyvernsoulDamageTaken',
   'leech',
+  'ailmentInflictRate',
+  'effectChance',
 ]);
 export type BuffDetailType = z.infer<typeof BuffDetailTypeSchema>;
 
@@ -22,6 +30,7 @@ export const BuffDetailSchema = z.object({
   element: GeneElementSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']).optional(),
+  label: z.string().optional(),
 });
 export type BuffDetail = z.infer<typeof BuffDetailSchema>;
 

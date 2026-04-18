@@ -100,12 +100,16 @@
   });
 
   const targets = computed(() => {
+    const ignored = ['singleAlly'];
+
     return [
       { label: 'Any / None', value: 'ALL' },
-      ...allTargets.map((target) => ({
-        label: formatSkillTarget(target),
-        value: target,
-      })),
+      ...allTargets
+        .filter((target) => !ignored.includes(target))
+        .map((target) => ({
+          label: formatSkillTarget(target),
+          value: target,
+        })),
     ];
   });
 

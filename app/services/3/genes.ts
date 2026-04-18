@@ -44,6 +44,7 @@ export const allTargets: readonly SkillTarget[] = [
   'singleEnemy',
   'allEnemies',
   'randomEnemy',
+  'singleAlly',
   'allAllies',
   'user',
 ];

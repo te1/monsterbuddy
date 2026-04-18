@@ -331,6 +331,9 @@ export function formatSkillTarget(target: SkillTarget): string {
     case 'randomEnemy':
       return 'Random Enemies';
 
+    case 'singleAlly':
+      return 'Single Ally';
+
     case 'singleEnemy':
       return 'Single Enemy';
 
@@ -365,7 +368,7 @@ export function formatSkillAilmentDetails(ailment: SkillAilmentType): string {
       return `${name}: deals damage each turn and increases damage taken by +20%`;
 
     case 'paralysis':
-      return `${name}: on every turn there is a chance the target will be unable to act`;
+      return `${name}: on every turn there is a 30% chance the target will be unable to act`;
 
     case 'sleep':
       return `${name}: unable to act until damaged and next hit is a critical hit`;
@@ -377,7 +380,7 @@ export function formatSkillAilmentDetails(ailment: SkillAilmentType): string {
       return `${name}: ×2 damage taken on next hit`;
 
     case 'darkness':
-      return `${name}: chance to miss attacks`;
+      return `${name}: 30% chance to miss attacks`;
 
     default:
       return name;
