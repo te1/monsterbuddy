@@ -6,7 +6,7 @@
     type: 'technical',
     element: 'none',
     description: 'Slightly reduces damage taken from all attacks.',
-    // details: [{ type: 'damageTaken', element: 'all', value: -0.03, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'all', value: -0.02, op: 'additive' }],
     sizes: ['All-Elem Def Boost (M)', 'All-Elem Def Boost (L)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -17,7 +17,7 @@
     type: 'technical',
     element: 'none',
     description: 'Reduces damage taken from all attacks.',
-    // details: [{ type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'all', value: -0.04, op: 'additive' }],
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (L)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -28,7 +28,7 @@
     type: 'technical',
     element: 'none',
     description: 'Greatly reduces damage taken from all attacks.',
-    // details: [{ type: 'damageTaken', element: 'all', value: -0.07, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'all', value: -0.07, op: 'additive' }],
     sizes: ['All-Elem Def Boost (S)', 'All-Elem Def Boost (M)', 'All-Elem Def Boost (XL)'],
   },
 
@@ -51,7 +51,7 @@
     element: 'dragon',
     description: 'Slightly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.12, op: 'additive' }, // TODO no source
+      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (M)', 'All-Out (L)', 'All-Out (XL)'],
@@ -65,7 +65,7 @@
     element: 'dragon',
     description: 'Increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.18, op: 'additive' }, // TODO no source
+      { type: 'damageDone', element: 'all', value: 0.17, op: 'additive' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (L)', 'All-Out (XL)'],
@@ -93,7 +93,7 @@
     element: 'dragon',
     description: 'Significantly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' }, // TODO 0.4?
+      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (M)', 'All-Out (L)'],
@@ -106,6 +106,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Low chance to survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Anti 1-Hit KO (M)', 'Anti 1-Hit KO (L)', 'Anti 1-Hit KO (XL)'],
   },
 
@@ -116,6 +117,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Chance to survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Anti 1-Hit KO (S)', 'Anti 1-Hit KO (L)', 'Anti 1-Hit KO (XL)'],
   },
 
@@ -126,6 +128,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'High chance to survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Anti 1-Hit KO (S)', 'Anti 1-Hit KO (M)', 'Anti 1-Hit KO (XL)'],
   },
 
@@ -136,6 +139,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Survive a hit that would have otherwise been fatal.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Anti 1-Hit KO (S)', 'Anti 1-Hit KO (M)', 'Anti 1-Hit KO (L)'],
   },
 
@@ -146,6 +150,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Low chance to negate Bleeding.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antibleed (M)', 'Antibleed (L)', 'Antibleed (XL)'],
   },
 
@@ -156,6 +161,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Chance to negate Bleeding.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antibleed (S)', 'Antibleed (L)', 'Antibleed (XL)'],
   },
 
@@ -166,6 +172,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'High chance to negate Bleeding.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antibleed (S)', 'Antibleed (M)', 'Antibleed (XL)'],
   },
 
@@ -176,6 +183,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Negates Bleeding.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antibleed (S)', 'Antibleed (M)', 'Antibleed (L)'],
   },
 
@@ -186,6 +194,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Low chance to negate Burn.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antiburn (M)', 'Antiburn (L)', 'Antiburn (XL)'],
   },
 
@@ -196,6 +205,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Chance to negate Burn.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antiburn (S)', 'Antiburn (L)', 'Antiburn (XL)'],
   },
 
@@ -206,6 +216,7 @@
     type: 'speed',
     element: 'fire',
     description: 'High chance to negate Burn.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antiburn (S)', 'Antiburn (M)', 'Antiburn (XL)'],
   },
 
@@ -216,6 +227,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Negates Burn.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antiburn (S)', 'Antiburn (M)', 'Antiburn (L)'],
   },
 
@@ -226,6 +238,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Low chance to negate Paralysis.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antiparalysis (M)', 'Antiparalysis (L)', 'Antiparalysis (XL)'],
   },
 
@@ -236,6 +249,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Chance to negate Paralysis.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antiparalysis (S)', 'Antiparalysis (L)', 'Antiparalysis (XL)'],
   },
 
@@ -246,6 +260,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'High chance to negate Paralysis.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antiparalysis (S)', 'Antiparalysis (M)', 'Antiparalysis (XL)'],
   },
 
@@ -256,6 +271,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Negates Paralysis.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antiparalysis (S)', 'Antiparalysis (M)', 'Antiparalysis (L)'],
   },
 
@@ -266,6 +282,7 @@
     type: 'technical',
     element: 'none',
     description: 'Low chance to negate Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Antivenom (M)', 'Antivenom (L)', 'Antivenom (XL)'],
   },
 
@@ -276,6 +293,7 @@
     type: 'technical',
     element: 'none',
     description: 'Chance to negate Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Antivenom (S)', 'Antivenom (L)', 'Antivenom (XL)'],
   },
 
@@ -286,6 +304,7 @@
     type: 'technical',
     element: 'none',
     description: 'High chance to negate Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Antivenom (S)', 'Antivenom (M)', 'Antivenom (XL)'],
   },
 
@@ -296,6 +315,7 @@
     type: 'technical',
     element: 'none',
     description: 'Negates Poison, Noxious Poison, and Severe Poison.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Antivenom (S)', 'Antivenom (M)', 'Antivenom (L)'],
   },
 
@@ -352,6 +372,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison and Paralysis.',
     target: 'singleEnemy',
     ailments: ['poison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -423,6 +444,7 @@
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
     target: 'singleEnemy',
     effects: ['1HitKo', 'crit'],
+    details: [{ type: 'effectChance', value: 0.1, label: '1-Hit-KO' }],
     sizes: ['Assassin Tail+'],
   },
 
@@ -439,6 +461,7 @@
     description: 'Deals non-elemental damage to one enemy. High chance to crit. Chance to 1-Hit-KO.',
     target: 'singleEnemy',
     effects: ['1HitKo', 'crit'],
+    details: [{ type: 'effectChance', value: 0.1, label: '1-Hit-KO' }],
     sizes: ['Assassin Tail'],
   },
 
@@ -496,6 +519,7 @@
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.8, label: 'Stun' }],
   },
 
   {
@@ -545,7 +569,7 @@
     ],
     debuffs: [
       { type: 'Defense Down', size: 'L', target: 'allAllies', turns: '3' },
-      { type: 'Dodge Down', size: 'L', target: 'allAllies', turns: '3' },
+      { type: 'Evasion Down', size: 'L', target: 'allAllies', turns: '3' },
     ],
   },
 
@@ -561,7 +585,10 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn. Extends the duration of inflicted debuffs.',
     target: 'singleEnemy',
     breath: true,
-    details: [{ type: 'debuffExtension', value: 3 }],
+    details: [
+      { type: 'ailmentChance', value: 0.4 },
+      { type: 'debuffExtension', value: 3 },
+    ],
     ailments: ['burn'],
   },
 
@@ -605,6 +632,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -629,6 +657,7 @@
     type: 'power',
     element: 'fire',
     description: 'Low chance to negate Blastblight.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Blightproof (M)', 'Blightproof (L)', 'Blightproof (XL)'],
   },
 
@@ -639,6 +668,7 @@
     type: 'power',
     element: 'fire',
     description: 'Chance to negate Blastblight.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Blightproof (S)', 'Blightproof (L)', 'Blightproof (XL)'],
   },
 
@@ -649,6 +679,7 @@
     type: 'power',
     element: 'fire',
     description: 'High chance to negate Blastblight.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Blightproof (S)', 'Blightproof (M)', 'Blightproof (XL)'],
   },
 
@@ -659,6 +690,7 @@
     type: 'power',
     element: 'fire',
     description: 'Negates Blastblight.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Blightproof (S)', 'Blightproof (M)', 'Blightproof (L)'],
   },
 
@@ -710,6 +742,7 @@
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -763,6 +796,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Slightly increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.2, op: 'additive' }],
     sizes: ['Bombardier (M)', 'Bombardier (L)', 'Bombardier (XL)'],
   },
 
@@ -773,6 +807,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.3, op: 'additive' }],
     sizes: ['Bombardier (S)', 'Bombardier (L)', 'Bombardier (XL)'],
   },
 
@@ -783,6 +818,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Greatly increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.4, op: 'additive' }],
     sizes: ['Bombardier (S)', 'Bombardier (M)', 'Bombardier (XL)'],
   },
 
@@ -793,6 +829,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Significantly increases damage dealt by Blastblight and explosives.',
+    details: [{ type: 'damageDone', condition: 'blastblight', value: 0.5, op: 'additive' }],
     sizes: ['Bombardier (S)', 'Bombardier (M)', 'Bombardier (L)'],
   },
 
@@ -825,6 +862,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -841,6 +879,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Burning Fang+'],
   },
 
@@ -858,6 +897,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Burning Fang'],
   },
 
@@ -905,6 +945,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Charged Spread Beam+'],
   },
 
@@ -922,6 +963,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Charged Spread Beam'],
   },
 
@@ -938,6 +980,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Chata Stamp+'],
   },
 
@@ -954,6 +997,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Chata Stamp'],
   },
 
@@ -1065,7 +1109,7 @@
     type: null,
     element: 'dragon',
     description: "Recovers a slight amount of the user's HP on a critical hit.",
-    // details: [{ type: 'maxHpRecovery', value: 0.15 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.1 }],
     sizes: ['Crit-Heal (M)', 'Crit-Heal (L)', 'Crit-Heal (XL)'],
   },
 
@@ -1076,7 +1120,7 @@
     type: null,
     element: 'dragon',
     description: "Recovers a small amount of the user's HP on a critical hit.",
-    // details: [{ type: 'maxHpRecovery', value: 0.2 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.17 }],
     sizes: ['Crit-Heal (S)', 'Crit-Heal (L)', 'Crit-Heal (XL)'],
   },
 
@@ -1087,7 +1131,7 @@
     type: null,
     element: 'dragon',
     description: "Recovers a decent amount of the user's HP on a critical hit.",
-    // details: [{ type: 'maxHpRecovery', value: 0.25 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.24 }],
     sizes: ['Crit-Heal (S)', 'Crit-Heal (M)', 'Crit-Heal (XL)'],
   },
 
@@ -1109,7 +1153,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Slightly increases Crit Rate.',
-    // details: [{ type: 'critRate', value: 6 }], // TODO no source
+    details: [{ type: 'critRate', value: 5 }],
     sizes: ['Critical (M)', 'Critical (L)', 'Critical (XL)'],
   },
 
@@ -1120,7 +1164,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Increases Crit Rate.',
-    // details: [{ type: 'critRate', value: 9 }], // TODO no source
+    details: [{ type: 'critRate', value: 8 }],
     sizes: ['Critical (S)', 'Critical (L)', 'Critical (XL)'],
   },
 
@@ -1131,7 +1175,7 @@
     type: 'speed',
     element: 'dragon',
     description: 'Greatly increases Crit Rate.',
-    // details: [{ type: 'critRate', value: 12 }], // TODO no source
+    details: [{ type: 'critRate', value: 12 }],
     sizes: ['Critical (S)', 'Critical (M)', 'Critical (XL)'],
   },
 
@@ -1165,7 +1209,7 @@
     type: null,
     element: 'thunder',
     description: 'Slightly fills the Kinship Gauge on a critical hit.',
-    // details: [{ type: 'kinship', value: 6 }], // TODO no source
+    details: [{ type: 'kinship', value: 3 }],
     sizes: ['Critical Kinship (M)', 'Critical Kinship (L)', 'Critical Kinship (XL)'],
   },
 
@@ -1176,7 +1220,7 @@
     type: null,
     element: 'thunder',
     description: 'Fills the Kinship Gauge on a critical hit.',
-    // details: [{ type: 'kinship', value: 9 }], // TODO no source
+    details: [{ type: 'kinship', value: 5 }],
     sizes: ['Critical Kinship (S)', 'Critical Kinship (L)', 'Critical Kinship (XL)'],
   },
 
@@ -1187,7 +1231,7 @@
     type: null,
     element: 'thunder',
     description: 'Greatly fills the Kinship Gauge on a critical hit.',
-    // details: [{ type: 'kinship', value: 12 }], // TODO no source
+    details: [{ type: 'kinship', value: 7 }],
     sizes: ['Critical Kinship (S)', 'Critical Kinship (M)', 'Critical Kinship (XL)'],
   },
 
@@ -1198,7 +1242,7 @@
     type: null,
     element: 'thunder',
     description: 'Significantly fills the Kinship Gauge on a critical hit.',
-    details: [{ type: 'kinship', value: 15 }],
+    details: [{ type: 'kinship', value: 10 }],
     sizes: ['Critical Kinship (S)', 'Critical Kinship (M)', 'Critical Kinship (L)'],
   },
 
@@ -1214,6 +1258,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.8 }],
   },
 
   {
@@ -1242,6 +1287,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Cunning Blow+'],
   },
 
@@ -1258,6 +1304,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Cunning Blow'],
   },
 
@@ -1269,8 +1316,20 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, slightly increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.05, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.05, op: 'additive' },
+      {
+        type: 'damageDone',
+        element: 'all',
+        condition: 'hp100percent',
+        value: 0.05,
+        op: 'additive',
+      },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.05,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (M)', 'Dancer (L)', 'Dancer (XL)'],
   },
@@ -1283,8 +1342,14 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hp100percent', value: 0.1, op: 'additive' },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.1,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (S)', 'Dancer (L)', 'Dancer (XL)'],
   },
@@ -1297,8 +1362,20 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, greatly increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.15, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.15, op: 'additive' },
+      {
+        type: 'damageDone',
+        element: 'all',
+        condition: 'hp100percent',
+        value: 0.15,
+        op: 'additive',
+      },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.15,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (S)', 'Dancer (M)', 'Dancer (XL)'],
   },
@@ -1311,8 +1388,14 @@
     element: 'water',
     description: 'Enables nimble movements when HP is full, significantly increasing attack and defense.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.2, op: 'additive' },
-      { type: 'damageTaken', element: 'all', value: -0.2, op: 'additive' },
+      { type: 'damageDone', element: 'all', condition: 'hp100percent', value: 0.2, op: 'additive' },
+      {
+        type: 'damageTaken',
+        element: 'all',
+        condition: 'hp100percent',
+        value: -0.2,
+        op: 'additive',
+      },
     ],
     sizes: ['Dancer (S)', 'Dancer (M)', 'Dancer (L)'],
   },
@@ -1336,6 +1419,7 @@
     type: 'technical',
     element: 'none',
     description: 'Low chance to negate Darkness.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Darkness Resistance (M)', 'Darkness Resistance (L)', 'Darkness Resistance (XL)'],
   },
 
@@ -1346,6 +1430,7 @@
     type: 'technical',
     element: 'none',
     description: 'Chance to negate Darkness.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Darkness Resistance (S)', 'Darkness Resistance (L)', 'Darkness Resistance (XL)'],
   },
 
@@ -1356,6 +1441,7 @@
     type: 'technical',
     element: 'none',
     description: 'High chance to negate Darkness.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Darkness Resistance (S)', 'Darkness Resistance (M)', 'Darkness Resistance (XL)'],
   },
 
@@ -1366,6 +1452,7 @@
     type: 'technical',
     element: 'none',
     description: 'Negates Darkness.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Darkness Resistance (S)', 'Darkness Resistance (M)', 'Darkness Resistance (L)'],
   },
 
@@ -1414,6 +1501,7 @@
     description: 'Deals water damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Death Scythe+'],
   },
 
@@ -1430,6 +1518,7 @@
     description: 'Deals water damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Death Scythe'],
   },
 
@@ -1494,6 +1583,7 @@
     type: null,
     element: 'ice',
     description: 'Slightly increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Den Protector (M)', 'Den Protector (L)', 'Den Protector (XL)'],
   },
 
@@ -1504,6 +1594,7 @@
     type: null,
     element: 'ice',
     description: 'Increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.17 }],
     sizes: ['Den Protector (S)', 'Den Protector (L)', 'Den Protector (XL)'],
   },
 
@@ -1514,6 +1605,7 @@
     type: null,
     element: 'ice',
     description: 'Greatly increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.24 }],
     sizes: ['Den Protector (S)', 'Den Protector (M)', 'Den Protector (XL)'],
   },
 
@@ -1524,6 +1616,7 @@
     type: null,
     element: 'ice',
     description: 'Significantly increases retreat rate of slain monsters.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Den Protector (S)', 'Den Protector (M)', 'Den Protector (L)'],
   },
 
@@ -1539,6 +1632,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Darkness.',
     target: 'singleEnemy',
     ailments: ['darkness'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -1553,6 +1647,7 @@
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.7, label: 'Stun' }],
   },
 
   {
@@ -1607,6 +1702,7 @@
     type: null,
     element: 'none',
     description: 'Minuscule chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Divine Blessing (M)', 'Divine Blessing (L)', 'Divine Blessing (XL)'],
   },
 
@@ -1617,6 +1713,7 @@
     type: null,
     element: 'none',
     description: 'Slight chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.17 }],
     sizes: ['Divine Blessing (S)', 'Divine Blessing (L)', 'Divine Blessing (XL)'],
   },
 
@@ -1627,6 +1724,7 @@
     type: null,
     element: 'none',
     description: 'Low chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.24 }],
     sizes: ['Divine Blessing (S)', 'Divine Blessing (M)', 'Divine Blessing (XL)'],
   },
 
@@ -1637,6 +1735,7 @@
     type: null,
     element: 'none',
     description: 'Medium chance to halve the amount of damage taken.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Divine Blessing (S)', 'Divine Blessing (M)', 'Divine Blessing (L)'],
   },
 
@@ -1752,7 +1851,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Slightly increases Wyvernfell power.',
-    // details: [{ type: 'wyvernfell', value: 10 }], // TODO no source
+    details: [{ type: 'wyvernfell', value: 10 }],
     sizes: ['Dragon Buster (M)', 'Dragon Buster (L)', 'Dragon Buster (XL)'],
   },
 
@@ -1763,7 +1862,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases Wyvernfell power.',
-    // details: [{ type: 'wyvernfell', value: 15 }], // TODO no source
+    details: [{ type: 'wyvernfell', value: 15 }],
     sizes: ['Dragon Buster (S)', 'Dragon Buster (L)', 'Dragon Buster (XL)'],
   },
 
@@ -1774,7 +1873,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Greatly increases Wyvernfell power.',
-    // details: [{ type: 'wyvernfell', value: 20 }], // TODO no source
+    details: [{ type: 'wyvernfell', value: 20 }],
     sizes: ['Dragon Buster (S)', 'Dragon Buster (M)', 'Dragon Buster (XL)'],
   },
 
@@ -1796,7 +1895,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Slightly reduces damage taken from dragon attacks.',
-    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.05, op: 'additive' }],
     sizes: ['Dragon Def Boost (M)', 'Dragon Def Boost (L)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1807,7 +1906,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Reduces damage taken from dragon attacks.',
-    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.1, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (L)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1818,7 +1917,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases dragon resistance, reducing damage taken from dragon attacks.',
-    // details: [{ type: 'damageTaken', element: 'dragon', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.15, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (M)', 'Dragon Def Boost (XL)'],
   },
 
@@ -1829,7 +1928,7 @@
     type: 'technical',
     element: 'dragon',
     description: 'Increases dragon resistance, greatly reducing damage taken from dragon attacks.',
-    details: [{ type: 'damageTaken', element: 'dragon', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'dragon', value: -0.2, op: 'additive' }],
     sizes: ['Dragon Def Boost (S)', 'Dragon Def Boost (M)', 'Dragon Def Boost (L)'],
   },
 
@@ -1918,6 +2017,7 @@
     wyvernfell: 30,
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Sleep.',
     target: 'singleEnemy',
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     ailments: ['sleep'],
   },
 
@@ -1943,7 +2043,7 @@
     active: true,
     stamina: 100,
     description: 'Restores a single Heart to one ally.',
-    target: 'singleEnemy',
+    target: 'singleAlly',
     eggSkill: true,
   },
 
@@ -2246,6 +2346,7 @@
     target: 'singleEnemy',
     eggSkill: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -2275,6 +2376,7 @@
     description: 'Fills the Kinship Gauge.',
     target: 'user',
     eggSkill: true,
+    details: [{ type: 'kinship', value: 30 }],
   },
 
   {
@@ -2345,6 +2447,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -2354,7 +2457,9 @@
     type: 'speed',
     element: 'ice',
     description: "Slightly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    // details: [{ type: 'wyvernsoulDamage', value: 1.2, op: 'multiplier' }], // TODO no source
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.2, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (M)', 'Elemental Assault (L)', 'Elemental Assault (XL)'],
   },
 
@@ -2365,7 +2470,9 @@
     type: 'speed',
     element: 'ice',
     description: "Increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    // details: [{ type: 'wyvernsoulDamage', value: 1.3, op: 'multiplier' }], // TODO no source
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.3, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (L)', 'Elemental Assault (XL)'],
   },
 
@@ -2376,7 +2483,9 @@
     type: 'speed',
     element: 'ice',
     description: "Greatly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    // details: [{ type: 'wyvernsoulDamage', value: 1.4, op: 'multiplier' }], // TODO no source
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.4, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (M)', 'Elemental Assault (XL)'],
   },
 
@@ -2387,7 +2496,9 @@
     type: 'speed',
     element: 'ice',
     description: "Significantly increases damage dealt to the Wyvernsoul Gauge when exploiting a monster's elemental weakness.",
-    details: [{ type: 'wyvernsoulDamage', value: 1.5, op: 'multiplier' }],
+    details: [
+      { type: 'wyvernsoulDamage', condition: 'elementalWeakness', value: 1.5, op: 'multiplier' },
+    ],
     sizes: ['Elemental Assault (S)', 'Elemental Assault (M)', 'Elemental Assault (L)'],
   },
 
@@ -2398,6 +2509,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Slightly increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.05, op: 'additive' }],
     sizes: ['Elemental Breaker (M)', 'Elemental Breaker (L)', 'Elemental Breaker (XL)'],
   },
 
@@ -2408,6 +2520,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.1, op: 'additive' }],
     sizes: ['Elemental Breaker (S)', 'Elemental Breaker (L)', 'Elemental Breaker (XL)'],
   },
 
@@ -2418,6 +2531,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Greatly increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.15, op: 'additive' }],
     sizes: ['Elemental Breaker (S)', 'Elemental Breaker (M)', 'Elemental Breaker (XL)'],
   },
 
@@ -2428,6 +2542,7 @@
     type: 'technical',
     element: 'thunder',
     description: "Significantly increases damage dealt to monster parts when exploiting a monster's elemental weakness.",
+    details: [{ type: 'damageDone', condition: 'elementalWeakness', value: 0.2, op: 'additive' }],
     sizes: ['Elemental Breaker (S)', 'Elemental Breaker (M)', 'Elemental Breaker (L)'],
   },
 
@@ -2444,6 +2559,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Encompassing Flames+'],
   },
 
@@ -2460,6 +2576,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Encompassing Flames'],
   },
 
@@ -2484,6 +2601,7 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Evasion.',
+    details: [{ type: 'evasionRate', value: 5 }],
     sizes: ['Evasion Ability (M)', 'Evasion Ability (L)', 'Evasion Ability (XL)'],
   },
 
@@ -2494,6 +2612,7 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Evasion.',
+    details: [{ type: 'evasionRate', value: 10 }],
     sizes: ['Evasion Ability (S)', 'Evasion Ability (L)', 'Evasion Ability (XL)'],
   },
 
@@ -2504,6 +2623,7 @@
     type: 'speed',
     element: 'water',
     description: 'Greatly increases Evasion.',
+    details: [{ type: 'evasionRate', value: 15 }],
     sizes: ['Evasion Ability (S)', 'Evasion Ability (M)', 'Evasion Ability (XL)'],
   },
 
@@ -2514,6 +2634,7 @@
     type: 'speed',
     element: 'water',
     description: 'Significantly increases Evasion.',
+    details: [{ type: 'evasionRate', value: 20 }],
     sizes: ['Evasion Ability (S)', 'Evasion Ability (M)', 'Evasion Ability (L)'],
   },
 
@@ -2524,6 +2645,7 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Evasion at 50% HP or less.',
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 20 }],
     sizes: ['Evasion Instinct (M)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2534,6 +2656,7 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Evasion at 50% HP or less.',
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 27 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (L)', 'Evasion Instinct (XL)'],
   },
 
@@ -2544,6 +2667,7 @@
     type: 'speed',
     element: 'water',
     description: 'Greatly increases Evasion at 50% HP or less.',
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 34 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (XL)'],
   },
 
@@ -2554,6 +2678,7 @@
     type: 'speed',
     element: 'water',
     description: 'Significantly increases Evasion at 50% HP or less.',
+    details: [{ type: 'evasionRate', condition: 'hp50percent', value: 40 }],
     sizes: ['Evasion Instinct (S)', 'Evasion Instinct (M)', 'Evasion Instinct (L)'],
   },
 
@@ -2571,6 +2696,10 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 3 },
+    ],
     sizes: ['Explosive Blast+'],
   },
 
@@ -2588,6 +2717,10 @@
     breath: true,
     target: 'allEnemies',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 3 },
+    ],
     sizes: ['Explosive Blast'],
   },
 
@@ -2604,6 +2737,10 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.4 },
+      { type: 'blastblightTurns', value: 3 },
+    ],
   },
 
   {
@@ -2618,6 +2755,7 @@
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.8, label: 'Stun' }],
   },
 
   {
@@ -2705,6 +2843,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -2714,7 +2853,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Slightly reduces damage taken from fire attacks.',
-    // details: [{ type: 'damageTaken', element: 'fire', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.05, op: 'additive' }],
     sizes: ['Fire Def Boost (M)', 'Fire Def Boost (L)', 'Fire Def Boost (XL)'],
   },
 
@@ -2725,7 +2864,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Reduces damage taken from fire attacks.',
-    // details: [{ type: 'damageTaken', element: 'fire', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.1, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (L)', 'Fire Def Boost (XL)'],
   },
 
@@ -2736,7 +2875,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Increases fire resistance, reducing damage taken from fire attacks.',
-    // details: [{ type: 'damageTaken', element: 'fire', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.15, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (M)', 'Fire Def Boost (XL)'],
   },
 
@@ -2747,7 +2886,7 @@
     type: 'technical',
     element: 'fire',
     description: 'Increases fire resistance, greatly reducing damage taken from fire attacks.',
-    details: [{ type: 'damageTaken', element: 'fire', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'fire', value: -0.2, op: 'additive' }],
     sizes: ['Fire Def Boost (S)', 'Fire Def Boost (M)', 'Fire Def Boost (L)'],
   },
 
@@ -2764,6 +2903,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -2778,6 +2918,7 @@
     description: 'Deals fire damage to random enemies. Chance to inflict Burn.',
     target: 'randomEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -2841,6 +2982,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Flame Chakram+'],
   },
 
@@ -2857,6 +2999,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Flame Chakram'],
   },
 
@@ -2874,6 +3017,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Flame Tempest+'],
   },
 
@@ -2891,6 +3035,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Flame Tempest'],
   },
 
@@ -2907,6 +3052,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -2923,6 +3069,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Flare Cluster+'],
   },
 
@@ -2940,6 +3087,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
     sizes: ['Flare Cluster'],
   },
 
@@ -2953,6 +3101,7 @@
     description: 'Chance to inflict Darkness on all enemies. Has the same effect as a Flash Bomb.',
     target: 'allEnemies',
     ailments: ['darkness'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -3005,6 +3154,10 @@
     type: 'technical',
     element: 'water',
     description: 'Slightly increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.05, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.05, op: 'additive' },
+    ],
     sizes: ['Fortify (M)', 'Fortify (L)', 'Fortify (XL)'],
   },
 
@@ -3015,6 +3168,10 @@
     type: 'technical',
     element: 'water',
     description: 'Increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.1, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.1, op: 'additive' },
+    ],
     sizes: ['Fortify (S)', 'Fortify (L)', 'Fortify (XL)'],
   },
 
@@ -3025,6 +3182,10 @@
     type: 'technical',
     element: 'water',
     description: 'Greatly increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.15, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.15, op: 'additive' },
+    ],
     sizes: ['Fortify (S)', 'Fortify (M)', 'Fortify (XL)'],
   },
 
@@ -3035,6 +3196,10 @@
     type: 'technical',
     element: 'water',
     description: 'Significantly increases attack and defense when only 1 Heart remains.',
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hearts1', value: 0.2, op: 'additive' },
+      { type: 'damageTaken', element: 'all', condition: 'hearts1', value: -0.2, op: 'additive' },
+    ],
     sizes: ['Fortify (S)', 'Fortify (M)', 'Fortify (L)'],
   },
 
@@ -3052,6 +3217,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     debuffs: [{ type: 'Accuracy Down', size: 'L', target: 'singleEnemy' }],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Foxflame Bubbles+'],
   },
 
@@ -3069,6 +3235,7 @@
     target: 'singleEnemy',
     ailments: ['burn'],
     debuffs: [{ type: 'Accuracy Down', size: 'L', target: 'singleEnemy' }],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Foxflame Bubbles'],
   },
 
@@ -3196,6 +3363,7 @@
     description: 'Deals non-elemental damage to random enemies. Chance to inflict Poison, Paralysis, and Darkness.',
     target: 'randomEnemy',
     ailments: ['poison', 'paralysis', 'darkness'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Fruit Frenzy+'],
   },
 
@@ -3212,6 +3380,7 @@
     description: 'Deals non-elemental damage to random enemies. Chance to inflict Poison, Paralysis, and Darkness.',
     target: 'randomEnemy',
     ailments: ['poison', 'paralysis', 'darkness'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Fruit Frenzy'],
   },
 
@@ -3389,6 +3558,10 @@
     breath: true,
     ailments: ['burn'],
     effects: ['lowAccuracy'],
+    details: [
+      { type: 'ailmentChance', value: 0.4 },
+      { type: 'accuracy', value: 0.7 },
+    ],
   },
 
   {
@@ -3416,6 +3589,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Rampage+'],
   },
 
@@ -3432,6 +3606,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Rampage'],
   },
 
@@ -3448,6 +3623,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Spear+'],
   },
 
@@ -3464,6 +3640,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
     sizes: ['Heavy Spear'],
   },
 
@@ -3479,6 +3656,7 @@
     description: 'Deals non-elemental damage to one enemy, Very low chance to hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy'],
+    details: [{ type: 'accuracy', value: 0.3 }],
   },
 
   {
@@ -3571,6 +3749,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.8 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -3580,7 +3762,9 @@
     type: 'power',
     element: 'fire',
     description: 'Slightly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.05, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.1, op: 'additive' },
+    ],
     sizes: ['Heroics (M)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3591,7 +3775,9 @@
     type: 'power',
     element: 'fire',
     description: 'Increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.17, op: 'additive' },
+    ],
     sizes: ['Heroics (S)', 'Heroics (L)', 'Heroics (XL)'],
   },
 
@@ -3602,7 +3788,9 @@
     type: 'power',
     element: 'fire',
     description: 'Greatly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.15, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.24, op: 'additive' },
+    ],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (XL)'],
   },
 
@@ -3613,7 +3801,9 @@
     type: 'power',
     element: 'fire',
     description: 'Significantly increases damage dealt at 50% HP or less.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.25?
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'hp50percent', value: 0.3, op: 'additive' },
+    ],
     sizes: ['Heroics (S)', 'Heroics (M)', 'Heroics (L)'],
   },
 
@@ -3648,7 +3838,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill slightly faster.',
-    // details: [{ type: 'kinship', value: 6 }], // TODO no source
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.2, op: 'multiplier' }],
     sizes: ['HtH Master (M)', 'HtH Master (L)', 'HtH Master (XL)'],
   },
 
@@ -3659,7 +3849,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill faster.',
-    // details: [{ type: 'kinship', value: 8 }], // TODO no source
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.3, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (L)', 'HtH Master (XL)'],
   },
 
@@ -3670,7 +3860,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill much faster.',
-    // details: [{ type: 'kinship', value: 10 }], // TODO no source
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.4, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (M)', 'HtH Master (XL)'],
   },
 
@@ -3681,7 +3871,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill significantly faster.',
-    details: [{ type: 'kinship', value: 12 }],
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.5, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (M)', 'HtH Master (L)'],
   },
 
@@ -3726,6 +3916,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Stun.',
     target: 'singleEnemy',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.3, label: 'Stun' }],
     sizes: ['Hyper Shot+'],
   },
 
@@ -3742,6 +3933,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Stun.',
     target: 'singleEnemy',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.3, label: 'Stun' }],
     sizes: ['Hyper Shot'],
   },
 
@@ -3894,7 +4086,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly reduces damage taken from ice attacks.',
-    // details: [{ type: 'damageTaken', element: 'ice', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.05, op: 'additive' }],
     sizes: ['Ice Def Boost (M)', 'Ice Def Boost (L)', 'Ice Def Boost (XL)'],
   },
 
@@ -3905,7 +4097,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Reduces damage taken from ice attacks.',
-    // details: [{ type: 'damageTaken', element: 'ice', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.1, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (L)', 'Ice Def Boost (XL)'],
   },
 
@@ -3916,7 +4108,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases ice resistance, reducing damage taken from ice attacks.',
-    // details: [{ type: 'damageTaken', element: 'ice', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.15, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (M)', 'Ice Def Boost (XL)'],
   },
 
@@ -3927,7 +4119,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases ice resistance, greatly reducing damage taken from ice attacks.',
-    details: [{ type: 'damageTaken', element: 'ice', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'ice', value: -0.2, op: 'additive' }],
     sizes: ['Ice Def Boost (S)', 'Ice Def Boost (M)', 'Ice Def Boost (L)'],
   },
 
@@ -4032,6 +4224,10 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Blastblight.',
     target: 'allEnemies',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 5 },
+    ],
   },
 
   {
@@ -4047,6 +4243,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Noxious Poison and Paralysis.',
     target: 'allEnemies',
     ailments: ['noxiousPoison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Infernal Flames+'],
   },
 
@@ -4063,6 +4260,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Noxious Poison and Paralysis.',
     target: 'allEnemies',
     ailments: ['noxiousPoison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Infernal Flames'],
   },
 
@@ -4073,6 +4271,7 @@
     type: null,
     element: 'none',
     description: 'Slightly increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 10 }],
     sizes: ['Inflict Rate Up (M)', 'Inflict Rate Up (L)', 'Inflict Rate Up (XL)'],
   },
 
@@ -4083,6 +4282,7 @@
     type: null,
     element: 'none',
     description: 'Increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 17 }],
     sizes: ['Inflict Rate Up (S)', 'Inflict Rate Up (L)', 'Inflict Rate Up (XL)'],
   },
 
@@ -4093,6 +4293,7 @@
     type: null,
     element: 'none',
     description: 'Greatly increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 24 }],
     sizes: ['Inflict Rate Up (S)', 'Inflict Rate Up (M)', 'Inflict Rate Up (XL)'],
   },
 
@@ -4103,6 +4304,7 @@
     type: null,
     element: 'none',
     description: 'Significantly increases abnormal status inflict rate.',
+    details: [{ type: 'ailmentInflictRate', value: 30 }],
     sizes: ['Inflict Rate Up (S)', 'Inflict Rate Up (M)', 'Inflict Rate Up (L)'],
   },
 
@@ -4128,6 +4330,7 @@
     type: 'technical',
     element: 'water',
     description: 'Low chance to negate Sleep.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Insomniac (M)', 'Insomniac (L)', 'Insomniac (XL)'],
   },
 
@@ -4138,6 +4341,7 @@
     type: 'technical',
     element: 'water',
     description: 'Chance to negate Sleep.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Insomniac (S)', 'Insomniac (L)', 'Insomniac (XL)'],
   },
 
@@ -4148,6 +4352,7 @@
     type: 'technical',
     element: 'water',
     description: 'High chance to negate Sleep.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Insomniac (S)', 'Insomniac (M)', 'Insomniac (XL)'],
   },
 
@@ -4158,6 +4363,7 @@
     type: 'technical',
     element: 'water',
     description: 'Negates Sleep.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Insomniac (S)', 'Insomniac (M)', 'Insomniac (L)'],
   },
 
@@ -4344,6 +4550,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Slightly increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.1, op: 'additive' }],
     sizes: ['Kinship Skill+ (M)', 'Kinship Skill+ (L)', 'Kinship Skill+ (XL)'],
   },
 
@@ -4354,6 +4561,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.17, op: 'additive' }],
     sizes: ['Kinship Skill+ (S)', 'Kinship Skill+ (L)', 'Kinship Skill+ (XL)'],
   },
 
@@ -4364,6 +4572,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Greatly increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.24, op: 'additive' }],
     sizes: ['Kinship Skill+ (S)', 'Kinship Skill+ (M)', 'Kinship Skill+ (XL)'],
   },
 
@@ -4374,6 +4583,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Significantly increases Kinship Skill damage.',
+    details: [{ type: 'damageDone', condition: 'kinship', value: 0.3, op: 'additive' }],
     sizes: ['Kinship Skill+ (S)', 'Kinship Skill+ (M)', 'Kinship Skill+ (L)'],
   },
 
@@ -4402,6 +4612,10 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -4781,7 +4995,7 @@
     type: 'technical',
     element: 'none',
     description: 'Slightly reduces damage taken from non-elemental attacks.',
-    // details: [{ type: 'damageTaken', element: 'none', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'none', value: -0.05, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (M)', 'Non-Elem Def Boost (L)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4792,7 +5006,7 @@
     type: 'technical',
     element: 'none',
     description: 'Reduces damage taken from non-elemental attacks.',
-    // details: [{ type: 'damageTaken', element: 'none', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'none', value: -0.1, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (L)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4803,7 +5017,7 @@
     type: 'technical',
     element: 'none',
     description: 'Increases non-elemental resistance, reducing damage taken from non-elemental attacks.',
-    // details: [{ type: 'damageTaken', element: 'none', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'none', value: -0.15, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (M)', 'Non-Elem Def Boost (XL)'],
   },
 
@@ -4814,7 +5028,7 @@
     type: 'technical',
     element: 'none',
     description: 'Increases non-elemental resistance, greatly reducing damage taken from non-elemental attacks.',
-    details: [{ type: 'damageTaken', element: 'none', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'none', value: -0.2, op: 'additive' }],
     sizes: ['Non-Elem Def Boost (S)', 'Non-Elem Def Boost (M)', 'Non-Elem Def Boost (L)'],
   },
 
@@ -4843,6 +5057,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Noxious Spit+'],
   },
 
@@ -4860,6 +5075,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
     sizes: ['Noxious Spit'],
   },
 
@@ -4877,6 +5093,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Noxious Venom+'],
   },
 
@@ -4894,6 +5111,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Noxious Venom'],
   },
 
@@ -4958,6 +5176,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Minuscule chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.1 }],
     sizes: ['Panacea (M)', 'Panacea (L)', 'Panacea (XL)'],
   },
 
@@ -4968,6 +5187,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Slight chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.2 }],
     sizes: ['Panacea (S)', 'Panacea (L)', 'Panacea (XL)'],
   },
 
@@ -4978,6 +5198,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Low chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Panacea (S)', 'Panacea (M)', 'Panacea (XL)'],
   },
 
@@ -4988,6 +5209,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Medium chance to negate all abnormal status effects.',
+    details: [{ type: 'effectChance', value: 0.4 }],
     sizes: ['Panacea (S)', 'Panacea (M)', 'Panacea (L)'],
   },
 
@@ -5012,7 +5234,9 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills slightly faster at 50% HP or less.',
-    // details: [{ type: 'kinshipGeneration', value: 1.25, op: 'multiplier' }], // TODO no source
+    details: [
+      { type: 'kinshipGeneration', condition: 'hp50percent', value: 1.5, op: 'multiplier' },
+    ],
     sizes: ['Partner (M)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5023,7 +5247,9 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills faster at 50% HP or less.',
-    // details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }], // TODO no source
+    details: [
+      { type: 'kinshipGeneration', condition: 'hp50percent', value: 1.65, op: 'multiplier' },
+    ],
     sizes: ['Partner (S)', 'Partner (L)', 'Partner (XL)'],
   },
 
@@ -5034,7 +5260,9 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills much faster at 50% HP or less.',
-    // details: [{ type: 'kinshipGeneration', value: 1.75, op: 'multiplier' }], // TODO no source
+    details: [
+      { type: 'kinshipGeneration', condition: 'hp50percent', value: 1.8, op: 'multiplier' },
+    ],
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (XL)'],
   },
 
@@ -5045,7 +5273,7 @@
     type: 'speed',
     element: 'thunder',
     description: 'Kinship Gauge fills significantly faster at 50% HP or less.',
-    details: [{ type: 'kinshipGeneration', value: 2, op: 'multiplier' }],
+    details: [{ type: 'kinshipGeneration', condition: 'hp50percent', value: 2, op: 'multiplier' }],
     sizes: ['Partner (S)', 'Partner (M)', 'Partner (L)'],
   },
 
@@ -5090,6 +5318,7 @@
     target: 'allEnemies',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -5105,6 +5334,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -5119,6 +5349,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -5191,6 +5422,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    // TODO ailmentChance
     sizes: ['Poison Spike+'],
   },
 
@@ -5207,6 +5439,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    // TODO ailmentChance
     sizes: ['Poison Spike'],
   },
 
@@ -5223,6 +5456,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -5238,6 +5472,7 @@
     description: 'Non-elemental damage to one, chance to poison',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Poison Tail+'],
   },
 
@@ -5254,6 +5489,7 @@
     description: 'Non-elemental damage to one, chance to poison',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Poison Tail'],
   },
 
@@ -5264,6 +5500,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Slightly reduces damage taken at 50% HP or less.',
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.3, op: 'additive' }],
     sizes: ['Potential (M)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5274,6 +5511,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Reduces damage taken at 50% HP or less.',
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.37, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (L)', 'Potential (XL)'],
   },
 
@@ -5284,6 +5522,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Greatly reduces damage taken at 50% HP or less.',
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.43, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (XL)'],
   },
 
@@ -5294,6 +5533,7 @@
     type: 'power',
     element: 'thunder',
     description: 'Significantly reduces damage taken at 50% HP or less.',
+    details: [{ type: 'damageTaken', condition: 'hp50percent', value: -0.5, op: 'additive' }],
     sizes: ['Potential (S)', 'Potential (M)', 'Potential (L)'],
   },
 
@@ -5350,6 +5590,10 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Speed. Low chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 1 },
+      { type: 'priorityOverride', value: 0.2 },
+    ],
     sizes: ['Quick (M)', 'Quick (L)', 'Quick (XL)'],
   },
 
@@ -5360,6 +5604,10 @@
     type: 'speed',
     element: 'water',
     description: 'Slightly increases Speed. Medium chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 1 },
+      { type: 'priorityOverride', value: 0.3 },
+    ],
     sizes: ['Quick (S)', 'Quick (L)', 'Quick (XL)'],
   },
 
@@ -5370,6 +5618,10 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Speed. Medium chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 2 },
+      { type: 'priorityOverride', value: 0.4 },
+    ],
     sizes: ['Quick (S)', 'Quick (M)', 'Quick (XL)'],
   },
 
@@ -5380,6 +5632,10 @@
     type: 'speed',
     element: 'water',
     description: 'Increases Speed. High chance to act first in turn order.',
+    details: [
+      { type: 'rawSpeed', value: 2 },
+      { type: 'priorityOverride', value: 0.5 },
+    ],
     sizes: ['Quick (S)', 'Quick (M)', 'Quick (L)'],
   },
 
@@ -5472,6 +5728,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Ray Blade+'],
   },
 
@@ -5488,6 +5745,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
     sizes: ['Ray Blade'],
   },
 
@@ -5514,6 +5772,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to stun, chance to strike first.',
     target: 'allEnemies',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.4, label: 'Stun' }],
   },
 
   {
@@ -5528,6 +5787,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -5540,6 +5800,7 @@
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.4, label: 'Stun' }],
   },
 
   {
@@ -5660,7 +5921,9 @@
     type: 'power',
     element: 'none',
     description: 'Slightly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.05, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.05, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (M)', 'Salt in Wound (L)', 'Salt in Wound (XL)'],
   },
 
@@ -5671,7 +5934,9 @@
     type: 'power',
     element: 'none',
     description: 'Increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.1, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.1, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (L)', 'Salt in Wound (XL)'],
   },
 
@@ -5682,7 +5947,9 @@
     type: 'power',
     element: 'none',
     description: 'Greatly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.15, op: 'additive' }],
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.15, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (XL)'],
   },
 
@@ -5693,7 +5960,9 @@
     type: 'power',
     element: 'none',
     description: 'Significantly increases damage dealt to enemies with abnormal statuses.',
-    details: [{ type: 'damageDone', element: 'all', value: 0.2, op: 'additive' }], // TODO 0.1?
+    details: [
+      { type: 'damageDone', element: 'all', condition: 'debuffed', value: 0.2, op: 'additive' },
+    ],
     sizes: ['Salt in Wound (S)', 'Salt in Wound (M)', 'Salt in Wound (L)'],
   },
 
@@ -5711,6 +5980,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Savage Fireball+'],
   },
 
@@ -5728,6 +5998,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
     sizes: ['Savage Fireball'],
   },
 
@@ -5773,6 +6044,7 @@
     description: 'Chance to inflict Stun on all enemies. Has the same effect as a Sonic Bomb.',
     target: 'allEnemies',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.6, label: 'Stun' }],
   },
 
   {
@@ -5800,6 +6072,7 @@
     description: 'Deals fire damage to all enemies. Chance to inflict Burn.',
     target: 'allEnemies',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -5809,6 +6082,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Low chance to negate Skillseal.',
+    details: [{ type: 'effectChance', value: 0.3 }],
     sizes: ['Sealbreaker (M)', 'Sealbreaker (L)', 'Sealbreaker (XL)'],
   },
 
@@ -5819,6 +6093,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Chance to negate Skillseal.',
+    details: [{ type: 'effectChance', value: 0.5 }],
     sizes: ['Sealbreaker (S)', 'Sealbreaker (L)', 'Sealbreaker (XL)'],
   },
 
@@ -5829,6 +6104,7 @@
     type: 'speed',
     element: 'ice',
     description: 'High chance to negate Skillseal.',
+    details: [{ type: 'effectChance', value: 0.7 }],
     sizes: ['Sealbreaker (S)', 'Sealbreaker (M)', 'Sealbreaker (XL)'],
   },
 
@@ -5839,6 +6115,7 @@
     type: 'speed',
     element: 'ice',
     description: 'Negates Skillseal.',
+    details: [{ type: 'effectChance', value: 1 }],
     sizes: ['Sealbreaker (S)', 'Sealbreaker (M)', 'Sealbreaker (L)'],
   },
 
@@ -5854,6 +6131,7 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Burn.',
     target: 'singleEnemy',
     ailments: ['burn'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -5863,7 +6141,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Recovers a slight amount of HP at the end of each turn.',
-    // details: [{ type: 'maxHpRecovery', value: 0.05 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.1 }],
     sizes: ['Self-Heal (M)', 'Self-Heal (L)', 'Self-Heal (XL)'],
   },
 
@@ -5874,7 +6152,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Recovers a small amount of HP at the end of each turn.',
-    // details: [{ type: 'maxHpRecovery', value: 0.1 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.13 }],
     sizes: ['Self-Heal (S)', 'Self-Heal (L)', 'Self-Heal (XL)'],
   },
 
@@ -5885,7 +6163,7 @@
     type: 'speed',
     element: 'fire',
     description: 'Recovers a decent amount of HP at the end of each turn.',
-    // details: [{ type: 'maxHpRecovery', value: 0.15 }], // TODO no source
+    details: [{ type: 'maxHpRecovery', value: 0.17 }],
     sizes: ['Self-Heal (S)', 'Self-Heal (M)', 'Self-Heal (XL)'],
   },
 
@@ -5926,6 +6204,7 @@
     target: 'allEnemies',
     ailments: ['bleeding'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Shredding Scales+'],
   },
 
@@ -5943,6 +6222,7 @@
     target: 'allEnemies',
     ailments: ['bleeding'],
     effects: ['crit'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Shredding Scales'],
   },
 
@@ -6000,6 +6280,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Sleep.',
     target: 'allEnemies',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -6015,6 +6296,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Sleep.',
     target: 'singleEnemy',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Sleep Needle+'],
   },
 
@@ -6031,6 +6313,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Sleep.',
     target: 'singleEnemy',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Sleep Needle'],
   },
 
@@ -6047,6 +6330,7 @@
     description: 'Deals water damage to all enemies. Chance to inflict Sleep.',
     target: 'allEnemies',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Sleep Powder+'],
   },
 
@@ -6063,6 +6347,7 @@
     description: 'Deals water damage to all enemies. Chance to inflict Sleep.',
     target: 'allEnemies',
     ailments: ['sleep'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Sleep Powder'],
   },
 
@@ -6079,6 +6364,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 1 }, // TODO is this real?
+      { type: 'blastblightTurns', value: 5 },
+    ],
     sizes: ['Slime Stomp+'],
   },
 
@@ -6095,6 +6384,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 1 }, // TODO is this real?
+      { type: 'blastblightTurns', value: 5 },
+    ],
     sizes: ['Slime Stomp'],
   },
 
@@ -6105,6 +6398,8 @@
     type: 'technical',
     element: 'fire',
     description: 'Normal attacks have an extremely low chance to inflict Stun.',
+    effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.05, label: 'Stun' }],
     sizes: ['Slugger (M)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -6116,6 +6411,7 @@
     element: 'fire',
     description: 'Normal attacks have a tiny chance to inflict Stun.',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.07, label: 'Stun' }],
     sizes: ['Slugger (S)', 'Slugger (L)', 'Slugger (XL)'],
   },
 
@@ -6127,6 +6423,7 @@
     element: 'fire',
     description: 'Normal attacks have a slight chance to inflict Stun.',
     effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.1, label: 'Stun' }],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (XL)'],
   },
 
@@ -6137,6 +6434,8 @@
     type: 'technical',
     element: 'fire',
     description: 'Normal attacks have a low chance to inflict Stun.',
+    effects: ['stun'],
+    details: [{ type: 'effectChance', value: 0.12, label: 'Stun' }],
     sizes: ['Slugger (S)', 'Slugger (M)', 'Slugger (L)'],
   },
 
@@ -6205,7 +6504,7 @@
     type: 'speed',
     element: 'none',
     description: 'Kinship Gauge fills slightly faster.',
-    // details: [{ type: 'kinshipGeneration', value: 1.1, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.1, op: 'multiplier' }],
     sizes: ['Soul Kinship (M)', 'Soul Kinship (L)', 'Soul Kinship (XL)'],
   },
 
@@ -6216,7 +6515,7 @@
     type: 'speed',
     element: 'none',
     description: 'Kinship Gauge fills faster.',
-    // details: [{ type: 'kinshipGeneration', value: 1.2, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.2, op: 'multiplier' }],
     sizes: ['Soul Kinship (S)', 'Soul Kinship (L)', 'Soul Kinship (XL)'],
   },
 
@@ -6227,7 +6526,7 @@
     type: 'speed',
     element: 'none',
     description: 'Kinship Gauge fills much faster.',
-    // details: [{ type: 'kinshipGeneration', value: 1.3, op: 'multiplier' }], // TODO no source
+    details: [{ type: 'kinshipGeneration', value: 1.3, op: 'multiplier' }],
     sizes: ['Soul Kinship (S)', 'Soul Kinship (M)', 'Soul Kinship (XL)'],
   },
 
@@ -6281,6 +6580,10 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.3 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -6297,6 +6600,10 @@
     target: 'allEnemies',
     ailments: ['burn'],
     effects: ['lowAccuracy'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'accuracy', value: 0.7 },
+    ],
     sizes: ['Spreading Beam+'],
   },
 
@@ -6314,6 +6621,10 @@
     target: 'allEnemies',
     ailments: ['burn'],
     effects: ['lowAccuracy'],
+    details: [
+      { type: 'ailmentChance', value: 0.6 },
+      { type: 'accuracy', value: 0.7 },
+    ],
     sizes: ['Spreading Beam'],
   },
 
@@ -6324,7 +6635,7 @@
     type: 'power',
     element: 'water',
     description: 'Slightly increases starting Stamina.',
-    // details: [{ type: 'startingStamina', value: 5 }], // TODO no source
+    details: [{ type: 'startingStamina', value: 5 }],
     sizes: ['Stamina Boost (M)', 'Stamina Boost (L)', 'Stamina Boost (XL)'],
   },
 
@@ -6335,7 +6646,7 @@
     type: 'power',
     element: 'water',
     description: 'Increases starting Stamina.',
-    // details: [{ type: 'startingStamina', value: 10 }], // TODO no source
+    details: [{ type: 'startingStamina', value: 10 }],
     sizes: ['Stamina Boost (S)', 'Stamina Boost (L)', 'Stamina Boost (XL)'],
   },
 
@@ -6346,7 +6657,7 @@
     type: 'power',
     element: 'water',
     description: 'Greatly increases starting Stamina.',
-    // details: [{ type: 'startingStamina', value: 15 }], // TODO no source
+    details: [{ type: 'startingStamina', value: 15 }],
     sizes: ['Stamina Boost (S)', 'Stamina Boost (M)', 'Stamina Boost (XL)'],
   },
 
@@ -6367,8 +6678,8 @@
     size: 'S',
     type: 'speed',
     element: 'thunder',
-    description: 'Slightly increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 1 }], // TODO no source
+    description: 'Slightly increases Stamina regeneration.',
+    details: [{ type: 'staminaRecovery', value: 1 }],
     sizes: ['Stamina Surge (M)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6378,8 +6689,8 @@
     size: 'M',
     type: 'speed',
     element: 'thunder',
-    description: 'Increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 2 }], // TODO no source
+    description: 'Increases Stamina regeneration.',
+    details: [{ type: 'staminaRecovery', value: 2 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
 
@@ -6389,8 +6700,8 @@
     size: 'L',
     type: 'speed',
     element: 'thunder',
-    description: 'Greatly increases Stamine regeneration.',
-    // details: [{ type: 'staminaRecovery', value: 4 }], // TODO no source
+    description: 'Greatly increases Stamina regeneration.',
+    details: [{ type: 'staminaRecovery', value: 4 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (XL)'],
   },
 
@@ -6400,7 +6711,7 @@
     size: 'XL',
     type: 'speed',
     element: 'thunder',
-    description: 'Significantly increases Stamine regeneration.',
+    description: 'Significantly increases Stamina regeneration.',
     details: [{ type: 'staminaRecovery', value: 6 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (L)'],
   },
@@ -6459,7 +6770,7 @@
     buffs: [
       { type: 'Water Attack Up', size: 'M', target: 'user', turns: '3' },
       { type: 'Thunder Attack Up', size: 'M', target: 'user', turns: '3' },
-      { type: 'Wyvernfell Up', size: 'L', target: 'user', turns: '3' }, // TODO M?
+      { type: 'Wyvernfell Up', size: 'L', target: 'user', turns: '3' },
       { type: 'Defense Up', size: 'M', target: 'user', turns: '3' },
     ],
   },
@@ -6476,6 +6787,7 @@
     description: 'Non-elemental damage to all, chance to stun, High chance to strike first.',
     target: 'allEnemies',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.5, label: 'Stun' }],
   },
 
   {
@@ -6490,6 +6802,10 @@
     description: 'Deals fire damage to one enemy. Chance to inflict Blastblight.',
     target: 'singleEnemy',
     ailments: ['blastblight'],
+    details: [
+      { type: 'ailmentChance', value: 0.3 },
+      { type: 'blastblightTurns', value: 4 },
+    ],
   },
 
   {
@@ -6499,6 +6815,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Slightly increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.1, op: 'additive' }],
     sizes: ['Synchronize (M)', 'Synchronize (L)', 'Synchronize (XL)'],
   },
 
@@ -6509,6 +6826,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.17, op: 'additive' }],
     sizes: ['Synchronize (S)', 'Synchronize (L)', 'Synchronize (XL)'],
   },
 
@@ -6519,6 +6837,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Greatly increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.24, op: 'additive' }],
     sizes: ['Synchronize (S)', 'Synchronize (M)', 'Synchronize (XL)'],
   },
 
@@ -6529,6 +6848,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Significantly increases Double Attack damage.',
+    details: [{ type: 'damageDone', condition: 'doubleAttack', value: 0.3, op: 'additive' }],
     sizes: ['Synchronize (S)', 'Synchronize (M)', 'Synchronize (L)'],
   },
 
@@ -6557,6 +6877,7 @@
     description: 'Deals a set amount of damage equal to skill power to one enemy. Chance to inflict Stun. High chance to strike first.',
     target: 'singleEnemy',
     effects: ['stun', 'priority'],
+    details: [{ type: 'effectChance', value: 0.5, label: 'Stun' }],
   },
 
   {
@@ -6572,6 +6893,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Tail Twister+'],
   },
 
@@ -6588,6 +6910,7 @@
     description: 'Deals non-elemental damage to one enemy. Low hit rate, but a high chance of landing a critical hit.',
     target: 'singleEnemy',
     effects: ['lowAccuracy', 'crit'],
+    details: [{ type: 'accuracy', value: 0.7 }],
     sizes: ['Tail Twister'],
   },
 
@@ -6598,6 +6921,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more.',
+    details: [{ type: 'remainingHp', value: 1 }],
     sizes: ['Tenacity (M)', 'Tenacity (L)', 'Tenacity (XL)'],
   },
 
@@ -6608,6 +6932,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more. A slight amount of HP will remain.',
+    details: [{ type: 'remainingHp', value: 50 }],
     sizes: ['Tenacity (S)', 'Tenacity (L)', 'Tenacity (XL)'],
   },
 
@@ -6618,6 +6943,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more. A decent amount of HP will remain.',
+    details: [{ type: 'remainingHp', value: 100 }],
     sizes: ['Tenacity (S)', 'Tenacity (M)', 'Tenacity (XL)'],
   },
 
@@ -6628,6 +6954,7 @@
     type: 'power',
     element: 'ice',
     description: 'Survives one attack that would reduce HP to 0 when at 50% HP or more. A large amount of HP will remain.',
+    details: [{ type: 'remainingHp', value: 150 }],
     sizes: ['Tenacity (S)', 'Tenacity (M)', 'Tenacity (L)'],
   },
 
@@ -6643,6 +6970,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Bleeding.',
     target: 'singleEnemy',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -6718,6 +7046,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -6727,7 +7056,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Slightly reduces damage taken from thunder attacks.',
-    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.05, op: 'additive' }],
     sizes: ['Thunder Def Boost (M)', 'Thunder Def Boost (L)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6738,7 +7067,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Reduces damage taken from thunder attacks.',
-    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.1, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (L)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6749,7 +7078,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases thunder resistance, reducing damage taken from thunder attacks.',
-    // details: [{ type: 'damageTaken', element: 'thunder', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.15, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (M)', 'Thunder Def Boost (XL)'],
   },
 
@@ -6760,7 +7089,7 @@
     type: 'technical',
     element: 'thunder',
     description: 'Increases thunder resistance, greatly reducing damage taken from thunder attacks.',
-    details: [{ type: 'damageTaken', element: 'thunder', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'thunder', value: -0.2, op: 'additive' }],
     sizes: ['Thunder Def Boost (S)', 'Thunder Def Boost (M)', 'Thunder Def Boost (L)'],
   },
 
@@ -6776,6 +7105,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -6835,6 +7165,8 @@
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
+    ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Thunder Rampage+'],
   },
 
@@ -6850,6 +7182,8 @@
     wyvernfell: 40,
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
+    ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Thunder Rampage'],
   },
 
@@ -6927,6 +7261,7 @@
     description: 'Deals thunder damage to all enemies. Chance to inflict Paralysis.',
     target: 'allEnemies',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.3 }],
   },
 
   {
@@ -6972,6 +7307,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Thunderbug Blitz+'],
   },
 
@@ -6988,6 +7324,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 1 }],
     sizes: ['Thunderbug Blitz'],
   },
 
@@ -7003,6 +7340,7 @@
     description: 'Deals thunder damage to one enemy. Chance to inflict Paralysis.',
     target: 'singleEnemy',
     ailments: ['paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
   },
 
   {
@@ -7073,6 +7411,7 @@
     description: 'Deals water damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 1 }],
   },
 
   {
@@ -7089,6 +7428,10 @@
     target: 'singleEnemy',
     ailments: ['poison'],
     effects: ['1HitKo'],
+    details: [
+      { type: 'ailmentChance', value: 0.7 },
+      { type: 'effectChance', value: 0.1, label: '1-Hit-KO' },
+    ],
     sizes: ['Toxic Needle+'],
   },
 
@@ -7106,6 +7449,10 @@
     target: 'singleEnemy',
     ailments: ['poison'],
     effects: ['1HitKo'],
+    details: [
+      { type: 'ailmentChance', value: 0.7 },
+      { type: 'effectChance', value: 0.1, label: '1-Hit-KO' },
+    ],
     sizes: ['Toxic Needle'],
   },
 
@@ -7121,6 +7468,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Noxious Poison.',
     target: 'allEnemies',
     ailments: ['noxiousPoison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
   },
 
   {
@@ -7191,6 +7539,7 @@
     description: 'Non-elemental damage to all, chance to bleed.',
     target: 'allEnemies',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Vacuum Blast+'],
   },
 
@@ -7207,6 +7556,7 @@
     description: 'Non-elemental damage to all, chance to bleed.',
     target: 'allEnemies',
     ailments: ['bleeding'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Vacuum Blast'],
   },
 
@@ -7296,6 +7646,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
   },
 
   {
@@ -7311,6 +7662,7 @@
     description: 'Deals non-elemental damage to all enemies and inflicts Poison.',
     target: 'allEnemies',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Venom Blast+'],
   },
 
@@ -7327,6 +7679,7 @@
     description: 'Deals non-elemental damage to all enemies and inflicts Poison.',
     target: 'allEnemies',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.6 }],
     sizes: ['Venom Blast'],
   },
 
@@ -7343,6 +7696,7 @@
     target: 'singleEnemy',
     breath: true,
     ailments: ['noxiousPoison', 'paralysis'],
+    details: [{ type: 'ailmentChance', value: 0.4 }],
   },
 
   {
@@ -7358,6 +7712,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Venom Queen+'],
   },
 
@@ -7374,6 +7729,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Severe Poison.',
     target: 'singleEnemy',
     ailments: ['severePoison'],
+    details: [{ type: 'ailmentChance', value: 0.7 }],
     sizes: ['Venom Queen'],
   },
 
@@ -7389,6 +7745,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 1 }],
   },
 
   {
@@ -7403,6 +7760,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.2 }],
   },
 
   {
@@ -7417,6 +7775,7 @@
     description: 'Deals non-elemental damage to all enemies. Chance to inflict Poison.',
     target: 'allEnemies',
     ailments: ['poison'],
+    details: [{ type: 'ailmentChance', value: 0.5 }],
   },
 
   {
@@ -7426,6 +7785,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Slightly increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.1, op: 'additive' }],
     sizes: ['Vicious (M)', 'Vicious (L)', 'Vicious (XL)'],
   },
 
@@ -7436,6 +7796,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.17, op: 'additive' }],
     sizes: ['Vicious (S)', 'Vicious (L)', 'Vicious (XL)'],
   },
 
@@ -7446,6 +7807,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Greatly increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.24, op: 'additive' }],
     sizes: ['Vicious (S)', 'Vicious (M)', 'Vicious (XL)'],
   },
 
@@ -7456,6 +7818,7 @@
     type: 'power',
     element: 'dragon',
     description: 'Significantly increases Head-to-Head damage.',
+    details: [{ type: 'damageDone', condition: 'headToHead', value: 0.3, op: 'additive' }],
     sizes: ['Vicious (S)', 'Vicious (M)', 'Vicious (L)'],
   },
 
@@ -7466,7 +7829,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Slightly increases Crit Rate at 50% HP or less.',
-    // details: [{ type: 'critRate', value: 10 }], // TODO no source
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 10 }],
     sizes: ['Vigilance (M)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7477,7 +7840,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Increases Crit Rate at 50% HP or less.',
-    // details: [{ type: 'critRate', value: 20 }], // TODO no source
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 17 }],
     sizes: ['Vigilance (S)', 'Vigilance (L)', 'Vigilance (XL)'],
   },
 
@@ -7488,7 +7851,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Greatly increases Crit Rate at 50% HP or less.',
-    // details: [{ type: 'critRate', value: 30 }], // TODO no source
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 24 }],
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (XL)'],
   },
 
@@ -7499,7 +7862,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Significantly increases Crit Rate at 50% HP or less.',
-    details: [{ type: 'critRate', value: 40 }], // TODO is that real?
+    details: [{ type: 'critRate', condition: 'hp50percent', value: 30 }],
     sizes: ['Vigilance (S)', 'Vigilance (M)', 'Vigilance (L)'],
   },
 
@@ -7510,6 +7873,7 @@
     type: 'power',
     element: 'water',
     description: 'Slightly increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.05, op: 'multiplier' }],
     sizes: ['Water Atk Boost (M)', 'Water Atk Boost (L)', 'Water Atk Boost (XL)'],
   },
 
@@ -7520,6 +7884,7 @@
     type: 'power',
     element: 'water',
     description: 'Increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.1, op: 'multiplier' }],
     sizes: ['Water Atk Boost (S)', 'Water Atk Boost (L)', 'Water Atk Boost (XL)'],
   },
 
@@ -7530,6 +7895,7 @@
     type: 'power',
     element: 'water',
     description: 'Greatly increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.15, op: 'multiplier' }],
     sizes: ['Water Atk Boost (S)', 'Water Atk Boost (M)', 'Water Atk Boost (XL)'],
   },
 
@@ -7540,6 +7906,7 @@
     type: 'power',
     element: 'water',
     description: 'Significantly increases damage dealt by water attacks.',
+    details: [{ type: 'damageDone', element: 'water', value: 1.2, op: 'multiplier' }],
     sizes: ['Water Atk Boost (S)', 'Water Atk Boost (M)', 'Water Atk Boost (L)'],
   },
 
@@ -7550,7 +7917,7 @@
     type: 'technical',
     element: 'water',
     description: 'Slightly reduces damage taken from water attacks.',
-    // details: [{ type: 'damageTaken', element: 'water', value: -0.15, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'water', value: -0.05, op: 'additive' }],
     sizes: ['Water Def Boost (M)', 'Water Def Boost (L)', 'Water Def Boost (XL)'],
   },
 
@@ -7561,7 +7928,7 @@
     type: 'technical',
     element: 'water',
     description: 'Reduces damage taken from water attacks.',
-    // details: [{ type: 'damageTaken', element: 'water', value: -0.2, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'water', value: -0.1, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (L)', 'Water Def Boost (XL)'],
   },
 
@@ -7572,7 +7939,7 @@
     type: 'technical',
     element: 'water',
     description: 'Increases water resistance, reducing damage taken from water attacks.',
-    // details: [{ type: 'damageTaken', element: 'water', value: -0.25, op: 'additive' }], // TODO no source
+    details: [{ type: 'damageTaken', element: 'water', value: -0.15, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (M)', 'Water Def Boost (XL)'],
   },
 
@@ -7583,7 +7950,7 @@
     type: 'technical',
     element: 'water',
     description: 'Increases water resistance, greatly reducing damage taken from water attacks.',
-    details: [{ type: 'damageTaken', element: 'water', value: -0.3, op: 'additive' }],
+    details: [{ type: 'damageTaken', element: 'water', value: -0.2, op: 'additive' }],
     sizes: ['Water Def Boost (S)', 'Water Def Boost (M)', 'Water Def Boost (L)'],
   },
 

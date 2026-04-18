@@ -23,6 +23,10 @@
 
   const versions = [
     {
+      date: '2026-04-18',
+      changes: ['Update gene details with a lot more numbers for effects, buffs and debuffs'],
+    },
+    {
       date: '2026-04-13',
       changes: ['Update gene details with numbers for effects, buffs and debuffs'],
     },
@@ -122,7 +126,7 @@
 
           <ProseLi>
             <AppNuxtLink to="/3/genes" text="Gene list" />
-            with types, monstie sources and effects (including some numbers)
+            with types, monstie sources and effects (including numbers)
           </ProseLi>
 
           <ProseLi>
@@ -186,6 +190,14 @@
                 text="Monstie Damage Calc"
               />
               by <AppLink href="https://www.reddit.com/user/rmosley753" text="rmosley753" />
+            </ProseLi>
+
+            <ProseLi>
+              <AppLink
+                href="https://www.reddit.com/r/MonsterHunterStories/comments/1s91lvf/comment/oged0ql"
+                text="Numbers for skills and buffs"
+              />
+              by <AppLink href="https://www.reddit.com/user/VertVentus" text="VertVentus" />
             </ProseLi>
           </ProseUl>
         </section>

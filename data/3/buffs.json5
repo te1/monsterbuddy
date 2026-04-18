@@ -66,19 +66,57 @@
     {
       type: 'Power Charge',
       details: [
-        { size: 'S', type: 'damageDone', element: 'all', value: 0.7, op: 'additive' }, // TODO 0.66?
-        { size: 'M', type: 'damageDone', element: 'all', value: 1, op: 'additive' }, // TODO 0.95?
-        { size: 'L', type: 'damageDone', element: 'all', value: 1.5, op: 'additive' }, // TODO 1.45?
+        { size: 'S', type: 'damageDone', element: 'all', value: 0.7, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'all', value: 1, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'all', value: 1.5, op: 'additive' },
       ],
     },
 
     {
       type: 'Critical Up',
       details: [
-        { size: 'S', type: 'critRate', value: 10 },
-        { size: 'M', type: 'critRate', value: 15 },
-        { size: 'L', type: 'critRate', value: 20 },
+        { size: 'S', type: 'critRate', value: 5 },
+        { size: 'M', type: 'critRate', value: 10 },
+        { size: 'L', type: 'critRate', value: 15 },
       ],
+    },
+
+    {
+      type: 'Speed Up',
+      details: [
+        { size: 'S', type: 'rawSpeed', value: 1 },
+        { size: 'M', type: 'rawSpeed', value: 3 },
+        { size: 'L', type: 'rawSpeed', value: 5 },
+      ],
+    },
+
+    {
+      type: 'Wyvernfell Up',
+      details: [
+        { size: 'S', type: 'wyvernfell', value: 0.1 },
+        { size: 'M', type: 'wyvernfell', value: 0.2 },
+        { size: 'L', type: 'wyvernfell', value: 0.3 },
+      ],
+    },
+
+    {
+      type: 'Ailment Inflict Rate Up',
+      details: [{ type: 'ailmentInflictRate', value: 10 }],
+    },
+
+    {
+      type: 'Burn Effect',
+      details: [{ type: 'effectChance', value: 0.2, label: 'Burn' }],
+    },
+
+    {
+      type: 'Paralysis Effect',
+      details: [{ type: 'effectChance', value: 0.2, label: 'Paralysis' }],
+    },
+
+    {
+      type: 'Blast Effect',
+      details: [{ type: 'effectChance', value: 0.2, label: 'Blastblight' }],
     },
 
     {
@@ -92,8 +130,49 @@
     },
 
     {
+      type: 'Defense Up',
+      details: [
+        { size: 'S', type: 'damageTaken', element: 'all', value: -0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'all', value: -0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'all', value: -0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Fire Defense Up',
+      details: [
+        { size: 'S', type: 'damageTaken', element: 'fire', value: -0.1, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'fire', value: -0.2, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'fire', value: -0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Dodge Up',
+      details: [
+        { size: 'S', type: 'evasionRate', value: 10 },
+        { size: 'M', type: 'evasionRate', value: 20 },
+        { size: 'L', type: 'evasionRate', value: 30 },
+      ],
+    },
+
+    {
+      type: 'Guard',
+      details: [
+        { size: 'S', type: 'damageTaken', element: 'all', value: -0.4, op: 'additive' },
+        { size: 'M', type: 'damageTaken', element: 'all', value: -0.6, op: 'additive' },
+        { size: 'L', type: 'damageTaken', element: 'all', value: -0.8, op: 'additive' },
+      ],
+    },
+
+    {
       type: 'Regenerate',
       details: [{ type: 'maxHpRecovery', value: 0.1 }],
+    },
+
+    {
+      type: 'Stamina Regen Up',
+      details: [{ type: 'rawStaminaRegen', value: 3 }],
     },
   ],
 
@@ -122,6 +201,51 @@
         { size: 'S', type: 'damageTaken', element: 'dragon', value: 0.1, op: 'additive' },
         { size: 'M', type: 'damageTaken', element: 'dragon', value: 0.2, op: 'additive' },
         { size: 'L', type: 'damageTaken', element: 'dragon', value: 0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Attack Down',
+      details: [
+        { size: 'S', type: 'damageDone', element: 'all', value: -0.1, op: 'additive' },
+        { size: 'M', type: 'damageDone', element: 'all', value: -0.2, op: 'additive' },
+        { size: 'L', type: 'damageDone', element: 'all', value: -0.3, op: 'additive' },
+      ],
+    },
+
+    {
+      type: 'Speed Down',
+      details: [
+        { size: 'S', type: 'rawSpeed', value: -1 },
+        { size: 'M', type: 'rawSpeed', value: -3 },
+        { size: 'L', type: 'rawSpeed', value: -5 },
+      ],
+    },
+
+    {
+      type: 'Wyvernsoul Defense Down',
+      details: [
+        { size: 'S', type: 'wyvernsoulDamageTaken', value: 0.1 },
+        { size: 'M', type: 'wyvernsoulDamageTaken', value: 0.2 },
+        { size: 'L', type: 'wyvernsoulDamageTaken', value: 0.3 },
+      ],
+    },
+
+    {
+      type: 'Accuracy Down',
+      details: [
+        { size: 'S', type: 'accuracyRate', value: -10 },
+        { size: 'M', type: 'accuracyRate', value: -20 },
+        { size: 'L', type: 'accuracyRate', value: -30 },
+      ],
+    },
+
+    {
+      type: 'Evasion Down',
+      details: [
+        { size: 'S', type: 'evasionRate', value: -10 },
+        { size: 'M', type: 'evasionRate', value: -20 },
+        { size: 'L', type: 'evasionRate', value: -30 },
       ],
     },
   ],

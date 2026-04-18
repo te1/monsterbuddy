@@ -9,6 +9,9 @@
       case 'critRate':
         return 'Crit Rate';
 
+      case 'evasionRate':
+        return 'Evasion';
+
       case 'staminaRecovery':
         return 'Stamina Recovery';
 
@@ -18,14 +21,41 @@
       case 'maxHpRecovery':
         return 'Max HP Recovery';
 
+      case 'remainingHp':
+        return 'Remaining HP';
+
+      case 'rawSpeed':
+        return 'Speed';
+
       case 'kinship':
         return 'Kinship';
 
       case 'wyvernfell':
         return 'Wyvernfell';
 
+      case 'accuracy':
+        return 'Accuracy';
+
+      case 'priorityOverride':
+        return 'Priority Chance';
+
+      case 'ailmentChance':
+        return 'Ailment Chance';
+
+      case 'ailmentInflictRate':
+        return 'Ailment Inflict Rate';
+
+      case 'blastblightTurns':
+        return 'Blastblight Turns';
+
       case 'debuffExtension':
         return 'Debuff Extension';
+
+      case 'effectChance':
+        if (props.detail.label) {
+          return `${props.detail.label} Chance`;
+        }
+        return 'Effect Chance';
 
       // -- SkillDetailFactor
       case 'damageDone':
@@ -81,7 +111,7 @@
         return props.detail.value;
 
       case 'additive':
-        return `${props.detail.value * 100}%`;
+        return `${formatNumber(props.detail.value * 100, 2)}%`;
 
       default:
         return props.detail.value;
@@ -92,10 +122,19 @@
     switch (props.detail.type) {
       // -- SkillDetailValue
       case 'critRate':
+      case 'evasionRate':
+      case 'ailmentInflictRate':
         return `+${props.detail.value}%`;
 
       case 'maxHpRecovery':
-        return `${props.detail.value * 100}%`;
+      case 'accuracy':
+      case 'priorityOverride':
+      case 'ailmentChance':
+      case 'effectChance':
+        return `${formatNumber(props.detail.value * 100, 2)}%`;
+
+      case 'rawSpeed':
+        return `+${props.detail.value}`;
 
       case 'debuffExtension':
         return `${props.detail.value} turns`;
