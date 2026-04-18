@@ -5422,6 +5422,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    // TODO ailmentChance
     sizes: ['Poison Spike+'],
   },
 
@@ -5438,6 +5439,7 @@
     description: 'Deals non-elemental damage to one enemy. Chance to inflict Poison.',
     target: 'singleEnemy',
     ailments: ['poison'],
+    // TODO ailmentChance
     sizes: ['Poison Spike'],
   },
 
@@ -6676,7 +6678,7 @@
     size: 'S',
     type: 'speed',
     element: 'thunder',
-    description: 'Slightly increases Stamine regeneration.',
+    description: 'Slightly increases Stamina regeneration.',
     details: [{ type: 'staminaRecovery', value: 1 }],
     sizes: ['Stamina Surge (M)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
@@ -6687,7 +6689,7 @@
     size: 'M',
     type: 'speed',
     element: 'thunder',
-    description: 'Increases Stamine regeneration.',
+    description: 'Increases Stamina regeneration.',
     details: [{ type: 'staminaRecovery', value: 2 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (L)', 'Stamina Surge (XL)'],
   },
@@ -6698,7 +6700,7 @@
     size: 'L',
     type: 'speed',
     element: 'thunder',
-    description: 'Greatly increases Stamine regeneration.',
+    description: 'Greatly increases Stamina regeneration.',
     details: [{ type: 'staminaRecovery', value: 4 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (XL)'],
   },
@@ -6709,7 +6711,7 @@
     size: 'XL',
     type: 'speed',
     element: 'thunder',
-    description: 'Significantly increases Stamine regeneration.',
+    description: 'Significantly increases Stamina regeneration.',
     details: [{ type: 'staminaRecovery', value: 6 }],
     sizes: ['Stamina Surge (S)', 'Stamina Surge (M)', 'Stamina Surge (L)'],
   },
