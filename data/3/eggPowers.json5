@@ -4,7 +4,7 @@
     name: 'Battle Thirst',
     region: 'Azuria',
     rank: 'S',
-    details: [
+    variants: [
       {
         name: 'Battle Thirst',
         description: 'Recovers Stamina after winning a Head-to-Head or performing a Double Attack.',
@@ -25,7 +25,7 @@
     name: 'Hardiness',
     region: 'Azuria',
     rank: 'A',
-    details: [
+    variants: [
       {
         name: 'Hardiness',
         description: 'Slightly recovers Stamina after taking damage.',
@@ -46,7 +46,7 @@
     name: 'Pwr Resilience',
     region: 'Azuria',
     rank: 'B',
-    details: [
+    variants: [
       {
         name: 'Pwr Resilience',
         description: 'Slightly reduces Power Type damage taken.',
@@ -68,7 +68,7 @@
     name: 'Unscathed',
     region: 'Canalta Timberland',
     rank: 'S',
-    details: [
+    variants: [
       {
         name: 'Unscathed',
         description: 'Negates damage after winning a Head-to-Head and increases damage dealt to enemies.',
@@ -89,7 +89,7 @@
     name: 'High Morale',
     region: 'Canalta Timberland',
     rank: 'A',
-    details: [
+    variants: [
       {
         name: 'High Morale',
         description: 'Slightly extends the duration of buffs when applied by own skills.',
@@ -110,7 +110,7 @@
     name: 'Spd Resilience',
     region: 'Canalta Timberland',
     rank: 'B',
-    details: [
+    variants: [
       {
         name: 'Spd Resilience',
         description: 'Slightly reduces Speed Type damage taken.',
@@ -132,7 +132,7 @@
     name: 'Resonance',
     region: 'Tarkuan',
     rank: 'S',
-    details: [
+    variants: [
       {
         name: 'Resonance',
         description: 'Increases Kinship Gauge at the start of battle.',
@@ -153,7 +153,7 @@
     name: 'Best Buds',
     region: 'Tarkuan',
     rank: 'A',
-    details: [
+    variants: [
       {
         name: 'Best Buds',
         description: 'Riding Kinship Gauge fills slightly faster.',
@@ -174,7 +174,7 @@
     name: 'Tech Resilience',
     region: 'Tarkuan',
     rank: 'B',
-    details: [
+    variants: [
       {
         name: 'Tech Resilience',
         description: 'Slightly reduces Technical Type damage taken.',
@@ -196,7 +196,7 @@
     name: 'Muster Forces',
     region: 'Serathis',
     rank: 'S',
-    details: [
+    variants: [
       {
         name: 'Muster Forces',
         description: 'Increases Kinship Gauge once when losing a Heart.',
@@ -217,7 +217,7 @@
     name: 'Perseverance',
     region: 'Serathis',
     rank: 'A',
-    details: [
+    variants: [
       {
         name: 'Perseverance',
         description: 'Revives with newly applied buffs once upon losing a Heart.',
@@ -236,7 +236,7 @@
     name: 'EX Resilience',
     region: 'Serathis',
     rank: 'B',
-    details: [
+    variants: [
       {
         name: 'EX Resilience',
         description: 'Slightly reduces No Type damage taken.',

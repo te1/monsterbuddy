@@ -40,7 +40,7 @@
       :headline="headline"
     />
 
-    <UPageBody>
+    <UPageBody class="-mt-3 lg:mt-0">
       <ul class="flex flex-col gap-3">
         <li v-for="(group, key) in groups" :key="key">
           <div

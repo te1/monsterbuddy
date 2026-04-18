@@ -73,6 +73,14 @@
       </template>
     </AppPageHeader>
 
-    <UPageBody> CONTENT </UPageBody>
+    <UPageBody class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
+      <S3EggPowerCard
+        v-for="variant in eggPower.variants"
+        :key="variant.name"
+        :eggPower="eggPower"
+        :variant="variant"
+        class="box flex-1 px-4 py-2"
+      />
+    </UPageBody>
   </div>
 </template>

@@ -13,7 +13,7 @@
         <div class="text-base leading-snug font-semibold" v-text="eggPower.name" />
       </div>
 
-      <div class="line-clamp-2" v-text="eggPower.details[0]?.description" />
+      <div class="line-clamp-2" v-text="eggPower.variants[0]?.description" />
     </div>
   </div>
 </template>

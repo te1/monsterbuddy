@@ -3,6 +3,7 @@
 
   defineProps<{
     eggPower: EggPower;
+    awakened?: boolean;
     big?: boolean;
     contrast?: boolean;
   }>();
@@ -16,6 +17,7 @@
       'size-7 text-sm': !big,
       'bg-accented text-toned': contrast,
       'bg-default text-muted': !contrast,
+      'bg-emerald-300 dark:bg-emerald-900': awakened,
     }"
     v-text="eggPower.rank"
   />

@@ -14,7 +14,7 @@ export const EggPowerRequirementSchema = z.union([
 ]);
 export type EggPowerRequirement = z.infer<typeof EggPowerRequirementSchema>;
 
-export const EggPowerDetailDetailSchema = z.object({
+export const EggPowerDetailSchema = z.object({
   type: z.enum([
     'damageDone',
     'damageTaken',
@@ -29,22 +29,22 @@ export const EggPowerDetailDetailSchema = z.object({
   value: z.number(),
   op: z.enum(['multiplier', 'additive']).optional(),
 });
-export type EggPowerDetailDetail = z.infer<typeof EggPowerDetailDetailSchema>;
+export type EggPowerDetail = z.infer<typeof EggPowerDetailSchema>;
 
-export const EggPowerDetailSchema = z.object({
+export const EggPowerVariantSchema = z.object({
   name: z.string(),
   description: z.string(),
   size: EggPowerSizeSchema,
   requirements: z.array(EggPowerRequirementSchema).optional(),
-  details: z.array(EggPowerDetailDetailSchema).optional(),
+  details: z.array(EggPowerDetailSchema).optional(),
 });
-export type EggPowerDetail = z.infer<typeof EggPowerDetailSchema>;
+export type EggPowerVariant = z.infer<typeof EggPowerVariantSchema>;
 
 export const EggPowerSchema = z.object({
   name: z.string(),
   slug: z.string(),
   region: RegionNameSchema,
   rank: EggPowerRankSchema,
-  details: z.array(EggPowerDetailSchema),
+  variants: z.array(EggPowerVariantSchema),
 });
 export type EggPower = z.infer<typeof EggPowerSchema>;
