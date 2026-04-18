@@ -3838,7 +3838,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill slightly faster.',
-    details: [{ type: 'kinshipGeneration', value: 1.2, op: 'multiplier' }],
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.2, op: 'multiplier' }],
     sizes: ['HtH Master (M)', 'HtH Master (L)', 'HtH Master (XL)'],
   },
 
@@ -3849,7 +3849,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill faster.',
-    details: [{ type: 'kinshipGeneration', value: 1.3, op: 'multiplier' }],
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.3, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (L)', 'HtH Master (XL)'],
   },
 
@@ -3860,7 +3860,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill much faster.',
-    details: [{ type: 'kinshipGeneration', value: 1.4, op: 'multiplier' }],
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.4, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (M)', 'HtH Master (XL)'],
   },
 
@@ -3871,7 +3871,7 @@
     type: 'technical',
     element: 'ice',
     description: 'Winning a Head-to-Head makes the Kinship Gauge fill significantly faster.',
-    details: [{ type: 'kinshipGeneration', value: 1.5, op: 'multiplier' }],
+    details: [{ type: 'kinshipGeneration', condition: 'headToHead', value: 1.5, op: 'multiplier' }],
     sizes: ['HtH Master (S)', 'HtH Master (M)', 'HtH Master (L)'],
   },
 
