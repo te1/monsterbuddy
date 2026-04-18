@@ -51,5 +51,21 @@
         </template>
       </div>
     </div>
+
+    <div v-if="variant.requirements && variant.requirements.length > 0" class="@container">
+      <div class="text-lg font-semibold">Gene Requirements</div>
+
+      <div class="mb-2">
+        This stronger effect will only be available if you have genes that match these requirements.
+      </div>
+
+      <div class="grid gap-y-1 @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
+        <S3EggPowerRequirement
+          v-for="(requirement, index) in variant.requirements"
+          :key="index"
+          :requirement="requirement"
+        />
+      </div>
+    </div>
   </section>
 </template>
