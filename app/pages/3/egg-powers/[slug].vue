@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-  // import S3HabitatSidebar from '~/components/s3/S3HabitatSidebar.vue';
   import { eggPowersBySlug, regionsByName } from '~/services/3/data';
   import { getEggPowerSeo } from '~/services/3/seo';
 
   definePageMeta({
-    // sidebarComponent: S3HabitatSidebar,
     back: {
       show: true,
       fallback: '/3/egg-powers',

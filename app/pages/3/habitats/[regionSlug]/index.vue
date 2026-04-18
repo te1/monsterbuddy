@@ -209,10 +209,8 @@
               :key="eggPower.rank"
               class="flex items-center gap-1.5"
             >
-              <span
-                class="flex size-7 items-center justify-center rounded bg-default text-sm font-semibold text-muted"
-                v-text="eggPower.rank"
-              />
+              <S3EggPowerIcon :eggPower="eggPower" />
+
               <AppNuxtLink
                 :to="`/3/egg-powers/${eggPower.slug}`"
                 prefetchOn="interaction"
