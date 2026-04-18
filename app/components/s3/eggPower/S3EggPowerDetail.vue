@@ -78,6 +78,10 @@
       case 'kinshipPercent':
         return `+${formatNumber(props.detail.value * 100, 2)}%`;
 
+      case 'kinship':
+      case 'extraTurns':
+        return `+${props.detail.value}`;
+
       default:
         return props.detail.value;
     }
