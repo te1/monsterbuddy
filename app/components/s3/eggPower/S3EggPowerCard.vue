@@ -42,16 +42,14 @@
       />
     </div>
 
-    <!--
-    <div v-if="gene.details && gene.details.length > 0" class="@container">
+    <div v-if="variant.details && variant.details.length > 0" class="@container">
       <div class="text-lg font-semibold">Characteristics</div>
 
       <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">
-        <template v-if="gene.details && gene.details.length > 0">
-          <S3SkillDetail v-for="detail in gene.details" :key="detail.type" :detail="detail" />
+        <template v-if="variant.details && variant.details.length > 0">
+          <S3EggPowerDetail v-for="detail in variant.details" :key="detail.type" :detail="detail" />
         </template>
       </div>
     </div>
-    -->
   </section>
 </template>
