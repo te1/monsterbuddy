@@ -1,7 +1,7 @@
 import type { UpdateSpec } from 'dexie';
 import type { MonstieBuildEntity } from '~/services/3/localDb';
 import { MonstieBuild } from '~/services/3/monstieBuilds';
-import { nanoid } from 'nanoid';
+import { customAlphabet } from 'nanoid';
 import { liveQuery } from 'dexie';
 import { db } from '~/services/3/localDb';
 import { useRouter } from 'vue-router';
@@ -89,7 +89,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
       return currentBuild.value;
     }
 
-    const id = nanoid();
+    const id = generateLocalId();
     const now = new Date();
 
     const data = new MonstieBuild(id);
@@ -109,7 +109,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
 
     currentBuild.value = data;
 
-    await router.push(`/3/builder/monstie#${id}`);
+    await router.push(`/3/builder/monstie/edit#${id}`);
 
     return data;
   }
@@ -193,3 +193,10 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
 });
 
 export default useMonstieBuildsStore;
+
+const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; // no _-
+const nanoid = customAlphabet(alphabet, 11);
+
+function generateLocalId(): string {
+  return '_' + nanoid();
+}

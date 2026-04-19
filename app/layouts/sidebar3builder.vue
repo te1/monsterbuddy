@@ -51,7 +51,11 @@
                 <ClientOnly>
                   <div v-if="topRecent.length <= 0">No recent builds</div>
 
-                  <S3BuildMiniListItem v-for="build in topRecent" :key="build.id" :build="build" />
+                  <S3MonstieBuildMiniListItem
+                    v-for="build in topRecent"
+                    :key="build.id"
+                    :build="build"
+                  />
 
                   <NuxtLink
                     v-if="moreRecent > 0"
@@ -77,7 +81,7 @@
                 <ClientOnly>
                   <div v-if="topPinned.length <= 0">No bookmarked builds</div>
 
-                  <S3BuildMiniListItem
+                  <S3MonstieBuildMiniListItem
                     v-for="build in topPinned"
                     :key="build.id"
                     :build="build"
