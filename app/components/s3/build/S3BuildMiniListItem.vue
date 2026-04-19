@@ -26,7 +26,7 @@
       <div class="hidden size-9 xl:block">
         <S3MonsterIcon v-if="build.monstie" :monster="build.monstie" noTooltip size="size-9" />
       </div>
-      <div class="truncate" v-text="build.name" />
+      <div class="truncate" v-text="build.nameWithFallback" />
     </NuxtLink>
 
     <UTooltip

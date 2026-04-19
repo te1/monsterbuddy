@@ -22,6 +22,14 @@
     const component = route.meta.sidebarComponent;
     return component ? toRaw(component) : undefined;
   });
+
+  onMounted(() => {
+    builds.subscribe();
+  });
+
+  onUnmounted(() => {
+    builds.unsubscribe();
+  });
 </script>
 
 <template>
