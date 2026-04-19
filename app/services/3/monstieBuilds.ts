@@ -74,20 +74,21 @@ export class MonstieBuild {
     );
   }
 
-  /*
-  toStableJson(): string {
-    const encoded = z.encode(MonstieBuildSchema, this);
-    const stable = sortKeys(encoded);
+  toStableJson({ ignoreId = false } = {}): string {
+    const stable = sortKeys({ ...this });
+
+    if (ignoreId) {
+      delete stable.id;
+    }
 
     return JSON.stringify(stable);
   }
 
-  async getContentHash(): Promise<string> {
-    const json = this.toStableJson();
+  async getContentHash({ ignoreId = false } = {}): Promise<string> {
+    const json = this.toStableJson({ ignoreId });
 
     return await hash(json);
   }
-  */
 }
 
 /*

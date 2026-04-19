@@ -86,30 +86,40 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
 
   async function newBuild(): Promise<MonstieBuild> {
     if (currentBuild.value?.isEmpty()) {
+      // we have a new empty build already so just reuse it
       return currentBuild.value;
     }
 
     const id = generateLocalId();
     const now = new Date();
 
-    const data = new MonstieBuild(id);
+    let data = new MonstieBuild(id);
+    const dataHash = await data.getContentHash({ ignoreId: true });
 
-    const entity: MonstieBuildEntity = {
-      id,
-      name: data.name,
-      monstieSlug: data.monstieSlug,
-      data,
-      pinned: 0,
-      createdAt: now,
-      updatedAt: now,
-      viewedAt: now,
-    };
+    const entity = await db.monstieBuilds.get({ dataHash });
 
-    await db.monstieBuilds.put(entity);
+    if (entity != null) {
+      // we have a build with the same content already so just reuse it
+      data = MonstieBuild.fromEntity(entity);
+    } else {
+      const entity: MonstieBuildEntity = {
+        id,
+        name: data.name,
+        monstieSlug: data.monstieSlug,
+        data,
+        dataHash,
+        pinned: 0,
+        createdAt: now,
+        updatedAt: now,
+        viewedAt: now,
+      };
+
+      await db.monstieBuilds.put(entity);
+    }
 
     currentBuild.value = data;
 
-    await router.push(`/3/builder/monstie/edit#${id}`);
+    await router.push(`/3/builder/monstie/edit#${data.id}`);
 
     return data;
   }

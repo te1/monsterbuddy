@@ -7,6 +7,7 @@ export type MonstieBuildEntity = {
   name: string | null;
   monstieSlug: string | null;
   data: MonstieBuild;
+  dataHash: string;
   /** boolean can't be indexed so use a number instead */
   pinned: 0 | 1;
   createdAt: Date;
@@ -19,7 +20,7 @@ const db = new Dexie('s3/monstieBuilds') as Dexie & {
 };
 
 db.version(1).stores({
-  monstieBuilds: 'id,pinned,viewedAt', // id is primary key, the rest are indexes
+  monstieBuilds: 'id,dataHash,pinned,viewedAt', // id is primary key, the rest are indexes
 });
 
 export { db };
