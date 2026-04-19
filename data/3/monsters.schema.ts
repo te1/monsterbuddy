@@ -112,12 +112,29 @@ export const MonstieGenesSchema = z.object({
 });
 export type MonstieGenes = z.infer<typeof MonstieGenesSchema>;
 
+export const BingoBonusTypeSchema = z.enum([
+  'crit',
+  'speed',
+  'staminaRecovery',
+  'startingStamina',
+  'wyvernfell',
+]);
+export type BingoBonusType = z.infer<typeof BingoBonusTypeSchema>;
+
+export const BingoBonusSchema = z.object({
+  bingoCount: z.union([z.literal(2), z.literal(3), z.literal(5)]),
+  type: BingoBonusTypeSchema,
+  value: z.number(),
+});
+export type BingoBonus = z.infer<typeof BingoBonusSchema>;
+
 const MonstieDataSchema = z.object({
   attack: AttackTypeSchema,
   ridingActions: z.array(z.string()),
   kinshipSkill: z.string().optional(),
   eggColors: z.array(EggColorSchema).optional(),
   genes: MonstieGenesSchema.optional(),
+  bingoBonuses: z.array(BingoBonusSchema).optional(),
 });
 export type MonstieData = z.infer<typeof MonstieDataSchema>;
 
