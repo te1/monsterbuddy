@@ -1,7 +1,7 @@
 import type { EggPower, Gene, Monster, Region } from './types';
+import type { MonstieBuildEntity } from './localDb';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
 import { genesBySlug } from './genes';
-import type { MonstieBuildEntity } from './localDb';
 
 export class MonstieBuild {
   id: string;
@@ -41,7 +41,7 @@ export class MonstieBuild {
       return `${this.monstie.name} Build`;
     }
 
-    return this.id;
+    return 'New Build';
   }
 
   get monstie(): Monster | undefined {
@@ -61,12 +61,36 @@ export class MonstieBuild {
   get region(): Region | undefined {
     return this.regionSlug ? regionsBySlug.get(this.regionSlug) : undefined;
   }
+
+  isEmpty(): boolean {
+    return (
+      this.name == null &&
+      this.description == null &&
+      this.monstieSlug == null &&
+      this.geneSlugs.length === 0 &&
+      this.eggPowerSlugs.length === 0 &&
+      this.dualElement == null &&
+      this.regionSlug == null
+    );
+  }
+
+  /*
+  toStableJson(): string {
+    const encoded = z.encode(MonstieBuildSchema, this);
+    const stable = sortKeys(encoded);
+
+    return JSON.stringify(stable);
+  }
+
+  async getContentHash(): Promise<string> {
+    const json = this.toStableJson();
+
+    return await hash(json);
+  }
+  */
 }
 
 /*
-import { z } from 'zod';
-import { ElementTypeSchema } from '~~/data/shared.schema';
-
 export const MonstieBuildSchema = z.object({
   id: z.nanoid(),
   name: z.string().nullable(),
@@ -75,24 +99,6 @@ export const MonstieBuildSchema = z.object({
   geneSlugs: z.array(z.string()),
   eggPowerSlugs: z.array(z.string()),
   dualElement: ElementTypeSchema.nullable(),
-  regionSlug: z.string().nullable(), // for stat increases
-  pinned: z.boolean(),
-  createdAt: isoDatetimeToDate,
-  updatedAt: isoDatetimeToDate,
-  hash: z.string().nullable(),
+  regionSlug: z.string().nullable(),
 });
-export type MonstieBuild = z.infer<typeof MonstieBuildSchema>;
-
-function buildToStableJson(build: MonstieBuild): string {
-  const encoded = z.encode(MonstieBuildSchema, build);
-  const stable = sortKeys(encoded);
-
-  return JSON.stringify(stable);
-}
-
-export async function getBuildHash(build: MonstieBuild): Promise<string> {
-  const json = buildToStableJson(build);
-
-  return await hash(json);
-}
 */

@@ -42,7 +42,7 @@
           <UButton
             color="neutral"
             variant="link"
-            label="New Build"
+            label="New build"
             icon="ph:list-plus"
             :ui="{ base: 'px-0 font-normal' }"
             @click="newBuild"
