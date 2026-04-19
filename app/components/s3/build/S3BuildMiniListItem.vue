@@ -1,7 +1,8 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { Monster } from '~/services/3/types';
 
-  withDefaults(
+  const props = withDefaults(
     defineProps<{
       build: MonstieBuild;
       removeable?: boolean;
@@ -14,6 +15,10 @@
   const emit = defineEmits<{
     remove: [];
   }>();
+
+  const monstie = computed(() => {
+    return props.build.monstie ?? ({ slug: 'Unknown', name: 'Unknown' } as Monster);
+  });
 </script>
 
 <template>
@@ -24,7 +29,7 @@
       class="flex max-w-max items-center gap-3 hover:text-default"
     >
       <div class="hidden size-9 xl:block">
-        <S3MonsterIcon v-if="build.monstie" :monster="build.monstie" noTooltip size="size-9" />
+        <S3MonsterIcon :monster="monstie" noTooltip size="size-9" />
       </div>
       <div class="truncate" v-text="build.nameWithFallback" />
     </NuxtLink>
