@@ -14,7 +14,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
 
   // -- getters
   const recentBuilds = computed<MonstieBuild[]>(() => {
-    return recentEntities.value.map((entity) => entity.data);
+    return recentEntities.value.map((entity) => MonstieBuild.fromEntity(entity));
   });
 
   const hasRecentBuilds = computed(() => {
@@ -22,7 +22,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
   });
 
   const pinnedBuilds = computed<MonstieBuild[]>(() => {
-    return pinnedEntities.value.map((entity) => entity.data);
+    return pinnedEntities.value.map((entity) => MonstieBuild.fromEntity(entity));
   });
 
   const hasPinnedBuilds = computed(() => {
@@ -35,10 +35,10 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
 
     if (recentSub == null) {
       recentSub = liveQuery(() =>
-        db.monstieBuilds.orderBy('viewedAt').limit(maxRecentItems)
+        db.monstieBuilds.orderBy('viewedAt').reverse().limit(maxRecentItems).toArray()
       ).subscribe({
-        async next(value) {
-          recentEntities.value = await value.toArray();
+        next(value) {
+          recentEntities.value = value;
         },
         error(err) {
           console.error(`useMonstieBuildsStore recentSub error`, err);
@@ -47,9 +47,9 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
     }
 
     if (pinnedSub == null) {
-      pinnedSub = liveQuery(() => db.monstieBuilds.where('pinned').equals(1)).subscribe({
-        async next(value) {
-          pinnedEntities.value = await value.toArray();
+      pinnedSub = liveQuery(() => db.monstieBuilds.where('pinned').equals(1).toArray()).subscribe({
+        next(value) {
+          pinnedEntities.value = value;
         },
         error(err) {
           console.error(`useMonstieBuildsStore pinnedSub error`, err);
