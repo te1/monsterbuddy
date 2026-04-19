@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     '2/**': { appLayout: 'sidebar2' },
     '3/**': { appLayout: 'sidebar3' },
     '3/genes/**': { appLayout: 'sidebar3genes' },
+    '3/builder/monstie/**': { appLayout: 'sidebar3builder' },
   },
 
   experimental: {

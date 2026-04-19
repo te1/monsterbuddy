@@ -149,6 +149,12 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
           to: '/3/riding-actions',
           active: isActive('/3/riding-actions'),
         },
+        {
+          label: 'Monstie Builder',
+          description: 'Bingo Bonus',
+          to: '/3/builder/monstie',
+          active: isActive('/3/builder/monstie'),
+        },
       ],
     },
   ];
