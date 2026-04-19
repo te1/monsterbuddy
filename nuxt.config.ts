@@ -203,6 +203,7 @@ export default defineNuxtConfig({
           { title: 'Monsters with attack patterns and weaknesses', href: '/3/monsters' },
           { title: 'Monsties with stats', href: '/3/monsties' },
           { title: 'Visual egg guide', href: '/3/eggs' },
+          { title: 'Full list of genes with effects and monstie sources', href: '/3/genes' },
         ],
       },
     ],
