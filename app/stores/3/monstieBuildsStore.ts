@@ -5,20 +5,27 @@ import { customAlphabet } from 'nanoid';
 import { liveQuery } from 'dexie';
 import { db } from '~/services/3/localDb';
 import { useRouter } from 'vue-router';
+import { useMonstieBuildEntity } from '~/composables/3/useMonstieBuild';
+
+type Subscription = { unsubscribe(): void };
 
 const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
   const router = useRouter();
 
+  // -- state
+  const currentBuildId = ref<string | undefined>(undefined);
+  const currentEntity = useMonstieBuildEntity(currentBuildId);
   const recentEntities = ref<MonstieBuildEntity[]>([]);
   const pinnedEntities = ref<MonstieBuildEntity[]>([]);
 
-  let recentSub: { unsubscribe(): void } | null = null;
-  let pinnedSub: { unsubscribe(): void } | null = null;
-
-  // -- state
-  const currentBuild = ref<MonstieBuild | undefined>(undefined);
+  let recentSub: Subscription | null = null;
+  let pinnedSub: Subscription | null = null;
 
   // -- getters
+  const currentBuild = computed<MonstieBuild | undefined>(() => {
+    return currentEntity.value ? MonstieBuild.fromEntity(currentEntity.value) : undefined;
+  });
+
   const recentBuilds = computed<MonstieBuild[]>(() => {
     return recentEntities.value.map((entity) => MonstieBuild.fromEntity(entity));
   });
@@ -77,16 +84,17 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
       return currentBuild.value;
     }
 
-    const data = await getBuild(id);
+    currentBuildId.value = id;
 
-    currentBuild.value = data;
-
-    return data;
+    return currentBuild.value;
   }
 
   async function newBuild(): Promise<MonstieBuild> {
     if (currentBuild.value?.isEmpty()) {
       // we have a new empty build already so just reuse it
+
+      await router.push(`/3/builder/monstie/edit#${currentBuild.value.id}`);
+
       return currentBuild.value;
     }
 
@@ -117,7 +125,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
       await db.monstieBuilds.put(entity);
     }
 
-    currentBuild.value = data;
+    currentBuildId.value = data.id;
 
     await router.push(`/3/builder/monstie/edit#${data.id}`);
 
@@ -132,6 +140,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
       name: build.name,
       monstieSlug: build.monstieSlug,
       data: build,
+      dataHash: await build.getContentHash({ ignoreId: true }),
       updatedAt: now,
       viewedAt: now,
     };
@@ -180,9 +189,10 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
 
   return {
     // -- state
-    currentBuild,
+    // ...
 
     // -- getters
+    currentBuild,
     recentBuilds,
     hasRecentBuilds,
     pinnedBuilds,
