@@ -1,41 +1,53 @@
 <script lang="ts" setup>
-  import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
+  // import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
+  import useMonstieBuildSources from '~/stores/3/monstieBuildSources';
 
-  const builds = useMonstieBuildsStore();
+  // const builds = useMonstieBuildsStore();
 
-  function newBuild() {
-    builds.newBuild();
-  }
-
-  /*
+  const router = useRouter();
   const route = useRoute();
+  const hasSidebar = useHasSidebar();
 
-  const gene = computed(() => {
-    const slug = route.params.slug;
+  const sources = useMonstieBuildSources();
 
-    if (typeof slug !== 'string') {
-      return undefined;
-    }
+  // TODO new build
 
-    return genesBySlug.get(slug);
-  });
+  // function newBuild() {
+  //   builds.newBuild();
+  // }
 
-  const isGenePinned = computed(() => {
-    return gene.value ? history.isGenePinned(gene.value.slug) : false;
-  });
+  // const tabs1 = [{ label: 'Actions', slot: 'actions' }];
 
-  function toggleGenePin() {
-    if (gene.value) {
-      history.togglePinnedGene(gene.value.slug);
-    }
-  }
-  */
+  const tab = ref<'view' | 'filter'>('view');
 
-  const tabs = [{ label: 'Actions', slot: 'actions' }];
+  const tabs = [
+    { label: 'View', slot: 'view', value: 'view' },
+    { label: 'Filter', slot: 'filter', value: 'filter' },
+  ];
+
+  // update tab from query string
+  watch(
+    [() => route.query.filter, hasSidebar],
+    ([filterQuery, hasSidebarNow]) => {
+      if (filterQuery === undefined || !hasSidebarNow) {
+        return; // without sidebar filter triggers a drawer instead
+      }
+
+      tab.value = 'filter';
+
+      const { filter: _filter, ...query } = route.query;
+      router.replace({
+        path: route.path,
+        query,
+      });
+    },
+    { immediate: true }
+  );
 </script>
 
 <template>
-  <UTabs color="neutral" variant="link" :items="tabs">
+  <!--
+  <UTabs color="neutral" variant="link" :items="tabs1">
     <template #actions>
       <div class="flex flex-col gap-0">
         <ClientOnly>
@@ -48,20 +60,22 @@
             @click="newBuild"
           />
 
-          <!--
-          <AppPinToggle
-            :modelValue="isGenePinned"
-            :disabled="!gene"
-            subject="gene"
-            @update:modelValue="toggleGenePin"
-          />
-          -->
-
           <template #fallback>
             <USkeleton class="my-1 h-6 w-[80%]" />
           </template>
         </ClientOnly>
       </div>
+    </template>
+  </UTabs>
+  -->
+
+  <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
+    <template #view>
+      <S3MonstieBuildViewOptions :sources="sources" />
+    </template>
+
+    <template #filter>
+      <S3MonstieBuildFilter :sources="sources" />
     </template>
   </UTabs>
 </template>

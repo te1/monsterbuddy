@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-  import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
+  import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
 
   const router = useRouter();
-  const builds = useMonstieBuildsStore();
+  const builds = useMonstieBuildFilter();
   const build = computed(() => builds.currentBuild);
 
   function newBuild() {

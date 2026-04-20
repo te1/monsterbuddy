@@ -1,17 +1,17 @@
 <script lang="ts" setup>
   import mhst3Egg from '~/assets/3/monsterbuddy.avif';
   import { take } from 'es-toolkit/array';
-  import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
+  import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
 
   const route = useRoute();
-  const builds = useMonstieBuildsStore();
+  const history = useMonstieBuildHistoryStore();
 
   const maxItems = 12;
-  const topRecent = computed(() => take(builds.recentBuilds, maxItems));
-  const topPinned = computed(() => take(builds.pinnedBuilds, maxItems));
+  const topRecent = computed(() => take(history.recentBuilds, maxItems));
+  const topPinned = computed(() => take(history.pinnedBuilds, maxItems));
 
-  const moreRecent = computed(() => Math.max(0, builds.recentBuilds.length - maxItems));
-  const morePinned = computed(() => Math.max(0, builds.pinnedBuilds.length - maxItems));
+  const moreRecent = computed(() => Math.max(0, history.recentBuilds.length - maxItems));
+  const morePinned = computed(() => Math.max(0, history.pinnedBuilds.length - maxItems));
 
   const tabs = [
     { label: 'Recent', slot: 'recent' },
@@ -24,11 +24,11 @@
   });
 
   onMounted(() => {
-    builds.subscribe();
+    history.subscribe();
   });
 
   onUnmounted(() => {
-    builds.unsubscribe();
+    history.unsubscribe();
   });
 </script>
 
@@ -86,7 +86,7 @@
                     :key="build.id"
                     :build="build"
                     removeable
-                    @remove="builds.togglePinnedBuild(build.id)"
+                    @remove="history.togglePinnedBuild(build.id)"
                   />
 
                   <NuxtLink
