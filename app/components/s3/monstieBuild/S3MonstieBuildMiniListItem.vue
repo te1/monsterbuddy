@@ -24,7 +24,7 @@
 <template>
   <div class="group relative">
     <NuxtLink
-      :to="`/3/builder/monstie/edit#${build.id}`"
+      :to="`/3/builds/monstie/${build.id}`"
       prefetchOn="interaction"
       class="flex max-w-max items-center gap-3 hover:text-default"
     >

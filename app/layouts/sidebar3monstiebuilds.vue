@@ -59,7 +59,7 @@
 
                   <NuxtLink
                     v-if="moreRecent > 0"
-                    to="/3/builder/monstie#recent"
+                    to="/3/builds/monstie?source=recent"
                     prefetchOn="interaction"
                     class="ml-0 max-w-max hover:text-default xl:ml-12"
                   >
@@ -91,7 +91,7 @@
 
                   <NuxtLink
                     v-if="morePinned > 0"
-                    to="/3/builder/monstie#pinned"
+                    to="/3/builds/monstie?source=pinned"
                     prefetchOn="interaction"
                     class="ml-0 max-w-max hover:text-default xl:ml-12"
                   >

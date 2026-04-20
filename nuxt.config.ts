@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     '2/**': { appLayout: 'sidebar2' },
     '3/**': { appLayout: 'sidebar3' },
     '3/genes/**': { appLayout: 'sidebar3genes' },
-    '3/builder/monstie/**': { appLayout: 'sidebar3builder' },
+    '3/builds/monstie/**': { appLayout: 'sidebar3monstiebuilds' },
   },
 
   experimental: {
@@ -156,7 +156,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    exclude: ['/404', '/1/**', '/3/builder/monstie/edit'], // TODO MHST1
+    exclude: ['/404', '/1/**'], // TODO MHST1
     zeroRuntime: process.env.NODE_ENV !== 'development',
     discoverImages: false,
     discoverVideos: false,

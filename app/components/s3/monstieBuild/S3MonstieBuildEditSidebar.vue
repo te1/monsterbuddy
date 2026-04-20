@@ -22,7 +22,7 @@
 
     builds.removeBuild(build.value.id);
 
-    router.push('/3/builder/monstie');
+    router.push('/3/builds/monstie');
   }
 
   const tabs = [{ label: 'Actions', slot: 'actions' }];
@@ -65,7 +65,7 @@
             variant="link"
             label="View your builds"
             icon="ph:user-list"
-            to="/3/builder/monstie"
+            to="/3/builds/monstie"
             :ui="{ base: 'px-0 font-normal' }"
           />
 

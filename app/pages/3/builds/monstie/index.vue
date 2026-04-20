@@ -7,7 +7,7 @@
   });
 
   useSeoMeta({
-    title: `Monstie Builder For ${gameTypeToFullLabel('mhst3')}`,
+    title: `Monstie Builds For ${gameTypeToFullLabel('mhst3')}`,
     description:
       'Use the Rite of Channeling to pick your genes, unlock bingo bonuses and build your perfect monstie',
   });
@@ -18,7 +18,7 @@
       itemListElement: [
         //
         { name: gameTypeToShortLabel('mhst3'), item: '/3' },
-        { name: 'Monstie Builder' },
+        { name: 'Monstie Builds' },
       ],
     }),
   ]);
@@ -26,7 +26,7 @@
   defineOgImage(
     'Title',
     {
-      title: 'Monstie Builder',
+      title: 'Monstie Builds',
       description: headline,
       lines: ['Genes', 'Bingo Bonus', 'Egg Powers'],
       game: 'mhst3',
@@ -40,7 +40,7 @@
 <template>
   <div>
     <AppPageHeader
-      title="Monstie Builder"
+      title="Monstie Builds"
       description="Use the Rite of Channeling to pick your genes, unlock bingo bonuses and build your perfect monstie"
       :headline="headline"
     />
