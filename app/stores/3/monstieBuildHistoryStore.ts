@@ -8,8 +8,13 @@ type Subscription = { unsubscribe(): void };
 const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => {
   // -- state
   const allEntities = ref<MonstieBuildEntity[]>([]);
+  const allLoaded = ref(false);
+
   const recentEntities = ref<MonstieBuildEntity[]>([]);
+  const recentLoaded = ref(false);
+
   const pinnedEntities = ref<MonstieBuildEntity[]>([]);
+  const pinnedLoaded = ref(false);
 
   let allSub: Subscription | null = null;
   let recentSub: Subscription | null = null;
@@ -42,6 +47,7 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
       allSub = liveQuery(() => db.monstieBuilds.toArray()).subscribe({
         next(value) {
           allEntities.value = value;
+          allLoaded.value = true;
         },
         error(err) {
           console.error(`useMonstieBuildHistoryStore allSub error`, err);
@@ -57,6 +63,7 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
       ).subscribe({
         next(value) {
           recentEntities.value = value;
+          recentLoaded.value = true;
         },
         error(err) {
           console.error(`useMonstieBuildHistoryStore recentSub error`, err);
@@ -68,6 +75,7 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
       pinnedSub = liveQuery(() => db.monstieBuilds.where('pinned').equals(1).toArray()).subscribe({
         next(value) {
           pinnedEntities.value = value;
+          pinnedLoaded.value = true;
         },
         error(err) {
           console.error(`useMonstieBuildHistoryStore pinnedSub error`, err);
@@ -117,7 +125,9 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
 
   return {
     // -- state
-    // ...
+    allLoaded,
+    recentLoaded,
+    pinnedLoaded,
 
     // -- getters
     allBuilds,

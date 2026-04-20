@@ -60,6 +60,21 @@ const useMonstieBuildSources = defineStore('s3/monstieBuildSources', {
 
       return this.all[nextIndex] ?? 'default';
     },
+
+    loaded(): boolean {
+      const history = useMonstieBuildHistoryStore();
+
+      switch (this.current) {
+        case 'default':
+          return history.allLoaded;
+
+        case 'recent':
+          return history.recentLoaded;
+
+        case 'pinned':
+          return history.pinnedLoaded;
+      }
+    },
   },
 
   actions: {

@@ -32,7 +32,6 @@ const initial = {
 
 const useMonstieBuildFilter = defineStore('s3/monstieBuildFilter', () => {
   // -- state
-  const loaded = ref(false);
   const builds = skipHydrate(shallowRef<MonstieBuild[]>([]));
 
   const sortKey = ref(initial.sortKey);
@@ -112,7 +111,7 @@ const useMonstieBuildFilter = defineStore('s3/monstieBuildFilter', () => {
   const resultCount = computed(() => sortedBuilds.value.length);
 
   const isEmpty = computed(
-    () => (hasActiveFilters.value || nameFilter.value != null) && sortedBuilds.value.length <= 0
+    () => (hasActiveFilters.value || !!nameFilter.value) && sortedBuilds.value.length <= 0
   );
 
   const isGrouped = computed(() =>
@@ -191,7 +190,6 @@ const useMonstieBuildFilter = defineStore('s3/monstieBuildFilter', () => {
   ) {
     builds.value = nextBuilds;
     preserveSourceOrder.value = options.preserveSourceOrder ?? false;
-    loaded.value = true;
   }
 
   function setSort(nextSortKey: SortKey, nextSortOrder: SortOrder) {
@@ -218,7 +216,6 @@ const useMonstieBuildFilter = defineStore('s3/monstieBuildFilter', () => {
 
   return {
     // -- state
-    loaded,
     sortKey,
     sortOrder,
     preserveSourceOrder,

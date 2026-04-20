@@ -52,6 +52,8 @@
 
   const showActiveFilters = computed(() => filter.hasActiveSort || filter.hasActiveFilters);
 
+  const noBuilds = computed(() => !filter.isEmpty && filter.sortedBuilds.length <= 0);
+
   const sourceItems = computed(() => {
     switch (sources.current) {
       case 'recent':
@@ -283,16 +285,17 @@
 
           <S3MonstieBuildNoResults v-if="filter.isEmpty">No builds found</S3MonstieBuildNoResults>
 
-          <div
-            v-if="!filter.loaded && !filter.isEmpty && filter.sortedBuilds.length <= 0"
-            class="grid gap-3 md:grid-cols-2"
-          >
+          <S3MonstieBuildNoBuilds v-if="sources.loaded && noBuilds">
+            No builds created
+          </S3MonstieBuildNoBuilds>
+
+          <div v-if="!sources.loaded && noBuilds" class="grid gap-3 md:grid-cols-2">
             <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
-              <USkeleton class="m-1.5 size-14 shrink-0 rounded-full" />
+              <USkeleton class="m-1.5 size-14 shrink-0 animate-none rounded-full" />
 
               <div class="flex flex-col gap-1">
-                <USkeleton class="h-4 w-[25ch]" />
-                <USkeleton class="h-4 w-[25ch]" />
+                <USkeleton class="h-4 w-[25ch] animate-none" />
+                <USkeleton class="h-4 w-[25ch] animate-none" />
               </div>
             </div>
           </div>
@@ -300,11 +303,11 @@
           <template #fallback>
             <div class="grid gap-3 md:grid-cols-2">
               <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
-                <USkeleton class="m-1.5 size-14 shrink-0 rounded-full" />
+                <USkeleton class="m-1.5 size-14 shrink-0 animate-none rounded-full" />
 
                 <div class="flex flex-col gap-1">
-                  <USkeleton class="h-4 w-[25ch]" />
-                  <USkeleton class="h-4 w-[25ch]" />
+                  <USkeleton class="h-4 w-[25ch] animate-none" />
+                  <USkeleton class="h-4 w-[25ch] animate-none" />
                 </div>
               </div>
             </div>
