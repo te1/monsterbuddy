@@ -4,6 +4,7 @@
   import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildSources from '~/stores/3/monstieBuildSources';
+  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildSidebar,
@@ -44,6 +45,7 @@
   const history = useMonstieBuildHistoryStore();
   const filter = useMonstieBuildFilter();
   const sources = useMonstieBuildSources();
+  const buildStore = useMonstieBuildStore();
 
   const oldSortKey = ref(filter.sortKey);
   const oldSortOrder = ref(filter.sortOrder);
@@ -256,7 +258,9 @@
                 v-if="filter.isGrouped"
                 class="sticky top-(--ui-header-height) z-10 -mx-1 flex items-center bg-elevated/90 p-1 backdrop-blur dark:bg-muted/90"
               >
-                <UIcon name="ph:hash" class="w-6 text-dimmed" />
+                <UIcon v-if="filter.sortKey === 'monstie'" name="ph:dna" class="w-6 text-muted" />
+
+                <UIcon v-else name="ph:hash" class="w-6 text-dimmed" />
 
                 <div class="font-semibold" v-text="key" />
               </div>
@@ -280,7 +284,7 @@
           <S3MonstieBuildNoResults v-if="filter.isEmpty">No builds found</S3MonstieBuildNoResults>
 
           <div
-            v-if="!filter.isEmpty && filter.sortedBuilds.length <= 0"
+            v-if="!filter.loaded && !filter.isEmpty && filter.sortedBuilds.length <= 0"
             class="grid gap-3 md:grid-cols-2"
           >
             <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
@@ -367,8 +371,7 @@
       </LazyUDrawer>
 
       <AppFabPanel>
-        <!-- TODO new build -->
-        <!-- <AppFab tooltip="New build" icon="ph:plus" @click="builds.newBuild" /> -->
+        <AppFab tooltip="New build" icon="ph:plus" @click="buildStore.newBuild" />
 
         <AppFab
           v-if="fabSourceVisible"

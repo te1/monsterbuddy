@@ -20,6 +20,7 @@
         <div class="text-base leading-snug font-semibold" v-text="build.nameWithFallback" />
       </div>
 
+      <!-- TODO monstie name (+genus?), bingo count -->
       <div v-if="build.description" class="line-clamp-2" v-text="build.description" />
     </div>
   </div>

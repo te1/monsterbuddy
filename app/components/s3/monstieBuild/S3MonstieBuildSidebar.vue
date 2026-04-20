@@ -1,22 +1,19 @@
 <script lang="ts" setup>
-  // import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
   import useMonstieBuildSources from '~/stores/3/monstieBuildSources';
-
-  // const builds = useMonstieBuildsStore();
+  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();
 
   const sources = useMonstieBuildSources();
+  const buildStore = useMonstieBuildStore();
 
-  // TODO new build
+  function newBuild() {
+    buildStore.newBuild();
+  }
 
-  // function newBuild() {
-  //   builds.newBuild();
-  // }
-
-  // const tabs1 = [{ label: 'Actions', slot: 'actions' }];
+  const tabsAction = [{ label: 'Actions', slot: 'actions' }];
 
   const tab = ref<'view' | 'filter'>('view');
 
@@ -46,8 +43,7 @@
 </script>
 
 <template>
-  <!--
-  <UTabs color="neutral" variant="link" :items="tabs1">
+  <UTabs color="neutral" variant="link" :items="tabsAction">
     <template #actions>
       <div class="flex flex-col gap-0">
         <ClientOnly>
@@ -67,7 +63,6 @@
       </div>
     </template>
   </UTabs>
-  -->
 
   <UTabs v-model="tab" color="neutral" variant="link" :items="tabs">
     <template #view>
