@@ -221,56 +221,33 @@
       title="Monstie Builds"
       description="Use the Rite of Channeling to pick your genes, unlock bingo bonuses and build your perfect monstie"
       :headline="headline"
+      class="hidden lg:block"
     />
 
-    <UPageBody class="flex flex-col gap-3">
-      <section class="mt-1">
-        <ProseH3>Recommended Reading / Watching</ProseH3>
-
-        <ProseUl>
-          <ProseLi>
-            <AppLink
-              href="https://www.youtube.com/watch?v=txLzHs-ajEg"
-              text="Advanced Monstie Guide"
-            />
-            on YouTube
-          </ProseLi>
-
-          <ProseLi>
-            <AppLink
-              href="https://lescarnetsdelawycademie.fr/building-the-perfect-monstie"
-              text="Building the perfect Monstie"
-            />
-            by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
-          </ProseLi>
-        </ProseUl>
-      </section>
-
-      <div
-        v-if="showActiveFilters"
-        class="sticky top-[calc(var(--ui-header-height)+var(--spacing))] z-20 mt-1 mb-2 lg:mb-3"
-      >
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <AppFilterPill
-            v-if="filter.hasActiveSort"
-            :caption="filter.activeSort?.caption ?? ''"
-            filterTarget="/3/builds/monstie?filter"
-            :sortOrder="filter.activeSort?.order"
-          />
-
-          <AppFilterPill
-            v-for="filterItem in filter.activeFilters"
-            :key="filterItem.name"
-            :caption="filterItem.value"
-            filterTarget="/3/builds/monstie?filter"
-            showRemove
-            @remove="filter[filterItem.name] = undefined"
-          />
-        </div>
-      </div>
-
+    <UPageBody :class="{ '-mt-3 lg:mt-0': filter.isGrouped || showActiveFilters }">
       <section>
-        <ProseH3>Your Builds</ProseH3>
+        <div
+          v-if="showActiveFilters"
+          class="sticky top-[calc(var(--ui-header-height)+var(--spacing))] z-20 mt-1 mb-2 lg:mb-3"
+        >
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            <AppFilterPill
+              v-if="filter.hasActiveSort"
+              :caption="filter.activeSort?.caption ?? ''"
+              filterTarget="/3/builds/monstie?filter"
+              :sortOrder="filter.activeSort?.order"
+            />
+
+            <AppFilterPill
+              v-for="filterItem in filter.activeFilters"
+              :key="filterItem.name"
+              :caption="filterItem.value"
+              filterTarget="/3/builds/monstie?filter"
+              showRemove
+              @remove="filter[filterItem.name] = undefined"
+            />
+          </div>
+        </div>
 
         <ClientOnly>
           <ul class="flex flex-col gap-3">
@@ -312,6 +289,41 @@
             </ul>
           </template>
         </ClientOnly>
+      </section>
+
+      <section class="mt-6">
+        <ProseH3>Recommended Reading / Watching</ProseH3>
+
+        <ProseUl>
+          <ProseLi>
+            <AppLink
+              href="https://www.youtube.com/watch?v=txLzHs-ajEg"
+              text="Advanced Monstie Guide"
+            />
+            on YouTube
+          </ProseLi>
+
+          <ProseLi>
+            <AppLink
+              href="https://lescarnetsdelawycademie.fr/building-the-perfect-monstie"
+              text="Building the perfect Monstie"
+            />
+            by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
+          </ProseLi>
+
+          <ProseLi>
+            <AppLink href="https://lescarnetsdelawycademie.fr/wyvernfell" text="Wyvernfell" />
+            by <AppLink href="https://www.reddit.com/user/Masuku68" text="Masuku68" />
+          </ProseLi>
+
+          <ProseLi>
+            <AppLink
+              href="https://www.reddit.com/r/MonsterHunterStories/comments/1sobnlk/guideresource_a_basic_stamina_guide_for_mhs3"
+              text="Stamina Guide"
+            />
+            by <AppLink href="https://www.reddit.com/user/TheMobDylan" text="TheMobDylan" />
+          </ProseLi>
+        </ProseUl>
       </section>
     </UPageBody>
 
