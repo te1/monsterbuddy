@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <div class="@container flex h-[74px] items-center gap-1">
+  <div class="flex h-[74px] items-center gap-1">
     <div class="m-1.5 size-14 shrink-0">
       <S3MonsterIcon :monster="monstie" noTooltip size="size-14" />
     </div>

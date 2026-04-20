@@ -279,14 +279,31 @@
 
           <S3MonstieBuildNoResults v-if="filter.isEmpty">No builds found</S3MonstieBuildNoResults>
 
+          <div
+            v-if="!filter.isEmpty && filter.sortedBuilds.length <= 0"
+            class="grid gap-3 md:grid-cols-2"
+          >
+            <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
+              <USkeleton class="m-1.5 size-14 shrink-0 rounded-full" />
+
+              <div class="flex flex-col gap-1">
+                <USkeleton class="h-4 w-[25ch]" />
+                <USkeleton class="h-4 w-[25ch]" />
+              </div>
+            </div>
+          </div>
+
           <template #fallback>
-            <!-- TODO better placeholder -->
-            <ul class="flex flex-col gap-2 text-muted">
-              <li v-for="i in 7" :key="i" class="flex items-center gap-3">
-                <USkeleton class="h-9 w-9 rounded-full" />
-                <USkeleton class="my-1 h-4 w-[calc(80%-3rem)]" />
-              </li>
-            </ul>
+            <div class="grid gap-3 md:grid-cols-2">
+              <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
+                <USkeleton class="m-1.5 size-14 shrink-0 rounded-full" />
+
+                <div class="flex flex-col gap-1">
+                  <USkeleton class="h-4 w-[25ch]" />
+                  <USkeleton class="h-4 w-[25ch]" />
+                </div>
+              </div>
+            </div>
           </template>
         </ClientOnly>
       </section>

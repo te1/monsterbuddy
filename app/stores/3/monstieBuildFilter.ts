@@ -110,7 +110,9 @@ const useMonstieBuildFilter = defineStore('s3/monstieBuildFilter', () => {
 
   const resultCount = computed(() => sortedBuilds.value.length);
 
-  const isEmpty = computed(() => sortedBuilds.value.length <= 0);
+  const isEmpty = computed(
+    () => (hasActiveFilters.value || nameFilter.value != null) && sortedBuilds.value.length <= 0
+  );
 
   const isGrouped = computed(() =>
     ['monstie', 'monstieElement', 'monstieAttackType'].includes(sortKey.value)
