@@ -26,6 +26,10 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
     return currentEntity.value ? MonstieBuild.fromEntity(currentEntity.value) : undefined;
   });
 
+  const isCurrentBuildPinned = computed<boolean>(() => {
+    return currentEntity.value?.pinned === 1;
+  });
+
   const recentBuilds = computed<MonstieBuild[]>(() => {
     return recentEntities.value.map((entity) => MonstieBuild.fromEntity(entity));
   });
@@ -207,6 +211,7 @@ const useMonstieBuildsStore = defineStore('s3/monstieBuilds', () => {
     removeBuild,
     getBuild,
     addRecentBuild,
+    isCurrentBuildPinned,
     isBuildPinned,
     togglePinnedBuild,
   };

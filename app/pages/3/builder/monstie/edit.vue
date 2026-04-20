@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-  import S3MonstieBuildSidebar from '~/components/s3/monstieBuild/S3MonstieBuildSidebar.vue';
-  import { useMonstieBuild } from '~/composables/3/useMonstieBuild';
+  import S3MonstieBuildEditSidebar from '~/components/s3/monstieBuild/S3MonstieBuildEditSidebar.vue';
   import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
 
   definePageMeta({
-    sidebarComponent: S3MonstieBuildSidebar,
+    sidebarComponent: S3MonstieBuildEditSidebar,
     robots: {
       index: false,
       follow: true,
@@ -39,7 +38,6 @@
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
 
-  const router = useRouter();
   const route = useRoute();
   const builds = useMonstieBuildsStore();
 
@@ -48,7 +46,7 @@
     return hash ? hash.replace(/^#/, '') : undefined;
   });
 
-  const currentBuild = useMonstieBuild(currentBuildId);
+  const build = computed(() => builds.currentBuild);
 
   function newBuild() {
     builds.newBuild();
@@ -56,11 +54,7 @@
 
   onMounted(async () => {
     if (currentBuildId.value) {
-      const build = await builds.setCurrentBuild(currentBuildId.value);
-
-      if (build == null) {
-        router.push('/3/builder/monstie');
-      }
+      await builds.setCurrentBuild(currentBuildId.value);
     }
   });
 </script>
@@ -76,8 +70,8 @@
     <UPageBody class="flex flex-col gap-3">
       <ClientOnly>
         <div v-if="currentBuildId" class="bg-red-500 font-semibold">
-          <div v-if="currentBuild">
-            {{ currentBuild.nameWithFallback }}
+          <div v-if="build">
+            {{ build.nameWithFallback }}
           </div>
 
           <div v-else>
