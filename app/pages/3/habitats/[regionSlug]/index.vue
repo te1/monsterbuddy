@@ -3,7 +3,7 @@
   import { eggPowersByName, monstersByName, regionsBySlug } from '~/services/3/data';
   import { getRegionSeo } from '~/services/3/seo';
   import { statsTypeToText } from '~/services/3/presentation';
-  import useHabitatDisplays from '~/stores/3/habitatStore';
+  import useHabitatDisplays from '~/stores/3/habitatDisplay';
 
   definePageMeta({
     sidebarComponent: S3HabitatSidebar,
