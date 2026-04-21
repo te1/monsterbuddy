@@ -286,11 +286,11 @@
           <S3MonstieBuildNoResults v-if="filter.isEmpty">No builds found</S3MonstieBuildNoResults>
 
           <S3MonstieBuildNoBuilds v-if="sources.loaded && noBuilds">
-            No builds created
+            You haven't created any builds yet
           </S3MonstieBuildNoBuilds>
 
           <div v-if="!sources.loaded && noBuilds" class="grid gap-3 md:grid-cols-2">
-            <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
+            <div v-for="i in 6" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
               <USkeleton class="m-1.5 size-14 shrink-0 animate-none rounded-full" />
 
               <div class="flex flex-col gap-1">
@@ -302,7 +302,7 @@
 
           <template #fallback>
             <div class="grid gap-3 md:grid-cols-2">
-              <div v-for="i in 8" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
+              <div v-for="i in 6" :key="i" class="box flex h-[74px] items-center gap-1 px-1">
                 <USkeleton class="m-1.5 size-14 shrink-0 animate-none rounded-full" />
 
                 <div class="flex flex-col gap-1">

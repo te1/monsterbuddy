@@ -5,12 +5,12 @@
 </script>
 
 <template>
-  <div class="box flex flex-col items-center gap-6 py-6">
-    <span class="text-2xl font-medium">
+  <div class="box flex flex-col items-center justify-center gap-6 px-3 py-6">
+    <span class="text-center text-2xl font-medium">
       <slot>No results found</slot>
     </span>
 
-    <UIcon class="h-16 w-16 text-dimmed" name="ph:smiley-sad-light" />
+    <UIcon class="h-16 w-16 text-dimmed" name="ph:smiley-sad-thin" />
 
     <!-- TODO increase contrast -->
     <UButton

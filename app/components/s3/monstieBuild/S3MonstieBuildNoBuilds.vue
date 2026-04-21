@@ -1,26 +1,30 @@
 <script lang="ts" setup>
-  import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
+  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
-  const filter = useMonstieBuildFilter();
+  const buildStore = useMonstieBuildStore();
+
+  function newBuild() {
+    buildStore.newBuild();
+  }
 </script>
 
 <template>
-  <div class="box flex flex-col items-center gap-6 py-6">
-    <span class="text-2xl font-medium">
-      <slot>No results found</slot>
+  <div class="box flex min-h-[246px] flex-col items-center justify-center gap-6 px-3 py-6">
+    <span class="text-center text-2xl font-medium">
+      <slot>No builds created</slot>
     </span>
 
-    <UIcon class="h-16 w-16 text-dimmed" name="ph:smiley-sad-light" />
+    <UIcon class="h-16 w-16 text-dimmed" name="ph:file-dashed-thin" />
 
     <!-- TODO increase contrast -->
     <UButton
       color="neutral"
       variant="soft"
       class="w-32"
-      trailingIcon="ph:arrow-counter-clockwise"
-      label="Reset filter"
+      trailingIcon="ph:list-plus"
+      label="New build"
       :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
-      @click="filter.resetFilter"
+      @click="newBuild"
     />
   </div>
 </template>
