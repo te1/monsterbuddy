@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-  import S3MonstieBuildEditSidebar from '~/components/s3/monstieBuild/S3MonstieBuildEditSidebar.vue';
-  import useMonstieBuildsStore from '~/stores/3/monstieBuildsStore';
+  import S3MonstieBuildDetailsSidebar from '~/components/s3/monstieBuild/S3MonstieBuildDetailsSidebar.vue';
+  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
   definePageMeta({
-    sidebarComponent: S3MonstieBuildEditSidebar,
+    sidebarComponent: S3MonstieBuildDetailsSidebar,
     robots: {
       index: false,
       follow: true,
@@ -39,22 +39,22 @@
   );
 
   const route = useRoute();
-  const builds = useMonstieBuildsStore();
+  const buildStore = useMonstieBuildStore();
 
   const currentBuildId = computed(() => {
     const hash = route.hash.trim();
     return hash ? hash.replace(/^#/, '') : undefined;
   });
 
-  const build = computed(() => builds.currentBuild);
+  const build = computed(() => buildStore.build);
 
   function newBuild() {
-    builds.newBuild();
+    buildStore.newBuild();
   }
 
   onMounted(async () => {
     if (currentBuildId.value) {
-      await builds.setCurrentBuild(currentBuildId.value);
+      await buildStore.setBuild(currentBuildId.value);
     }
   });
 </script>

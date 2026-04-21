@@ -1,17 +1,26 @@
 <script lang="ts" setup>
-  import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
+  import { computedAsync } from '@vueuse/core';
+  import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
+  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
   const router = useRouter();
-  const builds = useMonstieBuildFilter();
-  const build = computed(() => builds.currentBuild);
+  const history = useMonstieBuildHistoryStore();
+  const buildStore = useMonstieBuildStore();
+
+  // TODO when reloading the page (or first direct access) build is not updated (isPinned is false, delete is disabled, ...)
+  const build = computed(() => buildStore.build);
+
+  const isPinned = computedAsync(async () => {
+    return build.value ? await history.isBuildPinned(build.value.id) : false;
+  }, false);
 
   function newBuild() {
-    builds.newBuild();
+    buildStore.newBuild();
   }
 
   function togglePin() {
     if (build.value) {
-      builds.togglePinnedBuild(build.value.id);
+      history.togglePinnedBuild(build.value.id);
     }
   }
 
@@ -20,7 +29,7 @@
       return;
     }
 
-    builds.removeBuild(build.value.id);
+    buildStore.removeBuild(build.value.id);
 
     router.push('/3/builds/monstie');
   }
@@ -34,7 +43,7 @@
       <div class="flex flex-col gap-0">
         <ClientOnly>
           <AppPinToggle
-            :modelValue="builds.isCurrentBuildPinned"
+            :modelValue="isPinned"
             :disabled="!build"
             subject="build"
             @update:modelValue="togglePin"
@@ -63,8 +72,8 @@
           <UButton
             color="neutral"
             variant="link"
-            label="View your builds"
-            icon="ph:user-list"
+            label="All builds"
+            icon="ph:list-magnifying-glass"
             to="/3/builds/monstie"
             :ui="{ base: 'px-0 font-normal' }"
           />
