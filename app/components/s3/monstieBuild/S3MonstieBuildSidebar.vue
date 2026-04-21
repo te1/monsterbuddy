@@ -46,20 +46,14 @@
   <UTabs color="neutral" variant="link" :items="tabsAction">
     <template #actions>
       <div class="flex flex-col gap-0">
-        <ClientOnly>
-          <UButton
-            color="neutral"
-            variant="link"
-            label="New build"
-            icon="ph:list-plus"
-            :ui="{ base: 'px-0 font-normal' }"
-            @click="newBuild"
-          />
-
-          <template #fallback>
-            <USkeleton class="my-1 h-6 w-[80%]" />
-          </template>
-        </ClientOnly>
+        <UButton
+          color="neutral"
+          variant="link"
+          label="New build"
+          icon="ph:list-plus"
+          :ui="{ base: 'px-0 font-normal' }"
+          @click="newBuild"
+        />
       </div>
     </template>
   </UTabs>

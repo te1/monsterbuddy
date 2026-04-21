@@ -78,7 +78,7 @@
           </template>
 
           <template #fallback>
-            <USkeleton v-for="i in 3" :key="i" class="my-1 h-6 w-[80%]" />
+            <USkeleton v-for="i in monster?.hatchable ? 3 : 1" :key="i" class="my-1 h-6 w-[80%]" />
           </template>
         </ClientOnly>
       </div>
