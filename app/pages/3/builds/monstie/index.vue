@@ -375,7 +375,7 @@
       </LazyUDrawer>
 
       <AppFabPanel>
-        <AppFab tooltip="New build" icon="ph:plus" @click="buildStore.newBuild" />
+        <AppFab tooltip="New build" icon="ph:plus" @click="buildStore.goToNewBuild" />
 
         <AppFab
           v-if="fabSourceVisible"

@@ -19,23 +19,13 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
   });
 
   // -- actions
-  async function setBuild(id: string): Promise<MonstieBuild | undefined> {
-    if (build.value?.id === id) {
-      return build.value;
-    }
-
-    buildId.value = id;
-
-    return build.value;
-  }
-
-  async function newBuild(): Promise<MonstieBuild> {
+  async function goToNewBuild(): Promise<void> {
     if (build.value?.isEmpty()) {
       // we have a new empty build already so just reuse it
 
       await router.push(`/3/builds/monstie/${build.value.id}`);
 
-      return build.value;
+      return;
     }
 
     const id = generateLocalId();
@@ -68,8 +58,6 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
     buildId.value = data.id;
 
     await router.push(`/3/builds/monstie/${data.id}`);
-
-    return data;
   }
 
   async function saveBuild(build: MonstieBuild): Promise<void> {
@@ -94,14 +82,13 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
 
   return {
     // -- state
-    // ...
+    buildId,
 
     // -- getters
     build,
 
     // -- actions
-    setBuild,
-    newBuild,
+    goToNewBuild,
     saveBuild,
     removeBuild,
   };

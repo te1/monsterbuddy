@@ -4,7 +4,7 @@
   const buildStore = useMonstieBuildStore();
 
   function newBuild() {
-    buildStore.newBuild();
+    buildStore.goToNewBuild();
   }
 </script>
 

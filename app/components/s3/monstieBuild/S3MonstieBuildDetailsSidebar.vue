@@ -15,7 +15,7 @@
   }, false);
 
   function newBuild() {
-    buildStore.newBuild();
+    buildStore.goToNewBuild();
   }
 
   function togglePin() {

@@ -10,7 +10,7 @@
   const buildStore = useMonstieBuildStore();
 
   function newBuild() {
-    buildStore.newBuild();
+    buildStore.goToNewBuild();
   }
 
   const tabsAction = [{ label: 'Actions', slot: 'actions' }];
