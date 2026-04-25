@@ -4,8 +4,8 @@
   import { genesBySlug } from '~/services/3/genes';
 
   const gene1 = genesBySlug.get('antiburn-s');
-  const gene2 = genesBySlug.get('antiparalysis-s');
-  const gene3 = genesBySlug.get('aqua-jet');
+  // const gene2 = genesBySlug.get('antiparalysis-s');
+  // const gene3 = genesBySlug.get('aqua-jet');
   const gene4 = genesBySlug.get('free-bingo-gene');
 
   const genes: (Gene | undefined)[] = [
