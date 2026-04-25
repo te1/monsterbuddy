@@ -31,12 +31,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   routeRules: {
-    '1/**': { appLayout: 'sidebar1' },
-    '2/**': { appLayout: 'sidebar2' },
-    '3/**': { appLayout: 'sidebar3' },
-    '3/genes/**': { appLayout: 'sidebar3genes' },
-    '3/builds/monstie': { appLayout: 'sidebar3monstiebuilds' },
-    '3/builds/monstie/*': { appLayout: 'sidebar3monstiebuilds', prerender: true, ssr: false },
+    '/1/**': { appLayout: 'sidebar1' },
+    '/2/**': { appLayout: 'sidebar2' },
+    '/3/**': { appLayout: 'sidebar3' },
+    '/3/genes/**': { appLayout: 'sidebar3genes' },
+    '/3/builds/monstie': { appLayout: 'sidebar3monstiebuilds' },
+    '/3/builds/monstie/**': { appLayout: 'sidebar3monstiebuilds', ssr: false },
   },
 
   experimental: {
@@ -109,7 +109,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/sitemap.xml'],
+      routes: ['/', '/sitemap.xml', '/3/builds/monstie/__spa'],
       crawlLinks: true,
       autoSubfolderIndex: false,
     },
