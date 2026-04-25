@@ -223,7 +223,7 @@
           v-if="row1Bingo.element"
           class="-ml-(--inset) size-(--circle) rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="row1Bingo.element" />
+          <ElementIcon :element="row1Bingo.element" icon2 />
         </div>
         <div v-else />
         <div />
@@ -231,7 +231,7 @@
           v-if="row1Bingo.type"
           class="z-10 -mr-(--inset) size-(--circle) justify-self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="row1Bingo.type" />
+          <AttackTypeIcon :type="row1Bingo.type" icon2 />
         </div>
         <div v-else />
 
@@ -239,7 +239,7 @@
           v-if="row2Bingo.element"
           class="-ml-(--inset) size-(--circle) rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="row2Bingo.element" />
+          <ElementIcon :element="row2Bingo.element" icon2 />
         </div>
         <div v-else />
         <div />
@@ -247,7 +247,7 @@
           v-if="row2Bingo.type"
           class="z-10 -mr-(--inset) size-(--circle) justify-self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="row2Bingo.type" />
+          <AttackTypeIcon :type="row2Bingo.type" icon2 />
         </div>
         <div v-else />
 
@@ -255,7 +255,7 @@
           v-if="row3Bingo.element"
           class="-ml-(--inset) size-(--circle) rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="row3Bingo.element" />
+          <ElementIcon :element="row3Bingo.element" icon2 />
         </div>
         <div v-else />
         <div />
@@ -263,7 +263,7 @@
           v-if="row3Bingo.type"
           class="z-10 -mr-(--inset) size-(--circle) justify-self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="row3Bingo.type" />
+          <AttackTypeIcon :type="row3Bingo.type" icon2 />
         </div>
         <div v-else />
       </div>
@@ -274,21 +274,21 @@
           v-if="col1Bingo.element"
           class="-mt-(--inset) size-(--circle) rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="col1Bingo.element" />
+          <ElementIcon :element="col1Bingo.element" icon2 />
         </div>
         <div v-else />
         <div
           v-if="col2Bingo.element"
           class="-mt-(--inset) size-(--circle) rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="col2Bingo.element" />
+          <ElementIcon :element="col2Bingo.element" icon2 />
         </div>
         <div v-else />
         <div
           v-if="col3Bingo.element"
           class="-mt-(--inset) size-(--circle) rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="col3Bingo.element" />
+          <ElementIcon :element="col3Bingo.element" icon2 />
         </div>
         <div v-else />
 
@@ -298,21 +298,21 @@
           v-if="col1Bingo.type"
           class="-mb-(--inset) size-(--circle) self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="col1Bingo.type" />
+          <AttackTypeIcon :type="col1Bingo.type" icon2 />
         </div>
         <div v-else />
         <div
           v-if="col2Bingo.type"
           class="-mb-(--inset) size-(--circle) self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="col2Bingo.type" />
+          <AttackTypeIcon :type="col2Bingo.type" icon2 />
         </div>
         <div v-else />
         <div
           v-if="col3Bingo.type"
           class="-mb-(--inset) size-(--circle) self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="col3Bingo.type" />
+          <AttackTypeIcon :type="col3Bingo.type" icon2 />
         </div>
         <div v-else />
       </div>
@@ -323,7 +323,7 @@
           v-if="diag1Bingo.element"
           class="-mt-(--diag-inset) -ml-(--diag-inset) size-(--circle) self-start rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="diag1Bingo.element" />
+          <ElementIcon :element="diag1Bingo.element" icon2 />
         </div>
         <div v-else />
         <div />
@@ -331,7 +331,7 @@
           v-if="diag2Bingo.type"
           class="z-10 -mt-(--diag-inset) -mr-(--diag-inset) size-(--circle) self-start justify-self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="diag2Bingo.type" />
+          <AttackTypeIcon :type="diag2Bingo.type" icon2 />
         </div>
         <div v-else />
 
@@ -341,7 +341,7 @@
           v-if="diag2Bingo.element"
           class="-mb-(--diag-inset) -ml-(--diag-inset) size-(--circle) self-end rounded-full bg-gene-bingo"
         >
-          <ElementIcon :element="diag2Bingo.element" />
+          <ElementIcon :element="diag2Bingo.element" icon2 />
         </div>
         <div v-else />
         <div />
@@ -349,7 +349,7 @@
           v-if="diag1Bingo.type"
           class="-mr-(--diag-inset) -mb-(--diag-inset) size-(--circle) self-end justify-self-end rounded-full bg-gene-bingo"
         >
-          <AttackTypeIcon :type="diag1Bingo.type" />
+          <AttackTypeIcon :type="diag1Bingo.type" icon2 />
         </div>
         <div v-else />
       </div>
