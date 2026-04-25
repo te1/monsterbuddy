@@ -2,7 +2,7 @@
 
 send_metrics = false
 compatibility_date = "2026-02-01"
-name = "monsterbuddy"
+name = "monsterbuddy-dynamic"
 workers_dev = true
 preview_urls = true
 
