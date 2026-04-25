@@ -11,7 +11,7 @@
   });
 
   useSeoMeta({
-    title: `Gene List In ${gameTypeToFullLabel('mhst3')}`,
+    title: `Gene List For ${gameTypeToFullLabel('mhst3')}`,
     description: 'Overview of all genes, their effects and which monsties can have them',
   });
   const headline = gameTypeToFullName('mhst3');

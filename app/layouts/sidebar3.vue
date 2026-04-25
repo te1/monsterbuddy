@@ -18,6 +18,7 @@
     const onlyWantsMonsties =
       path.startsWith('/3/monsties') ||
       path.startsWith('/3/eggs') ||
+      path.startsWith('/3/egg-powers') ||
       path.startsWith('/3/riding-actions') ||
       wantsGenes.value;
 

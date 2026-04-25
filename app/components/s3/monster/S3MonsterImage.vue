@@ -58,7 +58,7 @@
     decoding="async"
   />
 
-  <div v-else-if="!hideFallback" class="flex size-full items-center justify-center">
+  <div v-else-if="!hideFallback" class="grid place-content-center place-items-center">
     <S3MonsterIcon :monster="monster" :noTooltip="noTooltip" :eager="eager" />
   </div>
 </template>
