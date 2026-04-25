@@ -123,6 +123,10 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
     });
   }
 
+  function hasBuild(id: string): boolean {
+    return allBuilds.value.some((build) => build.id === id);
+  }
+
   return {
     // -- state
     allLoaded,
@@ -142,6 +146,7 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
     addRecentBuild,
     isBuildPinned,
     togglePinnedBuild,
+    hasBuild,
   };
 });
 

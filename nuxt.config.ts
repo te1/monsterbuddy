@@ -36,7 +36,11 @@ export default defineNuxtConfig({
     '/3/**': { appLayout: 'sidebar3' },
     '/3/genes/**': { appLayout: 'sidebar3genes' },
     '/3/builds/monstie': { appLayout: 'sidebar3monstiebuilds' },
-    '/3/builds/monstie/**': { appLayout: 'sidebar3monstiebuilds', ssr: false },
+    '/3/builds/monstie/*': {
+      appLayout: 'sidebar3monstiebuilds',
+      ssr: false,
+      robots: { noindex: true, follow: true },
+    },
   },
 
   experimental: {
