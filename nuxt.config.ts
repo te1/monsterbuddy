@@ -109,7 +109,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/sitemap.xml', '/3/builds/monstie/__spa'],
+      routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
       autoSubfolderIndex: false,
     },

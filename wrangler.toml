@@ -6,7 +6,10 @@ name = "monsterbuddy"
 workers_dev = true
 preview_urls = true
 
+main = "./.output/server/index.mjs"
+
 [assets]
+binding = "ASSETS"
 directory = "./.output/public"
 html_handling = "drop-trailing-slash"
-not_found_handling = "404-page"
+not_found_handling = "none"

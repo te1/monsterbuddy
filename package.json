@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run data && nuxt build",
-    "generate": "pnpm run data && nuxt generate",
+    "generate": "pnpm run data && nuxt build",
     "dev": "pnpm run data && nuxt dev",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
