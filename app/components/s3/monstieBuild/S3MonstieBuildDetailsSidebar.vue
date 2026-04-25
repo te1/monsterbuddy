@@ -7,7 +7,6 @@
   const history = useMonstieBuildHistoryStore();
   const buildStore = useMonstieBuildStore();
 
-  // TODO when reloading the page (or first direct access) build is not updated (isPinned is false, delete is disabled, ...)
   const build = computed(() => buildStore.build);
 
   const isPinned = computedAsync(async () => {

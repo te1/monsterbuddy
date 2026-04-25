@@ -23,7 +23,7 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
     if (build.value?.isEmpty()) {
       // we have a new empty build already so just reuse it
 
-      await router.push(`/3/builds/monstie/${build.value.id}`);
+      router.push(`/3/builds/monstie/${build.value.id}`);
 
       return;
     }
@@ -57,7 +57,7 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
 
     buildId.value = data.id;
 
-    await router.push(`/3/builds/monstie/${data.id}`);
+    router.push(`/3/builds/monstie/${data.id}`);
   }
 
   async function saveBuild(build: MonstieBuild): Promise<void> {
