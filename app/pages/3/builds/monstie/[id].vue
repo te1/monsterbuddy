@@ -55,7 +55,15 @@
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">
-      <div v-if="build" class="font-semibold">placeholder {{ build.nameWithFallback }}</div>
+      <div v-if="build">
+        <!-- Description -->
+        <!-- Monstie -->
+        <!-- Genes -->
+        <S3MonstieBuildGeneGrid />
+        <!-- Egg Powers -->
+        <!-- Dual Element -->
+        <!-- Region -->
+      </div>
 
       <div v-else-if="buildId && history.allLoaded && !history.hasBuild(buildId)">
         <UError
