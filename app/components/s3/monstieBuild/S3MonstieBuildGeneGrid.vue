@@ -9,7 +9,7 @@
   const gene4 = genesBySlug.get('free-bingo-gene');
 
   const genes: (Gene | undefined)[] = [
-    gene2,
+    gene4,
     gene1,
     gene1,
     gene1,
@@ -68,11 +68,12 @@
 <template>
   <div
     style="
-      --cell: 120px;
+      --cell: 100px;
       --half-cell: calc(var(--cell) / 2);
-      --inset: calc(var(--cell) / 3.5);
+      --inset: calc(var(--cell) / 3.25);
       --half-inset: calc(var(--inset) / 2);
-      --gap: calc(var(--cell) / 14);
+      --diag-inset: calc(var(--inset) / 1.5);
+      --gap: calc(var(--cell) / 12);
       --size: calc(var(--cell) * 3 + var(--gap) * 2);
       --line: calc(var(--cell) / 13);
       --half-line: calc(var(--line) / 2);
@@ -204,13 +205,13 @@
         <div class="col-span-3" />
 
         <div
-          v-if="diag1Bingo.element"
+          v-if="diag2Bingo.element"
           class="mt-(--half-cell) mr-(--half-cell) -mb-(--half-inset) -ml-(--half-inset) h-(--line) -rotate-45 bg-gene-bingo"
         />
         <div v-else />
         <div />
         <div
-          v-if="diag2Bingo.type"
+          v-if="diag1Bingo.type"
           class="mt-(--half-cell) -mr-(--half-inset) -mb-(--half-inset) ml-(--half-cell) h-(--line) rotate-45 bg-gene-bingo"
         />
         <div v-else />
@@ -320,7 +321,7 @@
       <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 items-center gap-(--gap)">
         <div
           v-if="diag1Bingo.element"
-          class="-mt-(--inset) -ml-(--inset) size-(--circle) self-start rounded-full bg-gene-bingo"
+          class="-mt-(--diag-inset) -ml-(--diag-inset) size-(--circle) self-start rounded-full bg-gene-bingo"
         >
           <ElementIcon :element="diag1Bingo.element" />
         </div>
@@ -328,7 +329,7 @@
         <div />
         <div
           v-if="diag2Bingo.type"
-          class="z-10 -mt-(--inset) -mr-(--inset) size-(--circle) self-start justify-self-end rounded-full bg-gene-bingo"
+          class="z-10 -mt-(--diag-inset) -mr-(--diag-inset) size-(--circle) self-start justify-self-end rounded-full bg-gene-bingo"
         >
           <AttackTypeIcon :type="diag2Bingo.type" />
         </div>
@@ -338,7 +339,7 @@
 
         <div
           v-if="diag2Bingo.element"
-          class="-mb-(--inset) -ml-(--inset) size-(--circle) self-end rounded-full bg-gene-bingo"
+          class="-mb-(--diag-inset) -ml-(--diag-inset) size-(--circle) self-end rounded-full bg-gene-bingo"
         >
           <ElementIcon :element="diag2Bingo.element" />
         </div>
@@ -346,7 +347,7 @@
         <div />
         <div
           v-if="diag1Bingo.type"
-          class="-mr-(--inset) -mb-(--inset) size-(--circle) self-end justify-self-end rounded-full bg-gene-bingo"
+          class="-mr-(--diag-inset) -mb-(--diag-inset) size-(--circle) self-end justify-self-end rounded-full bg-gene-bingo"
         >
           <AttackTypeIcon :type="diag1Bingo.type" />
         </div>
