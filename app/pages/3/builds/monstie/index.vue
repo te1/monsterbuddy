@@ -8,6 +8,7 @@
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildSidebar,
+    mobileHeaderTitle: 'Builds',
   });
 
   useSeoMeta({
