@@ -9,7 +9,7 @@
   const gene4 = genesBySlug.get('free-bingo-gene');
 
   const genes: (Gene | undefined)[] = [
-    gene1,
+    gene2,
     gene1,
     gene1,
     gene1,
@@ -78,9 +78,9 @@
       --half-line: calc(var(--line) / 2);
       --circle: calc(var(--cell) / 3.75);
     "
-    class="relative size-(--size) bg-neutral-900"
+    class="relative size-(--size)"
   >
-    <div class="pointer-events-none absolute inset-(--inset) bg-neutral-800 select-none">
+    <div class="pointer-events-none absolute inset-(--inset) select-none">
       <!-- rows -->
       <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 items-center gap-(--gap)">
         <div class="col-span-3 mx-(--half-cell) h-(--line)" :class="lineColor(row1Bingo.bingo)" />
@@ -193,11 +193,13 @@
           v-if="diag1Bingo.element"
           class="-mt-(--half-inset) mr-(--half-cell) mb-(--half-cell) -ml-(--half-inset) h-(--line) rotate-45 bg-gene-bingo"
         />
+        <div v-else />
         <div />
         <div
           v-if="diag2Bingo.type"
           class="-mt-(--half-inset) -mr-(--half-inset) mb-(--half-cell) ml-(--half-cell) h-(--line) -rotate-45 bg-gene-bingo"
         />
+        <div v-else />
 
         <div class="col-span-3" />
 
@@ -205,11 +207,13 @@
           v-if="diag1Bingo.element"
           class="mt-(--half-cell) mr-(--half-cell) -mb-(--half-inset) -ml-(--half-inset) h-(--line) -rotate-45 bg-gene-bingo"
         />
+        <div v-else />
         <div />
         <div
           v-if="diag2Bingo.type"
           class="mt-(--half-cell) -mr-(--half-inset) -mb-(--half-inset) ml-(--half-cell) h-(--line) rotate-45 bg-gene-bingo"
         />
+        <div v-else />
       </div>
 
       <!-- bingo circles rows -->
@@ -312,6 +316,43 @@
         <div v-else />
       </div>
 
+      <!-- bingo circles diagonals -->
+      <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 items-center gap-(--gap)">
+        <div
+          v-if="diag1Bingo.element"
+          class="-mt-(--inset) -ml-(--inset) size-(--circle) self-start rounded-full bg-gene-bingo"
+        >
+          <ElementIcon :element="diag1Bingo.element" />
+        </div>
+        <div v-else />
+        <div />
+        <div
+          v-if="diag2Bingo.type"
+          class="z-10 -mt-(--inset) -mr-(--inset) size-(--circle) self-start justify-self-end rounded-full bg-gene-bingo"
+        >
+          <AttackTypeIcon :type="diag2Bingo.type" />
+        </div>
+        <div v-else />
+
+        <div class="col-span-3" />
+
+        <div
+          v-if="diag2Bingo.element"
+          class="-mb-(--inset) -ml-(--inset) size-(--circle) self-end rounded-full bg-gene-bingo"
+        >
+          <ElementIcon :element="diag2Bingo.element" />
+        </div>
+        <div v-else />
+        <div />
+        <div
+          v-if="diag1Bingo.type"
+          class="-mr-(--inset) -mb-(--inset) size-(--circle) self-end justify-self-end rounded-full bg-gene-bingo"
+        >
+          <AttackTypeIcon :type="diag1Bingo.type" />
+        </div>
+        <div v-else />
+      </div>
+
       <!-- gene grid background -->
       <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-(--gap)">
         <img src="~/assets/3/gene/size-s.avif" alt="" aria-hidden="true" />
@@ -329,15 +370,44 @@
     <div
       class="absolute inset-(--inset) grid grid-cols-3 grid-rows-3 place-items-center gap-(--gap)"
     >
-      <div>A</div>
-      <div>B</div>
-      <div>C</div>
-      <div>D</div>
-      <div>E</div>
-      <div>F</div>
-      <div>G</div>
-      <div>H</div>
-      <div>I</div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[0]" :gene="genes[0]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[1]" :gene="genes[1]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[2]" :gene="genes[2]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[3]" :gene="genes[3]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[4]" :gene="genes[4]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[5]" :gene="genes[5]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[6]" :gene="genes[6]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[7]" :gene="genes[7]" size="size-full" />
+        <div v-else>+</div>
+      </div>
+      <div class="grid size-full place-items-center">
+        <S3GeneIcon v-if="genes[8]" :gene="genes[8]" size="size-full" />
+        <div v-else>+</div>
+      </div>
     </div>
   </div>
 </template>
