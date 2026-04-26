@@ -49,7 +49,7 @@
     pending.value = true;
     pendingTimer = setTimeout(resetPending, 3000);
 
-    tooltipOpen.value = !!props.tooltip;
+    tooltipOpen.value = true;
   }
 
   function handleClick() {

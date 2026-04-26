@@ -15,7 +15,7 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
 
   // -- getters
   const build = computed<MonstieBuild | undefined>(() => {
-    return entity.value ? MonstieBuild.fromEntity(entity.value) : undefined;
+    return entity.data.value ? MonstieBuild.fromEntity(entity.data.value) : undefined;
   });
 
   // -- actions
@@ -84,6 +84,7 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
   return {
     // -- state
     buildId,
+    pending: entity.pending,
 
     // -- getters
     build,

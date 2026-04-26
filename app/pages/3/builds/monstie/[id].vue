@@ -20,6 +20,8 @@
     Array.isArray(route.params.id) ? route.params.id[0] : route.params.id
   );
 
+  buildStore.buildId = buildId.value;
+
   const build = computed(() => buildStore.build);
 
   const title = computed(() => {
@@ -49,20 +51,16 @@
   }
 
   watch(
-    build,
+    title,
     () => {
       route.meta.mobileHeaderTitle = title.value;
     },
     { immediate: true }
   );
-
-  onMounted(() => {
-    buildStore.buildId = buildId.value;
-  });
 </script>
 
 <template>
-  <div>
+  <div v-if="!buildStore.pending">
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">

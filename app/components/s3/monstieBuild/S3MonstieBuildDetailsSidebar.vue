@@ -33,6 +33,41 @@
     router.push('/3/builds/monstie');
   }
 
+  const pending = ref(false);
+  let pendingTimer: ReturnType<typeof setTimeout> | undefined;
+
+  function resetPending() {
+    pending.value = false;
+
+    if (pendingTimer) {
+      clearTimeout(pendingTimer);
+      pendingTimer = undefined;
+    }
+  }
+
+  function startPending() {
+    resetPending();
+
+    pending.value = true;
+    pendingTimer = setTimeout(resetPending, 3000);
+  }
+
+  function handleRemoveBuild() {
+    if (!build.value) {
+      return;
+    }
+
+    if (!pending.value) {
+      startPending();
+      return;
+    }
+
+    resetPending();
+    removeBuild();
+  }
+
+  onBeforeUnmount(resetPending);
+
   const tabs = [{ label: 'Actions', slot: 'actions' }];
 </script>
 
@@ -53,9 +88,13 @@
             variant="link"
             label="Delete build"
             icon="ph:trash"
-            :ui="{ base: 'px-0 font-normal' }"
+            :ui="{
+              base: 'px-0 font-normal',
+              label: ['transition-colors', pending ? 'text-red-500' : ''],
+              leadingIcon: ['transition-colors', pending ? 'text-red-500' : ''],
+            }"
             :disabled="!build"
-            @click="removeBuild"
+            @click="handleRemoveBuild"
           />
 
           <UButton
