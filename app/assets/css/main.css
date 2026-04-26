@@ -21,11 +21,16 @@
   --ui-container: var(--container-8xl);
   --ui-radius: 0.125rem;
   /* --ui-bg: var(--ui-color-neutral-100); */
+
+  --scrollbar-color: var(--ui-color-neutral-400);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 .dark {
   /* --ui-primary: var(--ui-color-primary-500); */
   /* --ui-bg: var(--ui-color-neutral-900); */
+  --scrollbar-color: var(--ui-color-neutral-600);
 }
 
 @layer utilities {
