@@ -13,3 +13,18 @@ binding = "ASSETS"
 directory = "./.output/public"
 html_handling = "drop-trailing-slash"
 not_found_handling = "none"
+
+[observability]
+enabled = true
+head_sampling_rate = 0.01
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 0.01
+persist = true
+invocation_logs = false
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 0.01
+persist = true
