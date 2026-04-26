@@ -55,14 +55,14 @@
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">
-      <div v-if="build">
+      <div v-if="build" class="grid grid-cols-2">
         <!-- Description -->
         <p>{{ build.description }}</p>
         <!-- Monstie -->
         <p>{{ build.monstie?.name }}</p>
         <!-- Genes -->
         <S3MonstieBuildGeneGrid :build="build" />
-        <p>{{ build.genes.map((g) => g?.name).join(', ') }}</p>
+        <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
         <!-- Egg Powers -->
         <p>{{ build.eggPowers.map((ep) => ep?.name).join(', ') }}</p>
         <!-- Dual Element -->
