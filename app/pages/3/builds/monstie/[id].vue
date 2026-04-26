@@ -56,6 +56,10 @@
 
     <UPageBody class="-mt-3 lg:mt-0">
       <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
+        <section class="-mb-1 text-sm text-dimmed">
+          This <span class="font-semibold">private</span> build is stored locally on your device
+        </section>
+
         <div class="flex flex-1 flex-col gap-3">
           <S3MonstieBuildMonstieCard :build="build" class="box overflow-hidden" />
 
@@ -64,12 +68,8 @@
           <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
 
           <!-- Stats -->
-
           <!-- Effects -->
-
           <!-- Duplicates / Stacking -->
-
-          <!-- Bingo bonuses -->
         </div>
 
         <div class="flex flex-1 flex-col gap-3">
