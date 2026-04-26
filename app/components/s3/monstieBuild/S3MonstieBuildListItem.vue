@@ -20,8 +20,18 @@
         <div class="text-base leading-snug font-semibold" v-text="build.nameWithFallback" />
       </div>
 
-      <!-- TODO monstie name (+genus?), bingo count -->
-      <div v-if="build.description" class="line-clamp-2" v-text="build.description" />
+      <div>
+        <span v-text="monstie.name" />
+        <span v-if="monstie.genus" v-text="`, ${monstie.genus}`" />
+      </div>
+
+      <div v-if="build.description" class="line-clamp-1 text-muted" v-text="build.description" />
+    </div>
+
+    <div v-if="build.monstie" class="mr-1 flex flex-col items-center gap-1">
+      <AttackTypeIcon class="size-7" :type="monstie.monstie?.attack" noTooltip />
+
+      <ElementIcon class="size-7" :element="monstie.element" noTooltip />
     </div>
   </div>
 </template>
