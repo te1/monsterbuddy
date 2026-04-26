@@ -18,6 +18,29 @@ export class MonstieBuild {
     this.id = id;
   }
 
+  static fromPlaceholder(id: string): MonstieBuild {
+    const build = new MonstieBuild(id);
+    build.name = 'Build 1';
+    build.description = 'This is a placeholder build';
+    build.monstieSlug = 'silverwind-nargacuga';
+    build.geneSlugs = [
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+      'antiburn-s',
+    ];
+    build.eggPowerSlugs = ['resonance', 'best-buds', 'hardiness'];
+    build.dualElement = 'fire';
+    build.regionSlug = 'azuria';
+
+    return build;
+  }
+
   static fromEntity(entity: MonstieBuildEntity): MonstieBuild {
     const build = new MonstieBuild(entity.data.id);
 

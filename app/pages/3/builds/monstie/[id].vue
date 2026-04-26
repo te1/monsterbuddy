@@ -57,12 +57,18 @@
     <UPageBody class="-mt-3 lg:mt-0">
       <div v-if="build">
         <!-- Description -->
+        <p>{{ build.description }}</p>
         <!-- Monstie -->
+        <p>{{ build.monstie?.name }}</p>
         <!-- Genes -->
         <S3MonstieBuildGeneGrid />
+        <p>{{ build.genes.map((g) => g.name).join(', ') }}</p>
         <!-- Egg Powers -->
+        <p>{{ build.eggPowers.map((ep) => ep.name).join(', ') }}</p>
         <!-- Dual Element -->
+        <p>{{ build.dualElement }}</p>
         <!-- Region -->
+        <p>{{ build.region?.name }}</p>
       </div>
 
       <div v-else-if="buildId && history.allLoaded && !history.hasBuild(buildId)">

@@ -31,7 +31,8 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
     const id = generateLocalId();
     const now = new Date();
 
-    let data = new MonstieBuild(id);
+    // let data = new MonstieBuild(id);
+    let data = MonstieBuild.fromPlaceholder(id);
     const dataHash = await data.getContentHash({ ignoreId: true });
 
     const entity = await db.monstieBuilds.get({ dataHash });
