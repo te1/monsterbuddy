@@ -112,7 +112,7 @@
         v-if="build"
         tooltip="Delete build"
         icon="ph:trash"
-        destructive
+        destructive="delete build"
         @click="deleteBuild"
       />
       <AppFab tooltip="New build" icon="ph:plus" @click="newBuild" />

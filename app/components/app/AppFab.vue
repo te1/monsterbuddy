@@ -3,7 +3,7 @@
     defineProps<{
       tooltip?: string;
       icon?: string;
-      destructive?: boolean;
+      destructive?: boolean | string;
     }>(),
     {
       tooltip: undefined,
@@ -23,8 +23,11 @@
 
   const resolvedTooltip = computed(() => {
     if (pending.value) {
-      return canHover.value ? 'Click again to confirm' : 'Tap again to confirm';
+      const action = typeof props.destructive === 'string' ? props.destructive : 'confirm';
+
+      return canHover.value ? `Click again to ${action}` : `Tap again to ${action}`;
     }
+
     return props.tooltip;
   });
 
