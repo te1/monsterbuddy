@@ -61,10 +61,10 @@
         <!-- Monstie -->
         <p>{{ build.monstie?.name }}</p>
         <!-- Genes -->
-        <S3MonstieBuildGeneGrid />
-        <p>{{ build.genes.map((g) => g.name).join(', ') }}</p>
+        <S3MonstieBuildGeneGrid :build="build" />
+        <p>{{ build.genes.map((g) => g?.name).join(', ') }}</p>
         <!-- Egg Powers -->
-        <p>{{ build.eggPowers.map((ep) => ep.name).join(', ') }}</p>
+        <p>{{ build.eggPowers.map((ep) => ep?.name).join(', ') }}</p>
         <!-- Dual Element -->
         <p>{{ build.dualElement }}</p>
         <!-- Region -->

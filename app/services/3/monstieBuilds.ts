@@ -71,14 +71,12 @@ export class MonstieBuild {
     return this.monstieSlug ? monstersBySlug.get(this.monstieSlug) : undefined;
   }
 
-  get genes(): Gene[] {
-    return this.geneSlugs.map((slug) => genesBySlug.get(slug)).filter((gene) => gene !== undefined);
+  get genes(): (Gene | undefined)[] {
+    return this.geneSlugs.map((slug) => genesBySlug.get(slug));
   }
 
-  get eggPowers(): EggPower[] {
-    return this.eggPowerSlugs
-      .map((slug) => eggPowersBySlug.get(slug))
-      .filter((eggPower) => eggPower !== undefined);
+  get eggPowers(): (EggPower | undefined)[] {
+    return this.eggPowerSlugs.map((slug) => eggPowersBySlug.get(slug));
   }
 
   get region(): Region | undefined {

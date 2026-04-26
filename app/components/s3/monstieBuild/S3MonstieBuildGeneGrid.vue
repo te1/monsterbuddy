@@ -1,27 +1,11 @@
 <script lang="ts" setup>
+  import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Gene } from '~/services/3/types';
   import { uniq } from 'es-toolkit/array';
-  import { genesBySlug } from '~/services/3/genes';
 
-  const gene1 = genesBySlug.get('antiburn-s');
-  // const gene2 = genesBySlug.get('antiparalysis-s');
-  // const gene3 = genesBySlug.get('aqua-jet');
-  const gene4 = genesBySlug.get('free-bingo-gene');
+  const props = defineProps<{ build: MonstieBuild }>();
 
-  const genes: (Gene | undefined)[] = [
-    gene4,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-    gene1,
-  ];
+  const genes = computed(() => props.build.genes);
 
   function getBingo(...genes: (Gene | undefined)[]) {
     const result: { bingo: boolean; element?: ElementType; type?: AttackType } = {
@@ -51,14 +35,14 @@
     return result;
   }
 
-  const row1Bingo = computed(() => getBingo(genes[0], genes[1], genes[2]));
-  const row2Bingo = computed(() => getBingo(genes[3], genes[4], genes[5]));
-  const row3Bingo = computed(() => getBingo(genes[6], genes[7], genes[8]));
-  const col1Bingo = computed(() => getBingo(genes[0], genes[3], genes[6]));
-  const col2Bingo = computed(() => getBingo(genes[1], genes[4], genes[7]));
-  const col3Bingo = computed(() => getBingo(genes[2], genes[5], genes[8]));
-  const diag1Bingo = computed(() => getBingo(genes[0], genes[4], genes[8]));
-  const diag2Bingo = computed(() => getBingo(genes[2], genes[4], genes[6]));
+  const row1Bingo = computed(() => getBingo(genes.value[0], genes.value[1], genes.value[2]));
+  const row2Bingo = computed(() => getBingo(genes.value[3], genes.value[4], genes.value[5]));
+  const row3Bingo = computed(() => getBingo(genes.value[6], genes.value[7], genes.value[8]));
+  const col1Bingo = computed(() => getBingo(genes.value[0], genes.value[3], genes.value[6]));
+  const col2Bingo = computed(() => getBingo(genes.value[1], genes.value[4], genes.value[7]));
+  const col3Bingo = computed(() => getBingo(genes.value[2], genes.value[5], genes.value[8]));
+  const diag1Bingo = computed(() => getBingo(genes.value[0], genes.value[4], genes.value[8]));
+  const diag2Bingo = computed(() => getBingo(genes.value[2], genes.value[4], genes.value[6]));
 
   function lineColor(bingo: boolean) {
     return bingo ? 'bg-gene-bingo' : 'bg-gene-grid';
