@@ -1,9 +1,10 @@
 import type { UpdateSpec } from 'dexie';
 import type { MonstieBuildEntity } from '~/services/3/localDb';
-import { MonstieBuild } from '~/services/3/monstieBuilds';
+import type { Gene } from '~/services/3/types';
 import { customAlphabet } from 'nanoid';
+import { uniq } from 'es-toolkit/array';
 import { db } from '~/services/3/localDb';
-import { useRouter } from 'vue-router';
+import { MonstieBuild } from '~/services/3/monstieBuilds';
 import { useMonstieBuildEntity } from '~/composables/3/useMonstieBuild';
 
 const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
@@ -17,6 +18,17 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
   const build = computed<MonstieBuild | undefined>(() => {
     return entity.data.value ? MonstieBuild.fromEntity(entity.data.value) : undefined;
   });
+
+  const genes = computed(() => build.value?.genes ?? []);
+
+  const row1Bingo = computed(() => getBingo(genes.value[0], genes.value[1], genes.value[2]));
+  const row2Bingo = computed(() => getBingo(genes.value[3], genes.value[4], genes.value[5]));
+  const row3Bingo = computed(() => getBingo(genes.value[6], genes.value[7], genes.value[8]));
+  const col1Bingo = computed(() => getBingo(genes.value[0], genes.value[3], genes.value[6]));
+  const col2Bingo = computed(() => getBingo(genes.value[1], genes.value[4], genes.value[7]));
+  const col3Bingo = computed(() => getBingo(genes.value[2], genes.value[5], genes.value[8]));
+  const diag1Bingo = computed(() => getBingo(genes.value[0], genes.value[4], genes.value[8]));
+  const diag2Bingo = computed(() => getBingo(genes.value[2], genes.value[4], genes.value[6]));
 
   // -- actions
   async function goToNewBuild(): Promise<void> {
@@ -81,6 +93,34 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
     await db.monstieBuilds.delete(id);
   }
 
+  function getBingo(...genes: (Gene | undefined)[]) {
+    const result: { bingo: boolean; element?: ElementType; type?: AttackType } = {
+      bingo: false,
+      element: undefined,
+      type: undefined,
+    };
+
+    const elements = genes.map((gene) => gene?.element).filter((element) => element != null);
+    if (elements.length === 3) {
+      const uniqueElements = uniq(elements.filter((element) => element !== 'all'));
+      if (uniqueElements.length === 1) {
+        result.element = uniqueElements[0];
+        result.bingo = true;
+      }
+    }
+
+    const types = genes.map((gene) => gene?.type).filter((type) => type != null);
+    if (types.length === 3) {
+      const uniqueTypes = uniq(types.filter((type) => type !== 'all'));
+      if (uniqueTypes.length === 1) {
+        result.type = uniqueTypes[0];
+        result.bingo = true;
+      }
+    }
+
+    return result;
+  }
+
   return {
     // -- state
     buildId,
@@ -88,6 +128,15 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
 
     // -- getters
     build,
+    genes,
+    row1Bingo,
+    row2Bingo,
+    row3Bingo,
+    col1Bingo,
+    col2Bingo,
+    col3Bingo,
+    diag1Bingo,
+    diag2Bingo,
 
     // -- actions
     goToNewBuild,
