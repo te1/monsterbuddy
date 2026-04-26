@@ -36,7 +36,7 @@
       </NuxtLink>
     </div>
 
-    <div class="flex flex-col gap-1 px-4 pb-2">
+    <div class="flex flex-col gap-3 px-4 pb-2">
       <div>
         <div v-if="build.dualElement" class="flex items-center justify-between gap-1">
           <h3 class="text-lg font-semibold">Dual Element</h3>
