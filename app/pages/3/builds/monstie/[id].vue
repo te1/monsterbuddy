@@ -57,6 +57,12 @@
     },
     { immediate: true }
   );
+
+  onMounted(() => {
+    if (buildId.value) {
+      history.addRecentBuild(buildId.value);
+    }
+  });
 </script>
 
 <template>
