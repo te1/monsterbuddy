@@ -1,6 +1,8 @@
 import type { MonsterLocationType } from './data';
 import type {
   AilmentType,
+  BingoBonus,
+  BingoBonusType,
   BuffDetailType,
   Gene,
   GeneElement,
@@ -510,5 +512,34 @@ export function formatBuffDetailType(type: BuffDetailType): string {
 
     default:
       return '';
+  }
+}
+
+export function formatBingoBonusType(type: BingoBonusType): string {
+  switch (type) {
+    case 'crit':
+      return 'Crit Rate';
+
+    case 'speed':
+      return 'Speed';
+
+    case 'staminaRecovery':
+      return 'Stamina Recovery';
+
+    case 'startingStamina':
+      return 'Starting Stamina';
+
+    case 'wyvernfell':
+      return 'Wyvernfell';
+  }
+}
+
+export function formatBingoBonusValue(bonus: BingoBonus): string {
+  switch (bonus.type) {
+    case 'crit':
+      return `+${bonus.value}%`;
+
+    default:
+      return `+${bonus.value}`;
   }
 }

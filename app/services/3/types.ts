@@ -1,9 +1,11 @@
 export type {
+  AilmentType,
+  BingoBonus,
+  BingoBonusType,
   EggColor,
   Monster,
   MonsterTag,
   RelationType,
-  AilmentType,
 } from '~~/data/3/monsters.schema';
 export type { Region, RegionArea, RegionStatsType } from '~~/data/3/regions.schema';
 export type {

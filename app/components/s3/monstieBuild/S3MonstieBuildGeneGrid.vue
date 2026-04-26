@@ -2,6 +2,7 @@
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Gene } from '~/services/3/types';
   import { uniq } from 'es-toolkit/array';
+  import { formatBingoBonusType, formatBingoBonusValue } from '~/services/3/presentation';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
@@ -506,7 +507,7 @@
       </div>
 
       <!-- bonuses -->
-      <div class="flex flex-col gap-1 self-start">
+      <div class="@container flex flex-1 flex-col gap-1 self-start">
         <h3 class="text-lg font-semibold">Bingo Bonus</h3>
 
         <div class="flex flex-col gap-3">
@@ -518,45 +519,59 @@
           <div v-if="totalBingoCount > 0">
             <h4 class="font-semibold">Damage Done</h4>
 
-            <div
-              v-for="count in elementBingoCounts"
-              :key="count.element"
-              class="flex items-center gap-2"
-            >
-              <ElementIcon :element="count.element" icon2 class="size-7.5" />
-              <ElementLabel :element="count.element" class="w-28" />
-              <span class="w-10 text-right font-semibold">
-                +{{ getBingoBonus(count.count) * 100 }}%
-              </span>
-              <span class="text-muted">
-                ({{ count.count }} {{ count.count === 1 ? 'Bingo' : 'Bingos' }})
-              </span>
-            </div>
+            <div class="grid @sm:grid-cols-2 @sm:gap-x-12 @3xl:grid-cols-3">
+              <div
+                v-for="count in elementBingoCounts"
+                :key="count.element"
+                class="flex items-center justify-between gap-2"
+              >
+                <div class="flex items-center gap-1">
+                  <ElementIcon :element="count.element" icon2 class="size-7.5" />
+                  <ElementLabel :element="count.element" class="w-28" />
+                </div>
+                <AppTooltip :tooltip="`${count.count} ${count.count === 1 ? 'Bingo' : 'Bingos'}`">
+                  <span class="w-10 text-right font-semibold">
+                    +{{ getBingoBonus(count.count) * 100 }}%
+                  </span>
+                </AppTooltip>
+              </div>
 
-            <div v-for="count in typeBingoCounts" :key="count.type" class="flex items-center gap-2">
-              <AttackTypeIcon :type="count.type" icon2 class="size-7.5 dark:invert" />
-              <AttackTypeLabel :type="count.type" class="w-28" />
-              <span class="w-10 text-right font-semibold">
-                +{{ getBingoBonus(count.count) * 100 }}%
-              </span>
-              <span class="text-muted">
-                ({{ count.count }} {{ count.count === 1 ? 'Bingo' : 'Bingos' }})
-              </span>
+              <div
+                v-for="count in typeBingoCounts"
+                :key="count.type"
+                class="flex items-center justify-between gap-2"
+              >
+                <div class="flex items-center gap-1">
+                  <AttackTypeIcon :type="count.type" icon2 class="size-7.5 dark:invert" />
+                  <AttackTypeLabel :type="count.type" class="w-28" />
+                </div>
+                <AppTooltip :tooltip="`${count.count} ${count.count === 1 ? 'Bingo' : 'Bingos'}`">
+                  <span class="w-10 text-right font-semibold">
+                    +{{ getBingoBonus(count.count) * 100 }}%
+                  </span>
+                </AppTooltip>
+              </div>
             </div>
           </div>
 
           <div>
             <h4 class="font-semibold">Monstie Bonus</h4>
 
-            <div
-              v-for="bonus in build.monstie?.monstie?.bingoBonuses"
-              :key="bonus.type"
-              class="flex items-center gap-1"
-              :class="{ 'text-dimmed': totalBingoCount < bonus.bingoCount }"
-            >
-              <div>{{ bonus.bingoCount }}</div>
-              <div>{{ bonus.type }}</div>
-              <div>{{ bonus.value }}</div>
+            <div class="grid @sm:grid-cols-2 @sm:gap-x-12 @3xl:grid-cols-3">
+              <div
+                v-for="bonus in build.monstie?.monstie?.bingoBonuses"
+                :key="bonus.type"
+                class="flex items-center justify-between gap-2"
+                :class="{ 'text-dimmed': totalBingoCount < bonus.bingoCount }"
+              >
+                <div class="flex h-7.5 items-center gap-1">
+                  <AppTooltip :tooltip="`Requires ${bonus.bingoCount} bingos to activate`">
+                    <div class="w-7.5 text-center font-semibold" v-text="bonus.bingoCount" />
+                  </AppTooltip>
+                  <div v-text="formatBingoBonusType(bonus.type)" />
+                </div>
+                <div class="font-semibold" v-text="formatBingoBonusValue(bonus)" />
+              </div>
             </div>
           </div>
         </div>
