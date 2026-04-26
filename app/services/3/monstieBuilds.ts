@@ -1,4 +1,3 @@
-import type { EggPower, Gene, Monster, Region } from './types';
 import type { MonstieBuildEntity } from './localDb';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
 import { genesBySlug } from './genes';
@@ -81,6 +80,38 @@ export class MonstieBuild {
 
   get region(): Region | undefined {
     return this.regionSlug ? regionsBySlug.get(this.regionSlug) : undefined;
+  }
+
+  isEggPowerAwakened(eggPower: EggPower): boolean {
+    let result = true;
+
+    for (const requirement of eggPower.variants[1]?.requirements ?? []) {
+      if ('type' in requirement) {
+        if (this.genes.every((gene) => gene?.type !== requirement.type)) {
+          result = false;
+        }
+      }
+
+      if ('element' in requirement) {
+        if (this.genes.every((gene) => gene?.element !== requirement.element)) {
+          result = false;
+        }
+      }
+    }
+
+    return result;
+  }
+
+  hasRequirement(requirement: EggPowerRequirement): boolean {
+    if ('type' in requirement) {
+      return this.genes.some((gene) => gene?.type === requirement.type);
+    }
+
+    if ('element' in requirement) {
+      return this.genes.some((gene) => gene?.element === requirement.element);
+    }
+
+    return false;
   }
 
   isEmpty(): boolean {
