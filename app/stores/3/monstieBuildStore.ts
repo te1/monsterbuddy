@@ -31,7 +31,7 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
     const id = generateLocalId();
     const now = new Date();
 
-    // let data = new MonstieBuild(id);
+    // let data = new MonstieBuild(id); // TODO remove placeholder
     let data = MonstieBuild.fromPlaceholder(id);
     const dataHash = await data.getContentHash({ ignoreId: true });
 
