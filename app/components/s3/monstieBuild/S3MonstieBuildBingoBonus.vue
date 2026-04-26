@@ -7,24 +7,15 @@
 
   const buildStore = useMonstieBuildStore();
 
-  const row1Bingo = buildStore.row1Bingo;
-  const row2Bingo = buildStore.row2Bingo;
-  const row3Bingo = buildStore.row3Bingo;
-  const col1Bingo = buildStore.col1Bingo;
-  const col2Bingo = buildStore.col2Bingo;
-  const col3Bingo = buildStore.col3Bingo;
-  const diag1Bingo = buildStore.diag1Bingo;
-  const diag2Bingo = buildStore.diag2Bingo;
-
   const allBingos = computed(() => [
-    row1Bingo,
-    row2Bingo,
-    row3Bingo,
-    col1Bingo,
-    col2Bingo,
-    col3Bingo,
-    diag1Bingo,
-    diag2Bingo,
+    buildStore.row1Bingo,
+    buildStore.row2Bingo,
+    buildStore.row3Bingo,
+    buildStore.col1Bingo,
+    buildStore.col2Bingo,
+    buildStore.col3Bingo,
+    buildStore.diag1Bingo,
+    buildStore.diag2Bingo,
   ]);
 
   const elementBingoCounts = computed(() => {
