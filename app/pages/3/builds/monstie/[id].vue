@@ -11,6 +11,7 @@
     },
   });
 
+  const router = useRouter();
   const route = useRoute();
   const history = useMonstieBuildHistoryStore();
   const buildStore = useMonstieBuildStore();
@@ -35,6 +36,16 @@
 
   function newBuild() {
     buildStore.goToNewBuild();
+  }
+
+  function deleteBuild() {
+    if (!build.value) {
+      return;
+    }
+
+    buildStore.removeBuild(build.value.id);
+
+    router.push('/3/builds/monstie');
   }
 
   watch(
@@ -97,6 +108,7 @@
     </UPageBody>
 
     <AppFabPanel>
+      <AppFab v-if="build" tooltip="Delete build" icon="ph:trash" @click="deleteBuild" />
       <AppFab tooltip="New build" icon="ph:plus" @click="newBuild" />
     </AppFabPanel>
   </div>
