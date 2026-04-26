@@ -1,0 +1,68 @@
+<script lang="ts" setup>
+  import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import { getAreasByElement } from '~/services/3/data';
+  import { statsTypeToText } from '~/services/3/presentation';
+
+  const props = defineProps<{ build: MonstieBuild }>();
+
+  const dualElementAreas = computed(() => {
+    if (!props.build.dualElement) {
+      return [];
+    }
+
+    return getAreasByElement(props.build.dualElement);
+  });
+</script>
+
+<template>
+  <section>
+    <h3 class="px-4 pt-2 text-lg font-semibold">Monstie</h3>
+
+    <div v-if="build.monstie" class="box-link">
+      <NuxtLink :to="`/3/monsters/${build.monstie.slug}`" prefetchOn="interaction">
+        <S3MonstieListItem :monster="build.monstie" mode="location" class="px-2.5" />
+      </NuxtLink>
+    </div>
+
+    <div class="flex flex-col gap-1 px-4 pb-2">
+      <div>
+        <div v-if="build.dualElement" class="flex items-center justify-between gap-1">
+          <h3 class="text-lg font-semibold">Dual Element</h3>
+
+          <div class="flex items-center">
+            <ElementIcon :element="build.dualElement" icon2 noTooltip />
+            <ElementLabel :element="build.dualElement" />
+          </div>
+        </div>
+
+        <div v-if="dualElementAreas.length > 0">
+          From areas
+          <span v-for="(area, index) in dualElementAreas" :key="area.region.slug + area.area.slug">
+            <AppNuxtLink
+              :to="`/3/habitats/${area.region.slug}/${area.area.slug}`"
+              prefetchOn="interaction"
+              :text="area.area.name"
+            />{{ index + 1 < dualElementAreas.length ? ', ' : '' }}
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <div v-if="build.region" class="flex items-center justify-between gap-1">
+          <h3 class="text-lg font-semibold">Stat Increases</h3>
+
+          <div v-text="build.region.powers.stats.map(statsTypeToText).join(', ')" />
+        </div>
+
+        <div v-if="build.region">
+          From region
+          <AppNuxtLink
+            :to="`/3/habitats/${build.region.slug}`"
+            prefetchOn="interaction"
+            :text="build.region.name"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
