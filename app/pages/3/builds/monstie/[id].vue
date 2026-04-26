@@ -108,7 +108,13 @@
     </UPageBody>
 
     <AppFabPanel>
-      <AppFab v-if="build" tooltip="Delete build" icon="ph:trash" @click="deleteBuild" />
+      <AppFab
+        v-if="build"
+        tooltip="Delete build"
+        icon="ph:trash"
+        destructive
+        @click="deleteBuild"
+      />
       <AppFab tooltip="New build" icon="ph:plus" @click="newBuild" />
     </AppFabPanel>
   </div>
