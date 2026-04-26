@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import { statsTypeToText } from '~/services/3/presentation';
 
   defineProps<{ build: MonstieBuild }>();
 </script>
@@ -24,7 +25,19 @@
         </div>
       </div>
 
-      <p>{{ build.region?.name }}</p>
+      <div v-if="build.region" class="flex flex-col gap-1">
+        <h3 class="text-lg font-semibold">Stat Increases</h3>
+
+        <span>
+          {{ build.region.powers.stats.map(statsTypeToText).join(', ') }}
+          from region
+          <AppNuxtLink
+            :to="`/3/habitats/${build.region.slug}`"
+            prefetchOn="interaction"
+            :text="build.region.name"
+          />
+        </span>
+      </div>
     </div>
   </section>
 </template>
