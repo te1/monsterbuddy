@@ -57,15 +57,11 @@
     <UPageBody class="-mt-3 lg:mt-0">
       <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
         <div class="flex flex-1 flex-col gap-3">
-          <p>{{ build.monstie?.name }}</p>
+          <S3MonstieBuildInfoCard :build="build" class="box px-4 py-2" />
 
-          <S3MonstieBuildGeneGrid :build="build" />
+          <S3MonstieBuildGeneGrid :build="build" class="box px-4 py-2" />
 
           <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
-
-          <p>{{ build.dualElement }}</p>
-
-          <p>{{ build.region?.name }}</p>
 
           <!-- Stats -->
 
