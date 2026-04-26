@@ -55,15 +55,30 @@
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">
-      <div v-if="build" class="grid grid-cols-2 gap-3">
-        <p>{{ build.description }}</p>
-        <p>{{ build.monstie?.name }}</p>
-        <S3MonstieBuildGeneGrid :build="build" />
-        <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
-        <S3MonstieBuildEggPowerList :build="build" class="box overflow-hidden" />
-        <p>{{ build.dualElement }}</p>
-        <p>{{ build.region?.name }}</p>
-        <!-- Stats -->
+      <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
+        <div class="flex flex-1 flex-col gap-3">
+          <p>{{ build.monstie?.name }}</p>
+
+          <S3MonstieBuildGeneGrid :build="build" />
+
+          <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
+
+          <p>{{ build.dualElement }}</p>
+
+          <p>{{ build.region?.name }}</p>
+
+          <!-- Stats -->
+
+          <!-- Effects -->
+
+          <!-- Duplicates / Stacking -->
+        </div>
+
+        <div class="flex flex-1 flex-col gap-3">
+          <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
+
+          <S3MonstieBuildEggPowerList :build="build" class="box overflow-hidden" />
+        </div>
       </div>
 
       <div v-else-if="buildId && history.allLoaded && !history.hasBuild(buildId)">

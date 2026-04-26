@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import { uniqBy } from 'es-toolkit/array';
   import type { EggPowerRequirement } from '~/services/3/types';
+  import { uniqBy } from 'es-toolkit/array';
 
   const props = defineProps<{ build: MonstieBuild }>();
 

@@ -1,3 +1,4 @@
+import type { EggPower, EggPowerRequirement, Gene, Monster, Region } from './types';
 import type { MonstieBuildEntity } from './localDb';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
 import { genesBySlug } from './genes';
