@@ -1,9 +1,13 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import { computedAsync } from '@vueuse/core';
   import { getAreasByElement } from '~/services/3/data';
   import { statsTypeToText } from '~/services/3/presentation';
+  import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
 
   const props = defineProps<{ build: MonstieBuild }>();
+
+  const history = useMonstieBuildHistoryStore();
 
   const dualElementAreas = computed(() => {
     if (!props.build.dualElement) {
@@ -12,10 +16,18 @@
 
     return getAreasByElement(props.build.dualElement);
   });
+
+  const isPinned = computedAsync(async () => {
+    return await history.isBuildPinned(props.build.id);
+  }, false);
+
+  function togglePin() {
+    history.togglePinnedBuild(props.build.id);
+  }
 </script>
 
 <template>
-  <section>
+  <section class="relative">
     <h3 class="px-4 pt-2 text-lg font-semibold">Monstie</h3>
 
     <div v-if="build.monstie" class="box-link">
@@ -63,6 +75,17 @@
           />
         </div>
       </div>
+    </div>
+
+    <div class="absolute top-1 right-1">
+      <ClientOnly>
+        <AppPinToggle
+          :modelValue="isPinned"
+          subject="build"
+          noLabel
+          @update:modelValue="togglePin"
+        />
+      </ClientOnly>
     </div>
   </section>
 </template>
