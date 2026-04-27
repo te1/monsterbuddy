@@ -80,9 +80,10 @@
 
           <S3MonstieBuildGeneGrid :build="build" class="box px-4 py-2" />
 
+          <S3MonstieBuildStatsCard :build="build" class="box px-4 py-2" />
+
           <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
 
-          <!-- Stats -->
           <!-- Effects -->
           <!-- Duplicates / Stacking -->
         </div>
