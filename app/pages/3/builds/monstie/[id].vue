@@ -84,8 +84,8 @@
 
           <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
 
-          <!-- Effects -->
-          <!-- Duplicates / Stacking -->
+          <!-- TODO Effects -->
+          <!-- TODO Duplicates / Stacking -->
         </div>
 
         <div class="flex flex-1 flex-col gap-3">
@@ -113,6 +113,7 @@
     </UPageBody>
 
     <AppFabPanel>
+      <!-- TODO don't have fabs? put action buttons at the end of the page? maybe edit fab? -->
       <AppFab
         v-if="build"
         tooltip="Delete build"
