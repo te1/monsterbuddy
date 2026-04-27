@@ -30,7 +30,11 @@
 
   function getGeneBonus(type: SkillDetailValueType): number {
     return props.build.uniqueGenes.reduce((total, gene) => {
-      return total + (gene.details?.find((detail) => detail.type === type)?.value ?? 0);
+      return (
+        total +
+        (gene.details?.find((detail) => detail.type === type && detail.condition == null)?.value ??
+          0)
+      );
     }, 0);
   }
 
