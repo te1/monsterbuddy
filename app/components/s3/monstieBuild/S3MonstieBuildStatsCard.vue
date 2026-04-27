@@ -198,7 +198,7 @@
 
       <div v-if="build.dualElement" class="mt-1.5 text-sm text-dimmed">
         Note that resistances for <strong class="font-semibold">dual element</strong> monsties can
-        different
+        be different
       </div>
     </div>
   </section>
