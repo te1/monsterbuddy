@@ -141,25 +141,28 @@ export const SkillEffectConditionSchema = z.enum([
 ]);
 export type SkillEffectCondition = z.infer<typeof SkillEffectConditionSchema>;
 
+export const SkillDetailValueTypeSchema = z.enum([
+  'critRate',
+  'evasionRate',
+  'staminaRecovery',
+  'startingStamina',
+  'maxHpRecovery',
+  'remainingHp',
+  'rawSpeed',
+  'kinship',
+  'wyvernfell',
+  'accuracy',
+  'priorityOverride',
+  'ailmentChance',
+  'ailmentInflictRate',
+  'blastblightTurns',
+  'debuffExtension',
+  'effectChance',
+]);
+export type SkillDetailValueType = z.infer<typeof SkillDetailValueTypeSchema>;
+
 export const SkillDetailValueSchema = z.object({
-  type: z.enum([
-    'critRate',
-    'evasionRate',
-    'staminaRecovery',
-    'startingStamina',
-    'maxHpRecovery',
-    'remainingHp',
-    'rawSpeed',
-    'kinship',
-    'wyvernfell',
-    'accuracy',
-    'priorityOverride',
-    'ailmentChance',
-    'ailmentInflictRate',
-    'blastblightTurns',
-    'debuffExtension',
-    'effectChance',
-  ]),
+  type: SkillDetailValueTypeSchema,
   condition: SkillEffectConditionSchema.optional(),
   value: z.number(),
   label: z.string().optional(),

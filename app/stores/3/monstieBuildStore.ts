@@ -30,6 +30,52 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
   const diag1Bingo = computed(() => getBingo(genes.value[0], genes.value[4], genes.value[8]));
   const diag2Bingo = computed(() => getBingo(genes.value[2], genes.value[4], genes.value[6]));
 
+  const allBingos = computed(() => [
+    row1Bingo,
+    row2Bingo,
+    row3Bingo,
+    col1Bingo,
+    col2Bingo,
+    col3Bingo,
+    diag1Bingo,
+    diag2Bingo,
+  ]);
+
+  const elementBingoCounts = computed(() => {
+    const map = new Map<ElementType, number>();
+
+    for (const bingo of allBingos.value) {
+      if (bingo.value.bingo && bingo.value.element) {
+        map.set(bingo.value.element, (map.get(bingo.value.element) ?? 0) + 1);
+      }
+    }
+
+    return [...map.entries()]
+      .map(([element, count]) => ({ count, element }))
+      .sort((a, b) => b.count - a.count);
+  });
+
+  const typeBingoCounts = computed(() => {
+    const map = new Map<AttackType, number>();
+
+    for (const bingo of allBingos.value) {
+      if (bingo.value.bingo && bingo.value.type) {
+        map.set(bingo.value.type, (map.get(bingo.value.type) ?? 0) + 1);
+      }
+    }
+
+    return [...map.entries()]
+      .map(([type, count]) => ({ count, type }))
+      .sort((a, b) => b.count - a.count);
+  });
+
+  const totalBingoCount = computed(() => {
+    return (
+      elementBingoCounts.value.reduce((total, { count }) => total + count, 0) +
+      typeBingoCounts.value.reduce((total, { count }) => total + count, 0)
+    );
+  });
+
   // -- actions
   async function goToNewBuild(): Promise<void> {
     if (build.value?.isEmpty()) {
@@ -137,6 +183,10 @@ const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
     col3Bingo,
     diag1Bingo,
     diag2Bingo,
+    allBingos,
+    elementBingoCounts,
+    typeBingoCounts,
+    totalBingoCount,
 
     // -- actions
     goToNewBuild,

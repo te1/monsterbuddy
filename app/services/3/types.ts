@@ -28,6 +28,7 @@ export type {
   SkillDebuff,
   SkillDebuffType,
   SkillDetail,
+  SkillDetailValueType,
   SkillEffectType,
   SkillTarget,
 } from '~~/data/3/genes.schema';

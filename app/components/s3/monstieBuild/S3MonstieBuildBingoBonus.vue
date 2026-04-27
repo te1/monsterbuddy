@@ -7,51 +7,7 @@
 
   const buildStore = useMonstieBuildStore();
 
-  const allBingos = computed(() => [
-    buildStore.row1Bingo,
-    buildStore.row2Bingo,
-    buildStore.row3Bingo,
-    buildStore.col1Bingo,
-    buildStore.col2Bingo,
-    buildStore.col3Bingo,
-    buildStore.diag1Bingo,
-    buildStore.diag2Bingo,
-  ]);
-
-  const elementBingoCounts = computed(() => {
-    const map = new Map<ElementType, number>();
-
-    for (const bingo of allBingos.value) {
-      if (bingo.bingo && bingo.element) {
-        map.set(bingo.element, (map.get(bingo.element) ?? 0) + 1);
-      }
-    }
-
-    return [...map.entries()]
-      .map(([element, count]) => ({ count, element }))
-      .sort((a, b) => b.count - a.count);
-  });
-
-  const typeBingoCounts = computed(() => {
-    const map = new Map<AttackType, number>();
-
-    for (const bingo of allBingos.value) {
-      if (bingo.bingo && bingo.type) {
-        map.set(bingo.type, (map.get(bingo.type) ?? 0) + 1);
-      }
-    }
-
-    return [...map.entries()]
-      .map(([type, count]) => ({ count, type }))
-      .sort((a, b) => b.count - a.count);
-  });
-
-  const totalBingoCount = computed(() => {
-    return (
-      elementBingoCounts.value.reduce((total, { count }) => total + count, 0) +
-      typeBingoCounts.value.reduce((total, { count }) => total + count, 0)
-    );
-  });
+  const { elementBingoCounts, typeBingoCounts, totalBingoCount } = storeToRefs(buildStore);
 
   function getBingoBonus(count: number) {
     switch (count) {

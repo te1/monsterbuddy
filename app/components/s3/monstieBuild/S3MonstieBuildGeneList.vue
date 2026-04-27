@@ -1,26 +1,10 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import { orderBy, uniqBy } from 'es-toolkit/array';
-  import { getGeneSizeAsNumber } from '~/services/3/genes';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
   const genes = computed(() => {
-    const all = props.build.genes.filter((gene) => gene != null);
-    const unique = uniqBy(all, (gene) => gene.baseName);
-
-    return orderBy(
-      unique,
-      [
-        (gene) => {
-          if (gene.baseName) {
-            return `${gene.baseName} ${getGeneSizeAsNumber(gene.size)}`;
-          }
-          return gene.name;
-        },
-      ],
-      ['asc']
-    );
+    return props.build.uniqueGenes;
   });
 
   const passiveGenes = computed(() => {

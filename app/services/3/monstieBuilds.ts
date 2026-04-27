@@ -1,7 +1,8 @@
 import type { EggPower, EggPowerRequirement, Gene, Monster, Region } from './types';
 import type { MonstieBuildEntity } from './localDb';
+import { orderBy, uniqBy } from 'es-toolkit/array';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
-import { genesBySlug } from './genes';
+import { genesBySlug, getGeneSizeAsNumber } from './genes';
 
 export class MonstieBuild {
   id: string;
@@ -75,6 +76,7 @@ export class MonstieBuild {
     return this.geneSlugs.map((slug) => genesBySlug.get(slug));
   }
 
+  get uniqueGenes(): Gene[] {
   get eggPowers(): (EggPower | undefined)[] {
     return this.eggPowerSlugs.map((slug) => eggPowersBySlug.get(slug));
   }
