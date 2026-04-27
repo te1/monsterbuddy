@@ -21,19 +21,19 @@ export class MonstieBuild {
 
   static fromPlaceholder(id: string): MonstieBuild {
     const build = new MonstieBuild(id);
-    build.name = 'Build 1';
+    build.name = 'Build 2';
     build.description = 'This is a placeholder build';
-    build.monstieSlug = 'silverwind-nargacuga';
+    build.monstieSlug = 'grimclaw-tigrex';
     build.geneSlugs = [
+      'quick-xl',
+      'antiburn-l',
+      'stamina-surge-xl',
+      'vigilance-xl',
+      'fruit-frenzy-plus',
       'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
-      'antiburn-s',
+      'stamina-boost-xl',
+      'dragon-buster-xl',
+      'critical-xl',
     ];
     build.eggPowerSlugs = ['resonance', 'best-buds', 'hardiness'];
     build.dualElement = 'fire';
