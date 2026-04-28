@@ -29,7 +29,10 @@
     mode="hover"
     :reference="reference"
     :content="{ side: 'top' }"
-    :ui="{ content: 'dark:bg-neutral-800 dark:ring-neutral-700' }"
+    :ui="{
+      content:
+        'w-fit max-w-[min(85dvw,var(--container-md))] dark:bg-neutral-800 dark:ring-neutral-700',
+    }"
   >
     <div class="contents">
       <slot />
@@ -49,8 +52,10 @@
       <slot />
     </div>
 
-    <template #body>
-      <slot name="content" />
+    <template #content>
+      <div class="px-3 py-2">
+        <slot name="content" />
+      </div>
     </template>
   </UModal>
 </template>

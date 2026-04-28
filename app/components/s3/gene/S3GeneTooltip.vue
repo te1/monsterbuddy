@@ -12,7 +12,7 @@
     <slot />
 
     <template #content>
-      <div class="w-fit max-w-[min(85dvw,var(--container-md))] text-sm">
+      <div class="text-sm">
         <div class="@container flex items-center justify-between gap-3">
           <div>
             <div class="-mb-0.5 text-muted" v-text="info" />
@@ -21,17 +21,17 @@
           </div>
 
           <div v-if="gene.active" class="hidden self-start text-muted @xs:flex">
-            <span v-if="gene.stamina != null">
+            <span v-if="gene.stamina != null" class="whitespace-nowrap">
               Stam
               <strong class="font-bold" v-text="gene.stamina" />
             </span>
 
-            <span v-if="gene.power != null">
+            <span v-if="gene.power != null" class="whitespace-nowrap">
               , Pwr
               <strong class="font-bold" v-text="gene.power" />
             </span>
 
-            <span v-if="gene.wyvernfell != null">
+            <span v-if="gene.wyvernfell != null" class="whitespace-nowrap">
               , Wyvf
               <strong class="font-bold" v-text="gene.wyvernfell" />
             </span>
