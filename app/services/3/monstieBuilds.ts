@@ -76,8 +76,8 @@ export class MonstieBuild {
     return this.geneSlugs.map((slug) => genesBySlug.get(slug));
   }
 
-  get uniqueGenes(): Gene[] {
-    const sorted = orderBy(
+  get sortedGenes(): Gene[] {
+    return orderBy(
       this.genes.filter((gene) => gene != null),
       [
         (gene) => {
@@ -87,11 +87,14 @@ export class MonstieBuild {
           return gene.name;
         },
       ],
-      ['desc'] // desc to get only the largest size for genes of the same base name
+      ['asc']
     );
+  }
 
-    // reverse to get alphabetical order again
-    return uniqBy(sorted, (gene) => gene.baseName).toReversed();
+  get uniqueGenes(): Gene[] {
+    // reverse to keep the largest size
+    // reverse again to restore alphabetical order
+    return uniqBy(this.sortedGenes.toReversed(), (gene) => gene.baseName).toReversed();
   }
 
   get eggPowers(): (EggPower | undefined)[] {

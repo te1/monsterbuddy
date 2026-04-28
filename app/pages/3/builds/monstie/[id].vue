@@ -84,8 +84,8 @@
 
           <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
 
-          <!-- TODO Effects -->
-          <!-- TODO Duplicates / Stacking -->
+          <!-- TODO Effects from Genes, Egg Powers, Stat Increases -->
+          <!-- HP, Def: +15%, Recovery: 5, Attack: ? -->
         </div>
 
         <div class="flex flex-1 flex-col gap-3">
