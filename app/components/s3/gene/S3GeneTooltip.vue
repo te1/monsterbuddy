@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <AppRichTooltip>
+  <AppRichTooltip :link="`/3/genes/${gene.slug}`" linkText="Go to gene page">
     <slot />
 
     <template #content>

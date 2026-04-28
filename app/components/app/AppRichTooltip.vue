@@ -1,5 +1,18 @@
 <script lang="ts" setup>
+  import type { RouteLocationRaw } from 'vue-router';
+
   const canHover = useCanHover();
+
+  withDefaults(
+    defineProps<{
+      link?: RouteLocationRaw;
+      linkText?: string;
+    }>(),
+    {
+      link: undefined,
+      linkText: 'Go to details page',
+    }
+  );
 
   const reference = computed(() => {
     return {
@@ -53,8 +66,14 @@
     </div>
 
     <template #content>
-      <div class="px-3 py-2">
-        <slot name="content" />
+      <div class="flex flex-col gap-3 px-3 py-2">
+        <div>
+          <slot name="content" />
+        </div>
+
+        <div v-if="link">
+          <AppNuxtLink :to="link" :text="linkText" class="outline-none" />
+        </div>
       </div>
     </template>
   </UModal>
