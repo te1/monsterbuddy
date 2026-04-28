@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { BingoBonusType, SkillDetailValueType } from '~/services/3/types';
+  import type { BingoBonusType, RegionStatsType, SkillDetailValueType } from '~/services/3/types';
   import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
   import {
     elementalResistanceTooltip,
@@ -46,14 +46,25 @@
     );
   }
 
+  function getRegionBonus(type?: RegionStatsType): number {
+    if (type == null) {
+      return 0;
+    }
+
+    // we only consider 'recovery' here which is 5 at 3 stars
+    return props.build.region?.powers?.stats?.includes(type) ? 5 : 0;
+  }
+
   function getStatBonus(
     base: number | undefined,
     geneType: SkillDetailValueType,
-    bingoType: BingoBonusType
+    bingoType: BingoBonusType,
+    regionStatsType?: RegionStatsType
   ) {
     const genes = getGeneBonus(geneType);
     const bingos = getBingoBonus(bingoType);
-    const total = base != null ? base + genes + bingos : undefined;
+    const region = getRegionBonus(regionStatsType);
+    const total = base != null ? base + genes + bingos + region : undefined;
     const buffed = total != null && base != null && total > base;
 
     let tooltip: string | undefined;
@@ -68,6 +79,10 @@
         tooltip += ` + ${bingos} (Bingos)`;
       }
 
+      if (region > 0) {
+        tooltip += ` + ${region} (Region)`;
+      }
+
       tooltip += ` = ${total} (Total)`;
     }
 
@@ -79,7 +94,12 @@
   });
 
   const staminaRecovery = computed(() => {
-    return getStatBonus(monstieStats.value?.rawRecovery, 'staminaRecovery', 'staminaRecovery');
+    return getStatBonus(
+      monstieStats.value?.rawRecovery,
+      'staminaRecovery',
+      'staminaRecovery',
+      'recovery'
+    );
   });
 
   const critRate = computed(() => {
