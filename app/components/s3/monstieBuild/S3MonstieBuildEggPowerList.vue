@@ -70,7 +70,10 @@
             class="size-7"
             :class="{ 'opacity-50': !build.hasRequirement(requirement) }"
           >
-            <AppTooltip :tooltip="formatEggPowerRequirement(requirement)">
+            <AppTooltip
+              :tooltip="formatEggPowerRequirement(requirement)"
+              :content="{ side: 'top' }"
+            >
               <ElementIcon
                 v-if="'element' in requirement"
                 :element="requirement.element"

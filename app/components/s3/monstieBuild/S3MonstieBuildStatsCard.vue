@@ -131,7 +131,7 @@
       >
         <div v-if="startingStamina.base != null" class="flex items-center justify-between gap-2">
           <span>Starting Stamina</span>
-          <AppTooltip :tooltip="startingStamina.tooltip">
+          <AppTooltip :tooltip="startingStamina.tooltip" :content="{ side: 'top' }">
             <span
               class="text-right font-semibold"
               :class="{
@@ -144,7 +144,7 @@
 
         <div v-if="staminaRecovery.base != null" class="flex items-center justify-between gap-2">
           <span>Stamina Recovery</span>
-          <AppTooltip :tooltip="staminaRecovery.tooltip">
+          <AppTooltip :tooltip="staminaRecovery.tooltip" :content="{ side: 'top' }">
             <span
               class="text-right font-semibold"
               :class="{
@@ -157,7 +157,7 @@
 
         <div v-if="critRate.base != null" class="flex items-center justify-between gap-2">
           <span>Crit Rate</span>
-          <AppTooltip :tooltip="critRate.tooltip">
+          <AppTooltip :tooltip="critRate.tooltip" :content="{ side: 'top' }">
             <span
               class="text-right font-semibold"
               :class="{ 'text-emerald-600 dark:text-emerald-500': critRate.buffed }"
@@ -171,7 +171,7 @@
           class="flex items-center justify-between gap-2"
         >
           <span>Wyvernfell</span>
-          <AppTooltip :tooltip="wyvernfell.tooltip">
+          <AppTooltip :tooltip="wyvernfell.tooltip" :content="{ side: 'top' }">
             <span
               class="text-right font-semibold"
               :class="{ 'text-emerald-600 dark:text-emerald-500': wyvernfell.buffed }"
@@ -182,7 +182,7 @@
 
         <div v-if="rawSpeed.base != null" class="flex items-center justify-between gap-2">
           <span>Speed</span>
-          <AppTooltip :tooltip="rawSpeed.tooltip">
+          <AppTooltip :tooltip="rawSpeed.tooltip" :content="{ side: 'top' }">
             <span
               class="text-right font-semibold"
               :class="{ 'text-emerald-600 dark:text-emerald-500': rawSpeed.buffed }"

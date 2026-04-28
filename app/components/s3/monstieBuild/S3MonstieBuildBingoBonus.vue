@@ -64,7 +64,10 @@
               <ElementIcon :element="count.element" icon2 class="-ml-1.5 size-7.5" />
               <ElementLabel :element="count.element" class="w-28" />
             </div>
-            <AppTooltip :tooltip="`${count.count} ${count.count === 1 ? 'Bingo' : 'Bingos'}`">
+            <AppTooltip
+              :tooltip="`${count.count} ${count.count === 1 ? 'Bingo' : 'Bingos'}`"
+              :content="{ side: 'top' }"
+            >
               <span class="w-10 text-right font-semibold">
                 +{{ getBingoBonus(count.count) * 100 }}%
               </span>
@@ -80,7 +83,10 @@
               <AttackTypeIcon :type="count.type" icon2 class="-ml-1.5 size-7.5 dark:invert" />
               <AttackTypeLabel :type="count.type" class="w-28" />
             </div>
-            <AppTooltip :tooltip="`${count.count} ${count.count === 1 ? 'Bingo' : 'Bingos'}`">
+            <AppTooltip
+              :tooltip="`${count.count} ${count.count === 1 ? 'Bingo' : 'Bingos'}`"
+              :content="{ side: 'top' }"
+            >
               <span class="w-10 text-right font-semibold">
                 +{{ getBingoBonus(count.count) * 100 }}%
               </span>
@@ -100,7 +106,10 @@
             :class="{ 'text-dimmed': totalBingoCount < bonus.bingoCount }"
           >
             <div class="flex h-7.5 items-center gap-1">
-              <AppTooltip :tooltip="`Requires ${bonus.bingoCount} bingos to activate`">
+              <AppTooltip
+                :tooltip="`Requires ${bonus.bingoCount} bingos to activate`"
+                :content="{ side: 'top' }"
+              >
                 <div class="w-6 font-semibold" v-text="bonus.bingoCount" />
               </AppTooltip>
               <div v-text="formatBingoBonusType(bonus.type)" />
