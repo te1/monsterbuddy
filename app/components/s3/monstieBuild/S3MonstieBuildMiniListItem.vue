@@ -28,10 +28,12 @@
       prefetchOn="interaction"
       class="flex max-w-max items-center gap-3 hover:text-default"
     >
-      <div class="hidden size-9 xl:block">
-        <S3MonsterIcon :monster="monstie" noTooltip size="size-9" />
-      </div>
-      <div class="truncate" v-text="build.nameWithFallback" />
+      <S3MonstieBuildTooltip :build="build">
+        <div class="hidden size-9 xl:block">
+          <S3MonsterIcon :monster="monstie" noTooltip size="size-9" />
+        </div>
+        <div class="truncate" v-text="build.nameWithFallback" />
+      </S3MonstieBuildTooltip>
     </NuxtLink>
 
     <UTooltip
