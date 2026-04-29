@@ -24,7 +24,16 @@
   );
 
   const buffs = computed(() => {
-    const all = genes.value.flatMap((gene) => gene.buffs ?? []);
+    const ignored = [
+      //
+      'Burn Effect',
+      'Blast Effect',
+      'Paralysis Effect',
+    ];
+
+    const all = genes.value
+      .flatMap((gene) => gene.buffs ?? [])
+      .filter((buff) => !ignored.includes(buff.type));
     const unique = uniqWith(all, (a, b) => isEqual(a, b));
 
     return sortBy(unique, [
@@ -46,23 +55,22 @@
   });
 
   const detailTypes = [
-    // -- SkillDetailValue
-    // 'evasionRate', // move to stats
-    'ailmentInflictRate',
-
-    // -- SkillDetailFactor
     'damageDone',
     'damageTaken',
     'staminaCost',
-    // 'maxHp', // move to stats
     'kinshipGeneration',
+    'ailmentInflictRate',
   ];
 
+  const detailOrder = new Map(detailTypes.map((detail, index) => [detail, index]));
+
   const details = computed(() => {
-    return genes.value
+    const all = genes.value
       .flatMap((gene) => gene.details ?? [])
       .filter((detail) => detailTypes.includes(detail.type))
       .filter((detail) => detail.condition == null);
+
+    return sortBy(all, [(detail) => detailOrder.get(detail.type)!]);
   });
 
   // TODO egg powers
@@ -112,7 +120,7 @@
       <div class="text-lg font-semibold">Passive Effects</div>
 
       <div class="flex flex-col gap-1">
-        <S3SkillDetail v-for="detail in details" :key="detail.type" :detail="detail" />
+        <S3SkillDetail v-for="detail in details" :key="detail.type" :detail="detail" verbose />
       </div>
     </div>
   </section>

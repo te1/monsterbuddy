@@ -182,6 +182,7 @@ export const SkillDetailFactorSchema = z.object({
   condition: SkillEffectConditionSchema.optional(),
   value: z.number(),
   op: z.enum(['multiplier', 'additive']),
+  label: z.string().optional(),
 });
 export type SkillDetailFactor = z.infer<typeof SkillDetailFactorSchema>;
 

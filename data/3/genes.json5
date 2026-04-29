@@ -51,7 +51,7 @@
     element: 'dragon',
     description: 'Slightly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive' },
+      { type: 'damageDone', element: 'all', value: 0.1, op: 'additive', label: 'Skill' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (M)', 'All-Out (L)', 'All-Out (XL)'],
@@ -65,7 +65,7 @@
     element: 'dragon',
     description: 'Increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.17, op: 'additive' },
+      { type: 'damageDone', element: 'all', value: 0.17, op: 'additive', label: 'Skill' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (L)', 'All-Out (XL)'],
@@ -79,7 +79,7 @@
     element: 'dragon',
     description: 'Greatly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.24, op: 'additive' },
+      { type: 'damageDone', element: 'all', value: 0.24, op: 'additive', label: 'Skill' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (M)', 'All-Out (XL)'],
@@ -93,7 +93,7 @@
     element: 'dragon',
     description: 'Significantly increases damage dealt by skills in exchange for a higher Stamina cost.',
     details: [
-      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive' },
+      { type: 'damageDone', element: 'all', value: 0.3, op: 'additive', label: 'Skill' },
       { type: 'staminaCost', value: 1.2, op: 'multiplier' },
     ],
     sizes: ['All-Out (S)', 'All-Out (M)', 'All-Out (L)'],
