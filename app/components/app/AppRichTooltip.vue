@@ -15,6 +15,7 @@
       content: () => ({ side: 'top' }),
       link: undefined,
       linkText: 'Go to details page',
+      noModal: false,
     }
   );
 
