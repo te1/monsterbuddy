@@ -28,7 +28,7 @@
       prefetchOn="interaction"
       class="flex max-w-max items-center gap-3 hover:text-default"
     >
-      <S3MonstieBuildTooltip :build="build">
+      <S3MonstieBuildTooltip :build="build" :content="{ side: 'left' }">
         <div class="hidden size-9 xl:block">
           <S3MonsterIcon :monster="monstie" noTooltip size="size-9" />
         </div>

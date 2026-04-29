@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <AppRichTooltip>
+  <AppRichTooltip noModal>
     <slot />
 
     <template #content>

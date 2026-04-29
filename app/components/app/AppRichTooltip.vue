@@ -1,14 +1,18 @@
 <script lang="ts" setup>
+  import type { PopoverProps } from '@nuxt/ui';
   import type { RouteLocationRaw } from 'vue-router';
 
   const canHover = useCanHover();
 
   withDefaults(
     defineProps<{
+      content?: PopoverProps['content'];
       link?: RouteLocationRaw;
       linkText?: string;
+      noModal?: boolean;
     }>(),
     {
+      content: () => ({ side: 'top' }),
       link: undefined,
       linkText: 'Go to details page',
     }
@@ -41,7 +45,9 @@
     v-if="canHover"
     mode="hover"
     :reference="reference"
-    :content="{ side: 'top' }"
+    :openDelay="100"
+    :closeDelay="100"
+    :content="content"
     :ui="{
       content:
         'w-fit max-w-[min(85dvw,var(--container-md))] dark:bg-neutral-800 dark:ring-neutral-700',
@@ -60,7 +66,7 @@
     </template>
   </UPopover>
 
-  <UModal v-else>
+  <UModal v-else-if="!noModal">
     <div class="contents">
       <slot />
     </div>
@@ -77,4 +83,8 @@
       </div>
     </template>
   </UModal>
+
+  <div v-else>
+    <slot />
+  </div>
 </template>
