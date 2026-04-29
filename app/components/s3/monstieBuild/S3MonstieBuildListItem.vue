@@ -15,7 +15,13 @@
       <S3MonsterIcon :monster="monstie" noTooltip size="size-14" />
     </div>
 
-    <div class="my-1.5 mr-1.5 flex-1 self-start text-sm">
+    <div v-if="build.monstie" class="_mr-1 flex flex-col items-center gap-1">
+      <AttackTypeIcon class="size-7" :type="monstie.monstie?.attack" noTooltip />
+
+      <ElementIcon class="size-7" :element="monstie.element" noTooltip />
+    </div>
+
+    <div class="m-1.5 flex-1 self-start text-sm">
       <div class="flex items-center justify-between">
         <div class="text-base leading-snug font-semibold" v-text="build.nameWithFallback" />
       </div>
@@ -26,12 +32,6 @@
       </div>
 
       <div v-if="build.description" class="line-clamp-1 text-muted" v-text="build.description" />
-    </div>
-
-    <div v-if="build.monstie" class="mr-1 flex flex-col items-center gap-1">
-      <AttackTypeIcon class="size-7" :type="monstie.monstie?.attack" noTooltip />
-
-      <ElementIcon class="size-7" :element="monstie.element" noTooltip />
     </div>
   </div>
 </template>
