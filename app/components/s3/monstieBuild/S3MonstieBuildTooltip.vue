@@ -9,7 +9,13 @@
     <slot />
 
     <template #content>
-      <S3MonstieBuildGeneGrid :build="build" />
+      <div class="flex flex-col gap-3">
+        <S3MonstieBuildListItem :build="build" />
+
+        <div class="mb-3 grid place-items-center">
+          <S3MonstieBuildGeneGrid :build="build" />
+        </div>
+      </div>
     </template>
   </AppRichTooltip>
 </template>
