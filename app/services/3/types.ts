@@ -28,6 +28,7 @@ export type {
   SkillDebuff,
   SkillDebuffType,
   SkillDetail,
+  SkillDetailFactorType,
   SkillDetailValueType,
   SkillEffectType,
   SkillTarget,

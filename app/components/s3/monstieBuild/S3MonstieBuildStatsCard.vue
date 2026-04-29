@@ -1,6 +1,11 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { BingoBonusType, RegionStatsType, SkillDetailValueType } from '~/services/3/types';
+  import type {
+    BingoBonusType,
+    RegionStatsType,
+    SkillDetailFactorType,
+    SkillDetailValueType,
+  } from '~/services/3/types';
   import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
   import {
     elementalResistanceTooltip,
@@ -28,17 +33,29 @@
     );
   });
 
-  function getGeneBonus(type: SkillDetailValueType): number {
-    return props.build.uniqueGenes.reduce((total, gene) => {
-      return (
-        total +
-        (gene.details?.find((detail) => detail.type === type && detail.condition == null)?.value ??
-          0)
-      );
-    }, 0);
+  function getGeneBonus(type?: SkillDetailValueType | SkillDetailFactorType): number {
+    if (type == null) {
+      return 0;
+    }
+
+    const value = props.build.uniqueGenes.reduce(
+      (total, gene) =>
+        total + (gene.details?.find((d) => d.type === type && d.condition == null)?.value ?? 0),
+      0
+    );
+
+    if (type === 'maxHp') {
+      return Number(((value - 1) * 100).toFixed(0));
+    }
+
+    return value;
   }
 
-  function getBingoBonus(type: BingoBonusType): number {
+  function getBingoBonus(type?: BingoBonusType): number {
+    if (type == null) {
+      return 0;
+    }
+
     return (
       props.build.monstie?.monstie?.bingoBonuses?.find(
         (bonus) => bonus.type === type && totalBingoCount.value >= bonus.bingoCount
@@ -57,8 +74,8 @@
 
   function getStatBonus(
     base: number | undefined,
-    geneType: SkillDetailValueType,
-    bingoType: BingoBonusType,
+    geneType?: SkillDetailValueType | SkillDetailFactorType,
+    bingoType?: BingoBonusType,
     regionStatsType?: RegionStatsType
   ) {
     const genes = getGeneBonus(geneType);
@@ -69,21 +86,25 @@
 
     let tooltip: string | undefined;
     if (buffed) {
-      tooltip = `${base} (Monstie)`;
+      const parts: string[] = [];
+
+      if (geneType !== 'maxHp') {
+        parts.push(`${base} (Monstie)`);
+      }
 
       if (genes > 0) {
-        tooltip += ` + ${genes} (Genes)`;
+        parts.push(`${genes} (Genes)`);
       }
 
       if (bingos > 0) {
-        tooltip += ` + ${bingos} (Bingos)`;
+        parts.push(`${bingos} (Bingos)`);
       }
 
       if (region > 0) {
-        tooltip += ` + ${region} (Region)`;
+        parts.push(`${region} (Region)`);
       }
 
-      tooltip += ` = ${total} (Total)`;
+      tooltip = parts.join(' + ') + ` = ${total} (Total)`;
     }
 
     return { base, genes, bingos, total, buffed, tooltip };
@@ -112,6 +133,14 @@
 
   const rawSpeed = computed(() => {
     return getStatBonus(monstieStats.value?.rawSpeed, 'rawSpeed', 'speed');
+  });
+
+  const evasionRate = computed(() => {
+    return getStatBonus(0, 'evasionRate');
+  });
+
+  const maxHp = computed(() => {
+    return getStatBonus(0, 'maxHp');
   });
 
   const elementalResistances = computed(() => props.build.monstie?.stats?.elementalResistance);
@@ -187,6 +216,28 @@
               class="text-right font-semibold"
               :class="{ 'text-emerald-600 dark:text-emerald-500': rawSpeed.buffed }"
               v-text="rawSpeed.total"
+            />
+          </AppTooltip>
+        </div>
+
+        <div v-if="evasionRate.total != null" class="flex items-center justify-between gap-2">
+          <span>Evasion</span>
+          <AppTooltip :tooltip="evasionRate.tooltip" :content="{ side: 'top' }">
+            <span
+              class="text-right font-semibold"
+              :class="{ 'text-emerald-600 dark:text-emerald-500': evasionRate.buffed }"
+              v-text="`+${evasionRate.total}%`"
+            />
+          </AppTooltip>
+        </div>
+
+        <div v-if="maxHp.total != null" class="flex items-center justify-between gap-2">
+          <span>HP</span>
+          <AppTooltip :tooltip="maxHp.tooltip" :content="{ side: 'top' }">
+            <span
+              class="text-right font-semibold"
+              :class="{ 'text-emerald-600 dark:text-emerald-500': maxHp.buffed }"
+              v-text="`+${maxHp.total}%`"
             />
           </AppTooltip>
         </div>
