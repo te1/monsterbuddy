@@ -22,18 +22,12 @@
   const buffSizeOrder = new Map(
     [undefined, 'S', 'M', 'L', 'stacking'].map((size, index) => [size, index])
   );
+  const buffBlacklist = ['Burn Effect', 'Blast Effect', 'Paralysis Effect'];
 
   const buffs = computed(() => {
-    const ignored = [
-      //
-      'Burn Effect',
-      'Blast Effect',
-      'Paralysis Effect',
-    ];
-
     const all = genes.value
       .flatMap((gene) => gene.buffs ?? [])
-      .filter((buff) => !ignored.includes(buff.type));
+      .filter((buff) => !buffBlacklist.includes(buff.type));
     const unique = uniqWith(all, (a, b) => isEqual(a, b));
 
     return sortBy(unique, [
@@ -61,7 +55,6 @@
     'kinshipGeneration',
     'ailmentInflictRate',
   ];
-
   const detailOrder = new Map(detailTypes.map((detail, index) => [detail, index]));
 
   const details = computed(() => {
@@ -73,14 +66,32 @@
     return sortBy(all, [(detail) => detailOrder.get(detail.type)!]);
   });
 
-  // TODO egg powers
+  const eggPowerDetailTypes = ['kinship', 'kinshipGeneration'];
+  const eggPowerDetailOrder = new Map(eggPowerDetailTypes.map((detail, index) => [detail, index]));
+
+  const eggPowers = computed(() => {
+    const all = props.build.eggPowers.filter((eggPower) => eggPower != null);
+    const variants = all
+      .map((eggPower) => {
+        return props.build.isEggPowerAwakened(eggPower)
+          ? eggPower.variants[1]
+          : eggPower.variants[0];
+      })
+      .filter((variant) => variant != null);
+    const details = variants
+      .flatMap((variant) => variant.details ?? [])
+      .filter((detail) => eggPowerDetailTypes.includes(detail.type));
+
+    return sortBy(details, [(detail) => eggPowerDetailOrder.get(detail.type)!]);
+  });
 
   const hasEffects = computed(() => {
     return (
       ailments.value.length > 0 ||
       buffs.value.length > 0 ||
       debuffs.value.length > 0 ||
-      details.value.length > 0
+      details.value.length > 0 ||
+      eggPowers.value.length > 0
     );
   });
 </script>
@@ -117,10 +128,18 @@
     </div>
 
     <div v-if="details.length > 0">
-      <div class="text-lg font-semibold">Passive Effects</div>
+      <div class="text-lg font-semibold">Passive Gene Effects</div>
 
       <div class="flex flex-col gap-1">
         <S3SkillDetail v-for="detail in details" :key="detail.type" :detail="detail" verbose />
+      </div>
+    </div>
+
+    <div v-if="eggPowers.length > 0">
+      <div class="text-lg font-semibold">Passive Egg Power Effects</div>
+
+      <div class="flex flex-col gap-1">
+        <S3EggPowerDetail v-for="eggPower in eggPowers" :key="eggPower.type" :detail="eggPower" />
       </div>
     </div>
   </section>
