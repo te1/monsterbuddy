@@ -94,7 +94,7 @@ export class MonstieBuild {
   get uniqueGenes(): Gene[] {
     // reverse to keep the largest size
     // reverse again to restore alphabetical order
-    return uniqBy(this.sortedGenes.toReversed(), (gene) => gene.baseName).toReversed();
+    return uniqBy(this.sortedGenes.toReversed(), (gene) => gene.baseName ?? gene.name).toReversed();
   }
 
   get eggPowers(): (EggPower | undefined)[] {
