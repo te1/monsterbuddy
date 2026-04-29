@@ -107,7 +107,15 @@ export default defineNuxtConfig({
     },
 
     optimizeDeps: {
-      include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string', 'nanoid', 'dexie'],
+      include: [
+        '@vueuse/core',
+        'es-toolkit/array',
+        'es-toolkit/predicate',
+        'es-toolkit/string',
+        'dexie',
+        'nanoid',
+        '@plausible-analytics/tracker',
+      ],
     },
   },
 

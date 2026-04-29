@@ -83,14 +83,14 @@
           <S3MonstieBuildStatsCard :build="build" class="box px-4 py-2" />
 
           <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
-
-          <!-- TODO Effects from Genes, Egg Powers -->
         </div>
 
         <div class="flex flex-1 flex-col gap-3">
           <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
 
           <S3MonstieBuildEggPowerList :build="build" class="box overflow-hidden" />
+
+          <S3MonstieBuildEffectList :build="build" class="box px-4 py-2" />
         </div>
       </div>
 
