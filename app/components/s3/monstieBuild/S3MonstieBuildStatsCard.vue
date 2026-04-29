@@ -220,7 +220,10 @@
           </AppTooltip>
         </div>
 
-        <div v-if="evasionRate.total != null" class="flex items-center justify-between gap-2">
+        <div
+          v-if="evasionRate.buffed && evasionRate.total != null"
+          class="flex items-center justify-between gap-2"
+        >
           <span>Evasion</span>
           <AppTooltip :tooltip="evasionRate.tooltip" :content="{ side: 'top' }">
             <span
@@ -231,7 +234,10 @@
           </AppTooltip>
         </div>
 
-        <div v-if="maxHp.total != null" class="flex items-center justify-between gap-2">
+        <div
+          v-if="maxHp.buffed && maxHp.total != null"
+          class="flex items-center justify-between gap-2"
+        >
           <span>HP</span>
           <AppTooltip :tooltip="maxHp.tooltip" :content="{ side: 'top' }">
             <span
