@@ -15,7 +15,7 @@
 
   const props = defineProps<{ build: MonstieBuild }>();
 
-  const buildStore = useMonstieBuildStore();
+  const buildStore = useMonstieBuildStore(props.build);
 
   const { totalBingoCount } = storeToRefs(buildStore);
 

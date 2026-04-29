@@ -1,20 +1,20 @@
 <script lang="ts" setup>
   import { computedAsync } from '@vueuse/core';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const router = useRouter();
   const history = useMonstieBuildHistoryStore();
-  const buildStore = useMonstieBuildStore();
+  const buildManager = useMonstieBuildManager();
 
-  const build = computed(() => buildStore.build);
+  const build = computed(() => buildManager.build);
 
   const isPinned = computedAsync(async () => {
     return build.value ? await history.isBuildPinned(build.value.id) : false;
   }, false);
 
   function newBuild() {
-    buildStore.goToNewBuild();
+    buildManager.goToNewBuild();
   }
 
   function togglePin() {
@@ -28,7 +28,7 @@
       return;
     }
 
-    buildStore.removeBuild(build.value.id);
+    buildManager.removeBuild(build.value.id);
 
     router.push('/3/builds/monstie');
   }

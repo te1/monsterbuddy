@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import S3MonstieBuildDetailsSidebar from '~/components/s3/monstieBuild/S3MonstieBuildDetailsSidebar.vue';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildDetailsSidebar,
@@ -14,15 +14,15 @@
   const router = useRouter();
   const route = useRoute();
   const history = useMonstieBuildHistoryStore();
-  const buildStore = useMonstieBuildStore();
+  const buildManager = useMonstieBuildManager();
 
   const buildId = computed(() =>
     Array.isArray(route.params.id) ? route.params.id[0] : route.params.id
   );
 
-  buildStore.buildId = buildId.value;
+  buildManager.buildId = buildId.value;
 
-  const build = computed(() => buildStore.build);
+  const build = computed(() => buildManager.build);
 
   const title = computed(() => {
     return build.value?.nameWithFallback ?? `Monstie Build `;
@@ -37,7 +37,7 @@
   const headline = gameTypeToFullName('mhst3');
 
   function newBuild() {
-    buildStore.goToNewBuild();
+    buildManager.goToNewBuild();
   }
 
   function deleteBuild() {
@@ -45,7 +45,7 @@
       return;
     }
 
-    buildStore.removeBuild(build.value.id);
+    buildManager.removeBuild(build.value.id);
 
     router.push('/3/builds/monstie');
   }
@@ -66,7 +66,7 @@
 </script>
 
 <template>
-  <div v-if="!buildStore.pending">
+  <div v-if="!buildManager.pending">
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">
@@ -78,7 +78,7 @@
         <div class="flex flex-1 flex-col gap-3">
           <S3MonstieBuildMonstieCard :build="build" class="box overflow-hidden" />
 
-          <S3MonstieBuildGeneGrid :build="build" class="box px-4 py-2" />
+          <S3MonstieBuildBingoCard :build="build" class="box px-4 py-2" />
 
           <S3MonstieBuildStatsCard :build="build" class="box px-4 py-2" />
 

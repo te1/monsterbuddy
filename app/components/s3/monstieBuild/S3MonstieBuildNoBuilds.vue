@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
-  const buildStore = useMonstieBuildStore();
+  const buildManager = useMonstieBuildManager();
 
   function newBuild() {
-    buildStore.goToNewBuild();
+    buildManager.goToNewBuild();
   }
 </script>
 

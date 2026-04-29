@@ -3,9 +3,9 @@
   import { formatBingoBonusType, formatBingoBonusValue } from '~/services/3/presentation';
   import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
-  defineProps<{ build: MonstieBuild }>();
+  const props = defineProps<{ build: MonstieBuild }>();
 
-  const buildStore = useMonstieBuildStore();
+  const buildStore = useMonstieBuildStore(props.build);
 
   const { elementBingoCounts, typeBingoCounts, totalBingoCount } = storeToRefs(buildStore);
 

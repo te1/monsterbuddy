@@ -1,205 +1,121 @@
-import type { UpdateSpec } from 'dexie';
-import type { MonstieBuildEntity } from '~/services/3/localDb';
 import type { Gene } from '~/services/3/types';
-import { customAlphabet } from 'nanoid';
+import type { MonstieBuild } from '~/services/3/monstieBuilds';
 import { uniq } from 'es-toolkit/array';
-import { db } from '~/services/3/localDb';
-import { MonstieBuild } from '~/services/3/monstieBuilds';
-import { useMonstieBuildEntity } from '~/composables/3/useMonstieBuild';
 
-const useMonstieBuildStore = defineStore('s3/monstieBuild', () => {
-  const router = useRouter();
-
-  // -- state
-  const buildId = ref<string | undefined>(undefined);
-  const entity = useMonstieBuildEntity(buildId);
-
-  // -- getters
-  const build = computed<MonstieBuild | undefined>(() => {
-    return entity.data.value ? MonstieBuild.fromEntity(entity.data.value) : undefined;
-  });
-
-  const genes = computed(() => build.value?.genes ?? []);
-
-  const row1Bingo = computed(() => getBingo(genes.value[0], genes.value[1], genes.value[2]));
-  const row2Bingo = computed(() => getBingo(genes.value[3], genes.value[4], genes.value[5]));
-  const row3Bingo = computed(() => getBingo(genes.value[6], genes.value[7], genes.value[8]));
-  const col1Bingo = computed(() => getBingo(genes.value[0], genes.value[3], genes.value[6]));
-  const col2Bingo = computed(() => getBingo(genes.value[1], genes.value[4], genes.value[7]));
-  const col3Bingo = computed(() => getBingo(genes.value[2], genes.value[5], genes.value[8]));
-  const diag1Bingo = computed(() => getBingo(genes.value[0], genes.value[4], genes.value[8]));
-  const diag2Bingo = computed(() => getBingo(genes.value[2], genes.value[4], genes.value[6]));
-
-  const allBingos = computed(() => [
-    row1Bingo,
-    row2Bingo,
-    row3Bingo,
-    col1Bingo,
-    col2Bingo,
-    col3Bingo,
-    diag1Bingo,
-    diag2Bingo,
-  ]);
-
-  const elementBingoCounts = computed(() => {
-    const map = new Map<ElementType, number>();
-
-    for (const bingo of allBingos.value) {
-      if (bingo.value.bingo && bingo.value.element) {
-        map.set(bingo.value.element, (map.get(bingo.value.element) ?? 0) + 1);
-      }
-    }
-
-    return [...map.entries()]
-      .map(([element, count]) => ({ count, element }))
-      .sort((a, b) => b.count - a.count);
-  });
-
-  const typeBingoCounts = computed(() => {
-    const map = new Map<AttackType, number>();
-
-    for (const bingo of allBingos.value) {
-      if (bingo.value.bingo && bingo.value.type) {
-        map.set(bingo.value.type, (map.get(bingo.value.type) ?? 0) + 1);
-      }
-    }
-
-    return [...map.entries()]
-      .map(([type, count]) => ({ count, type }))
-      .sort((a, b) => b.count - a.count);
-  });
-
-  const totalBingoCount = computed(() => {
-    return (
-      elementBingoCounts.value.reduce((total, { count }) => total + count, 0) +
-      typeBingoCounts.value.reduce((total, { count }) => total + count, 0)
-    );
-  });
-
-  // -- actions
-  async function goToNewBuild(): Promise<void> {
-    if (build.value?.isEmpty()) {
-      // we have a new empty build already so just reuse it
-
-      router.push(`/3/builds/monstie/${build.value.id}`);
-
-      return;
-    }
-
-    const id = generateLocalId();
-    const now = new Date();
-
-    // let data = new MonstieBuild(id); // TODO remove placeholder
-    let data = MonstieBuild.fromPlaceholder(id);
-    const dataHash = await data.getContentHash({ ignoreId: true });
-
-    const entity = await db.monstieBuilds.get({ dataHash });
-
-    if (entity != null) {
-      // we have a build with the same content already so just reuse it
-      data = MonstieBuild.fromEntity(entity);
-    } else {
-      const entity: MonstieBuildEntity = {
-        id,
-        name: data.name,
-        monstieSlug: data.monstieSlug,
-        data,
-        dataHash,
-        pinned: 0,
-        createdAt: now,
-        updatedAt: now,
-        viewedAt: now,
-      };
-
-      await db.monstieBuilds.put(entity);
-    }
-
-    buildId.value = data.id;
-
-    router.push(`/3/builds/monstie/${data.id}`);
-  }
-
-  async function saveBuild(build: MonstieBuild): Promise<void> {
-    const now = new Date();
-
-    const changes: UpdateSpec<MonstieBuildEntity> = {
-      id: build.id,
-      name: build.name,
-      monstieSlug: build.monstieSlug,
-      data: build,
-      dataHash: await build.getContentHash({ ignoreId: true }),
-      updatedAt: now,
-      viewedAt: now,
-    };
-
-    await db.monstieBuilds.update(build.id, changes);
-  }
-
-  async function removeBuild(id: string): Promise<void> {
-    await db.monstieBuilds.delete(id);
-  }
-
-  function getBingo(...genes: (Gene | undefined)[]) {
-    const result: { bingo: boolean; element?: ElementType; type?: AttackType } = {
-      bingo: false,
-      element: undefined,
-      type: undefined,
-    };
-
-    const elements = genes.map((gene) => gene?.element).filter((element) => element != null);
-    if (elements.length === 3) {
-      const uniqueElements = uniq(elements.filter((element) => element !== 'all'));
-      if (uniqueElements.length === 1) {
-        result.element = uniqueElements[0];
-        result.bingo = true;
-      }
-    }
-
-    const types = genes.map((gene) => gene?.type).filter((type) => type != null);
-    if (types.length === 3) {
-      const uniqueTypes = uniq(types.filter((type) => type !== 'all'));
-      if (uniqueTypes.length === 1) {
-        result.type = uniqueTypes[0];
-        result.bingo = true;
-      }
-    }
-
-    return result;
-  }
-
-  return {
+function makeMonstieBuildStore(build_: MonstieBuild) {
+  return defineStore(`s3/monstieBuild/${build_.id}`, () => {
     // -- state
-    buildId,
-    pending: entity.pending,
+    const build = ref(build_);
 
     // -- getters
-    build,
-    genes,
-    row1Bingo,
-    row2Bingo,
-    row3Bingo,
-    col1Bingo,
-    col2Bingo,
-    col3Bingo,
-    diag1Bingo,
-    diag2Bingo,
-    allBingos,
-    elementBingoCounts,
-    typeBingoCounts,
-    totalBingoCount,
+    const genes = computed(() => build.value.genes);
+
+    const row1Bingo = computed(() => getBingo(genes.value[0], genes.value[1], genes.value[2]));
+    const row2Bingo = computed(() => getBingo(genes.value[3], genes.value[4], genes.value[5]));
+    const row3Bingo = computed(() => getBingo(genes.value[6], genes.value[7], genes.value[8]));
+    const col1Bingo = computed(() => getBingo(genes.value[0], genes.value[3], genes.value[6]));
+    const col2Bingo = computed(() => getBingo(genes.value[1], genes.value[4], genes.value[7]));
+    const col3Bingo = computed(() => getBingo(genes.value[2], genes.value[5], genes.value[8]));
+    const diag1Bingo = computed(() => getBingo(genes.value[0], genes.value[4], genes.value[8]));
+    const diag2Bingo = computed(() => getBingo(genes.value[2], genes.value[4], genes.value[6]));
+
+    const allBingos = computed(() => [
+      row1Bingo,
+      row2Bingo,
+      row3Bingo,
+      col1Bingo,
+      col2Bingo,
+      col3Bingo,
+      diag1Bingo,
+      diag2Bingo,
+    ]);
+
+    const elementBingoCounts = computed(() => {
+      const map = new Map<ElementType, number>();
+
+      for (const bingo of allBingos.value) {
+        if (bingo.value.bingo && bingo.value.element) {
+          map.set(bingo.value.element, (map.get(bingo.value.element) ?? 0) + 1);
+        }
+      }
+
+      return [...map.entries()]
+        .map(([element, count]) => ({ count, element }))
+        .sort((a, b) => b.count - a.count);
+    });
+
+    const typeBingoCounts = computed(() => {
+      const map = new Map<AttackType, number>();
+
+      for (const bingo of allBingos.value) {
+        if (bingo.value.bingo && bingo.value.type) {
+          map.set(bingo.value.type, (map.get(bingo.value.type) ?? 0) + 1);
+        }
+      }
+
+      return [...map.entries()]
+        .map(([type, count]) => ({ count, type }))
+        .sort((a, b) => b.count - a.count);
+    });
+
+    const totalBingoCount = computed(() => {
+      return (
+        elementBingoCounts.value.reduce((total, { count }) => total + count, 0) +
+        typeBingoCounts.value.reduce((total, { count }) => total + count, 0)
+      );
+    });
 
     // -- actions
-    goToNewBuild,
-    saveBuild,
-    removeBuild,
-  };
-});
+    function getBingo(...genes: (Gene | undefined)[]) {
+      const result: { bingo: boolean; element?: ElementType; type?: AttackType } = {
+        bingo: false,
+        element: undefined,
+        type: undefined,
+      };
 
-export default useMonstieBuildStore;
+      const elements = genes.map((gene) => gene?.element).filter((element) => element != null);
+      if (elements.length === 3) {
+        const uniqueElements = uniq(elements.filter((element) => element !== 'all'));
+        if (uniqueElements.length === 1) {
+          result.element = uniqueElements[0];
+          result.bingo = true;
+        }
+      }
 
-const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; // no _-
-const nanoid = customAlphabet(alphabet, 11);
+      const types = genes.map((gene) => gene?.type).filter((type) => type != null);
+      if (types.length === 3) {
+        const uniqueTypes = uniq(types.filter((type) => type !== 'all'));
+        if (uniqueTypes.length === 1) {
+          result.type = uniqueTypes[0];
+          result.bingo = true;
+        }
+      }
 
-function generateLocalId(): string {
-  return '_' + nanoid();
+      return result;
+    }
+
+    return {
+      // -- state
+      build,
+
+      // -- getters
+      genes,
+      row1Bingo,
+      row2Bingo,
+      row3Bingo,
+      col1Bingo,
+      col2Bingo,
+      col3Bingo,
+      diag1Bingo,
+      diag2Bingo,
+      allBingos,
+      elementBingoCounts,
+      typeBingoCounts,
+      totalBingoCount,
+    };
+  });
+}
+
+export default function useMonstieBuildStore(build: MonstieBuild) {
+  return makeMonstieBuildStore(build)();
 }

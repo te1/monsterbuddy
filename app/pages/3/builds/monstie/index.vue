@@ -4,7 +4,7 @@
   import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildSources from '~/stores/3/monstieBuildSources';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildSidebar,
@@ -46,7 +46,7 @@
   const history = useMonstieBuildHistoryStore();
   const filter = useMonstieBuildFilter();
   const sources = useMonstieBuildSources();
-  const buildStore = useMonstieBuildStore();
+  const buildManager = useMonstieBuildManager();
 
   const oldSortKey = ref(filter.sortKey);
   const oldSortOrder = ref(filter.sortOrder);
@@ -274,11 +274,14 @@
                   :key="build.id"
                   :to="`/3/builds/monstie/${build.id}`"
                   prefetchOn="interaction"
+                  class="relative"
                 >
-                  <S3MonstieBuildListItem
-                    :build="build"
-                    class="box box-link overflow-hidden px-1 [contain-intrinsic-size:74px] [content-visibility:auto]"
-                  />
+                  <S3MonstieBuildTooltip :build="build">
+                    <S3MonstieBuildListItem
+                      :build="build"
+                      class="box box-link overflow-hidden px-1 [contain-intrinsic-size:74px] [content-visibility:auto]"
+                    />
+                  </S3MonstieBuildTooltip>
                 </NuxtLink>
               </div>
             </li>
@@ -375,7 +378,7 @@
       </LazyUDrawer>
 
       <AppFabPanel>
-        <AppFab tooltip="New build" icon="ph:plus" @click="buildStore.goToNewBuild" />
+        <AppFab tooltip="New build" icon="ph:plus" @click="buildManager.goToNewBuild" />
 
         <AppFab
           v-if="fabSourceVisible"

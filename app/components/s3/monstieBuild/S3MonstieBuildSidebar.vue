@@ -1,16 +1,16 @@
 <script lang="ts" setup>
   import useMonstieBuildSources from '~/stores/3/monstieBuildSources';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const router = useRouter();
   const route = useRoute();
   const hasSidebar = useHasSidebar();
 
   const sources = useMonstieBuildSources();
-  const buildStore = useMonstieBuildStore();
+  const buildManager = useMonstieBuildManager();
 
   function newBuild() {
-    buildStore.goToNewBuild();
+    buildManager.goToNewBuild();
   }
 
   const tabsAction = [{ label: 'Actions', slot: 'actions' }];
