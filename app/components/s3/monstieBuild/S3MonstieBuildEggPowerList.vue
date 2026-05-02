@@ -40,7 +40,7 @@
   <section v-if="eggPowers.length > 0">
     <h3 class="px-4 pt-2 text-lg font-semibold">Egg Powers</h3>
 
-    <div v-for="(eggPower, index) in eggPowers" :key="index" class="mb-2">
+    <div v-for="(eggPower, index) in eggPowers" :key="index" :class="{ 'mb-2': eggPower.item }">
       <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
       <div v-if="eggPower.item" class="box-link">
