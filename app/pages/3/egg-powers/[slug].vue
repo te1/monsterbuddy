@@ -35,7 +35,13 @@
     const part3 = ' can be found in ';
     const part4 = eggPower.region;
 
-    return [part1, part2, part3, part4];
+    let part5 = `Only available for monsties with Ecosystem Rank ${eggPower.rank}`;
+    if (eggPower.rank !== 'S') {
+      part5 += ' or higher';
+    }
+    part5 += '.';
+
+    return [part1, part2, part3, part4, part5];
   });
 
   const region = computed(() => regionsByName.get(eggPower.region));
@@ -69,8 +75,11 @@
         {{ descriptionParts[0] }}
         <AppNuxtLink to="/3/egg-powers" :text="descriptionParts[1]" />
         {{ descriptionParts[2] }}
-        <AppNuxtLink v-if="region" :to="`/3/habitats/${region.slug}`" :text="descriptionParts[3]" />
-        <template v-else>{{ descriptionParts[3] }}</template>
+        <AppNuxtLink v-if="region" :to="`/3/habitats/${region.slug}`">
+          {{ descriptionParts[3] }}.
+        </AppNuxtLink>
+        <template v-else>{{ descriptionParts[3] }}.</template>
+        {{ descriptionParts[4] }}
       </template>
     </AppPageHeader>
 
