@@ -73,7 +73,7 @@
     </div>
 
     <template #content>
-      <div class="flex flex-col gap-3 px-3 py-2">
+      <div class="@container flex flex-col gap-3 px-3 py-2">
         <div>
           <slot name="content" />
         </div>

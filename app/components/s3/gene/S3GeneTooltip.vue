@@ -13,14 +13,14 @@
 
     <template #content>
       <div class="text-sm">
-        <div class="@container flex items-center justify-between gap-3">
+        <div class="flex items-center justify-between gap-3">
           <div>
             <div class="-mb-0.5 text-muted" v-text="info" />
 
             <div class="text-base leading-snug font-semibold" v-text="gene.name" />
           </div>
 
-          <div v-if="gene.active" class="hidden self-start text-muted @xs:flex">
+          <div v-if="gene.active" class="hidden self-start text-muted xs:flex @xs:flex">
             <span v-if="gene.stamina != null" class="whitespace-nowrap">
               Stam
               <strong class="font-bold" v-text="gene.stamina" />
