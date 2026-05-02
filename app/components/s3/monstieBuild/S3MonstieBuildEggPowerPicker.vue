@@ -12,7 +12,7 @@
 
   const open = ref(false);
 
-  const rankOrder = new Map(['S', 'A', 'B'].map((rank, index) => [rank, index]));
+  const rankOrder = new Map([undefined, 'S', 'A', 'B'].map((rank, index) => [rank, index]));
 
   const groups = computed(() => {
     const items = [null, ...eggPowers].map((eggPower) => ({
@@ -25,12 +25,12 @@
 
     const available = sortBy(
       items.filter((item) => !item.disabled),
-      [(item) => (item.data ? rankOrder.get(item.data.rank)! : -1)]
+      [(item) => rankOrder.get(item.data?.rank)!]
     );
 
     const selected = sortBy(
       items.filter((item) => item.disabled),
-      [(item) => (item.data ? props.build.eggPowerSlugs.indexOf(item.data.slug) : -1)]
+      [(item) => props.build.eggPowerSlugs.indexOf(item.data?.slug ?? null)]
     );
 
     return [
