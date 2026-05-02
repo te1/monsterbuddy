@@ -46,7 +46,7 @@
             <ElementIcon :element="build.dualElement" icon2 noTooltip />
             <ElementLabel :element="build.dualElement" />
           </div>
-          <div v-else class="text-dimmed" v-text="'No second element'" />
+          <div v-else class="text-dimmed" v-text="'No dual element'" />
         </div>
 
         <div v-if="dualElementAreas.length > 0">
