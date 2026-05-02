@@ -247,7 +247,7 @@ export function statsTypeToText(type: RegionStatsType) {
       return 'Defense';
 
     case 'recovery':
-      return 'Recovery';
+      return 'Stamina Recovery';
 
     default:
       return '?';
