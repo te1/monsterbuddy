@@ -10,10 +10,10 @@
   const open = ref(false);
 
   const groups = computed(() => {
-    const items = regions.map((region) => ({
-      label: region.powers.stats.map(statsTypeToText).join(', '),
-      suffix: region.name,
-      data: region.slug,
+    const items = [null, ...regions].map((region) => ({
+      label: region ? region.powers.stats.map(statsTypeToText).join(', ') : 'No stat increases',
+      suffix: region?.name,
+      data: region ? region.slug : null,
     }));
 
     return [
@@ -67,7 +67,7 @@
     <UButton label="Stat Increases" color="neutral" variant="subtle" />
 
     <template #body>
-      <div class="h-[calc(80dvh-41px)] max-h-[195px]">
+      <div class="h-[calc(80dvh-41px)] max-h-[225px]">
         <UCommandPalette
           :defaultValue="defaultValue"
           :groups="groups"

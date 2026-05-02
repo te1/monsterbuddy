@@ -60,14 +60,18 @@
         </div>
       </div>
 
-      <div v-if="build.region">
+      <div>
         <div class="flex flex-col justify-between xs:flex-row xs:items-center xs:gap-1">
           <h3 class="text-lg font-semibold">Stat Increases</h3>
 
-          <div v-text="build.region.powers.stats.map(statsTypeToText).join(', ')" />
+          <div
+            v-if="build.region"
+            v-text="build.region.powers.stats.map(statsTypeToText).join(', ')"
+          />
+          <div v-else class="text-dimmed" v-text="'No stat increases'" />
         </div>
 
-        <div>
+        <div v-if="build.region">
           From region
           <AppNuxtLink
             :to="`/3/habitats/${build.region.slug}`"
