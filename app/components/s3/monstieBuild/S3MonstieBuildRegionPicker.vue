@@ -67,13 +67,14 @@
     <UButton label="Stat Increases" color="neutral" variant="subtle" />
 
     <template #body>
-      <div class="h-[calc(80dvh-41px)] max-h-[225px]">
+      <div class="h-[calc(80dvh-41px)] max-h-[245px]">
         <UCommandPalette
           :defaultValue="defaultValue"
           :groups="groups"
           placeholder="Search..."
           class="h-full"
           :input="input"
+          :ui="{ itemLabelBase: 'text-base' }"
           :fuse="{ fuseOptions: { includeMatches: true } }"
           @update:modelValue="onSelect"
         />

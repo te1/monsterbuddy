@@ -73,13 +73,13 @@
           placeholder="Search..."
           class="h-full"
           :input="input"
-          :ui="{ item: 'items-center' }"
+          :ui="{ item: 'items-center', itemLabelBase: 'text-base' }"
           :fuse="{ fuseOptions: { includeMatches: true } }"
           @update:modelValue="onSelect"
         >
           <template #items-leading="{ item }">
             <ElementIcon v-if="item.data" :element="item.data" noTooltip icon2 />
-            <UIcon v-else name="ph:circle-dashed-light" class="m-0.5 size-6.5" />
+            <UIcon v-else name="ph:circle-dashed-light" class="m-0.5 size-6.5 text-muted" />
           </template>
         </UCommandPalette>
       </div>

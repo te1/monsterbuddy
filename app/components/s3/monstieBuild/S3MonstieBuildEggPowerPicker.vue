@@ -95,7 +95,7 @@
     <UButton label="Egg Power" color="neutral" variant="subtle" />
 
     <template #body>
-      <div class="h-[calc(80dvh-41px)] max-h-[805px]">
+      <div class="h-[calc(80dvh-41px)] max-h-[855px]">
         <UCommandPalette
           :defaultValue="defaultValue"
           :groups="groups"
@@ -106,13 +106,14 @@
             item: 'items-center',
             itemLabel: 'flex flex-col',
             itemLabelPrefix: 'hidden',
+            itemLabelBase: 'text-base',
             itemLabelSuffix: 'truncate',
           }"
           :fuse="{ fuseOptions: { includeMatches: true, keys: ['label', 'suffix', 'prefix'] } }"
           @update:modelValue="onSelect"
         >
           <template #items-leading="{ item }">
-            <S3EggPowerIcon :eggPower="item.data" big contrast />
+            <S3EggPowerIcon :eggPower="item.data" big contrast class="mr-2" />
           </template>
         </UCommandPalette>
       </div>

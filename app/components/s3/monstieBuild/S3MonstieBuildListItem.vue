@@ -2,7 +2,10 @@
   import type { Monster } from '~/services/3/types';
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = defineProps<{
+    build: MonstieBuild;
+    shrink?: boolean;
+  }>();
 
   const monstie = computed(() => {
     return props.build.monstie ?? ({ slug: 'Unknown', name: 'Unknown' } as Monster);
@@ -15,11 +18,12 @@
       <S3MonsterIcon :monster="monstie" noTooltip size="size-14" />
     </div>
 
-    <div v-if="build.monstie" class="_mr-1 flex flex-col items-center gap-1">
+    <div v-if="build.monstie" class="flex flex-col items-center gap-1">
       <AttackTypeIcon class="size-7" :type="monstie.monstie?.attack" noTooltip />
 
       <ElementIcon class="size-7" :element="monstie.element" noTooltip />
     </div>
+    <div v-else-if="!shrink" class="w-7" />
 
     <div class="m-1.5 flex-1 self-start text-sm">
       <div class="flex items-center justify-between">
