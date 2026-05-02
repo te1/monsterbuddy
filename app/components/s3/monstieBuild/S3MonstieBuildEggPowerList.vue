@@ -2,6 +2,7 @@
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { EggPowerRequirement } from '~/services/3/types';
   import { uniqBy } from 'es-toolkit/array';
+  import { regionsByName } from '~/services/3/data';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
@@ -13,6 +14,7 @@
       return {
         item: eggPower,
         awakened: props.build.isEggPowerAwakened(eggPower),
+        region: regionsByName.get(eggPower.region),
       };
     });
   });
@@ -40,7 +42,7 @@
   <section v-if="eggPowers.length > 0">
     <h3 class="px-4 pt-2 text-lg font-semibold">Egg Powers</h3>
 
-    <div v-for="(eggPower, index) in eggPowers" :key="eggPower.item.slug">
+    <div v-for="(eggPower, index) in eggPowers" :key="eggPower.item.slug" class="mb-2">
       <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
       <div class="box-link">
@@ -53,7 +55,7 @@
         </NuxtLink>
       </div>
 
-      <div class="-mt-2 mb-2 ml-17 flex items-center gap-1">
+      <div class="-mt-2 ml-17 flex items-center gap-1">
         <div class="w-20">
           <span
             v-if="eggPower.awakened"
@@ -90,6 +92,15 @@
             </AppTooltip>
           </div>
         </div>
+      </div>
+
+      <div v-if="eggPower.region" class="-mt-1 ml-17">
+        Region
+        <AppNuxtLink
+          :to="`/3/habitats/${eggPower.region.slug}`"
+          prefetchOn="interaction"
+          :text="eggPower.region.name"
+        />
       </div>
     </div>
   </section>
