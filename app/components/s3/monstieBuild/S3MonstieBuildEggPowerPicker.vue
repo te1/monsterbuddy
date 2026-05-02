@@ -17,6 +17,7 @@
   const groups = computed(() => {
     const items = eggPowers.map((eggPower) => ({
       label: eggPower.name,
+      prefix: `${eggPower.region} Rank ${eggPower.rank}`,
       suffix: eggPower.variants[0]?.description,
       data: eggPower,
       disabled: props.build.eggPowerSlugs.includes(eggPower.slug),
@@ -59,10 +60,10 @@
   const buildManager = useMonstieBuildManager();
 
   function onSelect(item: CommandPaletteItem) {
-    const _item = item as Item;
+    const item_ = item as Item;
 
     if (buildManager.build) {
-      buildManager.build.eggPowerSlugs[props.index] = _item.data.slug;
+      buildManager.build.eggPowerSlugs[props.index] = item_.data.slug;
       buildManager.saveBuild(buildManager.build);
     }
 
@@ -85,79 +86,36 @@
     v-model:open="open"
     title="Select Egg Powers"
     :ui="{
+      content: 'max-w-2xl',
       header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 sm:ps-2.5 sm:pe-1',
       close: 'static',
-      body: 'min-h-89 p-0 sm:p-0',
+      body: 'p-0 sm:p-0',
     }"
   >
     <UButton label="Egg Power" color="neutral" variant="subtle" />
 
     <template #body>
-      <UCommandPalette
-        :defaultValue="defaultValue"
-        :groups="groups"
-        placeholder="Search..."
-        :input="input"
-        :ui="{ item: 'items-center' }"
-        :fuse="{ fuseOptions: { includeMatches: true } }"
-        @update:modelValue="onSelect"
-      >
-        <template #items-leading="{ item }">
-          <S3EggPowerIcon :eggPower="item.data" big contrast />
-        </template>
-
-        <!--
-        <template #items-label="{ item }">
-          <span
-            v-if="item.labelHtml"
-            data-slot="itemLabelBase"
-            :class="
-              ui.itemLabelBase({
-                class: [uiProp?.itemLabelBase, item.ui?.itemLabelBase],
-                active: active || item.active,
-              })
-            "
-            v-html="item.labelHtml"
-          />
-          <span
-            v-else
-            data-slot="itemLabelBase"
-            :class="
-              ui.itemLabelBase({
-                class: [uiProp?.itemLabelBase, item.ui?.itemLabelBase],
-                active: active || item.active,
-              })
-            "
-          >
-            {{ item.label }}
-          </span>
-
-          <span
-            v-if="item.suffixHtml"
-            data-slot="itemLabelSuffix"
-            :class="
-              ui.itemLabelSuffix({
-                class: [uiProp?.itemLabelSuffix, item.ui?.itemLabelSuffix],
-                active: active || item.active,
-              })
-            "
-            v-html="item.suffixHtml"
-          />
-          <span
-            v-else-if="item.suffix"
-            data-slot="itemLabelSuffix"
-            :class="
-              ui.itemLabelSuffix({
-                class: [uiProp?.itemLabelSuffix, item.ui?.itemLabelSuffix],
-                active: active || item.active,
-              })
-            "
-          >
-            {{ item.suffix }}
-          </span>
-        </template>
-        -->
-      </UCommandPalette>
+      <div class="h-[calc(80dvh-41px)] max-h-[755px]">
+        <UCommandPalette
+          :defaultValue="defaultValue"
+          :groups="groups"
+          placeholder="Search..."
+          class="h-full"
+          :input="input"
+          :ui="{
+            item: 'items-center',
+            itemLabel: 'flex flex-col',
+            itemLabelPrefix: 'hidden',
+            itemLabelSuffix: 'truncate',
+          }"
+          :fuse="{ fuseOptions: { includeMatches: true, keys: ['label', 'suffix', 'prefix'] } }"
+          @update:modelValue="onSelect"
+        >
+          <template #items-leading="{ item }">
+            <S3EggPowerIcon :eggPower="item.data" big contrast />
+          </template>
+        </UCommandPalette>
+      </div>
     </template>
   </UModal>
 </template>
