@@ -60,26 +60,29 @@
     :ui="{
       header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 sm:ps-2.5 sm:pe-1',
       close: 'static',
-      body: 'min-h-89 p-0 sm:p-0',
+      body: 'p-0 sm:p-0',
     }"
   >
     <UButton label="Dual Element" color="neutral" variant="subtle" />
 
     <template #body>
-      <UCommandPalette
-        :defaultValue="defaultValue"
-        :groups="groups"
-        placeholder="Search..."
-        :input="input"
-        :ui="{ item: 'items-center' }"
-        :fuse="{ fuseOptions: { includeMatches: true } }"
-        @update:modelValue="onSelect"
-      >
-        <template #items-leading="{ item }">
-          <ElementIcon v-if="item.data" :element="item.data" noTooltip icon2 />
-          <UIcon v-else name="ph:circle-dashed-light" class="m-0.5 size-6.5" />
-        </template>
-      </UCommandPalette>
+      <div class="h-[calc(80dvh-41px)] max-h-[360px]">
+        <UCommandPalette
+          :defaultValue="defaultValue"
+          :groups="groups"
+          placeholder="Search..."
+          class="h-full"
+          :input="input"
+          :ui="{ item: 'items-center' }"
+          :fuse="{ fuseOptions: { includeMatches: true } }"
+          @update:modelValue="onSelect"
+        >
+          <template #items-leading="{ item }">
+            <ElementIcon v-if="item.data" :element="item.data" noTooltip icon2 />
+            <UIcon v-else name="ph:circle-dashed-light" class="m-0.5 size-6.5" />
+          </template>
+        </UCommandPalette>
+      </div>
     </template>
   </UModal>
 </template>

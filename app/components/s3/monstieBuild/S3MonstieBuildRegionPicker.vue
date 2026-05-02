@@ -61,20 +61,23 @@
     :ui="{
       header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 sm:ps-2.5 sm:pe-1',
       close: 'static',
-      body: 'min-h-48 p-0 sm:p-0',
+      body: 'p-0 sm:p-0',
     }"
   >
     <UButton label="Stat Increases" color="neutral" variant="subtle" />
 
     <template #body>
-      <UCommandPalette
-        :defaultValue="defaultValue"
-        :groups="groups"
-        placeholder="Search..."
-        :input="input"
-        :fuse="{ fuseOptions: { includeMatches: true } }"
-        @update:modelValue="onSelect"
-      />
+      <div class="h-[calc(80dvh-41px)] max-h-[195px]">
+        <UCommandPalette
+          :defaultValue="defaultValue"
+          :groups="groups"
+          placeholder="Search..."
+          class="h-full"
+          :input="input"
+          :fuse="{ fuseOptions: { includeMatches: true } }"
+          @update:modelValue="onSelect"
+        />
+      </div>
     </template>
   </UModal>
 </template>

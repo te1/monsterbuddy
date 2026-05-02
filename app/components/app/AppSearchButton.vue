@@ -62,7 +62,7 @@
     </div>
 
     <template #body>
-      <div class="h-[85dvh] lg:h-120">
+      <div class="h-[calc(80dvh-41px)] max-h-[600px]">
         <LazyAppSearchCommandPalette v-model="open" />
       </div>
     </template>
