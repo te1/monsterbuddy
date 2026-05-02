@@ -51,7 +51,7 @@
     :content="content"
     :ui="{
       content:
-        'w-fit max-w-[min(85dvw,var(--container-md))] dark:bg-neutral-800 dark:ring-neutral-700',
+        'w-fit max-w-[min(calc(100vw-2rem),var(--container-md))] dark:bg-neutral-800 dark:ring-neutral-700',
     }"
   >
     <div class="contents">
