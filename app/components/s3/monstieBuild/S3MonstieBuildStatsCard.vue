@@ -151,7 +151,7 @@
 </script>
 
 <template>
-  <section class="@container flex flex-col gap-3">
+  <section v-if="build.monstie" class="@container flex flex-col gap-3">
     <div v-if="hasMonstieStats">
       <h3 class="text-lg font-semibold">Stats</h3>
 

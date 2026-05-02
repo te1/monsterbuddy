@@ -95,7 +95,7 @@
         </div>
       </div>
 
-      <div>
+      <div v-if="build.monstie">
         <h4 class="font-semibold">Monstie Bonus</h4>
 
         <div class="grid @md:grid-cols-2 @md:gap-x-12 @3xl:grid-cols-3">

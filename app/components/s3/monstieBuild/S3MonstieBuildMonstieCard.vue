@@ -35,6 +35,7 @@
         <S3MonstieListItem :monster="build.monstie" mode="location" class="px-2.5" />
       </NuxtLink>
     </div>
+    <div v-else class="px-4 pb-2 text-dimmed" v-text="'No monstie selected'" />
 
     <div class="flex flex-col gap-3 px-4 pb-2">
       <div>

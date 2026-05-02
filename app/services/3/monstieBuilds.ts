@@ -68,8 +68,12 @@ export class MonstieBuild {
     return 'New Build';
   }
 
-  get monstie(): Monster | undefined {
-    return this.monstieSlug ? monstersBySlug.get(this.monstieSlug) : undefined;
+  get monstie(): Monster | null | undefined {
+    if (this.monstieSlug === null) {
+      return null;
+    }
+
+    return monstersBySlug.get(this.monstieSlug);
   }
 
   get genes(): (Gene | undefined)[] {
@@ -99,7 +103,7 @@ export class MonstieBuild {
 
   get eggPowers(): (EggPower | null | undefined)[] {
     return this.eggPowerSlugs.map((slug) => {
-      if (slug == null) {
+      if (slug === null) {
         return null;
       }
 
@@ -108,7 +112,7 @@ export class MonstieBuild {
   }
 
   get region(): Region | null | undefined {
-    if (this.regionSlug == null) {
+    if (this.regionSlug === null) {
       return null;
     }
 
