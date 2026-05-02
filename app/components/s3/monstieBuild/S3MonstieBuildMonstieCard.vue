@@ -38,13 +38,14 @@
 
     <div class="flex flex-col gap-3 px-4 pb-2">
       <div>
-        <div v-if="build.dualElement" class="flex items-center justify-between gap-1">
+        <div class="flex items-center justify-between gap-1">
           <h3 class="text-lg font-semibold">Dual Element</h3>
 
-          <div class="flex items-center">
+          <div v-if="build.dualElement" class="flex items-center">
             <ElementIcon :element="build.dualElement" icon2 noTooltip />
             <ElementLabel :element="build.dualElement" />
           </div>
+          <div v-else class="text-dimmed" v-text="'No second element'" />
         </div>
 
         <div v-if="dualElementAreas.length > 0">

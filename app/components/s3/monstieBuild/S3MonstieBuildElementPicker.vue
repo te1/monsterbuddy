@@ -1,8 +1,7 @@
 <script lang="ts" setup>
   import type { CommandPaletteItem } from '@nuxt/ui';
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import { regions } from '~/services/3/data';
-  import { statsTypeToText } from '~/services/3/presentation';
+  import { allElements } from '~/services/3/data';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{ build: MonstieBuild }>();
@@ -10,15 +9,15 @@
   const open = ref(false);
 
   const groups = computed(() => {
-    const items = regions.map((region) => ({
-      label: region.powers.stats.map(statsTypeToText).join(', '),
-      suffix: region.name,
-      data: region.slug,
+    const items = [null, ...allElements].map((element) => ({
+      label: element ? formatElement(element) : 'No second element',
+      data: element,
     }));
 
     return [
       {
         id: 'items',
+        slot: 'items',
         items: items,
       },
     ];
@@ -27,7 +26,7 @@
   type Item = CommandPaletteItem & (typeof groups.value)[0]['items'][number];
 
   const defaultValue = computed(() => {
-    return groups.value[0]?.items.find((item) => item.data === props.build.regionSlug);
+    return groups.value[0]?.items.find((item) => item.data === props.build.dualElement);
   });
 
   const buildManager = useMonstieBuildManager();
@@ -36,7 +35,7 @@
     const item_ = item as Item;
 
     if (buildManager.build) {
-      buildManager.build.regionSlug = item_.data;
+      buildManager.build.dualElement = item_.data;
       buildManager.saveBuild(buildManager.build);
     }
 
@@ -57,14 +56,14 @@
 <template>
   <UModal
     v-model:open="open"
-    title="Select Stat Increases"
+    title="Select Dual Element"
     :ui="{
       header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 sm:ps-2.5 sm:pe-1',
       close: 'static',
-      body: 'min-h-48 p-0 sm:p-0',
+      body: 'min-h-89 p-0 sm:p-0',
     }"
   >
-    <UButton label="Stat Increases" color="neutral" variant="subtle" />
+    <UButton label="Dual Element" color="neutral" variant="subtle" />
 
     <template #body>
       <UCommandPalette
@@ -72,9 +71,15 @@
         :groups="groups"
         placeholder="Search..."
         :input="input"
+        :ui="{ item: 'items-center' }"
         :fuse="{ fuseOptions: { includeMatches: true } }"
         @update:modelValue="onSelect"
-      />
+      >
+        <template #items-leading="{ item }">
+          <ElementIcon v-if="item.data" :element="item.data" noTooltip icon2 />
+          <UIcon v-else name="ph:circle-dashed-light" class="m-0.5 size-6.5" />
+        </template>
+      </UCommandPalette>
     </template>
   </UModal>
 </template>
