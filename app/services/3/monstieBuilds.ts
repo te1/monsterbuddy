@@ -9,8 +9,8 @@ export class MonstieBuild {
   name: string | null = null;
   description: string | null = null;
   monstieSlug: string | null = null;
-  geneSlugs: string[] = [];
-  eggPowerSlugs: string[] = [];
+  geneSlugs: (string | null)[] = [];
+  eggPowerSlugs: (string | null)[] = [null, null, null];
   dualElement: ElementType | null = null;
   /** for stat increases */
   regionSlug: string | null = null;
@@ -73,7 +73,7 @@ export class MonstieBuild {
   }
 
   get genes(): (Gene | undefined)[] {
-    return this.geneSlugs.map((slug) => genesBySlug.get(slug));
+    return this.geneSlugs.map((slug) => (slug ? genesBySlug.get(slug) : undefined));
   }
 
   get sortedGenes(): Gene[] {
@@ -97,12 +97,22 @@ export class MonstieBuild {
     return uniqBy(this.sortedGenes.toReversed(), (gene) => gene.baseName ?? gene.name).toReversed();
   }
 
-  get eggPowers(): (EggPower | undefined)[] {
-    return this.eggPowerSlugs.map((slug) => eggPowersBySlug.get(slug));
+  get eggPowers(): (EggPower | null | undefined)[] {
+    return this.eggPowerSlugs.map((slug) => {
+      if (slug == null) {
+        return null;
+      }
+
+      return eggPowersBySlug.get(slug);
+    });
   }
 
-  get region(): Region | undefined {
-    return this.regionSlug ? regionsBySlug.get(this.regionSlug) : undefined;
+  get region(): Region | null | undefined {
+    if (this.regionSlug == null) {
+      return null;
+    }
+
+    return regionsBySlug.get(this.regionSlug);
   }
 
   isEggPowerAwakened(eggPower: EggPower): boolean {
@@ -143,7 +153,7 @@ export class MonstieBuild {
       this.description == null &&
       this.monstieSlug == null &&
       this.geneSlugs.length === 0 &&
-      this.eggPowerSlugs.length === 0 &&
+      (this.eggPowerSlugs.length === 0 || this.eggPowerSlugs.every((slug) => slug == null)) &&
       this.dualElement == null &&
       this.regionSlug == null
     );

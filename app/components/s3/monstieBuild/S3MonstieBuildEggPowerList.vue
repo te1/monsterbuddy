@@ -1,20 +1,18 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { EggPowerRequirement } from '~/services/3/types';
-  import { uniqBy } from 'es-toolkit/array';
   import { regionsByName } from '~/services/3/data';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
   const eggPowers = computed(() => {
-    const all = props.build.eggPowers.filter((eggPower) => eggPower != null);
-    const unique = uniqBy(all, (gene) => gene.slug);
+    const all = props.build.eggPowers.filter((eggPower) => eggPower !== undefined);
 
-    return unique.map((eggPower) => {
+    return all.map((eggPower) => {
       return {
         item: eggPower,
-        awakened: props.build.isEggPowerAwakened(eggPower),
-        region: regionsByName.get(eggPower.region),
+        awakened: eggPower ? props.build.isEggPowerAwakened(eggPower) : false,
+        region: eggPower ? regionsByName.get(eggPower.region) : null,
       };
     });
   });
@@ -42,10 +40,10 @@
   <section v-if="eggPowers.length > 0">
     <h3 class="px-4 pt-2 text-lg font-semibold">Egg Powers</h3>
 
-    <div v-for="(eggPower, index) in eggPowers" :key="eggPower.item.slug" class="mb-2">
+    <div v-for="(eggPower, index) in eggPowers" :key="index" class="mb-2">
       <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
-      <div class="box-link">
+      <div v-if="eggPower.item" class="box-link">
         <NuxtLink :to="`/3/egg-powers/${eggPower.item.slug}`" prefetchOn="interaction">
           <S3EggPowerListItem
             :eggPower="eggPower.item"
@@ -54,8 +52,13 @@
           />
         </NuxtLink>
       </div>
+      <div v-else class="@container flex items-center gap-1.5 px-2.5">
+        <S3EggPowerIcon class="m-1.5 shrink-0" :eggPower="undefined" big contrast />
 
-      <div class="-mt-2 ml-17 flex items-center gap-1">
+        <div class="font-semibold text-dimmed" v-text="'No egg power'" />
+      </div>
+
+      <div v-if="eggPower.item" class="-mt-2 ml-17 flex items-center gap-1">
         <div class="w-20">
           <span
             v-if="eggPower.awakened"
@@ -65,7 +68,7 @@
           <span v-else class="text-red-600 dark:text-red-400" v-text="'Awakening'" />
         </div>
 
-        <div class="flex items-center gap-1">
+        <div v-if="eggPower.item" class="flex items-center gap-1">
           <div
             v-for="(requirement, index2) in eggPower.item.variants[1]?.requirements ?? []"
             :key="index2"

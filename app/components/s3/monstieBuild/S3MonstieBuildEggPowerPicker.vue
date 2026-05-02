@@ -15,22 +15,22 @@
   const rankOrder = new Map(['S', 'A', 'B'].map((rank, index) => [rank, index]));
 
   const groups = computed(() => {
-    const items = eggPowers.map((eggPower) => ({
-      label: eggPower.name,
-      prefix: `${eggPower.region} Rank ${eggPower.rank}`,
-      suffix: eggPower.variants[0]?.description,
+    const items = [null, ...eggPowers].map((eggPower) => ({
+      label: eggPower ? eggPower.name : 'No egg power',
+      prefix: eggPower ? `${eggPower.region} Rank ${eggPower.rank}` : undefined,
+      suffix: eggPower ? eggPower.variants[0]?.description : undefined,
       data: eggPower,
-      disabled: props.build.eggPowerSlugs.includes(eggPower.slug),
+      disabled: eggPower ? props.build.eggPowerSlugs.includes(eggPower.slug) : false,
     }));
 
     const available = sortBy(
       items.filter((item) => !item.disabled),
-      [(item) => rankOrder.get(item.data.rank)!]
+      [(item) => (item.data ? rankOrder.get(item.data.rank)! : -1)]
     );
 
     const selected = sortBy(
       items.filter((item) => item.disabled),
-      [(item) => props.build.eggPowerSlugs.indexOf(item.data.slug)]
+      [(item) => (item.data ? props.build.eggPowerSlugs.indexOf(item.data.slug) : -1)]
     );
 
     return [
@@ -52,9 +52,9 @@
   type Item = CommandPaletteItem & (typeof groups.value)[0]['items'][number];
 
   const defaultValue = computed(() => {
-    return groups.value[1]?.items.find(
-      (item) => item.data.slug === props.build.eggPowerSlugs[props.index]
-    );
+    return groups.value
+      .flatMap((group) => group.items)
+      .find((item) => (item.data?.slug ?? null) === props.build.eggPowerSlugs[props.index]);
   });
 
   const buildManager = useMonstieBuildManager();
@@ -63,7 +63,7 @@
     if (item && buildManager.build) {
       const item_ = item as Item;
 
-      buildManager.build.eggPowerSlugs[props.index] = item_.data.slug;
+      buildManager.build.eggPowerSlugs[props.index] = item_.data?.slug ?? null;
       buildManager.saveBuild(buildManager.build);
     }
 
@@ -95,7 +95,7 @@
     <UButton label="Egg Power" color="neutral" variant="subtle" />
 
     <template #body>
-      <div class="h-[calc(80dvh-41px)] max-h-[755px]">
+      <div class="h-[calc(80dvh-41px)] max-h-[805px]">
         <UCommandPalette
           :defaultValue="defaultValue"
           :groups="groups"

@@ -10,7 +10,7 @@
 
   const groups = computed(() => {
     const items = [null, ...allElements].map((element) => ({
-      label: element ? formatElement(element) : 'No second element',
+      label: element ? formatElement(element) : 'No dual element',
       data: element,
     }));
 
