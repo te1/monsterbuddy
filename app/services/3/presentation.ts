@@ -117,7 +117,7 @@ export function intensityToIcon(intensity: number | null) {
       return 'ph:caret-up-bold';
 
     case 0:
-      return 'ph:number-zero-bold';
+      return 'ph:minus-bold';
 
     case -1:
       return 'ph:caret-down-bold';
@@ -141,7 +141,7 @@ export function intensityToTextColor(intensity: number | null) {
       return 'text-blue-500';
 
     default:
-      return 'text-default';
+      return 'text-muted';
   }
 }
 
