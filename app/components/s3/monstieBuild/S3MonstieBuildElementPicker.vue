@@ -31,10 +31,10 @@
 
   const buildManager = useMonstieBuildManager();
 
-  function onSelect(item: CommandPaletteItem) {
-    const item_ = item as Item;
+  function onSelect(item?: CommandPaletteItem) {
+    if (item && buildManager.build) {
+      const item_ = item as Item;
 
-    if (buildManager.build) {
       buildManager.build.dualElement = item_.data;
       buildManager.saveBuild(buildManager.build);
     }

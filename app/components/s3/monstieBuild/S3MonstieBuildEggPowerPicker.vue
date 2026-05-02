@@ -59,10 +59,10 @@
 
   const buildManager = useMonstieBuildManager();
 
-  function onSelect(item: CommandPaletteItem) {
-    const item_ = item as Item;
+  function onSelect(item?: CommandPaletteItem) {
+    if (item && buildManager.build) {
+      const item_ = item as Item;
 
-    if (buildManager.build) {
       buildManager.build.eggPowerSlugs[props.index] = item_.data.slug;
       buildManager.saveBuild(buildManager.build);
     }
