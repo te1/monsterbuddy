@@ -11,32 +11,6 @@
 
   const open = ref(false);
 
-  function getMonstiePrefix(monstie: Monster): string {
-    const result: string[] = [];
-
-    if (monstie.element) {
-      result.push(formatElement(monstie.element));
-    }
-
-    if (monstie.monstie) {
-      result.push(formatAttackType(monstie.monstie.attack));
-    }
-
-    result.push(`Rank ${monstie.rank}`);
-
-    return result.join(', ');
-  }
-
-  function getMonstieSuffix(monstie: Monster): string {
-    const result: string[] = [];
-
-    result.push(monstie.genus);
-
-    result.push(...(monstie.tags?.map(formatMonsterTag).filter((tag) => tag != null) ?? []));
-
-    return result.join(', ');
-  }
-
   const typeItems = computed(() => {
     return allAttackTypes.map((type) => ({
       label: formatAttackType(type),
@@ -87,11 +61,82 @@
     });
   });
 
-  // TODO sort rank, major stats, bulk stats
+  type SortType = 'rank' | 'majorStats' | 'bulkStats';
+
+  const sortItems: { label: string; value: SortType }[] = [
+    {
+      label: 'Rank',
+      value: 'rank',
+    },
+    {
+      label: 'Major Stats',
+      value: 'majorStats',
+    },
+    {
+      label: 'Bulk Stats',
+      value: 'bulkStats',
+    },
+  ];
+
+  const sort = ref<SortType[]>(['rank']);
+
+  function updateSort(value: SortType[]) {
+    // simulate radio group behavior but allow "unselecting"
+    sort.value = value.length > 0 ? [value.at(-1)!] : [];
+  }
 
   const sortedMonsties = computed(() => {
-    return orderBy(filterMonsties.value, [(monstie) => monstie.rank], ['desc']);
+    const sortKey = sort.value[0];
+
+    switch (sortKey) {
+      case 'rank':
+        return orderBy(filterMonsties.value, [(monstie) => monstie.rank], ['desc']);
+
+      case 'majorStats':
+        return orderBy(filterMonsties.value, [(monstie) => monstie.stats?.base?.total], ['desc']);
+
+      case 'bulkStats':
+        return orderBy(filterMonsties.value, [(monstie) => monstie.stats?.base?.bulk], ['desc']);
+    }
+
+    return filterMonsties.value;
   });
+
+  function getMonstiePrefix(monstie: Monster): string {
+    const result: string[] = [];
+
+    if (monstie.element) {
+      result.push(formatElement(monstie.element));
+    }
+
+    if (monstie.monstie) {
+      result.push(formatAttackType(monstie.monstie.attack));
+    }
+
+    result.push(`Rank ${monstie.rank}`);
+
+    return result.join(', ');
+  }
+
+  function getMonstieSuffix(monstie: Monster): string {
+    const result: string[] = [];
+
+    if (sort.value[0] === 'rank') {
+      result.push(`Rank ${monstie.rank}`);
+    }
+    if (sort.value[0] === 'majorStats' && monstie.stats?.base?.total) {
+      result.push(`Major Stats ${monstie.stats.base.total}`);
+    }
+    if (sort.value[0] === 'bulkStats' && monstie.stats?.base?.bulk) {
+      result.push(`Bulk Stats ${monstie.stats.base.bulk}`);
+    }
+
+    result.push(monstie.genus);
+
+    result.push(...(monstie.tags?.map(formatMonsterTag).filter((tag) => tag != null) ?? []));
+
+    return result.join(', ');
+  }
 
   const groups = computed(() => {
     const items = [null, ...sortedMonsties.value].map((monstie) => ({
@@ -156,9 +201,9 @@
     <UButton label="Monstie" color="neutral" variant="subtle" />
 
     <template #description>
-      <div class="text-default">
+      <div class="flex flex-col gap-2 text-default">
         <div class="flex items-center gap-2">
-          <span>Filter</span>
+          <div class="w-8">Filter</div>
 
           <UCheckboxGroup
             color="neutral"
@@ -188,6 +233,22 @@
             <template #label="{ item }">
               <ElementIcon :element="item.value" icon2 class="size-6" />
             </template>
+          </UCheckboxGroup>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="w-8">Sort</div>
+
+          <UCheckboxGroup
+            color="neutral"
+            variant="table"
+            orientation="horizontal"
+            indicator="hidden"
+            :ui="{ item: 'border-accented px-2 py-1 select-none dark:border-muted' }"
+            :items="sortItems"
+            :modelValue="sort"
+            @update:modelValue="updateSort"
+          >
           </UCheckboxGroup>
         </div>
       </div>
