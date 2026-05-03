@@ -39,6 +39,60 @@
 
   const typeItems = computed(() => {
     return allAttackTypes.map((type) => ({
+      label: formatAttackType(type),
+      value: type,
+    }));
+  });
+
+  const typeFilter = ref<AttackType[]>([]);
+
+  function updateTypeFilter(value: AttackType[]) {
+    // simulate radio group behavior but allow "unselecting"
+    typeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+  }
+
+  const elementItems = computed(() => {
+    return allElements.map((element) => ({
+      label: formatElement(element),
+      value: element,
+    }));
+  });
+
+  const elementFilter = ref<ElementType[]>([]);
+
+  function updateElementFilter(value: ElementType[]) {
+    // simulate radio group behavior but allow "unselecting"
+    elementFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+  }
+
+  const filterMonsties = computed(() => {
+    return monsties.filter((monstie) => {
+      if (
+        typeFilter.value.length > 0 &&
+        monstie.monstie?.attack &&
+        !typeFilter.value.includes(monstie.monstie.attack)
+      ) {
+        return false;
+      }
+
+      if (
+        elementFilter.value.length > 0 &&
+        monstie.element &&
+        !elementFilter.value.includes(monstie.element)
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+  });
+
+  // TODO sort rank, major stats, bulk stats
+
+  const sortedMonsties = computed(() => {
+    return orderBy(filterMonsties.value, [(monstie) => monstie.rank], ['desc']);
+  });
+
   const groups = computed(() => {
     const items = [null, ...sortedMonsties.value].map((monstie) => ({
       label: monstie ? monstie.name : 'No monstie selected',
