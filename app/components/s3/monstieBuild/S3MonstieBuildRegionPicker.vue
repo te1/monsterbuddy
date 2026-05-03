@@ -59,7 +59,7 @@
     v-model:open="open"
     title="Select Stat Increases"
     :ui="{
-      header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 sm:ps-2.5 sm:pe-1',
+      header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 text-lg sm:ps-2.5 sm:pe-1',
       close: 'static',
       body: 'p-0 sm:p-0',
     }"
