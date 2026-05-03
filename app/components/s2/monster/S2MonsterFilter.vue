@@ -178,11 +178,9 @@
   }
 
   const attackTypes = computed(() => {
-    const types = ['power', 'speed', 'technical'] as const;
-
     return [
       { label: 'All', value: 'ALL' },
-      ...types.map((attackType) => ({
+      ...allAttackTypes.map((attackType) => ({
         label: formatAttackType(attackType),
         value: attackType,
       })),
