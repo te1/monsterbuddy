@@ -39,7 +39,7 @@
     elementFilter.value = value.length > 0 ? [value.at(-1)!] : [];
   }
 
-  const filterMonsties = computed(() => {
+  const filteredMonsties = computed(() => {
     return monsties.filter((monstie) => {
       if (
         typeFilter.value.length > 0 &&
@@ -90,16 +90,16 @@
 
     switch (sortKey) {
       case 'rank':
-        return orderBy(filterMonsties.value, [(monstie) => monstie.rank], ['desc']);
+        return orderBy(filteredMonsties.value, [(monstie) => monstie.rank], ['desc']);
 
       case 'majorStats':
-        return orderBy(filterMonsties.value, [(monstie) => monstie.stats?.base?.total], ['desc']);
+        return orderBy(filteredMonsties.value, [(monstie) => monstie.stats?.base?.total], ['desc']);
 
       case 'bulkStats':
-        return orderBy(filterMonsties.value, [(monstie) => monstie.stats?.base?.bulk], ['desc']);
+        return orderBy(filteredMonsties.value, [(monstie) => monstie.stats?.base?.bulk], ['desc']);
     }
 
-    return filterMonsties.value;
+    return filteredMonsties.value;
   });
 
   function getMonstiePrefix(monstie: Monster): string {
@@ -121,13 +121,15 @@
   function getMonstieSuffix(monstie: Monster): string {
     const result: string[] = [];
 
-    if (sort.value[0] === 'rank') {
+    const sortKey = sort.value[0];
+
+    if (sortKey === 'rank') {
       result.push(`Rank ${monstie.rank}`);
     }
-    if (sort.value[0] === 'majorStats' && monstie.stats?.base?.total) {
+    if (sortKey === 'majorStats' && monstie.stats?.base?.total) {
       result.push(`Major Stats ${monstie.stats.base.total}`);
     }
-    if (sort.value[0] === 'bulkStats' && monstie.stats?.base?.bulk) {
+    if (sortKey === 'bulkStats' && monstie.stats?.base?.bulk) {
       result.push(`Bulk Stats ${monstie.stats.base.bulk}`);
     }
 
