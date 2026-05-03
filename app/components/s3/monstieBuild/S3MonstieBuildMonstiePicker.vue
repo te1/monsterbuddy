@@ -3,6 +3,7 @@
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Monster } from '~/services/3/types';
   import { orderBy } from 'es-toolkit/array';
+  import { allElements, monsties } from '~/services/3/data';
   import { formatMonsterTag } from '~/services/3/presentation';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
@@ -37,6 +38,7 @@
   }
 
   const typeItems = computed(() => {
+    return allAttackTypes.map((type) => ({
   const groups = computed(() => {
     const items = [null, ...sortedMonsties.value].map((monstie) => ({
       label: monstie ? monstie.name : 'No monstie selected',
