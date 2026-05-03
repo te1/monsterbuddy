@@ -2,9 +2,9 @@
   import type { CommandPaletteItem } from '@nuxt/ui';
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Monster } from '~/services/3/types';
-  import { monsties } from '~/services/3/data';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
+  import { orderBy } from 'es-toolkit/array';
   import { formatMonsterTag } from '~/services/3/presentation';
+  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
@@ -36,8 +36,9 @@
     return result.join(', ');
   }
 
+  const typeItems = computed(() => {
   const groups = computed(() => {
-    const items = [null, ...monsties].map((monstie) => ({
+    const items = [null, ...sortedMonsties.value].map((monstie) => ({
       label: monstie ? monstie.name : 'No monstie selected',
       prefix: monstie ? getMonstiePrefix(monstie) : undefined,
       suffix: monstie ? getMonstieSuffix(monstie) : undefined,
@@ -90,12 +91,51 @@
     v-model:open="open"
     title="Select Monstie"
     :ui="{
-      header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 sm:ps-2.5 sm:pe-1',
-      close: 'static',
+      header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 text-lg sm:ps-2.5 sm:pe-1',
+      close: 'static self-start',
+      description: 'my-1',
       body: 'p-0 sm:p-0',
     }"
   >
     <UButton label="Monstie" color="neutral" variant="subtle" />
+
+    <template #description>
+      <div class="text-default">
+        <div class="flex items-center gap-2">
+          <span>Filter</span>
+
+          <UCheckboxGroup
+            color="neutral"
+            variant="table"
+            orientation="horizontal"
+            indicator="hidden"
+            :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+            :items="typeItems"
+            :modelValue="typeFilter"
+            @update:modelValue="updateTypeFilter"
+          >
+            <template #label="{ item }">
+              <AttackTypeIcon :type="item.value" icon2 class="size-6 dark:invert" />
+            </template>
+          </UCheckboxGroup>
+
+          <UCheckboxGroup
+            color="neutral"
+            variant="table"
+            orientation="horizontal"
+            indicator="hidden"
+            :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+            :items="elementItems"
+            :modelValue="elementFilter"
+            @update:modelValue="updateElementFilter"
+          >
+            <template #label="{ item }">
+              <ElementIcon :element="item.value" icon2 class="size-6" />
+            </template>
+          </UCheckboxGroup>
+        </div>
+      </div>
+    </template>
 
     <template #body>
       <div class="h-[calc(80dvh-41px)] max-h-[600px]">
@@ -114,7 +154,7 @@
           }"
           :fuse="{
             fuseOptions: { includeMatches: true, keys: ['label', 'suffix', 'prefix'] },
-            resultLimit: 24,
+            resultLimit: 48,
           }"
           @update:modelValue="onSelect"
         >
