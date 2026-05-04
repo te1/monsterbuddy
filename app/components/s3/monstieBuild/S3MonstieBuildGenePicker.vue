@@ -2,10 +2,12 @@
   import type { CommandPaletteItem } from '@nuxt/ui';
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Gene } from '~/services/3/types';
+  import { usePrevious } from '@vueuse/core';
   import { orderBy } from 'es-toolkit/array';
   import { allElements } from '~/services/3/data';
   import { genes } from '~/services/3/genes';
   import { formatGeneInfo } from '~/services/3/presentation';
+  import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{
@@ -14,6 +16,8 @@
   }>();
 
   const open = ref(true);
+
+  const history = useGeneHistoryStore();
 
   const elementItems = computed(() => {
     return allElements.map((element) => ({
@@ -43,11 +47,47 @@
     typeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
   }
 
+  type SourceType = 'recent' | 'pinned';
+
+  const sourceItems: { label: string; value: SourceType }[] = [
+    { label: 'Recent', value: 'recent' },
+    { label: 'Bookmarks', value: 'pinned' },
+  ];
+
+  const sourceFilter = ref<SourceType[]>([]);
+
+  function updateSourceFilter(value: SourceType[]) {
+    const wasRecent = sourceFilter.value.includes('recent');
+
+    // simulate radio group behavior but allow "unselecting"
+    sourceFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+
+    if (sourceFilter.value[0] === 'recent') {
+      sort.value = []; // remove sorten when switching to recent
+    } else if (wasRecent && sort.value.length === 0) {
+      sort.value = previousSort.value ?? [];
+    }
+  }
+
+  const geneSource = computed(() => {
+    const source = sourceFilter.value[0];
+
+    switch (source) {
+      case 'recent':
+        return history.recentGenes;
+
+      case 'pinned':
+        return history.pinnedGenes;
+    }
+
+    return genes;
+  });
+
   // TODO icon for no type
   // TODO filter active/passive, max size only
 
   const filteredGenes = computed(() => {
-    return genes.filter((gene) => {
+    return geneSource.value.filter((gene) => {
       if (
         elementFilter.value.length > 0 &&
         gene.element !== 'all' &&
@@ -76,12 +116,12 @@
       value: 'power',
     },
     {
-      label: 'Wyvernfell',
-      value: 'wyvernfell',
-    },
-    {
       label: 'Pwr Eff.',
       value: 'pps',
+    },
+    {
+      label: 'Wyvernfell',
+      value: 'wyvernfell',
     },
     {
       label: 'Wyvf Eff.',
@@ -90,6 +130,7 @@
   ];
 
   const sort = ref<SortType[]>([]);
+  const previousSort = usePrevious(sort);
 
   function updateSort(value: SortType[]) {
     // simulate radio group behavior but allow "unselecting"
@@ -214,35 +255,48 @@
         <div class="flex items-center gap-2">
           <div class="w-8">Filter</div>
 
-          <UCheckboxGroup
-            color="neutral"
-            variant="table"
-            orientation="horizontal"
-            indicator="hidden"
-            :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
-            :items="elementItems"
-            :modelValue="elementFilter"
-            @update:modelValue="updateElementFilter"
-          >
-            <template #label="{ item }">
-              <ElementIcon :element="item.value" icon2 class="size-6" />
-            </template>
-          </UCheckboxGroup>
+          <div class="flex flex-wrap items-center gap-2">
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+              :items="elementItems"
+              :modelValue="elementFilter"
+              @update:modelValue="updateElementFilter"
+            >
+              <template #label="{ item }">
+                <ElementIcon :element="item.value" icon2 class="size-6" />
+              </template>
+            </UCheckboxGroup>
 
-          <UCheckboxGroup
-            color="neutral"
-            variant="table"
-            orientation="horizontal"
-            indicator="hidden"
-            :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
-            :items="typeItems"
-            :modelValue="typeFilter"
-            @update:modelValue="updateTypeFilter"
-          >
-            <template #label="{ item }">
-              <AttackTypeIcon :type="item.value" icon2 class="size-6 dark:invert" />
-            </template>
-          </UCheckboxGroup>
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+              :items="typeItems"
+              :modelValue="typeFilter"
+              @update:modelValue="updateTypeFilter"
+            >
+              <template #label="{ item }">
+                <AttackTypeIcon :type="item.value" icon2 class="size-6 dark:invert" />
+              </template>
+            </UCheckboxGroup>
+
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented px-2 py-1 select-none dark:border-muted' }"
+              :items="sourceItems"
+              :modelValue="sourceFilter"
+              @update:modelValue="updateSourceFilter"
+            />
+          </div>
         </div>
 
         <div class="flex items-center gap-2">
