@@ -194,8 +194,8 @@
     v-model:open="open"
     title="Select Monstie"
     :ui="{
-      header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 text-lg sm:ps-2.5 sm:pe-1',
-      close: 'static self-start',
+      header: 'min-h-0 py-1.5 ps-2.5 text-lg sm:ps-2.5',
+      close: 'top-1 right-1',
       description: 'my-2',
       body: 'p-0 sm:p-0',
     }"

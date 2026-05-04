@@ -87,8 +87,8 @@
     title="Select Egg Powers"
     :ui="{
       content: 'max-w-2xl',
-      header: 'min-h-0 justify-between py-1 ps-2.5 pe-1 text-lg sm:ps-2.5 sm:pe-1',
-      close: 'static',
+      header: 'min-h-0 py-1.5 ps-2.5 text-lg sm:ps-2.5',
+      close: 'top-1 right-1',
       body: 'p-0 sm:p-0',
     }"
   >
