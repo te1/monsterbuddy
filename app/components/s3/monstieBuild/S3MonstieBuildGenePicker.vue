@@ -33,16 +33,21 @@
     elementFilter.value = value.length > 0 ? [value.at(-1)!] : [];
   }
 
-  const typeItems = computed(() => {
-    return [null, ...allAttackTypes].map((type) => ({
-      label: type ? formatAttackType(type) : 'No type',
-      value: type,
-    }));
+  const typeItems = computed<{ label: string; value: TypeFilter }[]>(() => {
+    return [
+      { label: 'No type', value: 'NULL' },
+      ...allAttackTypes.map((type) => ({
+        label: formatAttackType(type),
+        value: type,
+      })),
+    ];
   });
 
-  const typeFilter = ref<(AttackType | null)[]>([]);
+  type TypeFilter = AttackType | 'NULL';
 
-  function updateTypeFilter(value: AttackType[]) {
+  const typeFilter = ref<TypeFilter[]>([]);
+
+  function updateTypeFilter(value: TypeFilter[]) {
     // simulate radio group behavior but allow "unselecting"
     typeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
   }
@@ -83,7 +88,6 @@
     return genes;
   });
 
-  // TODO icon for no type
   // TODO filter active/passive, max size only
 
   const filteredGenes = computed(() => {
@@ -99,7 +103,7 @@
       if (
         typeFilter.value.length > 0 &&
         gene.type !== 'all' &&
-        !typeFilter.value.includes(gene.type)
+        !typeFilter.value.includes(gene.type ?? 'NULL')
       ) {
         return false;
       }
@@ -288,13 +292,21 @@
               variant="table"
               orientation="horizontal"
               indicator="hidden"
-              :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+              :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted', label: 'size-6' }"
               :items="typeItems"
               :modelValue="typeFilter"
               @update:modelValue="updateTypeFilter"
             >
               <template #label="{ item }">
-                <AttackTypeIcon :type="item.value" icon2 class="size-6 dark:invert" />
+                <AttackTypeIcon
+                  v-if="item.value !== 'NULL'"
+                  :type="item.value"
+                  icon2
+                  class="size-6 dark:invert"
+                />
+                <UTooltip v-else text="No type" :content="{ side: 'top' }">
+                  <UIcon name="ph:circle-dashed" class="m-0.5 size-5" />
+                </UTooltip>
               </template>
             </UCheckboxGroup>
 
