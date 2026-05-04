@@ -8,7 +8,7 @@
   }>();
 
   const monstie = computed(() => {
-    return props.build.monstie ?? ({ slug: 'Unknown', name: 'Unknown' } as Monster);
+    return props.build.monstie ?? ({ slug: '_unknown', name: 'No monstie selected' } as Monster);
   });
 </script>
 
