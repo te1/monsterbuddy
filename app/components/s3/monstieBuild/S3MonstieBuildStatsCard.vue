@@ -6,7 +6,7 @@
     SkillDetailFactorType,
     SkillDetailValueType,
   } from '~/services/3/types';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
   import {
     elementalResistanceTooltip,
     intensityToIcon,
@@ -15,9 +15,7 @@
 
   const props = defineProps<{ build: MonstieBuild }>();
 
-  const buildStore = useMonstieBuildStore(props.build);
-
-  const { totalBingoCount } = storeToRefs(buildStore);
+  const { totalBingoCount } = useMonstieBuildBingos(() => props.build);
 
   const monstieStats = computed(() => {
     return props.build.monstie?.stats?.base;

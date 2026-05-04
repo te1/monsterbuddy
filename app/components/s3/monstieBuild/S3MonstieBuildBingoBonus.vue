@@ -1,13 +1,13 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
   import { formatBingoBonusType, formatBingoBonusValue } from '~/services/3/presentation';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
-  const buildStore = useMonstieBuildStore(props.build);
-
-  const { elementBingoCounts, typeBingoCounts, totalBingoCount } = storeToRefs(buildStore);
+  const { elementBingoCounts, typeBingoCounts, totalBingoCount } = useMonstieBuildBingos(
+    () => props.build
+  );
 
   function getBingoBonus(count: number) {
     switch (count) {

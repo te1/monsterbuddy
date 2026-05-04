@@ -1,10 +1,8 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import useMonstieBuildStore from '~/stores/3/monstieBuildStore';
+  import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
 
   const props = defineProps<{ build: MonstieBuild }>();
-
-  const buildStore = useMonstieBuildStore(props.build);
 
   const {
     genes,
@@ -16,7 +14,7 @@
     col3Bingo,
     diag1Bingo,
     diag2Bingo,
-  } = storeToRefs(buildStore);
+  } = useMonstieBuildBingos(() => props.build);
 
   function lineColor(bingo: boolean) {
     return bingo ? 'bg-gene-bingo' : 'bg-gene-grid';
