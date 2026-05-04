@@ -5,7 +5,7 @@
   import { usePrevious } from '@vueuse/core';
   import { orderBy } from 'es-toolkit/array';
   import { allElements } from '~/services/3/data';
-  import { genes } from '~/services/3/genes';
+  import { genes, getGenesBySize } from '~/services/3/genes';
   import { formatGeneInfo } from '~/services/3/presentation';
   import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
@@ -15,7 +15,7 @@
     index: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   }>();
 
-  const open = ref(true);
+  const open = ref(false);
 
   const history = useGeneHistoryStore();
 
@@ -52,6 +52,33 @@
     typeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
   }
 
+  type TriggerType = 'active' | 'passive';
+
+  const triggerItems: { label: string; value: TriggerType }[] = [
+    { label: 'Active', value: 'active' },
+    { label: 'Passive', value: 'passive' },
+  ];
+
+  const triggerFilter = ref<TriggerType[]>([]);
+
+  function updateTriggerFilter(value: TriggerType[]) {
+    // simulate radio group behavior but allow "unselecting"
+    triggerFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+  }
+
+  type SizeType = 'max';
+
+  const sizeItems: { label: string; value: SizeType }[] = [
+    { label: 'Max size only', value: 'max' },
+  ];
+
+  const sizeFilter = ref<SizeType[]>(['max']);
+
+  function updateSizeFilter(value: SizeType[]) {
+    // simulate radio group behavior but allow "unselecting"
+    sizeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+  }
+
   type SourceType = 'recent' | 'pinned';
 
   const sourceItems: { label: string; value: SourceType }[] = [
@@ -74,20 +101,6 @@
     }
   }
 
-  type TriggerType = 'active' | 'passive';
-
-  const triggerItems: { label: string; value: TriggerType }[] = [
-    { label: 'Active', value: 'active' },
-    { label: 'Passive', value: 'passive' },
-  ];
-
-  const triggerFilter = ref<TriggerType[]>([]);
-
-  function updateTriggerFilter(value: TriggerType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    triggerFilter.value = value.length > 0 ? [value.at(-1)!] : [];
-  }
-
   const geneSource = computed(() => {
     const source = sourceFilter.value[0];
 
@@ -101,8 +114,6 @@
 
     return genes;
   });
-
-  // TODO filter max size only
 
   const filteredGenes = computed(() => {
     return geneSource.value.filter((gene) => {
@@ -221,8 +232,23 @@
       disabled: gene ? props.build.geneSlugs.includes(gene.slug) : false,
     }));
 
-    const available = items.filter((item) => !item.disabled);
+    // apply max size filter here because ...
+    const genes =
+      sizeFilter.value[0] === 'max' ? getGenesBySize(null, sortedGenes.value) : sortedGenes.value;
 
+    const available = items.filter((item) => {
+      if (item.disabled) {
+        return false;
+      }
+
+      if (sizeFilter.value[0] === 'max' && !genes.some((gene) => gene.slug === item.data?.slug)) {
+        return false;
+      }
+
+      return true;
+    });
+
+    // ... we don't want the max size filter for selected genes
     const selected = items.filter((item) => item.disabled);
 
     return [
@@ -278,7 +304,7 @@
     v-model:open="open"
     title="Select Gene"
     :ui="{
-      content: 'max-w-2xl',
+      content: 'max-w-4xl',
       header: 'min-h-0 py-1.5 ps-2.5 text-lg sm:ps-2.5',
       close: 'top-1 right-1',
       description: 'my-2',
@@ -340,6 +366,17 @@
               :items="triggerItems"
               :modelValue="triggerFilter"
               @update:modelValue="updateTriggerFilter"
+            />
+
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented px-2 py-1 select-none dark:border-muted' }"
+              :items="sizeItems"
+              :modelValue="sizeFilter"
+              @update:modelValue="updateSizeFilter"
             />
 
             <UCheckboxGroup
