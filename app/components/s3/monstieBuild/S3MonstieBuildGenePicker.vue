@@ -193,13 +193,25 @@
       prefix: gene ? formatGeneInfo(gene) : undefined,
       suffix: gene ? getGeneSuffix(gene) : undefined,
       data: gene,
+      disabled: gene ? props.build.geneSlugs.includes(gene.slug) : false,
     }));
+
+    const available = items.filter((item) => !item.disabled);
+
+    const selected = items.filter((item) => item.disabled);
 
     return [
       {
-        id: 'items',
+        id: 'available',
+        label: 'Available',
         slot: 'items',
-        items: items,
+        items: available,
+      },
+      {
+        id: 'selected',
+        label: 'Already Selected',
+        slot: 'items',
+        items: selected,
       },
     ];
   });
