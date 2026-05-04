@@ -219,9 +219,9 @@
   type Item = CommandPaletteItem & (typeof groups.value)[0]['items'][number];
 
   const defaultValue = computed(() => {
-    return groups.value[0]?.items.find(
-      (item) => (item.data?.slug ?? null) === props.build.monstieSlug
-    );
+    return groups.value
+      .flatMap((group) => group.items)
+      .find((item) => (item.data?.slug ?? null) === props.build.geneSlugs[props.index]);
   });
 
   const buildManager = useMonstieBuildManager();
@@ -230,7 +230,7 @@
     if (item && buildManager.build) {
       const item_ = item as Item;
 
-      buildManager.build.monstieSlug = item_.data?.slug ?? null;
+      buildManager.build.geneSlugs[props.index] = item_.data?.slug ?? null;
       buildManager.saveBuild(buildManager.build);
     }
 
