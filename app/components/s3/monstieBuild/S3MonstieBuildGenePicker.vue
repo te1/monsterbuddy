@@ -74,6 +74,20 @@
     }
   }
 
+  type TriggerType = 'active' | 'passive';
+
+  const triggerItems: { label: string; value: TriggerType }[] = [
+    { label: 'Active', value: 'active' },
+    { label: 'Passive', value: 'passive' },
+  ];
+
+  const triggerFilter = ref<TriggerType[]>([]);
+
+  function updateTriggerFilter(value: TriggerType[]) {
+    // simulate radio group behavior but allow "unselecting"
+    triggerFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+  }
+
   const geneSource = computed(() => {
     const source = sourceFilter.value[0];
 
@@ -88,7 +102,7 @@
     return genes;
   });
 
-  // TODO filter active/passive, max size only
+  // TODO filter max size only
 
   const filteredGenes = computed(() => {
     return geneSource.value.filter((gene) => {
@@ -104,6 +118,13 @@
         typeFilter.value.length > 0 &&
         gene.type !== 'all' &&
         !typeFilter.value.includes(gene.type ?? 'NULL')
+      ) {
+        return false;
+      }
+
+      if (
+        triggerFilter.value.length > 0 &&
+        !triggerFilter.value.includes(gene.active ? 'active' : 'passive')
       ) {
         return false;
       }
@@ -309,6 +330,17 @@
                 </UTooltip>
               </template>
             </UCheckboxGroup>
+
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented px-2 py-1 select-none dark:border-muted' }"
+              :items="triggerItems"
+              :modelValue="triggerFilter"
+              @update:modelValue="updateTriggerFilter"
+            />
 
             <UCheckboxGroup
               color="neutral"
