@@ -2,14 +2,18 @@
   import type { CommandPaletteItem } from '@nuxt/ui';
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Monster } from '~/services/3/types';
+  import { usePrevious } from '@vueuse/core';
   import { orderBy } from 'es-toolkit/array';
   import { allElements, monsties } from '~/services/3/data';
   import { formatMonsterTag } from '~/services/3/presentation';
+  import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
   const open = ref(false);
+
+  const history = useMonsterHistoryStore();
 
   const typeItems = computed(() => {
     return allAttackTypes.map((type) => ({
@@ -39,8 +43,44 @@
     elementFilter.value = value.length > 0 ? [value.at(-1)!] : [];
   }
 
+  type SourceType = 'recent' | 'pinned';
+
+  const sourceItems: { label: string; value: SourceType }[] = [
+    { label: 'Recent', value: 'recent' },
+    { label: 'Bookmarks', value: 'pinned' },
+  ];
+
+  const sourceFilter = ref<SourceType[]>([]);
+
+  function updateSourceFilter(value: SourceType[]) {
+    const wasRecent = sourceFilter.value.includes('recent');
+
+    // simulate radio group behavior but allow "unselecting"
+    sourceFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+
+    if (sourceFilter.value[0] === 'recent') {
+      sort.value = []; // remove sorten when switching to recent
+    } else if (wasRecent && sort.value.length === 0) {
+      sort.value = previousSort.value ?? [];
+    }
+  }
+
+  const monstieSource = computed(() => {
+    const source = sourceFilter.value[0];
+
+    switch (source) {
+      case 'recent':
+        return history.recentMonsties;
+
+      case 'pinned':
+        return history.pinnedMonsties;
+    }
+
+    return monsties;
+  });
+
   const filteredMonsties = computed(() => {
-    return monsties.filter((monstie) => {
+    return monstieSource.value.filter((monstie) => {
       if (
         typeFilter.value.length > 0 &&
         monstie.monstie?.attack &&
@@ -79,6 +119,7 @@
   ];
 
   const sort = ref<SortType[]>(['rank']);
+  const previousSort = usePrevious(sort);
 
   function updateSort(value: SortType[]) {
     // simulate radio group behavior but allow "unselecting"
@@ -207,35 +248,48 @@
         <div class="flex items-center gap-2">
           <div class="w-8">Filter</div>
 
-          <UCheckboxGroup
-            color="neutral"
-            variant="table"
-            orientation="horizontal"
-            indicator="hidden"
-            :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
-            :items="typeItems"
-            :modelValue="typeFilter"
-            @update:modelValue="updateTypeFilter"
-          >
-            <template #label="{ item }">
-              <AttackTypeIcon :type="item.value" icon2 class="size-6 dark:invert" />
-            </template>
-          </UCheckboxGroup>
+          <div class="flex flex-wrap items-center gap-2">
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+              :items="typeItems"
+              :modelValue="typeFilter"
+              @update:modelValue="updateTypeFilter"
+            >
+              <template #label="{ item }">
+                <AttackTypeIcon :type="item.value" icon2 class="size-6 dark:invert" />
+              </template>
+            </UCheckboxGroup>
 
-          <UCheckboxGroup
-            color="neutral"
-            variant="table"
-            orientation="horizontal"
-            indicator="hidden"
-            :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
-            :items="elementItems"
-            :modelValue="elementFilter"
-            @update:modelValue="updateElementFilter"
-          >
-            <template #label="{ item }">
-              <ElementIcon :element="item.value" icon2 class="size-6" />
-            </template>
-          </UCheckboxGroup>
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented p-0.5 select-none dark:border-muted' }"
+              :items="elementItems"
+              :modelValue="elementFilter"
+              @update:modelValue="updateElementFilter"
+            >
+              <template #label="{ item }">
+                <ElementIcon :element="item.value" icon2 class="size-6" />
+              </template>
+            </UCheckboxGroup>
+
+            <UCheckboxGroup
+              color="neutral"
+              variant="table"
+              orientation="horizontal"
+              indicator="hidden"
+              :ui="{ item: 'border-accented px-2 py-1 select-none dark:border-muted' }"
+              :items="sourceItems"
+              :modelValue="sourceFilter"
+              @update:modelValue="updateSourceFilter"
+            />
+          </div>
         </div>
 
         <div class="flex items-center gap-2">
