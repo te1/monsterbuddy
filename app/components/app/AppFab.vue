@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  import { useTimeout } from '@vueuse/core';
+
   const props = withDefaults(
     defineProps<{
       tooltip?: string;
@@ -16,13 +18,20 @@
     click: [];
   }>();
 
-  const pending = ref(false);
   const tooltipOpen = ref(false);
+
+  const { start, stop, isPending } = useTimeout(3000, {
+    controls: true,
+    immediate: false,
+    callback() {
+      tooltipOpen.value = false;
+    },
+  });
 
   const canHover = useCanHover();
 
   const resolvedTooltip = computed(() => {
-    if (pending.value) {
+    if (isPending.value) {
       const action = typeof props.destructive === 'string' ? props.destructive : 'confirm';
 
       return canHover.value ? `Click again to ${action}` : `Tap again to ${action}`;
@@ -31,24 +40,14 @@
     return props.tooltip;
   });
 
-  let pendingTimer: ReturnType<typeof setTimeout> | undefined;
-
   function resetPending() {
     tooltipOpen.value = false;
-    pending.value = false;
-
-    if (pendingTimer) {
-      clearTimeout(pendingTimer);
-      pendingTimer = undefined;
-    }
+    stop();
   }
 
   function startPending() {
     resetPending();
-
-    pending.value = true;
-    pendingTimer = setTimeout(resetPending, 3000);
-
+    start();
     tooltipOpen.value = true;
   }
 
@@ -58,7 +57,7 @@
       return;
     }
 
-    if (!pending.value) {
+    if (!isPending.value) {
       startPending();
       return;
     }
@@ -75,8 +74,6 @@
       }
     }
   );
-
-  onBeforeUnmount(resetPending);
 </script>
 
 <template>
@@ -85,7 +82,7 @@
       color="neutral"
       variant="fab"
       size="xl"
-      :ui="{ leadingIcon: ['size-9 transition-colors', pending ? 'text-red-500' : ''] }"
+      :ui="{ leadingIcon: ['size-9 transition-colors', isPending ? 'text-red-500' : ''] }"
       :icon="icon"
       @click="handleClick"
     />
