@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  const { tooltip, toaster } = useAppConfig().global;
   const { description, title } = useAppConfig().seo;
 
   const route = useRoute();
@@ -41,7 +42,7 @@
 </script>
 
 <template>
-  <UApp :tooltip="{ delayDuration: 300, skipDelayDuration: 0 }">
+  <UApp :tooltip="tooltip" :toaster="toaster">
     <NuxtLoadingIndicator color="var(--ui-primary)" />
 
     <AppHeader />

@@ -1,3 +1,5 @@
+import type { AppProps } from '@nuxt/ui';
+
 export default defineAppConfig({
   ui: {
     colors: {
@@ -237,6 +239,20 @@ export default defineAppConfig({
       p: { base: 'my-0' },
       ul: { base: 'ps-4.5 my-0 marker:text-dimmed dark:marker:text-muted' },
       li: { base: 'ps-0 my-0.5' },
+    },
+  },
+
+  global: {
+    tooltip: <AppProps['tooltip']>{
+      delayDuration: 300,
+      skipDelayDuration: 0,
+    },
+
+    toaster: <AppProps['toaster']>{
+      close: false,
+      progress: false,
+      expand: false,
+      position: 'bottom-center' as const,
     },
   },
 

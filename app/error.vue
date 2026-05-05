@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import type { NuxtError } from '#app';
 
+  const { tooltip, toaster } = useAppConfig().global;
   const { title } = useAppConfig().seo;
   const description = 'We are sorry but there was an error with this page.';
 
@@ -28,7 +29,7 @@
 </script>
 
 <template>
-  <UApp :tooltip="{ delayDuration: 300, skipDelayDuration: 0 }">
+  <UApp :tooltip="tooltip" :toaster="toaster">
     <AppHeader />
 
     <UMain>
