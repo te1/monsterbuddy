@@ -3,11 +3,15 @@
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
+  const route = useRoute();
   const router = useRouter();
+  const toast = useToast();
   const history = useMonstieBuildHistoryStore();
   const buildManager = useMonstieBuildManager();
 
   const build = computed(() => buildManager.build);
+
+  const editing = computed(() => route.path === '/3/builds/monstie/edit');
 
   const isPinned = computedAsync(async () => {
     return build.value ? await history.isBuildPinned(build.value.id) : false;
@@ -19,14 +23,36 @@
     }
   }
 
-  function removeBuild() {
+  async function saveBuild() {
     if (!build.value) {
       return;
     }
 
-    buildManager.removeBuild(build.value.id);
+    await buildManager.saveBuild(build.value);
 
-    router.push('/3/builds/monstie');
+    toast.add({
+      title: 'Build saved locally to your device',
+      icon: 'ph:check',
+      id: 'build-save',
+      color: 'success',
+    });
+  }
+
+  async function removeBuild() {
+    if (!build.value) {
+      return;
+    }
+
+    await buildManager.removeBuild(build.value.id);
+
+    await router.push('/3/builds/monstie');
+
+    toast.add({
+      title: 'Build deleted from your device',
+      icon: 'ph:check',
+      id: 'build-delete',
+      color: 'success',
+    });
   }
 
   const tabs = [{ label: 'Actions', slot: 'actions' }];
@@ -45,6 +71,14 @@
           />
 
           <AppActionButton
+            v-if="editing"
+            label="Save build"
+            icon="ph:floppy-disk"
+            @click="saveBuild"
+          />
+
+          <AppActionButton
+            v-else
             label="Edit build"
             icon="ph:pencil-simple"
             :to="`/3/builds/monstie/edit?op=edit&id=${build?.id}`"
