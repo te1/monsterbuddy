@@ -77,7 +77,7 @@
           />
 
           <template #fallback>
-            <USkeleton v-for="i in 4" :key="i" class="my-1 h-6 w-[80%]" />
+            <USkeleton v-for="i in 6" :key="i" class="my-1 h-6 w-[80%]" />
           </template>
         </ClientOnly>
       </div>
