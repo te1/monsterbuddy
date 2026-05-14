@@ -82,29 +82,28 @@
 
     <div class="flex flex-col gap-3 px-4 pb-2">
       <div>
-        <div class="flex items-center justify-between gap-1">
-          <LazyS3MonstieBuildElementPicker
-            v-if="editMode"
-            :build="build"
-            @update:dualElement="emit('update:dualElement', $event)"
+        <LazyS3MonstieBuildElementPicker
+          :build="build"
+          @update:dualElement="emit('update:dualElement', $event)"
+        >
+          <div
+            class="flex items-center justify-between gap-1"
+            :class="{ 'cursor-default transition-opacity hover:opacity-75': editMode }"
           >
-            <UTooltip text="Select Dual Element" :content="{ side: 'right' }">
-              <div
-                class="flex cursor-default items-center gap-1 transition-opacity select-none hover:opacity-75"
-              >
-                <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+            <UTooltip :text="editMode ? 'Select Dual Element' : ''" :content="{ side: 'right' }">
+              <div class="flex items-center gap-1" :class="{ 'select-none': editMode }">
+                <UIcon v-if="editMode" name="ph:note-pencil-light" class="size-6 text-toned" />
                 <h3 class="text-lg font-semibold">Dual Element</h3>
               </div>
             </UTooltip>
-          </LazyS3MonstieBuildElementPicker>
-          <h3 v-else class="text-lg font-semibold">Dual Element</h3>
 
-          <div v-if="build.dualElement" class="flex items-center">
-            <ElementIcon :element="build.dualElement" icon2 noTooltip />
-            <ElementLabel :element="build.dualElement" />
+            <div v-if="build.dualElement" class="flex items-center">
+              <ElementIcon :element="build.dualElement" icon2 noTooltip />
+              <ElementLabel :element="build.dualElement" />
+            </div>
+            <div v-else class="text-dimmed" v-text="'No dual element'" />
           </div>
-          <div v-else class="text-dimmed" v-text="'No dual element'" />
-        </div>
+        </LazyS3MonstieBuildElementPicker>
 
         <div v-if="dualElementAreas.length > 0">
           From areas
