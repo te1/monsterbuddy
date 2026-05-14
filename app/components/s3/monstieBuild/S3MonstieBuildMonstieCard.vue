@@ -51,37 +51,34 @@
 
 <template>
   <section class="relative">
-    <div class="inline-block px-4 pt-2">
-      <LazyS3MonstieBuildMonstiePicker
-        v-if="editMode"
-        :build="build"
-        @update:monstieSlug="emit('update:monstieSlug', $event)"
-      >
-        <UTooltip text="Select Monstie" :content="{ side: 'right' }">
-          <div
-            class="flex cursor-default items-center gap-1 transition-opacity select-none hover:opacity-75"
-          >
-            <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
-            <h3 class="text-lg font-semibold">Monstie</h3>
-          </div>
-        </UTooltip>
-      </LazyS3MonstieBuildMonstiePicker>
-      <h3 v-else class="text-lg font-semibold">Monstie</h3>
-    </div>
+    <LazyS3MonstieBuildMonstiePicker
+      :build="build"
+      @update:monstieSlug="emit('update:monstieSlug', $event)"
+    >
+      <div :class="{ 'cursor-default transition-opacity hover:opacity-75': editMode }">
+        <div class="inline-block px-4 pt-2">
+          <UTooltip :text="editMode ? 'Select Monstie' : ''" :content="{ side: 'right' }">
+            <div class="flex items-center gap-1" :class="{ 'select-none': editMode }">
+              <UIcon v-if="editMode" name="ph:note-pencil-light" class="size-6 text-toned" />
+              <h3 class="text-lg font-semibold">Monstie</h3>
+            </div>
+          </UTooltip>
+        </div>
 
-    <div v-if="build.monstie" :class="{ 'box-link': !editMode }">
-      <S3MonstieListItem
-        v-if="editMode"
-        :monster="build.monstie"
-        mode="location"
-        withTooltips
-        class="px-2.5"
-      />
-      <NuxtLink v-else :to="`/3/monsters/${build.monstie.slug}`" prefetchOn="interaction">
-        <S3MonstieListItem :monster="build.monstie" mode="location" class="px-2.5" />
-      </NuxtLink>
-    </div>
-    <div v-else class="px-4 pb-2 text-dimmed" v-text="'No monstie selected'" />
+        <div v-if="build.monstie" :class="{ 'box-link': !editMode }">
+          <S3MonstieListItem
+            v-if="editMode"
+            :monster="build.monstie"
+            mode="location"
+            class="px-2.5"
+          />
+          <NuxtLink v-else :to="`/3/monsters/${build.monstie.slug}`" prefetchOn="interaction">
+            <S3MonstieListItem :monster="build.monstie" mode="location" class="px-2.5" />
+          </NuxtLink>
+        </div>
+        <div v-else class="px-4 pb-2 text-dimmed" v-text="'No monstie selected'" />
+      </div>
+    </LazyS3MonstieBuildMonstiePicker>
 
     <div class="flex flex-col gap-3 px-4 pb-2">
       <div>
