@@ -6,7 +6,7 @@ import { monstersBySlug } from '~/services/3/data';
 export type SortKey = 'name' | 'monstie' | 'monstieElement' | 'monstieAttackType';
 
 const sortValueGetters = {
-  name: (item: MonstieBuild) => item.nameWithFallback,
+  name: (item: MonstieBuild) => item.nameWithFallback.toLocaleLowerCase(),
   monstie: (item: MonstieBuild) => {
     if (item.monstieSlug == null) {
       return null;
