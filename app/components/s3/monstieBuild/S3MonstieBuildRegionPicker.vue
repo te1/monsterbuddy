@@ -3,7 +3,6 @@
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import { regions } from '~/services/3/data';
   import { statsTypeToText } from '~/services/3/presentation';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
@@ -30,14 +29,11 @@
     return groups.value[0]?.items.find((item) => item.data === props.build.regionSlug);
   });
 
-  const buildManager = useMonstieBuildManager();
-
   function onSelect(item?: CommandPaletteItem) {
-    if (item && buildManager.build) {
+    if (item) {
       const item_ = item as Item;
 
-      buildManager.build.regionSlug = item_.data;
-      buildManager.build.save();
+      props.build.regionSlug = item_.data;
     }
 
     open.value = false;

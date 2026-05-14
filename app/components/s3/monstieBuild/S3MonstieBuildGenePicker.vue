@@ -8,7 +8,6 @@
   import { genes, getGenesBySize } from '~/services/3/genes';
   import { formatGeneInfo } from '~/services/3/presentation';
   import useGeneHistoryStore from '~/stores/3/geneHistoryStore';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{
     build: MonstieBuild;
@@ -275,14 +274,11 @@
       .find((item) => (item.data?.slug ?? null) === props.build.geneSlugs[props.index]);
   });
 
-  const buildManager = useMonstieBuildManager();
-
   function onSelect(item?: CommandPaletteItem) {
-    if (item && buildManager.build) {
+    if (item) {
       const item_ = item as Item;
 
-      buildManager.build.geneSlugs[props.index] = item_.data?.slug ?? null;
-      buildManager.build.save();
+      props.build.geneSlugs[props.index] = item_.data?.slug ?? null;
     }
 
     open.value = false;

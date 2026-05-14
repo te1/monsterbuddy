@@ -3,7 +3,6 @@
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import { sortBy } from 'es-toolkit/array';
   import { eggPowers } from '~/services/3/data';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{
     build: MonstieBuild;
@@ -57,14 +56,11 @@
       .find((item) => (item.data?.slug ?? null) === props.build.eggPowerSlugs[props.index]);
   });
 
-  const buildManager = useMonstieBuildManager();
-
   function onSelect(item?: CommandPaletteItem) {
-    if (item && buildManager.build) {
+    if (item) {
       const item_ = item as Item;
 
-      buildManager.build.eggPowerSlugs[props.index] = item_.data?.slug ?? null;
-      buildManager.build.save();
+      props.build.eggPowerSlugs[props.index] = item_.data?.slug ?? null;
     }
 
     open.value = false;

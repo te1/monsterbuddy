@@ -2,15 +2,15 @@
   import { computedAsync } from '@vueuse/core';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
+  import useMonstieBuildView from '~/stores/3/monstieBuildView';
 
   const route = useRoute();
   const router = useRouter();
   const toast = useToast();
   const history = useMonstieBuildHistoryStore();
-  const buildManager = useMonstieBuildManager();
+  const buildView = useMonstieBuildView();
 
-  const build = computed(() => buildManager.build);
+  const build = computed(() => buildView.build);
 
   const editing = computed(() => route.path === '/3/builds/monstie/edit');
 

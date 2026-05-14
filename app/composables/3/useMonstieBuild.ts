@@ -1,10 +1,10 @@
 import type { MonstieBuildEntity } from '~/services/3/localDb';
 import { liveQuery } from 'dexie';
 import { db } from '~/services/3/localDb';
-// import { MonstieBuild } from '~/services/3/monstieBuilds';
+import { MonstieBuild } from '~/services/3/monstieBuilds';
 
-/*
 export function useMonstieBuild(id: MaybeRefOrGetter<string | undefined>) {
+  const pending = ref(false);
   const data = ref<MonstieBuild | undefined>(undefined);
 
   watchEffect((onCleanup) => {
@@ -14,18 +14,23 @@ export function useMonstieBuild(id: MaybeRefOrGetter<string | undefined>) {
       return;
     }
 
+    pending.value = true;
+
     const currentId = toValue(id);
 
     if (!currentId) {
+      pending.value = false;
       return;
     }
 
     const subscription = liveQuery(() => db.monstieBuilds.get(currentId)).subscribe({
       next(value) {
         data.value = value ? MonstieBuild.fromEntity(value) : undefined;
+        pending.value = false;
       },
       error(err) {
         console.error(`useMonstieBuild(${currentId}) error`, err);
+        pending.value = false;
       },
     });
 
@@ -34,9 +39,8 @@ export function useMonstieBuild(id: MaybeRefOrGetter<string | undefined>) {
     });
   });
 
-  return data;
+  return { data, pending };
 }
-*/
 
 export function useMonstieBuildEntity(id: MaybeRefOrGetter<string | undefined>) {
   const pending = ref(false);

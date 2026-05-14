@@ -2,7 +2,7 @@
   import S3MonstieBuildDetailsSidebar from '~/components/s3/monstieBuild/S3MonstieBuildDetailsSidebar.vue';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
+  import useMonstieBuildView from '~/stores/3/monstieBuildView';
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildDetailsSidebar,
@@ -15,15 +15,13 @@
   const router = useRouter();
   const route = useRoute();
   const history = useMonstieBuildHistoryStore();
-  const buildManager = useMonstieBuildManager();
+  const buildView = useMonstieBuildView();
 
-  const buildId = computed(() =>
-    Array.isArray(route.params.id) ? route.params.id[0] : route.params.id
-  );
+  const buildId = computed(() => getRouteParamAsString(route.params.id));
 
-  buildManager.buildId = buildId.value;
+  buildView.buildId = buildId.value;
 
-  const build = computed(() => buildManager.build);
+  const build = computed(() => buildView.build);
 
   const title = computed(() => {
     return build.value?.nameWithFallback ?? `Monstie Build `;
@@ -63,7 +61,7 @@
 </script>
 
 <template>
-  <div v-if="!buildManager.pending">
+  <div v-if="!buildView.pending">
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">

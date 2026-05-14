@@ -7,7 +7,6 @@
   import { allElements, monsties } from '~/services/3/data';
   import { formatMonsterTag } from '~/services/3/presentation';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   const props = defineProps<{ build: MonstieBuild }>();
 
@@ -206,14 +205,11 @@
     );
   });
 
-  const buildManager = useMonstieBuildManager();
-
   function onSelect(item?: CommandPaletteItem) {
-    if (item && buildManager.build) {
+    if (item) {
       const item_ = item as Item;
 
-      buildManager.build.monstieSlug = item_.data?.slug ?? null;
-      buildManager.build.save();
+      props.build.monstieSlug = item_.data?.slug ?? null;
     }
 
     open.value = false;
