@@ -1,13 +1,7 @@
-import type { UpdateSpec } from 'dexie';
-import type { MonstieBuildEntity } from '~/services/3/localDb';
-import { customAlphabet } from 'nanoid';
-import { db } from '~/services/3/localDb';
 import { MonstieBuild } from '~/services/3/monstieBuilds';
 import { useMonstieBuildEntity } from '~/composables/3/useMonstieBuild';
 
 const useMonstieBuildManager = defineStore('s3/monstieBuildManager', () => {
-  const router = useRouter();
-
   // -- state
   const buildId = ref<string | undefined>(undefined);
   const entity = useMonstieBuildEntity(buildId);
@@ -17,69 +11,6 @@ const useMonstieBuildManager = defineStore('s3/monstieBuildManager', () => {
     return entity.data.value ? MonstieBuild.fromEntity(entity.data.value) : undefined;
   });
 
-  // -- actions
-  async function goToNewBuild(): Promise<void> {
-    if (build.value?.isEmpty()) {
-      // we have a new empty build already so just reuse it
-
-      router.push(`/3/builds/monstie/${build.value.id}`);
-
-      return;
-    }
-
-    const id = generateLocalId();
-    const now = new Date();
-
-    // let data = new MonstieBuild(id); // TODO remove placeholder
-    let data = MonstieBuild.fromPlaceholder(id);
-    const dataHash = await data.getContentHash({ ignoreId: true });
-
-    const entity = await db.monstieBuilds.get({ dataHash });
-
-    if (entity != null) {
-      // we have a build with the same content already so just reuse it
-      data = MonstieBuild.fromEntity(entity);
-    } else {
-      const entity: MonstieBuildEntity = {
-        id,
-        name: data.name,
-        monstieSlug: data.monstieSlug,
-        data,
-        dataHash,
-        pinned: 0,
-        createdAt: now,
-        updatedAt: now,
-        viewedAt: now,
-      };
-
-      await db.monstieBuilds.put(entity);
-    }
-
-    buildId.value = data.id;
-
-    router.push(`/3/builds/monstie/${data.id}`);
-  }
-
-  async function saveBuild(build: MonstieBuild): Promise<void> {
-    const now = new Date();
-
-    const changes: UpdateSpec<MonstieBuildEntity> = {
-      id: build.id,
-      name: build.name,
-      monstieSlug: build.monstieSlug,
-      data: build,
-      dataHash: await build.getContentHash({ ignoreId: true }),
-      updatedAt: now,
-      viewedAt: now,
-    };
-
-    await db.monstieBuilds.update(build.id, changes);
-  }
-
-  async function removeBuild(id: string): Promise<void> {
-    await db.monstieBuilds.delete(id);
-  }
-
   return {
     // -- state
     buildId,
@@ -87,19 +18,7 @@ const useMonstieBuildManager = defineStore('s3/monstieBuildManager', () => {
 
     // -- getters
     build,
-
-    // -- actions
-    goToNewBuild,
-    saveBuild,
-    removeBuild,
   };
 });
 
 export default useMonstieBuildManager;
-
-const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; // no _-
-const nanoid = customAlphabet(alphabet, 11);
-
-function generateLocalId(): string {
-  return '_' + nanoid();
-}

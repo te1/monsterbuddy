@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import S3MonstieBuildDetailsSidebar from '~/components/s3/monstieBuild/S3MonstieBuildDetailsSidebar.vue';
+  import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
@@ -36,16 +37,12 @@
   });
   const headline = gameTypeToFullName('mhst3');
 
-  function newBuild() {
-    buildManager.goToNewBuild();
-  }
-
-  function deleteBuild() {
+  async function deleteBuild() {
     if (!build.value) {
       return;
     }
 
-    buildManager.removeBuild(build.value.id);
+    await MonstieBuild.remove(build.value.id);
 
     router.push('/3/builds/monstie');
   }
@@ -120,7 +117,7 @@
         destructive="delete build"
         @click="deleteBuild"
       />
-      <AppFab tooltip="New build" icon="ph:plus" @click="newBuild" />
+      <AppFab tooltip="New build" icon="ph:plus" to="/3/builds/monstie/edit?op=new" />
     </AppFabPanel>
   </div>
 </template>

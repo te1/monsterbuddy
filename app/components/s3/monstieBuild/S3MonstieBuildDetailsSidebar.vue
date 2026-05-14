@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import { computedAsync } from '@vueuse/core';
+  import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
@@ -28,7 +29,7 @@
       return;
     }
 
-    await buildManager.saveBuild(build.value);
+    await build.value.save();
 
     toast.add({
       title: 'Build saved locally to your device',
@@ -43,7 +44,7 @@
       return;
     }
 
-    await buildManager.removeBuild(build.value.id);
+    await MonstieBuild.remove(build.value.id);
 
     await router.push('/3/builds/monstie');
 

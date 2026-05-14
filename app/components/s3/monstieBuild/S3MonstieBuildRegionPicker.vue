@@ -37,7 +37,7 @@
       const item_ = item as Item;
 
       buildManager.build.regionSlug = item_.data;
-      buildManager.saveBuild(buildManager.build);
+      buildManager.build.save();
     }
 
     open.value = false;

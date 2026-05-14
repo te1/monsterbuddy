@@ -213,7 +213,7 @@
       const item_ = item as Item;
 
       buildManager.build.monstieSlug = item_.data?.slug ?? null;
-      buildManager.saveBuild(buildManager.build);
+      buildManager.build.save();
     }
 
     open.value = false;

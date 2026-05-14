@@ -1,15 +1,19 @@
+import type { UpdateSpec } from 'dexie';
 import type { EggPower, EggPowerRequirement, Gene, Monster, Region } from './types';
 import type { MonstieBuildEntity } from './localDb';
 import { orderBy, uniqBy } from 'es-toolkit/array';
+import { customAlphabet } from 'nanoid';
+import { db } from './localDb';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
 import { genesBySlug, getGeneSizeAsNumber } from './genes';
 
 export class MonstieBuild {
   id: string;
+  forkedFrom: string | null = null;
   name: string | null = null;
   description: string | null = null;
   monstieSlug: string | null = null;
-  geneSlugs: (string | null)[] = [];
+  geneSlugs: (string | null)[] = [null, null, null, null, null, null, null, null, null];
   eggPowerSlugs: (string | null)[] = [null, null, null];
   dualElement: ElementType | null = null;
   /** for stat increases */
@@ -19,32 +23,10 @@ export class MonstieBuild {
     this.id = id;
   }
 
-  static fromPlaceholder(id: string): MonstieBuild {
-    const build = new MonstieBuild(id);
-    build.name = 'Build 2';
-    build.description = 'This is a placeholder build';
-    build.monstieSlug = 'grimclaw-tigrex';
-    build.geneSlugs = [
-      'quick-xl',
-      'antiburn-l',
-      'stamina-surge-xl',
-      'vigilance-xl',
-      'fruit-frenzy-plus',
-      'antiburn-s',
-      'stamina-boost-xl',
-      'dragon-buster-xl',
-      'critical-xl',
-    ];
-    build.eggPowerSlugs = ['resonance', 'best-buds', 'hardiness'];
-    build.dualElement = 'fire';
-    build.regionSlug = 'azuria';
-
-    return build;
-  }
-
   static fromEntity(entity: MonstieBuildEntity): MonstieBuild {
     const build = new MonstieBuild(entity.data.id);
 
+    build.forkedFrom = entity.data.forkedFrom;
     build.name = entity.data.name;
     build.description = entity.data.description;
     build.monstieSlug = entity.data.monstieSlug;
@@ -54,6 +36,29 @@ export class MonstieBuild {
     build.regionSlug = entity.data.regionSlug;
 
     return build;
+  }
+
+  static async new(): Promise<MonstieBuild> {
+    const id = generateLocalId();
+    return new MonstieBuild(id);
+  }
+
+  static async fork(sourceId: string): Promise<MonstieBuild | undefined> {
+    const sourceEntity = await db.monstieBuilds.get(sourceId);
+
+    if (!sourceEntity) {
+      return;
+    }
+
+    const build = MonstieBuild.fromEntity(sourceEntity);
+    build.id = generateLocalId();
+    build.forkedFrom = sourceId;
+
+    return build;
+  }
+
+  static async remove(id: string): Promise<void> {
+    await db.monstieBuilds.delete(id);
   }
 
   get nameWithFallback(): string {
@@ -153,10 +158,11 @@ export class MonstieBuild {
 
   isEmpty(): boolean {
     return (
+      this.forkedFrom == null &&
       this.name == null &&
       this.description == null &&
       this.monstieSlug == null &&
-      this.geneSlugs.length === 0 &&
+      (this.geneSlugs.length === 0 || this.geneSlugs.every((slug) => slug == null)) &&
       (this.eggPowerSlugs.length === 0 || this.eggPowerSlugs.every((slug) => slug == null)) &&
       this.dualElement == null &&
       this.regionSlug == null
@@ -178,6 +184,29 @@ export class MonstieBuild {
 
     return await hash(json);
   }
+
+  async save(): Promise<void> {
+    const oldEntity = await db.monstieBuilds.get(this.id);
+
+    const now = new Date();
+
+    const changes: UpdateSpec<MonstieBuildEntity> = {
+      id: this.id,
+      name: this.name,
+      monstieSlug: this.monstieSlug,
+      data: this,
+      dataHash: await this.getContentHash({ ignoreId: true }),
+      updatedAt: now,
+      viewedAt: now,
+    };
+
+    if (oldEntity == null) {
+      changes.pinned = 0;
+      changes.createdAt = now;
+    }
+
+    await db.monstieBuilds.upsert(this.id, changes);
+  }
 }
 
 /*
@@ -192,3 +221,10 @@ export const MonstieBuildSchema = z.object({
   regionSlug: z.string().nullable(),
 });
 */
+
+const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; // no _-
+const nanoid = customAlphabet(alphabet, 11);
+
+function generateLocalId(): string {
+  return '_' + nanoid();
+}

@@ -64,7 +64,7 @@
       const item_ = item as Item;
 
       buildManager.build.eggPowerSlugs[props.index] = item_.data?.slug ?? null;
-      buildManager.saveBuild(buildManager.build);
+      buildManager.build.save();
     }
 
     open.value = false;

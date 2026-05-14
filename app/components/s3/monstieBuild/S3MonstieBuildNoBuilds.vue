@@ -1,13 +1,3 @@
-<script lang="ts" setup>
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
-
-  const buildManager = useMonstieBuildManager();
-
-  function newBuild() {
-    buildManager.goToNewBuild();
-  }
-</script>
-
 <template>
   <div class="box flex min-h-[246px] flex-col items-center justify-center gap-6 px-3 py-6">
     <span class="text-center text-2xl font-medium">
@@ -24,7 +14,7 @@
       trailingIcon="ph:list-plus"
       label="New build"
       :ui="{ base: 'justify-between font-normal', trailingIcon: 'text-dimmed' }"
-      @click="newBuild"
+      to="/3/builds/monstie/edit?op=new"
     />
   </div>
 </template>

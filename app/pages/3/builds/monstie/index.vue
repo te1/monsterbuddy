@@ -4,7 +4,6 @@
   import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildSources from '~/stores/3/monstieBuildSources';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildSidebar,
@@ -46,7 +45,6 @@
   const history = useMonstieBuildHistoryStore();
   const filter = useMonstieBuildFilter();
   const sources = useMonstieBuildSources();
-  const buildManager = useMonstieBuildManager();
 
   const oldSortKey = ref(filter.sortKey);
   const oldSortOrder = ref(filter.sortOrder);
@@ -378,7 +376,7 @@
       </LazyUDrawer>
 
       <AppFabPanel>
-        <AppFab tooltip="New build" icon="ph:plus" @click="buildManager.goToNewBuild" />
+        <AppFab tooltip="New build" icon="ph:plus" to="/3/builds/monstie/edit?op=new" />
 
         <AppFab
           v-if="fabSourceVisible"
