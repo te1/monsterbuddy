@@ -118,29 +118,28 @@
       </div>
 
       <div>
-        <div class="flex flex-col justify-between xs:flex-row xs:items-center xs:gap-1">
-          <LazyS3MonstieBuildRegionPicker
-            v-if="editMode"
-            :build="build"
-            @update:regionSlug="emit('update:regionSlug', $event)"
+        <LazyS3MonstieBuildRegionPicker
+          :build="build"
+          @update:regionSlug="emit('update:regionSlug', $event)"
+        >
+          <div
+            class="flex flex-col justify-between xs:flex-row xs:items-center xs:gap-1"
+            :class="{ 'cursor-default transition-opacity hover:opacity-75': editMode }"
           >
-            <UTooltip text="Select Stat Increases" :content="{ side: 'right' }">
-              <div
-                class="flex cursor-default items-center gap-1 transition-opacity select-none hover:opacity-75"
-              >
-                <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+            <UTooltip :text="editMode ? 'Select Stat Increases' : ''" :content="{ side: 'right' }">
+              <div class="flex items-center gap-1" :class="{ 'select-none': editMode }">
+                <UIcon v-if="editMode" name="ph:note-pencil-light" class="size-6 text-toned" />
                 <h3 class="text-lg font-semibold">Stat Increases</h3>
               </div>
             </UTooltip>
-          </LazyS3MonstieBuildRegionPicker>
-          <h3 v-else class="text-lg font-semibold">Stat Increases</h3>
 
-          <div
-            v-if="build.region"
-            v-text="build.region.powers.stats.map(statsTypeToText).join(', ')"
-          />
-          <div v-else class="text-dimmed" v-text="'No stat increases'" />
-        </div>
+            <div
+              v-if="build.region"
+              v-text="build.region.powers.stats.map(statsTypeToText).join(', ')"
+            />
+            <div v-else class="text-dimmed" v-text="'No stat increases'" />
+          </div>
+        </LazyS3MonstieBuildRegionPicker>
 
         <div v-if="build.region">
           From region
