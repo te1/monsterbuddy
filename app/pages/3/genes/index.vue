@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { Source } from '~/stores/3/geneSources';
+  import { omit } from 'es-toolkit/object';
   import S3GeneSidebar from '~/components/s3/gene/S3GeneSidebar.vue';
   import { genes } from '~/services/3/genes';
   import useGeneFilter from '~/stores/3/geneFilter';
@@ -134,10 +135,9 @@
         });
       } else {
         // value is now false -> remove ?filter from URL
-        const { filter: _filter, ...query } = route.query;
         router.push({
           path: route.path,
-          query,
+          query: omit(route.query, ['filter']),
         });
       }
     },

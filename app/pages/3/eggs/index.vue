@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { Source } from '~/stores/3/eggSources';
+  import { omit } from 'es-toolkit/object';
   import { filterStoreKey } from '~/stores/3/baseMonsterFilter';
   import S3EggSidebar from '~/components/s3/egg/S3EggSidebar.vue';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
@@ -152,10 +153,9 @@
           query: { ...route.query, filter: null },
         });
       } else {
-        const { filter: _filter, ...query } = route.query;
         router.push({
           path: route.path,
-          query,
+          query: omit(route.query, ['filter']),
         });
       }
     },

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { Source } from '~/stores/3/monstieBuildSources';
+  import { omit } from 'es-toolkit/object';
   import S3MonstieBuildSidebar from '~/components/s3/monstieBuild/S3MonstieBuildSidebar.vue';
   import useMonstieBuildFilter from '~/stores/3/monstieBuildFilter';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
@@ -137,10 +138,9 @@
         });
       } else {
         // value is now false -> remove ?filter from URL
-        const { filter: _filter, ...query } = route.query;
         router.push({
           path: route.path,
-          query,
+          query: omit(route.query, ['filter']),
         });
       }
     },

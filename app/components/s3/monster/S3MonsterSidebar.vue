@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { omit } from 'es-toolkit/object';
   import useMonsterFilter, { modes } from '~/stores/3/monsterFilter';
   import useMonsterSources from '~/stores/3/monsterSources';
 
@@ -26,10 +27,9 @@
 
       tab.value = 'filter';
 
-      const { filter: _filter, ...query } = route.query;
       router.replace({
         path: route.path,
-        query,
+        query: omit(route.query, ['filter']),
       });
     },
     { immediate: true }
