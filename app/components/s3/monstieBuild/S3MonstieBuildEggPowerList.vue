@@ -1,9 +1,22 @@
 <script lang="ts" setup>
-  import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { EggPowerIndex, MonstieBuild } from '~/services/3/monstieBuilds';
   import type { EggPowerRequirement } from '~/services/3/types';
+  import type { EggPowerPickedEvent } from './S3MonstieBuildEggPowerPicker.vue';
   import { regionsByName } from '~/services/3/data';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: false,
+    }
+  );
+
+  const emit = defineEmits<{
+    'update:eggPower': [data: EggPowerPickedEvent];
+  }>();
 
   const eggPowers = computed(() => {
     const all = props.build.eggPowers.filter((eggPower) => eggPower !== undefined);
@@ -43,20 +56,36 @@
     <div v-for="(eggPower, index) in eggPowers" :key="index" :class="{ 'mb-2': eggPower.item }">
       <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
 
-      <div v-if="eggPower.item" class="box-link">
-        <NuxtLink :to="`/3/egg-powers/${eggPower.item.slug}`" prefetchOn="interaction">
-          <S3EggPowerListItem
-            :eggPower="eggPower.item"
-            :awakened="eggPower.awakened"
-            class="px-2.5"
-          />
-        </NuxtLink>
-      </div>
-      <div v-else class="@container flex items-center gap-1.5 px-2.5">
-        <S3EggPowerIcon class="mx-1.5 my-2.5 shrink-0" :eggPower="undefined" big contrast />
+      <LazyS3MonstieBuildEggPowerPicker
+        :build="build"
+        :index="index as EggPowerIndex"
+        :editMode="editMode"
+        @update:eggPower="emit('update:eggPower', $event)"
+      >
+        <div :class="{ 'cursor-default transition-opacity hover:opacity-75': editMode }">
+          <div v-if="eggPower.item" :class="{ 'box-link': !editMode, 'select-none': editMode }">
+            <S3EggPowerListItem
+              v-if="editMode"
+              :eggPower="eggPower.item"
+              :awakened="eggPower.awakened"
+              class="px-2.5"
+            />
 
-        <div class="font-semibold text-dimmed" v-text="'No egg power'" />
-      </div>
+            <NuxtLink v-else :to="`/3/egg-powers/${eggPower.item.slug}`" prefetchOn="interaction">
+              <S3EggPowerListItem
+                :eggPower="eggPower.item"
+                :awakened="eggPower.awakened"
+                class="px-2.5"
+              />
+            </NuxtLink>
+          </div>
+          <div v-else class="@container flex items-center gap-1.5 px-2.5">
+            <S3EggPowerIcon class="mx-1.5 my-2.5 shrink-0" :eggPower="undefined" big contrast />
+
+            <div class="font-semibold text-dimmed" v-text="'No egg power'" />
+          </div>
+        </div>
+      </LazyS3MonstieBuildEggPowerPicker>
 
       <div v-if="eggPower.item" class="-mt-2 ml-17 flex items-center gap-1">
         <div class="w-20">

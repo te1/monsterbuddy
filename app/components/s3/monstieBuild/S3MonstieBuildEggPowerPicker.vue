@@ -4,10 +4,16 @@
   import { sortBy } from 'es-toolkit/array';
   import { eggPowers } from '~/services/3/data';
 
-  const props = defineProps<{
-    build: MonstieBuild;
-    index: EggPowerIndex;
-  }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      index: EggPowerIndex;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: true,
+    }
+  );
 
   export type EggPowerPickedEvent = { eggPowerSlug: string | null; index: EggPowerIndex };
 
@@ -85,6 +91,7 @@
 
 <template>
   <UModal
+    v-if="editMode"
     v-model:open="open"
     title="Select Egg Powers"
     :ui="{
@@ -123,4 +130,8 @@
       </div>
     </template>
   </UModal>
+
+  <template v-else>
+    <slot />
+  </template>
 </template>
