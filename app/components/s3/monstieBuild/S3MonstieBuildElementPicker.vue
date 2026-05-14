@@ -3,7 +3,15 @@
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
   import { allElements } from '~/services/3/data';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: true,
+    }
+  );
 
   const emit = defineEmits<{
     'update:dualElement': [dualElement: ElementType | null];
@@ -55,6 +63,7 @@
 
 <template>
   <UModal
+    v-if="editMode"
     v-model:open="open"
     title="Select Dual Element"
     :ui="{
@@ -87,4 +96,8 @@
       </div>
     </template>
   </UModal>
+
+  <template v-else>
+    <slot />
+  </template>
 </template>

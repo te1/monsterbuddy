@@ -53,6 +53,7 @@
   <section class="relative">
     <LazyS3MonstieBuildMonstiePicker
       :build="build"
+      :editMode="editMode"
       @update:monstieSlug="emit('update:monstieSlug', $event)"
     >
       <div :class="{ 'cursor-default transition-opacity hover:opacity-75': editMode }">
@@ -84,6 +85,7 @@
       <div>
         <LazyS3MonstieBuildElementPicker
           :build="build"
+          :editMode="editMode"
           @update:dualElement="emit('update:dualElement', $event)"
         >
           <div
@@ -120,6 +122,7 @@
       <div>
         <LazyS3MonstieBuildRegionPicker
           :build="build"
+          :editMode="editMode"
           @update:regionSlug="emit('update:regionSlug', $event)"
         >
           <div

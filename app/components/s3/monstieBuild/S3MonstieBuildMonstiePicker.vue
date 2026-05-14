@@ -8,7 +8,15 @@
   import { formatMonsterTag } from '~/services/3/presentation';
   import useMonsterHistoryStore from '~/stores/3/monsterHistoryStore';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: true,
+    }
+  );
 
   const emit = defineEmits<{
     'update:monstieSlug': [monstieSlug: string | null];
@@ -232,6 +240,7 @@
 
 <template>
   <UModal
+    v-if="editMode"
     v-model:open="open"
     title="Select Monstie"
     :ui="{
@@ -354,4 +363,8 @@
       </div>
     </template>
   </UModal>
+
+  <template v-else>
+    <slot />
+  </template>
 </template>

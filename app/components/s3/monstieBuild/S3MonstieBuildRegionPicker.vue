@@ -4,7 +4,15 @@
   import { regions } from '~/services/3/data';
   import { statsTypeToText } from '~/services/3/presentation';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: true,
+    }
+  );
 
   const emit = defineEmits<{
     'update:regionSlug': [regionSlug: string | null];
@@ -56,6 +64,7 @@
 
 <template>
   <UModal
+    v-if="editMode"
     v-model:open="open"
     title="Select Stat Increases"
     :ui="{
@@ -83,4 +92,8 @@
       </div>
     </template>
   </UModal>
+
+  <template v-else>
+    <slot />
+  </template>
 </template>
