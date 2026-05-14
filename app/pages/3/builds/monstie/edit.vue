@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-  import type { EggPowerIndex, GeneIndex } from '~/services/3/monstieBuilds';
+  import type { GeneIndex } from '~/services/3/monstieBuilds';
+  import type { EggPowerPickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildEggPowerPicker.vue';
   import { omit } from 'es-toolkit/object';
   import S3MonstieBuildEditSidebar from '~/components/s3/monstieBuild/S3MonstieBuildEditSidebar.vue';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
@@ -13,14 +14,18 @@
       show: true,
       fallback: '/3/builds/monstie',
     },
+    mobileHeaderTitle: 'Monstie Build',
   });
 
   const router = useRouter();
   const route = useRoute();
+  const toast = useToast();
   const history = useMonstieBuildHistoryStore();
   const edit = useMonstieBuildEdit();
+  const hasSidebar = useHasSidebar();
 
   const build = computed(() => edit.build);
+  const isSaved = computed(() => edit.isSaved);
 
   const ready = ref(false);
   const notFound = ref(false);
@@ -61,16 +66,47 @@
     }
   }
 
-  function updateEggPowerSlug(index: EggPowerIndex, eggPowerSlug: string | null) {
+  function updateEggPower(data: EggPowerPickedEvent) {
     if (build.value) {
-      build.value.eggPowerSlugs[index] = eggPowerSlug;
+      build.value.eggPowerSlugs[data.index] = data.eggPowerSlug;
     }
+  }
+
+  async function saveBuild() {
+    if (!build.value) {
+      return;
+    }
+
+    await edit.save();
+
+    toast.add({
+      title: 'Build saved locally to your device',
+      icon: 'ph:check',
+      id: 'build-save',
+      color: 'success',
+    });
+  }
+
+  async function removeBuild() {
+    if (!build.value) {
+      return;
+    }
+
+    await router.push('/3/builds/monstie');
+
+    await MonstieBuild.remove(build.value.id);
+
+    toast.add({
+      title: 'Build deleted from your device',
+      icon: 'ph:check',
+      id: 'build-delete',
+      color: 'success',
+    });
   }
 
   watch(
     () => [route.query.op, route.query.id],
     async ([rawOp, rawId]) => {
-      console.log('op', rawOp, 'id', rawId);
       const op = getRouteParamAsString(rawOp);
       const id = getRouteParamAsString(rawId);
 
@@ -78,6 +114,7 @@
         case 'new':
           edit.build = await MonstieBuild.new();
           ready.value = true;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           break;
 
         case 'fork': {
@@ -90,6 +127,7 @@
             }
           }
           ready.value = true;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           break;
         }
 
@@ -163,21 +201,6 @@
 
         <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
           <div class="flex flex-1 flex-col gap-3">
-            <S3MonstieBuildEggPowerPicker
-              :build="build"
-              :index="0"
-              @update:eggPowerSlug="updateEggPowerSlug(0, $event)"
-            />
-            <S3MonstieBuildEggPowerPicker
-              :build="build"
-              :index="1"
-              @update:eggPowerSlug="updateEggPowerSlug(1, $event)"
-            />
-            <S3MonstieBuildEggPowerPicker
-              :build="build"
-              :index="2"
-              @update:eggPowerSlug="updateEggPowerSlug(2, $event)"
-            />
             <S3MonstieBuildGenePicker
               :build="build"
               :index="0"
@@ -208,26 +231,52 @@
 
             <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
 
-            <S3MonstieBuildEggPowerList :build="build" editMode class="box overflow-hidden" />
+            <S3MonstieBuildEggPowerList
+              :build="build"
+              editMode
+              class="box overflow-hidden"
+              @update:eggPower="updateEggPower($event)"
+            />
 
             <S3MonstieBuildEffectList :build="build" class="box px-4 py-2" />
           </div>
+        </div>
+
+        <div v-if="build && !hasSidebar" class="mt-3 flex flex-col px-4">
+          <div class="mb-1 font-semibold">Actions</div>
+
+          <AppActionButton
+            label="Delete build"
+            icon="ph:trash"
+            :disabled="!build || !isSaved"
+            destructive="delete build"
+            @click="removeBuild"
+          />
+
+          <AppActionButton
+            label="Copy build"
+            icon="ph:copy-simple"
+            :to="`/3/builds/monstie/edit?op=fork&id=${build?.id}`"
+            :disabled="!build || !isSaved"
+          />
+
+          <AppActionButton
+            label="New build"
+            icon="ph:list-plus"
+            to="/3/builds/monstie/edit?op=new"
+          />
+
+          <AppActionButton
+            label="All builds"
+            icon="ph:list-magnifying-glass"
+            to="/3/builds/monstie"
+          />
         </div>
       </template>
     </UPageBody>
 
     <AppFabPanel>
-      <!-- TODO don't have fabs? put action buttons at the end of the page? maybe edit fab? -->
-      <!--
-      <AppFab
-        v-if="build"
-        tooltip="Delete build"
-        icon="ph:trash"
-        destructive="delete build"
-        @click="deleteBuild"
-      />
-      <AppFab tooltip="New build" icon="ph:plus" @click="newBuild" />
-      -->
+      <AppFab v-if="build" tooltip="Save build" icon="ph:floppy-disk" @click="saveBuild" />
     </AppFabPanel>
   </div>
 </template>

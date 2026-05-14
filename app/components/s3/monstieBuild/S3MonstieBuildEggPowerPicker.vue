@@ -9,8 +9,10 @@
     index: EggPowerIndex;
   }>();
 
+  export type EggPowerPickedEvent = { eggPowerSlug: string | null; index: EggPowerIndex };
+
   const emit = defineEmits<{
-    'update:eggPowerSlug': [eggPowerSlug: string | null];
+    'update:eggPower': [data: EggPowerPickedEvent];
   }>();
 
   const open = ref(false);
@@ -64,7 +66,7 @@
     if (item) {
       const item_ = item as Item;
 
-      emit('update:eggPowerSlug', item_.data?.slug ?? null);
+      emit('update:eggPower', { eggPowerSlug: item_.data?.slug ?? null, index: props.index });
     }
 
     open.value = false;
@@ -92,7 +94,9 @@
       body: 'p-0 sm:p-0',
     }"
   >
-    <UButton label="Egg Power" color="neutral" variant="subtle" />
+    <slot>
+      <UButton label="Egg Power" color="neutral" variant="subtle" />
+    </slot>
 
     <template #body>
       <div class="h-[calc(80dvh-41px)] max-h-[855px]">

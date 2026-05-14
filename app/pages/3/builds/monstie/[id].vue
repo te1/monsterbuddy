@@ -99,7 +99,7 @@
       </div>
 
       <div v-if="build && !hasSidebar" class="mt-3 flex flex-col px-4">
-        <div class="font-semibold">Actions</div>
+        <div class="mb-1 font-semibold">Actions</div>
 
         <AppActionButton
           label="Delete build"
@@ -114,6 +114,12 @@
           icon="ph:copy-simple"
           :to="`/3/builds/monstie/edit?op=fork&id=${build?.id}`"
           :disabled="!build"
+        />
+
+        <AppActionButton
+          label="All builds"
+          icon="ph:list-magnifying-glass"
+          to="/3/builds/monstie"
         />
       </div>
 
