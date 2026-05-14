@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <section class="flex flex-col gap-1">
+  <section v-if="build.description" class="flex flex-col gap-1">
     <h3 class="text-lg font-semibold">Description</h3>
 
     <div v-text="build.description" />

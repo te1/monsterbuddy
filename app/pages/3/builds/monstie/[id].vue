@@ -14,8 +14,10 @@
 
   const router = useRouter();
   const route = useRoute();
+  const toast = useToast();
   const history = useMonstieBuildHistoryStore();
   const view = useMonstieBuildView();
+  const hasSidebar = useHasSidebar();
 
   const buildId = computed(() => getRouteParamAsString(route.params.id));
 
@@ -35,14 +37,21 @@
   });
   const headline = gameTypeToFullName('mhst3');
 
-  async function deleteBuild() {
+  async function removeBuild() {
     if (!build.value) {
       return;
     }
 
+    await router.push('/3/builds/monstie');
+
     await MonstieBuild.remove(build.value.id);
 
-    router.push('/3/builds/monstie');
+    toast.add({
+      title: 'Build deleted from your device',
+      icon: 'ph:check',
+      id: 'build-delete',
+      color: 'success',
+    });
   }
 
   watch(
@@ -89,7 +98,26 @@
         </div>
       </div>
 
-      <div v-else-if="buildId && history.allLoaded && !history.hasBuild(buildId)">
+      <div v-if="build && !hasSidebar" class="mt-3 flex flex-col px-4">
+        <div class="font-semibold">Actions</div>
+
+        <AppActionButton
+          label="Delete build"
+          icon="ph:trash"
+          :disabled="!build"
+          destructive="delete build"
+          @click="removeBuild"
+        />
+
+        <AppActionButton
+          label="Copy build"
+          icon="ph:copy-simple"
+          :to="`/3/builds/monstie/edit?op=fork&id=${build?.id}`"
+          :disabled="!build"
+        />
+      </div>
+
+      <div v-if="!build && buildId && history.allLoaded && !history.hasBuild(buildId)">
         <UError
           :error="{ statusMessage: 'Build Not Found' }"
           redirect="/3/builds/monstie"
@@ -107,15 +135,14 @@
     </UPageBody>
 
     <AppFabPanel>
-      <!-- TODO don't have fabs? put action buttons at the end of the page? maybe edit fab? -->
+      <AppFab tooltip="New build" icon="ph:plus" to="/3/builds/monstie/edit?op=new" />
+
       <AppFab
         v-if="build"
-        tooltip="Delete build"
-        icon="ph:trash"
-        destructive="delete build"
-        @click="deleteBuild"
+        tooltip="Edit build"
+        icon="ph:pencil-simple"
+        :to="`/3/builds/monstie/edit?op=edit&id=${build?.id}`"
       />
-      <AppFab tooltip="New build" icon="ph:plus" to="/3/builds/monstie/edit?op=new" />
     </AppFabPanel>
   </div>
 </template>
