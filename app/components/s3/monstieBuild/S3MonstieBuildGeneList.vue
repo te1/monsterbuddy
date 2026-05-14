@@ -35,10 +35,19 @@
 
     return uniqBy(withMultipleSizes.flat(), (gene) => gene.slug);
   });
+
+  const hasGenes = computed(() => {
+    return (
+      passiveGenes.value.length > 0 ||
+      activeGenes.value.length > 0 ||
+      duplicateGenes.value.length > 0 ||
+      nonStackingGenes.value.length > 0
+    );
+  });
 </script>
 
 <template>
-  <section class="flex flex-col gap-2">
+  <section v-if="hasGenes" class="flex flex-col gap-2">
     <div v-if="passiveGenes.length > 0">
       <h3 class="px-4 pt-2 text-lg font-semibold">Passive Genes</h3>
 

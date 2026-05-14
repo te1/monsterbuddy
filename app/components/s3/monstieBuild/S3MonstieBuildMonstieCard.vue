@@ -4,10 +4,20 @@
   import { getAreasByElement } from '~/services/3/data';
   import { statsTypeToText } from '~/services/3/presentation';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
+  import useMonstieBuildEdit from '~/stores/3/monstieBuildEdit';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: false,
+    }
+  );
 
   const history = useMonstieBuildHistoryStore();
+  const edit = useMonstieBuildEdit();
 
   const dualElementAreas = computed(() => {
     if (!props.build.dualElement) {
@@ -18,10 +28,17 @@
   });
 
   const isPinned = computedAsync(async () => {
-    return await history.isBuildPinned(props.build.id);
+    if (props.editMode) {
+      return edit.isPinned;
+    }
+    return props.build?.id ? await history.isBuildPinned(props.build.id) : false;
   }, false);
 
-  function togglePin() {
+  async function togglePin() {
+    if (props.editMode) {
+      await edit.togglePin();
+      return;
+    }
     history.togglePinnedBuild(props.build.id);
   }
 </script>

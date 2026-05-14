@@ -15,13 +15,13 @@
   const router = useRouter();
   const route = useRoute();
   const history = useMonstieBuildHistoryStore();
-  const buildView = useMonstieBuildView();
+  const view = useMonstieBuildView();
 
   const buildId = computed(() => getRouteParamAsString(route.params.id));
 
-  buildView.buildId = buildId.value;
+  view.buildId = buildId.value;
 
-  const build = computed(() => buildView.build);
+  const build = computed(() => view.build);
 
   const title = computed(() => {
     return build.value?.nameWithFallback ?? `Monstie Build `;
@@ -61,7 +61,7 @@
 </script>
 
 <template>
-  <div v-if="!buildView.pending">
+  <div v-if="!view.pending">
     <AppPageHeader :title="title" :headline="headline" />
 
     <UPageBody class="-mt-3 lg:mt-0">

@@ -1,8 +1,9 @@
-import type { UpdateSpec } from 'dexie';
 import type { EggPower, EggPowerRequirement, Gene, Monster, Region } from './types';
 import type { MonstieBuildEntity } from './localDb';
+import z from 'zod';
 import { orderBy, uniqBy } from 'es-toolkit/array';
 import { customAlphabet } from 'nanoid';
+import { ElementTypeSchema } from '~~/data/shared.schema';
 import { db } from './localDb';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
 import { genesBySlug, getGeneSizeAsNumber } from './genes';
@@ -26,19 +27,23 @@ export class MonstieBuild {
     this.id = id;
   }
 
-  static fromEntity(entity: MonstieBuildEntity): MonstieBuild {
-    const build = new MonstieBuild(entity.data.id);
+  static fromData(data: MonstieBuildData): MonstieBuild {
+    const build = new MonstieBuild(data.id);
 
-    build.forkedFrom = entity.data.forkedFrom;
-    build.name = entity.data.name;
-    build.description = entity.data.description;
-    build.monstieSlug = entity.data.monstieSlug;
-    build.geneSlugs = Array.from(entity.data.geneSlugs);
-    build.eggPowerSlugs = Array.from(entity.data.eggPowerSlugs);
-    build.dualElement = entity.data.dualElement;
-    build.regionSlug = entity.data.regionSlug;
+    build.forkedFrom = data.forkedFrom ?? null; // handle legacy data
+    build.name = data.name;
+    build.description = data.description;
+    build.monstieSlug = data.monstieSlug;
+    build.geneSlugs = Array.from(data.geneSlugs);
+    build.eggPowerSlugs = Array.from(data.eggPowerSlugs);
+    build.dualElement = data.dualElement;
+    build.regionSlug = data.regionSlug;
 
     return build;
+  }
+
+  static fromEntity(entity: MonstieBuildEntity): MonstieBuild {
+    return MonstieBuild.fromData(entity.data);
   }
 
   static async new(): Promise<MonstieBuild> {
@@ -173,7 +178,7 @@ export class MonstieBuild {
   }
 
   toStableJson({ ignoreId = false } = {}): string {
-    const stable = sortKeys({ ...this });
+    const stable = sortKeys(this.toData());
 
     if (ignoreId) {
       delete stable.id;
@@ -182,48 +187,39 @@ export class MonstieBuild {
     return JSON.stringify(stable);
   }
 
+  toData(): MonstieBuildData {
+    return {
+      id: this.id,
+      forkedFrom: this.forkedFrom,
+      name: this.name,
+      description: this.description,
+      monstieSlug: this.monstieSlug,
+      geneSlugs: Array.from(this.geneSlugs),
+      eggPowerSlugs: Array.from(this.eggPowerSlugs),
+      dualElement: this.dualElement,
+      regionSlug: this.regionSlug,
+    };
+  }
+
   async getContentHash({ ignoreId = false } = {}): Promise<string> {
     const json = this.toStableJson({ ignoreId });
 
     return await hash(json);
   }
-
-  async save(): Promise<void> {
-    const oldEntity = await db.monstieBuilds.get(this.id);
-
-    const now = new Date();
-
-    const changes: UpdateSpec<MonstieBuildEntity> = {
-      id: this.id,
-      name: this.name,
-      monstieSlug: this.monstieSlug,
-      data: this,
-      dataHash: await this.getContentHash({ ignoreId: true }),
-      updatedAt: now,
-      viewedAt: now,
-    };
-
-    if (oldEntity == null) {
-      changes.pinned = 0;
-      changes.createdAt = now;
-    }
-
-    await db.monstieBuilds.upsert(this.id, changes);
-  }
 }
 
-/*
 export const MonstieBuildSchema = z.object({
-  id: z.nanoid(),
+  id: z.string(),
+  forkedFrom: z.string().nullable(),
   name: z.string().nullable(),
   description: z.string().nullable(),
   monstieSlug: z.string().nullable(),
-  geneSlugs: z.array(z.string()),
-  eggPowerSlugs: z.array(z.string()),
+  geneSlugs: z.array(z.string().nullable()),
+  eggPowerSlugs: z.array(z.string().nullable()),
   dualElement: ElementTypeSchema.nullable(),
   regionSlug: z.string().nullable(),
 });
-*/
+export type MonstieBuildData = z.infer<typeof MonstieBuildSchema>;
 
 const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; // no _-
 const nanoid = customAlphabet(alphabet, 11);

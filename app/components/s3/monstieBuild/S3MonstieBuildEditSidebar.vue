@@ -1,28 +1,42 @@
 <script lang="ts" setup>
-  import { computedAsync } from '@vueuse/core';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
-  import useMonstieBuildView from '~/stores/3/monstieBuildView';
+  import useMonstieBuildEdit from '~/stores/3/monstieBuildEdit';
 
   const router = useRouter();
   const toast = useToast();
   const history = useMonstieBuildHistoryStore();
-  const view = useMonstieBuildView();
+  const edit = useMonstieBuildEdit();
 
-  const build = computed(() => view.build);
-
-  const isPinned = computedAsync(async () => {
-    return build.value ? await history.isBuildPinned(build.value.id) : false;
-  }, false);
+  const build = computed(() => edit.build);
+  const isSaved = computed(() => edit.isSaved);
+  const isPinned = computed(() => edit.isPinned);
 
   function togglePin() {
-    if (build.value) {
-      history.togglePinnedBuild(build.value.id);
+    if (!build.value || !isSaved.value) {
+      return;
     }
+
+    edit.togglePin();
+  }
+
+  async function saveBuild() {
+    if (!build.value) {
+      return;
+    }
+
+    await edit.save();
+
+    toast.add({
+      title: 'Build saved locally to your device',
+      icon: 'ph:check',
+      id: 'build-save',
+      color: 'success',
+    });
   }
 
   async function removeBuild() {
-    if (!build.value) {
+    if (!build.value || !isSaved.value) {
       return;
     }
 
@@ -48,22 +62,22 @@
         <ClientOnly>
           <AppPinToggle
             :modelValue="isPinned"
-            :disabled="!build"
+            :disabled="!build || !isSaved"
             subject="build"
             @update:modelValue="togglePin"
           />
 
           <AppActionButton
-            label="Edit build"
-            icon="ph:pencil-simple"
-            :to="`/3/builds/monstie/edit?op=edit&id=${build?.id}`"
+            label="Save build"
+            icon="ph:floppy-disk"
             :disabled="!build"
+            @click="saveBuild"
           />
 
           <AppActionButton
             label="Delete build"
             icon="ph:trash"
-            :disabled="!build"
+            :disabled="!build || !isSaved"
             destructive="delete build"
             @click="removeBuild"
           />
@@ -72,7 +86,7 @@
             label="Copy build"
             icon="ph:copy-simple"
             :to="`/3/builds/monstie/edit?op=fork&id=${build?.id}`"
-            :disabled="!build"
+            :disabled="!build || !isSaved"
           />
 
           <AppActionButton

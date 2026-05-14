@@ -1,12 +1,12 @@
 import type { Table } from 'dexie';
-import type { MonstieBuild } from './monstieBuilds';
+import type { MonstieBuildData } from './monstieBuilds';
 import { Dexie } from 'dexie';
 
 export type MonstieBuildEntity = {
   id: string;
   name: string | null;
   monstieSlug: string | null;
-  data: MonstieBuild;
+  data: MonstieBuildData;
   dataHash: string;
   /** boolean can't be indexed so use a number instead */
   pinned: 0 | 1;
