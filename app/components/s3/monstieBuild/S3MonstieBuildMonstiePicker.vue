@@ -241,7 +241,9 @@
       body: 'p-0 sm:p-0',
     }"
   >
-    <UButton label="Monstie" color="neutral" variant="subtle" />
+    <slot>
+      <UButton label="Monstie" color="neutral" variant="subtle" />
+    </slot>
 
     <template #description>
       <div class="flex flex-col gap-2 text-default">
@@ -333,7 +335,9 @@
         >
           <template #items-leading="{ item }">
             <div v-if="item.data" class="mr-1 flex h-12 items-center gap-2">
-              <S3MonsterIcon v-if="item.data" :monster="item.data" noTooltip class="size-12" />
+              <div class="size-12">
+                <S3MonsterIcon :monster="item.data" noTooltip class="size-12" />
+              </div>
               <div class="flex flex-col items-center gap-0.5">
                 <AttackTypeIcon
                   class="size-6 dark:invert"

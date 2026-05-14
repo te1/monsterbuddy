@@ -8,11 +8,13 @@
       mode?: Mode;
       areaElement?: GeneElement;
       eager?: boolean;
+      withTooltips?: boolean;
     }>(),
     {
       mode: 'location',
       areaElement: undefined,
       eager: false,
+      withTooltips: false,
     }
   );
 </script>
@@ -25,9 +27,17 @@
       </div>
 
       <div class="flex items-center gap-1">
-        <AttackTypeIcon class="size-8" :type="monster?.monstie?.attack ?? undefined" noTooltip />
+        <AttackTypeIcon
+          class="size-8"
+          :type="monster?.monstie?.attack ?? undefined"
+          :noTooltip="!withTooltips"
+        />
 
-        <ElementIcon class="size-8" :element="monster?.element ?? undefined" noTooltip />
+        <ElementIcon
+          class="size-8"
+          :element="monster?.element ?? undefined"
+          :noTooltip="!withTooltips"
+        />
       </div>
     </div>
 

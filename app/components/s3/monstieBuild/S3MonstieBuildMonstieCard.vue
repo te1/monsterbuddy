@@ -16,6 +16,12 @@
     }
   );
 
+  const emit = defineEmits<{
+    'update:monstieSlug': [monstieSlug: string | null];
+    'update:dualElement': [dualElement: ElementType | null];
+    'update:regionSlug': [regionSlug: string | null];
+  }>();
+
   const history = useMonstieBuildHistoryStore();
   const edit = useMonstieBuildEdit();
 
@@ -45,10 +51,33 @@
 
 <template>
   <section class="relative">
-    <h3 class="px-4 pt-2 text-lg font-semibold">Monstie</h3>
+    <div class="inline-block px-4 pt-2">
+      <LazyS3MonstieBuildMonstiePicker
+        v-if="editMode"
+        :build="build"
+        @update:monstieSlug="emit('update:monstieSlug', $event)"
+      >
+        <UTooltip text="Select Monstie" :content="{ side: 'right' }">
+          <div
+            class="flex cursor-default items-center gap-1 transition-opacity select-none hover:opacity-75"
+          >
+            <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+            <h3 class="text-lg font-semibold">Monstie</h3>
+          </div>
+        </UTooltip>
+      </LazyS3MonstieBuildMonstiePicker>
+      <h3 v-else class="text-lg font-semibold">Monstie</h3>
+    </div>
 
-    <div v-if="build.monstie" class="box-link">
-      <NuxtLink :to="`/3/monsters/${build.monstie.slug}`" prefetchOn="interaction">
+    <div v-if="build.monstie" :class="{ 'box-link': !editMode }">
+      <S3MonstieListItem
+        v-if="editMode"
+        :monster="build.monstie"
+        mode="location"
+        withTooltips
+        class="px-2.5"
+      />
+      <NuxtLink v-else :to="`/3/monsters/${build.monstie.slug}`" prefetchOn="interaction">
         <S3MonstieListItem :monster="build.monstie" mode="location" class="px-2.5" />
       </NuxtLink>
     </div>
@@ -57,7 +86,21 @@
     <div class="flex flex-col gap-3 px-4 pb-2">
       <div>
         <div class="flex items-center justify-between gap-1">
-          <h3 class="text-lg font-semibold">Dual Element</h3>
+          <LazyS3MonstieBuildElementPicker
+            v-if="editMode"
+            :build="build"
+            @update:dualElement="emit('update:dualElement', $event)"
+          >
+            <UTooltip text="Select Dual Element" :content="{ side: 'right' }">
+              <div
+                class="flex cursor-default items-center gap-1 transition-opacity select-none hover:opacity-75"
+              >
+                <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+                <h3 class="text-lg font-semibold">Dual Element</h3>
+              </div>
+            </UTooltip>
+          </LazyS3MonstieBuildElementPicker>
+          <h3 v-else class="text-lg font-semibold">Dual Element</h3>
 
           <div v-if="build.dualElement" class="flex items-center">
             <ElementIcon :element="build.dualElement" icon2 noTooltip />
@@ -80,7 +123,21 @@
 
       <div>
         <div class="flex flex-col justify-between xs:flex-row xs:items-center xs:gap-1">
-          <h3 class="text-lg font-semibold">Stat Increases</h3>
+          <LazyS3MonstieBuildRegionPicker
+            v-if="editMode"
+            :build="build"
+            @update:regionSlug="emit('update:regionSlug', $event)"
+          >
+            <UTooltip text="Select Stat Increases" :content="{ side: 'right' }">
+              <div
+                class="flex cursor-default items-center gap-1 transition-opacity select-none hover:opacity-75"
+              >
+                <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+                <h3 class="text-lg font-semibold">Stat Increases</h3>
+              </div>
+            </UTooltip>
+          </LazyS3MonstieBuildRegionPicker>
+          <h3 v-else class="text-lg font-semibold">Stat Increases</h3>
 
           <div
             v-if="build.region"

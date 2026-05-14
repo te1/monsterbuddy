@@ -63,7 +63,9 @@
       body: 'p-0 sm:p-0',
     }"
   >
-    <UButton label="Dual Element" color="neutral" variant="subtle" />
+    <slot>
+      <UButton label="Dual Element" color="neutral" variant="subtle" />
+    </slot>
 
     <template #body>
       <div class="h-[calc(80dvh-41px)] max-h-[360px]">

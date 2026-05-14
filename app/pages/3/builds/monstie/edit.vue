@@ -163,9 +163,6 @@
 
         <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
           <div class="flex flex-1 flex-col gap-3">
-            <S3MonstieBuildMonstiePicker :build="build" @update:monstieSlug="updateMonstieSlug" />
-            <S3MonstieBuildElementPicker :build="build" @update:dualElement="updateDualElement" />
-            <S3MonstieBuildRegionPicker :build="build" @update:regionSlug="updateRegionSlug" />
             <S3MonstieBuildEggPowerPicker
               :build="build"
               :index="0"
@@ -187,14 +184,14 @@
               @update:geneSlug="updateGeneSlug(0, $event)"
             />
 
-            <S3MonstieBuildNameCard
+            <S3MonstieBuildMonstieCard
               :build="build"
-              class="box px-4 py-2"
-              @update:name="updateName"
-              @update:description="updateDescription"
+              editMode
+              class="box overflow-hidden"
+              @update:monstieSlug="updateMonstieSlug"
+              @update:dualElement="updateDualElement"
+              @update:regionSlug="updateRegionSlug"
             />
-
-            <S3MonstieBuildMonstieCard :build="build" editMode class="box overflow-hidden" />
 
             <S3MonstieBuildBingoCard :build="build" editMode class="box px-4 py-2" />
 
@@ -202,6 +199,13 @@
           </div>
 
           <div class="flex flex-1 flex-col gap-3">
+            <S3MonstieBuildNameCard
+              :build="build"
+              class="box px-4 py-2"
+              @update:name="updateName"
+              @update:description="updateDescription"
+            />
+
             <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
 
             <S3MonstieBuildEggPowerList :build="build" editMode class="box overflow-hidden" />

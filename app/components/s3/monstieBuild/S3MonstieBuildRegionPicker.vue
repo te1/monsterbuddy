@@ -64,7 +64,9 @@
       body: 'p-0 sm:p-0',
     }"
   >
-    <UButton label="Stat Increases" color="neutral" variant="subtle" />
+    <slot>
+      <UButton label="Stat Increases" color="neutral" variant="subtle" />
+    </slot>
 
     <template #body>
       <div class="h-[calc(80dvh-41px)] max-h-[245px]">
