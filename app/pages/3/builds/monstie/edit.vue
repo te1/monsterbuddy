@@ -26,6 +26,7 @@
 
   const build = computed(() => edit.build);
   const isSaved = computed(() => edit.isSaved);
+  const hasChanges = computed(() => edit.hasChanges);
 
   const ready = ref(false);
   const notFound = ref(false);
@@ -195,8 +196,18 @@
       </div>
 
       <template v-else-if="ready">
-        <div v-if="build" class="mb-1 text-sm text-dimmed">
-          This <span class="font-semibold">private</span> build is stored locally on your device
+        <div v-if="build" class="mb-1 text-sm text-muted">
+          <span v-if="isSaved">
+            This <strong class="font-semibold">private</strong> build is stored locally on your
+            device.
+            <span v-if="hasChanges">
+              There are <strong class="font-semibold">unsaved changes</strong>.
+            </span>
+          </span>
+          <span v-else>
+            This <strong class="font-semibold">private</strong> build is
+            <strong class="font-semibold">not saved</strong> yet.
+          </span>
         </div>
 
         <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
@@ -276,7 +287,13 @@
     </UPageBody>
 
     <AppFabPanel>
-      <AppFab v-if="build" tooltip="Save build" icon="ph:floppy-disk" @click="saveBuild" />
+      <AppFab
+        v-if="build"
+        tooltip="Save build"
+        icon="ph:floppy-disk"
+        :class="{ 'text-primary': hasChanges }"
+        @click="saveBuild"
+      />
     </AppFabPanel>
   </div>
 </template>

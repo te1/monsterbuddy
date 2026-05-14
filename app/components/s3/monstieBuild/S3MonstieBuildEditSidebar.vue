@@ -9,6 +9,7 @@
   const build = computed(() => edit.build);
   const isSaved = computed(() => edit.isSaved);
   const isPinned = computed(() => edit.isPinned);
+  const hasChanges = computed(() => edit.hasChanges);
 
   function togglePin() {
     if (!build.value || !isSaved.value) {
@@ -69,6 +70,7 @@
             label="Save build"
             icon="ph:floppy-disk"
             :disabled="!build"
+            :class="{ 'text-primary': hasChanges }"
             @click="saveBuild"
           />
 

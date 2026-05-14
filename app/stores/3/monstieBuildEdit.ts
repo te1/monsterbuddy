@@ -45,6 +45,30 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
     return build.value?.id ? await history.isBuildPinned(build.value.id) : false;
   }, false);
 
+  const hasChanges = ref(false);
+
+  watch(
+    [build, isSaved, isSavedRefreshKey],
+    async () => {
+      if (!build.value || !isSaved.value) {
+        hasChanges.value = false;
+        return;
+      }
+
+      const oldEntity = await db.monstieBuilds.get(build.value.id);
+
+      if (oldEntity == null) {
+        hasChanges.value = false;
+        return;
+      }
+
+      const newHash = await build.value.getContentHash({ ignoreId: true });
+
+      hasChanges.value = oldEntity.dataHash !== newHash;
+    },
+    { deep: true, immediate: true }
+  );
+
   async function save(): Promise<void> {
     if (!build.value) {
       return;
@@ -85,6 +109,7 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
     build,
     isSaved,
     isPinned,
+    hasChanges,
     save,
     togglePin,
   };
