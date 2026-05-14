@@ -53,7 +53,7 @@
         </NuxtLink>
       </div>
       <div v-else class="@container flex items-center gap-1.5 px-2.5">
-        <S3EggPowerIcon class="m-1.5 shrink-0" :eggPower="undefined" big contrast />
+        <S3EggPowerIcon class="mx-1.5 my-2.5 shrink-0" :eggPower="undefined" big contrast />
 
         <div class="font-semibold text-dimmed" v-text="'No egg power'" />
       </div>

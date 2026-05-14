@@ -1,11 +1,9 @@
 <script lang="ts" setup>
   import { MonstieBuild } from '~/services/3/monstieBuilds';
-  import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildEdit from '~/stores/3/monstieBuildEdit';
 
   const router = useRouter();
   const toast = useToast();
-  const history = useMonstieBuildHistoryStore();
   const edit = useMonstieBuildEdit();
 
   const build = computed(() => edit.build);

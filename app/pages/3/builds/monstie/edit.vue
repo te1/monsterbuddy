@@ -25,6 +25,18 @@
   const ready = ref(false);
   const notFound = ref(false);
 
+  function updateName(name: string) {
+    if (build.value) {
+      build.value.name = name;
+    }
+  }
+
+  function updateDescription(description: string) {
+    if (build.value) {
+      build.value.description = description;
+    }
+  }
+
   function updateMonstieSlug(monstieSlug: string | null) {
     if (build.value) {
       build.value.monstieSlug = monstieSlug;
@@ -175,19 +187,24 @@
               @update:geneSlug="updateGeneSlug(0, $event)"
             />
 
+            <S3MonstieBuildNameCard
+              :build="build"
+              class="box px-4 py-2"
+              @update:name="updateName"
+              @update:description="updateDescription"
+            />
+
             <S3MonstieBuildMonstieCard :build="build" editMode class="box overflow-hidden" />
 
-            <S3MonstieBuildBingoCard :build="build" class="box px-4 py-2" />
+            <S3MonstieBuildBingoCard :build="build" editMode class="box px-4 py-2" />
 
             <S3MonstieBuildStatsCard :build="build" class="box px-4 py-2" />
-
-            <S3MonstieBuildDescriptionCard :build="build" class="box px-4 py-2" />
           </div>
 
           <div class="flex flex-1 flex-col gap-3">
             <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
 
-            <S3MonstieBuildEggPowerList :build="build" class="box overflow-hidden" />
+            <S3MonstieBuildEggPowerList :build="build" editMode class="box overflow-hidden" />
 
             <S3MonstieBuildEffectList :build="build" class="box px-4 py-2" />
           </div>
