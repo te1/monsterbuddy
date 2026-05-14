@@ -343,62 +343,71 @@
     <div
       class="absolute inset-(--inset) grid grid-cols-3 grid-rows-3 place-items-center gap-(--gap)"
     >
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[0]" :gene="genes[0]">
-          <S3GeneIcon :gene="genes[0]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[1]" :gene="genes[1]">
-          <S3GeneIcon :gene="genes[1]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[2]" :gene="genes[2]">
-          <S3GeneIcon :gene="genes[2]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="0"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="1"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="2"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
 
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[3]" :gene="genes[3]">
-          <S3GeneIcon :gene="genes[3]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[4]" :gene="genes[4]">
-          <S3GeneIcon :gene="genes[4]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[5]" :gene="genes[5]">
-          <S3GeneIcon :gene="genes[5]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="3"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="4"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="5"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
 
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[6]" :gene="genes[6]">
-          <S3GeneIcon :gene="genes[6]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[7]" :gene="genes[7]">
-          <S3GeneIcon :gene="genes[7]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
-      <div class="relative grid size-full place-items-center">
-        <S3GeneTooltip v-if="genes[8]" :gene="genes[8]">
-          <S3GeneIcon :gene="genes[8]" size="size-full" noTooltip />
-        </S3GeneTooltip>
-        <div v-else>+</div>
-      </div>
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="6"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="7"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
+      <S3MonstieBuildGeneGridItem
+        :build="build"
+        :genes="genes"
+        :index="8"
+        :editMode="editMode"
+        @update:gene="emit('update:gene', $event)"
+      />
     </div>
   </div>
 </template>
