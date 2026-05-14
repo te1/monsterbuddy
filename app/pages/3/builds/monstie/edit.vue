@@ -240,14 +240,14 @@
               @update:description="updateDescription"
             />
 
-            <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
-
             <S3MonstieBuildEggPowerList
               :build="build"
               editMode
               class="box overflow-hidden"
               @update:eggPower="updateEggPower($event)"
             />
+
+            <S3MonstieBuildGeneList :build="build" class="box overflow-hidden" />
 
             <S3MonstieBuildEffectList :build="build" class="box px-4 py-2" />
           </div>

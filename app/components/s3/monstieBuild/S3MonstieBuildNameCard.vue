@@ -11,7 +11,10 @@
 <template>
   <section class="flex flex-col gap-3">
     <div class="flex flex-col gap-1">
-      <h3 class="text-lg font-semibold">Name</h3>
+      <div class="flex items-center gap-1">
+        <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+        <h3 class="text-lg font-semibold">Name</h3>
+      </div>
 
       <UInput
         :value="build.name"
@@ -26,7 +29,10 @@
     </div>
 
     <div class="mb-2 flex flex-col gap-1">
-      <h3 class="text-lg font-semibold">Description</h3>
+      <div class="flex items-center gap-1">
+        <UIcon name="ph:note-pencil-light" class="size-6 text-toned" />
+        <h3 class="text-lg font-semibold">Description</h3>
+      </div>
 
       <UTextarea
         :value="build.description"

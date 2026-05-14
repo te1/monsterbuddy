@@ -51,7 +51,10 @@
 
 <template>
   <section v-if="eggPowers.length > 0">
-    <h3 class="px-4 pt-2 text-lg font-semibold">Egg Powers</h3>
+    <div class="flex items-center gap-1 px-4 pt-2">
+      <UIcon v-if="editMode" name="ph:note-pencil-light" class="size-6 text-toned" />
+      <h3 class="text-lg font-semibold">Egg Powers</h3>
+    </div>
 
     <div v-for="(eggPower, index) in eggPowers" :key="index" :class="{ 'mb-2': eggPower.item }">
       <div v-if="index > 0" class="border-2 border-t border-neutral-100 dark:border-default" />
