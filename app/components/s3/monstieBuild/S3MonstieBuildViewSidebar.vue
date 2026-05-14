@@ -4,15 +4,12 @@
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildView from '~/stores/3/monstieBuildView';
 
-  const route = useRoute();
   const router = useRouter();
   const toast = useToast();
   const history = useMonstieBuildHistoryStore();
   const buildView = useMonstieBuildView();
 
   const build = computed(() => buildView.build);
-
-  const editing = computed(() => route.path === '/3/builds/monstie/edit');
 
   const isPinned = computedAsync(async () => {
     return build.value ? await history.isBuildPinned(build.value.id) : false;
@@ -24,29 +21,14 @@
     }
   }
 
-  async function saveBuild() {
-    if (!build.value) {
-      return;
-    }
-
-    await build.value.save();
-
-    toast.add({
-      title: 'Build saved locally to your device',
-      icon: 'ph:check',
-      id: 'build-save',
-      color: 'success',
-    });
-  }
-
   async function removeBuild() {
     if (!build.value) {
       return;
     }
 
-    await MonstieBuild.remove(build.value.id);
-
     await router.push('/3/builds/monstie');
+
+    await MonstieBuild.remove(build.value.id);
 
     toast.add({
       title: 'Build deleted from your device',
@@ -72,14 +54,6 @@
           />
 
           <AppActionButton
-            v-if="editing"
-            label="Save build"
-            icon="ph:floppy-disk"
-            @click="saveBuild"
-          />
-
-          <AppActionButton
-            v-else
             label="Edit build"
             icon="ph:pencil-simple"
             :to="`/3/builds/monstie/edit?op=edit&id=${build?.id}`"

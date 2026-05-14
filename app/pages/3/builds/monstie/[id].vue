@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import S3MonstieBuildDetailsSidebar from '~/components/s3/monstieBuild/S3MonstieBuildDetailsSidebar.vue';
+  import S3MonstieBuildViewSidebar from '~/components/s3/monstieBuild/S3MonstieBuildViewSidebar.vue';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
   import useMonstieBuildView from '~/stores/3/monstieBuildView';
 
   definePageMeta({
-    sidebarComponent: S3MonstieBuildDetailsSidebar,
+    sidebarComponent: S3MonstieBuildViewSidebar,
     back: {
       show: true,
       fallback: '/3/builds/monstie',
