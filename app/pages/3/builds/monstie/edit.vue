@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { GeneIndex } from '~/services/3/monstieBuilds';
+  import type { GenePickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGenePicker.vue';
   import type { EggPowerPickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildEggPowerPicker.vue';
   import { omit } from 'es-toolkit/object';
   import S3MonstieBuildEditSidebar from '~/components/s3/monstieBuild/S3MonstieBuildEditSidebar.vue';
@@ -61,9 +61,9 @@
     }
   }
 
-  function updateGeneSlug(index: GeneIndex, geneSlug: string | null) {
+  function updateGene(data: GenePickedEvent) {
     if (build.value) {
-      build.value.geneSlugs[index] = geneSlug;
+      build.value.geneSlugs[data.index] = data.geneSlug;
     }
   }
 
@@ -212,12 +212,6 @@
 
         <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
           <div class="flex flex-1 flex-col gap-3">
-            <S3MonstieBuildGenePicker
-              :build="build"
-              :index="0"
-              @update:geneSlug="updateGeneSlug(0, $event)"
-            />
-
             <S3MonstieBuildMonstieCard
               :build="build"
               editMode
@@ -227,7 +221,12 @@
               @update:regionSlug="updateRegionSlug"
             />
 
-            <S3MonstieBuildBingoCard :build="build" editMode class="box px-4 py-2" />
+            <S3MonstieBuildBingoCard
+              :build="build"
+              editMode
+              class="box px-4 py-2"
+              @update:gene="updateGene($event)"
+            />
 
             <S3MonstieBuildStatsCard :build="build" class="box px-4 py-2" />
           </div>

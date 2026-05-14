@@ -14,8 +14,10 @@
     index: GeneIndex;
   }>();
 
+  export type GenePickedEvent = { geneSlug: string | null; index: GeneIndex };
+
   const emit = defineEmits<{
-    'update:geneSlug': [geneSlug: string | null];
+    'update:gene': [data: GenePickedEvent];
   }>();
 
   const open = ref(false);
@@ -282,7 +284,7 @@
     if (item) {
       const item_ = item as Item;
 
-      emit('update:geneSlug', item_.data?.slug ?? null);
+      emit('update:gene', { geneSlug: item_.data?.slug ?? null, index: props.index });
     }
 
     open.value = false;

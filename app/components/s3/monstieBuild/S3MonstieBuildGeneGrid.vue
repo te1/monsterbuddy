@@ -1,8 +1,21 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
   import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
 
-  const props = defineProps<{ build: MonstieBuild }>();
+  const props = withDefaults(
+    defineProps<{
+      build: MonstieBuild;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: false,
+    }
+  );
+
+  const emit = defineEmits<{
+    'update:gene': [data: GenePickedEvent];
+  }>();
 
   const {
     genes,
