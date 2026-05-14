@@ -51,6 +51,7 @@
       :color="pinned ? 'primary' : 'neutral'"
       variant="link"
       :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
+      :ui="{ base: 'disabled:text-dimmed aria-disabled:text-dimmed' }"
       :disabled="disabled"
       @click="pinned = !pinned"
     />
@@ -62,7 +63,7 @@
     variant="link"
     :label="label"
     :icon="pinned ? 'ph:bookmark-simple-fill' : 'ph:bookmark-simple'"
-    :ui="{ base: 'w-fit px-0 font-normal' }"
+    :ui="{ base: 'w-fit px-0 font-normal disabled:text-dimmed aria-disabled:text-dimmed' }"
     :disabled="disabled"
     @click="pinned = !pinned"
   />

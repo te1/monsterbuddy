@@ -88,7 +88,7 @@
       :icon="icon"
       :to="to"
       :ui="{
-        base: 'w-fit px-0 font-normal',
+        base: 'w-fit px-0 font-normal disabled:text-dimmed aria-disabled:text-dimmed',
         label: ['transition-colors', isPending ? 'text-red-500' : ''],
         leadingIcon: ['transition-colors', isPending ? 'text-red-500' : ''],
       }"
