@@ -5,6 +5,10 @@
 
   const props = defineProps<{ build: MonstieBuild }>();
 
+  const emit = defineEmits<{
+    'update:dualElement': [dualElement: ElementType | null];
+  }>();
+
   const open = ref(false);
 
   const groups = computed(() => {
@@ -32,7 +36,7 @@
     if (item) {
       const item_ = item as Item;
 
-      props.build.dualElement = item_.data;
+      emit('update:dualElement', item_.data);
     }
 
     open.value = false;

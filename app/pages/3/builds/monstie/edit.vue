@@ -1,8 +1,9 @@
 <script lang="ts" setup>
   import S3MonstieBuildDetailsSidebar from '~/components/s3/monstieBuild/S3MonstieBuildDetailsSidebar.vue';
+  import type { EggPowerIndex, GeneIndex } from '~/services/3/monstieBuilds';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
-  import useMonstieBuildManager from '~/stores/3/monstieBuildManager';
+  import useMonstieBuildEdit from '~/stores/3/monstieBuildEdit';
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildDetailsSidebar,
@@ -15,11 +16,41 @@
   const router = useRouter();
   const route = useRoute();
   const history = useMonstieBuildHistoryStore();
-  const buildManager = useMonstieBuildManager();
+  const buildEdit = useMonstieBuildEdit();
 
-  const build = ref<MonstieBuild | undefined>(undefined);
+  const build = computed(() => buildEdit.build);
 
-  const buildId = computed(() => getQueryString(route.query.id));
+  const buildId = computed(() => getRouteParamAsString(route.query.id));
+
+  function updateMonstieSlug(monstieSlug: string | null) {
+    if (build.value) {
+      build.value.monstieSlug = monstieSlug;
+    }
+  }
+
+  function updateDualElement(dualElement: ElementType | null) {
+    if (build.value) {
+      build.value.dualElement = dualElement;
+    }
+  }
+
+  function updateRegionSlug(regionSlug: string | null) {
+    if (build.value) {
+      build.value.regionSlug = regionSlug;
+    }
+  }
+
+  function updateGeneSlug(index: GeneIndex, geneSlug: string | null) {
+    if (build.value) {
+      build.value.geneSlugs[index] = geneSlug;
+    }
+  }
+
+  function updateEggPowerSlug(index: EggPowerIndex, eggPowerSlug: string | null) {
+    if (build.value) {
+      build.value.eggPowerSlugs[index] = eggPowerSlug;
+    }
+  }
 
   watch(
     buildId,
@@ -28,7 +59,7 @@
         return;
       }
 
-      buildManager.buildId = id;
+      buildEdit.buildId = id;
       await history.addRecentBuild(id);
     },
     { immediate: true }
@@ -38,7 +69,7 @@
     () => route.query.op,
     async (rawOp) => {
       console.log('op', rawOp, 'id', buildId.value);
-      const op = getQueryString(rawOp);
+      const op = getRouteParamAsString(rawOp);
 
       if (!op) {
         return;
@@ -46,7 +77,7 @@
 
       switch (op) {
         case 'new':
-          build.value = await MonstieBuild.new();
+          buildEdit.build = await MonstieBuild.new();
           break;
 
         case 'fork':
@@ -92,13 +123,29 @@
 
       <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
         <div class="flex flex-1 flex-col gap-3">
-          <S3MonstieBuildMonstiePicker :build="build" />
-          <S3MonstieBuildElementPicker :build="build" />
-          <S3MonstieBuildRegionPicker :build="build" />
-          <S3MonstieBuildEggPowerPicker :build="build" :index="0" />
-          <S3MonstieBuildEggPowerPicker :build="build" :index="1" />
-          <S3MonstieBuildEggPowerPicker :build="build" :index="2" />
-          <S3MonstieBuildGenePicker :build="build" :index="0" />
+          <S3MonstieBuildMonstiePicker :build="build" @update:monstieSlug="updateMonstieSlug" />
+          <S3MonstieBuildElementPicker :build="build" @update:dualElement="updateDualElement" />
+          <S3MonstieBuildRegionPicker :build="build" @update:regionSlug="updateRegionSlug" />
+          <S3MonstieBuildEggPowerPicker
+            :build="build"
+            :index="0"
+            @update:eggPowerSlug="updateEggPowerSlug(0, $event)"
+          />
+          <S3MonstieBuildEggPowerPicker
+            :build="build"
+            :index="1"
+            @update:eggPowerSlug="updateEggPowerSlug(1, $event)"
+          />
+          <S3MonstieBuildEggPowerPicker
+            :build="build"
+            :index="2"
+            @update:eggPowerSlug="updateEggPowerSlug(2, $event)"
+          />
+          <S3MonstieBuildGenePicker
+            :build="build"
+            :index="0"
+            @update:geneSlug="updateGeneSlug(0, $event)"
+          />
 
           <S3MonstieBuildMonstieCard :build="build" class="box overflow-hidden" />
 

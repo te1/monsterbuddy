@@ -10,6 +10,10 @@
 
   const props = defineProps<{ build: MonstieBuild }>();
 
+  const emit = defineEmits<{
+    'update:monstieSlug': [monstieSlug: string | null];
+  }>();
+
   const open = ref(false);
 
   const history = useMonsterHistoryStore();
@@ -209,7 +213,7 @@
     if (item) {
       const item_ = item as Item;
 
-      props.build.monstieSlug = item_.data?.slug ?? null;
+      emit('update:monstieSlug', item_.data?.slug ?? null);
     }
 
     open.value = false;

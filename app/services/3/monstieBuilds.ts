@@ -7,6 +7,9 @@ import { db } from './localDb';
 import { eggPowersBySlug, monstersBySlug, regionsBySlug } from './data';
 import { genesBySlug, getGeneSizeAsNumber } from './genes';
 
+export type GeneIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+export type EggPowerIndex = 0 | 1 | 2;
+
 export class MonstieBuild {
   id: string;
   forkedFrom: string | null = null;

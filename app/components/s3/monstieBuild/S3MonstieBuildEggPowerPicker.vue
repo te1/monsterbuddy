@@ -1,12 +1,16 @@
 <script lang="ts" setup>
   import type { CommandPaletteItem } from '@nuxt/ui';
-  import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { EggPowerIndex, MonstieBuild } from '~/services/3/monstieBuilds';
   import { sortBy } from 'es-toolkit/array';
   import { eggPowers } from '~/services/3/data';
 
   const props = defineProps<{
     build: MonstieBuild;
-    index: 0 | 1 | 2;
+    index: EggPowerIndex;
+  }>();
+
+  const emit = defineEmits<{
+    'update:eggPowerSlug': [eggPowerSlug: string | null];
   }>();
 
   const open = ref(false);
@@ -60,7 +64,7 @@
     if (item) {
       const item_ = item as Item;
 
-      props.build.eggPowerSlugs[props.index] = item_.data?.slug ?? null;
+      emit('update:eggPowerSlug', item_.data?.slug ?? null);
     }
 
     open.value = false;

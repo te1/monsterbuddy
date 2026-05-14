@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { CommandPaletteItem } from '@nuxt/ui';
-  import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { GeneIndex, MonstieBuild } from '~/services/3/monstieBuilds';
   import type { Gene } from '~/services/3/types';
   import { usePrevious } from '@vueuse/core';
   import { orderBy } from 'es-toolkit/array';
@@ -11,7 +11,11 @@
 
   const props = defineProps<{
     build: MonstieBuild;
-    index: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+    index: GeneIndex;
+  }>();
+
+  const emit = defineEmits<{
+    'update:geneSlug': [geneSlug: string | null];
   }>();
 
   const open = ref(false);
@@ -278,7 +282,7 @@
     if (item) {
       const item_ = item as Item;
 
-      props.build.geneSlugs[props.index] = item_.data?.slug ?? null;
+      emit('update:geneSlug', item_.data?.slug ?? null);
     }
 
     open.value = false;

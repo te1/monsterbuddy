@@ -6,6 +6,10 @@
 
   const props = defineProps<{ build: MonstieBuild }>();
 
+  const emit = defineEmits<{
+    'update:regionSlug': [regionSlug: string | null];
+  }>();
+
   const open = ref(false);
 
   const groups = computed(() => {
@@ -33,7 +37,7 @@
     if (item) {
       const item_ = item as Item;
 
-      props.build.regionSlug = item_.data;
+      emit('update:regionSlug', item_.data);
     }
 
     open.value = false;
