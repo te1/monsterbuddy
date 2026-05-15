@@ -223,7 +223,7 @@ const useMonstieBuildFilter = defineStore('s3/monstieBuildFilter', () => {
     monstieElementFilter,
     monstieAttackTypeFilter,
 
-    // -- gettersfilteredGenes,
+    // -- getters
     filteredBuilds,
     sortedBuilds,
     groupedBuilds,
