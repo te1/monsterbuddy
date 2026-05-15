@@ -107,10 +107,11 @@
       return;
     }
 
-    await router.push('/3/builds/monstie');
-
     try {
+      edit.hasChanges = false;
       await MonstieBuild.remove(build.value.id);
+
+      await router.push('/3/builds/monstie');
 
       toast.add({
         title: 'Build deleted from your device',
