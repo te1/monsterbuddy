@@ -194,6 +194,23 @@
     return true;
   });
 
+  function saveChangesWarning(event: BeforeUnloadEvent) {
+    if (!hasChanges.value) {
+      return;
+    }
+
+    event.preventDefault();
+    event.returnValue = '';
+  }
+
+  onMounted(() => {
+    window.addEventListener('beforeunload', saveChangesWarning);
+  });
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('beforeunload', saveChangesWarning);
+  });
+
   type SaveChangesOption = 'save' | 'discard' | 'stay';
 
   const saveChangesModal = overlay.create(AppConfirmModal);
