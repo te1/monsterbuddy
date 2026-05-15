@@ -1,5 +1,12 @@
 import { useMediaQuery } from '@vueuse/core';
 
 export function useHasSoftKeyboard() {
-  return useMediaQuery('(hover: none) and (pointer: coarse)');
+  const hasCoarsePointer = useMediaQuery('(any-pointer: coarse), (pointer: coarse)');
+  const hasTouchScreen = ref(false);
+
+  onMounted(() => {
+    hasTouchScreen.value = navigator.maxTouchPoints > 0;
+  });
+
+  return computed(() => hasCoarsePointer.value || hasTouchScreen.value);
 }

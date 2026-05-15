@@ -32,7 +32,7 @@
 
   const modalContent = computed(() => ({
     onOpenAutoFocus: (event: Event) => {
-      if (hasSoftKeyboard.value) {
+      if (!shouldAutofocus.value) {
         event.preventDefault();
       }
     },
