@@ -101,7 +101,7 @@
     sourceFilter.value = value.length > 0 ? [value.at(-1)!] : [];
 
     if (sourceFilter.value[0] === 'recent') {
-      sort.value = []; // remove sorten when switching to recent
+      sort.value = []; // remove sorting when switching to recent
     } else if (wasRecent && sort.value.length === 0) {
       sort.value = previousSort.value ?? [];
     }
