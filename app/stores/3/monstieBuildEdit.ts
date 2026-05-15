@@ -1,6 +1,6 @@
 import type { UpdateSpec } from 'dexie';
 import type { MonstieBuildEntity } from '~/services/3/localDb';
-import { computedAsync, useLocalStorage } from '@vueuse/core';
+import { useLocalStorage } from '@vueuse/core';
 import { MonstieBuild, MonstieBuildSchema } from '~/services/3/monstieBuilds';
 import { db } from '~/services/3/localDb';
 import useMonstieBuildHistoryStore from './monstieBuildHistoryStore';
@@ -29,26 +29,19 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
     },
   });
 
-  const isSavedRefreshKey = ref(0);
-  const isSaved = computedAsync(async () => {
-    unref(isSavedRefreshKey); // force the computed to re-run after saving
+  const isSaved = computed(() => (build.value?.id ? history.hasBuild(build.value.id) : false));
 
-    const entity = build.value?.id ? await db.monstieBuilds.get(build.value.id) : undefined;
-
-    return entity != null;
-  }, false);
-
-  const isPinnedRefreshKey = ref(0);
-  const isPinned = computedAsync(async () => {
-    unref(isPinnedRefreshKey); // force the computed to re-run after saving
-
-    return build.value?.id ? await history.isBuildPinned(build.value.id) : false;
-  }, false);
+  const isPinned = computed(() =>
+    build.value?.id
+      ? history.pinnedBuilds.some((pinnedBuild) => pinnedBuild.id === build.value?.id)
+      : false
+  );
 
   const hasChanges = ref(false);
 
+  const savedRefreshKey = ref(0);
   watch(
-    [build, isSaved, isSavedRefreshKey],
+    [build, isSaved, savedRefreshKey],
     async (_new, _old, onCleanup) => {
       // stop the callback if watch triggers again
       let cancelled = false;
@@ -134,13 +127,12 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
 
     await db.monstieBuilds.upsert(build.value.id, changes);
 
-    isSavedRefreshKey.value++; // force the computed to re-run after saving
+    savedRefreshKey.value++; // force the computed to re-run after saving
   }
 
   async function togglePin(): Promise<void> {
     if (build.value?.id) {
       await history.togglePinnedBuild(build.value.id);
-      isPinnedRefreshKey.value++; // force the computed to re-run after saving
     }
   }
 
