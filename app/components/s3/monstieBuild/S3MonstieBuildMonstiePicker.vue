@@ -26,17 +26,6 @@
   const history = useMonsterHistoryStore();
 
   const open = ref(false);
-  const mounted = ref(false);
-
-  const shouldAutofocus = computed(() => mounted.value && !hasSoftKeyboard.value);
-
-  const modalContent = computed(() => ({
-    onOpenAutoFocus: (event: Event) => {
-      if (hasSoftKeyboard.value) {
-        event.preventDefault();
-      }
-    },
-  }));
 
   const typeItems = computed(() => {
     return allAttackTypes.map((type) => ({
@@ -244,10 +233,6 @@
 
   // type gymnastics so we can pass event listeners to UInput
   const input = { onKeydownCapture } as Record<string, unknown>;
-
-  onMounted(() => {
-    mounted.value = true;
-  });
 </script>
 
 <template>
@@ -255,7 +240,6 @@
     v-if="editMode"
     v-model:open="open"
     title="Select Monstie"
-    :content="modalContent"
     :ui="{
       header: 'min-h-0 py-1.5 ps-2.5 text-lg sm:ps-2.5',
       close: 'top-1 right-1',
@@ -340,7 +324,7 @@
           :defaultValue="defaultValue"
           :groups="groups"
           placeholder="Search..."
-          :autofocus="shouldAutofocus"
+          :autofocus="!hasSoftKeyboard"
           class="h-full"
           :input="input"
           :ui="{
