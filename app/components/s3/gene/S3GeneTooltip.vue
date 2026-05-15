@@ -25,13 +25,18 @@
   }>();
 
   const info = computed(() => formatGeneInfo(props.gene));
+
+  function onUpdateGene(event: GenePickedEvent, close: () => void) {
+    close();
+    emit('update:gene', event);
+  }
 </script>
 
 <template>
   <AppRichTooltip :link="`/3/genes/${gene.slug}`" linkText="Go to gene page">
     <slot />
 
-    <template #content>
+    <template #content="{ close }">
       <div class="text-sm">
         <div class="flex items-center justify-between gap-3">
           <div>
@@ -68,7 +73,7 @@
           v-if="editMode && !canHover && build && index != null"
           :build="build"
           :index="index"
-          @update:gene="emit('update:gene', $event)"
+          @update:gene="onUpdateGene($event, close)"
         >
           <UButton
             label="Select another gene"

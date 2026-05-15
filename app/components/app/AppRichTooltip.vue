@@ -39,6 +39,11 @@
   });
 
   const anchor = useTemplateRef('anchor');
+  const modalOpen = ref(false);
+
+  function closeModal() {
+    modalOpen.value = false;
+  }
 </script>
 
 <template>
@@ -67,7 +72,7 @@
     </template>
   </UPopover>
 
-  <UModal v-else-if="!noModal">
+  <UModal v-else-if="!noModal" v-model:open="modalOpen">
     <div class="contents">
       <slot />
     </div>
@@ -75,7 +80,7 @@
     <template #content>
       <div class="@container flex flex-col gap-3 px-3 py-2">
         <div>
-          <slot name="content" />
+          <slot name="content" :close="closeModal" />
         </div>
 
         <div v-if="link">
