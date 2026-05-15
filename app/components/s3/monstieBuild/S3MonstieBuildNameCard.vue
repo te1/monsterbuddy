@@ -24,7 +24,7 @@
         :ui="{
           base: 'bg-accented/75 hover:bg-accented focus:bg-accented dark:bg-muted dark:hover:bg-muted/75 dark:focus:bg-muted/75',
         }"
-        @update:modelValue="emit('update:name', String($event))"
+        @update:modelValue="emit('update:name', String($event ?? ''))"
       />
     </div>
 
@@ -45,7 +45,7 @@
         :ui="{
           base: 'bg-accented/75 hover:bg-accented focus:bg-accented dark:bg-muted dark:hover:bg-muted/75 dark:focus:bg-muted/75',
         }"
-        @update:modelValue="emit('update:description', String($event))"
+        @update:modelValue="emit('update:description', String($event ?? ''))"
       />
     </div>
   </section>

@@ -77,7 +77,7 @@
           <div>to navigate</div>
         </span>
         <span class="flex items-center gap-1.5">
-          <UKbd value="enter " variant="subtle" size="lg" class="px-1.5 text-toned" />
+          <UKbd value="enter" variant="subtle" size="lg" class="px-1.5 text-toned" />
           <div>to select</div>
         </span>
         <span class="flex items-center gap-1.5">

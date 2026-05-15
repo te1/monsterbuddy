@@ -10,34 +10,8 @@
   );
 
   function getBingoBonus(count: number) {
-    switch (count) {
-      case 1:
-        return 0.05;
-
-      case 2:
-        return 0.1;
-
-      case 3:
-        return 0.15;
-
-      case 4:
-        return 0.2;
-
-      case 5:
-        return 0.25;
-
-      case 6:
-        return 0.3;
-
-      case 7:
-        return 0.4;
-
-      case 8:
-        return 0.5;
-
-      default:
-        return 0.0;
-    }
+    const bonuses = [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5];
+    return bonuses[count] ?? 0.0;
   }
 </script>
 
