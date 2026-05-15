@@ -121,7 +121,6 @@
         <AppActionButton
           label="Delete build"
           icon="ph:trash"
-          :disabled="!build"
           destructive="delete build"
           @click="removeBuild"
         />
@@ -129,8 +128,7 @@
         <AppActionButton
           label="Copy build"
           icon="ph:copy-simple"
-          :to="`/3/builds/monstie/edit?op=fork&id=${build?.id}`"
-          :disabled="!build"
+          :to="`/3/builds/monstie/edit?op=fork&id=${build.id}`"
         />
 
         <AppActionButton
