@@ -24,6 +24,7 @@
 
   const history = useMonstieBuildHistoryStore();
   const edit = useMonstieBuildEdit();
+  const isSaved = computed(() => edit.isSaved);
 
   const dualElementAreas = computed(() => {
     if (!props.build.dualElement) {
@@ -159,6 +160,7 @@
       <ClientOnly>
         <AppPinToggle
           :modelValue="isPinned"
+          :disabled="editMode ? !isSaved : false"
           subject="build"
           noLabel
           @update:modelValue="togglePin"
