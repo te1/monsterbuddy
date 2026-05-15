@@ -21,12 +21,18 @@
 
   const buildId = computed(() => getRouteParamAsString(route.params.id));
 
-  view.buildId = buildId.value;
+  watch(
+    () => buildId.value,
+    (id) => {
+      view.buildId = id;
+    },
+    { immediate: true }
+  );
 
   const build = computed(() => view.build);
 
   const title = computed(() => {
-    return build.value?.nameWithFallback ?? `Monstie Build `;
+    return build.value?.nameWithFallback ?? `Monstie Build`;
   });
 
   useSeoMeta({
