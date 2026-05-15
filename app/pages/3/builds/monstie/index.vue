@@ -8,7 +8,7 @@
 
   definePageMeta({
     sidebarComponent: S3MonstieBuildSidebar,
-    mobileHeaderTitle: 'Builds',
+    mobileHeaderTitle: 'Monstie Builds',
   });
 
   useSeoMeta({
@@ -155,7 +155,7 @@
       return 'Bookmarked Builds';
     }
 
-    return 'Builds';
+    return 'Monstie Builds';
   });
 
   useMobileHeaderOverride().bind(title);

@@ -112,6 +112,16 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
     };
   };
 
+  const monstieBuilds = (label: string, classes: string): NavigationMenuItem => {
+    return {
+      label,
+      description: 'Genes & Bingos',
+      to: '/3/builds/monstie',
+      active: isActive('/3/builds/monstie'),
+      class: classes,
+    };
+  };
+
   return [
     {
       label: 'Monsters',
@@ -129,6 +139,7 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
       active: isActive('/3/eggs'),
     },
     genes('hidden xs:flex'),
+    monstieBuilds('Builds', 'hidden sm:flex'),
     {
       label: 'More',
       children: [
@@ -149,12 +160,7 @@ function buildMhst3NavItems(path: string): NavigationMenuItem[] {
           to: '/3/riding-actions',
           active: isActive('/3/riding-actions'),
         },
-        {
-          label: 'Monstie Builds',
-          description: 'Genes & Bingos',
-          to: '/3/builds/monstie',
-          active: isActive('/3/builds/monstie'),
-        },
+        monstieBuilds('Monstie Builds', 'flex sm:hidden'),
       ],
     },
   ];
