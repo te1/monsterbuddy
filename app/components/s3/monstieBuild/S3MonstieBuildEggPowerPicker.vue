@@ -95,7 +95,7 @@
   <UModal
     v-if="editMode"
     v-model:open="open"
-    title="Select Egg Powers"
+    title="Select Egg Power"
     :ui="{
       content: 'max-w-2xl',
       header: 'min-h-0 py-1.5 ps-2.5 text-lg sm:ps-2.5',
