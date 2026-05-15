@@ -169,7 +169,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    exclude: ['/404', '/1/**'], // TODO MHST1
+    exclude: ['/404', '/1/**', '/3/builds/monstie/*'], // TODO MHST1
     zeroRuntime: process.env.NODE_ENV !== 'development',
     discoverImages: false,
     discoverVideos: false,
