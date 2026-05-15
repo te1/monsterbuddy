@@ -246,7 +246,10 @@
         return false;
       }
 
-      if (sizeFilter.value[0] === 'max' && !genes.some((gene) => gene.slug === item.data?.slug)) {
+      if (
+        sizeFilter.value[0] === 'max' &&
+        !genes.some((gene) => item.data == null || gene.slug === item.data.slug)
+      ) {
         return false;
       }
 
