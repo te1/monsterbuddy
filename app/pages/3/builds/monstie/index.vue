@@ -379,7 +379,9 @@
       </LazyUDrawer>
 
       <AppFabPanel>
-        <AppFab tooltip="New build" icon="ph:plus" to="/3/builds/monstie/edit?op=new" />
+        <NuxtLink to="/3/builds/monstie/edit?op=new" aria-label="New build">
+          <AppFab tooltip="New build" icon="ph:plus" />
+        </NuxtLink>
 
         <AppFab
           v-if="fabSourceVisible"
