@@ -7,7 +7,7 @@
     titleTemplate: '',
     title: `${title} - ${subtitle}`,
     description:
-      'Includes monster attack types and weaknesses, egg patterns, monstie locations and genes',
+      'Includes monster attack types and weaknesses, egg patterns, monstie locations, genes and build planner with bingo bonuses, egg powers and more',
   });
 
   defineOgImage(
@@ -15,13 +15,17 @@
     {
       title,
       description: subtitle,
-      lines: ['Eggs, Monsters', 'Attack Patterns', 'Genes'],
+      lines: ['Eggs, Monsters', 'Attack Patterns', 'Genes, Bingo Builder'],
       game: 'mhst3',
     },
     [{ key: 'og' }, { key: 'whatsapp', width: 800, height: 800 }]
   );
 
   const versions = [
+    {
+      date: '2026-05-17',
+      changes: ['Monstie build planner with genes, bingo bonuses, egg powers and more'],
+    },
     {
       date: '2026-04-18',
       changes: [
@@ -130,6 +134,11 @@
           <ProseLi>
             <AppNuxtLink to="/3/genes" text="Gene list" />
             with types, monstie sources and effects (including numbers)
+          </ProseLi>
+
+          <ProseLi>
+            <AppNuxtLink to="/3/builds/monstie" text="Monstie build planner" />
+            with genes, bingo bonuses, egg powers, dual elements, stats, effects, ...
           </ProseLi>
 
           <ProseLi>

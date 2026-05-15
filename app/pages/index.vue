@@ -66,7 +66,7 @@
         'Eggs, Monsters',
         'Attack Patterns',
         'Habitat Restoration',
-        'Genes', // ', Skills'
+        'Genes, Bingo Builder', // ', Skills'
       ],
     },
   ];
@@ -112,6 +112,12 @@
       icon: 'ph:dna',
       lines: ['Types', 'Effects', 'Sources'],
     },
+    // TODO features not yet implemented
+    // {
+    //   title: 'Monstie Builds',
+    //   icon: 'ph:dots-nine',
+    //   lines: ['Bingo Optimization', 'Gene Shopping List', 'Share Builds'],
+    // },
   ];
 </script>
 
