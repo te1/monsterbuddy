@@ -272,14 +272,16 @@
           <span v-if="isSaved">
             This <strong class="font-semibold">private</strong> build is stored locally on your
             device.
-            <span v-if="hasChanges">
-              There are <strong class="font-semibold">unsaved changes</strong>.
-            </span>
           </span>
           <span v-else>
             This <strong class="font-semibold">private</strong> build is
             <strong class="font-semibold">not saved</strong> yet.
           </span>
+
+          <span v-if="hasChanges">
+            There are <strong class="font-semibold">unsaved changes</strong>.
+          </span>
+          <span v-else>There are no changes.</span>
         </div>
 
         <div v-if="build" class="flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row">
