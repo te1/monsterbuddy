@@ -3,7 +3,7 @@
     label: string;
     value: TValue;
     icon?: string;
-    color?: 'primary' | 'neutral' | 'success';
+    color?: 'primary' | 'neutral' | 'success' | 'error';
     variant?: 'solid' | 'outline' | 'soft' | 'subtle' | 'ghost' | 'link';
     focus?: boolean;
   };

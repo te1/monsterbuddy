@@ -98,14 +98,25 @@
 
     await router.push('/3/builds/monstie');
 
-    await MonstieBuild.remove(build.value.id);
+    try {
+      await MonstieBuild.remove(build.value.id);
 
-    toast.add({
-      title: 'Build deleted from your device',
-      icon: 'ph:check',
-      id: 'build-delete',
-      color: 'success',
-    });
+      toast.add({
+        title: 'Build deleted from your device',
+        icon: 'ph:check',
+        id: 'build-delete',
+        color: 'success',
+      });
+    } catch (error) {
+      console.error('Failed to delete build', error);
+
+      toast.add({
+        title: 'Failed to delete build',
+        icon: 'ph:x',
+        id: 'build-delete-error',
+        color: 'error',
+      });
+    }
   }
 
   watch(

@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 
   ui: {
     theme: {
-      colors: ['primary', 'neutral', 'success'],
+      colors: ['primary', 'neutral', 'success', 'error'],
     },
     experimental: {
       componentDetection: true,
