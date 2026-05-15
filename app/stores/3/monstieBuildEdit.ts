@@ -15,15 +15,20 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
         if (!value) {
           return undefined;
         }
-        const data = JSON.parse(value);
-        const result = MonstieBuildSchema.safeParse(data);
+        try {
+          const data = JSON.parse(value);
+          const result = MonstieBuildSchema.safeParse(data);
 
-        if (!result.success) {
-          console.error('Failed to parse MonstieBuild data', result.error);
+          if (!result.success) {
+            console.error('Failed to parse MonstieBuild data', result.error);
+            return undefined;
+          }
+
+          return MonstieBuild.fromData(result.data);
+        } catch (error) {
+          console.error('Failed to parse MonstieBuild data', error);
           return undefined;
         }
-
-        return MonstieBuild.fromData(result.data);
       },
       write: (value) => (value ? JSON.stringify(value.toData()) : ''),
     },
