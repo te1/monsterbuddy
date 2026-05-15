@@ -1,5 +1,7 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
+  import type { GeneIndex, MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { GenePickedEvent } from '../monstieBuild/S3MonstieBuildGenePicker.vue';
   import { formatGeneInfo } from '~/services/3/presentation';
 
   const canHover = useCanHover();
@@ -8,11 +10,19 @@
     defineProps<{
       gene: Gene;
       editMode?: boolean;
+      build?: MonstieBuild;
+      index?: GeneIndex;
     }>(),
     {
       editMode: false,
+      build: undefined,
+      index: undefined,
     }
   );
+
+  const emit = defineEmits<{
+    'update:gene': [data: GenePickedEvent];
+  }>();
 
   const info = computed(() => formatGeneInfo(props.gene));
 </script>
@@ -50,9 +60,23 @@
 
         <div v-text="gene.description" />
 
-        <div v-if="editMode && canHover" class="mt-3 text-primary">
+        <div v-if="editMode && canHover" class="mt-3 text-base text-primary">
           Click to select another gene
         </div>
+
+        <LazyS3MonstieBuildGenePicker
+          v-if="editMode && !canHover && build && index != null"
+          :build="build"
+          :index="index"
+          @update:gene="emit('update:gene', $event)"
+        >
+          <UButton
+            label="Select another gene"
+            color="primary"
+            variant="link"
+            class="mt-3 p-0 text-base font-normal select-none"
+          />
+        </LazyS3MonstieBuildGenePicker>
       </div>
     </template>
   </AppRichTooltip>
