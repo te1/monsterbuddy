@@ -4,47 +4,41 @@ import { db } from '~/services/3/localDb';
 import { MonstieBuild } from '~/services/3/monstieBuilds';
 
 export function useMonstieBuild(id: MaybeRefOrGetter<string | undefined>) {
-  const pending = ref(false);
-  const data = ref<MonstieBuild | undefined>(undefined);
+  return useLiveQuery(
+    async (currentId) => {
+      if (!currentId) {
+        return undefined;
+      }
 
-  watchEffect((onCleanup) => {
-    data.value = undefined;
-
-    if (!import.meta.client) {
-      return;
-    }
-
-    pending.value = true;
-
-    const currentId = toValue(id);
-
-    if (!currentId) {
-      pending.value = false;
-      return;
-    }
-
-    const subscription = liveQuery(() => db.monstieBuilds.get(currentId)).subscribe({
-      next(value) {
-        data.value = value ? MonstieBuild.fromEntity(value) : undefined;
-        pending.value = false;
-      },
-      error(err) {
-        console.error(`useMonstieBuild(${currentId}) error`, err);
-        pending.value = false;
-      },
-    });
-
-    onCleanup(() => {
-      subscription.unsubscribe();
-    });
-  });
-
-  return { data, pending };
+      const value = await db.monstieBuilds.get(currentId);
+      return value ? MonstieBuild.fromEntity(value) : undefined;
+    },
+    () => toValue(id),
+    'useMonstieBuild'
+  );
 }
 
 export function useMonstieBuildEntity(id: MaybeRefOrGetter<string | undefined>) {
+  return useLiveQuery<MonstieBuildEntity | undefined, string | undefined>(
+    (currentId) => {
+      if (!currentId) {
+        return undefined;
+      }
+
+      return db.monstieBuilds.get(currentId);
+    },
+    () => toValue(id),
+    'useMonstieBuildEntity'
+  );
+}
+
+export function useLiveQuery<T, TDependency = void>(
+  query: (dependency: TDependency) => T | Promise<T>,
+  getDependency: () => TDependency = () => undefined as TDependency,
+  errorLabel = 'useLiveQuery'
+) {
+  const data = ref<T | undefined>(undefined);
   const pending = ref(false);
-  const data = ref<MonstieBuildEntity | undefined>(undefined);
 
   watchEffect((onCleanup) => {
     data.value = undefined;
@@ -53,22 +47,16 @@ export function useMonstieBuildEntity(id: MaybeRefOrGetter<string | undefined>) 
       return;
     }
 
+    const dependency = getDependency();
     pending.value = true;
 
-    const currentId = toValue(id);
-
-    if (!currentId) {
-      pending.value = false;
-      return;
-    }
-
-    const subscription = liveQuery(() => db.monstieBuilds.get(currentId)).subscribe({
+    const subscription = liveQuery(() => query(dependency)).subscribe({
       next(value) {
         data.value = value;
         pending.value = false;
       },
       error(err) {
-        console.error(`useMonstieBuildEntity(${currentId}) error`, err);
+        console.error(`${errorLabel} error`, err);
         pending.value = false;
       },
     });
@@ -80,32 +68,3 @@ export function useMonstieBuildEntity(id: MaybeRefOrGetter<string | undefined>) 
 
   return { data, pending };
 }
-
-/*
-export function useLiveQuery<T>(query: () => T | Promise<T>) {
-  const data = ref<T | undefined>(undefined);
-
-  watchEffect((onCleanup) => {
-    data.value = undefined;
-
-    if (!import.meta.client) {
-      return;
-    }
-
-    const subscription = liveQuery(query).subscribe({
-      next(value) {
-        data.value = value;
-      },
-      error(err) {
-        console.error('useLiveQuery error', err);
-      },
-    });
-
-    onCleanup(() => {
-      subscription.unsubscribe();
-    });
-  });
-
-  return data;
-}
-*/
