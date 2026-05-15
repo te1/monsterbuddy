@@ -217,6 +217,7 @@ export default defineNuxtConfig({
           { title: 'Monsties with stats', href: '/3/monsties' },
           { title: 'Visual egg guide', href: '/3/eggs' },
           { title: 'Full list of genes with effects and monstie sources', href: '/3/genes' },
+          { title: 'Monstie build planner with bingo bonuses', href: '/3/builds/monstie' },
         ],
       },
     ],
