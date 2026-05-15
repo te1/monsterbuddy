@@ -50,8 +50,28 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
   watch(
     [build, isSaved, isSavedRefreshKey],
     async () => {
-      if (!build.value || !isSaved.value) {
+      if (!build.value) {
         hasChanges.value = false;
+        return;
+      }
+
+      if (build.value.isEmpty()) {
+        hasChanges.value = false;
+        return;
+      }
+
+      const newHash = await build.value.getContentHash({ ignoreIds: true });
+
+      if (build.value.forkedFrom?.startsWith('_')) {
+        const parentEntity = await db.monstieBuilds.get(build.value.forkedFrom);
+        if (parentEntity?.dataHash === newHash) {
+          hasChanges.value = false;
+          return;
+        }
+      }
+
+      if (!isSaved.value) {
+        hasChanges.value = true;
         return;
       }
 
@@ -61,8 +81,6 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
         hasChanges.value = false;
         return;
       }
-
-      const newHash = await build.value.getContentHash({ ignoreId: true });
 
       hasChanges.value = oldEntity.dataHash !== newHash;
     },
@@ -83,7 +101,7 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
       name: build.value.name,
       monstieSlug: build.value.monstieSlug,
       data: build.value.toData(),
-      dataHash: await build.value.getContentHash({ ignoreId: true }),
+      dataHash: await build.value.getContentHash({ ignoreIds: true }),
       updatedAt: now,
       viewedAt: now,
     };

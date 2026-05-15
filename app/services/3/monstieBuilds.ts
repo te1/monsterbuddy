@@ -177,11 +177,12 @@ export class MonstieBuild {
     );
   }
 
-  toStableJson({ ignoreId = false } = {}): string {
+  toStableJson({ ignoreIds = false } = {}): string {
     const stable = sortKeys(this.toData());
 
-    if (ignoreId) {
+    if (ignoreIds) {
       delete stable.id;
+      delete stable.forkedFrom;
     }
 
     return JSON.stringify(stable);
@@ -201,8 +202,8 @@ export class MonstieBuild {
     };
   }
 
-  async getContentHash({ ignoreId = false } = {}): Promise<string> {
-    const json = this.toStableJson({ ignoreId });
+  async getContentHash({ ignoreIds = false } = {}): Promise<string> {
+    const json = this.toStableJson({ ignoreIds });
 
     return await hash(json);
   }
