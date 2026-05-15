@@ -34,8 +34,11 @@
         :build="build"
         :index="index"
         @update:gene="emit('update:gene', $event)"
-      />
-      <div v-else>+</div>
+      >
+        <UTooltip text="Select Gene" :content="{ side: 'top' }">
+          <UButton icon="ph:plus-bold" color="neutral" variant="link" size="xl" />
+        </UTooltip>
+      </S3MonstieBuildGenePicker>
     </div>
   </div>
 </template>

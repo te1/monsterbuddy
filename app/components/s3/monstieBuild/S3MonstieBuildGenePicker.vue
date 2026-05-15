@@ -317,7 +317,9 @@
       body: 'p-0 sm:p-0',
     }"
   >
-    <UButton label="Gene" color="neutral" variant="subtle" />
+    <slot>
+      <UButton label="Gene" color="neutral" variant="subtle" />
+    </slot>
 
     <template #description>
       <div class="flex flex-col gap-2 text-default">
