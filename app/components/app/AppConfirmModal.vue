@@ -5,9 +5,10 @@
     icon?: string;
     color?: 'primary' | 'neutral' | 'success';
     variant?: 'solid' | 'outline' | 'soft' | 'subtle' | 'ghost' | 'link';
+    focus?: boolean;
   };
 
-  const props = defineProps<{
+  defineProps<{
     title: string;
     description?: string;
     icon?: string;
@@ -20,8 +21,8 @@
 
   const defaultAction = ref<{ $el?: unknown }>();
 
-  function setDefaultAction(el: unknown, index: number) {
-    if (index === props.actions.length - 1) {
+  function setDefaultAction(el: unknown, focus?: boolean) {
+    if (focus) {
       defaultAction.value = el as { $el?: unknown } | undefined;
     }
   }
@@ -73,9 +74,9 @@
     <template #footer>
       <div class="flex w-full flex-wrap justify-end gap-2">
         <UButton
-          v-for="(action, index) in actions"
+          v-for="action in actions"
           :key="action.value"
-          :ref="(el) => setDefaultAction(el, index)"
+          :ref="(el) => setDefaultAction(el, action.focus)"
           :label="action.label"
           :icon="action.icon"
           :color="action.color"

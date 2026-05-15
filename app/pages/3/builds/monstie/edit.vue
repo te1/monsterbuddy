@@ -238,6 +238,7 @@
           color: 'primary',
           variant: 'outline',
           icon: 'ph:floppy-disk',
+          focus: true,
         },
       ],
     });
