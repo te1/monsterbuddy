@@ -71,13 +71,7 @@
     }
   }
 
-  watch(
-    title,
-    () => {
-      route.meta.mobileHeaderTitle = title.value;
-    },
-    { immediate: true }
-  );
+  useMobileHeaderOverride().bind(title);
 
   onMounted(() => {
     if (buildId.value) {
