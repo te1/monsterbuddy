@@ -49,40 +49,61 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
 
   watch(
     [build, isSaved, isSavedRefreshKey],
-    async () => {
-      if (!build.value) {
-        hasChanges.value = false;
-        return;
-      }
+    async (_new, _old, onCleanup) => {
+      // stop the callback if watch triggers again
+      let cancelled = false;
+      onCleanup(() => {
+        cancelled = true;
+      });
 
-      if (build.value.isEmpty()) {
-        hasChanges.value = false;
-        return;
-      }
-
-      const newHash = await build.value.getContentHash({ ignoreIds: true });
-
-      if (build.value.forkedFrom?.startsWith('_')) {
-        const parentEntity = await db.monstieBuilds.get(build.value.forkedFrom);
-        if (parentEntity?.dataHash === newHash) {
+      try {
+        if (!build.value) {
           hasChanges.value = false;
           return;
         }
+
+        if (build.value.isEmpty()) {
+          hasChanges.value = false;
+          return;
+        }
+
+        const newHash = await build.value.getContentHash({ ignoreIds: true });
+        if (cancelled) {
+          return;
+        }
+
+        if (build.value.forkedFrom?.startsWith('_')) {
+          const parentEntity = await db.monstieBuilds.get(build.value.forkedFrom);
+          if (cancelled) {
+            return;
+          }
+          if (parentEntity?.dataHash === newHash) {
+            hasChanges.value = false;
+            return;
+          }
+        }
+
+        if (!isSaved.value) {
+          hasChanges.value = true;
+          return;
+        }
+
+        const oldEntity = await db.monstieBuilds.get(build.value.id);
+        if (cancelled) {
+          return;
+        }
+
+        if (oldEntity == null) {
+          hasChanges.value = false;
+          return;
+        }
+
+        hasChanges.value = oldEntity.dataHash !== newHash;
+      } catch (error) {
+        if (!cancelled) {
+          console.error('Failed to recompute hasChanges', error);
+        }
       }
-
-      if (!isSaved.value) {
-        hasChanges.value = true;
-        return;
-      }
-
-      const oldEntity = await db.monstieBuilds.get(build.value.id);
-
-      if (oldEntity == null) {
-        hasChanges.value = false;
-        return;
-      }
-
-      hasChanges.value = oldEntity.dataHash !== newHash;
     },
     { deep: true, immediate: true }
   );
