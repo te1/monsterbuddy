@@ -81,14 +81,25 @@
       return;
     }
 
-    await edit.save();
+    try {
+      await edit.save();
 
-    toast.add({
-      title: 'Build saved locally to your device',
-      icon: 'ph:check',
-      id: 'build-save',
-      color: 'success',
-    });
+      toast.add({
+        title: 'Build saved locally to your device',
+        icon: 'ph:check',
+        id: 'build-save',
+        color: 'success',
+      });
+    } catch (error) {
+      console.error('Failed to save build', error);
+
+      toast.add({
+        title: 'Failed to save build',
+        icon: 'ph:x',
+        id: 'build-save-error',
+        color: 'error',
+      });
+    }
   }
 
   async function removeBuild() {
