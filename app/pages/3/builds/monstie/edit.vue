@@ -2,6 +2,7 @@
   import type { GenePickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGenePicker.vue';
   import type { EggPowerPickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildEggPowerPicker.vue';
   import { omit } from 'es-toolkit/object';
+  import AppConfirmModal from '~/components/app/AppConfirmModal.vue';
   import S3MonstieBuildEditSidebar from '~/components/s3/monstieBuild/S3MonstieBuildEditSidebar.vue';
   import { MonstieBuild } from '~/services/3/monstieBuilds';
   import useMonstieBuildHistoryStore from '~/stores/3/monstieBuildHistoryStore';
@@ -19,7 +20,9 @@
 
   const router = useRouter();
   const route = useRoute();
+  const overlay = useOverlay();
   const toast = useToast();
+
   const history = useMonstieBuildHistoryStore();
   const edit = useMonstieBuildEdit();
   const hasSidebar = useHasSidebar();
@@ -172,6 +175,58 @@
     robots: 'noindex, follow',
   });
   const headline = gameTypeToFullName('mhst3');
+
+  onBeforeRouteLeave(async () => {
+    if (!hasChanges.value) {
+      return true;
+    }
+
+    const option = await saveChangesPrompt();
+
+    if (option === 'stay') {
+      return false;
+    }
+
+    if (option === 'save') {
+      await saveBuild();
+    }
+
+    return true;
+  });
+
+  type SaveChangesOption = 'save' | 'discard' | 'stay';
+
+  const saveChangesModal = overlay.create(AppConfirmModal);
+
+  async function saveChangesPrompt(): Promise<SaveChangesOption> {
+    const option = await saveChangesModal.open({
+      title: 'Save changes before leaving?',
+      description: 'There are unsaved changes that might be lost when you leave this page.',
+      actions: [
+        {
+          label: 'Stay',
+          value: 'stay',
+          color: 'neutral',
+          variant: 'ghost',
+        },
+        {
+          label: 'Discard',
+          value: 'discard',
+          color: 'neutral',
+          variant: 'ghost',
+        },
+        {
+          label: 'Save',
+          value: 'save',
+          color: 'primary',
+          variant: 'outline',
+          icon: 'ph:floppy-disk',
+        },
+      ],
+    });
+
+    return (option ?? 'stay') as SaveChangesOption;
+  }
 </script>
 
 <template>
