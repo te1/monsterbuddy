@@ -19,11 +19,9 @@
   }>();
 
   const eggPowers = computed(() => {
-    const all = props.build.eggPowers.filter((eggPower) => eggPower !== undefined);
-
-    return all.map((eggPower) => {
+    return props.build.eggPowers.map((eggPower) => {
       return {
-        item: eggPower,
+        item: eggPower ?? null,
         awakened: eggPower ? props.build.isEggPowerAwakened(eggPower) : false,
         region: eggPower ? regionsByName.get(eggPower.region) : null,
       };
