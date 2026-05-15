@@ -87,7 +87,7 @@ const useMonstieBuildEdit = defineStore('s3/monstieBuildEdit', () => {
         }
 
         if (oldEntity == null) {
-          hasChanges.value = false;
+          hasChanges.value = true;
           return;
         }
 
