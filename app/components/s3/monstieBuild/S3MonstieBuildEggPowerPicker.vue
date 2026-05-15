@@ -21,6 +21,8 @@
     'update:eggPower': [data: EggPowerPickedEvent];
   }>();
 
+  const hasSoftKeyboard = useHasSoftKeyboard();
+
   const open = ref(false);
 
   const rankOrder = new Map([undefined, 'S', 'A', 'B'].map((rank, index) => [rank, index]));
@@ -111,6 +113,7 @@
           :defaultValue="defaultValue"
           :groups="groups"
           placeholder="Search..."
+          :autofocus="!hasSoftKeyboard"
           class="h-full"
           :input="input"
           :ui="{

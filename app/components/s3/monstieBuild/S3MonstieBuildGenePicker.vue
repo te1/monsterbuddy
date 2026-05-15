@@ -20,9 +20,10 @@
     'update:gene': [data: GenePickedEvent];
   }>();
 
-  const open = ref(false);
-
+  const hasSoftKeyboard = useHasSoftKeyboard();
   const history = useGeneHistoryStore();
+
+  const open = ref(false);
 
   const elementItems = computed(() => {
     return allElements.map((element) => ({
@@ -421,6 +422,7 @@
           :defaultValue="defaultValue"
           :groups="groups"
           placeholder="Search..."
+          :autofocus="!hasSoftKeyboard"
           class="h-full"
           :input="input"
           :ui="{

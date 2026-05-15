@@ -22,9 +22,10 @@
     'update:monstieSlug': [monstieSlug: string | null];
   }>();
 
-  const open = ref(false);
-
+  const hasSoftKeyboard = useHasSoftKeyboard();
   const history = useMonsterHistoryStore();
+
+  const open = ref(false);
 
   const typeItems = computed(() => {
     return allAttackTypes.map((type) => ({
@@ -327,6 +328,7 @@
           :defaultValue="defaultValue"
           :groups="groups"
           placeholder="Search..."
+          :autofocus="!hasSoftKeyboard"
           class="h-full"
           :input="input"
           :ui="{

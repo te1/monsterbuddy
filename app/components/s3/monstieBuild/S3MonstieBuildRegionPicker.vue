@@ -18,6 +18,8 @@
     'update:regionSlug': [regionSlug: string | null];
   }>();
 
+  const hasSoftKeyboard = useHasSoftKeyboard();
+
   const open = ref(false);
 
   const groups = computed(() => {
@@ -83,6 +85,7 @@
           :defaultValue="defaultValue"
           :groups="groups"
           placeholder="Search..."
+          :autofocus="!hasSoftKeyboard"
           class="h-full"
           :input="input"
           :ui="{ itemLabelBase: 'text-base' }"
