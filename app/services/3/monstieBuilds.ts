@@ -46,7 +46,7 @@ export class MonstieBuild {
     return MonstieBuild.fromData(entity.data);
   }
 
-  static async new(): Promise<MonstieBuild> {
+  static new(): MonstieBuild {
     const id = generateLocalId();
     return new MonstieBuild(id);
   }

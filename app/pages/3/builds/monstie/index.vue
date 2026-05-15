@@ -117,7 +117,10 @@
       if (sources.all.includes(newSource)) {
         sources.setCurrent(newSource);
 
-        router.replace(route.path); // remove query parameters from URL
+        router.replace({
+          path: route.path,
+          query: omit(route.query, ['source']),
+        });
       }
     },
     { immediate: true }

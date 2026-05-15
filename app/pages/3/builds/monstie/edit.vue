@@ -138,7 +138,7 @@
 
       switch (op) {
         case 'new':
-          edit.build = await MonstieBuild.new();
+          edit.build = MonstieBuild.new();
           ready.value = true;
           window.scrollTo({ top: 0, behavior: 'smooth' });
           break;
@@ -172,7 +172,7 @@
 
         default:
           if (edit.build == null) {
-            edit.build = await MonstieBuild.new();
+            edit.build = MonstieBuild.new();
           } else {
             await history.addRecentBuild(edit.build.id);
           }
