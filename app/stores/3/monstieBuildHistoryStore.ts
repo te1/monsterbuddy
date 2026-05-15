@@ -25,6 +25,8 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
     return allEntities.value.map((entity) => MonstieBuild.fromEntity(entity));
   });
 
+  const allBuildIds = computed(() => new Set(allBuilds.value.map((build) => build.id)));
+
   const recentBuilds = computed<MonstieBuild[]>(() => {
     return recentEntities.value.map((entity) => MonstieBuild.fromEntity(entity));
   });
@@ -124,7 +126,7 @@ const useMonstieBuildHistoryStore = defineStore('s3/monstieBuildHistory', () => 
   }
 
   function hasBuild(id: string): boolean {
-    return allBuilds.value.some((build) => build.id === id);
+    return allBuildIds.value.has(id);
   }
 
   return {
