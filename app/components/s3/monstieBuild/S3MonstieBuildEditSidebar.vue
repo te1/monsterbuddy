@@ -51,8 +51,10 @@
     }
 
     try {
+      const buildId = build.value.id;
+      await MonstieBuild.remove(buildId);
+      edit.build = undefined;
       edit.hasChanges = false;
-      await MonstieBuild.remove(build.value.id);
 
       await router.push('/3/builds/monstie');
 
