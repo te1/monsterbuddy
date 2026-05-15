@@ -76,7 +76,7 @@
     </ClientOnly>
 
     <UFormField
-      v-if="!hideSearch && filter != null"
+      v-if="!hideSearch"
       label="Name"
       orientation="horizontal"
       :data-modal-layout="modalLayout"
