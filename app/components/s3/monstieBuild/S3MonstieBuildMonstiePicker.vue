@@ -37,8 +37,7 @@
   const typeFilter = ref<AttackType[]>([]);
 
   function updateTypeFilter(value: AttackType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    typeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    typeFilter.value = getLastOrEmpty(value);
   }
 
   const elementItems = computed(() => {
@@ -51,8 +50,7 @@
   const elementFilter = ref<ElementType[]>([]);
 
   function updateElementFilter(value: ElementType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    elementFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    elementFilter.value = getLastOrEmpty(value);
   }
 
   type SourceType = 'recent' | 'pinned';
@@ -67,8 +65,7 @@
   function updateSourceFilter(value: SourceType[]) {
     const wasRecent = sourceFilter.value.includes('recent');
 
-    // simulate radio group behavior but allow "unselecting"
-    sourceFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    sourceFilter.value = getLastOrEmpty(value);
 
     if (sourceFilter.value[0] === 'recent') {
       sort.value = []; // remove sorting when switching to recent
@@ -134,8 +131,7 @@
   const previousSort = usePrevious(sort);
 
   function updateSort(value: SortType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    sort.value = value.length > 0 ? [value.at(-1)!] : [];
+    sort.value = getLastOrEmpty(value);
   }
 
   const sortedMonsties = computed(() => {

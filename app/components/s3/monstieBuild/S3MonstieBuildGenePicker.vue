@@ -35,8 +35,7 @@
   const elementFilter = ref<ElementType[]>([]);
 
   function updateElementFilter(value: ElementType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    elementFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    elementFilter.value = getLastOrEmpty(value);
   }
 
   const typeItems = computed<{ label: string; value: TypeFilter }[]>(() => {
@@ -54,8 +53,7 @@
   const typeFilter = ref<TypeFilter[]>([]);
 
   function updateTypeFilter(value: TypeFilter[]) {
-    // simulate radio group behavior but allow "unselecting"
-    typeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    typeFilter.value = getLastOrEmpty(value);
   }
 
   type TriggerType = 'active' | 'passive';
@@ -68,8 +66,7 @@
   const triggerFilter = ref<TriggerType[]>([]);
 
   function updateTriggerFilter(value: TriggerType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    triggerFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    triggerFilter.value = getLastOrEmpty(value);
   }
 
   type SizeType = 'max';
@@ -81,8 +78,7 @@
   const sizeFilter = ref<SizeType[]>(['max']);
 
   function updateSizeFilter(value: SizeType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    sizeFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    sizeFilter.value = getLastOrEmpty(value);
   }
 
   type SourceType = 'recent' | 'pinned';
@@ -97,8 +93,7 @@
   function updateSourceFilter(value: SourceType[]) {
     const wasRecent = sourceFilter.value.includes('recent');
 
-    // simulate radio group behavior but allow "unselecting"
-    sourceFilter.value = value.length > 0 ? [value.at(-1)!] : [];
+    sourceFilter.value = getLastOrEmpty(value);
 
     if (sourceFilter.value[0] === 'recent') {
       sort.value = []; // remove sorting when switching to recent
@@ -175,8 +170,7 @@
   const previousSort = usePrevious(sort);
 
   function updateSort(value: SortType[]) {
-    // simulate radio group behavior but allow "unselecting"
-    sort.value = value.length > 0 ? [value.at(-1)!] : [];
+    sort.value = getLastOrEmpty(value);
   }
 
   const sortedGenes = computed(() => {
