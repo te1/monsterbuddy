@@ -36,7 +36,13 @@
         @update:gene="emit('update:gene', $event)"
       >
         <UTooltip text="Select Gene" :content="{ side: 'top' }">
-          <UButton icon="ph:plus-bold" color="neutral" variant="link" size="xl" />
+          <UButton
+            icon="ph:plus-bold"
+            color="neutral"
+            variant="link"
+            size="xl"
+            :ui="{ leadingIcon: 'size-8' }"
+          />
         </UTooltip>
       </S3MonstieBuildGenePicker>
     </div>
