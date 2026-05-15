@@ -2,7 +2,17 @@
   import type { Gene } from '~/services/3/types';
   import { formatGeneInfo } from '~/services/3/presentation';
 
-  const props = defineProps<{ gene: Gene }>();
+  const canHover = useCanHover();
+
+  const props = withDefaults(
+    defineProps<{
+      gene: Gene;
+      editMode?: boolean;
+    }>(),
+    {
+      editMode: false,
+    }
+  );
 
   const info = computed(() => formatGeneInfo(props.gene));
 </script>
@@ -39,6 +49,10 @@
         </div>
 
         <div v-text="gene.description" />
+
+        <div v-if="editMode && canHover" class="mt-3 text-primary">
+          Click to select another gene
+        </div>
       </div>
     </template>
   </AppRichTooltip>

@@ -24,12 +24,27 @@
 
 <template>
   <div class="relative grid size-full place-items-center">
-    <S3GeneTooltip v-if="gene" :gene="gene">
-      <S3GeneIcon :gene="gene" size="size-full" noTooltip />
-    </S3GeneTooltip>
+    <template v-if="gene">
+      <LazyS3MonstieBuildGenePicker
+        v-if="editMode"
+        :build="build"
+        :index="index"
+        @update:gene="emit('update:gene', $event)"
+      >
+        <div class="size-full">
+          <S3GeneTooltip :gene="gene" :editMode="editMode">
+            <S3GeneIcon :gene="gene" size="size-full" noTooltip />
+          </S3GeneTooltip>
+        </div>
+      </LazyS3MonstieBuildGenePicker>
+
+      <S3GeneTooltip v-else :gene="gene">
+        <S3GeneIcon :gene="gene" size="size-full" noTooltip />
+      </S3GeneTooltip>
+    </template>
 
     <div v-else>
-      <S3MonstieBuildGenePicker
+      <LazyS3MonstieBuildGenePicker
         v-if="editMode"
         :build="build"
         :index="index"
@@ -44,7 +59,7 @@
             :ui="{ leadingIcon: 'size-8' }"
           />
         </UTooltip>
-      </S3MonstieBuildGenePicker>
+      </LazyS3MonstieBuildGenePicker>
     </div>
   </div>
 </template>
