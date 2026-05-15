@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GenePickedEvent } from './S3MonstieBuildGeneGrid.vue';
+  import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
 
   withDefaults(
     defineProps<{
