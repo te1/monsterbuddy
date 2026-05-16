@@ -53,6 +53,7 @@
   const dragPointer = ref({ x: 0, y: 0 });
   const dragCellSize = ref(0);
   const suppressNextClick = ref(false);
+  let suppressNextClickTimer: number | null = null;
 
   const draggedGene = computed(() => {
     if (draggedIndex.value == null) {
@@ -146,6 +147,17 @@
     event.preventDefault();
   }
 
+  function clearSuppressNextClickSoon() {
+    if (suppressNextClickTimer != null) {
+      window.clearTimeout(suppressNextClickTimer);
+    }
+
+    suppressNextClickTimer = window.setTimeout(() => {
+      suppressNextClick.value = false;
+      suppressNextClickTimer = null;
+    }, 0);
+  }
+
   function addDragListeners() {
     window.addEventListener('pointermove', onPointerMove, { passive: false });
     window.addEventListener('pointerup', onPointerUp);
@@ -216,11 +228,17 @@
     const to = targetIndex.value;
     const shouldSwap = isDragging.value && from != null && to != null && from !== to;
 
-    if (isDragging.value) {
+    const wasDragging = isDragging.value;
+
+    if (wasDragging) {
       event.preventDefault();
     }
 
     resetDragState();
+
+    if (wasDragging) {
+      clearSuppressNextClickSoon();
+    }
 
     if (shouldSwap) {
       emit('swap:genes', { from, to });
@@ -244,9 +262,20 @@
     event.preventDefault();
     event.stopPropagation();
     suppressNextClick.value = false;
+
+    if (suppressNextClickTimer != null) {
+      window.clearTimeout(suppressNextClickTimer);
+      suppressNextClickTimer = null;
+    }
   }
 
-  onBeforeUnmount(removeDragListeners);
+  onBeforeUnmount(() => {
+    removeDragListeners();
+
+    if (suppressNextClickTimer != null) {
+      window.clearTimeout(suppressNextClickTimer);
+    }
+  });
 </script>
 
 <template>
