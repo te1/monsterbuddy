@@ -9,11 +9,19 @@
     defineProps<{
       build: MonstieBuild;
       genes: (Gene | undefined)[];
+      gene?: Gene | null;
       index: GeneIndex;
       editMode?: boolean;
+      isDragging?: boolean;
+      isSource?: boolean;
+      isTarget?: boolean;
     }>(),
     {
       editMode: false,
+      gene: undefined,
+      isDragging: false,
+      isSource: false,
+      isTarget: false,
     }
   );
 
@@ -21,13 +29,19 @@
     'update:gene': [data: GenePickedEvent];
   }>();
 
-  const gene = computed(() => props.genes[props.index]);
+  const gene = computed(() => (props.gene === undefined ? props.genes[props.index] : props.gene));
 </script>
 
 <template>
-  <div class="relative grid size-full place-items-center">
+  <div
+    class="relative grid size-full place-items-center transition"
+    :class="{
+      'opacity-50': isSource,
+      'scale-110 drop-shadow-xl/100 drop-shadow-primary': isTarget,
+    }"
+  >
     <template v-if="gene">
-      <template v-if="editMode">
+      <template v-if="editMode && !isDragging">
         <LazyS3MonstieBuildGenePicker
           v-if="canHover"
           :build="build"
@@ -53,14 +67,16 @@
         </S3GeneTooltip>
       </template>
 
-      <S3GeneTooltip v-else :gene="gene">
+      <S3GeneTooltip v-else-if="!isDragging" :gene="gene">
         <S3GeneIcon :gene="gene" size="size-full" noTooltip />
       </S3GeneTooltip>
+
+      <S3GeneIcon v-else :gene="gene" size="size-full" noTooltip />
     </template>
 
     <div v-else>
       <LazyS3MonstieBuildGenePicker
-        v-if="editMode"
+        v-if="editMode && !isDragging"
         :build="build"
         :index="index"
         @update:gene="emit('update:gene', $event)"
