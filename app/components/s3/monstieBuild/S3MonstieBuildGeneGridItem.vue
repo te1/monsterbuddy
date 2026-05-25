@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
   import type { GeneIndex, MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
+  import type { GenePickEvent } from './S3MonstieBuildGenePicker.vue';
 
   const canHover = useCanHover();
 
@@ -26,7 +26,7 @@
   );
 
   const emit = defineEmits<{
-    'update:gene': [data: GenePickedEvent];
+    'update:gene': [data: GenePickEvent];
   }>();
 
   const gene = computed(() =>
@@ -39,7 +39,7 @@
     class="relative grid size-full place-items-center transition"
     :class="{
       'opacity-50': isSource,
-      'drop-shadow-centered scale-110 drop-shadow-primary': isTarget,
+      'scale-110 drop-shadow-centered drop-shadow-primary': isTarget,
     }"
   >
     <template v-if="gene">

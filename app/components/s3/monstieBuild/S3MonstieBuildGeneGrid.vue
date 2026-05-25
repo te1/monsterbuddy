@@ -1,15 +1,9 @@
 <script lang="ts" setup>
-  import type { Gene } from '~/services/3/types';
-  import type { GeneIndex, MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
+  import type { GeneSwapEvent } from '~/composables/3/useGeneGridDrag';
+  import type { MonstieBuild } from '~/services/3/monstieBuilds';
+  import type { GenePickEvent } from './S3MonstieBuildGenePicker.vue';
   import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
-
-  export type GeneSwapedEvent = { from: GeneIndex; to: GeneIndex };
-
-  const geneIndexes: readonly GeneIndex[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-  const DRAG_THRESHOLD = 6;
-  const TOUCH_TARGET_OFFSET = 32;
-  const DRAG_AVATAR_SCALE = 1;
+  import { useGeneGridDrag } from '~/composables/3/useGeneGridDrag';
 
   const props = withDefaults(
     defineProps<{
@@ -22,8 +16,8 @@
   );
 
   const emit = defineEmits<{
-    'update:gene': [data: GenePickedEvent];
-    swapGenes: [data: GeneSwapedEvent];
+    'update:gene': [data: GenePickEvent];
+    swapGenes: [data: GeneSwapEvent];
   }>();
 
   const {
@@ -42,239 +36,21 @@
     return bingo ? 'bg-gene-bingo' : 'bg-gene-grid';
   }
 
-  const slotEls = ref<(HTMLElement | null)[]>([]);
-  const slotCenters = ref<{ index: GeneIndex; x: number; y: number }[]>([]);
-  const draggedIndex = ref<GeneIndex | null>(null);
-  const targetIndex = ref<GeneIndex | null>(null);
-  const isDragging = ref(false);
-  const activePointerId = ref<number | null>(null);
-  const dragPointerType = ref<PointerEvent['pointerType']>('mouse');
-  const dragStart = ref({ x: 0, y: 0 });
-  const dragPointer = ref({ x: 0, y: 0 });
-  const dragCellSize = ref(0);
-  const suppressNextClick = ref(false);
-  let suppressNextClickTimer: number | null = null;
-
-  const draggedGene = computed(() => {
-    if (draggedIndex.value == null) {
-      return;
-    }
-
-    return genes.value[draggedIndex.value];
-  });
-
-  const displayGenes = computed<(Gene | null)[]>(() => {
-    const result = geneIndexes.map((index) => genes.value[index] ?? null);
-
-    if (isDragging.value && draggedIndex.value != null && targetIndex.value != null) {
-      const draggedGene = result[draggedIndex.value] ?? null;
-      const targetGene = result[targetIndex.value] ?? null;
-
-      result[draggedIndex.value] = targetGene;
-      result[targetIndex.value] = draggedGene;
-    }
-
-    return result;
-  });
-
-  const dragAvatarStyle = computed(() => {
-    const size = dragCellSize.value;
-    const scaledSize = size * DRAG_AVATAR_SCALE;
-    const offsetY = dragPointerType.value === 'touch' ? TOUCH_TARGET_OFFSET : 0;
-    const x = dragPointer.value.x - scaledSize / 2;
-    const y = dragPointer.value.y + offsetY - scaledSize / 2;
-
-    return {
-      width: `${size}px`,
-      height: `${size}px`,
-      transform: `translate3d(${x}px, ${y}px, 0) scale(${DRAG_AVATAR_SCALE})`,
-      transformOrigin: 'top left',
-    };
-  });
-
-  function setSlotEl(index: GeneIndex, el: Element | null) {
-    slotEls.value[index] = el instanceof HTMLElement ? el : null;
-  }
-
-  function cacheSlotCenters() {
-    slotCenters.value = geneIndexes.flatMap((index) => {
-      const el = slotEls.value[index];
-
-      if (!el) {
-        return [];
-      }
-
-      const rect = el.getBoundingClientRect();
-
-      if (index === draggedIndex.value) {
-        dragCellSize.value = rect.width;
-      }
-
-      return [
-        {
-          index,
-          x: rect.left + rect.width / 2,
-          y: rect.top + rect.height / 2,
-        },
-      ];
-    });
-  }
-
-  function getClosestSlot(event: PointerEvent): GeneIndex | null {
-    if (slotCenters.value.length === 0) {
-      return null;
-    }
-
-    const offsetY = event.pointerType === 'touch' ? TOUCH_TARGET_OFFSET : 0;
-    const x = event.clientX;
-    const y = event.clientY + offsetY;
-
-    return slotCenters.value.reduce((closest, center) => {
-      const closestDistance = Math.hypot(x - closest.x, y - closest.y);
-      const currentDistance = Math.hypot(x - center.x, y - center.y);
-
-      return currentDistance < closestDistance ? center : closest;
-    }).index;
-  }
-
-  function startDragging(event: PointerEvent) {
-    if (isDragging.value) {
-      return;
-    }
-
-    isDragging.value = true;
-    suppressNextClick.value = true;
-    event.preventDefault();
-  }
-
-  function clearSuppressNextClickSoon() {
-    if (suppressNextClickTimer != null) {
-      window.clearTimeout(suppressNextClickTimer);
-    }
-
-    suppressNextClickTimer = window.setTimeout(() => {
-      suppressNextClick.value = false;
-      suppressNextClickTimer = null;
-    }, 0);
-  }
-
-  function addDragListeners() {
-    window.addEventListener('pointermove', onPointerMove, { passive: false });
-    window.addEventListener('pointerup', onPointerUp);
-    window.addEventListener('pointercancel', onPointerCancel);
-  }
-
-  function removeDragListeners() {
-    window.removeEventListener('pointermove', onPointerMove);
-    window.removeEventListener('pointerup', onPointerUp);
-    window.removeEventListener('pointercancel', onPointerCancel);
-  }
-
-  function onSlotPointerDown(event: PointerEvent, index: GeneIndex) {
-    if (!props.editMode || event.button !== 0 || !genes.value[index]) {
-      return;
-    }
-
-    activePointerId.value = event.pointerId;
-    draggedIndex.value = index;
-    targetIndex.value = index;
-    dragPointerType.value = event.pointerType;
-    dragStart.value = { x: event.clientX, y: event.clientY };
-    dragPointer.value = { x: event.clientX, y: event.clientY };
-    cacheSlotCenters();
-    addDragListeners();
-  }
-
-  function onPointerMove(event: PointerEvent) {
-    if (activePointerId.value !== event.pointerId || draggedIndex.value == null) {
-      return;
-    }
-
-    dragPointer.value = { x: event.clientX, y: event.clientY };
-
-    if (!isDragging.value) {
-      const distance = Math.hypot(
-        event.clientX - dragStart.value.x,
-        event.clientY - dragStart.value.y
-      );
-
-      if (distance < DRAG_THRESHOLD) {
-        return;
-      }
-
-      startDragging(event);
-    }
-
-    event.preventDefault();
-    targetIndex.value = getClosestSlot(event) ?? draggedIndex.value;
-  }
-
-  function resetDragState() {
-    activePointerId.value = null;
-    draggedIndex.value = null;
-    targetIndex.value = null;
-    isDragging.value = false;
-    slotCenters.value = [];
-    dragCellSize.value = 0;
-    removeDragListeners();
-  }
-
-  function onPointerUp(event: PointerEvent) {
-    if (activePointerId.value !== event.pointerId) {
-      return;
-    }
-
-    const from = draggedIndex.value;
-    const to = targetIndex.value;
-    const shouldSwap = isDragging.value && from != null && to != null && from !== to;
-
-    const wasDragging = isDragging.value;
-
-    if (wasDragging) {
-      event.preventDefault();
-    }
-
-    resetDragState();
-
-    if (wasDragging) {
-      clearSuppressNextClickSoon();
-    }
-
-    if (shouldSwap) {
-      emit('swapGenes', { from, to });
-    }
-  }
-
-  function onPointerCancel(event: PointerEvent) {
-    if (activePointerId.value !== event.pointerId) {
-      return;
-    }
-
-    resetDragState();
-    suppressNextClick.value = false;
-  }
-
-  function onSlotClickCapture(event: MouseEvent) {
-    if (!suppressNextClick.value) {
-      return;
-    }
-
-    event.preventDefault();
-    event.stopPropagation();
-    suppressNextClick.value = false;
-
-    if (suppressNextClickTimer != null) {
-      window.clearTimeout(suppressNextClickTimer);
-      suppressNextClickTimer = null;
-    }
-  }
-
-  onBeforeUnmount(() => {
-    removeDragListeners();
-
-    if (suppressNextClickTimer != null) {
-      window.clearTimeout(suppressNextClickTimer);
-    }
+  const {
+    geneIndexes,
+    displayGenes,
+    draggedGene,
+    draggedIndex,
+    targetIndex,
+    isDragging,
+    dragAvatarStyle,
+    setSlotEl,
+    onSlotPointerDown,
+    onSlotClickCapture,
+  } = useGeneGridDrag({
+    genes,
+    editMode: () => props.editMode,
+    onSwap: (data) => emit('swapGenes', data),
   });
 </script>
 

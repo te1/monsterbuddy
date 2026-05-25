@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GeneSwapedEvent } from './S3MonstieBuildGeneGrid.vue';
-  import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
+  import type { GenePickEvent } from './S3MonstieBuildGenePicker.vue';
+  import type { GeneSwapEvent } from '~/composables/3/useGeneGridDrag';
 
   withDefaults(
     defineProps<{
@@ -14,8 +14,8 @@
   );
 
   const emit = defineEmits<{
-    'update:gene': [data: GenePickedEvent];
-    swapGenes: [data: GeneSwapedEvent];
+    'update:gene': [data: GenePickEvent];
+    swapGenes: [data: GeneSwapEvent];
   }>();
 </script>
 

@@ -14,10 +14,10 @@
     index: GeneIndex;
   }>();
 
-  export type GenePickedEvent = { geneSlug: string | null; index: GeneIndex };
+  export type GenePickEvent = { geneSlug: string | null; index: GeneIndex };
 
   const emit = defineEmits<{
-    'update:gene': [data: GenePickedEvent];
+    'update:gene': [data: GenePickEvent];
   }>();
 
   const hasSoftKeyboard = useHasSoftKeyboard();

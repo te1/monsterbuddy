@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-  import type { GeneSwapedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGeneGrid.vue';
-  import type { GenePickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGenePicker.vue';
+  import type { GenePickEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGenePicker.vue';
+  import type { GeneSwapEvent } from '~/composables/3/useGeneGridDrag';
   import type { EggPowerPickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildEggPowerPicker.vue';
   import { omit } from 'es-toolkit/object';
   import AppConfirmModal from '~/components/app/AppConfirmModal.vue';
@@ -65,13 +65,13 @@
     }
   }
 
-  function updateGene(data: GenePickedEvent) {
+  function updateGene(data: GenePickEvent) {
     if (build.value) {
       build.value.geneSlugs[data.index] = data.geneSlug;
     }
   }
 
-  function swapGenes(data: GeneSwapedEvent) {
+  function swapGenes(data: GeneSwapEvent) {
     if (build.value) {
       const from = build.value.geneSlugs[data.from] ?? null;
       const to = build.value.geneSlugs[data.to] ?? null;
