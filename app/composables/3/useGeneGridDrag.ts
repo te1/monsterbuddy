@@ -26,7 +26,7 @@ export function useGeneGridDrag({
   const dragPointerType = ref<PointerEvent['pointerType']>('mouse');
   const dragStart = ref({ x: 0, y: 0 });
   const dragPointer = ref({ x: 0, y: 0 });
-  const dragPointerOffset = ref({ x: 0, y: 0 });
+  const dragOffset = ref({ x: 0, y: 0 });
   const dragCellSize = ref(0);
 
   const suppressNextClick = ref(false);
@@ -59,8 +59,8 @@ export function useGeneGridDrag({
   const dragAvatarStyle = computed(() => {
     const size = dragCellSize.value;
     const offsetY = dragPointerType.value === 'touch' ? touchTargetOffset : 0;
-    const x = dragPointer.value.x - dragPointerOffset.value.x - size / 2;
-    const y = dragPointer.value.y + offsetY - dragPointerOffset.value.y - size / 2;
+    const x = dragPointer.value.x - dragOffset.value.x - size / 2;
+    const y = dragPointer.value.y + offsetY - dragOffset.value.y - size / 2;
 
     return {
       width: `${size}px`,
@@ -104,8 +104,8 @@ export function useGeneGridDrag({
     }
 
     const offsetY = event.pointerType === 'touch' ? touchTargetOffset : 0;
-    const x = event.clientX - dragPointerOffset.value.x;
-    const y = event.clientY + offsetY - dragPointerOffset.value.y;
+    const x = event.clientX - dragOffset.value.x;
+    const y = event.clientY + offsetY - dragOffset.value.y;
 
     return slotCenters.value.reduce((closest, center) => {
       const closestDistance = Math.hypot(x - closest.x, y - closest.y);
@@ -162,7 +162,7 @@ export function useGeneGridDrag({
     cacheSlotCenters();
 
     const center = slotCenters.value.find((center) => center.index === index);
-    dragPointerOffset.value = center
+    dragOffset.value = center
       ? { x: event.clientX - center.x, y: event.clientY - center.y }
       : { x: 0, y: 0 };
 
@@ -199,7 +199,7 @@ export function useGeneGridDrag({
     targetIndex.value = null;
     isDragging.value = false;
     slotCenters.value = [];
-    dragPointerOffset.value = { x: 0, y: 0 };
+    dragOffset.value = { x: 0, y: 0 };
     dragCellSize.value = 0;
     removeDragListeners();
   }
