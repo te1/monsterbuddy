@@ -159,6 +159,10 @@ export function useGeneGridDrag({
   }
 
   function onSlotPointerDown(event: PointerEvent, index: GeneIndex) {
+    if (activePointerId.value != null || draggedIndex.value != null) {
+      return;
+    }
+
     if (!toValue(editMode) || event.button !== 0 || !currentGenes.value[index]) {
       return;
     }
