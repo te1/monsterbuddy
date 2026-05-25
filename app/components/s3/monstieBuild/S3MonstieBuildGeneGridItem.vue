@@ -9,16 +9,16 @@
     defineProps<{
       build: MonstieBuild;
       genes: (Gene | undefined)[];
-      gene?: Gene | null;
       index: GeneIndex;
+      overrideGene?: Gene | null;
       editMode?: boolean;
       isDragging?: boolean;
       isSource?: boolean;
       isTarget?: boolean;
     }>(),
     {
+      overrideGene: undefined,
       editMode: false,
-      gene: undefined,
       isDragging: false,
       isSource: false,
       isTarget: false,
@@ -29,7 +29,9 @@
     'update:gene': [data: GenePickedEvent];
   }>();
 
-  const gene = computed(() => (props.gene === undefined ? props.genes[props.index] : props.gene));
+  const gene = computed(() =>
+    props.overrideGene === undefined ? props.genes[props.index] : props.overrideGene
+  );
 </script>
 
 <template>

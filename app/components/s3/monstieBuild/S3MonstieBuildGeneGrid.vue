@@ -601,8 +601,8 @@
         <S3MonstieBuildGeneGridItem
           :build="build"
           :genes="genes"
-          :gene="displayGenes[index]"
           :index="index"
+          :overrideGene="displayGenes[index]"
           :editMode="editMode"
           :isDragging="isDragging"
           :isSource="isDragging && draggedIndex === index"
