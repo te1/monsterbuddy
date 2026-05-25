@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+  import type { GeneSwapEvent } from '~/composables/3/useGeneGridDrag';
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
+  import type { GenePickEvent } from './S3MonstieBuildGenePicker.vue';
   import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
+  import { useGeneGridDrag } from '~/composables/3/useGeneGridDrag';
 
   const props = withDefaults(
     defineProps<{
@@ -14,7 +16,8 @@
   );
 
   const emit = defineEmits<{
-    'update:gene': [data: GenePickedEvent];
+    'update:gene': [data: GenePickEvent];
+    swapGenes: [data: GeneSwapEvent];
   }>();
 
   const {
@@ -32,6 +35,23 @@
   function lineColor(bingo: boolean) {
     return bingo ? 'bg-gene-bingo' : 'bg-gene-grid';
   }
+
+  const {
+    geneIndexes,
+    displayGenes,
+    draggedGene,
+    draggedIndex,
+    targetIndex,
+    isDragging,
+    dragAvatarStyle,
+    setSlotEl,
+    onSlotPointerDown,
+    onSlotClickCapture,
+  } = useGeneGridDrag({
+    genes,
+    editMode: () => props.editMode,
+    onSwap: (data) => emit('swapGenes', data),
+  });
 </script>
 
 <template>
@@ -342,72 +362,40 @@
     <!-- genes -->
     <div
       class="absolute inset-(--inset) grid grid-cols-3 grid-rows-3 place-items-center gap-(--gap)"
+      :class="{ 'select-none': isDragging }"
     >
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="0"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="1"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="2"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
+      <div
+        v-for="index in geneIndexes"
+        :key="index"
+        :ref="(el: Element | null) => setSlotEl(index, el)"
+        class="size-full"
+        :class="{ 'touch-none': editMode && genes[index] }"
+        @pointerdown="onSlotPointerDown($event, index)"
+        @click.capture="onSlotClickCapture"
+        @dragstart.prevent
+        @contextmenu.prevent
+      >
+        <S3MonstieBuildGeneGridItem
+          :build="build"
+          :genes="genes"
+          :index="index"
+          :overrideGene="displayGenes[index]"
+          :editMode="editMode"
+          :isDragging="isDragging"
+          :isSource="isDragging && draggedIndex === index"
+          :isTarget="isDragging && targetIndex === index"
+          @update:gene="emit('update:gene', $event)"
+        />
+      </div>
+    </div>
 
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="3"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="4"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="5"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="6"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="7"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
-      <S3MonstieBuildGeneGridItem
-        :build="build"
-        :genes="genes"
-        :index="8"
-        :editMode="editMode"
-        @update:gene="emit('update:gene', $event)"
-      />
+    <div
+      v-if="isDragging && draggedGene"
+      class="pointer-events-none fixed top-0 left-0 z-10 opacity-90"
+      :style="dragAvatarStyle"
+      aria-hidden="true"
+    >
+      <S3GeneIcon :gene="draggedGene" size="size-full" noTooltip />
     </div>
   </div>
 </template>

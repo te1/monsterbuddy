@@ -11,6 +11,8 @@
   --color-gene-grid: oklch(0.4825 0.0312 65.14);
   --color-gene-bingo: oklch(0.9714 0.0025 48.72);
   --default-transition-duration: 200ms;
+
+  --drop-shadow-centered: 0 0 10px var(--tw-drop-shadow-color, rgba(0, 0, 0, 0.25));
 }
 
 @theme static {

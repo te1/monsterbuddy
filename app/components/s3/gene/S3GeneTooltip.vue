@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import type { Gene } from '~/services/3/types';
   import type { GeneIndex, MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GenePickedEvent } from '../monstieBuild/S3MonstieBuildGenePicker.vue';
+  import type { GenePickEvent } from '../monstieBuild/S3MonstieBuildGenePicker.vue';
   import { formatGeneInfo } from '~/services/3/presentation';
 
   const canHover = useCanHover();
@@ -21,12 +21,12 @@
   );
 
   const emit = defineEmits<{
-    'update:gene': [data: GenePickedEvent];
+    'update:gene': [data: GenePickEvent];
   }>();
 
   const info = computed(() => formatGeneInfo(props.gene));
 
-  function onUpdateGene(event: GenePickedEvent, close: () => void) {
+  function onUpdateGene(event: GenePickEvent, close: () => void) {
     close();
     emit('update:gene', event);
   }
@@ -65,8 +65,12 @@
 
         <div v-text="gene.description" />
 
-        <div v-if="editMode && canHover" class="mt-3 text-base text-primary">
-          Click to select another gene
+        <div v-if="editMode && canHover" class="mt-3 text-muted">
+          Click to select another gene. Drag and drop to change positions.
+        </div>
+
+        <div v-if="editMode && !canHover" class="mt-3 text-muted">
+          Drag and drop genes to change positions.
         </div>
 
         <LazyS3MonstieBuildGenePicker

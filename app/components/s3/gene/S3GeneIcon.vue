@@ -114,6 +114,7 @@
         alt=""
         aria-hidden="true"
         class="absolute inset-0"
+        draggable="false"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
       />
@@ -123,6 +124,7 @@
         alt=""
         aria-hidden="true"
         class="absolute inset-0"
+        draggable="false"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
       />
@@ -132,6 +134,7 @@
         alt=""
         aria-hidden="true"
         class="absolute inset-1.75 drop-shadow-sm drop-shadow-black"
+        draggable="false"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
       />
@@ -141,6 +144,7 @@
         alt=""
         aria-hidden="true"
         class="absolute inset-0"
+        draggable="false"
         :loading="eager ? 'eager' : 'lazy'"
         decoding="async"
       />
