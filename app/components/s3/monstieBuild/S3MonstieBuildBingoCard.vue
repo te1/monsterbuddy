@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { MonstieBuild } from '~/services/3/monstieBuilds';
-  import type { GeneSwapEvent } from './S3MonstieBuildGeneGrid.vue';
+  import type { GeneSwapedEvent } from './S3MonstieBuildGeneGrid.vue';
   import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
 
   withDefaults(
@@ -15,7 +15,7 @@
 
   const emit = defineEmits<{
     'update:gene': [data: GenePickedEvent];
-    'swap:genes': [data: GeneSwapEvent];
+    swapGenes: [data: GeneSwapedEvent];
   }>();
 </script>
 
@@ -33,7 +33,7 @@
         :build="build"
         :editMode="editMode"
         @update:gene="emit('update:gene', $event)"
-        @swap:genes="emit('swap:genes', $event)"
+        @swapGenes="emit('swapGenes', $event)"
       />
 
       <S3MonstieBuildBingoBonus :build="build" />

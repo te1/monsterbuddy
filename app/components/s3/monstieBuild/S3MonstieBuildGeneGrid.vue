@@ -4,7 +4,7 @@
   import type { GenePickedEvent } from './S3MonstieBuildGenePicker.vue';
   import { useMonstieBuildBingos } from '~/composables/3/useMonstieBuildBingos';
 
-  export type GeneSwapEvent = { from: GeneIndex; to: GeneIndex };
+  export type GeneSwapedEvent = { from: GeneIndex; to: GeneIndex };
 
   const geneIndexes: readonly GeneIndex[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   const DRAG_THRESHOLD = 6;
@@ -23,7 +23,7 @@
 
   const emit = defineEmits<{
     'update:gene': [data: GenePickedEvent];
-    'swap:genes': [data: GeneSwapEvent];
+    swapGenes: [data: GeneSwapedEvent];
   }>();
 
   const {
@@ -241,7 +241,7 @@
     }
 
     if (shouldSwap) {
-      emit('swap:genes', { from, to });
+      emit('swapGenes', { from, to });
     }
   }
 

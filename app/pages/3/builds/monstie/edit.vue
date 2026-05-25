@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { GeneSwapEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGeneGrid.vue';
+  import type { GeneSwapedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGeneGrid.vue';
   import type { GenePickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildGenePicker.vue';
   import type { EggPowerPickedEvent } from '~/components/s3/monstieBuild/S3MonstieBuildEggPowerPicker.vue';
   import { omit } from 'es-toolkit/object';
@@ -71,7 +71,7 @@
     }
   }
 
-  function swapGenes(data: GeneSwapEvent) {
+  function swapGenes(data: GeneSwapedEvent) {
     if (build.value) {
       const from = build.value.geneSlugs[data.from] ?? null;
       const to = build.value.geneSlugs[data.to] ?? null;
@@ -337,7 +337,7 @@
               editMode
               class="box px-4 py-2"
               @update:gene="updateGene($event)"
-              @swap:genes="swapGenes($event)"
+              @swapGenes="swapGenes($event)"
             />
 
             <S3MonstieBuildStatsCard :build="build" class="box px-4 py-2" />
