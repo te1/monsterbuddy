@@ -65,8 +65,12 @@
 
         <div v-text="gene.description" />
 
-        <div v-if="editMode && canHover" class="mt-3 text-base text-primary">
-          Click to select another gene. Drag and drop to change position.
+        <div v-if="editMode && canHover" class="mt-3 text-muted">
+          Click to select another gene. Drag and drop to change positions.
+        </div>
+
+        <div v-if="editMode && !canHover" class="mt-3 text-muted">
+          Drag and drop genes to change positions.
         </div>
 
         <LazyS3MonstieBuildGenePicker
