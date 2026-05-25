@@ -37,7 +37,7 @@
     class="relative grid size-full place-items-center transition"
     :class="{
       'opacity-50': isSource,
-      'scale-110 drop-shadow-xl/100 drop-shadow-primary': isTarget,
+      'drop-shadow-centered scale-110 drop-shadow-primary': isTarget,
     }"
   >
     <template v-if="gene">
