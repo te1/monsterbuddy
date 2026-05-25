@@ -27,6 +27,7 @@ export function useGeneGridDrag({
   const dragStart = ref({ x: 0, y: 0 });
   const dragPointer = ref({ x: 0, y: 0 });
   const dragCellSize = ref(0);
+
   const suppressNextClick = ref(false);
   let suppressNextClickTimer: number | null = null;
 
@@ -123,7 +124,7 @@ export function useGeneGridDrag({
     event.preventDefault();
   }
 
-  function clearSuppressNextClickSoon() {
+  function clearSuppressNextClick() {
     if (suppressNextClickTimer != null) {
       window.clearTimeout(suppressNextClickTimer);
     }
@@ -213,7 +214,7 @@ export function useGeneGridDrag({
     resetDragState();
 
     if (wasDragging) {
-      clearSuppressNextClickSoon();
+      clearSuppressNextClick();
     }
 
     if (shouldSwap) {
