@@ -1,12 +1,12 @@
-import type { GeneIndex } from '~/services/3/monstieBuilds';
 import type { Gene } from '~/services/3/types';
+import type { GeneIndex } from '~/services/3/monstieBuilds';
 
 export type GeneSwapEvent = { from: GeneIndex; to: GeneIndex };
 
 const geneIndexes: readonly GeneIndex[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-const DRAG_THRESHOLD = 6;
-const TOUCH_TARGET_OFFSET = 32;
-const DRAG_AVATAR_SCALE = 1;
+
+const dragThreshold = 6;
+const touchTargetOffset = 32;
 
 export function useGeneGridDrag({
   editMode,
@@ -56,15 +56,14 @@ export function useGeneGridDrag({
 
   const dragAvatarStyle = computed(() => {
     const size = dragCellSize.value;
-    const scaledSize = size * DRAG_AVATAR_SCALE;
-    const offsetY = dragPointerType.value === 'touch' ? TOUCH_TARGET_OFFSET : 0;
-    const x = dragPointer.value.x - scaledSize / 2;
-    const y = dragPointer.value.y + offsetY - scaledSize / 2;
+    const offsetY = dragPointerType.value === 'touch' ? touchTargetOffset : 0;
+    const x = dragPointer.value.x - size / 2;
+    const y = dragPointer.value.y + offsetY - size / 2;
 
     return {
       width: `${size}px`,
       height: `${size}px`,
-      transform: `translate3d(${x}px, ${y}px, 0) scale(${DRAG_AVATAR_SCALE})`,
+      transform: `translate3d(${x}px, ${y}px, 0)`,
       transformOrigin: 'top left',
     };
   });
@@ -102,7 +101,7 @@ export function useGeneGridDrag({
       return null;
     }
 
-    const offsetY = event.pointerType === 'touch' ? TOUCH_TARGET_OFFSET : 0;
+    const offsetY = event.pointerType === 'touch' ? touchTargetOffset : 0;
     const x = event.clientX;
     const y = event.clientY + offsetY;
 
@@ -175,7 +174,7 @@ export function useGeneGridDrag({
         event.clientY - dragStart.value.y
       );
 
-      if (distance < DRAG_THRESHOLD) {
+      if (distance < dragThreshold) {
         return;
       }
 
