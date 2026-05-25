@@ -5,7 +5,8 @@ export type GeneSwapEvent = { from: GeneIndex; to: GeneIndex };
 
 const geneIndexes: readonly GeneIndex[] = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-const dragThreshold = 6;
+const dragThreshold = 12;
+const touchDragThreshold = 24;
 const touchTargetOffset = 32;
 
 export function useGeneGridDrag({
@@ -33,6 +34,9 @@ export function useGeneGridDrag({
   let suppressNextClickTimer: number | null = null;
 
   const currentGenes = computed(() => toValue(genes));
+  const effectiveDragOffset = computed(() =>
+    dragPointerType.value === 'touch' ? { x: 0, y: 0 } : dragOffset.value
+  );
 
   const draggedGene = computed(() => {
     if (draggedIndex.value == null) {
@@ -59,8 +63,8 @@ export function useGeneGridDrag({
   const dragAvatarStyle = computed(() => {
     const size = dragCellSize.value;
     const offsetY = dragPointerType.value === 'touch' ? touchTargetOffset : 0;
-    const x = dragPointer.value.x - dragOffset.value.x - size / 2;
-    const y = dragPointer.value.y + offsetY - dragOffset.value.y - size / 2;
+    const x = dragPointer.value.x - effectiveDragOffset.value.x - size / 2;
+    const y = dragPointer.value.y + offsetY - effectiveDragOffset.value.y - size / 2;
 
     return {
       width: `${size}px`,
@@ -104,8 +108,8 @@ export function useGeneGridDrag({
     }
 
     const offsetY = event.pointerType === 'touch' ? touchTargetOffset : 0;
-    const x = event.clientX - dragOffset.value.x;
-    const y = event.clientY + offsetY - dragOffset.value.y;
+    const x = event.clientX - effectiveDragOffset.value.x;
+    const y = event.clientY + offsetY - effectiveDragOffset.value.y;
 
     return slotCenters.value.reduce((closest, center) => {
       const closestDistance = Math.hypot(x - closest.x, y - closest.y);
@@ -140,12 +144,18 @@ export function useGeneGridDrag({
     window.addEventListener('pointermove', onPointerMove, { passive: false });
     window.addEventListener('pointerup', onPointerUp);
     window.addEventListener('pointercancel', onPointerCancel);
+    window.addEventListener('keydown', onKeyDown);
   }
 
   function removeDragListeners() {
     window.removeEventListener('pointermove', onPointerMove);
     window.removeEventListener('pointerup', onPointerUp);
     window.removeEventListener('pointercancel', onPointerCancel);
+    window.removeEventListener('keydown', onKeyDown);
+  }
+
+  function getDragThreshold(event: PointerEvent) {
+    return event.pointerType === 'touch' ? touchDragThreshold : dragThreshold;
   }
 
   function onSlotPointerDown(event: PointerEvent, index: GeneIndex) {
@@ -182,7 +192,7 @@ export function useGeneGridDrag({
         event.clientY - dragStart.value.y
       );
 
-      if (distance < dragThreshold) {
+      if (distance < getDragThreshold(event)) {
         return;
       }
 
@@ -237,6 +247,35 @@ export function useGeneGridDrag({
 
     resetDragState();
     suppressNextClick.value = false;
+  }
+
+  function clearSuppressNextClickAfterPointerEnd() {
+    function clear() {
+      window.removeEventListener('pointerup', clear);
+      window.removeEventListener('pointercancel', clear);
+      clearSuppressNextClick();
+    }
+
+    window.addEventListener('pointerup', clear);
+    window.addEventListener('pointercancel', clear);
+  }
+
+  function onKeyDown(event: KeyboardEvent) {
+    if (event.key !== 'Escape' || draggedIndex.value == null) {
+      return;
+    }
+
+    const wasDragging = isDragging.value;
+
+    event.preventDefault();
+    resetDragState();
+
+    if (wasDragging) {
+      suppressNextClick.value = true;
+      clearSuppressNextClickAfterPointerEnd();
+    } else {
+      suppressNextClick.value = false;
+    }
   }
 
   function onSlotClickCapture(event: MouseEvent) {
