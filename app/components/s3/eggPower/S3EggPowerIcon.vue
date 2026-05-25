@@ -2,7 +2,7 @@
   import type { EggPower } from '~/services/3/types';
 
   const props = defineProps<{
-    eggPower: EggPower;
+    eggPower?: EggPower;
     awakened?: boolean;
     big?: boolean;
     contrast?: boolean;
@@ -10,7 +10,7 @@
 
   const bgColor = computed(() => {
     if (props.awakened) {
-      switch (props.eggPower.rank) {
+      switch (props.eggPower?.rank) {
         case 'S':
           return 'bg-fuchsia-500/30 dark:bg-fuchsia-400/20';
 
@@ -26,7 +26,7 @@
   });
 
   const textColor = computed(() => {
-    switch (props.eggPower.rank) {
+    switch (props.eggPower?.rank) {
       case 'S':
         return props.awakened
           ? 'text-fuchsia-700 dark:text-fuchsia-100'
@@ -52,6 +52,6 @@
   <div
     class="flex items-center justify-center rounded font-semibold"
     :class="[big ? 'size-10 text-lg' : 'size-7 text-sm', textColor, bgColor]"
-    v-text="eggPower.rank"
+    v-text="eggPower?.rank ?? ''"
   />
 </template>

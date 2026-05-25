@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   import type { Source } from '~/stores/2/monstieSources';
+  import { omit } from 'es-toolkit/object';
   import S2MonstieSidebar from '~/components/s2/monstie/S2MonstieSidebar.vue';
   import { monsties } from '~/services/2/data';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
@@ -143,10 +144,9 @@
         });
       } else {
         // value is now false -> remove ?filter from URL
-        const { filter: _filter, ...query } = route.query;
         router.push({
           path: route.path,
-          query,
+          query: omit(route.query, ['filter']),
         });
       }
     },

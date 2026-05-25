@@ -1,19 +1,23 @@
 <script lang="ts" setup>
-  import { getElementIconUrl } from '~/services/assets';
+  import { getElementIconUrl, getElementIconUrl2 } from '~/services/assets';
 
   const props = withDefaults(
     defineProps<{
       element?: ElementType;
       noTooltip?: boolean;
+      icon2?: boolean;
     }>(),
     {
       element: undefined,
       noTooltip: false,
+      icon2: false,
     }
   );
 
   const caption = computed(() => formatElement(props.element));
-  const imageUrl = computed(() => getElementIconUrl(props.element));
+  const imageUrl = computed(() =>
+    props.icon2 ? getElementIconUrl2(props.element) : getElementIconUrl(props.element)
+  );
 </script>
 
 <template>

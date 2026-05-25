@@ -8,7 +8,11 @@
   --color-speed: oklch(0.5006 0.1546 256.67);
   --color-technical: oklch(0.6024 0.1505 133.1);
   --color-gold: var(--color-amber-300);
+  --color-gene-grid: oklch(0.4825 0.0312 65.14);
+  --color-gene-bingo: oklch(0.9714 0.0025 48.72);
   --default-transition-duration: 200ms;
+
+  --drop-shadow-centered: 0 0 10px var(--tw-drop-shadow-color, rgba(0, 0, 0, 0.25));
 }
 
 @theme static {
@@ -19,11 +23,16 @@
   --ui-container: var(--container-8xl);
   --ui-radius: 0.125rem;
   /* --ui-bg: var(--ui-color-neutral-100); */
+
+  --scrollbar-color: var(--ui-color-neutral-400);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 .dark {
   /* --ui-primary: var(--ui-color-primary-500); */
   /* --ui-bg: var(--ui-color-neutral-900); */
+  --scrollbar-color: var(--ui-color-neutral-600);
 }
 
 @layer utilities {

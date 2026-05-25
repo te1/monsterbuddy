@@ -2,7 +2,7 @@
   import S3HabitatSidebar from '~/components/s3/S3HabitatSidebar.vue';
   import { getAreaBySlug, monstersByName, regionsBySlug } from '~/services/3/data';
   import { getAreaSeo } from '~/services/3/seo';
-  import useHabitatDisplays from '~/stores/3/habitatStore';
+  import useHabitatDisplays from '~/stores/3/habitatDisplay';
 
   definePageMeta({
     sidebarComponent: S3HabitatSidebar,

@@ -73,6 +73,11 @@
     },
 
     {
+      type: 'Lock-On',
+      description: 'Attacks are guaranteed to hit.',
+    },
+
+    {
       type: 'Critical Up',
       details: [
         { size: 'S', type: 'critRate', value: 5 },

@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 
   ui: {
     theme: {
-      colors: ['primary', 'neutral'],
+      colors: ['primary', 'neutral', 'success', 'error'],
     },
     experimental: {
       componentDetection: true,
@@ -31,10 +31,16 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   routeRules: {
-    '1/**': { appLayout: 'sidebar1' },
-    '2/**': { appLayout: 'sidebar2' },
-    '3/**': { appLayout: 'sidebar3' },
-    '3/genes/**': { appLayout: 'sidebar3genes' },
+    '/1/**': { appLayout: 'sidebar1' },
+    '/2/**': { appLayout: 'sidebar2' },
+    '/3/**': { appLayout: 'sidebar3' },
+    '/3/genes/**': { appLayout: 'sidebar3genes' },
+    '/3/builds/monstie': { appLayout: 'sidebar3monstiebuilds' },
+    '/3/builds/monstie/*': {
+      appLayout: 'sidebar3monstiebuilds',
+      ssr: false,
+      robots: { noindex: true, follow: true },
+    },
   },
 
   experimental: {
@@ -101,7 +107,15 @@ export default defineNuxtConfig({
     },
 
     optimizeDeps: {
-      include: ['@vueuse/core', 'es-toolkit/array', 'es-toolkit/string'],
+      include: [
+        '@vueuse/core',
+        'es-toolkit/array',
+        'es-toolkit/predicate',
+        'es-toolkit/string',
+        'dexie',
+        'nanoid',
+        '@plausible-analytics/tracker',
+      ],
     },
   },
 
@@ -155,7 +169,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    exclude: ['/404', '/1/**'], // TODO MHST1
+    exclude: ['/404', '/1/**', '/3/builds/monstie/*'], // TODO MHST1
     zeroRuntime: process.env.NODE_ENV !== 'development',
     discoverImages: false,
     discoverVideos: false,
@@ -202,6 +216,8 @@ export default defineNuxtConfig({
           { title: 'Monsters with attack patterns and weaknesses', href: '/3/monsters' },
           { title: 'Monsties with stats', href: '/3/monsties' },
           { title: 'Visual egg guide', href: '/3/eggs' },
+          { title: 'Full list of genes with effects and monstie sources', href: '/3/genes' },
+          { title: 'Monstie build planner with bingo bonuses', href: '/3/builds/monstie' },
         ],
       },
     ],

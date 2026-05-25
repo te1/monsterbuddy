@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import useHabitatDisplays from '~/stores/3/habitatStore';
+  import useHabitatDisplays from '~/stores/3/habitatDisplay';
 
   const displays = useHabitatDisplays();
 

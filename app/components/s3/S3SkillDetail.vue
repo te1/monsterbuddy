@@ -1,7 +1,16 @@
 <script lang="ts" setup>
+  import { formatGeneElement } from '~/services/3/presentation';
   import type { SkillDetail } from '~/services/3/types';
 
-  const props = defineProps<{ detail: SkillDetail }>();
+  const props = withDefaults(
+    defineProps<{
+      detail: SkillDetail;
+      verbose?: boolean;
+    }>(),
+    {
+      verbose: false,
+    }
+  );
 
   const label = computed(() => {
     switch (props.detail.type) {
@@ -58,11 +67,29 @@
         return 'Effect Chance';
 
       // -- SkillDetailFactor
-      case 'damageDone':
-        return 'Damage Done';
+      case 'damageDone': {
+        let prefix = '';
 
-      case 'damageTaken':
-        return 'Damage Taken';
+        if (props.verbose) {
+          if (props.detail.element != null && props.detail.element !== 'all') {
+            prefix = `${formatGeneElement(props.detail.element)} `;
+          } else if (props.detail.label) {
+            prefix = `${props.detail.label} `;
+          }
+        }
+        return `${prefix}Damage Done`;
+      }
+
+      case 'damageTaken': {
+        let prefix = '';
+
+        if (props.verbose) {
+          if (props.detail.element != null && props.detail.element !== 'all') {
+            prefix = `${formatGeneElement(props.detail.element)} `;
+          }
+        }
+        return `${prefix}Damage Taken`;
+      }
 
       case 'staminaCost':
         return 'Stamina Cost';

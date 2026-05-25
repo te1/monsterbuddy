@@ -62,24 +62,27 @@
     </div>
 
     <template #body>
-      <div class="h-[85dvh] lg:h-120">
+      <div class="h-[calc(80dvh-41px)] max-h-[600px]">
         <LazyAppSearchCommandPalette v-model="open" />
       </div>
     </template>
 
     <template #footer>
       <div class="hidden gap-4 p-2 text-toned sm:flex dark:text-dimmed">
-        <span class="flex items-center gap-1">
-          <UKbd value="up" variant="subtle" size="lg" class="px-1.5 text-toned" />
-          <UKbd value="down" variant="subtle" size="lg" class="px-1.5 text-toned" /> to navigate
+        <span class="flex items-center gap-1.5">
+          <div class="flex items-center gap-1">
+            <UKbd value="up" variant="subtle" size="lg" class="px-1.5 text-toned" />
+            <UKbd value="down" variant="subtle" size="lg" class="px-1.5 text-toned" />
+          </div>
+          <div>to navigate</div>
         </span>
-        <span class="flex items-center gap-1">
+        <span class="flex items-center gap-1.5">
           <UKbd value="enter " variant="subtle" size="lg" class="px-1.5 text-toned" />
-          to select
+          <div>to select</div>
         </span>
-        <span class="flex items-center gap-1">
+        <span class="flex items-center gap-1.5">
           <UKbd value="esc" variant="subtle" size="lg" class="px-1.5 text-toned" />
-          to close
+          <div>to close</div>
         </span>
       </div>
     </template>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { omit } from 'es-toolkit/object';
   import useMonstieFilter, { modes } from '~/stores/2/monstieFilter';
   import useMonstieSources from '~/stores/2/monstieSources';
 
@@ -26,10 +27,9 @@
 
       tab.value = 'filter';
 
-      const { filter: _filter, ...query } = route.query;
       router.replace({
         path: route.path,
-        query,
+        query: omit(route.query, ['filter']),
       });
     },
     { immediate: true }

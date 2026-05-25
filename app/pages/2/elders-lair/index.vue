@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { omit } from 'es-toolkit/object';
   import S2EldersLairSidebar from '~/components/s2/S2EldersLairSidebar.vue';
   import { filterStoreKey } from '~/stores/2/baseMonsterFilter';
   import useEldersLairFilter, { modes } from '~/stores/2/eldersLairFilter';
@@ -55,10 +56,9 @@
           query: { ...route.query, filter: null },
         });
       } else {
-        const { filter: _filter, ...query } = route.query;
         router.push({
           path: route.path,
-          query,
+          query: omit(route.query, ['filter']),
         });
       }
     },

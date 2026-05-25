@@ -47,6 +47,12 @@ export function getAttackTypeIconUrl(attackType?: AttackType) {
     attackTypeIcons['/assets/icon/type-unknown.svg']
   );
 }
+export function getAttackTypeIconUrl2(attackType?: AttackType) {
+  return (
+    attackTypeIcons[`/assets/icon/type-${attackType}2.svg`] ??
+    attackTypeIcons['/assets/icon/type-unknown.svg']
+  );
+}
 
 const elementIcons = import.meta.glob<string>('~/assets/icon/element-*.svg', {
   eager: true,
@@ -56,6 +62,13 @@ const elementIcons = import.meta.glob<string>('~/assets/icon/element-*.svg', {
 export function getElementIconUrl(element?: ElementType) {
   return (
     elementIcons[`/assets/icon/element-${element}.svg`] ??
+    elementIcons['/assets/icon/element-unknown.svg']
+  );
+}
+
+export function getElementIconUrl2(element?: ElementType) {
+  return (
+    elementIcons[`/assets/icon/element-${element}2.svg`] ??
     elementIcons['/assets/icon/element-unknown.svg']
   );
 }

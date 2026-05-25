@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { omit } from 'es-toolkit/object';
   import useEldersLairFilter, { modes } from '~/stores/2/eldersLairFilter';
 
   const router = useRouter();
@@ -24,10 +25,9 @@
 
       tab.value = 'filter';
 
-      const { filter: _filter, ...query } = route.query;
       router.replace({
         path: route.path,
-        query,
+        query: omit(route.query, ['filter']),
       });
     },
     { immediate: true }

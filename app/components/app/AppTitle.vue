@@ -3,7 +3,7 @@
   const route = useRoute();
   const { value: mobileHeader } = useMobileHeaderOverride();
 
-  const resolvedMobileHeader = computed(() => route.meta.mobileHeaderTitle ?? mobileHeader.value);
+  const resolvedMobileHeader = computed(() => mobileHeader.value ?? route.meta.mobileHeaderTitle);
 
   const hasBack = computed(() => route.meta.back?.show ?? false);
   const backFallback = computed(() => route.meta.back?.fallback ?? '/');

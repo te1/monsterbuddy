@@ -1,6 +1,8 @@
 import type { MonsterLocationType } from './data';
 import type {
   AilmentType,
+  BingoBonus,
+  BingoBonusType,
   BuffDetailType,
   Gene,
   GeneElement,
@@ -115,7 +117,7 @@ export function intensityToIcon(intensity: number | null) {
       return 'ph:caret-up-bold';
 
     case 0:
-      return 'ph:number-zero-bold';
+      return 'ph:minus-bold';
 
     case -1:
       return 'ph:caret-down-bold';
@@ -139,7 +141,7 @@ export function intensityToTextColor(intensity: number | null) {
       return 'text-blue-500';
 
     default:
-      return 'text-default';
+      return 'text-muted';
   }
 }
 
@@ -245,7 +247,7 @@ export function statsTypeToText(type: RegionStatsType) {
       return 'Defense';
 
     case 'recovery':
-      return 'Recovery';
+      return 'Stamina Recovery';
 
     default:
       return '?';
@@ -510,5 +512,34 @@ export function formatBuffDetailType(type: BuffDetailType): string {
 
     default:
       return '';
+  }
+}
+
+export function formatBingoBonusType(type: BingoBonusType): string {
+  switch (type) {
+    case 'crit':
+      return 'Crit Rate';
+
+    case 'speed':
+      return 'Speed';
+
+    case 'staminaRecovery':
+      return 'Stamina Recovery';
+
+    case 'startingStamina':
+      return 'Starting Stamina';
+
+    case 'wyvernfell':
+      return 'Wyvernfell';
+  }
+}
+
+export function formatBingoBonusValue(bonus: BingoBonus): string {
+  switch (bonus.type) {
+    case 'crit':
+      return `+${bonus.value}%`;
+
+    default:
+      return `+${bonus.value}`;
   }
 }

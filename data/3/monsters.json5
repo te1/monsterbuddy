@@ -111,6 +111,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -221,6 +226,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg011',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -333,6 +343,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg022',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -416,6 +431,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg001',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -490,6 +510,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg003',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -610,6 +635,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg086',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -680,6 +710,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -799,6 +834,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg003',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -859,6 +899,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg003',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -933,6 +978,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg034',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -1005,6 +1055,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg030',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -1157,6 +1212,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -1232,6 +1292,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg034',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -1363,6 +1428,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -1437,6 +1507,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -1590,6 +1665,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg034',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -1748,6 +1828,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg030',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -1864,6 +1949,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -1986,6 +2076,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg000',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -2122,6 +2217,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg035',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -2239,6 +2339,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -2317,6 +2422,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -2381,6 +2491,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -2504,6 +2619,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -2613,6 +2733,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -2730,6 +2855,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -2794,6 +2924,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -2982,6 +3117,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg034',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -3055,6 +3195,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -3129,6 +3274,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -3363,6 +3513,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -3482,6 +3637,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg000',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -3562,6 +3722,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg000',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -3718,6 +3883,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg013',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -3792,6 +3962,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg013',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -3907,6 +4082,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -3984,6 +4164,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg003',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -4059,6 +4244,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg003',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'staminaRecovery', value: 2 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -4132,6 +4322,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg034',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -4283,6 +4478,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg034',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -4392,6 +4592,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg030',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -4505,6 +4710,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg076',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'wyvernfell', value: 15 },
+      ],
     },
   },
 
@@ -4582,6 +4792,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg012',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -4642,6 +4857,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg012',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -4738,6 +4958,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg056',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -4813,6 +5038,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -4888,6 +5118,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -4951,6 +5186,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -5031,6 +5271,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg000',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -5106,6 +5351,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -5369,6 +5619,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -5443,6 +5698,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg025',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'wyvernfell', value: 15 },
+      ],
     },
   },
 
@@ -5579,6 +5839,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg000',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -5728,6 +5993,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg002',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -5808,6 +6078,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg002',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -5926,6 +6201,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -6039,6 +6319,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg021',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -6157,6 +6442,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg031',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -6237,6 +6527,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg031',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -6344,6 +6639,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg031',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'wyvernfell', value: 15 },
+      ],
     },
   },
 
@@ -6390,6 +6690,11 @@
       attack: 'power',
       ridingActions: ['Fly', 'Jump', 'Roar', 'Melee Attack', 'Breath'],
       kinshipSkill: 'Sky-High Dive',
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -6493,6 +6798,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg001',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -6575,6 +6885,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg001',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -6639,6 +6954,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg001',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -6748,6 +7068,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg023',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -6877,6 +7202,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg002',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -6948,6 +7278,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg012',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -7018,6 +7353,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg010',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -7219,6 +7559,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg022',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -7372,6 +7717,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg012',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -7446,6 +7796,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg014',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -7559,6 +7914,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg012',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -7715,6 +8075,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -7790,6 +8155,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'speed', value: 2 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -7846,6 +8216,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg020',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -7926,6 +8301,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg003',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -8055,6 +8435,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg066',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'wyvernfell', value: 10 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -8181,6 +8566,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg000',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 
@@ -8461,6 +8851,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg011',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'wyvernfell', value: 15 },
+      ],
     },
   },
 
@@ -8517,6 +8912,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg011',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'crit', value: 7 },
+      ],
     },
   },
 
@@ -8667,6 +9067,11 @@
         eggSkillGroup: 'esg1',
         passiveGroup: 'gg001',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -8748,6 +9153,11 @@
         eggSkillGroup: 'esg2',
         passiveGroup: 'gg001',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -8886,6 +9296,11 @@
         eggSkillGroup: 'esg3',
         passiveGroup: 'gg023',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'speed', value: 1 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'staminaRecovery', value: 4 },
+      ],
     },
   },
 
@@ -8964,6 +9379,11 @@
         eggSkillGroup: 'esg4',
         passiveGroup: 'gg025',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'crit', value: 3 },
+        { bingoCount: 3, type: 'startingStamina', value: 10 },
+        { bingoCount: 5, type: 'wyvernfell', value: 15 },
+      ],
     },
   },
 
@@ -9027,6 +9447,11 @@
         eggSkillGroup: 'esg5',
         passiveGroup: 'gg023',
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'crit', value: 5 },
+        { bingoCount: 5, type: 'speed', value: 3 },
+      ],
     },
   },
 
@@ -9074,6 +9499,11 @@
       genes: {
         special: ['Best Hoof Forward'],
       },
+      bingoBonuses: [
+        { bingoCount: 2, type: 'wyvernfell', value: 5 },
+        { bingoCount: 3, type: 'staminaRecovery', value: 3 },
+        { bingoCount: 5, type: 'startingStamina', value: 15 },
+      ],
     },
   },
 ]
