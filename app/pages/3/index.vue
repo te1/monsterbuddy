@@ -23,7 +23,7 @@
 
   const versions = [
     {
-      date: '2026-05-17',
+      date: '2026-05-25',
       changes: ['Monstie build planner with genes, bingo bonuses, egg powers and more'],
     },
     {
