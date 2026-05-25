@@ -373,6 +373,7 @@
         @pointerdown="onSlotPointerDown($event, index)"
         @click.capture="onSlotClickCapture"
         @dragstart.prevent
+        @contextmenu.prevent
       >
         <S3MonstieBuildGeneGridItem
           :build="build"
