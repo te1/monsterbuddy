@@ -14,6 +14,9 @@ directory = "./.output/public"
 html_handling = "drop-trailing-slash"
 not_found_handling = "none"
 
+[limits]
+cpu_ms = 10000
+
 [observability]
 enabled = true
 head_sampling_rate = 0.001
