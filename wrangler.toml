@@ -15,7 +15,7 @@ html_handling = "drop-trailing-slash"
 not_found_handling = "none"
 
 [limits]
-cpu_ms = 10000
+cpu_ms = 1000
 
 [observability]
 enabled = true
