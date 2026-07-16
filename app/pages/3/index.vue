@@ -23,6 +23,10 @@
 
   const versions = [
     {
+      date: '2026-07-16',
+      changes: ['Update monster details with missing attack patterns', 'Add missing monsters'],
+    },
+    {
       date: '2026-05-25',
       changes: ['Monstie build planner with genes, bingo bonuses, egg powers and more'],
     },
