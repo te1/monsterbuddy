@@ -86,10 +86,6 @@ export function formatState(state: string) {
     case 'DEFAULT':
       return 'Default';
 
-    case '?':
-    case '??':
-      return 'Enraged'; // TODO this is placeholder
-
     default:
       return state;
   }
