@@ -157,6 +157,16 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Overheated: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Aknosom_(MHST3)
@@ -270,6 +280,16 @@
         rawCrit: 0,
         speed: 6,
         rawSpeed: 11,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -759,6 +779,19 @@
         rawCrit: 0,
         speed: 7,
         rawSpeed: 12,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -1342,6 +1375,16 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Mud Mantle': {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   /*
@@ -1556,6 +1599,16 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Balancing: {
+          attack: 'speed',
+        },
+        Normal: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Blango_(MHST3)
@@ -1594,6 +1647,13 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -1709,6 +1769,16 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -1891,6 +1961,9 @@
         },
         'Slime Active': {
           attack: 'speed',
+        },
+        'Slime Depleted': {
+          attack: 'power',
         },
       },
     },
@@ -2266,6 +2339,19 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Starving: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Diablos_(MHST3)
@@ -2547,6 +2633,22 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'power',
+        },
+        Burrowed: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
@@ -2608,6 +2710,9 @@
         Enraged: {
           attack: 'speed',
         },
+        Sleep: {
+          attack: 'power',
+        },
       },
     },
     hatchable: true,
@@ -2666,6 +2771,16 @@
         rawCrit: 0,
         speed: 6,
         rawSpeed: 11,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -2783,6 +2898,13 @@
         rawCrit: 0,
         speed: 7,
         rawSpeed: 12,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -2978,6 +3100,19 @@
         rawCrit: 0,
         speed: 6,
         rawSpeed: 11,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+        'Overheated (Tail)': {
+          attack: 'power',
+        },
       },
     },
   },
@@ -3329,6 +3464,16 @@
         rawSpeed: 8,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Dracophage_Bug_(MHST3)
@@ -3449,6 +3594,13 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Izuchi_(MHST3)
@@ -3563,6 +3715,16 @@
         rawCrit: 0,
         speed: 8,
         rawSpeed: 13,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -3775,6 +3937,16 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -4018,6 +4190,19 @@
         rawCrit: 0,
         speed: 4,
         rawSpeed: 9,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -4374,6 +4559,19 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Enraged (Airborne)': {
+          attack: 'power',
+        },
+        Airborne: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Legiana_(MHST3)
@@ -4642,6 +4840,19 @@
         rawCrit: 0,
         speed: 7,
         rawSpeed: 12,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Hellfireblight Mantle': {
+          attack: 'power',
+        },
+        'Hellfireblight Critical': {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -4949,6 +5160,12 @@
         },
         'Abyssal Charge': {
           attack: 'speed',
+        },
+        Exposed: {
+          attack: 'power',
+        },
+        'Water Depleted': {
+          attack: 'power',
         },
       },
     },
@@ -5471,6 +5688,19 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Nibelsnarf_(MHST3)
@@ -5509,6 +5739,19 @@
         rawCrit: 0,
         speed: 4,
         rawSpeed: 9,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Camouflaged: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -5754,6 +5997,22 @@
         rawCrit: 0,
         speed: 8,
         rawSpeed: 13,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'technical',
+        },
+        Frenzied: {
+          attack: 'power',
+        },
+        Starving: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -6136,6 +6395,19 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Pukei-Pukei_(MHST3)
@@ -6251,6 +6523,13 @@
         rawCrit: 0,
         speed: 7,
         rawSpeed: 12,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -6369,6 +6648,19 @@
         rawCrit: 0,
         speed: 6,
         rawSpeed: 11,
+      },
+    },
+    monster: {
+      states: {
+        'Web Mantle (Legs)': {
+          attack: 'technical',
+        },
+        'No Web': {
+          attack: 'technical',
+        },
+        'Web Mantle (Cocoon)': {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -7006,6 +7298,13 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rey_Dau_(MHST3)
@@ -7410,6 +7709,19 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Seregios_(MHST3)
@@ -7491,6 +7803,13 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -7616,6 +7935,19 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        'Shell (Skull)': {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'speed',
+        },
+        'No Shell': {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Slagtoth_(MHST3)
@@ -7646,6 +7978,13 @@
         blastblight: +1,
         bleeding: -1,
         darkness: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -7851,6 +8190,19 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Balancing: {
+          attack: 'speed',
+        },
+        'Balancing (Storing Powder)': {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Tetranadon_(MHST3)
@@ -7966,6 +8318,16 @@
         rawSpeed: 8,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Stuffed: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Thunder_Serpent_Narwa_(MHST3)
@@ -8005,6 +8367,19 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        'Thunder Mantle': {
+          attack: 'technical',
+        },
+        'Mind Connection': {
+          attack: 'speed',
+        },
+        Exposed: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -8356,6 +8731,16 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Electric Charge': {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   /*
@@ -8622,6 +9007,16 @@
         rawSpeed: 13,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Velocidrome_(MHST3)
@@ -8706,6 +9101,19 @@
         rawSpeed: 14,
       },
     },
+    monster: {
+      states: {
+        'Wind Mantle': {
+          attack: 'power',
+        },
+        'Mind Connection': {
+          attack: 'speed',
+        },
+        Exposed: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Yama_Tsukami_(MHST3)
@@ -8748,6 +9156,19 @@
         rawSpeed: 6,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        'Open Mouth': {
+          attack: 'speed',
+        },
+        Exposed: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
@@ -8786,6 +9207,16 @@
         rawCrit: 0,
         speed: 1,
         rawSpeed: 6,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        'Open Mouth': {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -8841,7 +9272,7 @@
     monster: {
       states: {
         Normal: {
-          attack: 'speed',
+          attack: 'technical',
         },
         Enraged: {
           attack: 'power',
@@ -8985,8 +9416,9 @@
             Tail: ['pierce'],
           },
         },
+        // TODO is there Enraged power?
         Invading: {
-          attack: 'technical',
+          attack: 'speed',
           parts: {
             'Main Body': ['slash', 'pierce', 'blunt'],
             Head: ['blunt'],
