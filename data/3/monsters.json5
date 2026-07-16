@@ -6,9 +6,9 @@
 [
   // https://monsterhunterwiki.org/wiki/Aenshin_(MHST3)
   {
-    hidden: true,
     name: 'Aenshin',
     genus: 'Elder Dragon',
+    rank: 7,
     flavor: {
       DEFAULT: 'This enormous Elder Dragon preserved the Sacrosanctum\'s ecosystem 200 years ago, earning it the title of "Sentinel," but it vanished after the Sacrosanctum was destroyed during the Rift War.',
       'Crystallizing Capacity': 'After devouring battle-bound monsters during the war 200 years ago, this monster gave rise to the Crystal Encroachment. Traces of its existence have begun reappearing over the last decade.',
@@ -40,6 +40,19 @@
         rawCrit: 0,
         speed: 1,
         rawSpeed: 6,
+      },
+    },
+    monster: {
+      states: {
+        'Blighstone Protection': {
+          attack: 'technical',
+        },
+        'Blighstone Unleashed': {
+          attack: 'power',
+        },
+        Exposed: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -94,7 +107,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Overheated: {
           attack: 'power',
         },
       },
@@ -157,6 +170,16 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Overheated: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Aknosom_(MHST3)
@@ -209,7 +232,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -272,6 +295,16 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Almudron_(MHST3)
@@ -323,10 +356,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Exposed: {
           attack: 'technical',
         },
-        '??': {
+        'Large Mudbulb': {
           attack: 'speed',
         },
       },
@@ -490,10 +523,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Electric Charge': {
           attack: 'speed',
         },
-        '??': {
+        'High-Voltage Charge': {
           attack: 'speed',
         },
       },
@@ -618,7 +651,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Dragon Mantle': {
           attack: 'power',
         },
       },
@@ -693,7 +726,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -761,6 +794,19 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Astalos_(MHST3)
@@ -817,7 +863,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Bolt: {
           attack: 'power',
         },
       },
@@ -961,7 +1007,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -1038,7 +1084,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -1065,9 +1111,9 @@
 
   // https://monsterhunterwiki.org/wiki/Barrel_Felyne_(MHST3)
   {
-    hidden: true,
     name: 'Barrel Felyne',
     genus: 'Lynian',
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: "In this case, curiosity got the Felyne's head stuck in a barrel. Fearing the approach of monsters, it will run at the slightest noise, so helping out this timid creature may be rather difficult.",
       "The Barrel's Abyss": 'Perhaps it is simply in their nature, but many a Felyne has become obsessed with barrels. Felynes drawn to barrels should heed these words: "When you gaze into the barrel, the barrel gazes back."',
@@ -1104,9 +1150,9 @@
 
   // https://monsterhunterwiki.org/wiki/Great_Barrel_Felyne_(MHST3)
   {
-    hidden: true,
     name: 'Great Barrel Felyne',
     genus: 'Lynian',
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: "A Felyne that, due to its unusually large girth, tragically got stuck in a large barrel. While this would be impossible for Felynes of a more modest size, there's no reason to shame the poor thing.",
       'Valuable Experience': 'Some say those who help a Great Barrel Felyne will attain profound growth. Only those who manage to destroy the sturdy barrel before the Felyne flees know the truth of such claims.',
@@ -1195,7 +1241,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Mud Mantle': {
           attack: 'technical',
         },
       },
@@ -1275,7 +1321,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Snow Mantle': {
           attack: 'technical',
         },
       },
@@ -1340,6 +1386,16 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Mud Mantle': {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -1411,7 +1467,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Balancing: {
           attack: 'speed',
         },
       },
@@ -1490,7 +1546,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -1556,6 +1612,16 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Balancing: {
+          attack: 'speed',
+        },
+        Normal: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Blango_(MHST3)
@@ -1594,6 +1660,13 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -1648,7 +1721,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -1709,6 +1782,16 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -1811,8 +1894,11 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Slime Active': {
           attack: 'speed',
+        },
+        'Slime Depleted': {
+          attack: 'power',
         },
       },
     },
@@ -1889,6 +1975,9 @@
         'Slime Active': {
           attack: 'speed',
         },
+        'Slime Depleted': {
+          attack: 'power',
+        },
       },
     },
   },
@@ -1959,9 +2048,9 @@
 
   // https://monsterhunterwiki.org/wiki/Cephalos_(MHST3)
   {
-    hidden: true,
     name: 'Cephalos',
     genus: 'Piscine Wyvern',
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'A species of Piscine Wyvern that swims through desert sand like a fish through water. Unlike most Piscine Wyverns, it often lives in groups that can be led by a larger monster called a Cephadrome.',
       'Sand-Colored Skin': 'While this creature may appear to be the color of desert sand, its scales are actually blue. The beige color is caused by the accumulation of sand on its body as it swims through its habitat.',
@@ -1993,6 +2082,13 @@
         rawCrit: 0,
         speed: 4,
         rawSpeed: 9,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -2197,10 +2293,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Starving: {
           attack: 'power',
         },
       },
@@ -2263,6 +2359,19 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Starving: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Diablos_(MHST3)
@@ -2319,10 +2428,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Burrowed: {
           attack: 'speed',
         },
       },
@@ -2402,10 +2511,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Burrowed: {
           attack: 'speed',
         },
       },
@@ -2544,6 +2653,22 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'power',
+        },
+        Burrowed: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Espinas_(MHST3)
@@ -2605,6 +2730,9 @@
         Enraged: {
           attack: 'speed',
         },
+        Sleep: {
+          attack: 'power',
+        },
       },
     },
     hatchable: true,
@@ -2665,6 +2793,16 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Garangolm_(MHST3)
@@ -2716,8 +2854,11 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Lava Mantle': {
           attack: 'speed',
+        },
+        'Moss Mantle': {
+          attack: 'technical',
         },
       },
     },
@@ -2779,6 +2920,13 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Glavenus_(MHST3)
@@ -2835,10 +2983,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Overheated (Throat)': {
           attack: 'technical',
         },
-        '??': {
+        'Overheated (Tail)': {
           attack: 'power',
         },
       },
@@ -2974,6 +3122,19 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+        'Overheated (Tail)': {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Honed_Glavenus_(MHST3)
@@ -3097,10 +3258,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Enraged (Frost Knuckles)': {
           attack: 'technical',
         },
-        '??': {
+        'Enraged (Frost Blade)': {
           attack: 'speed',
         },
       },
@@ -3178,7 +3339,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -3257,7 +3418,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -3323,13 +3484,23 @@
         rawSpeed: 8,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Dracophage_Bug_(MHST3)
   {
-    hidden: true,
     name: 'Great Dracophage Bug',
     genus: 'Neopteron',
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'Large Dracophage Bugs. Dragon energy is said to lie dormant within their bodies. These glimmering creatures still hold many secrets yet to be discovered.',
       'Alongside Elder Dragons': 'A Dracophage Bug that grew exponentially larger after absorbing the immense energy of an Elder Dragon. Some see this as evidence that Elder Dragons lurk where Great Dracophage Bugs are found.',
@@ -3363,13 +3534,20 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Great_Thunderbug_(MHST3)
   {
-    hidden: true,
     name: 'Great Thunderbug',
     genus: 'Neopteron',
+    rank: 1, // for sorting
     flavor: {
       DEFAULT: 'Some think this type of Thunderbug mutated inside an Elder Dragon. While they can be seen where Elder Dragons reside, sightings have also been reported in caves and near water sources at night.',
       'Many as One': 'What may look like a single ball of light from a distance could actually be a group comprised of dozens of Great Thunderbugs. Much about their ecology is a mystery, including why they form groups.',
@@ -3401,6 +3579,13 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -3441,6 +3626,13 @@
         rawCrit: 0,
         speed: 6,
         rawSpeed: 11,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -3495,7 +3687,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -3557,6 +3749,16 @@
         rawCrit: 0,
         speed: 8,
         rawSpeed: 13,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -3771,6 +3973,16 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Kelbi_(MHST3)
@@ -3866,7 +4078,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -3945,7 +4157,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Electric Charge': {
           attack: 'power',
         },
       },
@@ -4014,6 +4226,19 @@
         rawSpeed: 9,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Kulu-Ya-Ku_(MHST3)
@@ -4065,7 +4290,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Rock Prep': {
           attack: 'power',
         },
       },
@@ -4144,10 +4369,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Electrify: {
           attack: 'technical',
         },
       },
@@ -4224,10 +4449,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
-        '??': {
+        Electrify: {
           attack: 'technical',
         },
       },
@@ -4256,7 +4481,10 @@
   {
     name: 'Legiana',
     genus: 'Flying Wyvern',
-    related: [{ type: 'feral', monster: 'Feral Legiana' }],
+    related: [
+      { type: 'feral', monster: 'Feral Legiana' },
+      { type: 'exotic', monster: 'Exotic Legiana' },
+    ],
     rank: 4,
     flavor: {
       DEFAULT: 'A Flying Wyvern renowned for its grace when traversing the skies. It flies smoothly even in heavy turbulence by expertly adjusting the specialized membranes on its wings and tail.',
@@ -4302,10 +4530,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Enraged (Airborne)': {
           attack: 'power',
         },
-        '??': {
+        Airborne: {
           attack: 'technical',
         },
       },
@@ -4335,7 +4563,10 @@
     name: 'Feral Legiana',
     genus: 'Flying Wyvern',
     tags: ['feral'],
-    related: [{ type: 'feralOf', monster: 'Legiana' }],
+    related: [
+      { type: 'feralOf', monster: 'Legiana' },
+      { type: 'exotic', monster: 'Exotic Legiana' },
+    ],
     rank: 4, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
@@ -4368,15 +4599,31 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Enraged (Airborne)': {
+          attack: 'power',
+        },
+        Airborne: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Legiana_(MHST3)
   {
-    hidden: true,
     name: 'Exotic Legiana',
     genus: 'Flying Wyvern',
     tags: ['exotic'],
-    related: [{ type: 'exoticOf', monster: 'Legiana' }],
+    related: [
+      { type: 'exoticOf', monster: 'Legiana' },
+      { type: 'feral', monster: 'Feral Legiana' },
+    ],
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: "In the desert, I happened across a Flying Wyvern normally found in colder regions. From its behavior, I surmised that it didn't get here by chance, but rather had been living here for a while.",
       'Peculiar Flight': 'A species of Flying Wyvern spotted flying along known aerial routes near Rococo Rocks. It makes its home within the rock formations, navigating even the trickiest of crags with ease.',
@@ -4408,6 +4655,16 @@
         rawCrit: 0,
         speed: 7,
         rawSpeed: 12,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Airborne: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -4461,7 +4718,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -4572,10 +4829,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Hellfireblight Mantle': {
           attack: 'power',
         },
-        '??': {
+        'Hellfireblight Critical': {
           attack: 'technical',
         },
       },
@@ -4638,6 +4895,19 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Hellfireblight Mantle': {
+          attack: 'power',
+        },
+        'Hellfireblight Critical': {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Malzeno_(MHST3)
@@ -4690,10 +4960,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Blood Rite Active': {
           attack: 'technical',
         },
-        '??': {
+        Exposed: {
           attack: 'speed',
         },
       },
@@ -4772,10 +5042,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Bubble Mantle': {
           attack: 'speed',
         },
-        '??': {
+        'Bubble Mantle (Slippery)': {
           attack: 'speed',
         },
       },
@@ -4944,6 +5214,12 @@
         'Abyssal Charge': {
           attack: 'speed',
         },
+        Exposed: {
+          attack: 'power',
+        },
+        'Water Depleted': {
+          attack: 'power',
+        },
       },
     },
     hatchable: true,
@@ -5021,7 +5297,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -5101,7 +5377,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -5334,7 +5610,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -5465,12 +5741,26 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Nibelsnarf_(MHST3)
   {
     name: 'Nibelsnarf',
     genus: 'Leviathan',
+    related: [{ type: 'exotic', monster: 'Exotic Nibelsnarf' }],
     rank: 4, // for sorting
     flavor: {
       DEFAULT: 'A Leviathan that has adapted to sandy environments. It blends in with sand dunes and locates prey aurally to then suck both the target and the surrounding sand into its maw.',
@@ -5505,15 +5795,28 @@
         rawSpeed: 9,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Camouflaged: {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Nibelsnarf_(MHST3)
   {
-    hidden: true,
     name: 'Exotic Nibelsnarf',
     genus: 'Leviathan',
     tags: ['exotic'],
     related: [{ type: 'exoticOf', monster: 'Nibelsnarf' }],
+    rank: 4, // for sorting
     flavor: {
       DEFAULT: 'Upon noticing a curious spattering of round patches throughout a particular area of the Glacial Caps, I decided to investigate. As expected, a monster was lurking nearby.',
       'Subterranean Stalker': 'This monster lurks underground until the very moment it attacks its prey. I foolishly attempted to frighten it, but it whipped up a cloud of dust and snapped at me.',
@@ -5545,6 +5848,16 @@
         rawCrit: 0,
         speed: 6,
         rawSpeed: 11,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Camouflaged: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -5599,10 +5912,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Starving: {
           attack: 'speed',
         },
-        '??': {
+        Frenzied: {
           attack: 'power',
         },
       },
@@ -5678,10 +5991,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Starving: {
           attack: 'speed',
         },
-        '??': {
+        Frenzied: {
           attack: 'power',
         },
       },
@@ -5748,6 +6061,22 @@
         rawCrit: 0,
         speed: 8,
         rawSpeed: 13,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'technical',
+        },
+        Frenzied: {
+          attack: 'power',
+        },
+        Starving: {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -6130,6 +6459,19 @@
         rawSpeed: 10,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Pukei-Pukei_(MHST3)
@@ -6181,10 +6523,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Poison Active (Munch)': {
           attack: 'power',
         },
-        '??': {
+        'Poison Active (Crunch)': {
           attack: 'speed',
         },
       },
@@ -6247,6 +6589,13 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rakna-Kadaki_(MHST3)
@@ -6296,13 +6645,13 @@
     },
     monster: {
       states: {
-        Normal: {
+        'Web Mantle (Legs)': {
           attack: 'technical',
         },
-        '?': {
+        'No Web': {
           attack: 'technical',
         },
-        '??': {
+        'Web Mantle (Cocoon)': {
           attack: 'speed',
         },
       },
@@ -6365,6 +6714,19 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        'Web Mantle (Legs)': {
+          attack: 'technical',
+        },
+        'No Web': {
+          attack: 'technical',
+        },
+        'Web Mantle (Cocoon)': {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rathalos_(MHST3)
@@ -6422,10 +6784,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
-        '??': {
+        'Enraged (Airborne)': {
           attack: 'speed',
         },
       },
@@ -6507,10 +6869,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
-        '??': {
+        'Enraged (Airborne)': {
           attack: 'speed',
         },
       },
@@ -7000,6 +7362,13 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Rey_Dau_(MHST3)
@@ -7051,7 +7420,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Fulgurite Mantle': {
           attack: 'power',
         },
       },
@@ -7261,7 +7630,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -7290,7 +7659,10 @@
   {
     name: 'Seregios',
     genus: 'Flying Wyvern',
-    related: [{ type: 'invasive', monster: 'Invasive Seregios' }],
+    related: [
+      { type: 'invasive', monster: 'Invasive Seregios' },
+      { type: 'exotic', monster: 'Exotic Seregios' },
+    ],
     rank: 6,
     flavor: {
       DEFAULT: 'A Flying Wyvern covered in a pinecone lattice of razor-sharp scales. It can launch a barrage of these deadly scales at prey, inflicting countless lacerations.',
@@ -7336,7 +7708,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -7368,6 +7740,7 @@
     tags: ['invasive'],
     related: [
       { type: 'invasiveOf', monster: 'Seregios' },
+      { type: 'exotic', monster: 'Exotic Seregios' },
       { type: 'unlocks', monster: 'Astalos' },
     ],
     rank: 6, // for sorting
@@ -7404,15 +7777,30 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Enraged: {
+          attack: 'speed',
+        },
+        Invading: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Seregios_(MHST3)
   {
-    hidden: true,
     name: 'Exotic Seregios',
     genus: 'Flying Wyvern',
     tags: ['exotic'],
-    related: [{ type: 'exoticOf', monster: 'Seregios' }],
+    related: [
+      { type: 'exoticOf', monster: 'Seregios' },
+      { type: 'invasive', monster: 'Invasive Seregios' },
+    ],
     rank: 6, // for sorting
     flavor: {
       DEFAULT: 'Surrounded by sheer rocks, the only path forward led to a giant tree. What awaited me there was a cunning and deadly monster that knew how to trap its prey.',
@@ -7445,6 +7833,16 @@
         rawCrit: 0,
         speed: 7,
         rawSpeed: 12,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -7485,6 +7883,13 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -7536,13 +7941,13 @@
     },
     monster: {
       states: {
-        Normal: {
+        'Shell (Skull)': {
           attack: 'speed',
         },
-        '?': {
+        'No Shell': {
           attack: 'technical',
         },
-        '??': {
+        'Shell (Seashell)': {
           attack: 'power',
         },
       },
@@ -7610,6 +8015,19 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        'Shell (Skull)': {
+          attack: 'power',
+        },
+        Invading: {
+          attack: 'speed',
+        },
+        'No Shell': {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Slagtoth_(MHST3)
@@ -7640,6 +8058,13 @@
         blastblight: +1,
         bleeding: -1,
         darkness: -2,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -7697,10 +8122,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Balancing: {
           attack: 'speed',
         },
-        '??': {
+        'Balancing (Storing Powder)': {
           attack: 'speed',
         },
       },
@@ -7779,7 +8204,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -7845,6 +8270,19 @@
         rawSpeed: 11,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'technical',
+        },
+        Balancing: {
+          attack: 'speed',
+        },
+        'Balancing (Storing Powder)': {
+          attack: 'speed',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Tetranadon_(MHST3)
@@ -7897,7 +8335,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Stuffed: {
           attack: 'technical',
         },
       },
@@ -7960,6 +8398,16 @@
         rawSpeed: 8,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        Stuffed: {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Thunder_Serpent_Narwa_(MHST3)
@@ -7999,6 +8447,19 @@
         rawCrit: 0,
         speed: 5,
         rawSpeed: 10,
+      },
+    },
+    monster: {
+      states: {
+        'Thunder Mantle': {
+          attack: 'technical',
+        },
+        'Mind Connection': {
+          attack: 'speed',
+        },
+        Exposed: {
+          attack: 'technical',
+        },
       },
     },
   },
@@ -8058,7 +8519,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -8138,7 +8599,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -8350,6 +8811,16 @@
         rawSpeed: 12,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        'Electric Charge': {
+          attack: 'technical',
+        },
+      },
+    },
   },
 
   /*
@@ -8415,10 +8886,13 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Ice Mantle': {
           attack: 'speed',
         },
-        '??': {
+        Exposed: {
+          attack: 'technical',
+        },
+        'Freezing Fog Mantle': {
           attack: 'power',
         },
       },
@@ -8498,7 +8972,10 @@
   {
     name: 'Velocidrome',
     genus: 'Bird Wyvern',
-    related: [{ type: 'feral', monster: 'Feral Velocidrome' }],
+    related: [
+      { type: 'feral', monster: 'Feral Velocidrome' },
+      { type: 'exotic', monster: 'Exotic Velocidrome' },
+    ],
     rank: 1,
     flavor: {
       DEFAULT: 'The alpha monster of a Velociprey pack, it is distinguishable by its larger size and bright orange crest. It patrols its expansive territory for prey and intruders alike.',
@@ -8580,7 +9057,10 @@
     name: 'Feral Velocidrome',
     genus: 'Bird Wyvern',
     tags: ['feral'],
-    related: [{ type: 'feralOf', monster: 'Velocidrome' }],
+    related: [
+      { type: 'feralOf', monster: 'Velocidrome' },
+      { type: 'exotic', monster: 'Exotic Velocidrome' },
+    ],
     rank: 1, // for sorting
     flavor: {
       DEFAULT: 'A feral monster that is more menacing than its regular counterpart. Its body is partially crystallized.',
@@ -8613,15 +9093,27 @@
         rawSpeed: 13,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Exotic_Velocidrome_(MHST3)
   {
-    hidden: true,
     name: 'Exotic Velocidrome',
     genus: 'Bird Wyvern',
     tags: ['exotic'],
-    related: [{ type: 'exoticOf', monster: 'Velocidrome' }],
+    related: [
+      { type: 'exoticOf', monster: 'Velocidrome' },
+      { type: 'feral', monster: 'Feral Velocidrome' },
+    ],
     rank: 1, // for sorting
     flavor: {
       DEFAULT: 'This agile and elusive monster combs through areas for bugs and small prey. It may have developed this inefficient feeding behavior as a means to avoid competition with others of its species.',
@@ -8654,6 +9146,16 @@
         rawCrit: 0,
         speed: 10,
         rawSpeed: 15,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'speed',
+        },
+        Enraged: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -8695,6 +9197,19 @@
         rawCrit: 0,
         speed: 9,
         rawSpeed: 14,
+      },
+    },
+    monster: {
+      states: {
+        'Wind Mantle': {
+          attack: 'power',
+        },
+        'Mind Connection': {
+          attack: 'speed',
+        },
+        Exposed: {
+          attack: 'power',
+        },
       },
     },
   },
@@ -8739,6 +9254,19 @@
         rawSpeed: 6,
       },
     },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        'Open Mouth': {
+          attack: 'speed',
+        },
+        Exposed: {
+          attack: 'power',
+        },
+      },
+    },
   },
 
   // https://monsterhunterwiki.org/wiki/Feral_Yama_Tsukami_(MHST3)
@@ -8777,6 +9305,16 @@
         rawCrit: 0,
         speed: 1,
         rawSpeed: 6,
+      },
+    },
+    monster: {
+      states: {
+        Normal: {
+          attack: 'power',
+        },
+        'Open Mouth': {
+          attack: 'speed',
+        },
       },
     },
   },
@@ -8832,9 +9370,9 @@
     monster: {
       states: {
         Normal: {
-          attack: 'speed',
+          attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -8976,8 +9514,9 @@
             Tail: ['pierce'],
           },
         },
+        // TODO is there Enraged power?
         Invading: {
-          attack: 'technical',
+          attack: 'speed',
           parts: {
             'Main Body': ['slash', 'pierce', 'blunt'],
             Head: ['blunt'],
@@ -9276,10 +9815,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Electric Charge': {
           attack: 'technical',
         },
-        '??': {
+        'Thunder Supercharge': {
           attack: 'power',
         },
       },
@@ -9359,10 +9898,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Dragon Shroud': {
           attack: 'speed',
         },
-        '??': {
+        'Battle Shroud': {
           attack: 'power',
         },
       },
