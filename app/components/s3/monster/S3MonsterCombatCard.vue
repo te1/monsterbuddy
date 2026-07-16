@@ -70,7 +70,7 @@
           :key="state"
           class="flex items-center"
         >
-          <span class="w-36" v-text="formatState(state)" />
+          <span class="w-36 pr-1.5" v-text="formatState(state)" />
 
           <AttackTypeIcon class="mr-1.5 size-8" :type="data.attack" />
           <AttackTypeLabel class="font-medium" :type="data.attack" />
