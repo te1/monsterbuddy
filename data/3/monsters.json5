@@ -94,7 +94,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Overheated: {
           attack: 'power',
         },
       },
@@ -209,7 +209,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -323,10 +323,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Exposed: {
           attack: 'technical',
         },
-        '??': {
+        'Large Mudbulb': {
           attack: 'speed',
         },
       },
@@ -490,10 +490,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Electric Charge': {
           attack: 'speed',
         },
-        '??': {
+        'High-Voltage Charge': {
           attack: 'speed',
         },
       },
@@ -618,7 +618,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Dragon Mantle': {
           attack: 'power',
         },
       },
@@ -693,7 +693,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -817,7 +817,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Bolt: {
           attack: 'power',
         },
       },
@@ -961,7 +961,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -1038,7 +1038,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -1195,7 +1195,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Mud Mantle': {
           attack: 'technical',
         },
       },
@@ -1275,7 +1275,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Snow Mantle': {
           attack: 'technical',
         },
       },
@@ -1411,7 +1411,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Balancing: {
           attack: 'speed',
         },
       },
@@ -1490,7 +1490,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -1648,7 +1648,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -1811,8 +1811,11 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Slime Active': {
           attack: 'speed',
+        },
+        'Slime Depleted': {
+          attack: 'power',
         },
       },
     },
@@ -2197,10 +2200,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Starving: {
           attack: 'power',
         },
       },
@@ -2319,10 +2322,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Burrowed: {
           attack: 'speed',
         },
       },
@@ -2402,10 +2405,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Burrowed: {
           attack: 'speed',
         },
       },
@@ -2716,8 +2719,11 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Lava Mantle': {
           attack: 'speed',
+        },
+        'Moss Mantle': {
+          attack: 'technical',
         },
       },
     },
@@ -2835,10 +2841,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Overheated (Throat)': {
           attack: 'technical',
         },
-        '??': {
+        'Overheated (Tail)': {
           attack: 'power',
         },
       },
@@ -3097,10 +3103,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        'Enraged (Frost Knuckles)': {
           attack: 'technical',
         },
-        '??': {
+        'Enraged (Frost Blade)': {
           attack: 'speed',
         },
       },
@@ -3178,7 +3184,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -3257,7 +3263,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -3495,7 +3501,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -3866,7 +3872,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -3945,7 +3951,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Electric Charge': {
           attack: 'power',
         },
       },
@@ -4065,7 +4071,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Rock Prep': {
           attack: 'power',
         },
       },
@@ -4144,10 +4150,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
-        '??': {
+        Electrify: {
           attack: 'technical',
         },
       },
@@ -4224,10 +4230,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
-        '??': {
+        Electrify: {
           attack: 'technical',
         },
       },
@@ -4302,10 +4308,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Enraged (Airborne)': {
           attack: 'power',
         },
-        '??': {
+        Airborne: {
           attack: 'technical',
         },
       },
@@ -4461,7 +4467,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -4572,10 +4578,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Hellfireblight Mantle': {
           attack: 'power',
         },
-        '??': {
+        'Hellfireblight Critical': {
           attack: 'technical',
         },
       },
@@ -4690,10 +4696,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Blood Rite Active': {
           attack: 'technical',
         },
-        '??': {
+        Exposed: {
           attack: 'speed',
         },
       },
@@ -4772,10 +4778,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Bubble Mantle': {
           attack: 'speed',
         },
-        '??': {
+        'Bubble Mantle (Slippery)': {
           attack: 'speed',
         },
       },
@@ -5021,7 +5027,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -5101,7 +5107,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -5334,7 +5340,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -5599,10 +5605,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Starving: {
           attack: 'speed',
         },
-        '??': {
+        Frenzied: {
           attack: 'power',
         },
       },
@@ -5678,10 +5684,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Starving: {
           attack: 'speed',
         },
-        '??': {
+        Frenzied: {
           attack: 'power',
         },
       },
@@ -6181,10 +6187,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Poison Active (Munch)': {
           attack: 'power',
         },
-        '??': {
+        'Poison Active (Crunch)': {
           attack: 'speed',
         },
       },
@@ -6296,13 +6302,13 @@
     },
     monster: {
       states: {
-        Normal: {
+        'Web Mantle (Legs)': {
           attack: 'technical',
         },
-        '?': {
+        'No Web': {
           attack: 'technical',
         },
-        '??': {
+        'Web Mantle (Cocoon)': {
           attack: 'speed',
         },
       },
@@ -6422,10 +6428,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
-        '??': {
+        'Enraged (Airborne)': {
           attack: 'speed',
         },
       },
@@ -6507,10 +6513,10 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
-        '??': {
+        'Enraged (Airborne)': {
           attack: 'speed',
         },
       },
@@ -7051,7 +7057,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Fulgurite Mantle': {
           attack: 'power',
         },
       },
@@ -7261,7 +7267,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'technical',
         },
       },
@@ -7336,7 +7342,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -7536,13 +7542,13 @@
     },
     monster: {
       states: {
-        Normal: {
+        'Shell (Skull)': {
           attack: 'speed',
         },
-        '?': {
+        'No Shell': {
           attack: 'technical',
         },
-        '??': {
+        'Shell (Seashell)': {
           attack: 'power',
         },
       },
@@ -7697,10 +7703,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Balancing: {
           attack: 'speed',
         },
-        '??': {
+        'Balancing (Storing Powder)': {
           attack: 'speed',
         },
       },
@@ -7779,7 +7785,7 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -7897,7 +7903,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Stuffed: {
           attack: 'technical',
         },
       },
@@ -8058,7 +8064,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -8138,7 +8144,7 @@
         Normal: {
           attack: 'power',
         },
-        '?': {
+        Enraged: {
           attack: 'speed',
         },
       },
@@ -8415,10 +8421,13 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Ice Mantle': {
           attack: 'speed',
         },
-        '??': {
+        Exposed: {
+          attack: 'technical',
+        },
+        'Freezing Fog Mantle': {
           attack: 'power',
         },
       },
@@ -8834,7 +8843,7 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        Enraged: {
           attack: 'power',
         },
       },
@@ -9276,10 +9285,10 @@
         Normal: {
           attack: 'speed',
         },
-        '?': {
+        'Electric Charge': {
           attack: 'technical',
         },
-        '??': {
+        'Thunder Supercharge': {
           attack: 'power',
         },
       },
@@ -9359,10 +9368,10 @@
         Normal: {
           attack: 'technical',
         },
-        '?': {
+        'Dragon Shroud': {
           attack: 'speed',
         },
-        '??': {
+        'Battle Shroud': {
           attack: 'power',
         },
       },
