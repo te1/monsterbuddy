@@ -146,7 +146,7 @@ export function intensityToTextColor(intensity: number | null) {
 }
 
 export function elementalResistanceTooltip(element: ElementType, intensity: number | null) {
-  let modifier = '';
+  let modifier: string;
 
   switch (intensity) {
     case -2:
@@ -205,7 +205,7 @@ export function formatAilment(ailment: AilmentType) {
 }
 
 export function ailmentResistanceTooltip(ailment: AilmentType, intensity: number | null) {
-  let chance = '';
+  let chance: string;
 
   switch (intensity) {
     case -2:
